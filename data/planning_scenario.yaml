@@ -1,0 +1,6 @@
+name: iter1_default_test
+target_semesters: 8
+max_units_per_semester: 20
+notes:
+- target_semesters is configurable; use 5-8 for current experiments.
+- max_units_per_semester is 20 for current Iteration 1 testing and should remain configurable.

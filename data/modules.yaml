@@ -1,0 +1,315 @@
+MA1301:
+  units: 4
+  kind: bridging
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: math_bridging
+MA1301X:
+  units: 4
+  kind: bridging
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: math_bridging
+CS1101S:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: cs_foundation
+CS1231S:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional:
+    - when:
+        field: needs_math_bridging
+        equals: true
+      one_of:
+      - MA1301
+      - MA1301X
+  pillar: cs_foundation
+MA1521:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional:
+    - when:
+        field: needs_math_bridging
+        equals: true
+      one_of:
+      - MA1301
+      - MA1301X
+  pillar: math_statistics
+MA1522:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional:
+    - when:
+        field: needs_math_bridging
+        equals: true
+      one_of:
+      - MA1301
+      - MA1301X
+  pillar: math_statistics
+CS2030S:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS1101S
+    conditional: []
+  pillar: cs_foundation
+CS2040S:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS1101S
+    - CS1231S
+    conditional: []
+  pillar: cs_foundation
+ST2334:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - MA1521
+    conditional: []
+  pillar: math_statistics
+CS2100:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS1101S
+    conditional: []
+  pillar: cs_foundation
+CS2101:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: cs_foundation
+CS2103T:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS2030S
+    - CS2040S
+    conditional: []
+  pillar: cs_foundation
+CS2106:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS2100
+    conditional: []
+  pillar: cs_foundation
+CS2109S:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - MA1521
+    - CS2040S
+    conditional: []
+  pillar: cs_foundation
+CS3230:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of:
+    - CS2040S
+    conditional: []
+  pillar: cs_foundation
+ES2660:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional:
+    - when:
+        field: english_path
+        in:
+        - es1103_required
+        - es1000_then_es1103
+      all_of:
+      - ES1103
+  pillar: university_level_requirements
+GEA1000:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: university_level_requirements
+GEC_GENERIC:
+  units: 4
+  kind: generic_placeholder
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: university_level_requirements
+GES_GENERIC:
+  units: 4
+  kind: generic_placeholder
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: university_level_requirements
+GEN_GENERIC:
+  units: 4
+  kind: generic_placeholder
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: university_level_requirements
+IS1108:
+  units: 4
+  kind: canonical
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: computing_ethics
+ID_GENERIC_1:
+  units: 4
+  kind: generic_placeholder
+  category: ID
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: interdisciplinary_cross_disciplinary
+ID_GENERIC_2:
+  units: 4
+  kind: generic_placeholder
+  category: ID
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: interdisciplinary_cross_disciplinary
+ID_GENERIC_3:
+  units: 4
+  kind: generic_placeholder
+  category: ID
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: interdisciplinary_cross_disciplinary
+CD_GENERIC_1:
+  units: 4
+  kind: generic_placeholder
+  category: CD
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+  pillar: interdisciplinary_cross_disciplinary
+ES1000:
+  units: 4
+  kind: bridging
+  pillar: english_bridging
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional: []
+ES1103:
+  units: 4
+  kind: bridging
+  pillar: english_bridging
+  offered_terms:
+  - 1
+  - 2
+  prerequisites:
+    all_of: []
+    conditional:
+    - when:
+        field: english_path
+        equals: es1000_then_es1103
+      all_of:
+      - ES1000

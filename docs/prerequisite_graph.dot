@@ -1,0 +1,67 @@
+digraph G {
+rankdir=TB;
+graph [compound=true, splines=polyline, nodesep=0.35, ranksep=0.55];
+node [shape=box, fontname="Helvetica"];
+edge [fontname="Helvetica", fontsize=9];
+subgraph cluster_math_bridging { label="Math bridging"; style=rounded;
+"MA1301" [shape=ellipse];
+"MA1301X" [shape=ellipse];
+}
+subgraph cluster_english_bridging { label="English bridging"; style=rounded;
+"ES1000" [shape=ellipse];
+"ES1103" [shape=ellipse];
+}
+subgraph cluster_cs_foundation { label="CS foundation"; style=rounded;
+"CS1101S" [shape=box];
+"CS1231S" [shape=box];
+"CS2030S" [shape=box];
+"CS2040S" [shape=box];
+"CS2100" [shape=box];
+"CS2101" [shape=box];
+"CS2103T" [shape=box];
+"CS2106" [shape=box];
+"CS2109S" [shape=box];
+"CS3230" [shape=box];
+}
+subgraph cluster_math_statistics { label="Mathematics & statistics"; style=rounded;
+"MA1521" [shape=box];
+"MA1522" [shape=box];
+"ST2334" [shape=box];
+}
+subgraph cluster_university_level_requirements { label="University-level requirements"; style=rounded;
+"ES2660" [shape=box];
+"GEA1000" [shape=box];
+"GEC_GENERIC" [shape=diamond];
+"GES_GENERIC" [shape=diamond];
+"GEN_GENERIC" [shape=diamond];
+}
+subgraph cluster_computing_ethics { label="Computing ethics"; style=rounded;
+"IS1108" [shape=box];
+}
+subgraph cluster_interdisciplinary_cross_disciplinary { label="Interdisciplinary / cross-disciplinary"; style=rounded;
+"ID_GENERIC_1" [shape=diamond];
+"ID_GENERIC_2" [shape=diamond];
+"ID_GENERIC_3" [shape=diamond];
+"CD_GENERIC_1" [shape=diamond];
+}
+"MA1301" -> "CS1231S" [style=dashed,label="one of / needs_math_bridging=true"];
+"MA1301X" -> "CS1231S" [style=dashed,label="one of / needs_math_bridging=true"];
+"MA1301" -> "MA1521" [style=dashed,label="one of / needs_math_bridging=true"];
+"MA1301X" -> "MA1521" [style=dashed,label="one of / needs_math_bridging=true"];
+"MA1301" -> "MA1522" [style=dashed,label="one of / needs_math_bridging=true"];
+"MA1301X" -> "MA1522" [style=dashed,label="one of / needs_math_bridging=true"];
+"CS1101S" -> "CS2030S";
+"CS1101S" -> "CS2040S";
+"CS1231S" -> "CS2040S";
+"MA1521" -> "ST2334";
+"CS1101S" -> "CS2100";
+"CS2030S" -> "CS2103T";
+"CS2040S" -> "CS2103T";
+"CS2100" -> "CS2106";
+"MA1521" -> "CS2109S";
+"CS2040S" -> "CS2109S";
+"CS2040S" -> "CS3230";
+"ES1103" -> "ES2660" [style=dashed,label="english_path in ['es1103_required', 'es1000_then_es1103']"];
+"ES1000" -> "ES1103" [style=dashed,label="english_path=es1000_then_es1103"];
+"CS2101" -> "CS2103T" [dir=both, penwidth=3, label="8-unit scheduling bundle"];
+}

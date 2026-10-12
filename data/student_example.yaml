@@ -1,0 +1,70 @@
+student_id: example_standard_student
+conditions:
+  needs_math_bridging: false
+  english_path: direct_es2660
+completed:
+  MA1301: false
+  MA1301X: false
+  CS1101S: false
+  CS1231S: false
+  MA1521: false
+  MA1522: false
+  CS2030S: false
+  CS2040S: false
+  ST2334: false
+  CS2100: false
+  CS2101: false
+  CS2103T: false
+  CS2106: false
+  CS2109S: false
+  CS3230: false
+  ES2660: false
+  GEA1000: false
+  GEC_GENERIC: false
+  GES_GENERIC: false
+  GEN_GENERIC: false
+  IS1108: false
+  ID_GENERIC_1: false
+  ID_GENERIC_2: false
+  ID_GENERIC_3: false
+  CD_GENERIC_1: false
+  ES1000: false
+  ES1103: false
+exempted:
+  MA1301: false
+  MA1301X: false
+  CS1101S: false
+  CS1231S: false
+  MA1521: false
+  MA1522: false
+  CS2030S: false
+  CS2040S: false
+  ST2334: false
+  CS2100: false
+  CS2101: false
+  CS2103T: false
+  CS2106: false
+  CS2109S: false
+  CS3230: false
+  ES2660: false
+  GEA1000: false
+  GEC_GENERIC: false
+  GES_GENERIC: false
+  GEN_GENERIC: false
+  IS1108: false
+  ID_GENERIC_1: false
+  ID_GENERIC_2: false
+  ID_GENERIC_3: false
+  CD_GENERIC_1: false
+  ES1000: false
+  ES1103: false
+notes:
+- exempted=true means the module requirement and downstream prerequisite are treated
+  as satisfied without scheduling the module.
+- Set needs_math_bridging=true for students who must satisfy MA1301 or MA1301X before
+  MA1521, MA1522, and CS1231S.
+- english_path=direct_es2660 models the normal baseline student who may take ES2660
+  directly.
+- english_path=es1103_required requires ES1103 before ES2660.
+- english_path=es1000_then_es1103 requires ES1000 before ES1103, and ES1103 before
+  ES2660.

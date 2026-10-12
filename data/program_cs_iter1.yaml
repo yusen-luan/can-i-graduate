@@ -1,0 +1,85 @@
+program: Computer Science
+iteration: 1
+planning_horizon_semesters: 8
+assumptions:
+- Canonical CS path only; alternative CS1010-family substitutions are excluded.
+- All modelled modules are assumed offered in both Semester 1 and Semester 2.
+- Preclusions and 'must not have taken' rules are excluded in Iteration 1.
+- Generic GEC/GES/GEN/ID/CD placeholders stand in for actual elective choices.
+- 'English placement is student-specific: direct_es2660, es1103_required, or es1000_then_es1103.'
+required_modules:
+- CS1101S
+- CS1231S
+- CS2030S
+- CS2040S
+- CS2100
+- CS2101
+- CS2103T
+- CS2106
+- CS2109S
+- CS3230
+- MA1521
+- MA1522
+- ST2334
+- ES2660
+- GEC_GENERIC
+- GEA1000
+- GES_GENERIC
+- GEN_GENERIC
+- IS1108
+requirement_groups:
+  university_level_requirements:
+    digital_literacy:
+      satisfied_by:
+      - CS1101S
+      modules_required: 1
+    critique_and_expression:
+      satisfied_by:
+      - ES2660
+      modules_required: 1
+    cultures_and_connections:
+      satisfied_by:
+      - GEC_GENERIC
+      modules_required: 1
+    data_literacy:
+      satisfied_by:
+      - GEA1000
+      modules_required: 1
+    singapore_studies:
+      satisfied_by:
+      - GES_GENERIC
+      modules_required: 1
+    communities_and_engagement:
+      satisfied_by:
+      - GEN_GENERIC
+      modules_required: 1
+  computing_ethics:
+    satisfied_by:
+    - IS1108
+    modules_required: 1
+  interdisciplinary_cross_disciplinary:
+    candidates:
+    - ID_GENERIC_1
+    - ID_GENERIC_2
+    - ID_GENERIC_3
+    - CD_GENERIC_1
+    total_modules_required: 3
+    min_id_modules: 2
+    max_cd_modules: 1
+    total_units_required: 12
+    module_units: 4
+    valid_patterns:
+    - id_modules: 3
+      cd_modules: 0
+    - id_modules: 2
+      cd_modules: 1
+scheduling_bundles:
+  CS2101_CS2103T:
+    modules:
+    - CS2101
+    - CS2103T
+    total_units: 8
+    rule: all_or_nothing_same_semester
+    note: The two modules remain separate module records and separate degree requirements,
+      but if they are unsatisfied they are scheduled together in the same semester
+      as one 8-unit bundle.

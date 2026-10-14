@@ -7,6 +7,7 @@ assumptions:
 - Preclusions and 'must not have taken' rules are excluded in Iteration 1.
 - Generic GEC/GES/GEN/ID/CD placeholders stand in for actual elective choices.
 - 'English placement is student-specific: direct_es2660, es1103_required, or es1000_then_es1103.'
+- Planning starts at plan semester 1 = NUS Semester 1; no soft constraints or preferences.
 required_modules:
 - CS1101S
 - CS1231S

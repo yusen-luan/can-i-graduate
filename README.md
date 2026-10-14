@@ -71,6 +71,15 @@ GitHub renders `docs/prerequisite_graph.md` as Mermaid.
 python src/model.py
 ```
 
+## Solve and check a plan
+
+```bash
+python src/solver.py                       # plan for the default student/scenario
+python src/solver.py --target-semesters 5  # can they finish in 5 semesters?
+python src/checker.py plan.json            # validate any plan, e.g. one written by an LLM
+python -m pytest tests -q
+```
+
 ## Current deliberate simplifications
 
 - CS2105 and CS2107 are excluded from Iteration 1 because they are not part of the current graduation requirement set

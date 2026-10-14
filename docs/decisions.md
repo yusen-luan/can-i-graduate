@@ -16,3 +16,9 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   Why: the same student and program can then be tested against 5–8 semester targets without editing the degree data.
 - **D7 (Iter 1):** ID/CD is modelled as exactly 3 placeholder modules with ≥ 2 ID and ≤ 1 CD. Why: this is the simplest
   encoding of the 12-unit rule while elective choice is out of scope.
+- **D8 (Iter 1):** The solver is OR-Tools CP-SAT over boolean `x[m,s]`. Why: the formulation is already 0/1-linear, so it maps
+  one-to-one, and it proves infeasibility. A hand-written backtracking search could be added later as an ablation.
+- **D9 (Iter 1):** Objective = minimise the number of scheduled modules. This is only a tie-breaker, and the problem stays a CSP. Why: it stops
+  pointless optional picks (e.g. both MA1301 and MA1301X). Modules outside required ∪ ID/CD ∪ prerequisite closure get no variables.
+- **D10 (Iter 1):** `src/checker.py` re-implements the constraints without the solver. Why: it cross-checks the solver,
+  and it will grade plans from the LLM-direct pipeline.

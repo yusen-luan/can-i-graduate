@@ -37,7 +37,10 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 | `data/program_cs_iter1.yaml` | Degree requirements for the current iteration (required modules, ULR/GE groups, ID/CD rule, bundles). |
 | `data/student_example.yaml` | One student: `completed`, `exempted`, `conditions` (math bridging, `english_path`). |
 | `data/planning_scenario.yaml` | Per-run knobs: `target_semesters`, `max_units_per_semester`. |
-| `src/model.py` | Loads + validates the three data layers. No solver yet. |
+| `src/model.py` | Loads + validates data; shared helpers (`prereq_clauses`, `term_of`, ...) used by solver and checker. |
+| `src/solver.py` | CP-SAT solver: `build_and_solve(...)` → `SolveResult` (status, plan by semester). |
+| `src/checker.py` | Solver-independent plan validator: `check_plan(...)` → list of violations. |
+| `tests/` | pytest suite (solver plans always pass checker; semantics; checker negatives). |
 | `scripts/generate_prereq_graph.py` | Regenerates `docs/prerequisite_graph.*`. |
 | `docs/solver_constraints.md` | **Authoritative** formal semantics of every constraint (x[m,s] formulation). |
 | `docs/decisions.md` | Log of modelling decisions + rationale. Read before changing semantics. |
@@ -51,6 +54,9 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 pip install -r requirements.txt
 python src/model.py                      # validate data
 python scripts/generate_prereq_graph.py  # regenerate prerequisite graph
+python src/solver.py [--target-semesters N] [--max-units U] [--student F] [--json]
+python src/checker.py plan.json          # validate a {"1": [...], ...} plan
+python -m pytest tests -q
 ```
 
 ## Conventions
@@ -60,6 +66,7 @@ python scripts/generate_prereq_graph.py  # regenerate prerequisite graph
 - Change semantics in `docs/solver_constraints.md` **first**, then update data and code to match.
 - Every simplification has to be written down (in the program YAML `assumptions` and in `status.md`).
   Unstated simplifications ruin the evaluation.
+- A new constraint goes into **both** `solver.py` and `checker.py`, plus a test. The checker must never import the solver.
 - Placeholders use the `*_GENERIC*` naming. Real module codes are only used for real modules.
 - The platform is Windows. Scripts need to work with `python` from the repo root.
 

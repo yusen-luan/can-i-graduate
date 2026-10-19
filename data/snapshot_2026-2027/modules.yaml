@@ -1,0 +1,2330 @@
+CDE2300:
+  category: CD
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    EG2201A at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Product Design and Innovation
+  units: 4
+CP3106:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Independent Project
+  units: 4
+CP3107:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2030
+        - CS2030S
+        - CS2030DE
+        - CS2030HS
+        - CS2113T
+        - CS2113
+      - one_of:
+        - CS2040
+        - CS2040C
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+  title: Computing for Social Service Agencies I
+  units: 6
+CP3110:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: CP3107
+  title: Computing for Social Service Agencies II
+  units: 6
+CP3200:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Internship
+  units: 6
+CP3202:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: CP3200
+  title: Internship II
+  units: 6
+CP3209:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Undergraduate Research Project in Computing
+  units: 8
+CP3880:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  - 3
+  - 4
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - IS2101
+        - CS2101
+        - ES1601
+        - ES2002
+        - ES2007D
+        - ES2531
+        - ES2631
+        - UTW1001%
+        - UWC2101%
+        - NTW%
+      - one_of:
+        - CS2103
+        - CS2103T
+        - CS2103DE
+        - CS2113
+        - CS2113T
+        - IS3106
+        - BT3103
+        - IS2108
+  title: Advanced Technology Attachment Programme
+  units: 12
+CP4101:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: B.Comp. Dissertation
+  units: 12
+CP4106:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: if undertaking an Undergraduate Degree then ( must not have
+    completed 1 of BT4101/CG4001/CP4101/any Courses beginning with XF at a grade of
+    at least D )
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Computing Project
+  units: 8
+CS1101S:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/UTC2851 at a grade
+    of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  preclusion_group: intro_programming
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Programming Methodology
+  units: 4
+CS1231S:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of CS1231/MA1100/MA1100T at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  preclusion_group: discrete_math
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - MA1301X
+      - MA1301
+  title: Discrete Structures
+  units: 4
+CS2030S:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of CS2030/CS2030DE/CS2030HS at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS1010
+      - CS1010E
+      - CS1010X
+      - CS1101S
+      - CS1010S
+      - CS1010J
+      - CS1010A
+      - CS1010HS
+      - UTC2851
+  title: Programming Methodology II
+  units: 4
+CS2040S:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of CS1020/CS1020E/CS2010/CS2020/CS2040/CS2040C/CS2040DE/CS2040HS at a grade
+    of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  preclusion_group: data_structures
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS1010
+        - CS1010E
+        - CS1010X
+        - CS1101S
+        - CS1010S
+        - CS1010J
+        - CS1010A
+        - CS1010HS
+        - UTC2851
+      - one_of:
+        - CS1231S
+        - CS1231
+        - MA1100
+        - MA1100T
+  title: Data Structures and Algorithms
+  units: 4
+CS2100:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN(( must not have completed
+    1 of CS2100DE/CS2100HS at a grade of at least D)OR(must not be undertaking 0604ELEHON
+    Bachelor of Engineering (Electrical Engineering) (Hons), 2001CEGHON Bachelor of
+    Engineering (Computer Engineering) (Hons)))
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - YSC1212
+      - CS1010
+      - CS1010J
+      - CS1010E
+      - CS1010S
+      - CS1010X
+      - CS1101S
+      - CS1010A
+      - CS1010HS
+      - UTC2851
+  title: Computer Organisation
+  units: 4
+CS2101:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    1 of CS2101X/CS2103/CS2113/ES2002/ES2007D/IS2101 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Effective Communication for Computing Professionals
+  units: 4
+CS2102:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of CS2102S/IT2002 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS1231
+        - MA1100
+        - MA1100T
+        - CS1231S
+      - one_of:
+        - CS2030S
+        - CS2030
+        - CS2030DE
+        - CS2030HS
+        - YSC2229
+        - CS2040
+        - CS2040C
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+  title: Database Systems
+  units: 4
+CS2103T:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( must not have
+    completed 1 of CS2103/CS2103DE/CS2113/CS2113T at a grade of at least D) AND must
+    not have completed 1 of CG1413/EG1413/ES1601/ES2007D/ES2007S, ES2002/IS2101 at
+    a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2030
+        - CS2030S
+        - CS2030DE
+        - CS2030HS
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+  title: Software Engineering
+  units: 4
+CS2104:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2030
+      - CS2030S
+      - CS2030DE
+      - CS2030HS
+      - CS2113
+      - CS2113T
+  title: Programming Language Concepts
+  units: 4
+CS2105:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: Must not be undertaking 0604ELEHON Bachelor of Engineering (Electrical
+    Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering)
+    (Hons)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - YSC2229
+      - CS2040
+      - CS2040S
+      - CS2040C
+      - CS2040DE
+      - CS2040HS
+  title: Introduction to Computer Networks
+  units: 4
+CS2106:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of CG2271/EE4214 at a grade of at least DOR(must not be undertaking 2001CEGHON
+    Bachelor of Engineering (Computer Engineering) (Hons)))
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2100
+      - CS2100DE
+      - CS2100HS
+      - EE2007
+      - EE2024
+      - EE2028
+  title: Introduction to Operating Systems
+  units: 4
+CS2107:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - YSC1212
+      - CS1010J
+      - CS1101S
+      - CS1010
+      - CS1010E
+      - CS1010S
+      - CS1010X
+      - CS1010A
+      - CS1010HS
+      - UTC2851
+  title: Introduction to Information Security
+  units: 4
+CS2108:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed CS3246 at a grade of at least D)
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - MA1522
+        - MA2001
+        - MA1513
+        - MA1311
+        - MA1508E
+  title: Introduction to Media Computing
+  units: 4
+CS2109S:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of CG3201/CS2109HS/CS3243/CS3244/DMX1401AI/EE2211/IT3011 at a grade
+    of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - YSC2229
+        - CS2040S
+        - CS2040C
+        - CS2040HS
+        - CS2040
+        - CS2040DE
+      - one_of:
+        - one_of:
+          - MA1511
+          - MA1512
+        - MA1521
+        - MA2002
+        - MA1102R
+        - MA1312
+        - MA1507
+        - MA1505
+  title: Introduction to AI and Machine Learning
+  units: 4
+CS2111:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS1010A
+      - CS1010E
+      - CS1010X
+      - CS1101S
+      - CS1010S
+      - UTC2851
+      - CS1010HS
+      - CS1010J
+      - CS1010
+      - NM2207
+  title: Human-Centred Computing
+  units: 4
+CS3103:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2105
+      - EE3204
+      - EE3204E
+      - EE4204
+  title: Computer Networks Practice
+  units: 4
+CS3203:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of CS3201/CS3202 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - CS2113T
+  title: Software Engineering Project
+  units: 8
+CS3210:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2100
+      - CS2100DE
+      - CS2100HS
+      - CG2007
+      - EE2028
+      - CG2028
+      - EE2024
+  title: Parallel Computing
+  units: 4
+CS3211:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2106
+      - CG2271
+  title: Concurrent Programming
+  units: 4
+CS3213:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103T
+      - CS2103
+      - CS2103DE
+      - CS2113T
+      - CS2113
+  title: Software Requirements Specification and Validation
+  units: 4
+CS3216:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - CS2113
+      - CS2113T
+  title: Software Product Engineering for Digital Markets
+  units: 5
+CS3217:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - CS2113
+      - CS2113T
+  title: Software Engineering on Modern Application Platforms
+  units: 5
+CS3219:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - YSC3232
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - CS2113T
+      - CS2113
+  title: Software Design and Architecture
+  units: 4
+CS3223:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040S
+        - CS2040
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - CS2102
+        - IT2002
+  title: Database Systems Implementation
+  units: 4
+CS3227:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2113
+      - CS2103DE
+  title: Agentic Software Engineering
+  units: 4
+CS3230:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: cs_foundation
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - YSC2229
+        - CS2040S
+        - CS2040
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - CS1231
+        - CS1231S
+        - MA1100T
+        - MA1100
+  title: Design and Analysis of Algorithms
+  units: 4
+CS3231:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS1231
+        - CS1231S
+        - MA1100T
+        - MA1100
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+  title: Theory of Computation
+  units: 4
+CS3235:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2105
+        - EE3204
+        - EE4204
+      - one_of:
+        - CS2106
+        - YSC3217
+        - CG2271
+      - CS2107
+  title: Computer Security
+  units: 4
+CS3236:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - MA1100
+        - MA1100T
+        - CS1231
+        - CS1231S
+      - one_of:
+        - EE2012
+        - EE2012A
+        - MA2216
+        - MA2116
+        - MA2116T
+        - ST2131
+        - ST2334
+  title: Introduction to Information Theory
+  units: 4
+CS3240:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2111
+      - NM2207
+  title: Interaction Design
+  units: 4
+CS3241:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2030S
+        - CS2030
+        - CS2030DE
+        - CS2030HS
+        - CS2113
+        - CS2113T
+      - one_of:
+        - CS2040
+        - YSC2229
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+  title: Computer Graphics
+  units: 4
+CS3242:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    CS4342 at a grade of at least D
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - PC1201
+        - PC1221
+        - PC1221X
+      - CS3241
+      - one_of:
+        - MA1522
+        - MA1508E
+        - MA1513
+        - MA1311
+        - MA2001
+        - MA1101R
+      - one_of:
+        - MA1521
+        - MA2002
+        - MA1505
+        - MA1507
+        - MA1102R
+        - one_of:
+          - MA1511
+          - MA1512
+  title: 3D Modeling and Animation
+  units: 4
+CS3243:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    1 of CS2109HS/CS2109S/CS3263 at a grade of at least D
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040
+        - CS2040C
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+        - YSC2229
+      - one_of:
+        - CS1231S
+        - CS1231
+        - MA1100T
+        - MA1100
+  title: Introduction to Artificial Intelligence
+  units: 4
+CS3244:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of BT4240/CG3201/CS2109HS/CS2109S/CS3264/DMX1401AI/EE3703/EE4802/IT3011
+    at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040
+        - CS2040C
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+        - YSC2229
+      - one_of:
+        - EE2012A
+        - EE2012
+        - YSC2243
+        - ST2131
+        - ST2334
+        - MA2116
+        - MA2116T
+        - MA2216
+      - one_of:
+        - one_of:
+          - MA1511
+          - MA1512
+        - all_of:
+          - one_of:
+            - MA2001
+            - MA1522
+            - MA1508E
+            - MA1311
+            - MA1513
+            - MA1101R
+          - one_of:
+            - MA2002
+            - MA1521
+            - MA1505
+            - MA1507
+            - MA1102R
+  title: Machine Learning
+  units: 4
+CS3245:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2040
+      - CS2040S
+      - CS2040C
+      - CS2040DE
+      - CS2040HS
+  title: Information Retrieval
+  units: 4
+CS3247:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3241
+  title: Game Development
+  units: 4
+CS3249:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS2111
+  title: Conversational User Interface
+  units: 4
+CS3263:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    CS3243 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2109S
+        - CS2109HS
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - MA2001
+        - MA1522
+        - MA1513
+        - MA1508E
+        - MA1101R
+      - one_of:
+        - EE2012A
+        - EE2012
+        - ST2131
+        - MA2116
+        - MA2116T
+        - ST2334
+        - MA2216
+  title: Foundations of Artificial Intelligence
+  units: 4
+CS3264:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of CG3201/CS3244 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - CS2109S
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - MA1101R
+        - MA1311
+        - MA1513
+        - MA1508E
+        - MA2001
+        - MA1522
+      - one_of:
+        - EE2012A
+        - EE2012
+        - ST2131
+        - MA2116
+        - MA2116T
+        - ST2334
+        - MA2216
+  title: Foundations of Machine Learning
+  units: 4
+CS3268:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2109S
+        - CS2109HS
+        - CS3243
+      - one_of:
+        - ST2334
+        - all_of:
+          - one_of:
+            - ST2131
+            - MA2116
+            - MA2116T
+          - ST2132
+  title: 'Responsible AI: from Algorithms to Impact'
+  units: 4
+CS3281:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - CS2113
+  title: Software Engineering for Evolving Production Systems I
+  units: 4
+CS3282:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3281
+  title: Software Engineering for Evolving Production Systems II
+  units: 4
+CS4211:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2103
+      - CS2103T
+      - CS2103DE
+      - YSC3232
+      - CS2113
+      - CS2113T
+  title: Formal Methods for Software Engineering
+  units: 4
+CS4212:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2104
+      - CS3212
+  title: Compiler Design
+  units: 4
+CS4215:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - CS2030
+        - CS2030S
+        - CS2030DE
+        - CS2030HS
+        - CS2113
+        - CS2113T
+  title: Programming Language Implementation
+  units: 4
+CS4218:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS3213
+      - CS3219
+  title: Software Testing
+  units: 4
+CS4221:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: if undertaking an Undergraduate Degree then ( must not have
+    completed CS5421 at a grade of at least D )
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3223
+  title: Database Applications Design and Tuning
+  units: 4
+CS4222:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    CS5422 at a grade of at least D)
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - EE3204
+        - EE3204E
+        - EE4204
+        - CS2105
+      - one_of:
+        - EE2012A
+        - EE2012
+        - ST2131
+        - ST2334
+        - MA2116
+        - MA2116T
+        - MA2216
+  title: Wireless Networking
+  units: 4
+CS4223:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2106
+        - CG2271
+      - one_of:
+        - CS3210
+        - CS3220
+        - CG3207
+  title: Multi-core Architectures
+  units: 4
+CS4224:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: if undertaking an Undergraduate Degree then ( must not have
+    completed CS5424 at a grade of at least D )
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3223
+  title: Distributed Databases
+  units: 4
+CS4225:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of BT4221/CS5425 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS2102
+      - IT2002
+  title: Big Data Systems for Data Science
+  units: 4
+CS4226:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2105
+        - EE3204
+        - EE3204E
+        - EE4204
+      - one_of:
+        - EE2012A
+        - EE2012
+        - MA2216
+        - ST2131
+        - ST2334
+        - MA2116
+        - MA2116T
+  title: Internet Architecture
+  units: 4
+CS4230:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    CS5430
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS1231
+        - CS1231S
+        - MA1100
+        - MA1100T
+      - CS3230
+      - one_of:
+        - ST2334
+        - ST2131
+        - MA2216
+        - MA2116
+        - MA2116T
+  title: Foundations of Modern Cryptography
+  units: 4
+CS4231:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS3210
+      - CS3230
+  title: Parallel and Distributed Algorithms
+  units: 4
+CS4234:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - MA2001
+        - MA1101R
+        - YSC2232
+        - MA1311
+        - MA1508E
+        - MA1522
+        - MA1513
+      - one_of:
+        - YSC3203
+        - CS3230
+  title: Optimisation Algorithms
+  units: 4
+CS4236:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - YSC2229
+        - CS2040
+        - CS2040S
+        - CS2040C
+        - CS2040DE
+        - CS2040HS
+      - CS2107
+      - one_of:
+        - CS1231
+        - CS1231S
+        - MA1100T
+        - MA1100
+  title: 'Cryptography in Practice: Systems and Applications'
+  units: 4
+CS4238:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3235
+  title: Computer Security Practice
+  units: 4
+CS4239:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    CS5439 at a grade of at least D)
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - CS3235
+      - one_of:
+        - CS2103T
+        - CS2103
+        - CS2103DE
+        - CS2113
+        - CS2113T
+  title: Software Security
+  units: 4
+CS4242:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - CS2108
+      - CS3245
+  title: Social Media Computing
+  units: 4
+CS4243:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of EE4212/EE4704 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - YSC2232
+        - MA2001
+        - MA1101R
+        - MA1311
+        - MA1508E
+        - MA1513
+        - MA1522
+      - one_of:
+        - ST1131
+        - ST1131A
+        - ST1232
+        - ST2131
+        - MA2116
+        - MA2116T
+        - MA2216
+        - EE2012A
+        - EE2012
+        - ST2334
+        - YSC2243
+      - one_of:
+        - CS2030
+        - CS2030S
+        - CS2030DE
+        - CS2030HS
+        - CS2113
+        - CS2113T
+      - one_of:
+        - YSC2229
+        - CS2040
+        - CS2040S
+        - CS2040DE
+        - CS2040C
+        - CS2040HS
+      - one_of:
+        - MA1102R
+        - MA2002
+        - YSC1216
+        - MA1505
+        - MA1521
+        - MA1507
+        - one_of:
+          - MA1512
+          - MA1511
+  title: Computer Vision and Pattern Recognition
+  units: 4
+CS4244:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS3263
+      - CS3243
+  title: Knowledge Representation and Reasoning
+  units: 4
+CS4246:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    CS5446 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - EE2012A
+        - EE2012
+        - ST2132
+        - ST2334
+        - all_of:
+          - one_of:
+            - ST2131
+            - MA2116
+            - MA2116T
+            - MA2216
+          - one_of:
+            - ST1131
+            - ST1232
+            - DCS2008
+            - ST1131A
+      - one_of:
+        - CS3243
+        - CS3263
+  title: Reinforcement Learning and Sequential Decision Making
+  units: 4
+CS4247:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3241
+  title: Graphics Rendering Techniques
+  units: 4
+CS4248:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    CS5246/DSA4213 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2109S
+        - CS2109HS
+        - CS3244
+        - MA3270
+        - ST4248
+      - one_of:
+        - EE2012A
+        - EE2012
+        - ST2131
+        - MA2216
+        - MA2116
+        - MA2116T
+        - ST2334
+        - YSC2243
+      - one_of:
+        - MA1505
+        - MA1507
+        - MA1521
+        - MA1102R
+        - YSC1216
+        - MA2002
+        - one_of:
+          - MA1511
+          - MA1512
+  title: Introduction to Large Language Models
+  units: 4
+CS4249:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS3240
+      - NM2216
+      - NM2213
+      - NM3243
+  title: Quantitative Methods of Human-Computer Interaction
+  units: 4
+CS4262:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    CS5462 at a grade of at least D
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2106
+        - CG2271
+      - one_of:
+        - CS3244
+        - CS3264
+        - CG3201
+  title: Machine Learning Systems
+  units: 4
+CS4263:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    CS2109S/CS3243/CS3263 at a grade of at least D
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040
+        - CS2040C
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - CS1231
+        - CS1231S
+        - MA1100
+        - MA1100T
+  title: Artificial Intelligence Principles
+  units: 4
+CS4310:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - CS3210
+      - one_of:
+        - CS2106
+        - CG2271
+        - EE4214
+  title: High-Performance Computing for Science and AI
+  units: 4
+CS4330:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    CS3225 at a grade of at least D)
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - one_of:
+        - CS2040C
+        - CS2040
+        - CS2040S
+        - CS2040DE
+        - CS2040HS
+      - one_of:
+        - CS2220
+        - LSM2104
+        - LSM2241
+        - ZB2101
+  title: Combinatorial Methods in Bioinformatics
+  units: 4
+CS4347:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed CS5647 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - CS2108
+      - one_of:
+        - MA1101R
+        - MA2001
+        - MA1522
+        - MA1311
+        - MA1508E
+        - MA1513
+      - one_of:
+        - MA1102R
+        - MA1505
+        - MA1507
+        - MA1521
+        - MA2002
+        - one_of:
+          - MA1512
+          - MA1511
+  title: Sound and Music Computing
+  units: 4
+CS4350:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - CS3247
+      - NM3216
+      - NM4260
+      - NM4260HM
+  title: Game Development Project
+  units: 4
+CS4353:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - all_of:
+        - one_of:
+          - CS2103DE
+          - CS2103
+          - CS2103T
+          - CS2113
+        - CS3240
+      - all_of:
+        - NM2207
+        - one_of:
+          - NM3243
+          - NM4259
+          - one_of:
+            - ID2116
+            - ID3131
+  title: Interactive Systems Development Project
+  units: 4
+CS4430:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    CS5230 at a grade of at least D
+  offered_terms:
+  - 2
+  pillar: breadth_depth
+  prerequisites:
+    conditional: []
+    tree: CS3231
+  title: Computational Complexity
+  units: 4
+DAO2703:
+  category: CD
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    1 of any Courses beginning with DAO2703 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Operations and Technology Management
+  units: 4
+DTK1234:
+  category: ID
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Design Thinking
+  units: 4
+EL1101E:
+  category: CD
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: The Nature of Language
+  units: 4
+ES1000:
+  kind: bridging
+  level: 1000
+  nusmods_preclusion: if undertaking an Undergraduate Degree then ( must not have
+    completed EP ENGLISH LANGUAGE PROFICIENCY TEST at a grade of at least Y )
+  offered_terms:
+  - 1
+  - 2
+  pillar: english_bridging
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Foundation Academic English
+  units: 0
+ES1103:
+  kind: bridging
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( EP ENGLISH LANGUAGE
+    PROFICIENCY TEST at a grade of at least N) AND must not have completed 1 of AR1000,
+    BE1000, EA1101, EG1471, ES1101, ES1102, ES1301, ET1000, ID1000, NK1001)
+  offered_terms:
+  - 1
+  - 2
+  - 3
+  pillar: english_bridging
+  prerequisites:
+    conditional: []
+    tree: ES1000
+  title: English for Academic Purposes
+  units: 4
+ES2660:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Communicating in the Information Age
+  units: 4
+ETP3201L:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed TR3202N)
+  offered_terms:
+  - 1
+  - 2
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Innovation & Enterprise Internship
+  units: 12
+ETP3205:
+  kind: canonical
+  level: 3000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  - 3
+  - 4
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Innovation & Enterprise Internship
+  units: 6
+GE2103:
+  category: CD
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Our Planet: An Earth System Science Perspective'
+  units: 4
+GEA1000:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of BT1101/BT1101HS/DSA1101/DSE1101/GEA1000N/IE1111R/SPH1904/ST1131/TCX2002)
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Quantitative Reasoning with Data
+  units: 4
+GEC1015:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of GEH1049/GEK1900 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Public Health in Action
+  units: 4
+GEC1020:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    GEH1056 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Cultural Diversity in the Contemporary World
+  units: 4
+GEC1030:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed GEH1077 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Metropolis: The City in World History'
+  units: 4
+GEN2000:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Living Culture: Engaging Indian Communities in Singapore'
+  units: 4
+GEN2001:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Theatre and Community Engagement
+  units: 4
+GEN2003:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Inclusivity and Equality: Domestic Worker Community'
+  units: 4
+GEN2004:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Green Communities in Action: Climate, Species, Crisis'
+  units: 4
+GESS1001:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN ( must not have
+    completed 1 of GEK2001/GES1003/SSA2202 at a grade of at least D)
+  offered_terms:
+  - 1
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Changing Landscapes of Singapore
+  units: 4
+GESS1020:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    GES1028 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Singapore Society
+  units: 4
+GESS1025:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    GES1035 at a grade of at least CS
+  offered_terms:
+  - 1
+  - 2
+  pillar: university_level_requirements
+  prerequisites:
+    conditional: []
+    tree: null
+  title: 'Singapore: Imagining the Next 50 Years'
+  units: 4
+HSH1000:
+  category: ID
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: The Human Condition
+  units: 4
+HSI1000:
+  category: ID
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: How Science Works, Why Science Works
+  units: 4
+IE2141:
+  category: ID
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN must not have completed
+    1 of any Courses beginning with UTC1702 at a grade of at least D, GEM1915/GET1011/IE2101
+    at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Systems Thinking and Dynamics
+  units: 4
+IS1108:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: computing_ethics
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Digital and AI Ethics
+  units: 4
+IS1128:
+  category: ID
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: IT, Management and Organisation
+  units: 4
+IS4010:
+  kind: canonical
+  level: 4000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHENmust not have completed
+    CP3880 at a grade of at least D
+  offered_terms:
+  - 1
+  - 2
+  - 3
+  - 4
+  pillar: industrial_experience
+  prerequisites:
+    conditional: []
+    tree:
+      all_of:
+      - IS3103
+      - one_of:
+        - IS2108
+        - IS3106
+        - BT3103
+  title: Digital Transformation Leadership Programme
+  units: 12
+MA1301:
+  kind: bridging
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( 1 of 06 MATHEMATICS/07
+    FURTHER MATHEMATICS at a grade of at least E) AND ( must not have completed 1
+    of any Courses beginning with MA at a grade of at least D))
+  offered_terms:
+  - 1
+  - 2
+  pillar: math_bridging
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Introductory Mathematics
+  units: 4
+MA1301X:
+  kind: bridging
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( 1 of 06 MATHEMATICS/07
+    FURTHER MATHEMATICS at a grade of at least E) AND ( must not have completed 1
+    of any Courses beginning with MA at a grade of at least D))
+  offered_terms:
+  - 2
+  - 3
+  pillar: math_bridging
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Introductory Mathematics
+  units: 4
+MA1521:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( must not have
+    completed 1 of MA1312/MA1505/MA1511/MA2002/YSC1216 at a grade of at least D) AND
+    (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical Engineering)
+    (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON
+    Bachelor of Engineering (Electrical Engineering) (Hons), 0605ESPHON Bachelor of
+    Engineering (Engineering Science) (Hons), 0607ISEHON Bachelor of Engineering (Industrial
+    and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials
+    Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical
+    Engineering) (Hons), 0611CHEHON Bachelor of Technology (Chemical Engineering)
+    (Hons), 0611ELCHON Bachelor of Technology (Electronics Engineering) (Hons), 0611IMEHON
+    Bachelor of Technology (Industrial & Mgt Engineering) (Hons), 0611MEHON Bachelor
+    of Technology (Mechanical Engineering) (Hons), 0613CEHON Bachelor of Engineering
+    (Civil Engineering) (Hons), 0613EVEHON Bachelor of Engineering (Environmental
+    Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering)
+    (Hons), 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON Bachelor
+    of Science - Quantitative Finance (Hons), 1006DSAHON Bachelor of Science (Data
+    Science and Analytics) (Hons), 1006DSEXDP Bachelor of Science - Data Sci & Econs
+    (Hons) XDP, 1006STHON Bachelor of Science - Statistics (Hons)))
+  offered_terms:
+  - 1
+  - 2
+  pillar: math_statistics
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - MA1301
+      - MA1301X
+  title: Calculus for Computing
+  units: 4
+MA1522:
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: If undertaking an Undergraduate Degree THEN (( must not have
+    completed 1 of MA1311/MA1508E/MA1513/MA2001/YSC2232 at a grade of at least D)
+    AND (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical
+    Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering)
+    (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0605ESPHON
+    Bachelor of Engineering (Engineering Science) (Hons), 0607ISEHON Bachelor of Engineering
+    (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering
+    (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering
+    (Mechanical Engineering) (Hons), 0611CHEHON Bachelor of Technology (Chemical Engineering)
+    (Hons), 0611ELCHON Bachelor of Technology (Electronics Engineering) (Hons), 0611IMEHON
+    Bachelor of Technology (Industrial & Mgt Engineering) (Hons), 0611MEHON Bachelor
+    of Technology (Mechanical Engineering) (Hons), 0613CEHON Bachelor of Engineering
+    (Civil Engineering) (Hons), 0613EVEHON Bachelor of Engineering (Environmental
+    Engineering) (Hons), 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON
+    Bachelor of Science - Quantitative Finance (Hons), 1006DSAHON Bachelor of Science
+    (Data Science and Analytics) (Hons), 1006DSEXDP Bachelor of Science - Data Sci
+    & Econs (Hons) XDP, 1006STHON Bachelor of Science - Statistics (Hons), 2001CEGHON
+    Bachelor of Engineering (Computer Engineering) (Hons)))
+  offered_terms:
+  - 1
+  - 2
+  pillar: math_statistics
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - MA1301
+      - MA1301X
+  title: Linear Algebra for Computing
+  units: 4
+SC1101E:
+  category: CD
+  kind: canonical
+  level: 1000
+  nusmods_preclusion: ''
+  offered_terms:
+  - 1
+  - 2
+  pillar: interdisciplinary_cross_disciplinary
+  prerequisites:
+    conditional: []
+    tree: null
+  title: Making Sense of Society
+  units: 4
+ST2334:
+  kind: canonical
+  level: 2000
+  nusmods_preclusion: If undertaking an Undergraduate DegreeTHEN( must not have completed
+    1 of EC2303/MA2116/MA2116T/MA2301/ST2131 at a grade of at least D)
+  offered_terms:
+  - 1
+  - 2
+  pillar: math_statistics
+  prerequisites:
+    conditional: []
+    tree:
+      one_of:
+      - MA1312
+      - MA1505
+      - MA1511
+      - MA1521
+      - MA2002
+  title: Probability and Statistics
+  units: 4

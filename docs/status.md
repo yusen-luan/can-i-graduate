@@ -1,36 +1,43 @@
 # Status — current iteration only (≤ 60 lines; older iterations → docs/history.md)
 
-_Last updated: 2026-10-14_
+_Last updated: 2026-10-19_
 
-## Iteration 1: baseline CSP for the canonical CS degree
+## Iteration 2: full BComp(CS) AY2026/27 degree, NUSMods-validated
 
-**Goal:** a working solver that decides feasibility and produces a semester-by-semester plan for one
-student under a simplified CS degree model (22 modules / 88 units on the canonical path).
+**Goal:** scale the CSP from the 88-unit canonical skeleton to the full 160-unit degree with real
+module facts, so instances become *binding* (the thing iter1 lacked) — the point being a sharper
+LLM-direct vs LLM→solver comparison later. Full plan + audit: `docs/iter2_plan.md`.
 
 ### Done
-- Task 1: three-layer data model (modules / program / student) + planning scenario, validator
-  (`src/model.py`), prerequisite graph, formal semantics (`docs/solver_constraints.md`).
-- Task 2: CP-SAT solver (`src/solver.py`), independent plan checker (`src/checker.py`), 49 pytest tests.
-  Result: min feasible horizon is T=5 for all 6 (bridging × english_path) student types at cap 20.
+- NUSMods AY2026/27 snapshot: `scripts/ingest_nusmods.py` → `data/snapshot_2026-2027/`
+  (95 modules + raw JSON + preclusions + `validation_report.md`). Caught real faculty-page staleness
+  (CP/CS unit sizes, single-sem offerings, CS4232 discontinued).
+- Degree data: `program_cs.yaml` (160u buckets), `focus_areas.yaml` (11 areas), `generic_modules.yaml`,
+  `student_iter2.yaml`, `scenario_iter2.yaml`.
+- Solver+checker+tests: prereq tree (reified / evaluated), placement-waived bridging, preclusions,
+  real offered terms, focus area, ≥12u L4000, **32u Breadth&Depth bucket** (focus + L4000 + industrial
+  inside it; NO team project — verified), industrial experience (exactly one, **off the semester cap**
+  as vacation/special-term), CP cap, ≥160u with UE filler, optional preferences.
+  `build_and_solve_iter2` + `check_plan_iter2`; **81 tests pass** (49 iter1 + 32 iter2).
+  Default instance: OPTIMAL at T=8/cap20, exactly 160u; T=8 is the arithmetic floor (early grad via overload/APC).
+- Full universe + constraint re-verification against NUSMods + cohort page + Bulletin: `docs/iter2_verification.md`.
+- Real GE/ID/CD: ULR pick-list pillars (GEC%/GESS%/GEN%) and ID/CD now use verified real NUSMods courses
+  (full authoritative lists in `data/ge_pillars.yaml`, `data/id_cd.yaml`); year-long C&E service-learning
+  modelled as two contiguous semesters (GEN..X Term1 -> GEN..Y Term2). Only UE stays generic.
+- Frontend: `app/app.py` (Streamlit) — constraint inputs → SAT/UNSAT (+ infeasibility explanation)
+  → semester-by-semester plan grid. `src/solver.py --iter2` CLI + `explain_infeasible_iter2`.
 
 ### Next
-- Not decided yet. Candidates: build NL problem instances + ground truth (solver/checker), or explain
-  why a plan is infeasible (which constraint group blocks it).
+- Decide: start the NL-instance + LLM-direct + LLM→spec evaluation harness (the actual research deliverable)?
+- Possible iter3: NOC/NUSC/UROP overlays, special terms, soft-objective workload (ablation),
+  exact per-bucket unit partitioning, real ID/CD + GE pick-lists.
 
-### Active simplifications (Iteration 1)
-- Canonical CS modules only (no CS1010-family substitutes); CS2105/CS2107 excluded.
-- All modules offered in both semesters.
-- GE (GEC/GES/GEN) and ID/CD are generic placeholders. ES2660 and GEA1000 are fixed choices.
-- No preclusions or "must not have taken" rules.
-- The English bridging path exists in the data, but no bridging module rule beyond ES1000→ES1103→ES2660.
-- The plan always starts at plan semester 1 = Term 1 (no mid-degree start). No preferences or soft constraints,
-  so plans can be unbalanced (e.g. empty semesters).
+### Active simplifications (Iteration 2) — see program_cs.yaml `assumptions`
+- Canonical-only; special terms (3,4) not modelled; by-arrangement modules default to both semesters.
+- 32u Breadth&Depth aggregate not enforced (sub-rules are); UE/ULR-picklist/ID-CD are generic placeholders.
+- Math/English bridging handled by placement waiver, not scheduled, for the default student.
 
 ### Open issues
-- `docs/solver_constraints.md` §7 says the unit cap lives in `program_cs_iter1.yaml`, but it is now in
-  `planning_scenario.yaml`.
-- `program_cs_iter1.yaml: planning_horizon_semesters` duplicates `planning_scenario.yaml: target_semesters`
-  (the solver reads only the scenario value).
-- Iteration 1 instances are easy: the unit cap alone sets the minimum horizon. Later iterations need more
-  binding constraints for an interesting LLM-vs-solver comparison.
-- Not started: NL problem instances, LLM-direct pipeline, LLM→spec pipeline, evaluation harness.
+- `docs/solver_constraints.md` iter1 §7 wording (cap lives in scenario, not program) still unfixed.
+- Focus/ID/CD/GE pick-lists are not real course lists yet (generic); fine for feasibility, not for realism.
+- Repo not committed/pushed yet (per request): iter2 work is staged in the working tree only.

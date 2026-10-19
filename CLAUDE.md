@@ -33,30 +33,33 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 
 | Path | What it is |
 |---|---|
-| `data/modules.yaml` | Module facts: units, kind, offered terms, prereqs (`all_of`, `conditional`→`one_of`), coreqs. No student info. |
-| `data/program_cs_iter1.yaml` | Degree requirements for the current iteration (required modules, ULR/GE groups, ID/CD rule, bundles). |
-| `data/student_example.yaml` | One student: `completed`, `exempted`, `conditions` (math bridging, `english_path`). |
-| `data/planning_scenario.yaml` | Per-run knobs: `target_semesters`, `max_units_per_semester`. |
-| `src/model.py` | Loads + validates data; shared helpers (`prereq_clauses`, `term_of`, ...) used by solver and checker. |
-| `src/solver.py` | CP-SAT solver: `build_and_solve(...)` → `SolveResult` (status, plan by semester). |
-| `src/checker.py` | Solver-independent plan validator: `check_plan(...)` → list of violations. |
-| `tests/` | pytest suite (solver plans always pass checker; semantics; checker negatives). |
-| `scripts/generate_prereq_graph.py` | Regenerates `docs/prerequisite_graph.*`. |
-| `docs/solver_constraints.md` | **Authoritative** formal semantics of every constraint (x[m,s] formulation). |
-| `docs/decisions.md` | Log of modelling decisions + rationale. Read before changing semantics. |
-| `docs/history.md` | Compressed summaries of finished iterations. |
-| `README.md` | Human-facing overview of the data model. |
-| `misc/` | Course handouts (untracked, local only). `docs/project_brief.md` is the committed digest. |
+| `data/modules.yaml`, `program_cs_iter1.yaml`, `student_example.yaml`, `planning_scenario.yaml` | **Iter 1** data: module facts, degree rules, one student, run knobs. |
+| `data/snapshot_2026-2027/` | **Iter 2** frozen NUSMods snapshot: `modules.yaml` (+ `.raw.json`), `preclusions.yaml`, `validation_report.md`. |
+| `data/program_cs.yaml` | **Iter 2** full 160u degree: required, ULR/ID-CD, breadth_depth (focus/L4000/team/industrial/CP), UE, `assumptions`. |
+| `data/focus_areas.yaml`, `generic_modules.yaml`, `student_iter2.yaml`, `scenario_iter2.yaml` | **Iter 2** focus lists, UE placeholders + C&E service-learning halves, student, scenario (+ preferences). |
+| `data/ge_pillars.yaml`, `data/id_cd.yaml` | **Iter 2** authoritative full GE-pillar and ID/CD course lists (CSP wires a verified subset). |
+| `src/model.py` | Loads + validates both iters; shared helpers (`prereq_clauses`/`tree_satisfied`, `bridging_waived`, `term_of`, ...). |
+| `src/solver.py` | CP-SAT solver: iter1 `build_and_solve` / iter2 `build_and_solve_iter2`, `solve_iter2`, `explain_infeasible_iter2` → `SolveResult`. |
+| `src/checker.py` | Solver-independent validators: `check_plan` (iter1) / `check_plan_iter2`. Never imports the solver. |
+| `app/app.py` | Streamlit frontend over `solve_iter2`: constraint inputs → SAT/UNSAT → semester-by-semester plan grid. |
+| `scripts/ingest_nusmods.py` | Rebuilds the NUSMods snapshot. `scripts/generate_prereq_graph.py` regenerates `docs/prerequisite_graph.*`. |
+| `tests/` | pytest (`test_solver.py` iter1, `test_iter2.py`): solver plans always pass the checker; semantics; checker negatives. |
+| `docs/developer_guide.md`; `AGENTS.md` | **Start here for iter2+ work**: architecture, schema, the add-a-constraint recipe. `AGENTS.md` is the agent entry point. |
+| `docs/solver_constraints.md` | **Authoritative** formal semantics (x[m,s]); iter2 section `I2.*`. `iter2_verification.md` = universe/rule verification; `iter2_plan.md` = plan + audit. |
+| `docs/decisions.md` | Modelling decisions + rationale (read before changing semantics). `docs/history.md` = finished iterations. |
+| `README.md`; `misc/` | Human overview; course handouts (untracked, digest in `docs/project_brief.md`). |
 
 ## Commands
 
 ```bash
 pip install -r requirements.txt
-python src/model.py                      # validate data
-python scripts/generate_prereq_graph.py  # regenerate prerequisite graph
-python src/solver.py [--target-semesters N] [--max-units U] [--student F] [--json]
-python src/checker.py plan.json          # validate a {"1": [...], ...} plan
+python src/model.py [--iter2]            # validate data (iter1 / iter2)
+python scripts/ingest_nusmods.py         # rebuild data/snapshot_2026-2027/ from NUSMods
+python src/solver.py [--target-semesters N] [--max-units U] [--student F] [--json]   # iter1
+python src/solver.py --iter2 [--target-semesters N] [--max-units U] [--focus-area A] [--industrial-option C]
+python src/checker.py plan.json          # validate a {"1": [...], ...} plan (iter1)
 python -m pytest tests -q
+streamlit run app/app.py                 # iter2 frontend
 ```
 
 ## Conventions

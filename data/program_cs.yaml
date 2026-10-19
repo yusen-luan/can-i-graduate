@@ -1,0 +1,111 @@
+program: Computer Science
+iteration: 2
+cohort: "2026/2027"
+total_units_required: 160
+max_overload_units: 28        # iter2 assumption: hard ceiling on units per semester (overload)
+# Module universe = data/snapshot_2026-2027/modules.yaml + data/generic_modules.yaml
+module_sources:
+  - snapshot_2026-2027/modules.yaml
+  - generic_modules.yaml
+focus_areas_file: focus_areas.yaml
+preclusions_file: snapshot_2026-2027/preclusions.yaml
+
+assumptions:
+  - Canonical CS modules only; non-canonical equivalents appear only as preclusions.
+  - Module facts (units, offered terms, prerequisite tree) are a frozen NUSMods AY2026/27 snapshot.
+  - 'ULR pick-list pillars (Cultures GEC%, Singapore GESS%, Communities GEN%) and ID/CD use a verified real NUSMods subset (full authoritative lists in ge_pillars.yaml / id_cd.yaml); only Unrestricted Electives remain generic placeholders.'
+  - 'Year-long Communities & Engagement service learning (GEN..X in Sem 1, GEN..Y in the contiguous Sem 2) is modelled with X carrying the 4u pillar credit and Y a 0u continuation.'
+  - 'Modules with no NUSMods semesterData (by-arrangement project/internship courses) default to being offered in both semesters; flagged in the ingestion report.'
+  - 'Planning uses only Semesters 1 and 2; NUS Special Terms (3,4) are not modelled, so special-term-only offerings are treated as unavailable.'
+  - 'Breadth & Depth is a 32-unit Computing (CS/IFS/CP) bucket containing the focus area, >=12u at level-4000 and the 6-12u industrial experience; verified against the cohort page + NUS Bulletin. There is NO separate team-project requirement in AY2026/27.'
+  - 'Industrial-experience units are excluded from the per-semester unit cap because internships run over the vacation / special term (NUSMods shows CP3880 in terms 1-4).'
+  - 'Computing units beyond the 32u B&D count as Unrestricted Electives; UE is modelled as a residual filler to 160u, not a fixed 40u (no per-bucket unit partition).'
+  - '8 semesters is the arithmetic floor at a 20-unit load, not a rule; overload (higher cap) or exempted/APC credits allow earlier graduation.'
+  - 'Overload is capped at 28 units per semester (max_overload_units); an instance requesting a higher per-semester cap is rejected as unachievable.'
+  - Workload-balance / minimum-load / no-gap are per-instance preferences in the scenario, not graduation rules.
+
+# Fixed real modules every CS student must satisfy.
+required_modules:
+  - CS1101S          # Digital Literacy ULR
+  - CS1231S
+  - CS2030S
+  - CS2040S
+  - CS2100
+  - CS2101
+  - CS2103T
+  - CS2106
+  - CS2109S
+  - CS3230
+  - MA1521
+  - MA1522
+  - ST2334
+  - ES2660           # Critique & Expression ULR
+  - GEA1000          # Data Literacy ULR
+  - IS1108           # Computer Ethics
+
+requirement_groups:
+  # Pick-list pillars use a VERIFIED SUBSET of the real GE courses (full
+  # authoritative lists in data/ge_pillars.yaml). Digital Literacy, Critique &
+  # Expression and Data Literacy are the CS-prescribed fixed choices.
+  university_level_requirements:
+    digital_literacy:        {satisfied_by: [CS1101S], modules_required: 1}
+    critique_and_expression: {satisfied_by: [ES2660], modules_required: 1}
+    data_literacy:           {satisfied_by: [GEA1000], modules_required: 1}
+    cultures_and_connections: {satisfied_by: [GEC1015, GEC1020, GEC1030], modules_required: 1}
+    singapore_studies:       {satisfied_by: [GESS1001, GESS1020, GESS1025], modules_required: 1}
+    communities_and_engagement:
+      # single-semester GEN courses OR the X-half of a year-long service-learning
+      # pair (taking an X commits the student to its contiguous Y, see service_learning).
+      satisfied_by: [GEN2000, GEN2001, GEN2003, GEN2004, GEN2050X, GEN2070X]
+      modules_required: 1
+  computing_ethics:
+    satisfied_by: [IS1108]
+    modules_required: 1
+  interdisciplinary_cross_disciplinary:
+    candidates: [DTK1234, IE2141, IS1128, HSI1000, DAO2703, SC1101E, GE2103]
+    total_modules_required: 3
+    min_id_modules: 2
+    max_cd_modules: 1
+
+scheduling_bundles:
+  CS2101_CS2103T:
+    modules: [CS2101, CS2103T]
+    rule: all_or_nothing_same_semester
+
+# Year-long Communities & Engagement service learning. If the X-half is taken in
+# a Term-1 plan semester, its Y continuation MUST be taken in the immediately
+# following Term-2 semester (two contiguous semesters). See docs/iter2_verification.md.
+service_learning_pairs:
+  - [GEN2050X, GEN2050Y]
+  - [GEN2070X, GEN2070Y]
+
+# --- Iteration-2 Breadth & Depth (32-unit Computing bucket) -----------------
+# B&D is a single 32-unit bucket of Computing (CS/IFS/CP) courses that CONTAINS
+# the focus-area courses, the >=12u at level-4000, and the 6-12u industrial
+# experience (verified against the cohort page + NUS Bulletin; see
+# docs/iter2_verification.md). There is NO separate team-project requirement in
+# AY2026/27. B&D modules are those tagged pillar breadth_depth / industrial_experience.
+breadth_depth:
+  min_units: 32            # total Computing B&D units (focus + L4000 + industrial + CS/IFS/CP electives)
+  level4000:
+    min_units: 12          # >=12 units at level-4000 or above, within B&D
+  focus_area:
+    required_areas: 1      # satisfy at least one focus area
+    # courses_per_area / min_level4000_in_area come from focus_areas.yaml
+  industrial_experience:
+    min_units: 6
+    options:
+      - {set: [CP3880]}                 # 6-month ATAP (12u)
+      - {set: [IS4010]}                 # Industry Internship Programme (12u)
+      - {set: [ETP3201L]}               # I&E Practicum (12u)
+      - {set: [CP3200, CP3202]}         # two 3-month (6u + 6u)
+      - {set: [CP3107, CP3110]}         # CVWO I + II (6u + 6u)
+      - {set: [ETP3205]}                # I&E Internship (6u)
+  cp_coded:
+    max_units: 12                       # excludes industrial experience
+    codes: [CP3106, CP3209, CP4101, CP4106]
+
+unrestricted_electives:
+  candidates: [UE_GENERIC_1, UE_GENERIC_2, UE_GENERIC_3, UE_GENERIC_4, UE_GENERIC_5,
+               UE_GENERIC_6, UE_GENERIC_7, UE_GENERIC_8, UE_GENERIC_9, UE_GENERIC_10]
+  units_required: 40

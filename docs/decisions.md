@@ -22,3 +22,35 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   pointless optional picks (e.g. both MA1301 and MA1301X). Modules outside required ∪ ID/CD ∪ prerequisite closure get no variables.
 - **D10 (Iter 1):** `src/checker.py` re-implements the constraints without the solver. Why: it cross-checks the solver,
   and it will grade plans from the LLM-direct pipeline.
+- **D11 (Iter 2):** Module facts come from a frozen NUSMods AY2026/27 snapshot (`data/snapshot_2026-2027/`, built by
+  `scripts/ingest_nusmods.py`); degree rules stay hand-curated. Why: NUSMods is authoritative and the faculty pages are stale
+  (it caught CP/CS unit sizes, single-sem offerings, and CS4232 no longer existing).
+- **D12 (Iter 2):** Prerequisites use a recursive `all_of`/`one_of` tree mirroring NUSMods; the solver reifies it, the checker
+  evaluates it. Why: real rules are DNF-capable (CS3244), which flat CNF clauses cannot express without blow-up.
+- **D13 (Iter 2):** Bridging prerequisites (MA1301/X, ES1000/ES1103) are waived by placement (`bridging_waived`), not dropped.
+  Why: NUSMods lists only the bridge as a prereq because the real prereq is an A-level; H2-math students take the target directly.
+- **D14 (Iter 2):** Preclusions count `held` credit (completed ∨ scheduled), excluding exempted. Why: an exemption is a waiver
+  with no credit, so it must not trip the "at most one of" rule.
+- **D15 (Iter 2):** The 32u Breadth & Depth aggregate is not enforced; its sub-rules (focus area, ≥12u L4000, team project,
+  industrial experience, CP cap) are. UE is a residual filler to 160u, not a fixed 40u. Why: avoids per-bucket unit
+  partitioning and double-counting; extra B&D simply counts as UE.
+- **D16 (Iter 2):** Objective minimises total units (then module count). Why: with the ≥160 floor it lands at exactly 160 and
+  stops the solver padding with large optional modules (internships/FYP) as filler; stays a CSP (supersedes D9 for iter2).
+- **D17 (Iter 2):** Workload balance / min-load / no-gaps are per-instance scenario preferences, never degree rules. Why: they
+  are not graduation requirements, so hard-coding them would make the oracle reject genuinely valid plans.
+- **D18 (Iter 2):** Industrial experience picks exactly one option and forbids any other internship module. Why: a student does
+  one stint; otherwise the solver uses spare internships as unit filler.
+- **D19 (Iter 2):** No Computer-Systems Team-Project requirement in AY2026/27; Breadth & Depth is a single 32-unit Computing
+  bucket (`units_of(pillar∈{breadth_depth,industrial_experience}) ≥ 32`) containing focus/L4000/industrial. Why: verified against
+  the cohort page + NUS Bulletin (docs/iter2_verification.md §6); the earlier team-project rule was a carried-over error.
+- **D20 (Iter 2):** Industrial-experience units are excluded from the per-semester unit cap. Why: internships run over the
+  vacation / special term (NUSMods shows CP3880 in terms 1–4), so they must not inflate the graduation horizon.
+- **D21 (Iter 2):** The minimum horizon is not hard-coded; 8 semesters is just 160u/20u-cap. Early graduation comes from a higher
+  cap (overload) or `exempted`/APC credits, both already supported. Why: students can and do finish in fewer than 8 semesters.
+- **D22 (Iter 2):** ULR pick-list pillars (Cultures GEC%, Singapore GESS%, Communities GEN%) and ID/CD use a verified real-course
+  subset from NUSMods (full lists in data/ge_pillars.yaml, data/id_cd.yaml); only UE stays generic. Supersedes D7. Why: real codes +
+  real single-semester offerings add binding realism; fixed "GES" prefix corrected to "GESS".
+- **D23 (Iter 2):** Year-long C&E service learning is a pair (X Term1, Y the contiguous Term2), modelled `x[Y,s]=x[X,s-1]`; X holds
+  the 4u, Y is a 0u continuation. Why: real two-contiguous-semester requirement; keeps the pillar at 4u despite NUSMods showing 4u per half.
+- **D24 (Iter 2):** Overload ceiling is 28 units/semester (`program_cs.yaml: max_overload_units`); the solver rejects a higher cap and
+  the checker flags any semester over it. Why: a plan needing >28u/sem is not actually achievable, so the oracle must not produce it.

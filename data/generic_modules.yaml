@@ -1,0 +1,29 @@
+# Non-NUSMods modelling modules for Iteration 2.
+# (a) Unrestricted Electives: generic 4u placeholders (UE is truly unrestricted;
+#     no finite list). (b) Year-long Communities & Engagement service-learning
+#     halves: a single year-long course split across two CONTIGUOUS semesters
+#     (X in Sem 1, Y in the next Sem 2). The 4u C&E pillar credit is carried on
+#     the X half; Y is a 0u continuation whose only job is to force the
+#     two-contiguous-semester structure. NUSMods lists each half at 4u (a
+#     display quirk for one multi-semester course); modelling the pair as 4u+0u
+#     keeps the pillar at its true 4 units. See docs/iter2_verification.md.
+# GEC/GESS/GEN single-semester and ID/CD courses are now REAL (in the snapshot),
+# no longer generic placeholders.
+
+# --- Year-long C&E service-learning halves ---------------------------------
+GEN2050X: {title: "Teach SG (year-long, Sem 1 half)", units: 4, level: 2000, offered_terms: [1], kind: service_learning, pillar: university_level_requirements, service_pair_y: GEN2050Y}
+GEN2050Y: {title: "Teach SG (year-long, Sem 2 continuation)", units: 0, level: 2000, offered_terms: [2], kind: service_learning, pillar: university_level_requirements, service_pair_x: GEN2050X}
+GEN2070X: {title: "ComLink Befrienders (year-long, Sem 1 half)", units: 4, level: 2000, offered_terms: [1], kind: service_learning, pillar: university_level_requirements, service_pair_y: GEN2070Y}
+GEN2070Y: {title: "ComLink Befrienders (year-long, Sem 2 continuation)", units: 0, level: 2000, offered_terms: [2], kind: service_learning, pillar: university_level_requirements, service_pair_x: GEN2070X}
+
+# --- Unrestricted Electives (generic, units-only) --------------------------
+UE_GENERIC_1:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_2:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_3:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_4:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_5:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_6:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_7:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_8:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_9:  {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}
+UE_GENERIC_10: {title: "Unrestricted Elective (generic)", units: 4, level: 1000, offered_terms: [1, 2], kind: generic_placeholder, pillar: unrestricted_electives}

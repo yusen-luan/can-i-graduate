@@ -1,0 +1,31 @@
+# CS Focus Areas — BComp(CS) AY2026/27.
+# Source: https://www.comp.nus.edu.sg/programmes/ug/focus
+# Primaries validated against the NUSMods AY2026/27 snapshot; codes that no
+# longer exist in AY2026/27 were dropped (CS4232 — flagged by ingest report).
+# Rule: a focus area is satisfied by 3 Primaries with >=1 at level-4000+.
+rule:
+  courses_per_area: 3
+  min_level4000_in_area: 1
+areas:
+  algorithms_theory:
+    primaries: [CS3230, CS3231, CS3236, CS4231, CS4234, CS4330, CS4430]
+  artificial_intelligence:
+    primaries: [CS2109S, CS3243, CS3244, CS3263, CS3264, CS3268, CS4243, CS4244, CS4246, CS4248, CS4262, CS4263]
+  computer_graphics_games:
+    primaries: [CS3241, CS3242, CS3247, CS4247, CS4350]
+  computer_security:
+    primaries: [CS2107, CS3235, CS4236, CS4230, CS4238, CS4239]
+  database_systems:
+    primaries: [CS2102, CS3223, CS4221, CS4224, CS4225]
+  hci:
+    primaries: [CS2111, CS3240, CS3249, CS4249, CS4353]
+  multimedia_ir:
+    primaries: [CS2108, CS3245, CS4242, CS4248, CS4347]
+  networking_distributed:
+    primaries: [CS2105, CS3103, CS4222, CS4226, CS4231]
+  parallel_computing:
+    primaries: [CS3210, CS3211, CS4231, CS4223, CS4310]
+  programming_languages:
+    primaries: [CS2104, CS3211, CS4212, CS4215]
+  software_engineering:
+    primaries: [CS2103T, CS3213, CS3217, CS3219, CS3227, CS3282, CS4211, CS4218, CS4239]

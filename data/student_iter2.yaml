@@ -1,0 +1,10 @@
+# Iteration-2 student profile (sparse format: only list what is true;
+# every unlisted module defaults to not-completed, not-exempted).
+student_id: iter2_fresh_student
+conditions:
+  needs_math_bridging: false
+  english_path: direct_es2660
+has_h2_math: true          # false => MA1301/X needed, consumes a UE slot
+eligible_fyp: false        # GPA >= 4.0 after 70% => may substitute CP4101 for industrial exp
+completed: {}
+exempted: {}

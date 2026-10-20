@@ -1,0 +1,128 @@
+{
+  "name": "mid_degree_y2",
+  "declared_expect": "feasible",
+  "nl_prompt": "Done the CS foundation + a few GE pillars; wants to confirm the rest fits in 4 years. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "CS1101S": true,
+        "CS1231S": true,
+        "CS2030S": true,
+        "CS2040S": true,
+        "CS2100": true,
+        "MA1521": true,
+        "MA1522": true,
+        "ST2334": true,
+        "ES2660": true,
+        "GEA1000": true
+      },
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS2106",
+        "CS4263",
+        "GEC1020",
+        "UE_GENERIC_10",
+        "UE_GENERIC_7"
+      ],
+      "2": [
+        "CS2109S",
+        "SC1101E"
+      ],
+      "3": [
+        "CS4243",
+        "IS1128"
+      ],
+      "4": [
+        "GEC1015",
+        "GEN2003",
+        "GESS1020",
+        "UE_GENERIC_9"
+      ],
+      "5": [
+        "IS1108",
+        "UE_GENERIC_6",
+        "UE_GENERIC_8"
+      ],
+      "6": [
+        "GEC1030",
+        "IE2141",
+        "UE_GENERIC_1",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "CS2101",
+        "CS2103T",
+        "GESS1025"
+      ],
+      "8": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "CS4248",
+        "ETP3201L"
+      ]
+    },
+    "total_units": 120
+  },
+  "meta": {
+    "label": "Mid-degree check-in (Year 2/3)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 848,
+      "num_constraints": 1963,
+      "wall_time_s": 0.05,
+      "min_feasible_semesters": 6,
+      "semester_slack": 2,
+      "min_feasible_cap": 16,
+      "cap_slack": 4,
+      "near_unsat_margin": 2
+    },
+    "quality": {
+      "realism": 76.2,
+      "flags": [
+        "Semester 2: only 8 MC \u2014 very light",
+        "Semester 3: only 8 MC \u2014 very light",
+        "Level-4000 module(s) scheduled very early: CS4263",
+        "Semester 4: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

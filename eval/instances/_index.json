@@ -1,0 +1,484 @@
+[
+  {
+    "name": "on_track_fresh",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ]
+  },
+  {
+    "name": "no_h2_math",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ]
+  },
+  {
+    "name": "transfer_apc",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 1,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "early_grad_overloader",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ]
+  },
+  {
+    "name": "part_load_worklife",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ]
+  },
+  {
+    "name": "honours_dissertation",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl",
+      "C-pref"
+    ]
+  },
+  {
+    "name": "internship_and_urop",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "infeasible_3yr",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "mid_degree_y2",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 2,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "final_year_audit",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 6,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "behind_retaking",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 2,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "preclusion_deadend",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "over_credited",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 2,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "two_internships",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "fyp_urop_trap",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "deep_focus_pinned",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ]
+  },
+  {
+    "name": "leave_of_absence",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ]
+  },
+  {
+    "name": "focus_switch",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 2,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ]
+  },
+  {
+    "name": "unsat_t1_5sem",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t1_4sem_overload",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t1_7sem_standard",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t1_6sem_cap25",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t1_two_blocked",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t2_6sem_cap27",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_offering_lock",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_forbid_required",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_forbid_two_core",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_ineligible_fyp",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-compl",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_cs_starved",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_deadline_prereq",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_tight_focus_overload_block",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t1_6sem_cap26",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "unsat_t4_forbid_three_core",
+    "expect": "infeasible",
+    "feasible": false,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ]
+  },
+  {
+    "name": "nearbnd_min_horizon",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ]
+  },
+  {
+    "name": "nearbnd_overload_floor",
+    "expect": "feasible",
+    "feasible": true,
+    "ok": true,
+    "margin": 0,
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ]
+  }
+]

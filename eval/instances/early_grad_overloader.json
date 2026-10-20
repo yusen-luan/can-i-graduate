@@ -1,0 +1,118 @@
+{
+  "name": "early_grad_overloader",
+  "declared_expect": "feasible",
+  "nl_prompt": "Wants to finish in 7 semesters by overloading to 26 units/sem; Security focus. I want to graduate within 7 semesters; take at most 26 MC per semester; specialise in computer security. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 7,
+      "max_units_per_semester": 26,
+      "focus_area": "computer_security",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "GEC1030",
+        "GESS1020",
+        "MA1521",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "GEN2003",
+        "ST2334"
+      ],
+      "3": [
+        "CS3230",
+        "CS4236",
+        "GESS1001",
+        "MA1522",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "4": [
+        "CS2105",
+        "CS2109S",
+        "CS4230",
+        "GEC1015"
+      ],
+      "5": [
+        "GEC1020",
+        "UE_GENERIC_10",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4215",
+        "ES2660",
+        "GEA1000",
+        "IS1108",
+        "SC1101E",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "ETP3201L",
+        "HSI1000",
+        "IE2141",
+        "UE_GENERIC_7"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Early graduation (overload)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ],
+    "difficulty": {
+      "num_variables": 812,
+      "num_constraints": 2717,
+      "wall_time_s": 0.057,
+      "min_feasible_semesters": 7,
+      "semester_slack": 0,
+      "min_feasible_cap": 24,
+      "cap_slack": 2,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 91.4,
+      "flags": [
+        "Semester 1: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

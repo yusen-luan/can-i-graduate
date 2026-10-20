@@ -1,0 +1,127 @@
+{
+  "name": "part_load_worklife",
+  "declared_expect": "feasible",
+  "nl_prompt": "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon. I want to graduate within 10 semesters; take at most 16 MC per semester; specialise in software engineering; keep semester 6 under 8 MC. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 10,
+      "max_units_per_semester": 16,
+      "focus_area": "software_engineering",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {
+          "6": 8
+        },
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 8,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "GEN2001",
+        "UE_GENERIC_6"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "IS1108",
+        "IS1128"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "ES2660",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2100",
+        "CS3219",
+        "GESS1025",
+        "UE_GENERIC_9"
+      ],
+      "5": [
+        "CS3230",
+        "CS4211",
+        "CS4218",
+        "MA1521"
+      ],
+      "6": [
+        "ETP3201L",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS3227",
+        "GEA1000",
+        "MA1522",
+        "SC1101E"
+      ],
+      "8": [
+        "CS2109S",
+        "CS4215",
+        "HSI1000",
+        "ST2334"
+      ],
+      "9": [
+        "GESS1001",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "CS2106",
+        "GEN2004",
+        "UE_GENERIC_2",
+        "UE_GENERIC_5"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Part-load (work/health)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1160,
+      "num_constraints": 3826,
+      "wall_time_s": 0.201,
+      "min_feasible_semesters": 10,
+      "semester_slack": 0,
+      "min_feasible_cap": 16,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 92.2,
+      "flags": [
+        "Semester 6: only 4 MC \u2014 very light"
+      ]
+    }
+  }
+}

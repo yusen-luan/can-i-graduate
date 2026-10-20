@@ -1,0 +1,120 @@
+{
+  "name": "no_h2_math",
+  "declared_expect": "feasible",
+  "nl_prompt": "Needs MA1301 math bridging and the ES1103 English path; bridging consumes a UE slot. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": true,
+        "english_path": "es1103_required"
+      },
+      "has_h2_math": false,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "algorithms_theory",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "ES2660",
+        "GEN2003",
+        "IS1108",
+        "MA1301"
+      ],
+      "2": [
+        "CS1231S",
+        "GEC1015",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2100",
+        "GEA1000",
+        "IS1128"
+      ],
+      "4": [
+        "CS2030S",
+        "CS3230",
+        "GEC1030",
+        "MA1521",
+        "MA1522"
+      ],
+      "5": [
+        "CS2109S",
+        "CS3231",
+        "CS4234",
+        "DTK1234",
+        "HSI1000"
+      ],
+      "6": [
+        "CS2101",
+        "CS2103T",
+        "MA1301X",
+        "ST2334",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "GEN2000",
+        "GEN2001",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "CS2106",
+        "CS3236",
+        "CS4231",
+        "CS4430",
+        "ETP3201L",
+        "GESS1020"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Polytechnic / no H2 Maths",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ],
+    "difficulty": {
+      "num_variables": 944,
+      "num_constraints": 3197,
+      "wall_time_s": 0.064,
+      "min_feasible_semesters": 8,
+      "semester_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 91.2,
+      "flags": [
+        "Semester 1: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

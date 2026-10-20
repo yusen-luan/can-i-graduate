@@ -1,0 +1,122 @@
+{
+  "name": "internship_and_urop",
+  "declared_expect": "feasible",
+  "nl_prompt": "A 6-month ATAP internship (CP3880) plus a UROP research project; Software Engineering focus. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in software engineering; do the CP3880 internship option; do a UROP research project. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "software_engineering",
+      "industrial_option": "CP3880",
+      "want_fyp": false,
+      "want_urop": true,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "ES2660",
+        "MA1521",
+        "UE_GENERIC_9"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2100",
+        "MA1522",
+        "ST2334"
+      ],
+      "3": [
+        "CP4106",
+        "CS2040S"
+      ],
+      "4": [
+        "GEC1015",
+        "GEC1030",
+        "GESS1020",
+        "GESS1025",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "IE2141",
+        "SC1101E",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "GEC1020",
+        "GEN2004",
+        "IS1128",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "GEA1000"
+      ],
+      "8": [
+        "CS3213",
+        "CS3227",
+        "CS3230"
+      ],
+      "9": [
+        "CP3880",
+        "CS2106",
+        "CS4211",
+        "GESS1001",
+        "IS1108",
+        "UE_GENERIC_3"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "6-month internship + UROP research",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 1008,
+      "num_constraints": 3328,
+      "wall_time_s": 0.077,
+      "min_feasible_semesters": 8,
+      "semester_slack": 1,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 80.3,
+      "flags": [
+        "Semester 4: 4 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

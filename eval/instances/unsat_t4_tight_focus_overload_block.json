@@ -1,0 +1,63 @@
+{
+  "name": "unsat_t4_tight_focus_overload_block",
+  "declared_expect": "infeasible",
+  "nl_prompt": "Seven-semester overload (26 MC) but with one semester fully blocked \u2014 drops below 160. I want to graduate within 7 semesters; take at most 26 MC per semester; keep semester 4 blocked (no modules). Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 7,
+      "max_units_per_semester": 26,
+      "focus_area": "any",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {
+          "4": 0
+        },
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": false,
+    "status": "INFEASIBLE",
+    "reason": "infeasible: needs 8 semesters; or a cap of 28 MC"
+  },
+  "meta": {
+    "label": "UNSAT T4: blocked term under a tight overload horizon",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ],
+    "difficulty": {
+      "num_variables": 812,
+      "num_constraints": 2853,
+      "wall_time_s": 0.038,
+      "extra_semesters_to_feasible": 1,
+      "extra_cap_to_feasible": 2,
+      "near_unsat_margin": 0
+    },
+    "quality": null
+  }
+}

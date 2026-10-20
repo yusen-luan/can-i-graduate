@@ -1,0 +1,121 @@
+{
+  "name": "nearbnd_min_horizon",
+  "declared_expect": "feasible",
+  "nl_prompt": "Fresh student at the exact 8-semester floor, 20 MC cap \u2014 zero slack, every placement forced. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "GEA1000",
+        "GEN2001",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS1101S",
+        "CS1231S",
+        "HSI1000",
+        "ST2334",
+        "UE_GENERIC_6"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "UE_GENERIC_8"
+      ],
+      "5": [
+        "CS3263",
+        "CS4263",
+        "GEC1030",
+        "GESS1001",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "CS3230",
+        "CS3264",
+        "CS4248",
+        "DTK1234",
+        "ES2660"
+      ],
+      "7": [
+        "CS2106",
+        "CS4243",
+        "GEN2003",
+        "UE_GENERIC_1",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "ETP3201L",
+        "GEN2000",
+        "GESS1020",
+        "IE2141",
+        "IS1108",
+        "UE_GENERIC_7"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Near-boundary: minimum horizon",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ],
+    "difficulty": {
+      "num_variables": 928,
+      "num_constraints": 3079,
+      "wall_time_s": 0.069,
+      "min_feasible_semesters": 8,
+      "semester_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 95.2,
+      "flags": []
+    }
+  }
+}

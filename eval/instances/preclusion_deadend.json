@@ -1,0 +1,64 @@
+{
+  "name": "preclusion_deadend",
+  "declared_expect": "infeasible",
+  "nl_prompt": "Holds CS1010 from a prior course (precludes CS1101S) but it was not exempted, so the required CS1101S cannot be taken \u2014 infeasible until the credit is formally recognised. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "CS1010": true
+      },
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": false,
+    "status": "INFEASIBLE",
+    "reason": "infeasible under any simple relaxation"
+  },
+  "meta": {
+    "label": "Preclusion dead-end (CS1010 without credit transfer)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl",
+      "C-unsat"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_constraints": 3426,
+      "wall_time_s": 0.004,
+      "extra_semesters_to_feasible": null,
+      "extra_cap_to_feasible": null,
+      "near_unsat_margin": 0
+    },
+    "quality": null
+  }
+}

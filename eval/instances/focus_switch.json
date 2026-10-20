@@ -1,0 +1,128 @@
+{
+  "name": "focus_switch",
+  "declared_expect": "feasible",
+  "nl_prompt": "Took Computer-Security electives early, then switched to an AI focus; the security modules still count toward Breadth & Depth and the 160 MC total. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "CS2107": true,
+        "CS3235": true
+      },
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1231S",
+        "GEN2001",
+        "GESS1020",
+        "IE2141",
+        "MA1521"
+      ],
+      "2": [
+        "CS1101S",
+        "HSI1000",
+        "ST2334",
+        "UE_GENERIC_9"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2003",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "GEN2000",
+        "UE_GENERIC_2"
+      ],
+      "5": [
+        "CS4263",
+        "ES2660"
+      ],
+      "6": [
+        "IS1128"
+      ],
+      "7": [
+        "CS2106",
+        "CS4243",
+        "GESS1001",
+        "IS1108",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "CS4248",
+        "GEN2004",
+        "GESS1025"
+      ],
+      "9": [
+        "CS3230",
+        "ETP3201L",
+        "GEA1000",
+        "GEC1030",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ]
+    },
+    "total_units": 152
+  },
+  "meta": {
+    "label": "Focus switch mid-degree",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 1026,
+      "num_constraints": 3325,
+      "wall_time_s": 0.073,
+      "min_feasible_semesters": 7,
+      "semester_slack": 2,
+      "min_feasible_cap": 16,
+      "cap_slack": 4,
+      "near_unsat_margin": 2
+    },
+    "quality": {
+      "realism": 92.0,
+      "flags": [
+        "Semester 5: only 8 MC \u2014 very light",
+        "Semester 6: only 4 MC \u2014 very light"
+      ]
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "name": "final_year_audit",
+  "declared_expect": "feasible",
+  "nl_prompt": "Has cleared the first three years; checking the last two semesters complete the degree. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "GEC1015": true,
+        "GEN2000": true,
+        "GESS1001": true,
+        "MA1521": true,
+        "SC1101E": true,
+        "CS1101S": true,
+        "CS1231S": true,
+        "ES2660": true,
+        "IS1128": true,
+        "ST2334": true,
+        "CS2030S": true,
+        "CS2040S": true,
+        "CS2100": true,
+        "MA1522": true,
+        "UE_GENERIC_1": true,
+        "CS2102": true,
+        "CS2106": true,
+        "CS2107": true,
+        "CS2109S": true,
+        "CS2111": true,
+        "CS2101": true,
+        "CS2103T": true,
+        "CS2105": true,
+        "CS3241": true,
+        "UE_GENERIC_8": true,
+        "CS3211": true,
+        "CS3247": true,
+        "CS3281": true,
+        "CS4225": true,
+        "CS4243": true
+      },
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "IS1108"
+      ],
+      "2": [
+        "GEA1000"
+      ],
+      "5": [
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS4248",
+        "GEC1030"
+      ],
+      "7": [
+        "CS3230"
+      ],
+      "8": [
+        "ETP3201L",
+        "IE2141"
+      ]
+    },
+    "total_units": 40
+  },
+  "meta": {
+    "label": "Final-year audit (almost done)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 688,
+      "num_constraints": 1332,
+      "wall_time_s": 0.032,
+      "min_feasible_semesters": 2,
+      "semester_slack": 6,
+      "min_feasible_cap": 4,
+      "cap_slack": 16,
+      "near_unsat_margin": 6
+    },
+    "quality": {
+      "realism": 82.3,
+      "flags": [
+        "Semester 1: only 4 MC \u2014 very light",
+        "Semester 2: only 4 MC \u2014 very light",
+        "Semester 5: only 4 MC \u2014 very light",
+        "Semester 6: only 8 MC \u2014 very light",
+        "Semester 7: only 4 MC \u2014 very light",
+        "Semester 8: only 4 MC \u2014 very light",
+        "2 empty semester(s) between enrolled semesters"
+      ]
+    }
+  }
+}

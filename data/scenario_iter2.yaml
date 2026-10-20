@@ -12,10 +12,33 @@ focus_area: artificial_intelligence
 # Which industrial-experience option to use, or "any".
 industrial_option: any
 
+# iter3 C3: request a Final-Year Project and/or UROP research IN ADDITION to the
+# mandatory industrial experience. want_fyp needs student.eligible_fyp; want_urop
+# needs student.eligible_urop. Both are cp_coded, so the 12u CP cap binds them:
+# CP4101 (FYP) is 12u and fills the cap, so want_fyp + want_urop is infeasible.
+want_fyp: false
+want_urop: false
+
+# iter3 C5: explicit NUS-term of each plan slot (3,4 = Special Terms). Length must
+# equal target_semesters. Omit for the default parity mapping (odd->1, even->2).
+# e.g. [1, 2, 3, 1, 2, 3, 1, 2]  (a Special Term as slot 3 and slot 6)
+# term_layout: []
+
 preferences:
   min_units_per_semester: 0        # floor on a non-empty semester's load (0 = off)
   no_empty_semesters: false        # forbid gaps between enrolled semesters
   heavy_conflicts: []              # e.g. [[CS2030S, CS2040S], [CS2040S, CS2100]]
+  # iter3 C1: per-slot unit-cap override. 0 = slot fully unavailable (exchange/SEP);
+  # a low value (e.g. 12) = a deliberately light "chill" semester. e.g. {5: 12, 6: 0}
+  per_semester_cap: {}
+  # iter3 C2: at most N Computing (CS/IFS/CP) modules scheduled in one slot (0 = off).
+  max_cs_modules_per_sem: 0
+  # iter3 C4 (I2.18): per-module pins. require = must take; forbid = must not take;
+  # deadline = must be done by that plan-semester. e.g. require_modules: [CS3230],
+  # forbid_modules: [CS3241], deadline: {CS2103T: 4}
+  require_modules: []
+  forbid_modules: []
+  deadline: {}
 
 notes:
   - Set focus_area to "any" to let the solver choose which area to satisfy.

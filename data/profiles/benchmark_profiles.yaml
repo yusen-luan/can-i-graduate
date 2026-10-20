@@ -1,0 +1,529 @@
+# Benchmark student profiles — representative CS-junior archetypes used by the
+# Streamlit app's profile picker and (later) the evaluation corpus. Each entry is
+# a self-contained instance: a `student` (state) + a `scenario` (request), per
+# docs/evaluation_plan.md §2.1. These bundle the two layers ONLY for the benchmark;
+# the core data files (student_iter2.yaml, scenario_iter2.yaml) stay separate.
+#
+# Validated 2026-10-20: every profile solves to the stated `expect` status and,
+# when feasible, the solver plan passes check_plan_iter2.
+#
+# scenario fields: target_semesters, max_units_per_semester, focus_area,
+# industrial_option, want_fyp, want_urop, term_layout (C5), and preferences
+# (per_semester_cap C1, max_cs_modules_per_sem C2, min_units_per_semester,
+# no_empty_semesters, heavy_conflicts).
+
+on_track_fresh:
+  label: "On-track fresh Year 1"
+  description: "Standard intake: A-level H2 Maths, direct English, AI focus, 4-year plan."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+no_h2_math:
+  label: "Polytechnic / no H2 Maths"
+  description: "Needs MA1301 math bridging and the ES1103 English path; bridging consumes a UE slot."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: true, english_path: es1103_required}
+    has_h2_math: false
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: algorithms_theory
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+transfer_apc:
+  label: "Transfer with advanced-placement credit"
+  description: "Arrives with CS1101S, CS1231S, MA1521, MA1522 completed and GEA1000 exempted."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {CS1101S: true, CS1231S: true, MA1521: true, MA1522: true}
+    exempted: {GEA1000: true}
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: database_systems
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+early_grad_overloader:
+  label: "Early graduation (overload)"
+  description: "Wants to finish in 7 semesters by overloading to 26 units/sem; Security focus."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 7
+    max_units_per_semester: 26
+    focus_area: computer_security
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+part_load_worklife:
+  label: "Part-load (work/health)"
+  description: "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 10
+    max_units_per_semester: 16
+    focus_area: software_engineering
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {6: 8}, max_cs_modules_per_sem: 0, min_units_per_semester: 8, no_empty_semesters: false, heavy_conflicts: []}
+
+honours_dissertation:
+  label: "Honours track — dissertation + special term"
+  description: "GPA-eligible: CP4101 dissertation replaces the internship; includes a Special Term and caps CS at 4 modules/sem."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: true
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 10
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: true
+    want_urop: false
+    term_layout: [1, 2, 3, 1, 2, 1, 2, 1, 2, 1]
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 4, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+internship_and_urop:
+  label: "6-month internship + UROP research"
+  description: "A 6-month ATAP internship (CP3880) plus a UROP research project; Software Engineering focus."
+  expect: feasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: software_engineering
+    industrial_option: CP3880
+    want_fyp: false
+    want_urop: true
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+infeasible_3yr:
+  label: "Infeasible: 3-year graduation"
+  description: "Fresh student asking to finish in 6 semesters at 20 units/sem — below the arithmetic floor (160/20=8)."
+  expect: infeasible
+  student:
+    conditions: {needs_math_bridging: false, english_path: direct_es2660}
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 6
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences: {per_semester_cap: {}, max_cs_modules_per_sem: 0, min_units_per_semester: 0, no_empty_semesters: false, heavy_conflicts: []}
+
+# --- A9-A19 corpus archetypes (benchmark_design.md B2), validated via
+# scripts/validate_new_profiles.py: each hits its `expect`; feasible ones are
+# checker-clean; UNSAT ones are A4 relax->SAT verified. (A17/NOC dropped.)
+
+mid_degree_y2:
+  label: Mid-degree check-in (Year 2/3)
+  description: Done the CS foundation + a few GE pillars; wants to confirm the rest fits in 4 years.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed:
+      CS1101S: true
+      CS1231S: true
+      CS2030S: true
+      CS2040S: true
+      CS2100: true
+      MA1521: true
+      MA1522: true
+      ST2334: true
+      ES2660: true
+      GEA1000: true
+    exempted: {}
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+final_year_audit:
+  label: Final-year audit (almost done)
+  description: Has cleared the first three years; checking the last two semesters complete the degree.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed:
+      GEC1015: true
+      GEN2000: true
+      GESS1001: true
+      MA1521: true
+      SC1101E: true
+      CS1101S: true
+      CS1231S: true
+      ES2660: true
+      IS1128: true
+      ST2334: true
+      CS2030S: true
+      CS2040S: true
+      CS2100: true
+      MA1522: true
+      UE_GENERIC_1: true
+      CS2102: true
+      CS2106: true
+      CS2107: true
+      CS2109S: true
+      CS2111: true
+      CS2101: true
+      CS2103T: true
+      CS2105: true
+      CS3241: true
+      UE_GENERIC_8: true
+      CS3211: true
+      CS3247: true
+      CS3281: true
+      CS4225: true
+      CS4243: true
+    exempted: {}
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+behind_retaking:
+  label: Behind / retaking a core module
+  description: Failed CS2040S and is a semester behind; needs a 9-semester plan to recover.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed:
+      CS1101S: true
+      CS1231S: true
+      MA1521: true
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: algorithms_theory
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+preclusion_deadend:
+  label: Preclusion dead-end (CS1010 without credit transfer)
+  description: "Holds CS1010 from a prior course (precludes CS1101S) but it was not exempted, so the required\
+    \ CS1101S cannot be taken \u2014 infeasible until the credit is formally recognised."
+  expect: infeasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed:
+      CS1010: true
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+over_credited:
+  label: Over-credited (many exemptions, unit shortfall)
+  description: Arrives with large advanced-placement exemptions (no units), so the plan must backfill
+    unrestricted electives to reach 160 MC.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted:
+      CS1101S: true
+      CS1231S: true
+      CS2030S: true
+      CS2040S: true
+      CS2100: true
+      MA1521: true
+      MA1522: true
+  scenario:
+    target_semesters: 8
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+two_internships:
+  label: Two 3-month internships
+  description: Prefers two shorter internships (CP3200 + CP3202) over one 6-month stint; SE focus.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: software_engineering
+    industrial_option: CP3200
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+fyp_urop_trap:
+  label: FYP + UROP (CP-cap trap)
+  description: "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP \u2014 infeasible because\
+    \ CP4101 alone fills the 12 MC CP-coded cap."
+  expect: infeasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: true
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: true
+    want_urop: true
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+deep_focus_pinned:
+  label: Deep focus with a pinned module
+  description: Algorithms & Theory focus, insists on taking CS3230 and finishing CS2040S by semester 3.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: algorithms_theory
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules:
+      - CS3230
+      forbid_modules: []
+      deadline:
+        CS2040S: 3
+leave_of_absence:
+  label: Leave of absence (blocked semester)
+  description: Takes one semester off (no modules), stretching the plan to 9 semesters.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap:
+        5: 0
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}
+focus_switch:
+  label: Focus switch mid-degree
+  description: Took Computer-Security electives early, then switched to an AI focus; the security modules
+    still count toward Breadth & Depth and the 160 MC total.
+  expect: feasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed:
+      CS2107: true
+      CS3235: true
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: artificial_intelligence
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: []
+      deadline: {}

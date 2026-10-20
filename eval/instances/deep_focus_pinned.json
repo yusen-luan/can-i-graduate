@@ -1,0 +1,132 @@
+{
+  "name": "deep_focus_pinned",
+  "declared_expect": "feasible",
+  "nl_prompt": "Algorithms & Theory focus, insists on taking CS3230 and finishing CS2040S by semester 3. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in algorithms theory; be sure to take CS3230; finish CS2040S by semester 3. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "algorithms_theory",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [
+          "CS3230"
+        ],
+        "forbid_modules": [],
+        "deadline": {
+          "CS2040S": 3
+        }
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "HSI1000",
+        "IS1108",
+        "IS1128",
+        "MA1521",
+        "SC1101E"
+      ],
+      "2": [
+        "CS1101S",
+        "CS1231S",
+        "GEN2004",
+        "ST2334",
+        "UE_GENERIC_6"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2003",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "5": [
+        "CS4234",
+        "GEN2001"
+      ],
+      "6": [
+        "CS3236",
+        "GEC1030",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS3231",
+        "ES2660",
+        "GEA1000",
+        "UE_GENERIC_3",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "CS4231",
+        "CS4430"
+      ],
+      "9": [
+        "ETP3201L",
+        "GEC1015",
+        "GEN2000",
+        "GESS1020",
+        "GESS1025",
+        "UE_GENERIC_10"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Deep focus with a pinned module",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_constraints": 3446,
+      "wall_time_s": 0.068,
+      "min_feasible_semesters": 8,
+      "semester_slack": 1,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 92.8,
+      "flags": [
+        "Semester 5: only 8 MC \u2014 very light",
+        "Semester 8: only 8 MC \u2014 very light",
+        "Semester 9: 4 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

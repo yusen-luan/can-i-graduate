@@ -1,0 +1,124 @@
+{
+  "name": "transfer_apc",
+  "declared_expect": "feasible",
+  "nl_prompt": "Arrives with CS1101S, CS1231S, MA1521, MA1522 completed and GEA1000 exempted. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in database systems. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "CS1101S": true,
+        "CS1231S": true,
+        "MA1521": true,
+        "MA1522": true
+      },
+      "exempted": {
+        "GEA1000": true
+      }
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "database_systems",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2000",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS2101",
+        "CS2102",
+        "CS2103T",
+        "ST2334",
+        "UE_GENERIC_10"
+      ],
+      "3": [
+        "CS2109S",
+        "CS4225",
+        "GEC1030",
+        "GESS1020",
+        "UE_GENERIC_8"
+      ],
+      "4": [
+        "CS3223",
+        "IS1108"
+      ],
+      "5": [
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS3230",
+        "ES2660",
+        "GEC1020",
+        "UE_GENERIC_3",
+        "UE_GENERIC_9"
+      ],
+      "7": [
+        "CS4224",
+        "DTK1234",
+        "GEC1015",
+        "HSI1000",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "CS2106",
+        "CS4221",
+        "ETP3201L",
+        "GEN2004",
+        "SC1101E"
+      ]
+    },
+    "total_units": 140
+  },
+  "meta": {
+    "label": "Transfer with advanced-placement credit",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 888,
+      "num_constraints": 2605,
+      "wall_time_s": 0.061,
+      "min_feasible_semesters": 7,
+      "semester_slack": 1,
+      "min_feasible_cap": 16,
+      "cap_slack": 4,
+      "near_unsat_margin": 1
+    },
+    "quality": {
+      "realism": 85.0,
+      "flags": [
+        "Semester 4: only 8 MC \u2014 very light",
+        "Semester 5: only 4 MC \u2014 very light"
+      ]
+    }
+  }
+}

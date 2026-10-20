@@ -104,6 +104,14 @@ breadth_depth:
   cp_coded:
     max_units: 12                       # excludes industrial experience
     codes: [CP3106, CP3209, CP4101, CP4106]
+  # iter3 C3: Final-Year Project and UROP research, requestable via the scenario
+  # (want_fyp / want_urop) IN ADDITION TO the mandatory industrial experience.
+  # All are cp_coded, so the 12u CP cap binds them (CP4101=12u fills the cap, so
+  # FYP + UROP together is infeasible). See docs/solver_constraints.md I2.17.
+  fyp:
+    code: CP4101                        # 12u; gated by student.eligible_fyp
+  urop:
+    codes: [CP3106, CP3209, CP4106]     # gated by student.eligible_urop
 
 unrestricted_electives:
   candidates: [UE_GENERIC_1, UE_GENERIC_2, UE_GENERIC_3, UE_GENERIC_4, UE_GENERIC_5,

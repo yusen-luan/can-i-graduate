@@ -41,12 +41,14 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 | `src/model.py` | Loads + validates both iters; shared helpers (`prereq_clauses`/`tree_satisfied`, `bridging_waived`, `term_of`, ...). |
 | `src/solver.py` | CP-SAT solver: iter1 `build_and_solve` / iter2 `build_and_solve_iter2`, `solve_iter2`, `explain_infeasible_iter2` → `SolveResult`. |
 | `src/checker.py` | Solver-independent validators: `check_plan` (iter1) / `check_plan_iter2`. Never imports the solver. |
-| `app/app.py` | Streamlit frontend over `solve_iter2`: constraint inputs → SAT/UNSAT → semester-by-semester plan grid. |
+| `app/app.py` | Streamlit frontend over `solve_iter2`: benchmark-profile picker + iter3 controls → SAT/UNSAT → plan grid. |
+| `data/profiles/benchmark_profiles.yaml` | Representative student archetypes (student+scenario bundles) for the app picker + eval corpus; `demo_iter3_*` = CLI example. |
 | `scripts/ingest_nusmods.py` | Rebuilds the NUSMods snapshot. `scripts/generate_prereq_graph.py` regenerates `docs/prerequisite_graph.*`. |
 | `tests/` | pytest (`test_solver.py` iter1, `test_iter2.py`): solver plans always pass the checker; semantics; checker negatives. |
 | `docs/developer_guide.md`; `AGENTS.md` | **Start here for iter2+ work**: architecture, schema, the add-a-constraint recipe. `AGENTS.md` is the agent entry point. |
 | `docs/solver_constraints.md` | **Authoritative** formal semantics (x[m,s]); iter2 section `I2.*`. `iter2_verification.md` = universe/rule verification; `iter2_plan.md` = plan + audit. |
 | `docs/decisions.md` | Modelling decisions + rationale (read before changing semantics). `docs/history.md` = finished iterations. |
+| `docs/evaluation_plan.md`, `docs/iter3_plan.md` | Research deliverable blueprint (LLM-direct vs LLM→solver: corpus, profiles, pipelines, metrics); iter3 preference roadmap. |
 | `README.md`; `misc/` | Human overview; course handouts (untracked, digest in `docs/project_brief.md`). |
 
 ## Commands

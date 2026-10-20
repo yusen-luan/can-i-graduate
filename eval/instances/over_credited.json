@@ -1,0 +1,125 @@
+{
+  "name": "over_credited",
+  "declared_expect": "feasible",
+  "nl_prompt": "Arrives with large advanced-placement exemptions (no units), so the plan must backfill unrestricted electives to reach 160 MC. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {
+        "CS1101S": true,
+        "CS1231S": true,
+        "CS2030S": true,
+        "CS2040S": true,
+        "CS2100": true,
+        "MA1521": true,
+        "MA1522": true
+      }
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "GEN2001",
+        "GESS1001",
+        "UE_GENERIC_4"
+      ],
+      "2": [
+        "CS2109S",
+        "CS3243",
+        "ST2334",
+        "UE_GENERIC_8"
+      ],
+      "3": [
+        "CS3230",
+        "GEC1030",
+        "UE_GENERIC_5"
+      ],
+      "4": [
+        "GEN2003",
+        "GESS1025",
+        "UE_GENERIC_10",
+        "UE_GENERIC_7",
+        "UE_GENERIC_9"
+      ],
+      "5": [
+        "CS3264",
+        "CS4248",
+        "CS4263",
+        "DTK1234",
+        "IE2141"
+      ],
+      "6": [
+        "HSI1000",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "CS2106",
+        "GEA1000",
+        "GESS1020"
+      ],
+      "8": [
+        "CS2101",
+        "CS2103T",
+        "CS4243",
+        "ES2660",
+        "ETP3201L",
+        "IS1108"
+      ]
+    },
+    "total_units": 132
+  },
+  "meta": {
+    "label": "Over-credited (many exemptions, unit shortfall)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 872,
+      "num_constraints": 2209,
+      "wall_time_s": 0.058,
+      "min_feasible_semesters": 6,
+      "semester_slack": 2,
+      "min_feasible_cap": 16,
+      "cap_slack": 4,
+      "near_unsat_margin": 2
+    },
+    "quality": {
+      "realism": 86.6,
+      "flags": [
+        "Semester 6: only 8 MC \u2014 very light"
+      ]
+    }
+  }
+}

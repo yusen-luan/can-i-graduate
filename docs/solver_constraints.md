@@ -272,9 +272,15 @@ Computing units beyond 32 legitimately count as Unrestricted Electives (UE is
 unrestricted), so the bucket is a floor, not a partition.
 
 ## I2.8 Industrial experience (inside B&D; done over the vacation)
-Choose **exactly one** option; take exactly that option's modules and no other
-industrial module (no padding). `Σ_i opt_i = 1`; `opt_i ⇒ sat(m) ∀m∈set_i`;
-`sat(m) ≤ Σ_{i: m∈set_i} opt_i`. Options: 12u single stints (CP3880/IS4010/ETP3201L)
+**(Corrected 2026-10-20 against the cohort page: the dissertation may REPLACE the
+internship.)** The industry-experience component is satisfied by **at most one**
+internship option (no padding) **OR**, for a GPA-eligible student, by the CP4101
+**dissertation** (12u) replacing it: `Σ_i opt_i ≤ 1`; if `industrial_option` names a
+specific option then `Σ_i opt_i = 1` (an explicit internship request is honoured),
+otherwise `Σ_i opt_i + diss ≥ 1` where `diss = sat(CP4101)` only when
+`student.eligible_fyp` (else 0). `opt_i ⇒ sat(m) ∀m∈set_i`; `sat(m) ≤ Σ_{i: m∈set_i}
+opt_i` (an industrial module only if its option is chosen). A student may legitimately
+do **both** a dissertation and one internship. Options: 12u single stints (CP3880/IS4010/ETP3201L)
 or two sequential 6u stints (CP3200→CP3202, CP3107→CP3110, with a real prereq edge).
 Because internships run over the **vacation / special term** (NUSMods `CP3880`
 `semesterData` spans terms 1–4), their units are **excluded from the per-semester
@@ -302,6 +308,76 @@ Active only when the scenario sets them; never affect baseline feasibility:
 - `heavy_conflicts`: pairs `(a,b)` with `x[a,s]+x[b,s] ≤ 1 ∀s`.
 - `min_units_per_semester`: with a per-semester `used_s`, `load_s ≥ min·used_s`.
 - `no_empty_semesters`: `used_s ≥ used_{s+1}` (no gaps).
+
+## I2.14 Special-term calendar (term layout) — iter3 C5
+Iteration 2 mapped plan semester `s` to NUS term by parity only (`term_of`: odd→1,
+even→2) and treated special-term-only offerings as unavailable (I2.12). Iteration 3
+makes the calendar explicit and optional. The scenario may carry
+`term_layout: [t_1, …, t_T]` with `t_s ∈ {1,2,3,4}` giving the NUS term of each plan
+slot (3,4 = Special Terms). When absent, the layout defaults to the iter2 parity
+mapping, so every existing instance and test is unchanged. The offering constraint
+(§6) uses the layout: `x[m,s]=0` whenever `layout(s) ∉ offered_terms[m]`. Slots keep
+their linear temporal order (`t<s` for prerequisites), so a special term declared
+between two regular semesters correctly sits after the earlier one. Special-term
+slots carry no special rule of their own — their low load is expressed with a
+per-slot cap (I2.15), and only modules whose real `offered_terms` include 3/4 (e.g.
+CP3880/IS4010/ETP3205 internships) can be placed there. Validation: `len(term_layout)=T`
+and every entry in {1,2,3,4}.
+
+## I2.15 Per-semester unit-cap vector — iter3 C1
+`scenario.preferences.per_semester_cap: {s: u}` overrides the global
+`max_units_per_semester` for specific plan slots: the effective cap of slot `s` is
+`per_semester_cap.get(s, max_units_per_semester)`. §7 becomes
+`Σ_{m ∉ industrial} units[m]·x[m,s] ≤ cap(s)` per slot. A cap of **0** means the slot
+is fully unavailable — **all** modules are blocked there, *including* off-cap
+industrial ones (`x[m,s]=0 ∀m`); this is how an exchange/SEP semester (profile P9) is
+expressed, while a low positive cap (e.g. 12) expresses a deliberately light "chill"
+semester. Per-instance only; never a graduation rule. Validation: each `u` in
+`[0, max_overload_units]`.
+
+## I2.16 CS-count-per-semester cap — iter3 C2
+`scenario.preferences.max_cs_modules_per_sem: N` limits how many Computing
+(code prefix CS/IFS/CP) modules may be **scheduled in one slot**, counting only
+in-semester courseload: `Σ_{m ∈ computing, m ∉ industrial} x[m,s] ≤ N ∀s` (industrial
+experience is vacation work, already off the unit cap, so it is excluded from the
+count too). A count limit, not a unit limit (units stay under §7/I2.15). Per-instance
+only; can make otherwise-feasible instances infeasible at tight horizons.
+
+## I2.17 Internship + FYP + UROP co-existence — iter3 C3
+Iteration 2 scheduled no CP-coded research module (`cp_coded.codes` only bounded the
+cap). Iteration 3 lets the request ask for a Final-Year Project and/or UROP research.
+The FYP may **replace** the industrial experience (I2.8) and/or be requested explicitly;
+UROP is always additional:
+- `scenario.want_fyp` (bool): schedule the FYP (`breadth_depth.fyp.code`, CP4101, 12u).
+  Gated by the student: `want_fyp ⇒ eligible_fyp`; CP4101 may be taken only if
+  `eligible_fyp` (`sat(CP4101) ≤ [eligible_fyp]`), so an ineligible request is cleanly
+  infeasible. An eligible student with `industrial_option: any` may satisfy the
+  industry-experience requirement via CP4101 alone (no internship) — see I2.8.
+- `scenario.want_urop` (bool): schedule ≥1 of `breadth_depth.urop.codes`
+  (CP3106/CP3209/CP4106). Gated by `eligible_urop` (student, default true).
+- FYP and UROP are `cp_coded`, so the **12u CP cap (I2.9) binds them**: CP4101 is 12u
+  and fills the whole cap, hence `want_fyp ∧ want_urop` is INFEASIBLE, while
+  `want_fyp` plus an off-cap internship is fine. They are `pillar=industrial_experience`
+  so they count toward the 32u B&D bucket and 160u total; CP4101/CP4106 are level-4000
+  and count toward the ≥12u L4000 depth. They are **not** industrial-experience
+  *options*, so they do not affect the "exactly one internship option" rule, and (not
+  being in an option set) they consume their semester's unit cap like ordinary modules.
+
+## I2.18 Module pin / forbid / deadline — iter3 C4
+Per-instance, per-module hard requests in the scenario `preferences:` block (D9: never a
+degree rule — baseline feasibility must not depend on them). Let `S(m) = Σ_s x[m,s]` and
+`sat(m)` = pre-satisfied-or-scheduled:
+- `require_modules: [CODE…]` — the student insists on taking each listed module: `sat(m) ≥ 1`.
+  A module already completed/exempted satisfies this trivially (no re-scheduling forced).
+- `forbid_modules: [CODE…]` — must never be scheduled: `S(m) = 0`. (A completed module cannot be
+  un-taken; forbid only blocks *scheduling*.) Forbidding a required module is a legal request that
+  simply makes the instance UNSAT — the correct answer.
+- `deadline: {CODE: S}` — must be done by plan-semester `S`: `Σ_{s≤S} x[m,s] ≥ 1` (implies require).
+  `S` is clamped to the horizon; a deadline past `T` degenerates to a plain require.
+Each listed module enters the solver domain (like `want_fyp`'s CP4101). Any of the three can force
+UNSAT; `require ∩ forbid ≠ ∅` and an out-of-range deadline are rejected by `validate_scenario_iter2`.
+Checker mirrors: flag a scheduled forbidden module, an unsatisfied required/pinned module, and a
+module scheduled after (or missing before) its deadline.
 
 ## I2.12 Deliberate iteration-2 simplifications
 Canonical-only; special terms (3,4) not modelled (special-term-only offerings

@@ -1,0 +1,126 @@
+{
+  "name": "leave_of_absence",
+  "declared_expect": "feasible",
+  "nl_prompt": "Takes one semester off (no modules), stretching the plan to 9 semesters. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence; keep semester 5 blocked (no modules). Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {
+          "5": 0
+        },
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "GEN2003",
+        "MA1521",
+        "SC1101E"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "IS1128",
+        "ST2334"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "MA1522"
+      ],
+      "4": [
+        "CS2106",
+        "CS2109S",
+        "CS3244",
+        "CS4243",
+        "GEC1015"
+      ],
+      "6": [
+        "CS4262",
+        "GESS1020",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_10"
+      ],
+      "7": [
+        "CS3263",
+        "ES2660",
+        "GEA1000",
+        "IS1108"
+      ],
+      "8": [
+        "CS3230",
+        "GEN2000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "9": [
+        "CS4244",
+        "ETP3201L",
+        "GESS1001",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_7"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Leave of absence (blocked semester)",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_constraints": 3559,
+      "wall_time_s": 0.072,
+      "min_feasible_semesters": 9,
+      "semester_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 93.4,
+      "flags": [
+        "1 empty semester(s) between enrolled semesters"
+      ]
+    }
+  }
+}

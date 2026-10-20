@@ -10,7 +10,7 @@ The whole 160-unit degree over module facts **frozen from the NUSMods AY2026/27
 API** (units, real semester offerings, prerequisite trees, preclusions). Adds, on
 top of the iter1 baseline: recursive prerequisite trees, placement-waived
 bridging, preclusion groups, focus areas (3 primaries incl. one level-4000+),
-≥12 units at level-4000, a team-project requirement, industrial experience
+≥12 units at level-4000, a 32-unit Breadth & Depth bucket, industrial experience
 (exactly one option), a CP-coded cap, a 160-unit floor with Unrestricted-Elective
 fillers, and optional per-instance preferences (workload balance, minimum load,
 no gaps). Full write-up and the critical design audit: **`docs/iter2_plan.md`**;

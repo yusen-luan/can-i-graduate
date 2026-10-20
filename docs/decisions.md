@@ -33,7 +33,7 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   with no credit, so it must not trip the "at most one of" rule.
 - **D15 (Iter 2):** The 32u Breadth & Depth aggregate is not enforced; its sub-rules (focus area, ≥12u L4000, team project,
   industrial experience, CP cap) are. UE is a residual filler to 160u, not a fixed 40u. Why: avoids per-bucket unit
-  partitioning and double-counting; extra B&D simply counts as UE.
+  partitioning and double-counting; extra B&D simply counts as UE. _(Aggregate + team-project parts superseded by D19.)_
 - **D16 (Iter 2):** Objective minimises total units (then module count). Why: with the ≥160 floor it lands at exactly 160 and
   stops the solver padding with large optional modules (internships/FYP) as filler; stays a CSP (supersedes D9 for iter2).
 - **D17 (Iter 2):** Workload balance / min-load / no-gaps are per-instance scenario preferences, never degree rules. Why: they

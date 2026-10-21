@@ -1,0 +1,22 @@
+# Iteration-2 run knobs + per-instance preferences.
+# target_semesters / max_units_per_semester are hard. The preference block is
+# OPTIONAL and, when set, becomes a hard constraint FOR THIS INSTANCE ONLY
+# (never a graduation rule). See docs/iter2_plan.md B2.
+name: iter2_default
+target_semesters: 8
+max_units_per_semester: 20     # must be <= program max_overload_units (28 in iter2)
+
+# Which focus area to satisfy. A specific key from focus_areas.yaml, or "any".
+focus_area: artificial_intelligence
+
+# Which industrial-experience option to use, or "any".
+industrial_option: any
+
+preferences:
+  min_units_per_semester: 0        # floor on a non-empty semester's load (0 = off)
+  no_empty_semesters: false        # forbid gaps between enrolled semesters
+  heavy_conflicts: []              # e.g. [[CS2030S, CS2040S], [CS2040S, CS2100]]
+
+notes:
+  - Set focus_area to "any" to let the solver choose which area to satisfy.
+  - heavy_conflicts pairs may not share a semester (user workload preference).

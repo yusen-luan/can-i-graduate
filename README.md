@@ -1,4 +1,38 @@
-# CS course-planning CSP — Iteration 1 model
+# CS course-planning CSP
+
+A constraint-satisfaction planner that answers *"can this student graduate in T
+semesters, and with what schedule?"* for the NUS BComp(CS) degree. Built in
+iterations of increasing realism (see `docs/history.md`, `docs/decisions.md`).
+
+## Iteration 2 — full BComp(CS) AY2026/27 (current)
+
+The whole 160-unit degree over module facts **frozen from the NUSMods AY2026/27
+API** (units, real semester offerings, prerequisite trees, preclusions). Adds, on
+top of the iter1 baseline: recursive prerequisite trees, placement-waived
+bridging, preclusion groups, focus areas (3 primaries incl. one level-4000+),
+≥12 units at level-4000, a 32-unit Breadth & Depth bucket, industrial experience
+(exactly one option), a CP-coded cap, a 160-unit floor with Unrestricted-Elective
+fillers, and optional per-instance preferences (workload balance, minimum load,
+no gaps). Full write-up and the critical design audit: **`docs/iter2_plan.md`**;
+formal semantics: `docs/solver_constraints.md` §`I2.*`.
+
+```bash
+pip install -r requirements.txt
+python scripts/ingest_nusmods.py          # (re)build data/snapshot_2026-2027/
+python src/model.py --iter2               # validate the iter2 model
+python src/solver.py --iter2 --focus-area artificial_intelligence
+streamlit run app/app.py                  # pick constraints, see SAT/UNSAT + plan
+python -m pytest tests -q                 # 76 tests (49 iter1 + 27 iter2)
+```
+
+The solver (`src/solver.py`, OR-Tools CP-SAT) and an **independent** checker
+(`src/checker.py`) implement every constraint twice, so the checker can both
+cross-validate the solver and grade plans produced by other means (e.g. an LLM) —
+the ground truth for the project's LLM-direct vs LLM→solver comparison.
+
+---
+
+# Iteration 1 model
 
 This repo scaffold separates the problem into three data layers.
 

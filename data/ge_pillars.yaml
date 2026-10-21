@@ -1,0 +1,59 @@
+# University Level Requirements — 6 pillars (24u). AUTHORITATIVE REFERENCE.
+# Source: NUS GE pillar course lists + SoC Common Curriculum (user-provided, 2026-10-19).
+# The CSP (program_cs.yaml) wires a VERIFIED SUBSET of these (real NUSMods facts);
+# this file is the complete auditable list. CS-prescribed choices are marked.
+#
+# For a BComp(CS) student:
+#   Digital Literacy       -> CS1101S (prescribed programming-methodology variant)
+#   Critique & Expression  -> ES2660  (degree-specific prescribed course)
+#   Data Literacy          -> GEA1000 (default; alternatives exist for other degrees)
+#   Cultures & Connections -> any GEC% / listed course
+#   Singapore Studies      -> any GESS% / listed course
+#   Communities & Engagement -> any GEN% / listed course (incl. year-long service learning)
+
+digital_literacy:
+  cs_prescribed: CS1101S
+  # CS may read one of: CS1010%, CS1101S, CS2030/CS2030S (GEI-pillar equivalents)
+  alternatives: [CS1101S, CS1010, CS1010E, CS1010S, CS1010X, CS2030, CS2030S, UTC2851]
+
+critique_and_expression:
+  cs_prescribed: ES2660
+  # Full GEX pillar is large; non-GEX options CS could in principle read:
+  alternatives: [ES2660, ES2631]            # ES2631 is for Engineering; ES2660 is the CS prescription
+
+data_literacy:
+  cs_prescribed: GEA1000
+  alternatives: [GEA1000, GEA1000N, BT1101, DSA1101, DSE1101, ST1131, IE1111R]
+
+cultures_and_connections:         # GEC-coded + listed non-GEC
+  wired_subset: [GEC1015, GEC1020, GEC1030]
+  gec_coded: [GEC1000, GEC1001, GEC1002, GEC1003, GEC1004, GEC1005, GEC1006, GEC1007,
+    GEC1008, GEC1009, GEC1010, GEC1011, GEC1012, GEC1013, GEC1014, GEC1015, GEC1016,
+    GEC1017, GEC1018, GEC1019, GEC1020, GEC1021, GEC1023, GEC1024, GEC1025, GEC1026,
+    GEC1027, GEC1028, GEC1029, GEC1030, GEC1031, GEC1032, GEC1033, GEC1034, GEC1035,
+    GEC1036, GEC1037, GEC1038, GEC1039, GEC1040, GEC1041, GEC1042, GEC1043, GEC1044,
+    GEC1045, GEC1046, GEC1048, GEC1049, GEC1050, GEC1051, GEC1052, GEC1053, GEC1054, GEC1055]
+  non_gec: [HSA1000]   # + NGT2001%, NHS20xx, RVC/UHB/USE (residential-college only)
+
+singapore_studies:                # GESS-coded + listed non-GESS
+  wired_subset: [GESS1001, GESS1020, GESS1025]
+  gess_coded: [GESS1000, GESS1001, GESS1002, GESS1003, GESS1004, GESS1005, GESS1006,
+    GESS1007, GESS1008, GESS1009, GESS1010, GESS1011, GESS1012, GESS1013, GESS1014,
+    GESS1015, GESS1016, GESS1017, GESS1018, GESS1019, GESS1020, GESS1021, GESS1022,
+    GESS1023, GESS1024, GESS1025, GESS1026, GESS1027, GESS1028, GESS1029, GESS1030,
+    GESS1031, GESS1032, GESS1033, GESS1034, GESS1035, GESS1036, GESS1037, GESS1038]
+  non_gess: [HSS1000, LC1025, CDE2501]
+
+communities_and_engagement:       # GEN-coded; some are YEAR-LONG service learning (X+Y)
+  wired_subset: [GEN2000, GEN2001, GEN2003, GEN2004]      # single-semester options
+  single_semester: [GEN2000, GEN2001, GEN2002X, GEN2002Y, GEN2003, GEN2004, GEN2005,
+    GEN2006, GEN2007, GEN2008, GEN2009]
+  # Year-long Service Learning: X in Sem 1, Y in the CONTIGUOUS Sem 2 (same course).
+  service_learning_pairs:
+    - [GEN2050X, GEN2050Y]   # Teach SG
+    - [GEN2060X, GEN2060Y]   # Reconnect SeniorsSG
+    - [GEN2061X, GEN2061Y]   # Support Healthy AgeingSG
+    - [GEN2062X, GEN2062Y]   # Community Activities for Seniors
+    - [GEN2070X, GEN2070Y]   # Community Link (ComLink) Befrienders
+    - [GEN2072X, GEN2072Y]   # Enable Inclusive Communities SG
+  soc_note: SoC students may also use CP3107 or CP3110 here (these overlap with Industrial Experience; cannot double-count).

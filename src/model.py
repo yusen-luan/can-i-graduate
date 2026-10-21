@@ -117,7 +117,8 @@ def effective_term(semester: int, scenario: dict) -> int:
 
 def per_semester_cap(scenario: dict, semester: int, global_cap: int) -> int:
     """Effective unit cap of a plan slot. iter3 C1: `preferences.per_semester_cap`
-    overrides the global cap for specific slots; 0 = slot fully unavailable (I2.15)."""
+    overrides the global cap for specific slots; 0 = slot fully unavailable, e.g. a
+    leave of absence (I2.15)."""
     prefs = (scenario or {}).get("preferences", {}) or {}
     pcap = {int(k): v for k, v in (prefs.get("per_semester_cap", {}) or {}).items()}
     return pcap.get(semester, global_cap)
@@ -126,8 +127,22 @@ def is_computing(code: str) -> bool:
     """A Computing-coded module (CS/IFS/CP), used by the CS-count cap (I2.16)."""
     return code.startswith(("CS", "IFS", "CP"))
 
-def validate_scenario_iter2(program: dict, scenario: dict) -> None:
-    """Hard-validate iter3 scenario knobs (raise ValueError on bad input)."""
+def with_horizon(scenario: dict, T: int) -> dict:
+    """Copy of `scenario` with horizon T, keeping an explicit `term_layout` the
+    right length: truncated when shrinking, extended with the default parity
+    mapping when growing. Shared by the infeasibility explainer and the
+    benchmark difficulty probes so both relax the SAME instance."""
+    sc = {**scenario, "target_semesters": T}
+    layout = scenario.get("term_layout")
+    if layout:
+        sc["term_layout"] = (list(layout[:T])
+                             + [term_of(s) for s in range(len(layout) + 1, T + 1)])
+    return sc
+
+def validate_scenario_iter2(program: dict, scenario: dict, modules: dict = None) -> None:
+    """Hard-validate iter3 scenario knobs (raise ValueError on bad input). With
+    `modules`, also reject pinned / forbidden / deadline codes outside the module
+    universe, so a typo can never silently drop a constraint (I2.18)."""
     T = scenario["target_semesters"]
     ceiling = program.get("max_overload_units")
     layout = scenario.get("term_layout")
@@ -146,7 +161,12 @@ def validate_scenario_iter2(program: dict, scenario: dict) -> None:
     clash = require & forbid
     if clash:
         raise ValueError(f"modules both required and forbidden: {sorted(clash)}")
-    for code, s in (prefs.get("deadline", {}) or {}).items():
+    deadline = prefs.get("deadline", {}) or {}
+    if modules is not None:
+        unknown = sorted((require | forbid | set(deadline)) - set(modules))
+        if unknown:
+            raise ValueError(f"unknown module code(s) in require/forbid/deadline: {unknown}")
+    for code, s in deadline.items():
         if not isinstance(s, int) or s < 1:
             raise ValueError(f"deadline[{code}]={s} must be a semester >= 1")
         if code in forbid:

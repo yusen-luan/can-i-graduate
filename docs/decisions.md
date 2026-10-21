@@ -87,3 +87,12 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   CS. Still a tie-break (no feasibility change). Also: SEP/exchange + NOC removed as corpus cases
   (`exchange_abroad` deleted, honours de-exchanged); blocked-semester mechanism kept for leave-of-
   absence only. A5 external validation vs cohort page passed (see iter2_verification.md).
+- **D34 (Iter 3, review):** exempted modules' units COUNT toward the 160u total and every unit bucket
+  (`units_of` uses `sat`); they are excluded only from preclusion `held` credit. Clarifies D2's "no
+  units" (= consumes no semester slot/cap). Why: team decision; matches the solver/checker.
+- **D35 (Iter 3, review):** C4 codes must exist (else ValueError); a pin/deadline on a placement-
+  waived bridge is trivially satisfied in solver AND checker. Why: they disagreed (solver dropped
+  the constraint, checker flagged it), which would silently corrupt LLM->solver grading.
+- **D36 (Iter 3, benchmark):** `nl_prompt` is generated ONLY from the formal student + request; the
+  curated `description` lives in `meta` and never reaches the prompt. Why: 16/35 prompts leaked the
+  verdict ("infeasible because…"). Guarded by `tests/test_eval_prompts.py`.

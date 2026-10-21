@@ -1,7 +1,7 @@
 {
   "name": "final_year_audit",
   "declared_expect": "feasible",
-  "nl_prompt": "Has cleared the first three years; checking the last two semesters complete the degree. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I have already completed CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2102, CS2103T, CS2105, CS2106, CS2107, CS2109S, CS2111, CS3211, CS3241, CS3247, CS3281, CS4225, CS4243, ES2660, GEC1015, GEN2000, GESS1001, IS1128, MA1521, MA1522, SC1101E, ST2334, 2 unrestricted elective(s). I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -70,30 +70,31 @@
     "status": "OPTIMAL",
     "plan": {
       "1": [
-        "IS1108"
+        "UE_GENERIC_9"
       ],
       "2": [
-        "GEA1000"
+        "CS4248",
+        "IS1108"
       ],
       "5": [
-        "UE_GENERIC_4"
+        "GEA1000",
+        "IE2141"
       ],
       "6": [
-        "CS4248",
-        "GEC1030"
+        "GESS1025"
       ],
       "7": [
         "CS3230"
       ],
       "8": [
-        "ETP3201L",
-        "IE2141"
+        "ETP3201L"
       ]
     },
     "total_units": 40
   },
   "meta": {
     "label": "Final-year audit (almost done)",
+    "description": "Has cleared the first three years; checking the last two semesters complete the degree.",
     "tags": [
       "C-base",
       "C-order",
@@ -104,7 +105,6 @@
     "difficulty": {
       "num_variables": 688,
       "num_constraints": 1332,
-      "wall_time_s": 0.032,
       "min_feasible_semesters": 2,
       "semester_slack": 6,
       "min_feasible_cap": 4,
@@ -112,15 +112,15 @@
       "near_unsat_margin": 6
     },
     "quality": {
-      "realism": 82.3,
+      "realism": 66.9,
       "flags": [
         "Semester 1: only 4 MC \u2014 very light",
-        "Semester 2: only 4 MC \u2014 very light",
-        "Semester 5: only 4 MC \u2014 very light",
-        "Semester 6: only 8 MC \u2014 very light",
+        "Semester 2: only 8 MC \u2014 very light",
+        "Semester 5: only 8 MC \u2014 very light",
+        "Semester 6: only 4 MC \u2014 very light",
         "Semester 7: only 4 MC \u2014 very light",
-        "Semester 8: only 4 MC \u2014 very light",
-        "2 empty semester(s) between enrolled semesters"
+        "2 empty semester(s) between enrolled semesters",
+        "Level-4000 module(s) scheduled very early: CS4248"
       ]
     }
   }

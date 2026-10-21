@@ -249,7 +249,7 @@ def test_checker_flags_broken_service_learning_contiguity():
 # === iter3 C1 — per-semester unit-cap vector (I2.15) ========================
 
 def test_blocked_semester_costs_a_horizon():
-    # a fully-blocked semester (cap 0, e.g. exchange) removes 20 units of capacity,
+    # a fully-blocked semester (cap 0, e.g. leave of absence) removes 20 units of capacity,
     # so an 8-semester plan that was tight goes infeasible but 9 recovers.
     pref = {"per_semester_cap": {1: 0}}
     assert not solve(preferences=pref).feasible

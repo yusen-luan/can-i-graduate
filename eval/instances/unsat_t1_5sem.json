@@ -1,7 +1,7 @@
 {
   "name": "unsat_t1_5sem",
   "declared_expect": "infeasible",
-  "nl_prompt": "Fresh student asking for 5 semesters at 20 MC (100 MC < 160) \u2014 below the arithmetic floor. I want to graduate within 5 semesters; take at most 20 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 5 semesters; take at most 20 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,6 +41,7 @@
   },
   "meta": {
     "label": "UNSAT T1: 5-semester floor",
+    "description": "Fresh student asking for 5 semesters at 20 MC (100 MC < 160) \u2014 below the arithmetic floor.",
     "tags": [
       "C-base",
       "C-order",
@@ -50,7 +51,6 @@
     "difficulty": {
       "num_variables": 580,
       "num_constraints": 2011,
-      "wall_time_s": 0.018,
       "extra_semesters_to_feasible": 3,
       "extra_cap_to_feasible": null,
       "near_unsat_margin": 0

@@ -1,7 +1,7 @@
 {
   "name": "unsat_t4_cs_starved",
   "declared_expect": "infeasible",
-  "nl_prompt": "Limits CS/IFS/CP modules to 1 per semester over 8 semesters \u2014 far too few slots for the CS core. I want to graduate within 8 semesters; take at most 20 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 8 semesters; take at most 20 MC per semester; take no more than 1 CS/IFS/CP modules in any one semester. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,6 +41,7 @@
   },
   "meta": {
     "label": "UNSAT T4: CS-count cap too tight",
+    "description": "Limits CS/IFS/CP modules to 1 per semester over 8 semesters \u2014 far too few slots for the CS core.",
     "tags": [
       "C-base",
       "C-order",
@@ -51,7 +52,6 @@
     "difficulty": {
       "num_variables": 928,
       "num_constraints": 3108,
-      "wall_time_s": 0.004,
       "extra_semesters_to_feasible": null,
       "extra_cap_to_feasible": null,
       "near_unsat_margin": 0

@@ -25,7 +25,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from model import load_iter2, load_scenario  # noqa: E402
-from solver import build_and_solve_iter2  # noqa: E402
+from solver import build_and_solve_iter2, explain_infeasible_iter2  # noqa: E402
 from checker import check_plan_iter2  # noqa: E402
 
 MODULES, PROGRAM, STUDENT, FOCUS, PRECL = load_iter2()
@@ -157,18 +157,26 @@ def test_A1_urop_requires_eligibility():
 # A3 — metamorphic properties (no ground-truth label needed)               #
 # ======================================================================== #
 
-@pytest.mark.parametrize("T", [7, 8, 9, 10])
-def test_A3_M1_horizon_monotonicity(T):
-    # SAT(T) => SAT(T+1): more time can never make a plan infeasible.
-    if solve(target_semesters=T).feasible:
-        assert solve(target_semesters=T + 1).feasible
+def _monotone(flags):
+    """No True followed by a False (once feasible, stays feasible)."""
+    return all(not (a and not b) for a, b in zip(flags, flags[1:]))
 
 
-@pytest.mark.parametrize("cap", [20, 22, 24, 26])
-def test_A3_M2_cap_monotonicity(cap):
-    # SAT(cap) => SAT(cap+2) up to the ceiling: more capacity never hurts.
-    if solve(max_units_per_semester=cap).feasible:
-        assert solve(max_units_per_semester=cap + 2).feasible
+def test_A3_M1_horizon_monotonicity():
+    # SAT(T) => SAT(T+1): more time can never make a plan infeasible. The sweep
+    # must cross the boundary (UNSAT at 7, SAT at 8) so the property is exercised.
+    feas = [solve(target_semesters=T).feasible for T in range(7, 12)]
+    assert not feas[0] and feas[1], feas
+    assert _monotone(feas), feas
+
+
+def test_A3_M2_cap_monotonicity():
+    # SAT(cap) => SAT(cap+2) up to the ceiling: more capacity never hurts. At
+    # T=6 the sweep crosses the boundary (UNSAT at low caps, SAT at 28).
+    feas = [solve(target_semesters=6, max_units_per_semester=c).feasible
+            for c in range(20, 30, 2)]
+    assert not feas[0] and feas[-1], feas
+    assert _monotone(feas), feas
 
 
 def test_A3_M3_credit_monotonicity():
@@ -178,16 +186,25 @@ def test_A3_M3_credit_monotonicity():
 
 
 def test_A3_M3b_exemption_keeps_feasible():
-    # exemptions waive a requirement but grant NO units; the 160u floor must
-    # still be reachable via UE filler (the edge the property guards).
+    # an exemption satisfies the requirement AND its units count toward the
+    # 160u total (D34), so exempting a module can never flip SAT->UNSAT.
     assert solve(student=with_student(exempted={"GEA1000": True})).feasible
+
+
+def test_D34_exempted_units_count_toward_total():
+    # exempting 4 MC (GEA1000) lets the plan schedule exactly 4 MC fewer.
+    def scheduled(r):
+        return sum(MODULES[m]["units"] for ms in r.plan.values() for m in ms)
+    base = solve()
+    exm = solve(student=with_student(exempted={"GEA1000": True}))
+    assert scheduled(base) - scheduled(exm) == MODULES["GEA1000"]["units"]
 
 
 def test_A3_M4_preference_monotonicity():
     # removing a per-instance preference can never flip SAT->UNSAT (D9).
     withpref = solve(target_semesters=10, preferences={"max_cs_modules_per_sem": 3})
-    if withpref.feasible:
-        assert solve(target_semesters=10).feasible
+    assert withpref.feasible          # precondition, so the property is exercised
+    assert solve(target_semesters=10).feasible
 
 
 def test_A3_M5_tightening_cannot_create_feasibility():
@@ -237,3 +254,57 @@ def test_A4_T4_cp_cap_fyp_urop_conflict():
     assert build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL,
                                  scenario(want_fyp=True, want_urop=False,
                                           target_semesters=9)).feasible
+
+
+# ======================================================================== #
+# Regression guards (iter3 review): solver/checker parity on C4 codes,      #
+# exact `used` semantics, and an explainer that probes the real instance.   #
+# ======================================================================== #
+
+def test_C4_unknown_module_code_is_rejected():
+    # a typo must fail loudly, never silently drop the constraint (I2.18)
+    for prefs in ({"require_modules": ["CS9999"]}, {"forbid_modules": ["CS9999"]},
+                  {"deadline": {"CS9999": 3}}):
+        with pytest.raises(ValueError, match="unknown module"):
+            build_and_solve_iter2(MODULES, PROGRAM, STUDENT, FOCUS, PRECL,
+                                  scenario(preferences=prefs))
+
+
+def test_C4_pin_on_waived_bridge_is_satisfied_in_both():
+    # an H2-Maths student is placement-waived from MA1301: pinning it (or giving it
+    # a deadline) is trivially satisfied -- solver plan must pass the checker.
+    for prefs in ({"require_modules": ["MA1301"]}, {"deadline": {"MA1301": 3}}):
+        r = solve(preferences=prefs)
+        assert r.feasible
+        assert check(r.plan, preferences=prefs) == []
+
+
+def test_no_empty_semesters_does_not_cap_heavy_semesters():
+    # four 26 MC semesters make T=7 feasible; the plan has no gaps, so adding
+    # no_empty_semesters (already satisfied) must not flip it to UNSAT.
+    heavy = {3: 26, 4: 26, 5: 26, 6: 26}
+    r = solve(target_semesters=7, preferences={"per_semester_cap": heavy})
+    assert r.feasible
+    prefs = {"per_semester_cap": heavy, "no_empty_semesters": True}
+    r2 = solve(target_semesters=7, preferences=prefs)
+    assert r2.feasible
+    assert check(r2.plan, target_semesters=7, preferences=prefs) == []
+
+
+def test_no_empty_semesters_is_actually_enforced():
+    # a blocked middle semester forces a gap (1-3 | 5-10); without the gap only
+    # 6 semesters (120 MC) remain -> UNSAT. A solver that let `used` float would
+    # return a gapped plan here.
+    prefs = {"per_semester_cap": {4: 0}, "no_empty_semesters": True}
+    assert solve(target_semesters=10, preferences={"per_semester_cap": {4: 0}}).feasible
+    assert not solve(target_semesters=10, preferences=prefs).feasible
+
+
+def test_explainer_probes_the_given_instance():
+    # FYP + UROP is UNSAT at any horizon (CP cap): the explainer must not claim
+    # a longer horizon fixes it, and must name the request as the blocker.
+    st =with_student(eligible_fyp=True)
+    sc = scenario(want_fyp=True, want_urop=True, target_semesters=9)
+    why = explain_infeasible_iter2(MODULES, PROGRAM, st, FOCUS, PRECL, sc)
+    assert "target_semesters" not in why
+    assert "UROP" in why or "final-year" in why

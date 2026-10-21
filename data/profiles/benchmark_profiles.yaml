@@ -340,8 +340,8 @@ preclusion_deadend:
       deadline: {}
 over_credited:
   label: Over-credited (many exemptions, unit shortfall)
-  description: Arrives with large advanced-placement exemptions (no units), so the plan must backfill
-    unrestricted electives to reach 160 MC.
+  description: Arrives with large advanced-placement exemptions (28 MC of credit), so the plan
+    schedules only the remaining 132 MC to reach 160 MC.
   expect: feasible
   student:
     conditions:

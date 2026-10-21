@@ -1,7 +1,7 @@
 {
   "name": "fyp_urop_trap",
   "declared_expect": "infeasible",
-  "nl_prompt": "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP \u2014 infeasible because CP4101 alone fills the 12 MC CP-coded cap. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence; do a final-year project (CP4101); do a UROP research project. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. My GPA qualifies me for the final-year project. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence; do a final-year project (CP4101); do a UROP research project. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,6 +41,7 @@
   },
   "meta": {
     "label": "FYP + UROP (CP-cap trap)",
+    "description": "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP \u2014 infeasible because CP4101 alone fills the 12 MC CP-coded cap.",
     "tags": [
       "C-base",
       "C-order",
@@ -52,7 +53,6 @@
     "difficulty": {
       "num_variables": 1080,
       "num_constraints": 3486,
-      "wall_time_s": 0.013,
       "extra_semesters_to_feasible": null,
       "extra_cap_to_feasible": null,
       "near_unsat_margin": 0

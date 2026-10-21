@@ -1,7 +1,7 @@
 {
   "name": "unsat_t4_offering_lock",
   "declared_expect": "infeasible",
-  "nl_prompt": "Insists on taking CS2108 (a Term-2-only module) by semester 1 (a Term-1 slot) \u2014 impossible. I want to graduate within 9 semesters; take at most 20 MC per semester; be sure to take CS2108; finish CS2108 by semester 1. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 9 semesters; take at most 20 MC per semester; be sure to take CS2108; finish CS2108 by semester 1. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -45,6 +45,7 @@
   },
   "meta": {
     "label": "UNSAT T4: offering-window lock",
+    "description": "Insists on taking CS2108 (a Term-2-only module) by semester 1 (a Term-1 slot) \u2014 impossible.",
     "tags": [
       "C-base",
       "C-order",
@@ -55,7 +56,6 @@
     "difficulty": {
       "num_variables": 1044,
       "num_constraints": 3467,
-      "wall_time_s": 0.004,
       "extra_semesters_to_feasible": null,
       "extra_cap_to_feasible": null,
       "near_unsat_margin": 0

@@ -1,7 +1,7 @@
 {
   "name": "nearbnd_overload_floor",
   "declared_expect": "feasible",
-  "nl_prompt": "Early graduation in 7 semesters, overloading to 26 MC \u2014 just feasible. I want to graduate within 7 semesters; take at most 26 MC per semester; specialise in computer security. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 7 semesters; take at most 26 MC per semester; specialise in computer security. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,60 +41,61 @@
       "1": [
         "CS1101S",
         "CS1231S",
-        "GEC1030",
-        "GESS1020",
-        "MA1521",
-        "UE_GENERIC_1"
+        "ES2660",
+        "GEN2001",
+        "IS1108",
+        "MA1521"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "CS2107",
-        "GEN2003",
-        "ST2334"
+        "UE_GENERIC_1",
+        "UE_GENERIC_10",
+        "UE_GENERIC_5"
       ],
       "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
         "CS3230",
-        "CS4236",
-        "GESS1001",
         "MA1522",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS4230",
+        "GEC1030",
+        "GESS1025",
         "UE_GENERIC_8",
         "UE_GENERIC_9"
       ],
-      "4": [
-        "CS2105",
-        "CS2109S",
-        "CS4230",
-        "GEC1015"
-      ],
       "5": [
-        "GEC1020",
-        "UE_GENERIC_10",
-        "UE_GENERIC_3"
-      ],
-      "6": [
-        "CS4215",
-        "ES2660",
+        "CS2107",
         "GEA1000",
-        "IS1108",
-        "SC1101E",
         "UE_GENERIC_4"
       ],
+      "6": [
+        "DTK1234",
+        "GEN2000",
+        "SC1101E",
+        "UE_GENERIC_3"
+      ],
       "7": [
-        "CS2101",
-        "CS2103T",
-        "CS2106",
+        "CS2102",
+        "CS4234",
+        "CS4236",
         "ETP3201L",
-        "HSI1000",
-        "IE2141",
-        "UE_GENERIC_7"
+        "GEC1015",
+        "GESS1001",
+        "IE2141"
       ]
     },
     "total_units": 160
   },
   "meta": {
     "label": "Near-boundary: 7-semester overload",
+    "description": "Early graduation in 7 semesters, overloading to 26 MC \u2014 just feasible.",
     "tags": [
       "C-base",
       "C-order",
@@ -104,7 +105,6 @@
     "difficulty": {
       "num_variables": 812,
       "num_constraints": 2717,
-      "wall_time_s": 0.056,
       "min_feasible_semesters": 7,
       "semester_slack": 0,
       "min_feasible_cap": 24,
@@ -112,7 +112,7 @@
       "near_unsat_margin": 0
     },
     "quality": {
-      "realism": 91.4,
+      "realism": 93.3,
       "flags": [
         "Semester 1: 3 GE/ULR modules clustered together"
       ]

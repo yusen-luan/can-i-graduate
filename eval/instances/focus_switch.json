@@ -1,7 +1,7 @@
 {
   "name": "focus_switch",
   "declared_expect": "feasible",
-  "nl_prompt": "Took Computer-Security electives early, then switched to an AI focus; the security modules still count toward Breadth & Depth and the 160 MC total. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I have already completed CS2107, CS3235. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -42,64 +42,65 @@
     "status": "OPTIMAL",
     "plan": {
       "1": [
-        "CS1231S",
-        "GEN2001",
-        "GESS1020",
-        "IE2141",
-        "MA1521"
-      ],
-      "2": [
         "CS1101S",
-        "HSI1000",
-        "ST2334",
+        "CS1231S",
+        "IS1108",
+        "MA1521",
         "UE_GENERIC_9"
       ],
-      "3": [
+      "2": [
         "CS2030S",
         "CS2040S",
-        "CS2100",
-        "GEN2003",
-        "MA1522"
+        "ST2334"
       ],
-      "4": [
+      "3": [
+        "CS2100",
         "CS2101",
         "CS2103T",
         "CS2109S",
-        "GEN2000",
-        "UE_GENERIC_2"
+        "MA1522"
+      ],
+      "4": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
       "5": [
-        "CS4263",
-        "ES2660"
+        "DTK1234",
+        "ES2660",
+        "IE2141",
+        "IS1128",
+        "UE_GENERIC_3"
       ],
       "6": [
-        "IS1128"
+        "GEA1000",
+        "GEC1015",
+        "GEN2003"
       ],
       "7": [
         "CS2106",
-        "CS4243",
-        "GESS1001",
-        "IS1108",
-        "UE_GENERIC_3"
+        "CS4263",
+        "GESS1001"
       ],
       "8": [
+        "CS3230",
+        "CS4243",
         "CS4248",
         "GEN2004",
         "GESS1025"
       ],
       "9": [
-        "CS3230",
         "ETP3201L",
-        "GEA1000",
-        "GEC1030",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "GEN2000",
+        "GEN2001",
+        "GESS1020"
       ]
     },
     "total_units": 152
   },
   "meta": {
     "label": "Focus switch mid-degree",
+    "description": "Took Computer-Security electives early, then switched to an AI focus; the security modules still count toward Breadth & Depth and the 160 MC total.",
     "tags": [
       "C-base",
       "C-order",
@@ -110,7 +111,6 @@
     "difficulty": {
       "num_variables": 1026,
       "num_constraints": 3325,
-      "wall_time_s": 0.073,
       "min_feasible_semesters": 7,
       "semester_slack": 2,
       "min_feasible_cap": 16,
@@ -118,10 +118,10 @@
       "near_unsat_margin": 2
     },
     "quality": {
-      "realism": 92.0,
+      "realism": 91.3,
       "flags": [
-        "Semester 5: only 8 MC \u2014 very light",
-        "Semester 6: only 4 MC \u2014 very light"
+        "Semester 6: 3 GE/ULR modules clustered together",
+        "Semester 9: 3 GE/ULR modules clustered together"
       ]
     }
   }

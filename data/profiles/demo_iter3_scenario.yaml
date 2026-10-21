@@ -1,11 +1,11 @@
 # iter3 demo scenario — pairs with demo_iter3_student.yaml. Exercises every iter3
 # feature at once (a deliberately-stacked "hard" instance):
 #   C5 term_layout: slot 3 is a NUS Special Term (Term 3).
-#   C1 per_semester_cap: slot 9 blocked (=0, a semester on exchange/SEP).
+#   C1 per_semester_cap: slot 9 blocked (=0, a leave-of-absence semester).
 #   C2 max_cs_modules_per_sem: at most 4 Computing modules a semester.
 #   C3 want_fyp + eligible_fyp: the CP4101 dissertation REPLACES the internship
 #      (industrial_option: any), so no internship is forced (I2.8 corrected).
-# Stacking exchange + a (canonical-only, mostly-empty) special term pushes the
+# Stacking a blocked semester + a (canonical-only, mostly-empty) special term pushes the
 # minimum horizon out to 10 semesters.
 name: demo_iter3
 target_semesters: 10
@@ -19,5 +19,5 @@ preferences:
   min_units_per_semester: 0
   no_empty_semesters: false
   heavy_conflicts: []
-  per_semester_cap: {9: 0}      # one semester abroad (exchange/SEP)
+  per_semester_cap: {9: 0}      # one semester off (leave of absence)
   max_cs_modules_per_sem: 4

@@ -1,7 +1,7 @@
 {
   "name": "unsat_t1_two_blocked",
   "declared_expect": "infeasible",
-  "nl_prompt": "An 8-semester plan with two fully-blocked semesters leaves only 6 usable (120 MC) \u2014 infeasible. I want to graduate within 8 semesters; take at most 20 MC per semester; keep semester 1 blocked (no modules); keep semester 2 blocked (no modules). Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 8 semesters; take at most 20 MC per semester; take semester 1 off entirely; take semester 2 off entirely. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -44,6 +44,7 @@
   },
   "meta": {
     "label": "UNSAT T1: two blocked semesters",
+    "description": "An 8-semester plan with two fully-blocked semesters leaves only 6 usable (120 MC) \u2014 infeasible.",
     "tags": [
       "C-base",
       "C-order",
@@ -54,7 +55,6 @@
     "difficulty": {
       "num_variables": 928,
       "num_constraints": 3330,
-      "wall_time_s": 0.038,
       "extra_semesters_to_feasible": 2,
       "extra_cap_to_feasible": 8,
       "near_unsat_margin": 0

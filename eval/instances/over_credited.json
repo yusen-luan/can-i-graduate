@@ -1,7 +1,7 @@
 {
   "name": "over_credited",
   "declared_expect": "feasible",
-  "nl_prompt": "Arrives with large advanced-placement exemptions (no units), so the plan must backfill unrestricted electives to reach 160 MC. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I have advanced-placement exemptions for CS1101S, CS1231S, CS2030S, CS2040S, CS2100, MA1521, MA1522. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -47,57 +47,58 @@
     "status": "OPTIMAL",
     "plan": {
       "1": [
-        "GEN2001",
-        "GESS1001",
-        "UE_GENERIC_4"
-      ],
-      "2": [
-        "CS2109S",
-        "CS3243",
-        "ST2334",
-        "UE_GENERIC_8"
-      ],
-      "3": [
-        "CS3230",
-        "GEC1030",
-        "UE_GENERIC_5"
-      ],
-      "4": [
-        "GEN2003",
-        "GESS1025",
-        "UE_GENERIC_10",
-        "UE_GENERIC_7",
-        "UE_GENERIC_9"
-      ],
-      "5": [
-        "CS3264",
-        "CS4248",
         "CS4263",
         "DTK1234",
-        "IE2141"
-      ],
-      "6": [
-        "HSI1000",
-        "UE_GENERIC_6"
-      ],
-      "7": [
-        "CS2106",
         "GEA1000",
-        "GESS1020"
+        "GESS1025",
+        "UE_GENERIC_8"
       ],
-      "8": [
+      "2": [
+        "CS2106",
+        "CS2109S",
+        "GEC1030",
+        "ST2334",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS3263",
+        "GEN2001",
+        "GEN2003",
+        "HSI1000"
+      ],
+      "4": [
         "CS2101",
         "CS2103T",
-        "CS4243",
+        "CS3264",
+        "GEN2004",
+        "UE_GENERIC_1"
+      ],
+      "5": [
         "ES2660",
-        "ETP3201L",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "IE2141",
         "IS1108"
+      ],
+      "7": [
+        "CS4243",
+        "GESS1001",
+        "UE_GENERIC_6",
+        "UE_GENERIC_9"
+      ],
+      "8": [
+        "CS3230",
+        "CS4244",
+        "ETP3201L"
       ]
     },
     "total_units": 132
   },
   "meta": {
     "label": "Over-credited (many exemptions, unit shortfall)",
+    "description": "Arrives with large advanced-placement exemptions (28 MC of credit), so the plan schedules only the remaining 132 MC to reach 160 MC.",
     "tags": [
       "C-base",
       "C-order",
@@ -108,7 +109,6 @@
     "difficulty": {
       "num_variables": 872,
       "num_constraints": 2209,
-      "wall_time_s": 0.058,
       "min_feasible_semesters": 6,
       "semester_slack": 2,
       "min_feasible_cap": 16,
@@ -116,9 +116,11 @@
       "near_unsat_margin": 2
     },
     "quality": {
-      "realism": 86.6,
+      "realism": 86.5,
       "flags": [
-        "Semester 6: only 8 MC \u2014 very light"
+        "Semester 6: only 8 MC \u2014 very light",
+        "Semester 8: only 8 MC \u2014 very light",
+        "Level-4000 module(s) scheduled very early: CS4263"
       ]
     }
   }

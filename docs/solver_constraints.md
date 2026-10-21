@@ -205,8 +205,9 @@ Variables are unchanged: `x[m,s] ∈ {0,1}`.
 
 Definitions used below:
 - `sat(m) = completed[m] ∨ exempted[m] ∨ Σ_s x[m,s]` (requirement satisfaction).
-- `held(m) = completed[m] ∨ Σ_s x[m,s]` (credit held; **excludes exempted** — a
-  waiver grants no credit). Used only by preclusions.
+- `held(m) = completed[m] ∨ Σ_s x[m,s]` (credit held; **excludes exempted**). Used only by
+  preclusions: an exemption is not a held *course* that could clash. Exempted units DO
+  count toward every unit total via `sat` (D34).
 - `units_of(P) = Σ units[m]·sat(m)` over modules matching predicate `P`.
 
 ## I2.1 Prerequisite tree (generalises §3)
@@ -306,8 +307,11 @@ feasibility CSP (cf. D9).
 ## I2.11 Optional per-instance preferences (scenario, not degree rules)
 Active only when the scenario sets them; never affect baseline feasibility:
 - `heavy_conflicts`: pairs `(a,b)` with `x[a,s]+x[b,s] ≤ 1 ∀s`.
-- `min_units_per_semester`: with a per-semester `used_s`, `load_s ≥ min·used_s`.
-- `no_empty_semesters`: `used_s ≥ used_{s+1}` (no gaps).
+- `used_s ⇔ ∃m x[m,s]` (exact: `x[m,s] ≤ used_s`, `used_s ≤ Σ_m x[m,s]`; industrial counts as
+  enrolment). It adds no unit cap — §7/I2.15 stay the only caps.
+- `min_units_per_semester`: `load_s ≥ min·used_s` (load incl. industrial).
+- `no_empty_semesters`: enrolled semesters are one contiguous block —
+  `used_r + used_t − 1 ≤ used_s ∀ r<s<t` (leading/trailing empty slots allowed).
 
 ## I2.14 Special-term calendar (term layout) — iter3 C5
 Iteration 2 mapped plan semester `s` to NUS term by parity only (`term_of`: odd→1,
@@ -330,7 +334,7 @@ and every entry in {1,2,3,4}.
 `per_semester_cap.get(s, max_units_per_semester)`. §7 becomes
 `Σ_{m ∉ industrial} units[m]·x[m,s] ≤ cap(s)` per slot. A cap of **0** means the slot
 is fully unavailable — **all** modules are blocked there, *including* off-cap
-industrial ones (`x[m,s]=0 ∀m`); this is how an exchange/SEP semester (profile P9) is
+industrial ones (`x[m,s]=0 ∀m`); this is how a leave-of-absence semester is
 expressed, while a low positive cap (e.g. 12) expresses a deliberately light "chill"
 semester. Per-instance only; never a graduation rule. Validation: each `u` in
 `[0, max_overload_units]`.
@@ -375,7 +379,9 @@ degree rule — baseline feasibility must not depend on them). Let `S(m) = Σ_s 
 - `deadline: {CODE: S}` — must be done by plan-semester `S`: `Σ_{s≤S} x[m,s] ≥ 1` (implies require).
   `S` is clamped to the horizon; a deadline past `T` degenerates to a plain require.
 Each listed module enters the solver domain (like `want_fyp`'s CP4101). Any of the three can force
-UNSAT; `require ∩ forbid ≠ ∅` and an out-of-range deadline are rejected by `validate_scenario_iter2`.
+UNSAT; `require ∩ forbid ≠ ∅`, an out-of-range deadline and any code outside the module universe
+are rejected by `validate_scenario_iter2` (a typo must never silently drop a constraint). A
+placement-waived bridge (I2.2) satisfies a pin/deadline trivially, like a pre-satisfied module (D35).
 Checker mirrors: flag a scheduled forbidden module, an unsatisfied required/pinned module, and a
 module scheduled after (or missing before) its deadline.
 

@@ -1,7 +1,7 @@
 {
   "name": "no_h2_math",
   "declared_expect": "feasible",
-  "nl_prompt": "Needs MA1301 math bridging and the ES1103 English path; bridging consumes a UE slot. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I do not have A-level H2 Mathematics. My English placement test requires me to take ES1103 first. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -37,63 +37,64 @@
     "plan": {
       "1": [
         "CS1101S",
-        "ES2660",
-        "GEN2003",
-        "IS1108",
-        "MA1301"
+        "DTK1234",
+        "GEA1000",
+        "SC1101E"
       ],
       "2": [
-        "CS1231S",
-        "GEC1015",
-        "UE_GENERIC_2"
+        "CS2030S",
+        "CS2100",
+        "IS1108",
+        "MA1301X",
+        "UE_GENERIC_7"
       ],
       "3": [
-        "CS2040S",
-        "CS2100",
-        "GEA1000",
-        "IS1128"
+        "CS1231S",
+        "CS2106",
+        "UE_GENERIC_3"
       ],
       "4": [
-        "CS2030S",
-        "CS3230",
+        "CS2040S",
         "GEC1030",
-        "MA1521",
-        "MA1522"
+        "GEN2000",
+        "UE_GENERIC_10",
+        "UE_GENERIC_9"
       ],
       "5": [
-        "CS2109S",
-        "CS3231",
-        "CS4234",
-        "DTK1234",
-        "HSI1000"
+        "CS3230",
+        "GEN2001",
+        "GESS1020",
+        "MA1521",
+        "UE_GENERIC_4"
       ],
       "6": [
         "CS2101",
         "CS2103T",
-        "MA1301X",
-        "ST2334",
-        "UE_GENERIC_6"
+        "GEN2003",
+        "IE2141",
+        "MA1522"
       ],
       "7": [
-        "GEN2000",
-        "GEN2001",
-        "UE_GENERIC_10",
-        "UE_GENERIC_4",
+        "CS2109S",
+        "CS3231",
+        "CS4234",
+        "ST2334",
         "UE_GENERIC_5"
       ],
       "8": [
-        "CS2106",
         "CS3236",
         "CS4231",
         "CS4430",
+        "ES2660",
         "ETP3201L",
-        "GESS1020"
+        "GEN2004"
       ]
     },
     "total_units": 160
   },
   "meta": {
     "label": "Polytechnic / no H2 Maths",
+    "description": "Needs MA1301 math bridging and the ES1103 English path; bridging consumes a UE slot.",
     "tags": [
       "C-base",
       "C-order",
@@ -103,7 +104,6 @@
     "difficulty": {
       "num_variables": 944,
       "num_constraints": 3197,
-      "wall_time_s": 0.064,
       "min_feasible_semesters": 8,
       "semester_slack": 0,
       "min_feasible_cap": 20,
@@ -111,10 +111,8 @@
       "near_unsat_margin": 0
     },
     "quality": {
-      "realism": 91.2,
-      "flags": [
-        "Semester 1: 3 GE/ULR modules clustered together"
-      ]
+      "realism": 89.9,
+      "flags": []
     }
   }
 }

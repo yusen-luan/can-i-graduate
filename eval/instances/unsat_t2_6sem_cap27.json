@@ -1,7 +1,7 @@
 {
   "name": "unsat_t2_6sem_cap27",
   "declared_expect": "infeasible",
-  "nl_prompt": "Six semesters at 27 MC gives 162 MC nominal capacity but is infeasible once 4-MC granularity and single-semester offerings are respected. I want to graduate within 6 semesters; take at most 27 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 6 semesters; take at most 27 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,6 +41,7 @@
   },
   "meta": {
     "label": "UNSAT T2: bin-packing residue",
+    "description": "Six semesters at 27 MC gives 162 MC nominal capacity but is infeasible once 4-MC granularity and single-semester offerings are respected.",
     "tags": [
       "C-base",
       "C-order",
@@ -50,7 +51,6 @@
     "difficulty": {
       "num_variables": 696,
       "num_constraints": 2373,
-      "wall_time_s": 0.035,
       "extra_semesters_to_feasible": 1,
       "extra_cap_to_feasible": 1,
       "near_unsat_margin": 0

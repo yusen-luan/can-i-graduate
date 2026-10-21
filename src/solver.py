@@ -27,6 +27,7 @@ from model import (  # noqa: E402
     validate_iter2,
     validate_scenario_iter2,
     term_of,
+    with_horizon,
     effective_term,
     per_semester_cap,
     is_computing,
@@ -240,12 +241,15 @@ def build_and_solve_iter2(
     if ceiling and cap > ceiling:
         raise ValueError(
             f"max_units_per_semester {cap} exceeds the overload ceiling {ceiling}")
-    validate_scenario_iter2(program, scenario)   # iter3 C1/C5 knob validation
+    validate_scenario_iter2(program, scenario, modules)   # iter3 knob validation
     semesters = range(1, T + 1)
     domain = _iter2_domain(modules, program, student, focus_areas, scenario)
     units = {m: modules[m]["units"] for m in modules}
     waived = bridging_waived(student)
     bd = program["breadth_depth"]
+    prefs = scenario.get("preferences", {}) or {}
+    fyp_code = bd.get("fyp", {}).get("code")
+    industrial_mods = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
 
     model = cp_model.CpModel()
     x = {(m, s): model.NewBoolVar(f"x[{m},{s}]") for m in domain for s in semesters}
@@ -347,8 +351,7 @@ def build_and_solve_iter2(
     # §7 unit cap -- industrial-experience modules are done over the vacation /
     # special term, so they do NOT consume a regular semester's unit budget.
     # I2.15: per-slot cap override; a cap of 0 blocks EVERYTHING in that slot
-    # (incl. off-cap industrial) -- a fully unavailable exchange/SEP semester.
-    industrial_mods = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
+    # (incl. off-cap industrial) -- a fully unavailable leave-of-absence semester.
     for s in semesters:
         cap_s = per_semester_cap(scenario, s, cap)
         if cap_s == 0:
@@ -358,7 +361,7 @@ def build_and_solve_iter2(
         model.Add(sum(units[m] * x[m, s] for m in domain
                       if m not in industrial_mods) <= cap_s)
     # I2.16: CS-count-per-semester cap (Computing modules, excl. off-cap industrial)
-    max_cs = (scenario.get("preferences", {}) or {}).get("max_cs_modules_per_sem", 0)
+    max_cs = prefs.get("max_cs_modules_per_sem", 0)
     if max_cs:
         computing = [m for m in domain if is_computing(m) and m not in industrial_mods]
         for s in semesters:
@@ -401,12 +404,10 @@ def build_and_solve_iter2(
     # internship option (no padding) OR -- for a GPA-eligible student -- by the
     # CP4101 dissertation replacing it. A fixed `industrial_option` still forces
     # that internship; `any` lets the eligible dissertation substitute.
-    fyp_code = bd.get("fyp", {}).get("code")
     # dissertation counts only for an eligible student (parity with the checker);
     # sat() covers both a scheduled and an already-completed CP4101.
     diss = sat(fyp_code) if (fyp_code and student.get("eligible_fyp")) else 0
     industrial_choice = scenario.get("industrial_option", "any")
-    all_ind = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
     opt_bools = []
     for i, o in enumerate(bd["industrial_experience"]["options"]):
         s_set = o["set"]
@@ -423,7 +424,7 @@ def build_and_solve_iter2(
     else:
         model.Add(n_opts + diss >= 1)            # internship OR eligible dissertation
     # an industrial module may be taken only if an option containing it is chosen
-    for m in all_ind:
+    for m in industrial_mods:
         if m in domain:
             model.Add(sat(m) <= sum(b for b, s_set in opt_bools if m in s_set))
     # §18 Breadth & Depth 32u bucket: Computing (CS/IFS/CP) courses tagged
@@ -450,7 +451,6 @@ def build_and_solve_iter2(
 
     # I2.17 FYP / UROP (iter3 C3). FYP (CP4101) and UROP research are cp_coded, so
     # the 12u CP cap above binds them: want_fyp + want_urop is infeasible.
-    fyp_code = bd.get("fyp", {}).get("code")
     if fyp_code and fyp_code in domain:
         if not student.get("eligible_fyp", False):
             model.Add(sat(fyp_code) == 0)          # gate: only if GPA-eligible
@@ -465,20 +465,21 @@ def build_and_solve_iter2(
             model.Add(sum(sat(m) for m in urop_codes) >= 1)
 
     # -- optional per-instance preferences (scenario) ------------------------
-    prefs = scenario.get("preferences", {}) or {}
     for a, bmod in prefs.get("heavy_conflicts", []) or []:
         if a in domain and bmod in domain:
             for s in semesters:
                 model.Add(x[a, s] + x[bmod, s] <= 1)
-    # iter3 C4 (I2.18): module pin / forbid / deadline
+    # iter3 C4 (I2.18): module pin / forbid / deadline. Codes are validated to
+    # exist; a pre-satisfied or placement-waived module satisfies a pin/deadline
+    # trivially (parity with the checker), so every other code is in the domain.
     for m in prefs.get("require_modules", []) or []:
-        if not pre_satisfied(m, student) and m in domain:
+        if not pre_satisfied(m, student) and m not in waived:
             model.Add(taken(m) == 1)
     for m in prefs.get("forbid_modules", []) or []:
         if m in domain:
             model.Add(taken(m) == 0)
     for m, by in (prefs.get("deadline", {}) or {}).items():
-        if pre_satisfied(m, student) or m not in domain:
+        if pre_satisfied(m, student) or m in waived:
             continue
         last = min(int(by), T)
         model.Add(sum(x[m, s] for s in range(1, last + 1)) == 1)
@@ -486,15 +487,23 @@ def build_and_solve_iter2(
     min_load = prefs.get("min_units_per_semester", 0)
     no_gaps = prefs.get("no_empty_semesters", False)
     if min_load or no_gaps:
+        # used[s] <=> semester s holds at least one module (incl. industrial), the
+        # checker's notion of an enrolled semester. Encoded exactly, so the unit
+        # cap stays with §7 / I2.15 (per-slot caps, industrial off-cap).
         used = {s: model.NewBoolVar(f"used[{s}]") for s in semesters}
         for s in semesters:
-            load = sum(units[m] * x[m, s] for m in domain)
-            model.Add(load <= cap * used[s])
+            in_s = [x[m, s] for m in domain]
+            for v in in_s:
+                model.Add(v <= used[s])
+            model.Add(used[s] <= sum(in_s))
             if min_load:
-                model.Add(load >= min_load * used[s])
+                model.Add(sum(units[m] * x[m, s] for m in domain) >= min_load * used[s])
         if no_gaps:
-            for s in list(semesters)[:-1]:
-                model.Add(used[s] >= used[s + 1])
+            # enrolled semesters form one contiguous block: no empty s between used r < t
+            for r in semesters:
+                for s in range(r + 1, T + 1):
+                    for t in range(s + 1, T + 1):
+                        model.Add(used[r] + used[t] - 1 <= used[s])
 
     # Objective (still a CSP -- only disambiguates equally-valid plans; never
     # changes feasibility). Priority, by weight:
@@ -519,7 +528,7 @@ def build_and_solve_iter2(
         required = set(program["required_modules"])
         off_focus = [(m, s) for m in domain for s in semesters
                      if is_computing(m) and m not in fset
-                     and m not in required and m not in all_ind]
+                     and m not in required and m not in industrial_mods]
         obj = obj + 5 * sum(x[m, s] for m, s in off_focus)
     model.Minimize(obj)
 
@@ -595,36 +604,59 @@ def format_plan(result: SolveResult, modules: dict) -> str:
     return "\n".join(lines)
 
 
-def explain_infeasible_iter2(base_overrides: dict) -> str:
-    """Best-effort explanation of an infeasible iter2 instance: probe whether a
-    larger horizon or a higher unit cap would make it feasible, and whether the
-    chosen focus area / industrial option is the blocker."""
+def explain_infeasible_iter2(modules, program, student, focus_areas, preclusions,
+                             scenario) -> str:
+    """Best-effort explanation of an infeasible iter2 instance: relax ONE knob of
+    the given (student, scenario) at a time and report which relaxations make it
+    feasible. Probes the exact instance that failed, not the default files."""
+    ceiling = program.get("max_overload_units") or 99
+
+    def feasible(sc):
+        try:
+            return build_and_solve_iter2(modules, program, student, focus_areas,
+                                         preclusions, sc).feasible
+        except ValueError:          # relaxation produced an invalid instance
+            return False
+
+    def without_pref(*keys):
+        prefs = {k: v for k, v in (scenario.get("preferences", {}) or {}).items()
+                 if k not in keys}
+        return {**scenario, "preferences": prefs}
+
     reasons = []
-    cur_T = (base_overrides or {}).get("target_semesters", SCEN_T())
-    cur_cap = (base_overrides or {}).get("max_units_per_semester", SCEN_CAP())
+    cur_T = scenario["target_semesters"]
+    cur_cap = scenario["max_units_per_semester"]
     for T in range(cur_T + 1, cur_T + 5):
-        if solve_iter2(overrides={**(base_overrides or {}), "target_semesters": T}).feasible:
+        if feasible(with_horizon(scenario, T)):
             reasons.append(f"feasible at target_semesters={T} (you asked for {cur_T})")
             break
-    for cap in (cur_cap + 2, cur_cap + 4, cur_cap + 6):
-        if solve_iter2(overrides={**(base_overrides or {}), "max_units_per_semester": cap}).feasible:
+    for cap in sorted({min(cur_cap + d, ceiling) for d in (2, 4, 6)} - {cur_cap}):
+        if feasible({**scenario, "max_units_per_semester": cap}):
             reasons.append(f"feasible at max_units_per_semester={cap} (you set {cur_cap})")
             break
-    if (base_overrides or {}).get("focus_area", "any") != "any":
-        if solve_iter2(overrides={**(base_overrides or {}), "focus_area": "any"}).feasible:
-            reasons.append("feasible if the focus area is not fixed")
-    if (base_overrides or {}).get("industrial_option", "any") != "any":
-        if solve_iter2(overrides={**(base_overrides or {}), "industrial_option": "any"}).feasible:
-            reasons.append("feasible with a different industrial-experience option")
-    return "; ".join(reasons) or "no simple relaxation (horizon/cap/focus/internship) helped"
-
-
-def SCEN_T():
-    return load_scenario(DATA / "scenario_iter2.yaml")["target_semesters"]
-
-
-def SCEN_CAP():
-    return load_scenario(DATA / "scenario_iter2.yaml")["max_units_per_semester"]
+    probes = [
+        (scenario.get("focus_area", "any") != "any",
+         {**scenario, "focus_area": "any"}, "feasible if the focus area is not fixed"),
+        (scenario.get("industrial_option", "any") != "any",
+         {**scenario, "industrial_option": "any"},
+         "feasible with a different industrial-experience option"),
+        (scenario.get("want_fyp"), {**scenario, "want_fyp": False},
+         "feasible without the final-year-project request"),
+        (scenario.get("want_urop"), {**scenario, "want_urop": False},
+         "feasible without the UROP request"),
+    ]
+    prefs = scenario.get("preferences", {}) or {}
+    for keys, label in [(("require_modules", "forbid_modules", "deadline"),
+                         "feasible without the module pins / forbids / deadlines"),
+                        (("per_semester_cap",), "feasible without the per-semester caps"),
+                        (("max_cs_modules_per_sem",), "feasible without the CS-modules-per-semester cap"),
+                        (("min_units_per_semester", "no_empty_semesters", "heavy_conflicts"),
+                         "feasible without the workload preferences")]:
+        probes.append((any(prefs.get(k) for k in keys), without_pref(*keys), label))
+    for applies, sc, label in probes:
+        if applies and feasible(sc):
+            reasons.append(label)
+    return "; ".join(reasons) or "no single relaxation of your request helped"
 
 
 def main(argv=None) -> int:
@@ -653,10 +685,11 @@ def main(argv=None) -> int:
         if args.json:
             print(json.dumps(result.__dict__, indent=2))
         else:
-            modules, *_ = load_iter2()
-            print(format_plan(result, modules))
+            loaded = load_iter2()
+            print(format_plan(result, loaded[0]))
             if not result.feasible:
-                print("Why: " + explain_infeasible_iter2(over))
+                scenario = {**load_scenario(DATA / "scenario_iter2.yaml"), **over}
+                print("Why: " + explain_infeasible_iter2(*loaded, scenario))
         return 0 if result.feasible else 1
 
     result = solve(

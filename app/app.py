@@ -1,8 +1,7 @@
 """CanIGraduate — NUS Computer Science degree planner (frontend).
 
-Thin Streamlit UI over src/solver.py + src/checker.py (+ src/plan_quality.py).
-The CSP is the single source of truth; every plan shown is re-validated by the
-independent checker and scored by the plan-quality evaluator.
+Thin Streamlit UI over src/solver.py + src/checker.py. The CSP is the single
+source of truth; every plan shown is re-validated by the independent checker.
 
 v2 design (docs/ui_ux_plan.md §8): student-first, minimal copy. A dropdown picks
 the student; one hero STUDENT CARD is the summary; the verdict is a row of STAT
@@ -17,8 +16,8 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from model import (load_iter2, load_scenario, load_yaml, term_of,  # noqa: E402
-                   per_semester_cap, pre_satisfied)
+from model import (load_iter2, load_yaml, term_of,  # noqa: E402
+                   pre_satisfied, is_computing)
 from solver import build_and_solve_iter2, explain_infeasible_iter2  # noqa: E402
 from checker import check_plan_iter2  # noqa: E402
 
@@ -164,9 +163,7 @@ section[data-testid="stSidebar"] .block-container{ padding:var(--s4) var(--s3); 
 
 @st.cache_data
 def load():
-    modules, program, student, focus, precl = load_iter2()
-    scen = load_scenario(ROOT / "data" / "scenario_iter2.yaml")
-    return modules, program, student, focus, precl, scen
+    return load_iter2()
 
 
 @st.cache_data
@@ -221,6 +218,31 @@ def seed_from_profile(profile):
     # sensible default: cap Computing modules at 3/sem unless the profile sets its own
     ss["maxcs"] = int(prefs.get("max_cs_modules_per_sem", 0)) or 3
     ss["specials"] = specials
+    # module pins / workload preferences: carried over so the app solves the profile's request
+    ss["require"] = list(prefs.get("require_modules", []) or [])
+    ss["forbid"] = list(prefs.get("forbid_modules", []) or [])
+    ss["deadlines"] = format_pairs((prefs.get("deadline", {}) or {}).items(), ":")
+    ss["min_units"] = int(prefs.get("min_units_per_semester", 0) or 0)
+    ss["no_gaps"] = bool(prefs.get("no_empty_semesters", False))
+    ss["conflicts"] = format_pairs(prefs.get("heavy_conflicts", []) or [], "+")
+
+
+def format_pairs(pairs, sep):
+    """[(a, b), ...] -> 'a<sep>b, ...' for a free-text widget."""
+    return ", ".join(f"{a}{sep}{b}" for a, b in pairs)
+
+
+def parse_pairs(text, sep):
+    """'a<sep>b, ...' -> [(a, b), ...]; raises ValueError on a malformed item."""
+    out = []
+    for item in (t.strip() for t in text.split(",")):
+        if not item:
+            continue
+        a, found, b = item.partition(sep)
+        if not found or not a.strip() or not b.strip():
+            raise ValueError(f"'{item}' is not of the form A{sep}B")
+        out.append((a.strip().upper(), b.strip().upper()))
+    return out
 
 
 # ── rendering ────────────────────────────────────────────────────────────--
@@ -286,16 +308,16 @@ def cell(code, modules):
             f"<div class='meta'>{i.get('units','?')} MC · {plabel}</div></div>")
 
 
-def sem_column(slot, mods, modules, term_layout, cap_s, industrial):
+def sem_column(slot, mods, modules, term_layout, industrial, global_cap, ceiling):
     load = sum(modules[m]["units"] for m in mods if m not in industrial)
     total = sum(modules[m]["units"] for m in mods)
     term = TERM_LABEL[slot_term(slot, term_layout)]
     tag = ""
-    if load >= 24 or (cap_s and load > cap_s - 0 and cap_s > 20 and load >= cap_s):
+    if load >= 24 or load > global_cap:          # very heavy, or above the normal load
         tag = "<span class='tag2 heavy'>Heavy</span>"
     elif 0 < load <= 12:
         tag = "<span class='tag2 light'>Light</span>"
-    pct = min(100, int(load / 28 * 100))
+    pct = min(100, int(load / ceiling * 100))
     body = "".join(cell(m, modules) for m in mods) or "<div class='empty'>No modules</div>"
     return (f"<div class='sem'><div class='sem-h'><b>Semester {slot} · {term}</b>"
             f"<span class='mc'>{total} MC{tag}</span></div>"
@@ -303,7 +325,7 @@ def sem_column(slot, mods, modules, term_layout, cap_s, industrial):
             f"<div class='sem-b'>{body}</div></div>")
 
 
-def plan_grid_html(plan, modules, scenario, global_cap, industrial):
+def plan_grid_html(plan, modules, scenario, global_cap, industrial, ceiling):
     tl = scenario.get("term_layout")
     slots = sorted(plan)
     html, year, prev_term, buckets = [], 1, 0, {}
@@ -314,8 +336,8 @@ def plan_grid_html(plan, modules, scenario, global_cap, industrial):
         buckets.setdefault(year, []).append(s)
         prev_term = t if t in (1, 2) else prev_term
     for y, ss in buckets.items():
-        cols = "".join(sem_column(s, plan[s], modules, tl,
-                                  per_semester_cap(scenario, s, global_cap), industrial) for s in ss)
+        cols = "".join(sem_column(s, plan[s], modules, tl, industrial, global_cap, ceiling)
+                       for s in ss)
         klass = "row three" if len(ss) >= 3 else "row"
         html.append(f"<div class='year'><div class='year-h'>Year {y}</div>"
                     f"<div class='{klass}'>{cols}</div></div>")
@@ -337,13 +359,18 @@ def requirement_sections(plan, modules, program, focus, scenario, student):
         picked = [m for m in g["satisfied_by"] if sat(m)]
         uni.append((PILLAR_NAME.get(name, name.title()), ", ".join(picked) or "not chosen",
                     len(picked) >= 1, None))
-    uni.append(("Computing Ethics", "IS1108", sat("IS1108"), None))
+    eth = rg["computing_ethics"]
+    eth_got = [m for m in eth["satisfied_by"] if sat(m)]
+    uni.append(("Computing Ethics", ", ".join(eth["satisfied_by"]),
+                len(eth_got) >= eth["modules_required"], None))
     idc = rg["interdisciplinary_cross_disciplinary"]
     ids = [m for m in idc["candidates"] if sat(m) and modules[m].get("category") == "ID"]
     cds = [m for m in idc["candidates"] if sat(m) and modules[m].get("category") == "CD"]
+    need_idcd = idc["total_modules_required"]
     uni.append(("Interdisciplinary & Cross-disciplinary",
                 f"{len(ids)} ID, {len(cds)} CD — {', '.join(ids + cds) or 'none'}",
-                len(ids) + len(cds) == 3 and len(ids) >= 2 and len(cds) <= 1, (len(ids + cds), 3)))
+                len(ids) + len(cds) == need_idcd and len(ids) >= idc["min_id_modules"]
+                and len(cds) <= idc["max_cd_modules"], (len(ids + cds), need_idcd)))
 
     found = [m for m in program["required_modules"] if modules[m]["pillar"] == "cs_foundation"]
     math = [m for m in program["required_modules"] if modules[m]["pillar"] == "math_statistics"]
@@ -353,23 +380,28 @@ def requirement_sections(plan, modules, program, focus, scenario, student):
              (sum(sat(m) for m in math), len(math)))]
 
     chosen = scenario.get("focus_area", "any")
+    fr = focus["rule"]
+
     def area_ok(a):
         p = [m for m in focus["areas"][a]["primaries"] if m in modules and sat(m)]
-        return (len(p) >= 3 and any(modules[m]["level"] >= 4000 for m in p)), p
+        n4k = sum(1 for m in p if modules[m]["level"] >= 4000)
+        return (len(p) >= fr["courses_per_area"] and n4k >= fr["min_level4000_in_area"]), p
     if chosen == "any":
         hits = [a for a in focus["areas"] if area_ok(a)[0]]
         frow = ("Focus area", ", ".join(focus_label(a) for a in hits) or "none satisfied", bool(hits), None)
     else:
         ok, p = area_ok(chosen)
-        frow = (f"Focus — {focus_label(chosen)}", ", ".join(p) or "none taken", ok, (len(p), 3))
+        frow = (f"Focus — {focus_label(chosen)}", ", ".join(p) or "none taken", ok,
+                (len(p), fr["courses_per_area"]))
     l4 = u(lambda m: modules[m]["level"] >= 4000)
+    need_l4 = bd["level4000"]["min_units"]
     bdu = u(lambda m: modules[m].get("pillar") in {"breadth_depth", "industrial_experience"})
     ind = [m for o in bd["industrial_experience"]["options"] for m in o["set"] if sat(m)]
     fyp_code = bd.get("fyp", {}).get("code")
     diss = bool(fyp_code and sat(fyp_code))
     ind_detail = (", ".join(ind) if ind else "") + (" + CP4101 dissertation" if diss else "")
     depth = [frow,
-             ("Depth at level 4000+", f"{l4} MC (need 12)", l4 >= 12, (l4, 12)),
+             ("Depth at level 4000+", f"{l4} MC (need {need_l4})", l4 >= need_l4, (l4, need_l4)),
              ("Breadth & Depth total", f"{bdu} MC (need {bd['min_units']})", bdu >= bd["min_units"],
               (bdu, bd["min_units"])),
              ("Industrial experience", ind_detail or "none", bool(ind) or diss, None)]
@@ -391,7 +423,7 @@ def requirement_sections(plan, modules, program, focus, scenario, student):
 
 # ── app ──────────────────────────────────────────────────────────────────--
 st.markdown(CSS, unsafe_allow_html=True)
-modules, program, student0, focus, precl, scen = load()
+modules, program, student0, focus, precl = load()
 profiles = load_profiles()
 real_codes = sorted(c for c, i in modules.items() if i.get("kind") != "generic_placeholder")
 ceiling = int(program.get("max_overload_units", 28))
@@ -447,6 +479,14 @@ with st.sidebar:
         maxcs = st.slider("Max CS modules per semester (0 = no limit)", 0, 6, key="maxcs")
         specials = st.multiselect("Special-Term semesters", sems12, key="specials",
                                   format_func=lambda v: f"Semester {v}")
+        min_units = st.slider("Minimum MC in any enrolled semester (0 = off)", 0, 20, key="min_units")
+        no_gaps = st.checkbox("No empty semesters between enrolled ones", key="no_gaps")
+
+    with st.expander("Module requests", expanded=False):
+        require = st.multiselect("Must take", real_codes, key="require")
+        forbid = st.multiselect("Must not take", real_codes, key="forbid")
+        deadlines_txt = st.text_input("Deadlines (e.g. CS2040S:3, CS3230:5)", key="deadlines")
+        conflicts_txt = st.text_input("Not in the same semester (e.g. CS2030S+CS2040S)", key="conflicts")
 
 # ── assemble student + scenario ─────────────────────────────────────────────
 student = copy.deepcopy(student0)
@@ -474,13 +514,22 @@ if active_specials:
 
 # sensible scheduling defaults (skipped automatically when already completed/exempted):
 # intro programming is the very first module; quantitative reasoning sits in Year 1.
-deadline = {"CS1101S": 1, "GEA1000": 2}
+# Explicit user / profile deadlines override these; a forbidden module gets none.
+try:
+    user_deadlines = {c: int(s) for c, s in parse_pairs(deadlines_txt, ":")}
+    conflicts = [list(p) for p in parse_pairs(conflicts_txt, "+")]
+except ValueError as e:
+    st.error(f"Module requests: {e}")
+    st.stop()
+deadline = {c: s for c, s in {"CS1101S": 1, "GEA1000": 2}.items() if c not in forbid}
+deadline.update(user_deadlines)
 scenario = {"name": "app", "target_semesters": T, "max_units_per_semester": cap,
             "focus_area": area, "industrial_option": ind,
             "want_fyp": want_fyp, "want_urop": want_urop,
             "preferences": {"per_semester_cap": per_sem, "max_cs_modules_per_sem": maxcs,
-                            "min_units_per_semester": 0, "no_empty_semesters": False,
-                            "heavy_conflicts": [], "deadline": deadline}}
+                            "min_units_per_semester": min_units, "no_empty_semesters": no_gaps,
+                            "heavy_conflicts": conflicts, "require_modules": list(require),
+                            "forbid_modules": list(forbid), "deadline": deadline}}
 if term_layout:
     scenario["term_layout"] = term_layout
 
@@ -495,8 +544,7 @@ except ValueError as e:
     st.stop()
 
 if not result.feasible:
-    reason = explain_infeasible_iter2({k: scenario[k] for k in
-                ("target_semesters", "max_units_per_semester", "focus_area", "industrial_option")})
+    reason = explain_infeasible_iter2(modules, program, student, focus, precl, scenario)
     st.markdown("<div class='tiles'><div class='tile no'><div class='n'>No valid plan</div>"
                 "<div class='l'>under these settings</div></div></div>"
                 f"<div class='subline no'>{reason}</div>", unsafe_allow_html=True)
@@ -507,7 +555,7 @@ taken = [m for ms in result.plan.values() for m in ms]
 held = taken + [m for m in modules if pre_satisfied(m, student)]   # include prior credit
 used = max((s for s, ms in result.plan.items() if ms), default=0)
 total = sum(modules[m]["units"] for m in held)
-cs_count = sum(1 for m in held if m.startswith(("CS", "IFS", "CP")) and m not in INDUSTRIAL)
+cs_count = sum(1 for m in held if is_computing(m) and m not in INDUSTRIAL)
 valid = not violations
 st.markdown(
     "<div class='tiles'>"
@@ -526,7 +574,8 @@ with left:
     st.markdown("<div class='legend'>" + "".join(
         f"<span><i style='background:{c}'></i>{n}</span>" for n, c in LEGEND) + "</div>",
         unsafe_allow_html=True)
-    st.markdown(plan_grid_html(result.plan, modules, scenario, cap, INDUSTRIAL), unsafe_allow_html=True)
+    st.markdown(plan_grid_html(result.plan, modules, scenario, cap, INDUSTRIAL, ceiling),
+                unsafe_allow_html=True)
 with right:
     st.markdown("<div class='sect'>Degree requirements</div>", unsafe_allow_html=True)
     rows_html = []

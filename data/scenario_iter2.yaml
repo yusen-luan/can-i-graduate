@@ -28,7 +28,7 @@ preferences:
   min_units_per_semester: 0        # floor on a non-empty semester's load (0 = off)
   no_empty_semesters: false        # forbid gaps between enrolled semesters
   heavy_conflicts: []              # e.g. [[CS2030S, CS2040S], [CS2040S, CS2100]]
-  # iter3 C1: per-slot unit-cap override. 0 = slot fully unavailable (exchange/SEP);
+  # iter3 C1: per-slot unit-cap override. 0 = slot fully unavailable (leave of absence);
   # a low value (e.g. 12) = a deliberately light "chill" semester. e.g. {5: 12, 6: 0}
   per_semester_cap: {}
   # iter3 C2: at most N Computing (CS/IFS/CP) modules scheduled in one slot (0 = off).

@@ -1,7 +1,7 @@
 {
   "name": "part_load_worklife",
   "declared_expect": "feasible",
-  "nl_prompt": "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon. I want to graduate within 10 semesters; take at most 16 MC per semester; specialise in software engineering; keep semester 6 under 8 MC. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 10 semesters; take at most 16 MC per semester; specialise in software engineering; take at most 8 MC in semester 6; take at least 8 MC in every semester I enrol. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -40,58 +40,58 @@
       "1": [
         "CS1101S",
         "CS1231S",
-        "GEN2001",
+        "MA1521",
         "UE_GENERIC_6"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
-        "IS1108",
-        "IS1128"
+        "CS2100",
+        "GEC1030"
       ],
       "3": [
-        "CS2101",
-        "CS2103T",
-        "ES2660",
-        "GEC1015"
-      ],
-      "4": [
-        "CS2100",
-        "CS3219",
-        "GESS1025",
-        "UE_GENERIC_9"
-      ],
-      "5": [
-        "CS3230",
-        "CS4211",
-        "CS4218",
-        "MA1521"
-      ],
-      "6": [
-        "ETP3201L",
-        "UE_GENERIC_3"
-      ],
-      "7": [
-        "CS3227",
-        "GEA1000",
-        "MA1522",
-        "SC1101E"
-      ],
-      "8": [
+        "CS2106",
         "CS2109S",
-        "CS4215",
-        "HSI1000",
+        "ETP3201L",
+        "MA1522",
         "ST2334"
       ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS4248",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "CS3219",
+        "CS3227",
+        "GEN2001",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "IE2141",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "DTK1234",
+        "HSI1000",
+        "UE_GENERIC_10"
+      ],
+      "8": [
+        "CS4218",
+        "ES2660",
+        "GESS1020",
+        "IS1108"
+      ],
       "9": [
-        "GESS1001",
-        "UE_GENERIC_10",
-        "UE_GENERIC_4",
-        "UE_GENERIC_7"
+        "CS4211",
+        "GEA1000",
+        "GEC1020",
+        "UE_GENERIC_8"
       ],
       "10": [
-        "CS2106",
-        "GEN2004",
+        "CS3230",
+        "GEN2003",
         "UE_GENERIC_2",
         "UE_GENERIC_5"
       ]
@@ -100,6 +100,7 @@
   },
   "meta": {
     "label": "Part-load (work/health)",
+    "description": "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon.",
     "tags": [
       "C-base",
       "C-order",
@@ -109,8 +110,7 @@
     ],
     "difficulty": {
       "num_variables": 1160,
-      "num_constraints": 3826,
-      "wall_time_s": 0.201,
+      "num_constraints": 4986,
       "min_feasible_semesters": 10,
       "semester_slack": 0,
       "min_feasible_cap": 16,
@@ -118,9 +118,10 @@
       "near_unsat_margin": 0
     },
     "quality": {
-      "realism": 92.2,
+      "realism": 89.2,
       "flags": [
-        "Semester 6: only 4 MC \u2014 very light"
+        "Semester 6: only 8 MC \u2014 very light",
+        "Internship/FYP scheduled early: ETP3201L"
       ]
     }
   }

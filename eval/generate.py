@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from model import load_iter2, load_yaml  # noqa: E402
+from model import load_iter2, load_yaml, with_horizon  # noqa: E402
 from solver import build_and_solve_iter2  # noqa: E402
 from plan_quality import score_plan  # noqa: E402
 
@@ -124,10 +124,9 @@ STRESS = {
 
 def _feasible(student, scenario, **over):
     sc = copy.deepcopy(scenario)
+    if "target_semesters" in over:     # keep any term_layout the right length
+        sc = with_horizon(sc, over.pop("target_semesters"))
     sc.update(over)
-    # term_layout length must track target_semesters; drop it when probing T
-    if "target_semesters" in over and "term_layout" in sc:
-        sc.pop("term_layout")
     try:
         return solve(student, sc).feasible
     except ValueError:
@@ -140,18 +139,17 @@ def measure_difficulty(student, scenario, base):
     can be tightened before it flips; small margin => binding/hard."""
     T = scenario["target_semesters"]
     cap = scenario["max_units_per_semester"]
-    d = {"num_variables": base.num_variables, "num_constraints": base.num_constraints,
-         "wall_time_s": round(base.wall_time_s, 3)}
-    has_layout = bool(scenario.get("term_layout"))
+    # wall time is deliberately omitted: it is nondeterministic (noisy diffs on
+    # every regeneration) and not an LLM-difficulty axis (B6).
+    d = {"num_variables": base.num_variables, "num_constraints": base.num_constraints}
     if base.feasible:
-        # slack: largest tightening still feasible
+        # slack: largest tightening still feasible (a term_layout is truncated)
         min_T = T
-        if not has_layout:
-            for t in range(T - 1, 0, -1):
-                if _feasible(student, scenario, target_semesters=t):
-                    min_T = t
-                else:
-                    break
+        for t in range(T - 1, 0, -1):
+            if _feasible(student, scenario, target_semesters=t):
+                min_T = t
+            else:
+                break
         min_cap = cap
         for c in range(cap - 1, 3, -1):
             if _feasible(student, scenario, max_units_per_semester=c):
@@ -195,11 +193,47 @@ def coverage_tags(student, scenario, feasible):
 
 
 # ---------------------------------------------------------------- NL draft
-def nl_draft(label, description, student, scenario):
-    """Deterministic English draft FROM the formal instance. Marked auto-draft;
-    the real corpus prose is hand-authored per B7 (variety/implicitness)."""
+ENGLISH_TEXT = {
+    "es1103_required": "My English placement test requires me to take ES1103 first.",
+    "es1000_then_es1103": "My English placement test requires me to take ES1000 and then ES1103.",
+}
+
+
+def situation_text(student):
+    """The student's situation in plain first-person English, written ONLY from
+    the formal student record (never from the curated label/description, which
+    may state the verdict and would leak the answer to the model)."""
+    out = []
+    comp = sorted(m for m, v in (student.get("completed", {}) or {}).items() if v)
+    real = [m for m in comp if MODULES.get(m, {}).get("kind") != "generic_placeholder"]
+    n_generic = len(comp) - len(real)
+    exm = sorted(m for m, v in (student.get("exempted", {}) or {}).items() if v)
+    if real or n_generic:
+        done = real + ([f"{n_generic} unrestricted elective(s)"] if n_generic else [])
+        out.append("I have already completed " + ", ".join(done) + ".")
+    if exm:
+        out.append("I have advanced-placement exemptions for " + ", ".join(exm) + ".")
+    if not comp and not exm:
+        out.append("I am starting the NUS Computer Science degree with no modules done yet.")
+    cond = student.get("conditions", {}) or {}
+    if cond.get("needs_math_bridging") or not student.get("has_h2_math", True):
+        out.append("I do not have A-level H2 Mathematics.")
+    if cond.get("english_path") in ENGLISH_TEXT:
+        out.append(ENGLISH_TEXT[cond["english_path"]])
+    if student.get("eligible_fyp"):
+        out.append("My GPA qualifies me for the final-year project.")
+    if not student.get("eligible_urop", True):
+        out.append("I am not eligible for UROP.")
+    return out
+
+
+def nl_draft(student, scenario):
+    """Deterministic English draft FROM the formal instance (student + request
+    only). Marked auto-draft; the real corpus prose is hand-authored per B7."""
     sc = scenario
-    lines = [description.rstrip(".") + "."]
+    lines = situation_text(student)
+    if sc.get("want_fyp") and not student.get("eligible_fyp"):
+        lines.append("My GPA does not currently qualify me for the final-year project.")
     ask = [f"graduate within {sc['target_semesters']} semesters",
            f"take at most {sc['max_units_per_semester']} MC per semester"]
     if sc.get("focus_area", "any") != "any":
@@ -211,8 +245,21 @@ def nl_draft(label, description, student, scenario):
     if sc.get("want_urop"):
         ask.append("do a UROP research project")
     prefs = sc.get("preferences", {}) or {}
-    for s, u in (prefs.get("per_semester_cap", {}) or {}).items():
-        ask.append(f"keep semester {s} {'blocked (no modules)' if u == 0 else f'under {u} MC'}")
+    for s, u in sorted((int(k), v) for k, v in (prefs.get("per_semester_cap", {}) or {}).items()):
+        ask.append(f"take semester {s} off entirely" if u == 0
+                   else f"take at most {u} MC in semester {s}")
+    specials = [i + 1 for i, t in enumerate(sc.get("term_layout") or []) if t in (3, 4)]
+    if specials:
+        ask.append("use semester(s) " + ", ".join(map(str, specials)) + " as Special Terms")
+    if prefs.get("max_cs_modules_per_sem"):
+        ask.append(f"take no more than {prefs['max_cs_modules_per_sem']} CS/IFS/CP modules "
+                   "in any one semester")
+    if prefs.get("min_units_per_semester"):
+        ask.append(f"take at least {prefs['min_units_per_semester']} MC in every semester I enrol")
+    if prefs.get("no_empty_semesters"):
+        ask.append("have no empty semesters between enrolled ones")
+    for a, b in prefs.get("heavy_conflicts", []) or []:
+        ask.append(f"not take {a} and {b} in the same semester")
     if prefs.get("require_modules"):
         ask.append("be sure to take " + ", ".join(prefs["require_modules"]))
     if prefs.get("forbid_modules"):
@@ -247,11 +294,13 @@ def build_instance(name, p):
     return {
         "name": name,
         "declared_expect": p["expect"],
-        "nl_prompt": nl_draft(p["label"], p["description"], student, scenario),
+        "nl_prompt": nl_draft(student, scenario),
         "prompt_source": "auto-draft",
         "formal": {"student": student, "scenario": scenario},
         "ground_truth": gt,
-        "meta": {"label": p["label"], "tags": coverage_tags(student, scenario, r.feasible),
+        # the curated description may state the verdict: kept in meta, never in nl_prompt
+        "meta": {"label": p["label"], "description": p["description"],
+                 "tags": coverage_tags(student, scenario, r.feasible),
                  "difficulty": diff, "quality": quality},
     }
 

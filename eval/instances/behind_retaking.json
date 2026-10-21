@@ -1,7 +1,7 @@
 {
   "name": "behind_retaking",
   "declared_expect": "feasible",
-  "nl_prompt": "Failed CS2040S and is a semester behind; needs a 9-semester plan to recover. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I have already completed CS1101S, CS1231S, MA1521. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -43,63 +43,64 @@
     "status": "OPTIMAL",
     "plan": {
       "1": [
+        "CS2030S",
         "CS2100",
-        "GEA1000",
-        "MA1522",
-        "UE_GENERIC_1",
-        "UE_GENERIC_10"
+        "SC1101E",
+        "ST2334"
       ],
       "2": [
-        "CS2030S",
         "CS2040S",
-        "UE_GENERIC_3",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "MA1522",
+        "UE_GENERIC_5"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2106",
-        "CS3230",
+        "CS2109S",
         "CS3231"
       ],
       "4": [
-        "CS4231",
-        "GESS1025",
-        "IS1128",
+        "GEC1015",
+        "GEN2004",
+        "GESS1020",
+        "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
       "5": [
-        "GEC1020",
-        "ST2334"
+        "CS3230",
+        "ES2660"
       ],
       "6": [
+        "CS4231",
         "CS4430",
-        "IS1108"
+        "GEN2000",
+        "GEN2003",
+        "HSI1000"
       ],
       "7": [
-        "ES2660",
-        "GEN2001",
-        "GESS1020",
-        "SC1101E"
+        "GEC1020",
+        "UE_GENERIC_1",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_9"
       ],
       "8": [
-        "CS2109S",
-        "CS3236",
-        "GEN2000",
-        "UE_GENERIC_4"
+        "CS3236"
       ],
       "9": [
         "CS4234",
         "ETP3201L",
-        "GEC1015",
-        "IE2141"
+        "GEA1000",
+        "IE2141",
+        "IS1108"
       ]
     },
     "total_units": 148
   },
   "meta": {
     "label": "Behind / retaking a core module",
+    "description": "Failed CS2040S and is a semester behind; needs a 9-semester plan to recover.",
     "tags": [
       "C-base",
       "C-order",
@@ -110,7 +111,6 @@
     "difficulty": {
       "num_variables": 1017,
       "num_constraints": 3060,
-      "wall_time_s": 0.077,
       "min_feasible_semesters": 7,
       "semester_slack": 2,
       "min_feasible_cap": 16,
@@ -118,11 +118,11 @@
       "near_unsat_margin": 2
     },
     "quality": {
-      "realism": 92.5,
+      "realism": 90.4,
       "flags": [
         "Semester 5: only 8 MC \u2014 very light",
-        "Semester 6: only 8 MC \u2014 very light",
-        "Semester 7: 3 GE/ULR modules clustered together"
+        "Semester 8: only 4 MC \u2014 very light",
+        "Semester 4: 3 GE/ULR modules clustered together"
       ]
     }
   }

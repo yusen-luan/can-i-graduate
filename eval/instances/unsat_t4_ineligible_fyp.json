@@ -1,7 +1,7 @@
 {
   "name": "unsat_t4_ineligible_fyp",
   "declared_expect": "infeasible",
-  "nl_prompt": "A student who is not GPA-eligible insists on doing the CP4101 dissertation. I want to graduate within 9 semesters; take at most 20 MC per semester; do a final-year project (CP4101). Can it be done, and if so what is my semester-by-semester plan?",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. My GPA does not currently qualify me for the final-year project. I want to graduate within 9 semesters; take at most 20 MC per semester; do a final-year project (CP4101). Can it be done, and if so what is my semester-by-semester plan?",
   "prompt_source": "auto-draft",
   "formal": {
     "student": {
@@ -41,6 +41,7 @@
   },
   "meta": {
     "label": "UNSAT T4: FYP without eligibility",
+    "description": "A student who is not GPA-eligible insists on doing the CP4101 dissertation.",
     "tags": [
       "C-base",
       "C-order",
@@ -51,7 +52,6 @@
     "difficulty": {
       "num_variables": 1053,
       "num_constraints": 3477,
-      "wall_time_s": 0.004,
       "extra_semesters_to_feasible": null,
       "extra_cap_to_feasible": null,
       "near_unsat_margin": 0

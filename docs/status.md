@@ -8,8 +8,8 @@ _Last updated: 2026-10-21_
 the LLM-direct vs LLM→solver benchmark. Plans: `docs/iter3_plan.md`, `docs/benchmark_design.md`
 (Part A oracle proof, Part B corpus), `docs/evaluation_plan.md`, `docs/ui_ux_plan.md`.
 
-**Where we are:** iter3 committed on branch `iter3-benchmark-oracle-ui` (0da4558). Review fixes below
-are **uncommitted**. Solver/checker/corpus/app complete; the LLM harness is not started.
+**Where we are:** iter3 + review fixes committed on branch `iter3-benchmark-oracle-ui` (0da4558,
+4272f7a; not pushed). Solver/checker/corpus/app complete; the LLM harness is not started.
 **249 tests pass.**
 
 ### Done
@@ -42,7 +42,7 @@ are **uncommitted**. Solver/checker/corpus/app complete; the LLM harness is not 
 - A5 benign: Critique = ES2660 only, Data Literacy = GEA1000 only, industry experience as fixed bundles.
 
 ### Next
-1. Commit the review fixes; freeze/tag the oracle.
+1. Freeze/tag the oracle.
 2. Hand-author the NL prompts (B7: variety/implicitness) over the auto-drafts.
 3. Build the harness per `docs/evaluation_plan.md`: LLM-direct + LLM→solver graded by `check_plan_iter2`
    + `plan_quality`, Opus/Sonnet/Haiku + obfuscation ablation (needs API budget/keys).

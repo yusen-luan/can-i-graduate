@@ -1,0 +1,129 @@
+{
+  "name": "behind_retaking",
+  "declared_expect": "feasible",
+  "nl_prompt": "I have already completed CS1101S, CS1231S, MA1521. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in algorithms theory. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {
+        "CS1101S": true,
+        "CS1231S": true,
+        "MA1521": true
+      },
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "algorithms_theory",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2100",
+        "SC1101E",
+        "ST2334"
+      ],
+      "2": [
+        "CS2040S",
+        "MA1522",
+        "UE_GENERIC_5"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3231"
+      ],
+      "4": [
+        "GEC1015",
+        "GEN2004",
+        "GESS1020",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "5": [
+        "CS3230",
+        "ES2660"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "GEN2000",
+        "GEN2003",
+        "HSI1000"
+      ],
+      "7": [
+        "GEC1020",
+        "UE_GENERIC_1",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_9"
+      ],
+      "8": [
+        "CS3236"
+      ],
+      "9": [
+        "CS4234",
+        "ETP3201L",
+        "GEA1000",
+        "IE2141",
+        "IS1108"
+      ]
+    },
+    "total_units": 148
+  },
+  "meta": {
+    "label": "Behind / retaking a core module",
+    "description": "Failed CS2040S and is a semester behind; needs a 9-semester plan to recover.",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 1017,
+      "num_constraints": 3060,
+      "min_feasible_semesters": 7,
+      "semester_slack": 2,
+      "min_feasible_cap": 16,
+      "cap_slack": 4,
+      "near_unsat_margin": 2
+    },
+    "quality": {
+      "realism": 90.4,
+      "flags": [
+        "Semester 5: only 8 MC \u2014 very light",
+        "Semester 8: only 4 MC \u2014 very light",
+        "Semester 4: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

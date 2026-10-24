@@ -1,0 +1,60 @@
+{
+  "name": "unsat_t1_6sem_cap26",
+  "declared_expect": "infeasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 6 semesters; take at most 26 MC per semester. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 6,
+      "max_units_per_semester": 26,
+      "focus_area": "any",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": false,
+    "status": "INFEASIBLE",
+    "reason": "infeasible: needs 7 semesters; or a cap of 28 MC"
+  },
+  "meta": {
+    "label": "UNSAT T1: 6 semesters at 26 MC",
+    "description": "Six semesters at 26 MC is 156 MC \u2014 four short of the 160 MC degree.",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-unsat"
+    ],
+    "difficulty": {
+      "num_variables": 696,
+      "num_constraints": 2373,
+      "extra_semesters_to_feasible": 1,
+      "extra_cap_to_feasible": 2,
+      "near_unsat_margin": 0
+    },
+    "quality": null
+  }
+}

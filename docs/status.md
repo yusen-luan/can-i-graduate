@@ -1,46 +1,57 @@
 # Status — current iteration only (≤ 60 lines; older iterations → docs/history.md)
 
-_Last updated: 2026-10-20_
+_Last updated: 2026-10-21_
 
-## Iteration 2: full BComp(CS) AY2026/27 degree, NUSMods-validated
+## Iteration 3: richer requests + the benchmark (scope FROZEN 2026-10-20: no iter4, no new features)
 
-**Goal:** scale the CSP from the 88-unit canonical skeleton to the full 160-unit degree with real
-module facts, so instances become *binding* (the thing iter1 lacked) — the point being a sharper
-LLM-direct vs LLM→solver comparison later. Full plan + audit: `docs/iter2_plan.md`.
+**Goal:** add realistic per-request constraints, prove the oracle (solver + checker) correct, and build
+the LLM-direct vs LLM→solver benchmark. Plans: `docs/iter3_plan.md`, `docs/benchmark_design.md`
+(Part A oracle proof, Part B corpus), `docs/evaluation_plan.md`, `docs/ui_ux_plan.md`.
 
-**Where we are:** iter2 build is merged on branch `iter2` (commit a34b3c9, pushed to `origin/iter2`).
-Solver/checker/data/frontend are complete; the evaluation harness has not been started.
+**Where we are:** iter3 + review fixes committed on branch `iter3-benchmark-oracle-ui` (0da4558,
+4272f7a; not pushed). Solver/checker/corpus/app complete; the LLM harness is not started.
+**249 tests pass.**
 
 ### Done
-- NUSMods AY2026/27 snapshot via `scripts/ingest_nusmods.py` → `data/snapshot_2026-2027/` (units, real
-  offerings, prereq trees, preclusions; caught faculty-page staleness, e.g. CS4232 discontinued).
-- Full degree data: `program_cs.yaml` (160u: ULR, ethics, ID/CD, CS foundation, maths, 32u B&D, UE),
-  `focus_areas.yaml` (11 areas), `ge_pillars.yaml` + `id_cd.yaml` (real verified pick-lists, D22),
-  `generic_modules.yaml`, `student_iter2.yaml`, `scenario_iter2.yaml`.
-- Solver + independent checker for the full degree: prereq trees, bridging waiver, preclusions, real
-  offerings, focus area, ≥12u L4000, 32u B&D bucket (D19), industrial experience off-cap (D18/D20),
-  C&E service-learning pair (D23), CP cap, ≥160u UE filler, 28u overload ceiling (D24), preferences.
-- **91 tests pass** (49 iter1 + 42 iter2, incl. seed-sweep solver↔checker parity). Default instance:
-  OPTIMAL at T=8/cap 20, exactly 160u; T=8 is the arithmetic floor, not a rule (D21).
-- Rule/universe verification vs NUSMods + cohort page + Bulletin: `docs/iter2_verification.md`.
-- Streamlit frontend `app/app.py` (NUSMods-styled): student + plan settings → SAT/UNSAT (+ infeasibility
-  explanation via `explain_infeasible_iter2`) → semester grid + requirement breakdown.
-- Agent/dev docs: `AGENTS.md`, `docs/developer_guide.md` (add-a-constraint recipe).
+- Constraints: C5 special-term `term_layout` (§I2.14), C1 per-sem cap vector (§I2.15), C2 CS-count cap
+  (§I2.16), C3 internship+FYP+UROP w/ CP-cap interaction (§I2.17), C4 pin/forbid/deadline (§I2.18).
+  CP4101 dissertation may replace the internship for `eligible_fyp` students (D29). Decisions D25–D30.
+- Oracle proof `tests/test_oracle.py`: A1 one-mutation-per-rule, A3 metamorphic M1–M5, A4 UNSAT mechanism.
+  A5 external validation vs CS cohort 2026/27 page PASSED (`iter2_verification.md` A5).
+- Corpus: 19 profiles in `data/profiles/benchmark_profiles.yaml` (`tests/test_profiles.py`: verdict,
+  checker-clean, A4 relax→SAT for every UNSAT one) + stress slice in `eval/generate.py` → 35 instances
+  (17 SAT / 18 UNSAT, 0 mismatches) in `eval/instances/`, measured difficulty + coverage tags.
+  `eval/baselines.py`: always-SAT 49%, canonical-4yr plan valid 3/17. SEP/exchange + NOC dropped (D33).
+- Realism: `src/plan_quality.py` soft 0–100 scorer (in eval meta, not the app); objective prefers fewer
+  and focus-aligned Computing modules (D31, D33).
+- App `app/app.py` reworked (`docs/ui_ux_plan.md`): profile picker seeds every control incl. module
+  requests; app-only advising defaults (D32).
+- Iter3 review fixes (2026-10-21): prompts built only from the formal instance — 16/35 leaked the
+  verdict (D36, `tests/test_eval_prompts.py`); C4 codes validated + waived-bridge parity (D35);
+  `used`/`no_empty_semesters` encoded exactly (old one was a no-op and capped heavy semesters);
+  explainer probes the real instance; difficulty probes keep `term_layout`; no `wall_time_s` in meta
+  (regeneration now byte-identical); exempted units count toward totals (D34). Corpus regenerated —
+  the committed instances were stale w.r.t. the committed solver.
 
-### Next
-- **Start the research deliverable:** NL problem instances with solver ground truth, the LLM-direct
-  pipeline, the LLM→spec→solver pipeline, and the evaluation (difficulty, ablations, failures).
-- Decide whether to close iter2 (`/checkpoint iteration-end`) before building the harness.
-- Possible iter3 realism: special terms, NOC/NUSC/UROP overlays, exact per-bucket unit partitioning,
-  real UE choices, soft workload objective (ablation).
-
-### Active simplifications (Iteration 2) — see program_cs.yaml `assumptions`
-- Canonical CS modules only; Special Terms (3,4) not modelled; by-arrangement modules default to both semesters.
+### Active simplifications — see program_cs.yaml `assumptions`
+- Canonical CS modules only; by-arrangement modules default to both semesters.
 - No per-bucket unit partition: UE is a residual filler to 160u; Computing units beyond 32u B&D count as UE.
 - Only Unrestricted Electives remain generic placeholders (`*_GENERIC*`).
 - Industrial experience is excluded from the per-semester cap (approximates vacation/special-term internship).
 - Math/English bridging handled by placement waiver for the default student, not scheduled.
+- A5 benign: Critique = ES2660 only, Data Literacy = GEA1000 only, industry experience as fixed bundles.
+
+### Next
+1. Freeze/tag the oracle.
+2. Hand-author the NL prompts (B7: variety/implicitness) over the auto-drafts.
+3. Build the harness per `docs/evaluation_plan.md`: LLM-direct + LLM→solver graded by `check_plan_iter2`
+   + `plan_quality`, Opus/Sonnet/Haiku + obfuscation ablation (needs API budget/keys).
 
 ### Open issues
-- `docs/solver_constraints.md` iter1 §7 wording (says cap lives in `program_cs_iter1.yaml`, not scenario) still unfixed.
-- `model.py --iter2` reports 464 external-prereq warnings (prereqs outside the modelled universe); benign but noisy.
+- A solver timeout (`UNKNOWN`) is read as infeasible (`SolveResult.feasible`); every current instance
+  resolves, but `eval/generate.py` should refuse `UNKNOWN` before harder instances are added.
+- App default deadlines (CS1101S→sem 1, GEA1000→sem 2, D32) make a blocked or Special-Term sem 1/2
+  infeasible in the app only.
+- App workload editor holds one light and one heavy cap value; profiles with differing caps collapse.
+- `docs/solver_constraints.md` iter1 §7 wording (cap lives in scenario, not `program_cs_iter1.yaml`).
+- `model.py --iter2` prints 464 benign external-prereq warnings.

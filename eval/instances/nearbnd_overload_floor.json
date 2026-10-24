@@ -1,0 +1,121 @@
+{
+  "name": "nearbnd_overload_floor",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 7 semesters; take at most 26 MC per semester; specialise in computer security. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 7,
+      "max_units_per_semester": 26,
+      "focus_area": "computer_security",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "ES2660",
+        "GEN2001",
+        "IS1108",
+        "MA1521"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "UE_GENERIC_1",
+        "UE_GENERIC_10",
+        "UE_GENERIC_5"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "MA1522",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS4230",
+        "GEC1030",
+        "GESS1025",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "5": [
+        "CS2107",
+        "GEA1000",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "DTK1234",
+        "GEN2000",
+        "SC1101E",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS2102",
+        "CS4234",
+        "CS4236",
+        "ETP3201L",
+        "GEC1015",
+        "GESS1001",
+        "IE2141"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Near-boundary: 7-semester overload",
+    "description": "Early graduation in 7 semesters, overloading to 26 MC \u2014 just feasible.",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ],
+    "difficulty": {
+      "num_variables": 812,
+      "num_constraints": 2717,
+      "min_feasible_semesters": 7,
+      "semester_slack": 0,
+      "min_feasible_cap": 24,
+      "cap_slack": 2,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 93.3,
+      "flags": [
+        "Semester 1: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

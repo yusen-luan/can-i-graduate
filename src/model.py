@@ -106,6 +106,72 @@ def term_of(semester: int) -> int:
     """Plan semesters 1,3,5,... are NUS Semester 1; 2,4,6,... are Semester 2."""
     return 1 if semester % 2 == 1 else 2
 
+def effective_term(semester: int, scenario: dict) -> int:
+    """NUS term of a plan slot. iter3 C5: an explicit `term_layout` in the scenario
+    (entries in {1,2,3,4}, 3/4 = Special Terms) overrides the default parity mapping
+    (I2.14). Absent layout => iter2 behaviour, so existing instances are unchanged."""
+    layout = (scenario or {}).get("term_layout")
+    if layout:
+        return layout[semester - 1]
+    return term_of(semester)
+
+def per_semester_cap(scenario: dict, semester: int, global_cap: int) -> int:
+    """Effective unit cap of a plan slot. iter3 C1: `preferences.per_semester_cap`
+    overrides the global cap for specific slots; 0 = slot fully unavailable, e.g. a
+    leave of absence (I2.15)."""
+    prefs = (scenario or {}).get("preferences", {}) or {}
+    pcap = {int(k): v for k, v in (prefs.get("per_semester_cap", {}) or {}).items()}
+    return pcap.get(semester, global_cap)
+
+def is_computing(code: str) -> bool:
+    """A Computing-coded module (CS/IFS/CP), used by the CS-count cap (I2.16)."""
+    return code.startswith(("CS", "IFS", "CP"))
+
+def with_horizon(scenario: dict, T: int) -> dict:
+    """Copy of `scenario` with horizon T, keeping an explicit `term_layout` the
+    right length: truncated when shrinking, extended with the default parity
+    mapping when growing. Shared by the infeasibility explainer and the
+    benchmark difficulty probes so both relax the SAME instance."""
+    sc = {**scenario, "target_semesters": T}
+    layout = scenario.get("term_layout")
+    if layout:
+        sc["term_layout"] = (list(layout[:T])
+                             + [term_of(s) for s in range(len(layout) + 1, T + 1)])
+    return sc
+
+def validate_scenario_iter2(program: dict, scenario: dict, modules: dict = None) -> None:
+    """Hard-validate iter3 scenario knobs (raise ValueError on bad input). With
+    `modules`, also reject pinned / forbidden / deadline codes outside the module
+    universe, so a typo can never silently drop a constraint (I2.18)."""
+    T = scenario["target_semesters"]
+    ceiling = program.get("max_overload_units")
+    layout = scenario.get("term_layout")
+    if layout is not None:
+        if len(layout) != T:
+            raise ValueError(f"term_layout length {len(layout)} != target_semesters {T}")
+        if any(t not in (1, 2, 3, 4) for t in layout):
+            raise ValueError(f"term_layout entries must be in 1..4: {layout}")
+    prefs = scenario.get("preferences", {}) or {}
+    for s, u in (prefs.get("per_semester_cap", {}) or {}).items():
+        if u < 0 or (ceiling and u > ceiling):
+            raise ValueError(f"per_semester_cap[{s}]={u} out of range [0, {ceiling}]")
+    # iter3 C4: module pin / forbid / deadline (I2.18)
+    require = set(prefs.get("require_modules", []) or [])
+    forbid = set(prefs.get("forbid_modules", []) or [])
+    clash = require & forbid
+    if clash:
+        raise ValueError(f"modules both required and forbidden: {sorted(clash)}")
+    deadline = prefs.get("deadline", {}) or {}
+    if modules is not None:
+        unknown = sorted((require | forbid | set(deadline)) - set(modules))
+        if unknown:
+            raise ValueError(f"unknown module code(s) in require/forbid/deadline: {unknown}")
+    for code, s in deadline.items():
+        if not isinstance(s, int) or s < 1:
+            raise ValueError(f"deadline[{code}]={s} must be a semester >= 1")
+        if code in forbid:
+            raise ValueError(f"deadline[{code}] set but the module is forbidden")
+
 def condition_holds(condition: dict, student: dict) -> bool:
     value = student.get("conditions", {}).get(condition["field"])
     if "equals" in condition:

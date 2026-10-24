@@ -1,0 +1,58 @@
+{
+  "name": "infeasible_3yr",
+  "declared_expect": "infeasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 6 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 6,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": false,
+    "status": "INFEASIBLE",
+    "reason": "infeasible: needs 8 semesters; or a cap of 28 MC"
+  },
+  "meta": {
+    "label": "Infeasible: 3-year graduation",
+    "description": "Fresh student asking to finish in 6 semesters at 20 units/sem \u2014 below the arithmetic floor (160/20=8).",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-unsat"
+    ],
+    "difficulty": {
+      "num_variables": 696,
+      "num_constraints": 2352,
+      "extra_semesters_to_feasible": 2,
+      "extra_cap_to_feasible": 8,
+      "near_unsat_margin": 0
+    },
+    "quality": null
+  }
+}

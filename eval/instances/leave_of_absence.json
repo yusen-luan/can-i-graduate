@@ -1,0 +1,127 @@
+{
+  "name": "leave_of_absence",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in artificial intelligence; take semester 5 off entirely. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {
+          "5": 0
+        },
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1231S",
+        "GEA1000",
+        "GEC1030",
+        "MA1521",
+        "UE_GENERIC_6"
+      ],
+      "2": [
+        "CS1101S",
+        "ES2660",
+        "GEC1015",
+        "IS1108",
+        "ST2334"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2003",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "DTK1234"
+      ],
+      "6": [
+        "GEN2004",
+        "UE_GENERIC_3",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "CS4243",
+        "CS4263",
+        "GESS1025",
+        "UE_GENERIC_1"
+      ],
+      "8": [
+        "CS3244",
+        "CS4248",
+        "GEN2000",
+        "UE_GENERIC_4",
+        "UE_GENERIC_9"
+      ],
+      "9": [
+        "CS3230",
+        "CS3264",
+        "ETP3201L",
+        "GEC1020",
+        "HSI1000",
+        "SC1101E"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Leave of absence (blocked semester)",
+    "description": "Takes one semester off (no modules), stretching the plan to 9 semesters.",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_constraints": 3559,
+      "min_feasible_semesters": 9,
+      "semester_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 94.1,
+      "flags": [
+        "1 empty semester(s) between enrolled semesters",
+        "Semester 2: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"ES1000\", \"MA1301\", \"CS1101S\", \"GEA1000\", \"IS1108\", \"GESS1001\"]}, {\"semester\": 2, \"modules\": [\"ES1103\", \"CS1231S\", \"CS2100\", \"MA1521\", \"MA1522\"]}, {\"semester\": 3, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2106\", \"ST2334\", \"ES2660\"]}, {\"semester\": 4, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2109S\", \"CS3230\", \"GEC1015\"]}, {\"semester\": 5, \"modules\": [\"CS3231\", \"CS4234\", \"GEN2000\", \"DTK1234\", \"HSI1000\"]}, {\"semester\": 6, \"modules\": [\"CS4231\", \"CS4430\", \"CS3236\", \"IS1128\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"Feasible within 8 semesters: ES1000 precedes ES1103, MA1301 is taken as the math bridge, algorithms_theory is covered by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430 (12 MC at level 4000 and 32 MC B&D including CP3880), and the 160 MC total is reached with CP3880 as the single internship option and 8 generic electives, keeping each semester at or below 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 58.41,
+  "cost_usd": 0.007755,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 15205,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:54:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1000",
+        "MA1301",
+        "CS1101S",
+        "GEA1000",
+        "IS1108",
+        "GESS1001"
+      ],
+      "2": [
+        "ES1103",
+        "CS1231S",
+        "CS2100",
+        "MA1521",
+        "MA1522"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2106",
+        "ST2334",
+        "ES2660"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "GEC1015"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GEN2000",
+        "DTK1234",
+        "HSI1000"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "CS3236",
+        "IS1128",
+        "CP3880"
+      ],
+      "7": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible within 8 semesters: ES1000 precedes ES1103, MA1301 is taken as the math bridge, algorithms_theory is covered by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430 (12 MC at level 4000 and 32 MC B&D including CP3880), and the 160 MC total is reached with CP3880 as the single internship option and 8 generic electives, keeping each semester at or below 20 MC."
+  },
+  "parse_error": null
+}

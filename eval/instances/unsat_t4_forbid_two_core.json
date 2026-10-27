@@ -45,6 +45,7 @@
   "meta": {
     "label": "UNSAT T4: forbidding two core modules",
     "description": "Wants to avoid both CS2100 and CS2103T \u2014 both are required, so no plan exists.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

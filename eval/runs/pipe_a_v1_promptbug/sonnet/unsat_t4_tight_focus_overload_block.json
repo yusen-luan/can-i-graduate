@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Semester 4 is off, so only 6 semesters can hold coursework, at 26 MC each. Almost every module is 4 MC and only CS3216 and CS3217 are 5 MC, so at most 4 four-MC modules plus two five-MC modules fit under the cap, giving at most 146 load MC. Industrial-experience modules add at most 12 MC outside the load, so the maximum total is 158 MC, below the 160 MC requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.95,
+  "cost_usd": 0.045742,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 4276,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:00:15+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Semester 4 is off, so only 6 semesters can hold coursework, at 26 MC each. Almost every module is 4 MC and only CS3216 and CS3217 are 5 MC, so at most 4 four-MC modules plus two five-MC modules fit under the cap, giving at most 146 load MC. Industrial-experience modules add at most 12 MC outside the load, so the maximum total is 158 MC, below the 160 MC requirement."
+  },
+  "parse_error": null
+}

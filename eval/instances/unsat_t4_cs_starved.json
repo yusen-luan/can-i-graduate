@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T4: CS-count cap too tight",
     "description": "Limits CS/IFS/CP modules to 1 per semester over 8 semesters \u2014 far too few slots for the CS core.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

@@ -98,6 +98,7 @@
   "meta": {
     "label": "Near-boundary: minimum horizon",
     "description": "Fresh student at the exact 8-semester floor, 20 MC cap \u2014 zero slack, every placement forced.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

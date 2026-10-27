@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 and CS2103T are both required modules for graduation, so the request to avoid them cannot be satisfied alongside the degree requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 1.91,
+  "cost_usd": 0.004268,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 127,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:32+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 and CS2103T are both required modules for graduation, so the request to avoid them cannot be satisfied alongside the degree requirements."
+  },
+  "parse_error": null
+}

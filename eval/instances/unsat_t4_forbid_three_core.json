@@ -46,6 +46,7 @@
   "meta": {
     "label": "UNSAT T4: forbidding three core modules",
     "description": "Wants to skip CS2100, CS2103T and CS2040S \u2014 all required, so the degree is unsatisfiable.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

@@ -1,0 +1,81 @@
+{
+  "instance": "on_track_fresh",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"ES2660\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3263\",\"CS2102\",\"CS3243\",\"CS3244\"]},{\"semester\":5,\"modules\":[\"CS4263\",\"CS4244\",\"CS4248\",\"GESS1001\",\"GEC1015\"]},{\"semester\":6,\"modules\":[\"GEN2003\",\"DTK1234\",\"IS1128\",\"SC1101E\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"CP3880\"]}],\"reason\":\"A plan exists: 37 four-MC modules (148 MC) plus the single industrial option CP3880 (12 MC) give exactly 160 MC, with no semester above 20 MC. The AI focus is met by CS2109S, CS3263 and CS4263, with 12 MC at level 4000+ and 40 MC of B&D.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 50.72,
+  "cost_usd": 0.006685,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 13071,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:54:03+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "ES2660"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS3230",
+        "CS3263",
+        "CS2102",
+        "CS3243",
+        "CS3244"
+      ],
+      "5": [
+        "CS4263",
+        "CS4244",
+        "CS4248",
+        "GESS1001",
+        "GEC1015"
+      ],
+      "6": [
+        "GEN2003",
+        "DTK1234",
+        "IS1128",
+        "SC1101E",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "CP3880"
+      ]
+    },
+    "reason": "A plan exists: 37 four-MC modules (148 MC) plus the single industrial option CP3880 (12 MC) give exactly 160 MC, with no semester above 20 MC. The AI focus is met by CS2109S, CS3263 and CS4263, with 12 MC at level 4000+ and 40 MC of B&D."
+  },
+  "parse_error": null
+}

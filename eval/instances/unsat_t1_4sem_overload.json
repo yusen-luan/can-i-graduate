@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T1: 4 semesters even maxed out",
     "description": "Four semesters at the 28 MC overload ceiling is still only 112 MC \u2014 cannot reach 160.",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

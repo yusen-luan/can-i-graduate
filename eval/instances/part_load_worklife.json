@@ -101,6 +101,7 @@
   "meta": {
     "label": "Part-load (work/health)",
     "description": "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

@@ -1,0 +1,82 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ST2334\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"ES2660\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3243\", \"CS3244\", \"GEC1015\", \"GESS1020\"]}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4246\", \"GEN2000\", \"DTK1234\", \"IS1128\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"CS4243\", \"HSI1000\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"Yes, it can be done: this plan reaches exactly 160 MC with semester 5 left empty and no semester above 20 MC, because the 12 MC CP3880 internship in semester 6 does not count toward that semester's load. It meets the artificial intelligence focus area through CS2109S, CS3243 and CS4248, and gets 12 MC at level 4000 from CS4243, CS4246 and CS4248, with 32 MC of Breadth & Depth.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 24.64,
+  "cost_usd": 0.040446,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 1862,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:33+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ES2660"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [],
+      "6": [
+        "CS4248",
+        "CS4246",
+        "GEN2000",
+        "DTK1234",
+        "IS1128",
+        "CP3880"
+      ],
+      "7": [
+        "CS4243",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Yes, it can be done: this plan reaches exactly 160 MC with semester 5 left empty and no semester above 20 MC, because the 12 MC CP3880 internship in semester 6 does not count toward that semester's load. It meets the artificial intelligence focus area through CS2109S, CS3243 and CS4248, and gets 12 MC at level 4000 from CS4243, CS4246 and CS4248, with 32 MC of Breadth & Depth."
+  },
+  "parse_error": null
+}

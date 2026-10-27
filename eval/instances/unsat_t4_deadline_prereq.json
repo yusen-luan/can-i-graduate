@@ -44,6 +44,7 @@
   "meta": {
     "label": "UNSAT T4: deadline beneath prereq depth",
     "description": "Wants CS3230 done by semester 2, but its chain (CS1101S -> CS2040S -> CS3230) needs 3 ordered semesters \u2014 structurally impossible.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_offering_lock",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 is offered only in Sem 2, and the student requires it to be finished by semester 1, which is an NUS Sem 1 slot where it cannot be placed. Its prerequisites (CS2040S and a math module such as MA1522) also cannot be completed before semester 1, so the request is impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.17,
+  "cost_usd": 0.000422,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:55:49+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2108 is offered only in Sem 2, and the student requires it to be finished by semester 1, which is an NUS Sem 1 slot where it cannot be placed. Its prerequisites (CS2040S and a math module such as MA1522) also cannot be completed before semester 1, so the request is impossible."
+  },
+  "parse_error": null
+}

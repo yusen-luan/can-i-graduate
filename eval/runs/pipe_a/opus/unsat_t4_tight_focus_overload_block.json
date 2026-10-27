@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With semester 4 off you have only 6 enrolled semesters. Every module counted toward the unit cap is 4 or 8 MC except CS3216 and CS3217 (5 MC each), so those semesters hold at most 6\u00d724+2 = 146 MC, and the internship adds at most 12 MC that sit outside the cap, giving at most 158 MC, short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 18.78,
+  "cost_usd": 0.039108,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 1797,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:16:06+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With semester 4 off you have only 6 enrolled semesters. Every module counted toward the unit cap is 4 or 8 MC except CS3216 and CS3217 (5 MC each), so those semesters hold at most 6\u00d724+2 = 146 MC, and the internship adds at most 12 MC that sit outside the cap, giving at most 158 MC, short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

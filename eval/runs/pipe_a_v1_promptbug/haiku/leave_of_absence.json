@@ -1,0 +1,83 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"CS2100\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3263\",\"CS3230\",\"GESS1025\",\"DTK1234\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4248\",\"HSI1000\",\"GEN2000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4263\",\"IS1128\",\"CS3245\"]},{\"semester\":8,\"modules\":[\"CS3243\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS3244\",\"UE\",\"UE\",\"UE\",\"UE\",\"ETP3201L\"]}],\"reason\":\"Feasible: the 8 usable semesters (5 off) at the 20 MC cap give 152 MC of unit load, plus the 12 MC ETP3201L internship (outside the cap) for 164 MC, with AI focus (CS2109S, CS3263, CS3243, CS3244, CS4244, CS4248, CS4263), 12 MC at level 4000+, 36 MC of B&D, and 9 generic electives (within the limit of 10).\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 66.9,
+  "cost_usd": 0.008612,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 16923,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:53:12+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS2100",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2106",
+        "CS3263",
+        "CS3230",
+        "GESS1025",
+        "DTK1234"
+      ],
+      "5": [],
+      "6": [
+        "CS4244",
+        "CS4248",
+        "HSI1000",
+        "GEN2000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CS4263",
+        "IS1128",
+        "CS3245"
+      ],
+      "8": [
+        "CS3243",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "9": [
+        "CS3244",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "ETP3201L"
+      ]
+    },
+    "reason": "Feasible: the 8 usable semesters (5 off) at the 20 MC cap give 152 MC of unit load, plus the 12 MC ETP3201L internship (outside the cap) for 164 MC, with AI focus (CS2109S, CS3263, CS3243, CS3244, CS4244, CS4248, CS4263), 12 MC at level 4000+, 36 MC of B&D, and 9 generic electives (within the limit of 10)."
+  },
+  "parse_error": null
+}

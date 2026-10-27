@@ -93,6 +93,7 @@
   "meta": {
     "label": "Early graduation (overload)",
     "description": "Wants to finish in 7 semesters by overloading to 26 units/sem; Security focus.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

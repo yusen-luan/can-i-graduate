@@ -104,6 +104,7 @@
   "meta": {
     "label": "Deep focus with a pinned module",
     "description": "Algorithms & Theory focus, insists on taking CS3230 and finishing CS2040S by semester 3.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

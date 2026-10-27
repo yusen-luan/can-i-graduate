@@ -1,0 +1,69 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 2, \"modules\": [\"CS3243\", \"CS3244\", \"IS1108\", \"GEC1015\", \"GESS1020\"]}, {\"semester\": 3, \"modules\": [\"CS4248\", \"CS4243\", \"CS3263\", \"GEN2000\", \"DTK1234\"]}, {\"semester\": 4, \"modules\": [\"CS4244\", \"CS4246\", \"CS3264\", \"HSI1000\", \"IS1128\"]}, {\"semester\": 5, \"modules\": [\"CP3880\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": []}, {\"semester\": 8, \"modules\": []}], \"reason\": \"Yes, it can be done, with every semester at or under 20 MC. The plan covers the remaining required modules, the general education and interdisciplinary requirements, and the CP3880 internship; it fulfils the AI focus area through CS2109S, CS3243, CS4248 and other AI modules, and reaches exactly 160 MC with 32 MC of breadth and depth and 20 MC at level 4000.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 12.01,
+  "cost_usd": 0.02952,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 1310,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:14:56+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "2": [
+        "CS3243",
+        "CS3244",
+        "IS1108",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "3": [
+        "CS4248",
+        "CS4243",
+        "CS3263",
+        "GEN2000",
+        "DTK1234"
+      ],
+      "4": [
+        "CS4244",
+        "CS4246",
+        "CS3264",
+        "HSI1000",
+        "IS1128"
+      ],
+      "5": [
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [],
+      "8": []
+    },
+    "reason": "Yes, it can be done, with every semester at or under 20 MC. The plan covers the remaining required modules, the general education and interdisciplinary requirements, and the CP3880 internship; it fulfils the AI focus area through CS2109S, CS3243, CS4248 and other AI modules, and reaches exactly 160 MC with 32 MC of breadth and depth and 20 MC at level 4000."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,78 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2107\",\"ST2334\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2105\",\"CS2109S\",\"CS2104\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3235\",\"CS3219\",\"CS2102\",\"ES2660\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4238\",\"CS4239\",\"IS1128\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CP4106\",\"DTK1234\",\"GEC1015\"]},{\"semester\":7,\"modules\":[\"GEN2003\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Assuming H2 Mathematics and direct English placement, this plan fits in 7 semesters with at most 24 MC per semester, covers all required modules and university requirements, and uses computer security (CS2107, CS3235, CS4236, CS4238, CS4239) as the focus area with 20 MC at level 4000. It also includes the CP3880 internship as the single industrial experience, CP4106 for the UROP requirement, and totals 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 59.49,
+  "cost_usd": 0.007545,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 14792,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:08:19+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "ST2334",
+        "GESS1020"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2105",
+        "CS2109S",
+        "CS2104"
+      ],
+      "4": [
+        "CS3230",
+        "CS3235",
+        "CS3219",
+        "CS2102",
+        "ES2660",
+        "CP3880"
+      ],
+      "5": [
+        "CS4236",
+        "CS4238",
+        "CS4239",
+        "IS1128",
+        "HSI1000"
+      ],
+      "6": [
+        "CP4106",
+        "DTK1234",
+        "GEC1015"
+      ],
+      "7": [
+        "GEN2003",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ]
+    },
+    "reason": "Assuming H2 Mathematics and direct English placement, this plan fits in 7 semesters with at most 24 MC per semester, covers all required modules and university requirements, and uses computer security (CS2107, CS3235, CS4236, CS4238, CS4239) as the focus area with 20 MC at level 4000. It also includes the CP3880 internship as the single industrial experience, CP4106 for the UROP requirement, and totals 160 MC."
+  },
+  "parse_error": null
+}

@@ -101,6 +101,7 @@
   "meta": {
     "label": "Focus switch mid-degree",
     "description": "Took Computer-Security electives early, then switched to an AI focus; the security modules still count toward Breadth & Depth and the 160 MC total.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

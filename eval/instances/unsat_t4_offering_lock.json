@@ -46,6 +46,7 @@
   "meta": {
     "label": "UNSAT T4: offering-window lock",
     "description": "Insists on taking CS2108 (a Term-2-only module) by semester 1 (a Term-1 slot) \u2014 impossible.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

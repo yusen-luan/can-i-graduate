@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached. With a 20 MC cap over 7 semesters, at most 140 MC can be loaded. Exactly one industrial-experience option (at most 12 MC) is allowed and sits outside the unit load, so the maximum is 152 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.4,
+  "cost_usd": 0.00844,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 548,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:20+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached. With a 20 MC cap over 7 semesters, at most 140 MC can be loaded. Exactly one industrial-experience option (at most 12 MC) is allowed and sits outside the unit load, so the maximum is 152 MC."
+  },
+  "parse_error": null
+}

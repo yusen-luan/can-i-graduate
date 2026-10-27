@@ -44,6 +44,7 @@
   "meta": {
     "label": "Preclusion dead-end (CS1010 without credit transfer)",
     "description": "Holds CS1010 from a prior course (precludes CS1101S) but it was not exempted, so the required CS1101S cannot be taken \u2014 infeasible until the credit is formally recognised.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

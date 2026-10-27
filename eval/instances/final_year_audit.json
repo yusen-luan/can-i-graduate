@@ -95,6 +95,7 @@
   "meta": {
     "label": "Final-year audit (almost done)",
     "description": "Has cleared the first three years; checking the last two semesters complete the degree.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

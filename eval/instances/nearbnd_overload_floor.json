@@ -96,6 +96,7 @@
   "meta": {
     "label": "Near-boundary: 7-semester overload",
     "description": "Early graduation in 7 semesters, overloading to 26 MC \u2014 just feasible.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

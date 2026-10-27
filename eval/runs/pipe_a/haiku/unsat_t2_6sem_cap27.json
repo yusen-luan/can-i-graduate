@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation minimum cannot be reached in 6 semesters at 27 MC each: nearly all unit-load modules are 4 MC, and only two 5 MC modules (CS3216, CS3217) exist, so at most 146 non-industrial MC fit, and the single industrial option adds at most 12 MC, giving 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 90.76,
+  "cost_usd": 0.010436,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 20575,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:11:07+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC graduation minimum cannot be reached in 6 semesters at 27 MC each: nearly all unit-load modules are 4 MC, and only two 5 MC modules (CS3216, CS3217) exist, so at most 146 non-industrial MC fit, and the single industrial option adds at most 12 MC, giving 158 MC."
+  },
+  "parse_error": null
+}

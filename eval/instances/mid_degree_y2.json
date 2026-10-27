@@ -99,6 +99,7 @@
   "meta": {
     "label": "Mid-degree check-in (Year 2/3)",
     "description": "Done the CS foundation + a few GE pillars; wants to confirm the rest fits in 4 years.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

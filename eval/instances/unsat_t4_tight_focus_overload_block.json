@@ -44,6 +44,7 @@
   "meta": {
     "label": "UNSAT T4: blocked term under a tight overload horizon",
     "description": "Seven-semester overload (26 MC) but with one semester fully blocked \u2014 drops below 160.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

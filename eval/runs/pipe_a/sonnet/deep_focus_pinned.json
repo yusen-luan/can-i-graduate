@@ -1,0 +1,82 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS3230\",\"CS2106\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3236\",\"CS4231\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GEN2000\",\"DTK1234\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"HSI1000\",\"CP3880\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"All required modules, university requirements, 3 ID/CD modules, the algorithms theory focus (CS3230, CS3231, CS3236, CS4231, CS4234, CS4430, with 12 MC at level 4000), 32 MC of B&D (including CP3880) and 160 MC in total are met, with at most 20 MC per semester. CS2040S is taken in semester 2 and CS3230 in semester 3.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.21,
+  "cost_usd": 0.031378,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 2834,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:12:01+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS3230",
+        "CS2106",
+        "IS1108"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3236",
+        "CS4231",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GEN2000",
+        "DTK1234",
+        "IS1128"
+      ],
+      "6": [
+        "CS4430",
+        "HSI1000",
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "All required modules, university requirements, 3 ID/CD modules, the algorithms theory focus (CS3230, CS3231, CS3236, CS4231, CS4234, CS4430, with 12 MC at level 4000), 32 MC of B&D (including CP3880) and 160 MC in total are met, with at most 20 MC per semester. CS2040S is taken in semester 2 and CS3230 in semester 3."
+  },
+  "parse_error": null
+}

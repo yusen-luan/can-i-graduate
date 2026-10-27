@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_forbid_three_core",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100, CS2103T and CS2040S are all required modules for graduation, so the request to avoid them contradicts the graduation requirements and no valid plan exists.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.67,
+  "cost_usd": 0.00427,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 127,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:38+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100, CS2103T and CS2040S are all required modules for graduation, so the request to avoid them contradicts the graduation requirements and no valid plan exists."
+  },
+  "parse_error": null
+}

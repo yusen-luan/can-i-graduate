@@ -97,6 +97,7 @@
   "meta": {
     "label": "Transfer with advanced-placement credit",
     "description": "Arrives with CS1101S, CS1231S, MA1521, MA1522 completed and GEA1000 exempted.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

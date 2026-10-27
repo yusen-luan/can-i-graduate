@@ -107,6 +107,7 @@
   "meta": {
     "label": "Honours track \u2014 dissertation + special term",
     "description": "GPA-eligible: CP4101 dissertation replaces the internship; includes a Special Term and caps CS at 4 modules/sem.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

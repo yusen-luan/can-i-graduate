@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 25 MC cap allows at most 146 MC of counted load in 6 semesters, because only CS3216 and CS3217 (5 MC) can make a semester reach 25 and every other semester tops out at 24 MC. Industrial-experience modules add at most 12 MC beyond the cap, so the maximum total is 158 MC, below the required 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.11,
+  "cost_usd": 0.04625,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 4328,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:37+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 25 MC cap allows at most 146 MC of counted load in 6 semesters, because only CS3216 and CS3217 (5 MC) can make a semester reach 25 and every other semester tops out at 24 MC. Industrial-experience modules add at most 12 MC beyond the cap, so the maximum total is 158 MC, below the required 160 MC."
+  },
+  "parse_error": null
+}

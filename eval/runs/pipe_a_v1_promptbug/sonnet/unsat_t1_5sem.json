@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree needs at least 160 MC, but 5 semesters at a 20 MC cap give at most 100 MC. Industrial-experience modules do not count toward the load and add at most 12 MC, so the maximum is about 112 MC, which is below 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.58,
+  "cost_usd": 0.00608,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 312,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:09+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs at least 160 MC, but 5 semesters at a 20 MC cap give at most 100 MC. Industrial-experience modules do not count toward the load and add at most 12 MC, so the maximum is about 112 MC, which is below 160."
+  },
+  "parse_error": null
+}

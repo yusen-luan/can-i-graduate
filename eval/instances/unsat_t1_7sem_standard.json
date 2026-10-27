@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T1: 7 semesters at standard load",
     "description": "Seven semesters at 20 MC is 140 MC \u2014 a common 'can I finish in 3.5 years at normal load?' miss.",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

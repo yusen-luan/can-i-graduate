@@ -95,6 +95,7 @@
   "meta": {
     "label": "Polytechnic / no H2 Maths",
     "description": "Needs MA1301 math bridging and the ES1103 English path; bridging consumes a UE slot.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

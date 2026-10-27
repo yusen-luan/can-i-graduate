@@ -160,8 +160,8 @@ Run `check_plan_iter2` on every produced plan. Prompt-cache the static rule text
 
 ## 4. Models (decided)
 
-Compare the **Claude family for a size ablation**: `claude-opus-4-8`, `claude-sonnet-4-6`,
-`claude-haiku-4-5-20251001`. Same prompts across all three; report accuracy and cost per model so the
+Compare the **Claude family for a size ablation**: `claude-opus-5-5`, `claude-sonnet-5-5`,
+`claude-haiku-5-5` (one generation, effort `high`; decision D37). Same prompts across all three; report accuracy and cost per model so the
 scaling effect is visible. (Optional later: SoC-hosted open-weight model, Logic-LM refinement loop.)
 
 ## 5. Metrics (report separated)

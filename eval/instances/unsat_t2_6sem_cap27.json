@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T2: bin-packing residue",
     "description": "Six semesters at 27 MC gives 162 MC nominal capacity but is infeasible once 4-MC granularity and single-semester offerings are respected.",
+    "tier": "T2",
     "tags": [
       "C-base",
       "C-order",

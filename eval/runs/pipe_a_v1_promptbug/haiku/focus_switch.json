@@ -1,0 +1,81 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ES2660\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2106\", \"CS2109S\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"ST2334\", \"CS3243\", \"IS1108\"]}, {\"semester\": 5, \"modules\": [\"CS4263\", \"CS4248\", \"CS4244\", \"GESS1001\"]}, {\"semester\": 6, \"modules\": [\"GEA1000\", \"GEC1015\", \"GEN2000\", \"DTK1234\"]}, {\"semester\": 7, \"modules\": [\"IS1128\", \"SC1101E\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"ETP3201L\"]}], \"reason\": \"A 9-semester plan exists: AI focus uses CS2109S, CS3243, CS4263 (with CS4244 and CS4248 for 12 MC at level 4000+), ETP3201L is the single industrial option, and the total reaches 160 MC with no semester over 20 MC of unit load.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 47.39,
+  "cost_usd": 0.006058,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 11819,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:52:34+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "ST2334",
+        "CS3243",
+        "IS1108"
+      ],
+      "5": [
+        "CS4263",
+        "CS4248",
+        "CS4244",
+        "GESS1001"
+      ],
+      "6": [
+        "GEA1000",
+        "GEC1015",
+        "GEN2000",
+        "DTK1234"
+      ],
+      "7": [
+        "IS1128",
+        "SC1101E",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "8": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "ETP3201L"
+      ]
+    },
+    "reason": "A 9-semester plan exists: AI focus uses CS2109S, CS3243, CS4263 (with CS4244 and CS4248 for 12 MC at level 4000+), ETP3201L is the single industrial option, and the total reaches 160 MC with no semester over 20 MC of unit load."
+  },
+  "parse_error": null
+}

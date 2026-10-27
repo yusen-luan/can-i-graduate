@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T1: 5-semester floor",
     "description": "Fresh student asking for 5 semesters at 20 MC (100 MC < 160) \u2014 below the arithmetic floor.",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

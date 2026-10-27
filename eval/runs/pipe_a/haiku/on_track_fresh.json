@@ -1,0 +1,81 @@
+{
+  "instance": "on_track_fresh",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GESS1001\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3263\",\"CS3264\",\"CS3244\",\"ETP3201L\"]},{\"semester\":5,\"modules\":[\"CS4263\",\"CS4244\",\"CS4246\",\"CS3268\",\"CS4248\"]},{\"semester\":6,\"modules\":[\"CS4262\",\"IS1128\",\"DTK1234\",\"SC1101E\",\"GEN2000\"]},{\"semester\":7,\"modules\":[\"IS1108\",\"GEA1000\",\"ES2660\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A feasible plan exists: it totals 160 MC (148 regular plus the 12 MC ETP3201L internship), stays within 20 MC per semester, and meets all graduation, ID/CD, AI focus (five AI modules including level-4000 CS4263, CS4244, CS4246, CS4248, CS4262), B&D and level-4000 requirements in 8 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 54.79,
+  "cost_usd": 0.007374,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 14448,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:08:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GESS1001"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "GEC1015"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3263",
+        "CS3264",
+        "CS3244",
+        "ETP3201L"
+      ],
+      "5": [
+        "CS4263",
+        "CS4244",
+        "CS4246",
+        "CS3268",
+        "CS4248"
+      ],
+      "6": [
+        "CS4262",
+        "IS1128",
+        "DTK1234",
+        "SC1101E",
+        "GEN2000"
+      ],
+      "7": [
+        "IS1108",
+        "GEA1000",
+        "ES2660",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "8": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ]
+    },
+    "reason": "A feasible plan exists: it totals 160 MC (148 regular plus the 12 MC ETP3201L internship), stays within 20 MC per semester, and meets all graduation, ID/CD, AI focus (five AI modules including level-4000 CS4263, CS4244, CS4246, CS4248, CS4262), B&D and level-4000 requirements in 8 semesters."
+  },
+  "parse_error": null
+}

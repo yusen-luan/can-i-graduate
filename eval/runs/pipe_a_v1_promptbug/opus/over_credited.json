@@ -1,0 +1,72 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"ST2334\"]}, {\"semester\": 2, \"modules\": [\"CS3230\", \"CS3243\", \"ES2660\", \"GEA1000\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS4248\", \"CS4243\", \"CS3263\", \"CS3264\"]}, {\"semester\": 4, \"modules\": [\"CS4244\", \"GEC1015\", \"GESS1020\", \"GEN2003\", \"DTK1234\", \"CP3880\"]}, {\"semester\": 5, \"modules\": [\"HSI1000\", \"IS1128\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": []}, {\"semester\": 8, \"modules\": []}], \"reason\": \"Yes, it can be done. This plan reaches exactly 160 MC (28 MC exempted plus 132 MC scheduled) without exceeding 20 MC in any semester; CP3880 is the internship and does not count toward that semester's load. It covers every required module and university-level requirement, three ID modules, and an artificial intelligence focus (CS2109S, CS3243 and CS4248, plus others), with 12 MC at level 4000, 32 MC of breadth and depth (including CP3880), and 8 generic electives (UE).\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 13.64,
+  "cost_usd": 0.033318,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 1502,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:51+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "2": [
+        "CS3230",
+        "CS3243",
+        "ES2660",
+        "GEA1000",
+        "IS1108"
+      ],
+      "3": [
+        "CS3244",
+        "CS4248",
+        "CS4243",
+        "CS3263",
+        "CS3264"
+      ],
+      "4": [
+        "CS4244",
+        "GEC1015",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "CP3880"
+      ],
+      "5": [
+        "HSI1000",
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "7": [],
+      "8": []
+    },
+    "reason": "Yes, it can be done. This plan reaches exactly 160 MC (28 MC exempted plus 132 MC scheduled) without exceeding 20 MC in any semester; CP3880 is the internship and does not count toward that semester's load. It covers every required module and university-level requirement, three ID modules, and an artificial intelligence focus (CS2109S, CS3243 and CS4248, plus others), with 12 MC at level 4000, 32 MC of breadth and depth (including CP3880), and 8 generic electives (UE)."
+  },
+  "parse_error": null
+}

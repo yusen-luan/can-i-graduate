@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_ineligible_fyp",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CP4101 (final-year project) may only be taken by a student whose GPA qualifies for it, and you have said your GPA does not, so this request cannot be satisfied.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.03,
+  "cost_usd": 0.000237,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 170,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:10:08+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CP4101 (final-year project) may only be taken by a student whose GPA qualifies for it, and you have said your GPA does not, so this request cannot be satisfied."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,45 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3230\",\"GEA1000\",\"IS1108\",\"DTK1234\",\"CS4248\"]},{\"semester\":2,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"You have 120 MC; adding CS3230, GEA1000, IS1108, DTK1234 (your third ID/CD module, an ID), CS4248 (third AI primary, and it lifts level-4000 to 12 MC), CP3880 for industrial experience and two electives reaches exactly 160 MC. Both semesters stay within 20 MC (CP3880 does not count toward the load) and every prerequisite is already met, leaving semesters 3\u20138 free.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 11.51,
+  "cost_usd": 0.025082,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 1067,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "GEA1000",
+        "IS1108",
+        "DTK1234",
+        "CS4248"
+      ],
+      "2": [
+        "CP3880",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "You have 120 MC; adding CS3230, GEA1000, IS1108, DTK1234 (your third ID/CD module, an ID), CS4248 (third AI primary, and it lifts level-4000 to 12 MC), CP3880 for industrial experience and two electives reaches exactly 160 MC. Both semesters stay within 20 MC (CP3880 does not count toward the load) and every prerequisite is already met, leaving semesters 3\u20138 free."
+  },
+  "parse_error": null
+}

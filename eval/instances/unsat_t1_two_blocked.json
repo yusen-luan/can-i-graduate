@@ -45,6 +45,7 @@
   "meta": {
     "label": "UNSAT T1: two blocked semesters",
     "description": "An 8-semester plan with two fully-blocked semesters leaves only 6 usable (120 MC) \u2014 infeasible.",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

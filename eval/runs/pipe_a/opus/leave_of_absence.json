@@ -1,0 +1,82 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS4243\",\"ES2660\",\"GEC1015\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4248\",\"CS4244\",\"GESS1020\",\"GEN2003\",\"DTK1234\",\"CP3880\"]},{\"semester\":7,\"modules\":[\"HSI1000\",\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The plan reaches 160 MC within 9 semesters with semester 5 empty and no semester above 20 MC; CP3880 does not count toward the semester load. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4244, CS4248), 12 MC at level 4000, 32 MC of B&D, all required modules, the ULRs, and three ID modules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 14.72,
+  "cost_usd": 0.036396,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 1659,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:14:58+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "CS4243",
+        "ES2660",
+        "GEC1015"
+      ],
+      "5": [],
+      "6": [
+        "CS4248",
+        "CS4244",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "CP3880"
+      ],
+      "7": [
+        "HSI1000",
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The plan reaches 160 MC within 9 semesters with semester 5 empty and no semester above 20 MC; CP3880 does not count toward the semester load. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4244, CS4248), 12 MC at level 4000, 32 MC of B&D, all required modules, the ULRs, and three ID modules."
+  },
+  "parse_error": null
+}

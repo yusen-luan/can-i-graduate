@@ -101,6 +101,7 @@
   "meta": {
     "label": "Behind / retaking a core module",
     "description": "Failed CS2040S and is a semester behind; needs a 9-semester plan to recover.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

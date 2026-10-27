@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Five semesters at a 20 MC cap give at most 100 MC of regular modules. Industrial experience is exempt from the cap, but only one option may be taken (at most 12 MC), so the most you can reach is 112 MC, short of the required 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.87,
+  "cost_usd": 0.008584,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 273,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:31+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Five semesters at a 20 MC cap give at most 100 MC of regular modules. Industrial experience is exempt from the cap, but only one option may be taken (at most 12 MC), so the most you can reach is 112 MC, short of the required 160 MC."
+  },
+  "parse_error": null
+}

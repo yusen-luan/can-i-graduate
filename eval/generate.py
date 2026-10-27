@@ -14,6 +14,7 @@ instance, never the reverse, so it is exact.
 import argparse
 import copy
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -271,6 +272,20 @@ def nl_draft(student, scenario):
     return " ".join(lines)
 
 
+# UNSAT tier (benchmark_design.md B4) for the Table-3 T1 vs T2-4 split. Curated,
+# not derived: no single arithmetic rule reproduces it (off-cap internship units
+# blur the capacity floor). Stress instances carry it in their label; the
+# profile-diagonal UNSAT traps are listed here (a new unlabelled one must be added).
+PROFILE_TIERS = {"infeasible_3yr": "T1", "fyp_urop_trap": "T4", "preclusion_deadend": "T4"}
+
+
+def unsat_tier(name, label, feasible):
+    if feasible:
+        return "SAT"
+    m = re.match(r"UNSAT (T\d)", label)
+    return m.group(1) if m else PROFILE_TIERS[name]
+
+
 # ---------------------------------------------------------------- build
 def build_instance(name, p):
     student, scenario = p["student"], p["scenario"]
@@ -300,6 +315,7 @@ def build_instance(name, p):
         "ground_truth": gt,
         # the curated description may state the verdict: kept in meta, never in nl_prompt
         "meta": {"label": p["label"], "description": p["description"],
+                 "tier": unsat_tier(name, p["label"], r.feasible),
                  "tags": coverage_tags(student, scenario, r.feasible),
                  "difficulty": diff, "quality": quality},
     }

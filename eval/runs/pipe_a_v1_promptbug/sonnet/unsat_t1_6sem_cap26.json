@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_6sem_cap26",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"With a 26 MC cap, almost every module is 4 MC, so a semester holds at most 24 MC. Only two 5 MC modules (CS3216, CS3217) are available to push a semester higher, and the 8 MC modules (CS3203, CP3209, CP4106) add 0 mod 4. So the most that can be loaded over 6 semesters is 146 MC (for example one 26 MC semester and five 24 MC semesters). The internship adds at most 12 MC because it is exempt from the unit load, giving at most 158 MC, which is below the required 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 44.92,
+  "cost_usd": 0.0572,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 5424,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:58+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With a 26 MC cap, almost every module is 4 MC, so a semester holds at most 24 MC. Only two 5 MC modules (CS3216, CS3217) are available to push a semester higher, and the 8 MC modules (CS3203, CP3209, CP4106) add 0 mod 4. So the most that can be loaded over 6 semesters is 146 MC (for example one 26 MC semester and five 24 MC semesters). The internship adds at most 12 MC because it is exempt from the unit load, giving at most 158 MC, which is below the required 160 MC."
+  },
+  "parse_error": null
+}

@@ -99,6 +99,7 @@
   "meta": {
     "label": "Over-credited (many exemptions, unit shortfall)",
     "description": "Arrives with large advanced-placement exemptions (28 MC of credit), so the plan schedules only the remaining 132 MC to reach 160 MC.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

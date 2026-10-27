@@ -42,6 +42,7 @@
   "meta": {
     "label": "FYP + UROP (CP-cap trap)",
     "description": "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP \u2014 infeasible because CP4101 alone fills the 12 MC CP-coded cap.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

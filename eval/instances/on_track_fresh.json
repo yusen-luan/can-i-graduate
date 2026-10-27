@@ -95,6 +95,7 @@
   "meta": {
     "label": "On-track fresh Year 1",
     "description": "Standard intake: A-level H2 Maths, direct English, AI focus, 4-year plan.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

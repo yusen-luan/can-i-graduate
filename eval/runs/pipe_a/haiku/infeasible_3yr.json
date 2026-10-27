@@ -1,0 +1,26 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters capped at 20 MC each give at most 120 MC of counted units, and the single industrial-experience option adds at most 12 MC outside that cap, for a maximum of 132 MC, which is short of the required 160 MC total.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.96,
+  "cost_usd": 0.00066,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 1021,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:06:34+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Six semesters capped at 20 MC each give at most 120 MC of counted units, and the single industrial-experience option adds at most 12 MC outside that cap, for a maximum of 132 MC, which is short of the required 160 MC total."
+  },
+  "parse_error": null
+}

@@ -44,6 +44,7 @@
   "meta": {
     "label": "UNSAT T4: forbidding a required module",
     "description": "Refuses to take CS2100 (Computer Organisation), which is a required core module.",
+    "tier": "T4",
     "tags": [
       "C-base",
       "C-order",

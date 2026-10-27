@@ -39,6 +39,7 @@
   "meta": {
     "label": "Infeasible: 3-year graduation",
     "description": "Fresh student asking to finish in 6 semesters at 20 units/sem \u2014 below the arithmetic floor (160/20=8).",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

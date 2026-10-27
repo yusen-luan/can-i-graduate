@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap give at most 112 MC of unit-load modules, and the one industrial-experience option adds at most 12 MC that does not count toward load, for a maximum of 124 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 9.56,
+  "cost_usd": 0.001128,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 1961,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:54:49+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap give at most 112 MC of unit-load modules, and the one industrial-experience option adds at most 12 MC that does not count toward load, for a maximum of 124 MC."
+  },
+  "parse_error": null
+}

@@ -96,3 +96,12 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
 - **D36 (Iter 3, benchmark):** `nl_prompt` is generated ONLY from the formal student + request; the
   curated `description` lives in `meta` and never reaches the prompt. Why: 16/35 prompts leaked the
   verdict ("infeasible because…"). Guarded by `tests/test_eval_prompts.py`.
+- **D37 (Iter 3, Pipe A):** LLM sweep uses ONE generation, `claude-{haiku,sonnet,opus}-5-5`, all at adaptive
+  thinking + explicit effort `high` (per-model defaults differ), no refusal fallback (a fallback model would
+  answer for another). Why: a clean size ablation; supersedes the 4.5/4.6/4.8 mix in evaluation_plan.md §4.
+- **D38 (Iter 3, Pipe A):** the LLM writes each generic elective as `UE`; the harness binds it to a
+  UE_GENERIC id the student hasn't used. Why: placeholders are interchangeable and the NL prompt only says
+  "N electives completed" (final_year_audit holds _1 and _8), so ids are unknowable, not a reasoning error.
+- **D39 (Iter 3, scoring):** `eval/score.py` grades every Table-3 row: missing/unparseable answer = wrong,
+  Plan Valid over all 17 GT-SAT, Realism = mean over VALID plans only. `meta.tier` is curated (label/
+  PROFILE_TIERS), since no arithmetic floor rule reproduces the report's T1 vs T2–4 split.

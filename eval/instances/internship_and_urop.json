@@ -96,6 +96,7 @@
   "meta": {
     "label": "6-month internship + UROP research",
     "description": "A 6-month ATAP internship (CP3880) plus a UROP research project; Software Engineering focus.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

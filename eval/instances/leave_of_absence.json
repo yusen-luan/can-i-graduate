@@ -100,6 +100,7 @@
   "meta": {
     "label": "Leave of absence (blocked semester)",
     "description": "Takes one semester off (no modules), stretching the plan to 9 semesters.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Four semesters at a 28 MC cap allow at most 112 MC of regular load. Exactly one industrial-experience option is allowed and it adds at most 12 MC outside the load, so the maximum is about 124 MC, below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.83,
+  "cost_usd": 0.00643,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 347,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:06+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Four semesters at a 28 MC cap allow at most 112 MC of regular load. Exactly one industrial-experience option is allowed and it adds at most 12 MC outside the load, so the maximum is about 124 MC, below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

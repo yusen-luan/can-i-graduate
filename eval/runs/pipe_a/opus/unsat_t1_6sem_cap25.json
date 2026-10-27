@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC total cannot be reached under a 25 MC cap. Almost every module is a multiple of 4 MC, so most semesters top out at 24 MC; only the two 5 MC modules (CS3216, CS3217) allow 25 MC, giving at most 4\u00d724 + 2\u00d725 = 146 MC, and adding the largest uncounted industrial-experience option (12 MC) still reaches only 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.36,
+  "cost_usd": 0.020784,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 883,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:39+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached under a 25 MC cap. Almost every module is a multiple of 4 MC, so most semesters top out at 24 MC; only the two 5 MC modules (CS3216, CS3217) allow 25 MC, giving at most 4\u00d724 + 2\u00d725 = 146 MC, and adding the largest uncounted industrial-experience option (12 MC) still reaches only 158 MC."
+  },
+  "parse_error": null
+}

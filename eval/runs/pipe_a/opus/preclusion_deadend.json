@@ -1,0 +1,26 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS1101S is a required module (and the only digital-literacy option), but you have already completed CS1010, which is in the same intro_programming preclusion group, so CS1101S cannot be taken. This requirement can never be satisfied, so no plan exists.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.88,
+  "cost_usd": 0.00736,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 212,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:20+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS1101S is a required module (and the only digital-literacy option), but you have already completed CS1010, which is in the same intro_programming preclusion group, so CS1101S cannot be taken. This requirement can never be satisfied, so no plan exists."
+  },
+  "parse_error": null
+}

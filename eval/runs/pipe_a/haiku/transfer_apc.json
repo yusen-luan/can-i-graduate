@@ -1,0 +1,76 @@
+{
+  "instance": "transfer_apc",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"IS1108\", \"GEC1015\"]}, {\"semester\": 2, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2102\", \"ES2660\"]}, {\"semester\": 3, \"modules\": [\"CS2109S\", \"CS3230\", \"CS3223\", \"ST2334\", \"CS4225\"]}, {\"semester\": 4, \"modules\": [\"CS4221\", \"DTK1234\", \"HSI1000\", \"IS1128\", \"ETP3201L\"]}, {\"semester\": 5, \"modules\": [\"CS4224\", \"GESS1020\", \"GEN2003\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A feasible plan exists: it uses the database systems focus (CS2102, CS3223, CS4221, with CS4224 and CS4225 for 4000-level credit), the ETP3201L internship option for the 32 MC of B&D, and 10 generic electives to reach 160 MC, all within 20 MC per semester over 8 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 44.92,
+  "cost_usd": 0.005767,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 11231,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:09:08+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "GEC1015"
+      ],
+      "2": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2102",
+        "ES2660"
+      ],
+      "3": [
+        "CS2109S",
+        "CS3230",
+        "CS3223",
+        "ST2334",
+        "CS4225"
+      ],
+      "4": [
+        "CS4221",
+        "DTK1234",
+        "HSI1000",
+        "IS1128",
+        "ETP3201L"
+      ],
+      "5": [
+        "CS4224",
+        "GESS1020",
+        "GEN2003",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "A feasible plan exists: it uses the database systems focus (CS2102, CS3223, CS4221, with CS4224 and CS4225 for 4000-level credit), the ETP3201L internship option for the 32 MC of B&D, and 10 generic electives to reach 160 MC, all within 20 MC per semester over 8 semesters."
+  },
+  "parse_error": null
+}

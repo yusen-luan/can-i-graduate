@@ -42,6 +42,7 @@
   "meta": {
     "label": "UNSAT T1: 6 semesters at 26 MC",
     "description": "Six semesters at 26 MC is 156 MC \u2014 four short of the 160 MC degree.",
+    "tier": "T1",
     "tags": [
       "C-base",
       "C-order",

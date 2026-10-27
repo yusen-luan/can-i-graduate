@@ -42,7 +42,8 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 | `src/solver.py` | CP-SAT solver: iter1 `build_and_solve` / iter2 `build_and_solve_iter2`, `solve_iter2`, `explain_infeasible_iter2` → `SolveResult`. |
 | `src/checker.py` | Solver-independent validators: `check_plan` (iter1) / `check_plan_iter2`. Never imports the solver. |
 | `src/plan_quality.py` | Soft 0–100 realism scorer for a *valid* plan (solver or LLM); not a constraint. |
-| `eval/` | Benchmark: `generate.py` → `instances/*.json` {nl_prompt, formal, ground_truth, meta}; `baselines.py` trivial controls. |
+| `eval/` | Benchmark: `generate.py` → `instances/*.json` {nl_prompt, formal, ground_truth, meta}; `baselines.py` trivial controls; `run_pipe_a.py` LLM-direct runs → `runs/`; `score.py` grades all Table-3 rows → `results/`. |
+| `llm/` | Claude API layer: `client.py` (models, `.env` key, cost), `prompts.py` (Pipe A rules+catalog prompt, answer parsing). |
 | `app/app.py` | Streamlit frontend over `solve_iter2`: benchmark-profile picker + iter3 controls → SAT/UNSAT → plan grid. |
 | `data/profiles/benchmark_profiles.yaml` | Representative student archetypes (student+scenario bundles) for the app picker + eval corpus; `demo_iter3_*` = CLI example. |
 | `scripts/ingest_nusmods.py` | Rebuilds the NUSMods snapshot. `scripts/generate_prereq_graph.py` regenerates `docs/prerequisite_graph.*`. |
@@ -65,6 +66,8 @@ python src/checker.py plan.json          # validate a {"1": [...], ...} plan (it
 python -m pytest tests -q
 python eval/generate.py                  # regenerate the benchmark corpus (deterministic)
 python eval/baselines.py                 # score always-SAT / canonical-4yr controls
+python eval/run_pipe_a.py --model haiku|sonnet|opus|all [--dry-run] [--limit N]   # Pipe A (needs .env key)
+python eval/score.py                     # Table-3 metrics for controls + Pipe A runs + oracle
 streamlit run app/app.py                 # iter2 frontend
 ```
 

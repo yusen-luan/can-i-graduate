@@ -101,6 +101,7 @@
   "meta": {
     "label": "Two 3-month internships",
     "description": "Prefers two shorter internships (CP3200 + CP3202) over one 6-month stint; SE focus.",
+    "tier": "SAT",
     "tags": [
       "C-base",
       "C-order",

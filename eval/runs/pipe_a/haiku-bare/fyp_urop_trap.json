@@ -1,0 +1,85 @@
+{
+  "instance": "fyp_urop_trap",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010S\",\"CS1231S\",\"MA1521\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2102\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2105\",\"CS2106\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS2107\",\"CS3230\",\"CS3243\",\"CS3223\",\"CP3880\"]},{\"semester\":6,\"modules\":[\"CS3244\",\"CS3219\",\"CS3235\",\"CS3216\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4242\",\"CS4244\",\"CS4246\",\"CS4248\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4243\",\"CS4236\",\"CS4234\",\"CS4231\",\"UE\"]},{\"semester\":9,\"modules\":[\"CP4101\",\"UE\",\"UE\"]}],\"reason\":\"This 9-semester plan totals 160 MC with at most 20 MC per semester, includes the AI specialisation modules, UROP (CP3880) and the final-year project (CP4101), using 8 UE slots. Module codes, prerequisites and the exact degree requirements should be verified against the current NUS curriculum before enrolment.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.22,
+  "cost_usd": 0.003979,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 7913,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:33+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2102",
+        "ST2334"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2105",
+        "CS2106",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS2107",
+        "CS3230",
+        "CS3243",
+        "CS3223",
+        "CP3880"
+      ],
+      "6": [
+        "CS3244",
+        "CS3219",
+        "CS3235",
+        "CS3216",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS4242",
+        "CS4244",
+        "CS4246",
+        "CS4248",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "CS4243",
+        "CS4236",
+        "CS4234",
+        "CS4231",
+        "UE_GENERIC_6"
+      ],
+      "9": [
+        "CP4101",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "This 9-semester plan totals 160 MC with at most 20 MC per semester, includes the AI specialisation modules, UROP (CP3880) and the final-year project (CP4101), using 8 UE slots. Module codes, prerequisites and the exact degree requirements should be verified against the current NUS curriculum before enrolment."
+  },
+  "parse_error": null
+}

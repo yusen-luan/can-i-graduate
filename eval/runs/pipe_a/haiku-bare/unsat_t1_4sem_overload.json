@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The NUS Bachelor of Computing (Computer Science) requires 160 MC, but 4 semesters at a maximum of 28 MC each allow only 112 MC, so graduating within 4 semesters is impossible under the 28 MC/semester limit.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.02,
+  "cost_usd": 0.000251,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 466,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:16:56+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The NUS Bachelor of Computing (Computer Science) requires 160 MC, but 4 semesters at a maximum of 28 MC each allow only 112 MC, so graduating within 4 semesters is impossible under the 28 MC/semester limit."
+  },
+  "parse_error": null
+}

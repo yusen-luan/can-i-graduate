@@ -6,7 +6,12 @@ Grades each pipeline's per-instance predictions {feasible, plan} the SAME way:
     passes check_plan_iter2 (out of all SAT instances)
   - realism: mean plan_quality.score_plan over VALID plans only
   - time / cost: mean seconds per instance, total USD
-  - constraint-violation histogram (checker messages bucketed by rule)
+  - constraint-violation histogram (checker messages bucketed by rule); codes outside
+    the modelled universe are split into real-but-unmodelled AY2026/27 NUS modules
+    (NUSMods module_list.json) vs codes NUSMods does not list (hallucinated/retired)
+  - lenient plan validity (diagnostic, not a Table-3 column): real-but-unmodelled
+    modules re-graded as 4 MC generic electives, so a `bare`-condition plan is not
+    failed only for using a real module outside our 129-module universe
 
 Rows: the two non-reasoning controls, the CP-SAT oracle (timed here), and every
 run directory under eval/runs/pipe_a/ (eval/run_pipe_a.py). A missing or
@@ -35,12 +40,14 @@ INST = ROOT / "eval" / "instances"
 RUNS = ROOT / "eval" / "runs" / "pipe_a"
 OUT = ROOT / "eval" / "results"
 MODULES, PROGRAM, _, FOCUS, PRECL = load_iter2()
+_LIST = ROOT / "data" / "snapshot_2026-2027" / "module_list.json"
+NUS_MODULES = json.loads(_LIST.read_text(encoding="utf-8")) if _LIST.exists() else {}
+UE_CODES = PROGRAM["unrestricted_electives"]["candidates"]
 
 MODEL_NAMES = {"haiku": "Haiku 5.5", "sonnet": "Sonnet 5.5", "opus": "Opus 5.5"}
 
 # checker message -> rule family, first match wins (order matters: specific first)
 VIOLATION_RULES = [
-    ("unknown module", r"unknown module"),
     ("duplicate", r"scheduled \d+ times"),
     ("retakes completed", r"already satisfied"),
     ("outside horizon", r"outside horizon"),
@@ -73,8 +80,41 @@ VIOLATION_RULES = [
 ]
 
 
+def unknown_kind(code):
+    if code.startswith("UE_GENERIC_EXTRA"):
+        return "too many generic electives"
+    return ("unmodelled real NUS module" if code in NUS_MODULES
+            else "not an AY2026/27 NUS module")
+
+
 def violation_rule(msg):
+    if msg.endswith(": unknown module"):
+        return unknown_kind(msg.split(":")[0])
     return next((name for name, pat in VIOLATION_RULES if re.search(pat, msg)), "other")
+
+
+def lenient_check(plan, st, sc, errs):
+    """Re-check with real-but-unmodelled modules swapped for free UE placeholders.
+    None if the plan has no such module (lenient == strict); False if it also has a
+    non-real code or the swap runs out of placeholders."""
+    unknown = [e.split(":")[0] for e in errs if e.endswith(": unknown module")]
+    if not unknown:
+        return None
+    if any(unknown_kind(c) != "unmodelled real NUS module" for c in unknown):
+        return False
+    used = {m for ms in plan.values() for m in ms} | {
+        c for c in UE_CODES if st.get("completed", {}).get(c) or st.get("exempted", {}).get(c)}
+    free = iter([c for c in UE_CODES if c not in used])
+    swapped = {}
+    for s, ms in plan.items():
+        swapped[s] = []
+        for m in ms:
+            if m in unknown:
+                m = next(free, None)
+                if m is None:
+                    return False
+            swapped[s].append(m)
+    return not check_plan_iter2(swapped, MODULES, PROGRAM, st, FOCUS, PRECL, sc)
 
 
 def load_instances():
@@ -125,21 +165,24 @@ def grade_instance(inst, pred):
     gt = inst["ground_truth"]["feasible"]
     row = {"instance": inst["name"], "tier": inst["meta"]["tier"], "gt_feasible": gt,
            "pred_feasible": None if pred is None else pred["feasible"],
-           "decision_correct": False, "plan_valid": None, "violations": [], "realism": None,
+           "decision_correct": False, "plan_valid": None, "plan_valid_lenient": None,
+           "violations": [], "realism": None,
            "latency_s": None if pred is None else pred["latency_s"],
            "cost_usd": 0.0 if pred is None else pred["cost_usd"]}
     if pred is None or pred["feasible"] is None:
-        row["plan_valid"] = False if gt else None
+        row["plan_valid"] = row["plan_valid_lenient"] = False if gt else None
         return row
     row["decision_correct"] = pred["feasible"] == gt
     if gt:   # plan validity is judged on ground-truth-SAT instances
         if not pred["feasible"] or not pred["plan"]:
-            row["plan_valid"] = False
+            row["plan_valid"] = row["plan_valid_lenient"] = False
         else:
             st, sc = inst["formal"]["student"], inst["formal"]["scenario"]
             errs = check_plan_iter2(pred["plan"], MODULES, PROGRAM, st, FOCUS, PRECL, sc)
             row["violations"] = errs
             row["plan_valid"] = not errs
+            lenient = lenient_check(pred["plan"], st, sc, errs)
+            row["plan_valid_lenient"] = row["plan_valid"] if lenient is None else lenient
             if not errs:
                 plan = {int(s): ms for s, ms in pred["plan"].items()}
                 row["realism"] = score_plan(plan, MODULES, PROGRAM, st, sc)["overall"]
@@ -168,6 +211,7 @@ def summarize(label, rows, n_records):
         "unsat_t1_recall": sub(lambda r: r["tier"] == "T1"),
         "unsat_t2_4_recall": sub(lambda r: r["tier"] in ("T2", "T3", "T4")),
         "plan_validity": frac(sum(bool(r["plan_valid"]) for r in sat), len(sat)),
+        "plan_validity_lenient": frac(sum(bool(r["plan_valid_lenient"]) for r in sat), len(sat)),
         "realism_mean": round(sum(real) / len(real), 1) if real else None,
         "latency_mean_s": round(sum(lat) / len(lat), 3) if lat else None,
         "cost_total_usd": round(sum(r["cost_usd"] for r in rows), 4),
@@ -218,6 +262,9 @@ def print_table(summaries):
         if s["records"] < s["instances"]:
             print(f"! {s['pipeline']}: only {s['records']}/{s['instances']} instances have a "
                   f"record; missing ones are scored as wrong.")
+        if s["plan_validity_lenient"]["n"] != s["plan_validity"]["n"]:
+            print(f"  {s['pipeline']}: plan valid if unmodelled real NUS modules count as "
+                  f"generic electives: {_pct(s['plan_validity_lenient'])}")
         if s["plans_violating_rule"]:
             top = ", ".join(f"{k} {v}" for k, v in list(s["plans_violating_rule"].items())[:6])
             print(f"  {s['pipeline']}: plans violating (rule: #plans) {top}")
@@ -259,7 +306,8 @@ def main(argv=None):
                                          encoding="utf-8")
     with (OUT / "per_instance.csv").open("w", newline="", encoding="utf-8") as f:
         cols = ["pipeline", "instance", "tier", "gt_feasible", "pred_feasible",
-                "decision_correct", "plan_valid", "realism", "latency_s", "cost_usd",
+                "decision_correct", "plan_valid", "plan_valid_lenient", "realism",
+                "latency_s", "cost_usd",
                 "n_violations", "violations"]
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()

@@ -167,6 +167,27 @@ Format: code | title | units | level | offered terms | requirement tag | prerequ
 """
 
 
+def render_bare_system_prompt(n_ue=10):
+    """'Bare student' condition: NO degree rules and NO catalog, only the answer
+    conventions the grader needs (semester numbering, Special Terms, the UE token,
+    JSON shape). The model plans from its own knowledge of NUS, as a student
+    asking a chatbot would get."""
+    return f"""You are an academic planning assistant. A student at the National University of Singapore (NUS) asks about planning their Bachelor of Computing (Computer Science) degree (AY2026/27 cohort). Use your own knowledge of the NUS degree requirements and modules. Decide whether a plan that satisfies the degree requirements and every request of the student exists within the semesters they allow. If it exists, give one concrete semester-by-semester plan.
+
+# Answer conventions (so the plan can be checked automatically)
+- Number the plan semesters 1..T, where T is the number of semesters the student wants to graduate within. Plan semester 1 is an NUS Semester 1; by default odd-numbered plan semesters are NUS Semester 1 and even-numbered ones are NUS Semester 2.
+- If the student designates some plan semesters as Special Terms, the remaining (regular) semesters alternate Sem 1, Sem 2, Sem 1, ... in order starting with Sem 1, skipping the special slots. A special slot that follows a Sem 2 is Special Term 3; one that follows a Special Term 3 is Special Term 4.
+- Use official NUS module codes (e.g. CS2040S). For a generic unrestricted elective where no specific module is needed, write the code "{UE_TOKEN}" (a 4 MC elective). Use at most {n_ue} "{UE_TOKEN}" entries, counting any unrestricted electives the student has already completed.
+- List only modules still to be taken, not ones already completed or exempted.
+
+# Answer format
+Return JSON with:
+- "feasible": true if a plan satisfying everything exists within the allowed semesters, else false.
+- "plan": if feasible, one entry per plan semester 1..T, {{"semester": s, "modules": [codes]}} (an empty list for a semester with nothing scheduled). If infeasible, an empty list.
+- "reason": one or two sentences; if infeasible, name the rule or request that makes it impossible.
+"""
+
+
 # --- parsing the answer -----------------------------------------------------------
 def parse_response(text):
     """Model JSON -> {"feasible", "plan" {sem: [codes]}, "reason"} or raise ValueError."""

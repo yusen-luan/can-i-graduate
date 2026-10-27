@@ -128,3 +128,30 @@ def test_tiers_and_violation_buckets():
     _, rows = score.grade_all("canonical-4yr", INSTANCES, fixed)
     msgs = [v for r in rows for v in r["violations"]]
     assert msgs and all(score.violation_rule(v) != "other" for v in msgs)
+
+
+# --- bare-student condition ----------------------------------------------------------
+def test_bare_prompt_has_conventions_but_no_rules_or_catalog():
+    from llm.prompts import render_bare_system_prompt
+    bare = render_bare_system_prompt()
+    assert len(bare) < len(SYSTEM) / 5
+    assert f'"{UE_TOKEN}"' in bare and "Special Term 3" in bare
+    for leak in ("160", "CS3230", "prereq", "CP-coded", "12 MC", "focus area"):
+        assert leak not in bare, leak
+
+
+def test_out_of_universe_codes_are_classified_and_lenient_regraded():
+    if not score.NUS_MODULES:
+        pytest.skip("module_list.json not ingested")
+    assert score.violation_rule("GEC1001: unknown module") == "unmodelled real NUS module"
+    assert score.violation_rule("CS4232: unknown module") == "not an AY2026/27 NUS module"
+    assert score.violation_rule("UE_GENERIC_EXTRA_1: unknown module") == "too many generic electives"
+    inst = BY_NAME["on_track_fresh"]
+    st, sc = inst["formal"]["student"], inst["formal"]["scenario"]
+    plan = {k: list(v) for k, v in inst["ground_truth"]["plan"].items()}
+    s, i = next((s, i) for s, ms in plan.items() for i, m in enumerate(ms) if m.startswith("UE_GENERIC"))
+    real = dict(plan, **{s: plan[s][:i] + ["GEC1001"] + plan[s][i + 1:]})   # elective -> real GE
+    fake = dict(plan, **{s: plan[s][:i] + ["CS4232"] + plan[s][i + 1:]})    # retired code
+    for p_, lenient in ((real, True), (fake, False)):
+        row = score.grade_instance(inst, {"feasible": True, "plan": p_, "latency_s": 0, "cost_usd": 0})
+        assert row["plan_valid"] is False and row["plan_valid_lenient"] is lenient

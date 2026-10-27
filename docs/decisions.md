@@ -105,3 +105,6 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
 - **D39 (Iter 3, scoring):** `eval/score.py` grades every Table-3 row: missing/unparseable answer = wrong,
   Plan Valid over all 17 GT-SAT, Realism = mean over VALID plans only. `meta.tier` is curated (label/
   PROFILE_TIERS), since no arithmetic floor rule reproduces the report's T1 vs T2–4 split.
+- **D40 (Iter 3, Pipe A):** two Pipe A conditions: `full` (rules + catalog) and `bare` (answer conventions
+  only). Why: `full` scored 100% because the prompt pre-formalises the spec; `bare` is how a student asks.
+  Out-of-model codes are classified against the full NUSMods list, never silently accepted.

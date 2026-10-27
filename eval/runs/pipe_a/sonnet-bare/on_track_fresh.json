@@ -1,0 +1,82 @@
+{
+  "instance": "on_track_fresh",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"MA1521\",\"MA1522\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2100\",\"CS2101\",\"ST2334\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\",\"GESS1025\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS3223\",\"GEC1015\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS3210\",\"CS3235\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS4248\",\"CS4244\",\"GEC1000\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4234\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The degree needs about 160 MC, which is exactly 8 semesters at 20 MC. This plan covers the foundation, maths, 12 MC internship, six AI focus-area modules (three at 4000-level), other CS electives, university-level modules and 10 UEs. Prerequisites are respected, but I could not verify the exact module codes and offerings for the AY2026/27 AI focus area and university-level requirements, so please check them against the official NUS lists.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 43.65,
+  "cost_usd": 0.058765,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 5839,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:16+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231S",
+        "CS2030S",
+        "MA1521",
+        "MA1522",
+        "GEA1000N"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2100",
+        "CS2101",
+        "ST2334",
+        "UE_GENERIC_1"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "GESS1025"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "CS3223",
+        "GEC1015",
+        "UE_GENERIC_2"
+      ],
+      "5": [
+        "CS3263",
+        "CS3210",
+        "CS3235",
+        "GEN2000",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CP3880",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "CS4246",
+        "CS4248",
+        "CS4244",
+        "GEC1000",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CS4234",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The degree needs about 160 MC, which is exactly 8 semesters at 20 MC. This plan covers the foundation, maths, 12 MC internship, six AI focus-area modules (three at 4000-level), other CS electives, university-level modules and 10 UEs. Prerequisites are respected, but I could not verify the exact module codes and offerings for the AY2026/27 AI focus area and university-level requirements, so please check them against the official NUS lists."
+  },
+  "parse_error": null
+}

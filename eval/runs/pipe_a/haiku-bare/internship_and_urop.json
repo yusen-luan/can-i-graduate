@@ -1,0 +1,84 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010X\",\"MA1521\",\"CS1231\",\"UE\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"MA1522\",\"CS2100\",\"ST2334\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2102\",\"CS2106\",\"CS2105\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS3230\",\"CS3219\",\"CS3217\",\"UE\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS3281\",\"UE\"]},{\"semester\":6,\"modules\":[\"UROP\",\"CS3244\",\"CS3216\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4218\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS3235\",\"CS4248\",\"CS4224\",\"CS4278\",\"CS4269\"]},{\"semester\":9,\"modules\":[\"CS4236\",\"CS3237\"]}],\"reason\":\"The 160 MC degree requirement fits within 9 semesters at 20 MC or fewer each, and the software engineering track, CP3880 internship and UROP can be placed in the plan with prerequisites respected; module codes for later electives and the UROP code are from memory and should be verified against the NUS module bank.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 35.56,
+  "cost_usd": 0.003909,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 7778,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:57+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010X",
+        "MA1521",
+        "CS1231",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS2040S",
+        "MA1522",
+        "CS2100",
+        "ST2334",
+        "UE_GENERIC_3"
+      ],
+      "3": [
+        "CS2101",
+        "CS2102",
+        "CS2106",
+        "CS2105",
+        "UE_GENERIC_4"
+      ],
+      "4": [
+        "CS2103T",
+        "CS3230",
+        "CS3219",
+        "CS3217",
+        "UE_GENERIC_5"
+      ],
+      "5": [
+        "CP3880",
+        "CS3281",
+        "UE_GENERIC_6"
+      ],
+      "6": [
+        "UROP",
+        "CS3244",
+        "CS3216",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "CS4218",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": [
+        "CS3235",
+        "CS4248",
+        "CS4224",
+        "CS4278",
+        "CS4269"
+      ],
+      "9": [
+        "CS4236",
+        "CS3237"
+      ]
+    },
+    "reason": "The 160 MC degree requirement fits within 9 semesters at 20 MC or fewer each, and the software engineering track, CP3880 internship and UROP can be placed in the plan with prerequisites respected; module codes for later electives and the UROP code are from memory and should be verified against the NUS module bank."
+  },
+  "parse_error": null
+}

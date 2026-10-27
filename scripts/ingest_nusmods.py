@@ -100,6 +100,17 @@ def fetch(code: str, ay: str):
         raise
 
 
+def write_module_list(ay: str, out_dir: Path) -> int:
+    """Every module code NUSMods lists for the AY -> module_list.json {code: title}.
+    Not part of the planning universe: it lets the evaluator tell a real NUS
+    module we don't model from a hallucinated / discontinued code."""
+    with urllib.request.urlopen(f"{API}/{ay}/moduleList.json", timeout=60) as r:
+        listing = {m["moduleCode"]: m["title"] for m in json.load(r)}
+    (out_dir / "module_list.json").write_text(
+        json.dumps(dict(sorted(listing.items())), indent=0, ensure_ascii=False), encoding="utf-8")
+    return len(listing)
+
+
 def to_tree(prereq_tree):
     """NUSMods and/or/leaf tree -> our all_of/one_of/leaf tree, grades stripped."""
     if prereq_tree is None:
@@ -192,12 +203,14 @@ def main(argv=None) -> int:
         yaml.safe_dump(modules, sort_keys=True, allow_unicode=True), encoding="utf-8")
     (out_dir / "preclusions.yaml").write_text(
         yaml.safe_dump({"groups": PRECLUSION_GROUPS}, sort_keys=True), encoding="utf-8")
+    n_listed = write_module_list(args.ay, out_dir)
 
     header = [
         f"# NUSMods ingestion report — AY{args.ay}",
         "",
         f"Fetched {len(SEED)} seed codes; {len(modules)} resolved, "
-        f"{len(SEED) - len(modules)} missing.",
+        f"{len(SEED) - len(modules)} missing. Full AY module list: {n_listed} codes "
+        "(module_list.json, used only to classify out-of-model codes in evaluation).",
         "",
         "Anomalies vs the 'canonical 4u, offered both sems' assumption:",
         "",

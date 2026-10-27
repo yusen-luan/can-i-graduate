@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The Bachelor of Computing (Computer Science) requires 160 MC, but almost all NUS modules are 4 MC, so with a 27 MC cap each semester can hold at most 6 modules (24 MC). Six semesters therefore allow at most 144 MC, which is short of 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.58,
+  "cost_usd": 0.002035,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 4035,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:22+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The Bachelor of Computing (Computer Science) requires 160 MC, but almost all NUS modules are 4 MC, so with a 27 MC cap each semester can hold at most 6 modules (24 MC). Six semesters therefore allow at most 144 MC, which is short of 160."
+  },
+  "parse_error": null
+}

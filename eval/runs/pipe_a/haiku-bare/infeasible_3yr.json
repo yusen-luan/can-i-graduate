@@ -1,0 +1,27 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The NUS Bachelor of Computing (Computer Science) requires 160 MC, but 6 semesters at a maximum of 20 MC each allows only 120 MC, so the degree cannot be completed in 6 semesters under the load cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.61,
+  "cost_usd": 0.000465,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 892,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:21+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The NUS Bachelor of Computing (Computer Science) requires 160 MC, but 6 semesters at a maximum of 20 MC each allows only 120 MC, so the degree cannot be completed in 6 semesters under the load cap."
+  },
+  "parse_error": null
+}

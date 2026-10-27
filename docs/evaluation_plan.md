@@ -158,6 +158,11 @@ A seeded script: for each sampled `(profile, request)` → merge → `solve_iter
 Run `check_plan_iter2` on every produced plan. Prompt-cache the static rule text to stay within the
 ≤$100 budget.
 
+**Implemented (Pipe A):** `llm/` + `eval/run_pipe_a.py` + `eval/score.py`, two conditions (D40):
+`full` = rules + 119-module catalog rendered from the checker's data (an upper bound on direct
+reasoning: the spec is pre-formalised); `bare` = answer conventions only, the model plans from its
+own NUS knowledge (how a student would actually ask). Results: `eval/results/pipe_a_2026-10-27.md`.
+
 ## 4. Models (decided)
 
 Compare the **Claude family for a size ablation**: `claude-opus-5-5`, `claude-sonnet-5-5`,
@@ -176,6 +181,9 @@ scaling effect is visible. (Optional later: SoC-hosted open-weight model, Logic-
 - **Translator-specific** — spec parse/validity rate; semantic fidelity (did it drop a stated
   preference?). Isolates translation error from the (always-correct) solver.
 - **Cost/latency** — tokens, wall-clock, $ per instance per pipeline per model.
+- **Out-of-universe codes** (bare condition) — split into real-but-unmodelled AY2026/27 modules
+  (NUSMods `module_list.json`) vs codes NUSMods does not list (hallucinated / retired); plus a
+  lenient validity that re-grades real unmodelled modules as generic electives (diagnostic only).
 
 ## 6. Ablations (rubric explicitly rewards these)
 
@@ -218,6 +226,6 @@ scaling effect is visible. (Optional later: SoC-hosted open-weight model, Logic-
 
 1. Freeze/tag the iter2 oracle so ground truth is reproducible.
 2. Instance generator (§2.3) + hand-authored NL per tier.
-3. Wire both pipelines (§3) with `check_plan_iter2` as grader + prompt caching.
+3. Wire both pipelines (§3) with `check_plan_iter2` as grader + prompt caching. (Pipe A done.)
 4. Run **T0→T6 + obfuscation ablation first** (highest signal), then remaining ablations and models.
 5. Produce §7 figures; write up per §8.

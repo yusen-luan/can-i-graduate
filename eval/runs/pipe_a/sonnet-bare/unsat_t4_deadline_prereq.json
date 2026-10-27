@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS3230 requires CS2040S as a prerequisite, and CS2040S requires CS1010 or an equivalent. With no modules completed, this chain of CS1010, then CS2040S, then CS3230 takes at least 3 semesters, so CS3230 cannot be finished by semester 2.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 7.13,
+  "cost_usd": 0.008147,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 777,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:23:21+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 requires CS2040S as a prerequisite, and CS2040S requires CS1010 or an equivalent. With no modules completed, this chain of CS1010, then CS2040S, then CS3230 takes at least 3 semesters, so CS3230 cannot be finished by semester 2."
+  },
+  "parse_error": null
+}

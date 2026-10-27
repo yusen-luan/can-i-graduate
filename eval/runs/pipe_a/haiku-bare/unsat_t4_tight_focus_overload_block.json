@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The NUS Bachelor of Computing (Computer Science) requires 160 MC, but with semester 4 off you have only 6 active semesters in 7, and at most 26 MC each gives 156 MC, which is short of 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.72,
+  "cost_usd": 0.000246,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 455,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:27+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The NUS Bachelor of Computing (Computer Science) requires 160 MC, but with semester 4 off you have only 6 active semesters in 7, and at most 26 MC each gives 156 MC, which is short of 160 MC."
+  },
+  "parse_error": null
+}

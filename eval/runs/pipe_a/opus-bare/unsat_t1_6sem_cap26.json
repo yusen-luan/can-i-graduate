@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap26",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree requires 160 MC, but 6 semesters at no more than 26 MC each allow at most 156 MC, so the 160 MC graduation requirement cannot be met. Allowing a seventh semester, a higher MC cap, or Special Terms would make a plan possible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.17,
+  "cost_usd": 0.005165,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 233,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:29:01+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree requires 160 MC, but 6 semesters at no more than 26 MC each allow at most 156 MC, so the 160 MC graduation requirement cannot be met. Allowing a seventh semester, a higher MC cap, or Special Terms would make a plan possible."
+  },
+  "parse_error": null
+}

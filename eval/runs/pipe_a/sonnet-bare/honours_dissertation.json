@@ -1,0 +1,83 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"GEI1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\"]},{\"semester\":3,\"modules\":[\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"ST2334\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"CS2109S\",\"GES1000\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3243\",\"CS3244\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"CS3263\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP4101\",\"CS4248\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4246\",\"CS4243\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[]}],\"reason\":\"The plan covers the 160 MC (common curriculum, CS foundation, maths, internship, AI focus area with 4000-level modules, CP4101, 10 UEs) within 9 effective semesters. No semester exceeds 20 MC or 4 CS/IFS/CP modules, and semester 3 is a Special Term. The module codes for the common-curriculum modules (GEI1000, GEC1000, GES1000, GEN2000) and the exact degree requirements are recalled from memory and were not checked against the AY2026/27 NUS requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 48.99,
+  "cost_usd": 0.067891,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 6738,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:20:53+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1522",
+        "GEA1000",
+        "GEI1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521"
+      ],
+      "3": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "ST2334",
+        "GEC1000"
+      ],
+      "5": [
+        "CS3230",
+        "CS2109S",
+        "GES1000",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS3243",
+        "CS3244",
+        "GEN2000",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "CP3880",
+        "CS3263",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "CP4101",
+        "CS4248",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "CS4246",
+        "CS4243",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": []
+    },
+    "reason": "The plan covers the 160 MC (common curriculum, CS foundation, maths, internship, AI focus area with 4000-level modules, CP4101, 10 UEs) within 9 effective semesters. No semester exceeds 20 MC or 4 CS/IFS/CP modules, and semester 3 is a Special Term. The module codes for the common-curriculum modules (GEI1000, GEC1000, GES1000, GEN2000) and the exact degree requirements are recalled from memory and were not checked against the AY2026/27 NUS requirements."
+  },
+  "parse_error": null
+}

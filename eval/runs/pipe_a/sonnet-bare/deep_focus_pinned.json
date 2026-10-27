@@ -1,0 +1,84 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030\",\"CS2040S\",\"CS2100\",\"MA1521\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS2102\",\"CS2105\",\"IS1108\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS3223\",\"GEC1000\",\"GEN2000\"]},{\"semester\":6,\"modules\":[\"CS3231\",\"CS3233\",\"CS3235\",\"GES1000\",\"GEX1000\"]},{\"semester\":7,\"modules\":[\"CP3880\"]},{\"semester\":8,\"modules\":[\"CS4232\",\"CS3236\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan totals 160 MC with at most 20 MC per semester. CS2040S is done in semester 2 (before the semester 3 deadline), CS3230 is in semester 4, and the Algorithms & Theory focus area is covered. I built it from my recollection of the degree structure, so module codes, MC values and semester offerings may need checking against the official NUS requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 65.77,
+  "cost_usd": 0.089269,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 8885,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:20:09+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030",
+        "CS2040S",
+        "CS2100",
+        "MA1521"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "CS2102",
+        "CS2105",
+        "IS1108"
+      ],
+      "5": [
+        "CS4231",
+        "CS4234",
+        "CS3223",
+        "GEC1000",
+        "GEN2000"
+      ],
+      "6": [
+        "CS3231",
+        "CS3233",
+        "CS3235",
+        "GES1000",
+        "GEX1000"
+      ],
+      "7": [
+        "CP3880"
+      ],
+      "8": [
+        "CS4232",
+        "CS3236",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "The plan totals 160 MC with at most 20 MC per semester. CS2040S is done in semester 2 (before the semester 3 deadline), CS3230 is in semester 4, and the Algorithms & Theory focus area is covered. I built it from my recollection of the degree structure, so module codes, MC values and semester offerings may need checking against the official NUS requirements."
+  },
+  "parse_error": null
+}

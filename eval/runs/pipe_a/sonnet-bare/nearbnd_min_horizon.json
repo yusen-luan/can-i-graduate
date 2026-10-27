@@ -1,0 +1,82 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"CS2105\",\"CS3230\",\"CS3243\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS3263\",\"CS3223\",\"CS3210\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS3217\",\"CS3233\"]},{\"semester\":7,\"modules\":[\"CS4248\",\"CS4244\",\"CS3235\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4246\",\"IS1128\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The degree needs 160 MC, so 8 semesters at 20 MC each fits exactly with no slack. The plan covers the CS foundation, the maths modules, the AI focus area (CS2109S, CS3243, CS3244, CS4248 and more, with three 4000-level modules), 12 MC of industry experience (CP3880) and unrestricted electives. I am unsure of a few module offering semesters and of the exact foundation list, so these should be checked against the official NUS requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 80.38,
+  "cost_usd": 0.112765,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 11239,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:09+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS2102",
+        "CS2105",
+        "CS3230",
+        "CS3243",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS3244",
+        "CS3263",
+        "CS3223",
+        "CS3210",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CP3880",
+        "CS3217",
+        "CS3233"
+      ],
+      "7": [
+        "CS4248",
+        "CS4244",
+        "CS3235",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CS4246",
+        "IS1128",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "The degree needs 160 MC, so 8 semesters at 20 MC each fits exactly with no slack. The plan covers the CS foundation, the maths modules, the AI focus area (CS2109S, CS3243, CS3244, CS4248 and more, with three 4000-level modules), 12 MC of industry experience (CP3880) and unrestricted electives. I am unsure of a few module offering semesters and of the exact foundation list, so these should be checked against the official NUS requirements."
+  },
+  "parse_error": null
+}

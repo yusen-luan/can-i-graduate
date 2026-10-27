@@ -1,0 +1,84 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2105\", \"ST2334\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2106\", \"CS3243\", \"CS3230\", \"UE\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS4243\", \"CS3216\", \"UE\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS4244\", \"CS4246\", \"CS4248\", \"CS3219\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3235\", \"CS3233\", \"CS4215\", \"CS4212\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4224\", \"CS4225\", \"CS4226\", \"CS4234\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4236\", \"CS4231\", \"CS3217\", \"CS4242\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS3241\", \"CS4218\", \"CS3248\", \"CS4214\", \"UE\"]}], \"reason\": \"Assuming the AP exemptions give no MC, the student needs the full 160 MC from 40 four-MC modules, which fits exactly into 8 semesters at 20 MC each with 10 UE entries. The AI specialisation (CS3243, CS3244, CS4244, CS4246, CS4248) and the remaining core modules are sequenced to respect prerequisites, but the exact requirement list and electives should be verified against the NUS handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 37.32,
+  "cost_usd": 0.004216,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 8389,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:16:59+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2105",
+        "ST2334",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2106",
+        "CS3243",
+        "CS3230",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "3": [
+        "CS3244",
+        "CS4243",
+        "CS3216",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "4": [
+        "CS4244",
+        "CS4246",
+        "CS4248",
+        "CS3219",
+        "UE_GENERIC_6"
+      ],
+      "5": [
+        "CS3235",
+        "CS3233",
+        "CS4215",
+        "CS4212",
+        "UE_GENERIC_7"
+      ],
+      "6": [
+        "CS4224",
+        "CS4225",
+        "CS4226",
+        "CS4234",
+        "UE_GENERIC_8"
+      ],
+      "7": [
+        "CS4236",
+        "CS4231",
+        "CS3217",
+        "CS4242",
+        "UE_GENERIC_9"
+      ],
+      "8": [
+        "CS3241",
+        "CS4218",
+        "CS3248",
+        "CS4214",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Assuming the AP exemptions give no MC, the student needs the full 160 MC from 40 four-MC modules, which fits exactly into 8 semesters at 20 MC each with 10 UE entries. The AI specialisation (CS3243, CS3244, CS4244, CS4246, CS4248) and the remaining core modules are sequenced to respect prerequisites, but the exact requirement list and electives should be verified against the NUS handbook."
+  },
+  "parse_error": null
+}

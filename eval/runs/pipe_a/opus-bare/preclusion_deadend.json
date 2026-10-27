@@ -1,0 +1,83 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"MA1522\",\"ST2334\",\"CS2106\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS3230\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS4243\",\"GESS1025\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4248\",\"CS4246\",\"GEN2061\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3264\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4244\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Yes, it can be done: with CS1010 counting as your programming-methodology course, this plan reaches 160 MC within 9 semesters, never exceeds 20 MC in a semester, and uses exactly 10 unrestricted electives. It covers the CS core, common-curriculum pillars, 12 MC of industry experience (CP3880) and the AI focus area, but this is based on my recollection of the rules, so check the general-education module codes, offerings and current requirements with NUS before relying on it.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 53.68,
+  "cost_usd": 0.100561,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 5003,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:29:29+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1521",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2040S",
+        "MA1522",
+        "ST2334",
+        "CS2106",
+        "IS1108"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "CS3230",
+        "GEC1015"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "CS4243",
+        "GESS1025",
+        "ES2660"
+      ],
+      "5": [
+        "CS3263",
+        "CS4248",
+        "CS4246",
+        "GEN2061",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CP3880",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CS3264",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "CS4244",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Yes, it can be done: with CS1010 counting as your programming-methodology course, this plan reaches 160 MC within 9 semesters, never exceeds 20 MC in a semester, and uses exactly 10 unrestricted electives. It covers the CS core, common-curriculum pillars, 12 MC of industry experience (CP3880) and the AI focus area, but this is based on my recollection of the rules, so check the general-education module codes, offerings and current requirements with NUS before relying on it."
+  },
+  "parse_error": null
+}

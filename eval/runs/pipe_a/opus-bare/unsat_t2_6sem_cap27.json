@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The degree needs 160 MC. Nearly all modules (including UEs) are 4 MC, so a 27 MC cap allows only 24 MC in most semesters, and even with the few 5-MC (CS3216/CS3217) or 2-MC courses, six semesters reach at most about 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 104.84,
+  "cost_usd": 0.193245,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 9637,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:30:58+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs 160 MC. Nearly all modules (including UEs) are 4 MC, so a 27 MC cap allows only 24 MC in most semesters, and even with the few 5-MC (CS3216/CS3217) or 2-MC courses, six semesters reach at most about 158 MC."
+  },
+  "parse_error": null
+}

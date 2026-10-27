@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_cs_starved",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The cap of one CS/IFS/CP module per semester allows at most 8 such modules over 8 semesters. The degree needs far more: about 10 CS-coded foundation and common-curriculum modules (CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230), plus the CS breadth-and-depth and industry-experience requirements, so no valid plan exists.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.62,
+  "cost_usd": 0.018101,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 101,
+    "output_tokens": 875,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:29:39+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The cap of one CS/IFS/CP module per semester allows at most 8 such modules over 8 semesters. The degree needs far more: about 10 CS-coded foundation and common-curriculum modules (CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230), plus the CS breadth-and-depth and industry-experience requirements, so no valid plan exists."
+  },
+  "parse_error": null
+}

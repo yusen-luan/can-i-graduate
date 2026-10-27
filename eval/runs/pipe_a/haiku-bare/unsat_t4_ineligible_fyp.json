@@ -1,0 +1,85 @@
+{
+  "instance": "unsat_t4_ineligible_fyp",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231S\", \"MA1521\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1508E\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2102\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2103T\", \"CS2105\", \"CS2106\", \"CS3243\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3230\", \"CS3244\", \"CS4224\", \"CS3217\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4246\", \"CS4248\", \"CS4231\", \"CS3235\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4215\", \"CS3219\", \"CS4225\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4218\", \"CS4234\", \"CS3216\", \"CP4101\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"The 160 MC degree fits in 9 semesters at 20 MC or less each, with CP4101 placed in semester 8 once the student's CAP has reached the eligibility threshold; this plan assumes that threshold is met by then, since no modules have been taken yet.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.34,
+  "cost_usd": 0.003964,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 7886,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:51+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1508E",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2102",
+        "ST2334",
+        "UE_GENERIC_3"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2105",
+        "CS2106",
+        "CS3243",
+        "UE_GENERIC_4"
+      ],
+      "5": [
+        "CS3230",
+        "CS3244",
+        "CS4224",
+        "CS3217",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "CS4246",
+        "CS4248",
+        "CS4231",
+        "CS3235",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "CS4215",
+        "CS3219",
+        "CS4225",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "CS4218",
+        "CS4234",
+        "CS3216",
+        "CP4101"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The 160 MC degree fits in 9 semesters at 20 MC or less each, with CP4101 placed in semester 8 once the student's CAP has reached the eligibility threshold; this plan assumes that threshold is met by then, since no modules have been taken yet."
+  },
+  "parse_error": null
+}

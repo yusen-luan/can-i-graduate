@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS3230 requires CS2040/CS2040S, which requires a CS1010-family programming module, so the prerequisite chain CS1010 (sem 1), CS2040S (sem 2), CS3230 (sem 3) makes finishing CS3230 by semester 2 impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 9.33,
+  "cost_usd": 0.000931,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 1824,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:13+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 requires CS2040/CS2040S, which requires a CS1010-family programming module, so the prerequisite chain CS1010 (sem 1), CS2040S (sem 2), CS3230 (sem 3) makes finishing CS3230 by semester 2 impossible."
+  },
+  "parse_error": null
+}

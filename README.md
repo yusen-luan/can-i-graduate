@@ -4,7 +4,21 @@ A constraint-satisfaction planner that answers *"can this student graduate in T
 semesters, and with what schedule?"* for the NUS BComp(CS) degree. Built in
 iterations of increasing realism (see `docs/history.md`, `docs/decisions.md`).
 
-## Iteration 2 — full BComp(CS) AY2026/27 (current)
+## Iteration 3 — richer requests + the LLM benchmark (current)
+
+Adds per-request constraints (Special Terms, per-semester caps / leave of absence, CS-count cap,
+FYP/UROP with the CP cap, pin/forbid/deadline), a proof suite for the oracle, a 35-instance
+natural-language benchmark (`eval/instances/`) and Pipeline A: Claude answering directly, graded by
+the independent checker. Status and results: `docs/status.md`, `eval/results/`.
+
+```bash
+python eval/generate.py                                   # rebuild the benchmark corpus
+cp .env.example .env                                      # then add ANTHROPIC_API_KEY
+python eval/run_pipe_a.py --model all [--condition bare]  # LLM-direct runs -> eval/runs/
+python eval/score.py                                      # Table-3 metrics -> eval/results/
+```
+
+## Iteration 2 — full BComp(CS) AY2026/27
 
 The whole 160-unit degree over module facts **frozen from the NUSMods AY2026/27
 API** (units, real semester offerings, prerequisite trees, preclusions). Adds, on
@@ -22,7 +36,7 @@ python scripts/ingest_nusmods.py          # (re)build data/snapshot_2026-2027/
 python src/model.py --iter2               # validate the iter2 model
 python src/solver.py --iter2 --focus-area artificial_intelligence
 streamlit run app/app.py                  # pick constraints, see SAT/UNSAT + plan
-python -m pytest tests -q                 # 76 tests (49 iter1 + 27 iter2)
+python -m pytest tests -q                 # full suite (iter1 + iter2 + iter3 + eval)
 ```
 
 The solver (`src/solver.py`, OR-Tools CP-SAT) and an **independent** checker

@@ -1,0 +1,84 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"MA1521\", \"CS1231S\", \"GEQ1000\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"MA1522\", \"CS2040S\", \"ST2334\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS2105\", \"GES1000\"]}, {\"semester\": 4, \"modules\": [\"CS2106\", \"CS3230\", \"CS3243\", \"CS3217\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS3219\", \"CS3223\", \"CS3235\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4246\", \"CS4242\", \"CS4243\", \"CS3241\", \"CS3281\"]}, {\"semester\": 7, \"modules\": [\"CS4248\", \"CS3282\", \"CS3210\", \"CS4234\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The plan uses 40 four-MC modules (160 MC) across 8 semesters at exactly 20 MC each, with the AI specialisation covered by CS3243, CS3244, CS4246, CS4248, CS4242 and CS4243, and prerequisites sequenced in order. Ten UE slots are used, within the limit.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 37.19,
+  "cost_usd": 0.004195,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 8353,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:16:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010S",
+        "MA1521",
+        "CS1231S",
+        "GEQ1000",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "MA1522",
+        "CS2040S",
+        "ST2334",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2105",
+        "GES1000"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "CS3217",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS3244",
+        "CS3219",
+        "CS3223",
+        "CS3235",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS4246",
+        "CS4242",
+        "CS4243",
+        "CS3241",
+        "CS3281"
+      ],
+      "7": [
+        "CS4248",
+        "CS3282",
+        "CS3210",
+        "CS4234",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The plan uses 40 four-MC modules (160 MC) across 8 semesters at exactly 20 MC each, with the AI specialisation covered by CS3243, CS3244, CS4246, CS4248, CS4242 and CS4243, and prerequisites sequenced in order. Ten UE slots are used, within the limit."
+  },
+  "parse_error": null
+}

@@ -10,6 +10,11 @@ for free. Existing records are skipped, so an interrupted run just resumes.
     python eval/run_pipe_a.py --model haiku --dry-run      # token count, no generation
     python eval/run_pipe_a.py --model haiku --limit 2      # smoke test
     python eval/run_pipe_a.py --model all                  # full sweep
+    python eval/run_pipe_a.py --model all --condition bare # no rules/catalog: model's own NUS knowledge
+
+Conditions: `full` = rules + catalog system prompt (upper bound on direct
+reasoning); `bare` = answer conventions only, as a student asking a chatbot
+(run folders get a `-bare` suffix).
 """
 import argparse
 import hashlib
@@ -24,7 +29,8 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 from model import load_iter2  # noqa: E402
 from llm import client as llm  # noqa: E402
-from llm.prompts import PLAN_SCHEMA, render_system_prompt, parse_response, bind_electives  # noqa: E402
+from llm.prompts import (PLAN_SCHEMA, render_system_prompt, render_bare_system_prompt,  # noqa: E402
+                         parse_response, bind_electives)
 
 INST = ROOT / "eval" / "instances"
 RUNS = ROOT / "eval" / "runs" / "pipe_a"
@@ -37,9 +43,10 @@ def load_instances(only=None):
     return [i for i in insts if not only or i["name"] in only]
 
 
-def run_one(client, model_key, inst, system, prompt_sha, effort):
+def run_one(client, model_key, inst, system, prompt_sha, effort, condition="full"):
     res = llm.call(client, model_key, system, inst["nl_prompt"], PLAN_SCHEMA, effort=effort)
-    rec = {"instance": inst["name"], "pipeline": "A-direct", "model_key": model_key,
+    rec = {"instance": inst["name"], "pipeline": "A-direct", "condition": condition,
+           "model_key": model_key,
            **res.to_dict(), "effort": effort, "prompt_sha256": prompt_sha,
            "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
            "prediction": None, "parse_error": None}
@@ -64,19 +71,23 @@ def main(argv=None):
     ap.add_argument("--limit", type=int, help="first N instances only")
     ap.add_argument("--effort", default=llm.DEFAULT_EFFORT,
                     choices=["low", "medium", "high", "xhigh", "max"])
+    ap.add_argument("--condition", default="full", choices=["full", "bare"],
+                    help="full = rules+catalog prompt; bare = answer conventions only")
     ap.add_argument("--workers", type=int, default=4, help="parallel requests")
     ap.add_argument("--force", action="store_true", help="re-run instances that have a record")
     ap.add_argument("--dry-run", action="store_true", help="count input tokens only (free)")
     args = ap.parse_args(argv)
 
-    system = render_system_prompt(MODULES, PROGRAM, FOCUS, PRECL)
+    system = (render_system_prompt(MODULES, PROGRAM, FOCUS, PRECL) if args.condition == "full"
+              else render_bare_system_prompt(len(PROGRAM["unrestricted_electives"]["candidates"])))
     sha = hashlib.sha256(system.encode("utf-8")).hexdigest()[:16]
     insts = load_instances(args.only)[: args.limit]
     client = llm.get_client()
     models = list(llm.MODELS) if args.model == "all" else [args.model]
 
     for mk in models:
-        out = RUNS / mk if args.effort == llm.DEFAULT_EFFORT else RUNS / f"{mk}-{args.effort}"
+        out = RUNS / "-".join([mk] + (["bare"] if args.condition == "bare" else [])
+                              + ([args.effort] if args.effort != llm.DEFAULT_EFFORT else []))
         if args.dry_run:
             n = llm.count_tokens(client, mk, system, insts[0]["nl_prompt"], PLAN_SCHEMA, args.effort)
             print(f"{mk}: ~{n} input tokens per request (system prompt sha {sha}), "
@@ -90,7 +101,7 @@ def main(argv=None):
             continue
 
         def save(inst):
-            rec = run_one(client, mk, inst, system, sha, args.effort)
+            rec = run_one(client, mk, inst, system, sha, args.effort, args.condition)
             (out / f"{inst['name']}.json").write_text(json.dumps(rec, indent=2), encoding="utf-8")
             pred = rec["prediction"]
             verdict = ("PARSE-ERR " + rec["parse_error"]) if pred is None else \

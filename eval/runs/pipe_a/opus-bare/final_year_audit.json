@@ -1,0 +1,47 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3230\",\"CS3243\",\"CS4246\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS3282\",\"CS3244\",\"CS4248\"]},{\"semester\":3,\"modules\":[\"CP3880\"]},{\"semester\":4,\"modules\":[]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"Yes, it can be done; this plan rests on my recollection of recent NUS rules, so please confirm with the official AY2026/27 requirements or an advisor. It completes the remaining core course CS3230, the CS3281+CS3282 team project, 12 MC of industry experience (CP3880), and the AI specialisation (with CS4243, adding CS3243, CS3244, CS4246 and CS4248), reaching 160 MC with no semester over 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 28.53,
+  "cost_usd": 0.057793,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 2833,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:25:26+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "CS3243",
+        "CS4246",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS3282",
+        "CS3244",
+        "CS4248"
+      ],
+      "3": [
+        "CP3880"
+      ],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "Yes, it can be done; this plan rests on my recollection of recent NUS rules, so please confirm with the official AY2026/27 requirements or an advisor. It completes the remaining core course CS3230, the CS3281+CS3282 team project, 12 MC of industry experience (CP3880), and the AI specialisation (with CS4243, adding CS3243, CS3244, CS4246 and CS4248), reaching 160 MC with no semester over 20 MC."
+  },
+  "parse_error": null
+}

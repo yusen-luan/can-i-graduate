@@ -1,0 +1,49 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3243\",\"CS3230\"]},{\"semester\":2,\"modules\":[\"CS3244\",\"CS3282\",\"CS4246\"]},{\"semester\":3,\"modules\":[\"CS4248\"]},{\"semester\":4,\"modules\":[\"CS4244\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The remaining requirements are CS3230, CS3282 (completing the CS3281/CS3282 team project), a 12 MC industry experience (CP3880), and the AI focus area (CS3243, CS3244, CS4246, CS4248 and CS4244 alongside the completed CS4243). That is about 40 MC, which brings the total to roughly 162 MC (160 required) and satisfies the 12 MC at level 4000 and above, comfortably within 8 semesters at no more than 20 MC per semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 52.24,
+  "cost_usd": 0.072485,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 7182,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:19:55+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3243",
+        "CS3230"
+      ],
+      "2": [
+        "CS3244",
+        "CS3282",
+        "CS4246"
+      ],
+      "3": [
+        "CS4248"
+      ],
+      "4": [
+        "CS4244"
+      ],
+      "5": [],
+      "6": [
+        "CP3880"
+      ],
+      "7": [],
+      "8": []
+    },
+    "reason": "The remaining requirements are CS3230, CS3282 (completing the CS3281/CS3282 team project), a 12 MC industry experience (CP3880), and the AI focus area (CS3243, CS3244, CS4246, CS4248 and CS4244 alongside the completed CS4243). That is about 40 MC, which brings the total to roughly 162 MC (160 required) and satisfies the 12 MC at level 4000 and above, comfortably within 8 semesters at no more than 20 MC per semester."
+  },
+  "parse_error": null
+}

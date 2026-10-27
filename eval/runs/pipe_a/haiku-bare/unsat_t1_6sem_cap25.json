@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The NUS Bachelor of Computing (Computer Science) requires 160 MC, but six semesters at a maximum of 25 MC each allow only 150 MC, so graduating within 6 semesters under the 25 MC cap is impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.39,
+  "cost_usd": 0.00019,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 345,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:01+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The NUS Bachelor of Computing (Computer Science) requires 160 MC, but six semesters at a maximum of 25 MC each allow only 150 MC, so graduating within 6 semesters under the 25 MC cap is impossible."
+  },
+  "parse_error": null
+}

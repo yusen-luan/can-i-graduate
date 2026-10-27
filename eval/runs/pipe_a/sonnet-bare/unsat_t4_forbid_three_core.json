@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_three_core",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory core module of the Computer Science degree and I know of no approved substitute, so avoiding it makes the degree impossible. CS2040S and CS2103T could be replaced by CS2040C and CS2103, but CS2100 cannot.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 12.48,
+  "cost_usd": 0.012541,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 1215,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:23:40+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 Computer Organisation is a compulsory core module of the Computer Science degree and I know of no approved substitute, so avoiding it makes the degree impossible. CS2040S and CS2103T could be replaced by CS2040C and CS2103, but CS2100 cannot."
+  },
+  "parse_error": null
+}

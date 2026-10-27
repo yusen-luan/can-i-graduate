@@ -28,6 +28,11 @@
       "d": 17,
       "pct": 0.0
     },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
     "realism_mean": null,
     "latency_mean_s": 0.0,
     "cost_total_usd": 0.0,
@@ -59,6 +64,11 @@
       "pct": 0.0
     },
     "plan_validity": {
+      "n": 3,
+      "d": 17,
+      "pct": 17.6
+    },
+    "plan_validity_lenient": {
       "n": 3,
       "d": 17,
       "pct": 17.6
@@ -120,11 +130,76 @@
       "d": 17,
       "pct": 100.0
     },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
     "realism_mean": 90.3,
     "latency_mean_s": 37.223,
     "cost_total_usd": 0.1635,
     "violation_histogram": {},
     "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Pipe A: Direct (Haiku 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 29,
+      "d": 35,
+      "pct": 82.9
+    },
+    "sat_recall": {
+      "n": 15,
+      "d": 17,
+      "pct": 88.2
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 7,
+      "d": 11,
+      "pct": 63.6
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 21.255,
+    "cost_total_usd": 0.0828,
+    "violation_histogram": {
+      "unmodelled real NUS module": 31,
+      "not an AY2026/27 NUS module": 15,
+      "ULR group": 6,
+      "required module": 4,
+      "offered term": 4,
+      "prerequisite": 3,
+      "ID/CD": 2,
+      "unit cap": 1,
+      "industrial experience": 1
+    },
+    "plans_violating_rule": {
+      "unmodelled real NUS module": 13,
+      "not an AY2026/27 NUS module": 9,
+      "ULR group": 1,
+      "offered term": 1,
+      "required module": 1,
+      "prerequisite": 1,
+      "ID/CD": 1,
+      "industrial experience": 1,
+      "unit cap": 1
+    }
   },
   {
     "pipeline": "Pipe A: Direct (Sonnet 5.5)",
@@ -155,11 +230,70 @@
       "d": 17,
       "pct": 100.0
     },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
     "realism_mean": 92.2,
     "latency_mean_s": 15.594,
     "cost_total_usd": 0.8424,
     "violation_histogram": {},
     "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Pipe A: Direct (Sonnet 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 32,
+      "d": 35,
+      "pct": 91.4
+    },
+    "sat_recall": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 9,
+      "d": 11,
+      "pct": 81.8
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 35.18,
+    "cost_total_usd": 1.6147,
+    "violation_histogram": {
+      "unmodelled real NUS module": 32,
+      "not an AY2026/27 NUS module": 21,
+      "required module": 2,
+      "ULR group": 2,
+      "ID/CD": 2,
+      "offered term": 1
+    },
+    "plans_violating_rule": {
+      "unmodelled real NUS module": 15,
+      "not an AY2026/27 NUS module": 14,
+      "ULR group": 1,
+      "required module": 1,
+      "offered term": 1,
+      "ID/CD": 1
+    }
   },
   {
     "pipeline": "Pipe A: Direct (Opus 5.5)",
@@ -190,11 +324,72 @@
       "d": 17,
       "pct": 100.0
     },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
     "realism_mean": 91.5,
     "latency_mean_s": 10.942,
     "cost_total_usd": 0.9606,
     "violation_histogram": {},
     "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Pipe A: Direct (Opus 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 32,
+      "d": 35,
+      "pct": 91.4
+    },
+    "sat_recall": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 9,
+      "d": 11,
+      "pct": 81.8
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 37.732,
+    "cost_total_usd": 2.4634,
+    "violation_histogram": {
+      "unmodelled real NUS module": 23,
+      "not an AY2026/27 NUS module": 17,
+      "required module": 2,
+      "ULR group": 2,
+      "ID/CD": 2,
+      "prerequisite": 1,
+      "offered term": 1
+    },
+    "plans_violating_rule": {
+      "not an AY2026/27 NUS module": 12,
+      "unmodelled real NUS module": 11,
+      "ULR group": 1,
+      "offered term": 1,
+      "required module": 1,
+      "prerequisite": 1,
+      "ID/CD": 1
+    }
   },
   {
     "pipeline": "Gold Oracle (solve_iter2)",
@@ -225,8 +420,13 @@
       "d": 17,
       "pct": 100.0
     },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
     "realism_mean": 89.2,
-    "latency_mean_s": 0.343,
+    "latency_mean_s": 0.341,
     "cost_total_usd": 0.0,
     "violation_histogram": {},
     "plans_violating_rule": {}

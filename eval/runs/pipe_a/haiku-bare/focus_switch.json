@@ -1,0 +1,83 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"MA1521\", \"CS1010S\", \"CS1231S\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"MA1522\", \"CS2030S\", \"CS2040S\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS2106\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS3230\", \"ST2334\", \"MA2101\"]}, {\"semester\": 5, \"modules\": [\"CS3243\", \"CS3244\", \"CS4224\", \"MA2104\"]}, {\"semester\": 6, \"modules\": [\"CS4243\", \"CS4246\", \"CS4248\", \"CS3281\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4231\", \"CS4234\", \"CS4236\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4344\", \"ST2132\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"Nine semesters at 20 MC each give ample capacity for the remaining roughly 150 MC, and the AI specialisation (CS3243, CS3244, CS4243, CS4246, CS4248) is scheduled with prerequisites respected, using the 10 allowed UE slots. The module list is from my own recollection of the BComp (CS) requirements and was not verified against the official AY2026/27 handbook, so the total MC and exact requirement mapping should be confirmed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 33.27,
+  "cost_usd": 0.003726,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 7417,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:12+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "MA1521",
+        "CS1010S",
+        "CS1231S",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "MA1522",
+        "CS2030S",
+        "CS2040S",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2106"
+      ],
+      "4": [
+        "CS2105",
+        "CS3230",
+        "ST2334",
+        "MA2101"
+      ],
+      "5": [
+        "CS3243",
+        "CS3244",
+        "CS4224",
+        "MA2104"
+      ],
+      "6": [
+        "CS4243",
+        "CS4246",
+        "CS4248",
+        "CS3281",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS4231",
+        "CS4234",
+        "CS4236",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "CS4344",
+        "ST2132",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Nine semesters at 20 MC each give ample capacity for the remaining roughly 150 MC, and the AI specialisation (CS3243, CS3244, CS4243, CS4246, CS4248) is scheduled with prerequisites respected, using the 10 allowed UE slots. The module list is from my own recollection of the BComp (CS) requirements and was not verified against the official AY2026/27 handbook, so the total MC and exact requirement mapping should be confirmed."
+  },
+  "parse_error": null
+}

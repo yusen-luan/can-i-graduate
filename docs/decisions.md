@@ -108,3 +108,13 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
 - **D40 (Iter 3, Pipe A):** two Pipe A conditions: `full` (rules + catalog) and `bare` (answer conventions
   only). Why: `full` scored 100% because the prompt pre-formalises the spec; `bare` is how a student asks.
   Out-of-model codes are classified against the full NUSMods list, never silently accepted.
+- **D41 (Iter 3, Pipe B):** the LLM only writes the spec; `eval/run_pipe_b.py` runs the solver in-process and
+  the LLM never sees SAT/UNSAT. Why: errors stay pure translation errors and a solver-in-the-loop LLM could relax
+  requests until SAT. A refinement ablation may feed back spec-validation errors only, never the verdict.
+- **D42 (Iter 3, Pipe B):** spec = `formal` field for field, dicts as lists of pairs (structured outputs), completed
+  UEs as a count; module codes are `$defs` enums (schedulable + preclusion-only held codes, e.g. CS1010).
+  Fidelity = equality of `llm/spec.py:canonical` forms (defaults filled, no-op caps / default layout ignored).
+- **D43 (Iter 3, Pipe B):** a requested cap above `max_overload_units` is a faithful translation answered
+  INFEASIBLE (program assumption); any other invalid spec, or a solver `UNKNOWN`, is no verdict (scored wrong).
+- **D44 (Iter 3, scoring):** cost is reported per LLM row as $/1k requests at list prices, warm (prompt read from
+  cache) and cold (cache re-written each request), from mean usage. Why: per-sweep totals hide how cost scales.

@@ -42,12 +42,12 @@ that the evaluation can show *where* LLM-direct reasoning breaks down as complex
 | `src/solver.py` | CP-SAT solver: iter1 `build_and_solve` / iter2 `build_and_solve_iter2`, `solve_iter2`, `explain_infeasible_iter2` → `SolveResult`. |
 | `src/checker.py` | Solver-independent validators: `check_plan` (iter1) / `check_plan_iter2`. Never imports the solver. |
 | `src/plan_quality.py` | Soft 0–100 realism scorer for a *valid* plan (solver or LLM); not a constraint. |
-| `eval/` | Benchmark: `generate.py` → `instances/*.json` {nl_prompt, formal, ground_truth, meta}; `baselines.py` trivial controls; `run_pipe_a.py` LLM-direct runs (`--condition full|bare`) → `runs/`; `score.py` grades all Table-3 rows → `results/`. |
-| `llm/` | Claude API layer: `client.py` (models, `.env` key, cost), `prompts.py` (Pipe A rules+catalog / bare prompts, answer parsing). Key in git-ignored `.env`. |
+| `eval/` | Benchmark: `generate.py` → `instances/*.json` {nl_prompt, formal, ground_truth, meta}; `baselines.py` trivial controls; `run_pipe_a.py` LLM-direct runs (`--condition full|bare`), `run_pipe_b.py` LLM→spec→solver runs → `runs/`; `score.py` grades all Table-3 rows → `results/`. |
+| `llm/` | Claude API layer: `client.py` (models, `.env` key, cost), `prompts.py` (Pipe A rules+catalog / bare prompts, Pipe B translator prompt, answer parsing), `spec.py` (Pipe B spec schema ↔ solver input, fidelity). Key in git-ignored `.env`. |
 | `app/app.py` | Streamlit frontend over `solve_iter2`: benchmark-profile picker + iter3 controls → SAT/UNSAT → plan grid. |
 | `data/profiles/benchmark_profiles.yaml` | Representative student archetypes (student+scenario bundles) for the app picker + eval corpus; `demo_iter3_*` = CLI example. |
 | `scripts/ingest_nusmods.py` | Rebuilds the NUSMods snapshot. `scripts/generate_prereq_graph.py` regenerates `docs/prerequisite_graph.*`. |
-| `tests/` | pytest: `test_solver.py` iter1, `test_iter2.py`, `test_oracle.py` (oracle proof), `test_profiles.py`, `test_eval_prompts.py`, `test_pipe_a.py` (offline harness). |
+| `tests/` | pytest: `test_solver.py` iter1, `test_iter2.py`, `test_oracle.py` (oracle proof), `test_profiles.py`, `test_eval_prompts.py`, `test_pipe_a.py` / `test_pipe_b.py` (offline harnesses). |
 | `docs/developer_guide.md`; `AGENTS.md` | **Start here for iter2+ work**: architecture, schema, the add-a-constraint recipe. `AGENTS.md` is the agent entry point. |
 | `docs/solver_constraints.md` | **Authoritative** formal semantics (x[m,s]); iter2 section `I2.*`. `iter2_verification.md` = universe/rule verification; `iter2_plan.md` = plan + audit. |
 | `docs/decisions.md` | Modelling decisions + rationale (read before changing semantics). `docs/history.md` = finished iterations. |
@@ -67,7 +67,8 @@ python -m pytest tests -q
 python eval/generate.py                  # regenerate the benchmark corpus (deterministic)
 python eval/baselines.py                 # score always-SAT / canonical-4yr controls
 python eval/run_pipe_a.py --model haiku|sonnet|opus|all [--condition bare] [--dry-run] [--limit N]   # Pipe A (.env key)
-python eval/score.py                     # Table-3 metrics for controls + Pipe A runs + oracle
+python eval/run_pipe_b.py --model haiku|sonnet|opus|all [--dry-run] [--limit N] [--resolve]   # Pipe B
+python eval/score.py                     # Table-3 metrics + fidelity + cost for controls, Pipe A/B, oracle
 streamlit run app/app.py                 # iter2 frontend
 ```
 

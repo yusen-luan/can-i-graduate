@@ -1,0 +1,135 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[1,2,1,2,1,2,1,2,1],\"semester_caps\":[{\"semester\":5,\"max_units\":0}],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.628,
+  "cost_usd": 0.000416,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 683,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6415
+  },
+  "effort": "high",
+  "prompt_sha256": "90c6ea32c1ce4dfb",
+  "timestamp": "2026-10-28T03:54:09+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "semester_caps": [
+        {
+          "semester": 5,
+          "max_units": 0
+        }
+      ],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "OPTIMAL",
+    "wall_time_s": 0.448,
+    "num_variables": 1044,
+    "num_constraints": 3559
+  },
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231S",
+        "GEA1000",
+        "GEC1030",
+        "MA1521",
+        "UE_GENERIC_6"
+      ],
+      "2": [
+        "CS1101S",
+        "ES2660",
+        "GEC1015",
+        "IS1108",
+        "ST2334"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2003",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "DTK1234"
+      ],
+      "5": [],
+      "6": [
+        "GEN2004",
+        "UE_GENERIC_3",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "CS4243",
+        "CS4263",
+        "GESS1025",
+        "UE_GENERIC_1"
+      ],
+      "8": [
+        "CS3244",
+        "CS4248",
+        "GEN2000",
+        "UE_GENERIC_4",
+        "UE_GENERIC_9"
+      ],
+      "9": [
+        "CS3230",
+        "CS3264",
+        "ETP3201L",
+        "GEC1020",
+        "HSI1000",
+        "SC1101E"
+      ]
+    },
+    "reason": "OPTIMAL"
+  },
+  "parse_error": null,
+  "llm_latency_s": 4.18
+}

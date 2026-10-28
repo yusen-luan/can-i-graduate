@@ -163,6 +163,13 @@ Run `check_plan_iter2` on every produced plan. Prompt-cache the static rule text
 reasoning: the spec is pre-formalised); `bare` = answer conventions only, the model plans from its
 own NUS knowledge (how a student would actually ask). Results: `eval/results/pipe_a_2026-10-27.md`.
 
+**Implemented (Pipe B):** `llm/spec.py` + `llm/prompts.py:render_translator_prompt` + `eval/run_pipe_b.py`.
+The LLM fills a JSON spec (structured output; module codes are enums) from the same `nl_prompt`;
+the harness converts it to `student`+`scenario` and runs the solver in-process, so the LLM never sees
+the verdict (D41). The prompt carries the request conventions Pipe A `full` states, but no degree rules
+or catalog. `score.py` adds translation fidelity (canonical spec vs gold `formal`) and a warm/cold
+$/1k-requests cost profile for every LLM row. Results: `eval/results/pipe_b_2026-10-28.md`.
+
 ## 4. Models (decided)
 
 Compare the **Claude family for a size ablation**: `claude-opus-5-5`, `claude-sonnet-5-5`,

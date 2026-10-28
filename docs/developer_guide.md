@@ -121,6 +121,6 @@ streamlit run app/app.py                     # frontend
 
 ## 9. Roadmap
 Iter3 scope is frozen (no iter4): Special Terms, UROP and the benchmark + Pipe A
-harness are done (NOC dropped, D33). Remaining: Pipe B (LLM → spec → solver),
+and Pipe B (LLM → spec → solver, D41–D43) harnesses are done (NOC dropped, D33). Remaining:
 ablations, write-up — see `docs/status.md` "Next". Not planned: full GE/ID/CD
 lists in the CSP (only a verified subset is wired), accurate ATAP occupancy.

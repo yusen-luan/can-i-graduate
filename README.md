@@ -8,13 +8,15 @@ iterations of increasing realism (see `docs/history.md`, `docs/decisions.md`).
 
 Adds per-request constraints (Special Terms, per-semester caps / leave of absence, CS-count cap,
 FYP/UROP with the CP cap, pin/forbid/deadline), a proof suite for the oracle, a 35-instance
-natural-language benchmark (`eval/instances/`) and Pipeline A: Claude answering directly, graded by
-the independent checker. Status and results: `docs/status.md`, `eval/results/`.
+natural-language benchmark (`eval/instances/`), Pipeline A (Claude answering directly) and Pipeline B
+(Claude translating the request into a spec that the CP-SAT solver solves), both graded by the
+independent checker. Status and results: `docs/status.md`, `eval/results/`.
 
 ```bash
 python eval/generate.py                                   # rebuild the benchmark corpus
 cp .env.example .env                                      # then add ANTHROPIC_API_KEY
 python eval/run_pipe_a.py --model all [--condition bare]  # LLM-direct runs -> eval/runs/
+python eval/run_pipe_b.py --model all                     # LLM->spec->solver runs -> eval/runs/
 python eval/score.py                                      # Table-3 metrics -> eval/results/
 ```
 

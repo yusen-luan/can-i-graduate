@@ -188,6 +188,65 @@ Return JSON with:
 """
 
 
+def render_translator_prompt(modules, program, focus_areas, preclusions, rename=None):
+    """Pipeline B (LLM-as-translator) system prompt: how to fill the llm/spec.py
+    JSON from the student's request. It carries the request conventions Pipe A
+    `full` also states (defaults, Special Terms, what each request means) but NO
+    degree rules, prerequisites or offerings: the solver owns those. Static, so
+    cacheable, and free of instance-specific text."""
+    from llm.spec import held_only_codes, industrial_option_keys, module_codes
+    R = lambda c: (rename or {}).get(c, c)  # noqa: E731
+    L = lambda codes: ", ".join(R(c) for c in codes)  # noqa: E731
+    opts = program["breadth_depth"]["industrial_experience"]["options"]
+    keys = industrial_option_keys(program)
+    opt_lines = "\n".join(
+        f"  - \"{R(k)}\": " + " + ".join(f"{R(m)} {modules[m]['title']}" for m in o["set"])
+        for k, o in zip(keys, opts))
+    focus_lines = "\n".join(f"  - \"{a}\"" for a in focus_areas["areas"])
+    n_ue = len(program["unrestricted_electives"]["candidates"])
+    fyp = program["breadth_depth"]["fyp"]["code"]
+    urop = program["breadth_depth"]["urop"]["codes"]
+    code_lines = "\n".join(f"{R(c)} | {modules[c]['title']}" for c in module_codes(modules))
+    legacy = L(held_only_codes(modules, preclusions))
+
+    return f"""You translate a student's degree-planning request into a formal specification for a constraint solver. The student studies the NUS Bachelor of Computing (Computer Science), AY2026/27 cohort. The solver already knows every degree rule, prerequisite, module offering and unit count; your only job is to record the student's situation and requests exactly as stated.
+
+Do NOT plan the degree and do NOT judge whether the request is achievable. If a request looks impossible, still record it faithfully: the solver decides feasibility. Never drop, soften or "fix" a request.
+
+# Student situation ("student")
+- "completed": modules the student has already passed. "exempted": modules they are exempted from (advanced placement, transfer credit). Use only codes from the module list below, or one of these older / alternative modules a student may already hold (they can be recorded as completed or exempted but nowhere else): {legacy}.
+- "completed_unrestricted_electives": how many generic unrestricted electives they have already completed (0 if none mentioned; at most {n_ue}).
+- "has_h2_math": true unless the student says they lack A-level H2 Mathematics (or equivalent).
+- "english_path": "direct_es2660" unless the student says their English placement requires bridging: "es1103_required" if they must take ES1103 first, "es1000_then_es1103" if they must take ES1000 and then ES1103.
+- "eligible_fyp": true only if the student says their GPA qualifies them for the final-year project ({R(fyp)}); otherwise false.
+- "eligible_urop": true unless the student says they are not eligible for UROP.
+
+# Request ("request")
+- "target_semesters": the number of semesters T they want to graduate within. Plan semesters are numbered 1..T and every other field refers to these numbers.
+- "max_units_per_semester": their per-semester unit cap (MC); 20 (the standard load) if they do not state one.
+- "focus_area": the focus area they want to specialise in, or "any". One of:
+{focus_lines}
+- "industrial_option": "any", or the internship option they name (any module of the option identifies it):
+{opt_lines}
+- "want_fyp": they want to do the final-year project ({R(fyp)}). "want_urop": they want to do a UROP research project ({L(urop)}).
+- "term_layout": empty unless they designate some plan semesters as Special Terms. Otherwise list the NUS term of every plan semester 1..T (exactly T entries): regular semesters alternate 1, 2, 1, 2, ... in order starting with 1, skipping the special slots; a special slot after a Sem 2 is 3 (Special Term 3) and one after a Special Term 3 is 4 (Special Term 4).
+- "semester_caps": semester-specific unit caps, e.g. "at most 8 MC in semester 6" -> {{"semester": 6, "max_units": 8}}. Taking a semester off entirely means "max_units": 0.
+- "max_cs_modules_per_sem": the most CS/IFS/CP-coded modules they will take in any one semester; 0 = no such limit.
+- "min_units_per_semester": the minimum load in every semester they are enrolled in; 0 = no minimum.
+- "no_empty_semesters": true if they want no empty semesters between enrolled ones.
+- "not_same_semester": pairs of modules they do not want in the same semester.
+- "require_modules": modules they insist on taking. "forbid_modules": modules they want to avoid.
+- "deadlines": modules they want finished by a given plan semester, e.g. "finish CS2040S by semester 3" -> {{"module": "CS2040S", "semester": 3}}.
+Leave every field at its neutral value (empty list, 0, false, "any") unless the student asks for it.
+
+# Anything else
+"unsupported_requests": quote any request that none of the fields above can express (empty list if none). Do not invent fields.
+
+# Module list (code | title)
+{code_lines}
+"""
+
+
 # --- parsing the answer -----------------------------------------------------------
 def parse_response(text):
     """Model JSON -> {"feasible", "plan" {sem: [codes]}, "reason"} or raise ValueError."""

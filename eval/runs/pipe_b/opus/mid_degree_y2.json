@@ -1,0 +1,120 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"student\":{\"completed\":[\"CS1101S\",\"CS1231S\",\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"GEA1000\",\"MA1521\",\"MA1522\",\"ST2334\"],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":8,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.113,
+  "cost_usd": 0.007962,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 305,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6788
+  },
+  "effort": "high",
+  "prompt_sha256": "7fdecaa362bdcefc",
+  "timestamp": "2026-10-28T04:02:00+00:00",
+  "spec": {
+    "student": {
+      "completed": [
+        "CS1101S",
+        "CS1231S",
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660",
+        "GEA1000",
+        "MA1521",
+        "MA1522",
+        "ST2334"
+      ],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [],
+      "semester_caps": [],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "OPTIMAL",
+    "wall_time_s": 0.363,
+    "num_variables": 848,
+    "num_constraints": 1963
+  },
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "GEN2000",
+        "GEN2001",
+        "GESS1001",
+        "UE_GENERIC_5",
+        "UE_GENERIC_8"
+      ],
+      "2": [
+        "CS2106",
+        "CS3243",
+        "CS4243"
+      ],
+      "3": [
+        "CS4244",
+        "IS1108"
+      ],
+      "4": [
+        "CS4246",
+        "GEC1020",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "GEC1015",
+        "GESS1025",
+        "HSI1000",
+        "IE2141",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "GEN2003",
+        "GEN2004"
+      ],
+      "7": [
+        "CS2101",
+        "CS2103T",
+        "CS4263"
+      ],
+      "8": [
+        "CS2109S",
+        "CS3230",
+        "ETP3201L",
+        "SC1101E",
+        "UE_GENERIC_4"
+      ]
+    },
+    "reason": "OPTIMAL"
+  },
+  "parse_error": null,
+  "llm_latency_s": 3.75
+}

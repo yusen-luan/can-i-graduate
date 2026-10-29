@@ -1,0 +1,80 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"IS1128\",\"GESS1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS2107\",\"CS2101\",\"GEC1000\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"ES2660\",\"GEN2000\",\"CS3210\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"CS3211\",\"CS3219\",\"CS4238\",\"GEX1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4236\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4239\",\"CS5231\",\"CS4231\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The 160 MC degree fits in 7 semesters at no more than 26 MC each. The plan covers the university requirements, CS foundation, maths, IT professionalism, the CP3880 industry attachment, the Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239, CS5231), four CS electives and 7 unrestricted electives. I could not verify some module offerings, prerequisites and the exact structure of the requirements, so the plan may need adjusting.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 79.15,
+  "cost_usd": 0.110907,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 11054,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:12+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000",
+        "IS1128",
+        "GESS1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "ST2334"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS2107",
+        "CS2101",
+        "GEC1000"
+      ],
+      "4": [
+        "CS3230",
+        "ES2660",
+        "GEN2000",
+        "CS3210",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "5": [
+        "CS3235",
+        "CS3211",
+        "CS3219",
+        "CS4238",
+        "GEX1000",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CP3880",
+        "CS4236",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS4239",
+        "CS5231",
+        "CS4231",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ]
+    },
+    "reason": "The 160 MC degree fits in 7 semesters at no more than 26 MC each. The plan covers the university requirements, CS foundation, maths, IT professionalism, the CP3880 industry attachment, the Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239, CS5231), four CS electives and 7 unrestricted electives. I could not verify some module offerings, prerequisites and the exact structure of the requirements, so the plan may need adjusting."
+  },
+  "parse_error": null
+}

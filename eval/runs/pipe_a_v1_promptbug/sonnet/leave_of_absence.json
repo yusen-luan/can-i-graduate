@@ -1,0 +1,82 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"IS1108\",\"GEC1015\",\"GESS1020\",\"CP3880\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4248\",\"CS4244\",\"GEN2000\",\"DTK1234\",\"IE2141\"]},{\"semester\":7,\"modules\":[\"CS4263\",\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"All required and university-level modules, 3 ID/CD modules and the AI focus (CS2109S, CS3243, CS3244, CS4248, CS4244, CS4263) are covered. CP3880 is the internship, giving 32 MC of B&D, 12 MC at level 4000 and 160 MC in total. No semester exceeds 20 MC, semester 5 is empty, and all prerequisites and offered terms are met.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 26.32,
+  "cost_usd": 0.032936,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 2993,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:31+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "IS1108",
+        "GEC1015",
+        "GESS1020",
+        "CP3880"
+      ],
+      "5": [],
+      "6": [
+        "CS4248",
+        "CS4244",
+        "GEN2000",
+        "DTK1234",
+        "IE2141"
+      ],
+      "7": [
+        "CS4263",
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "All required and university-level modules, 3 ID/CD modules and the AI focus (CS2109S, CS3243, CS3244, CS4248, CS4244, CS4263) are covered. CP3880 is the internship, giving 32 MC of B&D, 12 MC at level 4000 and 160 MC in total. No semester exceeds 20 MC, semester 5 is empty, and all prerequisites and offered terms are met."
+  },
+  "parse_error": null
+}

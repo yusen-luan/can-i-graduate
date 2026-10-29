@@ -1,0 +1,80 @@
+{
+  "instance": "fyp_urop_trap",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"GES1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\",\"CS2101\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"IS1128\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4248\",\"CS4243\",\"GEN2000\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"GEI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"CP3209\"]},{\"semester\":8,\"modules\":[\"CS4246\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"The plan totals 160 MC across 9 semesters with at most 20 MC each. It covers the foundation, maths, general education, the internship, the team project, an AI focus area (CS3243, CS3244, CS4246, CS4248, CS4243), the final-year project CP4101 and the UROP CP3209. Some module codes, in particular the general education modules, and some requirement details are from memory and not verified against the AY2026/27 rules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 53.56,
+  "cost_usd": 0.072667,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 7222,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:20:49+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "GES1000"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334",
+        "CS2101"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "IS1128",
+        "GEC1000"
+      ],
+      "5": [
+        "CS3203",
+        "CS4248",
+        "CS4243",
+        "GEN2000"
+      ],
+      "6": [
+        "CP3880",
+        "GEI1000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CP4101",
+        "CP3209"
+      ],
+      "8": [
+        "CS4246",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "9": [
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "The plan totals 160 MC across 9 semesters with at most 20 MC each. It covers the foundation, maths, general education, the internship, the team project, an AI focus area (CS3243, CS3244, CS4246, CS4248, CS4243), the final-year project CP4101 and the UROP CP3209. Some module codes, in particular the general education modules, and some requirement details are from memory and not verified against the AY2026/27 rules."
+  },
+  "parse_error": null
+}

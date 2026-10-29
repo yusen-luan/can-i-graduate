@@ -1,0 +1,26 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Six semesters at 20 MC each allow at most 120 MC of counted load. Industrial-experience modules are exempt from the load, but the largest allowed option adds only 12 MC, so the total is at most 132 MC, below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.66,
+  "cost_usd": 0.007024,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 404,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:05+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Six semesters at 20 MC each allow at most 120 MC of counted load. Industrial-experience modules are exempt from the load, but the largest allowed option adds only 12 MC, so the total is at most 132 MC, below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

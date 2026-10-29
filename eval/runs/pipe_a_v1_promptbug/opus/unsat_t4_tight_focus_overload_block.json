@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With semester 4 off, only 6 semesters remain, and the 26 MC cap is effectively 24 MC because almost every module is a multiple of 4 MC; the only 5 MC modules (CS3216, CS3217) add at most 2 MC, so at most 146 MC can be taken. The industrial-experience option is exempt from load but is at most 12 MC, so at least 148 MC must still fit within the semester caps, which makes the 160 MC graduation requirement unreachable.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.05,
+  "cost_usd": 0.040818,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 1883,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:02:57+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With semester 4 off, only 6 semesters remain, and the 26 MC cap is effectively 24 MC because almost every module is a multiple of 4 MC; the only 5 MC modules (CS3216, CS3217) add at most 2 MC, so at most 146 MC can be taken. The industrial-experience option is exempt from load but is at most 12 MC, so at least 148 MC must still fit within the semester caps, which makes the 160 MC graduation requirement unreachable."
+  },
+  "parse_error": null
+}

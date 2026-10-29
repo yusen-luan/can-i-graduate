@@ -1,0 +1,80 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2109S\",\"CS3230\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS3231\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS4430\",\"CS2102\",\"ES2660\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4234\",\"GEA1000\",\"DTK1234\",\"SC1101E\"]},{\"semester\":6,\"modules\":[\"CS2107\",\"GEC1020\",\"HSI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"GESS1020\",\"GEN2003\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"A 9-semester plan works: algorithms focus (CS3230, CS3231, CS4231, CS4234, CS4430 with 12 MC at level 4000), CP3880 as the single industrial option, ID/CD trio DTK1234/HSI1000/SC1101E, and 9 generic electives bring the total to exactly 160 MC with no semester above 20 MC and all prerequisites and term offerings respected.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 47.82,
+  "cost_usd": 0.007712,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 11899,
+    "cache_creation_input_tokens": 14030,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:49:52+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522"
+      ],
+      "2": [
+        "CS2109S",
+        "CS3230",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS3231"
+      ],
+      "4": [
+        "CS4231",
+        "CS4430",
+        "CS2102",
+        "ES2660",
+        "CP3880"
+      ],
+      "5": [
+        "CS4234",
+        "GEA1000",
+        "DTK1234",
+        "SC1101E"
+      ],
+      "6": [
+        "CS2107",
+        "GEC1020",
+        "HSI1000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "GESS1020",
+        "GEN2003",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A 9-semester plan works: algorithms focus (CS3230, CS3231, CS4231, CS4234, CS4430 with 12 MC at level 4000), CP3880 as the single industrial option, ID/CD trio DTK1234/HSI1000/SC1101E, and 9 generic electives bring the total to exactly 160 MC with no semester above 20 MC and all prerequisites and term offerings respected."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Seven semesters at a 20 MC cap allow at most 140 MC of regular load. Industrial-experience modules do not count toward the load, but only one option may be taken and the largest is 12 MC. That gives at most 152 MC, below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.25,
+  "cost_usd": 0.0067,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 373,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:08+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Seven semesters at a 20 MC cap allow at most 140 MC of regular load. Industrial-experience modules do not count toward the load, but only one option may be taken and the largest is 12 MC. That gives at most 152 MC, below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

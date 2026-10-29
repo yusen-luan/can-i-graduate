@@ -28,6 +28,10 @@ NUSMods API ──ingest_nusmods.py──> data/snapshot_2026-2027/modules.yaml 
          checker.check_plan_iter2() <───────┘ (independent) ───┘  (tests assert checker(plan)==[])
                                             │
               app/app.py (Streamlit) ───────┘  src/solver.py --iter2 (CLI)
+
+eval/generate.py ─> eval/instances/*.json {nl_prompt, formal, ground_truth (solver), meta}
+eval/run_pipe_a.py (llm/ prompts + Claude API) ─> eval/runs/pipe_a/<model>[-bare]/*.json
+eval/score.py ─ check_plan_iter2 + plan_quality ─> eval/results/ (Table-3 rows)
 ```
 
 **Two-layer split, do not merge:** module *facts* (NUSMods snapshot) vs degree
@@ -79,7 +83,10 @@ CS2101+CS2103T same-semester bundle · real offered terms · per-sem unit cap
 focus area (3 primaries incl ≥1 L4000) · ≥12u L4000 · B&D ≥32u · industrial =
 exactly one option (no extras) · CP-coded ≤12u · year-long C&E service-learning
 (X Term1 → contiguous Y Term2, X not in last sem) · total ≥160u · optional
-scenario preferences (heavy_conflicts / min-load / no-gaps).
+scenario preferences (heavy_conflicts / min-load / no-gaps). **Iter3:** Special-Term
+`term_layout` (I2.14) · per-semester cap vector, 0 = leave (I2.15) · CS-count cap
+(I2.16) · FYP/UROP with eligibility + CP cap, CP4101 may replace the internship
+(I2.17) · pin / forbid / deadline (I2.18).
 
 Objective: `minimise 100·total_units + module_count` — only a tie-break, so it
 stays a feasibility CSP; with the 160 floor it lands at exactly 160.
@@ -95,15 +102,16 @@ or offered-term anomalies vs assumptions). Always trust NUSMods over faculty pag
 pip install -r requirements.txt
 python src/model.py --iter2                 # validate the iter2 model
 python src/solver.py --iter2 [--target-semesters N --max-units U --focus-area A --industrial-option C]
-python -m pytest tests -q                    # 91 tests (49 iter1 + 42 iter2)
+python -m pytest tests -q                    # full suite, must stay green
 streamlit run app/app.py                     # frontend
 ```
 
 ## 8. Known limitations / deliberate simplifications (iter2)
 - ULR pick-lists (GEC/GESS/GEN), ID/CD wire a *verified subset* of the full lists
   (`data/ge_pillars.yaml`, `data/id_cd.yaml`); UE is generic placeholders.
-- No Special Terms (3,4): special-term-only offerings are treated unavailable;
-  internships are handled by excluding their units from the per-sem cap.
+- Special Terms (3,4) only when a request sets `term_layout` (I2.14); by default
+  plans use Sem 1/2 and internships are handled by excluding their units from the
+  per-sem cap.
 - CP3107/CP3110 appear in both C&E and Industrial Experience; the double-role is
   not modelled (kept as industrial).
 - The 32u B&D is a floor; extra Computing counts as UE (no label partition, D15).
@@ -111,8 +119,8 @@ streamlit run app/app.py                     # frontend
 - `program_cs_iter1.yaml` + iter1 solver/checker/tests are kept intact; iter2 is
   additive. Don't break the 49 iter1 tests.
 
-## 9. Roadmap (iter3+ candidates)
-Real full GE/ID/CD lists · Special-Term slots + accurate 6-month-ATAP semester
-occupancy · NOC / NUSC / UROP program overlays · soft-objective workload
-optimisation as an ablation · then the actual research deliverable: NL problem
-instances + the two LLM pipelines + evaluation harness (the checker grades them).
+## 9. Roadmap
+Iter3 scope is frozen (no iter4): Special Terms, UROP and the benchmark + Pipe A
+and Pipe B (LLM → spec → solver, D41–D43) harnesses are done (NOC dropped, D33). Remaining:
+ablations, write-up — see `docs/status.md` "Next". Not planned: full GE/ID/CD
+lists in the CSP (only a verified subset is wired), accurate ATAP occupancy.

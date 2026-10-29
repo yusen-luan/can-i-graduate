@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The BComp (Computer Science) degree requires 160 MC, but 6 semesters at a maximum of 25 MC each allows only 150 MC, so the degree cannot be completed within the stated limits.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.59,
+  "cost_usd": 0.002691,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 234,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:49+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) degree requires 160 MC, but 6 semesters at a maximum of 25 MC each allows only 150 MC, so the degree cannot be completed within the stated limits."
+  },
+  "parse_error": null
+}

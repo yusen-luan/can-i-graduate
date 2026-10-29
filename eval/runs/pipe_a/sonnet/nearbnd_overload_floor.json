@@ -1,0 +1,79 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2107\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2105\",\"CS2106\",\"CS3230\",\"CS2109S\",\"GESS1001\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS3235\",\"GEN2000\",\"DTK1234\"]},{\"semester\":5,\"modules\":[\"CS4239\",\"CS4236\",\"HSI1000\",\"IS1128\",\"UE\",\"UE\",\"CP3880\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"All prerequisites, term offerings and the 26 MC cap are met; the plan has 160 MC, covers the required modules and university requirements, and has computer security primaries CS2107, CS3235, CS4236, CS4238, CS4239 (12 MC at level 4000). It also has 3 ID modules (DTK1234, HSI1000, IS1128), 36 MC of B&D, and CP3880 as the only industrial-experience option.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.66,
+  "cost_usd": 0.031736,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 2875,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:12:40+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2105",
+        "CS2106",
+        "CS3230",
+        "CS2109S",
+        "GESS1001",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS3235",
+        "GEN2000",
+        "DTK1234"
+      ],
+      "5": [
+        "CS4239",
+        "CS4236",
+        "HSI1000",
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "CP3880"
+      ],
+      "6": [
+        "CS4238",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "All prerequisites, term offerings and the 26 MC cap are met; the plan has 160 MC, covers the required modules and university requirements, and has computer security primaries CS2107, CS3235, CS4236, CS4238, CS4239 (12 MC at level 4000). It also has 3 ID modules (DTK1234, HSI1000, IS1128), 36 MC of B&D, and CP3880 as the only industrial-experience option."
+  },
+  "parse_error": null
+}

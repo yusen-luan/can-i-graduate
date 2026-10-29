@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The Bachelor of Computing (Computer Science) requires 160 MC, but 4 semesters at a maximum of 28 MC each gives only 112 MC, and the student has no completed or exempted modules to make up the gap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.11,
+  "cost_usd": 0.002021,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 167,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:44+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The Bachelor of Computing (Computer Science) requires 160 MC, but 4 semesters at a maximum of 28 MC each gives only 112 MC, and the student has no completed or exempted modules to make up the gap."
+  },
+  "parse_error": null
+}

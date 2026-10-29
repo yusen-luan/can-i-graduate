@@ -1,0 +1,79 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS3230\",\"CS2109S\",\"CS2106\"]},{\"semester\":3,\"modules\":[\"CS3231\",\"CS4234\",\"ST2334\",\"ES2660\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS4430\",\"CS3236\",\"DTK1234\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"IE2141\",\"IS1128\",\"GESS1001\",\"GEN2001\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan reaches 160 MC and meets all required modules and university requirements. It covers the algorithms and theory focus area with CS3230, CS3231, CS4231, CS4234, CS4430 and CS3236. It has 12 MC at level 4000 (CS4231, CS4234, CS4430) and 32 MC or more of B&D, including the CP3880 internship. It keeps every semester at 20 MC or less and respects all prerequisites and offered terms.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 24.37,
+  "cost_usd": 0.062679,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 2743,
+    "cache_creation_input_tokens": 14030,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:57:42+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2103T",
+        "CS2101",
+        "CS3230",
+        "CS2109S",
+        "CS2106"
+      ],
+      "3": [
+        "CS3231",
+        "CS4234",
+        "ST2334",
+        "ES2660",
+        "IS1108"
+      ],
+      "4": [
+        "CS4231",
+        "CS4430",
+        "CS3236",
+        "DTK1234",
+        "GEC1015"
+      ],
+      "5": [
+        "CP3880",
+        "IE2141",
+        "IS1128",
+        "GESS1001",
+        "GEN2001"
+      ],
+      "6": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "The plan reaches 160 MC and meets all required modules and university requirements. It covers the algorithms and theory focus area with CS3230, CS3231, CS4231, CS4234, CS4430 and CS3236. It has 12 MC at level 4000 (CS4231, CS4234, CS4430) and 32 MC or more of B&D, including the CP3880 internship. It keeps every semester at 20 MC or less and respects all prerequisites and offered terms."
+  },
+  "parse_error": null
+}

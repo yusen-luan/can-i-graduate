@@ -1,0 +1,85 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3213\",\"ES2660\",\"GEA1000\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4263\",\"IS1108\",\"GEC1015\"]},{\"semester\":6,\"modules\":[\"CS4218\",\"CS3219\",\"CP3880\"]},{\"semester\":7,\"modules\":[\"GESS1020\",\"GEN2003\",\"DTK1234\",\"IE2141\"]},{\"semester\":8,\"modules\":[\"HSI1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This plan reaches exactly 160 MC. Semester 6 carries only 8 MC because CP3880 (12 MC) does not count toward the load, and it meets the software engineering focus with CS2103T, CS3213, CS3219, CS4211 and CS4218, plus 12 MC at level 4000 and 32 MC of breadth and depth modules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 14.64,
+  "cost_usd": 0.039084,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 1790,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:29+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "CS3213",
+        "ES2660",
+        "GEA1000"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "IS1108",
+        "GEC1015"
+      ],
+      "6": [
+        "CS4218",
+        "CS3219",
+        "CP3880"
+      ],
+      "7": [
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "IE2141"
+      ],
+      "8": [
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "This plan reaches exactly 160 MC. Semester 6 carries only 8 MC because CP3880 (12 MC) does not count toward the load, and it meets the software engineering focus with CS2103T, CS3213, CS3219, CS4211 and CS4218, plus 12 MC at level 4000 and 32 MC of breadth and depth modules."
+  },
+  "parse_error": null
+}

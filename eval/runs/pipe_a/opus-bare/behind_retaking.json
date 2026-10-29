@@ -1,0 +1,79 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2100\",\"CS2103T\",\"CS2101\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"CS3231\",\"GES1010\"]},{\"semester\":4,\"modules\":[\"CS3203\",\"CS3233\",\"CS4232\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS3236\",\"GEN2001\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"HSI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"HSS1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Yes, it can be done in 8 of your 9 semesters, with no semester over 20 MC and 160 MC in total. The Algorithms & Theory focus area is covered by CS3230, CS3231, CS3236, CS4231, CS4232 and CS4234, but the general-education and interdisciplinary course codes (GEC1015, GES1010, GEN2001, DTK1234, HSI1000, HSS1000) are placeholders, and course prerequisites and semester offerings should be checked against the current NUS catalogue.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 58.93,
+  "cost_usd": 0.119883,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 5730,
+    "cache_creation_input_tokens": 987,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:24:58+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2100",
+        "CS2103T",
+        "CS2101",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "CS3231",
+        "GES1010"
+      ],
+      "4": [
+        "CS3203",
+        "CS3233",
+        "CS4232",
+        "GEC1015"
+      ],
+      "5": [
+        "CS4231",
+        "CS4234",
+        "CS3236",
+        "GEN2001",
+        "DTK1234"
+      ],
+      "6": [
+        "CP3880",
+        "HSI1000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "HSS1000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": []
+    },
+    "reason": "Yes, it can be done in 8 of your 9 semesters, with no semester over 20 MC and 160 MC in total. The Algorithms & Theory focus area is covered by CS3230, CS3231, CS3236, CS4231, CS4232 and CS4234, but the general-education and interdisciplinary course codes (GEC1015, GES1010, GEN2001, DTK1234, HSI1000, HSS1000) are placeholders, and course prerequisites and semester offerings should be checked against the current NUS catalogue."
+  },
+  "parse_error": null
+}

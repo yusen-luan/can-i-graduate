@@ -1,0 +1,46 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS4263\", \"CS3230\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS3263\", \"CS4248\", \"IS1108\", \"DTK1234\"]}, {\"semester\": 3, \"modules\": [\"CP3880\"]}, {\"semester\": 4, \"modules\": []}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": []}, {\"semester\": 7, \"modules\": []}, {\"semester\": 8, \"modules\": []}], \"reason\": \"Your 120 completed MC plus these modules reach exactly 160 MC, with the AI focus (5 primaries, 3 at level 4000+), the required CS3230/GEA1000/IS1108, one more ID module for the ID/CD rule, and the CP3880 internship (which is outside the unit load), all within 20 MC per semester; semesters 4 to 8 are left empty because nothing else is needed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 30.73,
+  "cost_usd": 0.004039,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 7750,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:06:15+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS4263",
+        "CS3230",
+        "GEA1000"
+      ],
+      "2": [
+        "CS3263",
+        "CS4248",
+        "IS1108",
+        "DTK1234"
+      ],
+      "3": [
+        "CP3880"
+      ],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "Your 120 completed MC plus these modules reach exactly 160 MC, with the AI focus (5 primaries, 3 at level 4000+), the required CS3230/GEA1000/IS1108, one more ID module for the ID/CD rule, and the CP3880 internship (which is outside the unit load), all within 20 MC per semester; semesters 4 to 8 are left empty because nothing else is needed."
+  },
+  "parse_error": null
+}

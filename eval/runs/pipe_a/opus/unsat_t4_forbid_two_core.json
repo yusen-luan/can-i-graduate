@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 and CS2103T are both required modules for graduation, so your request to avoid them cannot be met. No plan can satisfy the graduation requirements without them, whatever the number of semesters or unit cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.51,
+  "cost_usd": 0.00566,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 124,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:47+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 and CS2103T are both required modules for graduation, so your request to avoid them cannot be met. No plan can satisfy the graduation requirements without them, whatever the number of semesters or unit cap."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,81 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3219\",\"CS3213\",\"DTK1234\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4218\",\"GEC1015\",\"GESS1020\",\"GEN2000\",\"SC1101E\"]},{\"semester\":6,\"modules\":[\"CP4106\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan reaches 160 MC and covers all required modules and university requirements. Its ID/CD picks are DTK1234, IS1128 (ID) and SC1101E (CD). Focus area software engineering is met by CS2103T, CS3213, CS3219 and CS4218. Level 4000 is 12 MC (CS4218 and CP4106). Breadth and Depth is 32 MC. Industrial experience is CP3880 after CS2101 and CS2103T, and the UROP is CP4106. No semester exceeds 20 MC, counting the 10 generic electives at 4 MC each.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 17.82,
+  "cost_usd": 0.028086,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 2506,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:12:19+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ES2660"
+      ],
+      "4": [
+        "CS3230",
+        "CS3219",
+        "CS3213",
+        "DTK1234",
+        "IS1128"
+      ],
+      "5": [
+        "CP3880",
+        "CS4218",
+        "GEC1015",
+        "GESS1020",
+        "GEN2000",
+        "SC1101E"
+      ],
+      "6": [
+        "CP4106",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "The plan reaches 160 MC and covers all required modules and university requirements. Its ID/CD picks are DTK1234, IS1128 (ID) and SC1101E (CD). Focus area software engineering is met by CS2103T, CS3213, CS3219 and CS4218. Level 4000 is 12 MC (CS4218 and CP4106). Breadth and Depth is 32 MC. Industrial experience is CP3880 after CS2101 and CS2103T, and the UROP is CP4106. No semester exceeds 20 MC, counting the 10 generic electives at 4 MC each."
+  },
+  "parse_error": null
+}

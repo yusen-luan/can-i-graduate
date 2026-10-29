@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow only 112 MC. Even adding an industrial-experience module, which does not count toward the load (at most 12 MC), gives about 124 MC, still short of 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.61,
+  "cost_usd": 0.00544,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 247,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:00+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow only 112 MC. Even adding an industrial-experience module, which does not count toward the load (at most 12 MC), gives about 124 MC, still short of 160."
+  },
+  "parse_error": null
+}

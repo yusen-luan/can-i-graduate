@@ -16,7 +16,7 @@ assumptions:
   - 'ULR pick-list pillars (Cultures GEC%, Singapore GESS%, Communities GEN%) and ID/CD use a verified real NUSMods subset (full authoritative lists in ge_pillars.yaml / id_cd.yaml); only Unrestricted Electives remain generic placeholders.'
   - 'Year-long Communities & Engagement service learning (GEN..X in Sem 1, GEN..Y in the contiguous Sem 2) is modelled with X carrying the 4u pillar credit and Y a 0u continuation.'
   - 'Modules with no NUSMods semesterData (by-arrangement project/internship courses) default to being offered in both semesters; flagged in the ingestion report.'
-  - 'Planning uses only Semesters 1 and 2; NUS Special Terms (3,4) are not modelled, so special-term-only offerings are treated as unavailable.'
+  - 'By default planning uses only Semesters 1 and 2 (special-term-only offerings unavailable); Special Terms 3/4 are used only when a request sets term_layout (iter3 C5, I2.14).'
   - 'Breadth & Depth is a 32-unit Computing (CS/IFS/CP) bucket containing the focus area, >=12u at level-4000 and the 6-12u industrial experience; verified against the cohort page + NUS Bulletin. There is NO separate team-project requirement in AY2026/27.'
   - 'Industrial-experience units are excluded from the per-semester unit cap because internships run over the vacation / special term (NUSMods shows CP3880 in terms 1-4).'
   - 'Computing units beyond the 32u B&D count as Unrestricted Electives; UE is modelled as a residual filler to 160u, not a fixed 40u (no per-bucket unit partition).'
@@ -104,6 +104,14 @@ breadth_depth:
   cp_coded:
     max_units: 12                       # excludes industrial experience
     codes: [CP3106, CP3209, CP4101, CP4106]
+  # iter3 C3: Final-Year Project and UROP research, requestable via the scenario
+  # (want_fyp / want_urop) IN ADDITION TO the mandatory industrial experience.
+  # All are cp_coded, so the 12u CP cap binds them (CP4101=12u fills the cap, so
+  # FYP + UROP together is infeasible). See docs/solver_constraints.md I2.17.
+  fyp:
+    code: CP4101                        # 12u; gated by student.eligible_fyp
+  urop:
+    codes: [CP3106, CP3209, CP4106]     # gated by student.eligible_urop
 
 unrestricted_electives:
   candidates: [UE_GENERIC_1, UE_GENERIC_2, UE_GENERIC_3, UE_GENERIC_4, UE_GENERIC_5,

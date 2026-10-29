@@ -1,0 +1,119 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":8,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.092,
+  "cost_usd": 0.004036,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 250,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6788
+  },
+  "effort": "high",
+  "prompt_sha256": "7fdecaa362bdcefc",
+  "timestamp": "2026-10-28T04:01:22+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [],
+      "semester_caps": [],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "OPTIMAL",
+    "wall_time_s": 0.452,
+    "num_variables": 928,
+    "num_constraints": 3079
+  },
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231S",
+        "GESS1025",
+        "MA1521",
+        "UE_GENERIC_4",
+        "UE_GENERIC_7"
+      ],
+      "2": [
+        "CS1101S",
+        "GEN2004",
+        "IE2141",
+        "ST2334",
+        "UE_GENERIC_9"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2001",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ES2660",
+        "GEC1015"
+      ],
+      "5": [
+        "CS2106",
+        "GEC1030",
+        "GESS1020",
+        "IS1128"
+      ],
+      "6": [
+        "SC1101E",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS3263",
+        "CS3264",
+        "CS4263",
+        "GEA1000",
+        "IS1108"
+      ],
+      "8": [
+        "CS3230",
+        "CS4244",
+        "CS4262",
+        "ETP3201L",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "OPTIMAL"
+  },
+  "parse_error": null,
+  "llm_latency_s": 9.64
+}

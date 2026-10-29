@@ -1,0 +1,83 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\", \"ES2660\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"CS2100\", \"GESS1020\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": [\"ST2334\", \"CS2101\", \"CS2103T\", \"CS4263\", \"GEC1020\"]}, {\"semester\": 5, \"modules\": [\"CS2109S\", \"CS2106\", \"CS2102\", \"IS1108\", \"SC1101E\"]}, {\"semester\": 6, \"modules\": [\"CS3263\", \"CS3230\", \"CS2107\", \"CS3244\", \"HSI1000\"]}, {\"semester\": 7, \"modules\": [\"CS4244\", \"GEN2003\", \"DTK1234\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4101\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": []}], \"reason\": \"Assuming H2 Mathematics and direct English placement, the plan uses Special Term 3 as an empty semester, takes CP4101 in place of an internship since the GPA qualifies, keeps every semester within 20 MC and at most 4 CS/IS/CP modules, meets the AI focus (CS2109S, CS3263, CS4263, CS3244, CS4244 with a level-4000 primary), and totals 160 MC with 36 MC of B&D beyond the requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 67.47,
+  "cost_usd": 0.008935,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 17558,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:07:26+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "ES2660"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "CS2100",
+        "GESS1020"
+      ],
+      "3": [],
+      "4": [
+        "ST2334",
+        "CS2101",
+        "CS2103T",
+        "CS4263",
+        "GEC1020"
+      ],
+      "5": [
+        "CS2109S",
+        "CS2106",
+        "CS2102",
+        "IS1108",
+        "SC1101E"
+      ],
+      "6": [
+        "CS3263",
+        "CS3230",
+        "CS2107",
+        "CS3244",
+        "HSI1000"
+      ],
+      "7": [
+        "CS4244",
+        "GEN2003",
+        "DTK1234",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "8": [
+        "CP4101",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "9": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "10": []
+    },
+    "reason": "Assuming H2 Mathematics and direct English placement, the plan uses Special Term 3 as an empty semester, takes CP4101 in place of an internship since the GPA qualifies, keeps every semester within 20 MC and at most 4 CS/IS/CP modules, meets the AI focus (CS2109S, CS3263, CS4263, CS3244, CS4244 with a level-4000 primary), and totals 160 MC with 36 MC of B&D beyond the requirement."
+  },
+  "parse_error": null
+}

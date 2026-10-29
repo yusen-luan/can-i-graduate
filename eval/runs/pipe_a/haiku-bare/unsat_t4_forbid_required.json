@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_required",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 (Computer Organisation) is a compulsory core module of the NUS Bachelor of Computing (Computer Science) programme with no approved substitute, so avoiding it makes the degree impossible regardless of the 9-semester and 20 MC limits.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.55,
+  "cost_usd": 0.000633,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 1230,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:16+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 (Computer Organisation) is a compulsory core module of the NUS Bachelor of Computing (Computer Science) programme with no approved substitute, so avoiding it makes the degree impossible regardless of the 9-semester and 20 MC limits."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,26 @@
+{
+  "instance": "fyp_urop_trap",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The CP-coded cap limits CP3106, CP3209, CP4101 and CP4106 to 12 MC in total. CP4101 alone is 12 MC, so adding any UROP module (CP3106 at 4 MC, or CP3209/CP4106 at 8 MC) exceeds the cap, meaning the final-year project and UROP requests cannot both be met.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.11,
+  "cost_usd": 0.011336,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 401,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:14:42+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The CP-coded cap limits CP3106, CP3209, CP4101 and CP4106 to 12 MC in total. CP4101 alone is 12 MC, so adding any UROP module (CP3106 at 4 MC, or CP3209/CP4106 at 8 MC) exceeds the cap, meaning the final-year project and UROP requests cannot both be met."
+  },
+  "parse_error": null
+}

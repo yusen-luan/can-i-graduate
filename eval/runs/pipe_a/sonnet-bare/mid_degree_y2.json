@@ -1,0 +1,70 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2102\",\"CS2105\",\"CS2106\",\"CS3230\",\"GESS1000\"]},{\"semester\":3,\"modules\":[\"CS3263\",\"CS3264\",\"IS1128\",\"GEC1000\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS4246\",\"CS4243\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4248\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"You have 40 MC done, so 120 MC remain. That fits easily in 8 semesters at up to 20 MC each, with the remaining core modules, a 24 MC AI focus area (CS2109S, CS3263, CS3264, CS4246, CS4243, CS4248), the 12 MC industry project and 10 UEs. The plan respects prerequisites. It rests on my recollection of the AY2026/27 requirements, and the GE module codes and the exact module lists are the least certain parts.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 45.59,
+  "cost_usd": 0.060369,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 5992,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:21:32+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2102",
+        "CS2105",
+        "CS2106",
+        "CS3230",
+        "GESS1000"
+      ],
+      "3": [
+        "CS3263",
+        "CS3264",
+        "IS1128",
+        "GEC1000",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS4246",
+        "CS4243",
+        "GEN2000",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "5": [
+        "CP3880",
+        "CS4248",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "7": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": []
+    },
+    "reason": "You have 40 MC done, so 120 MC remain. That fits easily in 8 semesters at up to 20 MC each, with the remaining core modules, a 24 MC AI focus area (CS2109S, CS3263, CS3264, CS4246, CS4243, CS4248), the 12 MC industry project and 10 UEs. The plan respects prerequisites. It rests on my recollection of the AY2026/27 requirements, and the GE module codes and the exact module lists are the least certain parts."
+  },
+  "parse_error": null
+}

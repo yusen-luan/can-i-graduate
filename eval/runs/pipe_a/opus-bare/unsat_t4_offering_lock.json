@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_offering_lock",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2108 cannot be finished by semester 1. It requires a prior programming or data-structures module such as CS2030/CS2030S or CS2040/CS2040S (based on my recollection of the NUS prerequisites), which itself needs CS1010, and a student starting with no modules done cannot have these completed before semester 1.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 7.03,
+  "cost_usd": 0.008817,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 411,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:29:58+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2108 cannot be finished by semester 1. It requires a prior programming or data-structures module such as CS2030/CS2030S or CS2040/CS2040S (based on my recollection of the NUS prerequisites), which itself needs CS1010, and a student starting with no modules done cannot have these completed before semester 1."
+  },
+  "parse_error": null
+}

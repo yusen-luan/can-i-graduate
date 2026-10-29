@@ -1,0 +1,82 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GESS1001\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEA1000\",\"HSI1000\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"IS1128\",\"ES2660\",\"CS3213\"]},{\"semester\":5,\"modules\":[\"CS3219\",\"GEC1015\",\"GEN2003\",\"CP4106\"]},{\"semester\":6,\"modules\":[\"CS4218\",\"IS1108\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP3880\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A 9-semester plan works: CP3880 follows CS2101/CS2103T (Semester 3), CP4106 gives the UROP and 12 MC at level 4000 with CS4218, and the software engineering focus is met by CS2103T, CS3213, CS3219 and CS4218. The total is exactly 160 MC using all 10 generic electives, with no semester above 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 41.21,
+  "cost_usd": 0.005401,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 10500,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:07:12+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GESS1001",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "GEA1000",
+        "HSI1000"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "IS1128",
+        "ES2660",
+        "CS3213"
+      ],
+      "5": [
+        "CS3219",
+        "GEC1015",
+        "GEN2003",
+        "CP4106"
+      ],
+      "6": [
+        "CS4218",
+        "IS1108",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "CP3880"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "A 9-semester plan works: CP3880 follows CS2101/CS2103T (Semester 3), CP4106 gives the UROP and 12 MC at level 4000 with CS4218, and the software engineering focus is met by CS2103T, CS3213, CS3219 and CS4218. The total is exactly 160 MC using all 10 generic electives, with no semester above 20 MC."
+  },
+  "parse_error": null
+}

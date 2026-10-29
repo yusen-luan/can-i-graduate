@@ -1,0 +1,82 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS4230\",\"CS3236\",\"ES2660\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GESS1020\",\"GEN2000\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"IE2141\",\"HSI1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Yes, it can be done: this plan finishes in 8 semesters with exactly 160 MC and never exceeds 20 MC in a semester (CP3880 does not count toward the load). CS2040S is done in semester 2, and the algorithms theory focus is covered by CS3230, CS3231, CS4234 and CS4231, alongside 12 MC at level 4000 and 32 MC of B&D.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 13.44,
+  "cost_usd": 0.03095,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 1385,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:04+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS4231",
+        "CS4230",
+        "CS3236",
+        "ES2660",
+        "GEC1015"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GESS1020",
+        "GEN2000",
+        "DTK1234"
+      ],
+      "6": [
+        "CP3880",
+        "IE2141",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "Yes, it can be done: this plan finishes in 8 semesters with exactly 160 MC and never exceeds 20 MC in a semester (CP3880 does not count toward the load). CS2040S is done in semester 2, and the algorithms theory focus is covered by CS3230, CS3231, CS4234 and CS4231, alongside 12 MC at level 4000 and 32 MC of B&D."
+  },
+  "parse_error": null
+}

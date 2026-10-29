@@ -1,0 +1,83 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"ST2334\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS2109S\",\"CS3230\",\"CS3243\",\"GESS1025\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3203\",\"CS3244\",\"GEN2061\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\"]},{\"semester\":8,\"modules\":[\"CS4248\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"CP4101\"]}],\"reason\":\"Feasible: this 160 MC plan covers the general education, foundation, math, industry experience (CP3880) and breadth-and-depth requirements, with an AI focus via CS3243, CS3244 and CS4248 and CP4101 as the final-year project. It keeps every semester at 20 MC or less with at most 4 CS/CP modules, uses semester 3 as a light Special Term, and uses exactly 10 UEs.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 44.9,
+  "cost_usd": 0.087745,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 4346,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:26:20+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "ES2660"
+      ],
+      "3": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "ST2334",
+        "GEC1015"
+      ],
+      "5": [
+        "CS2109S",
+        "CS3230",
+        "CS3243",
+        "GESS1025",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS3203",
+        "CS3244",
+        "GEN2061",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CP3880"
+      ],
+      "8": [
+        "CS4248",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": [
+        "CP4101"
+      ]
+    },
+    "reason": "Feasible: this 160 MC plan covers the general education, foundation, math, industry experience (CP3880) and breadth-and-depth requirements, with an AI focus via CS3243, CS3244 and CS4248 and CP4101 as the final-year project. It keeps every semester at 20 MC or less with at most 4 CS/CP modules, uses semester 3 as a light Special Term, and uses exactly 10 UEs."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,83 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"ES2660\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS3230\", \"CS2100\"]}, {\"semester\": 4, \"modules\": [\"CS2106\", \"CS2109S\", \"CS4231\", \"IS1108\"]}, {\"semester\": 5, \"modules\": [\"CS3231\", \"CS4234\", \"ST2334\", \"SC1101E\"]}, {\"semester\": 6, \"modules\": [\"CS4430\", \"CS2102\", \"GESS1020\", \"GEN2000\"]}, {\"semester\": 7, \"modules\": [\"CP3880\", \"DTK1234\", \"HSI1000\", \"CS2104\", \"CS2105\"]}, {\"semester\": 8, \"modules\": [\"CS2111\", \"CS3243\", \"GEC1015\", \"CS3245\", \"CS4248\"]}, {\"semester\": 9, \"modules\": [\"CS2107\", \"CS3264\", \"CS4263\", \"CS4244\"]}], \"reason\": \"A feasible plan exists: CS2040S is in Semester 2, CS3230 is in Semester 3, and the algorithms theory focus uses CS3230, CS3231, CS4231, CS4234 and CS4430, with the CP3880 internship in Semester 7 and a maximum load of 20 MC, totalling 160 MC in 9 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 46.91,
+  "cost_usd": 0.006229,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 12154,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:06:31+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "ES2660"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS3230",
+        "CS2100"
+      ],
+      "4": [
+        "CS2106",
+        "CS2109S",
+        "CS4231",
+        "IS1108"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "ST2334",
+        "SC1101E"
+      ],
+      "6": [
+        "CS4430",
+        "CS2102",
+        "GESS1020",
+        "GEN2000"
+      ],
+      "7": [
+        "CP3880",
+        "DTK1234",
+        "HSI1000",
+        "CS2104",
+        "CS2105"
+      ],
+      "8": [
+        "CS2111",
+        "CS3243",
+        "GEC1015",
+        "CS3245",
+        "CS4248"
+      ],
+      "9": [
+        "CS2107",
+        "CS3264",
+        "CS4263",
+        "CS4244"
+      ]
+    },
+    "reason": "A feasible plan exists: CS2040S is in Semester 2, CS3230 is in Semester 3, and the algorithms theory focus uses CS3230, CS3231, CS4231, CS4234 and CS4430, with the CP3880 internship in Semester 7 and a maximum load of 20 MC, totalling 160 MC in 9 semesters."
+  },
+  "parse_error": null
+}

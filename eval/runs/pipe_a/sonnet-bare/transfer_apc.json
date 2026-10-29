@@ -1,0 +1,76 @@
+{
+  "instance": "transfer_apc",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"GEX1000\"]},{\"semester\":2,\"modules\":[\"CS2101\",\"CS2102\",\"CS2103T\",\"CS3230\"]},{\"semester\":3,\"modules\":[\"CS2105\",\"CS2106\",\"IS1108\",\"GEC1000\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3223\",\"CS3243\",\"GESS1000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4221\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4224\",\"CS4225\",\"CS3244\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4248\"]}],\"reason\":\"About 142 MC remain after the completed and exempted modules, against 160 MC of capacity at 20 MC per semester over 8 semesters. The plan covers the foundation, maths, common curriculum, team project and industry experience requirements, plus the Database Systems focus area (CS3223, CS4221, CS4224 with CS4225 as an extra database-related elective). Module offerings and the exact requirement lists are from memory and were not checked against the official NUS catalogue.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 60.29,
+  "cost_usd": 0.078113,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 7770,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:23:41+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "GEX1000"
+      ],
+      "2": [
+        "CS2101",
+        "CS2102",
+        "CS2103T",
+        "CS3230"
+      ],
+      "3": [
+        "CS2105",
+        "CS2106",
+        "IS1108",
+        "GEC1000",
+        "UE_GENERIC_1"
+      ],
+      "4": [
+        "CS3223",
+        "CS3243",
+        "GESS1000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS3203",
+        "CS4221",
+        "GEN2000",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CP3880",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "CS4224",
+        "CS4225",
+        "CS3244",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "CS4248"
+      ]
+    },
+    "reason": "About 142 MC remain after the completed and exempted modules, against 160 MC of capacity at 20 MC per semester over 8 semesters. The plan covers the foundation, maths, common curriculum, team project and industry experience requirements, plus the Database Systems focus area (CS3223, CS4221, CS4224 with CS4225 as an extra database-related elective). Module offerings and the exact requirement lists are from memory and were not checked against the official NUS catalogue."
+  },
+  "parse_error": null
+}

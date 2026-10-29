@@ -1,0 +1,85 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"ST2334\",\"CS3213\",\"CS3219\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4263\",\"GEC1015\",\"IS1108\",\"CP3880\"]},{\"semester\":6,\"modules\":[\"GEA1000\",\"GESS1020\"]},{\"semester\":7,\"modules\":[\"GEN2003\",\"DTK1234\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"IS1128\",\"IE2141\",\"CS4218\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS3227\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A 10-semester plan works: the 16 required modules, the GEC, GESS and GEN university requirements, three ID modules, and the software engineering focus (CS2103T, CS4211, CS4218) are scheduled with prerequisites and offered terms respected, and CP3880 is the internship. Total units are 160 MC, with 148 MC in regular semesters within the 16 MC cap and 8 MC in semester 6, and every enrolled semester has at least 8 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 64.08,
+  "cost_usd": 0.008071,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 15837,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:09:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "ST2334",
+        "CS3213",
+        "CS3219"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "GEC1015",
+        "IS1108",
+        "CP3880"
+      ],
+      "6": [
+        "GEA1000",
+        "GESS1020"
+      ],
+      "7": [
+        "GEN2003",
+        "DTK1234",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "8": [
+        "IS1128",
+        "IE2141",
+        "CS4218",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "CS3227",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "10": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A 10-semester plan works: the 16 required modules, the GEC, GESS and GEN university requirements, three ID modules, and the software engineering focus (CS2103T, CS4211, CS4218) are scheduled with prerequisites and offered terms respected, and CP3880 is the internship. Total units are 160 MC, with 148 MC in regular semesters within the 16 MC cap and 8 MC in semester 6, and every enrolled semester has at least 8 MC."
+  },
+  "parse_error": null
+}

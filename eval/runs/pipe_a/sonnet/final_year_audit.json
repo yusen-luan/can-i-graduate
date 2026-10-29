@@ -1,0 +1,45 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3230\",\"GEA1000\",\"IS1108\",\"HSI1000\",\"CS3244\"]},{\"semester\":2,\"modules\":[\"CS4248\",\"UE\",\"CP3880\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The remaining required modules (CS3230, GEA1000, IS1108), a third ID module (HSI1000), AI primaries CS3244 and CS4248 (which also gives a third 4000-level module), the CP3880 internship and one UE bring the total to exactly 160 MC, with no semester above 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 13.64,
+  "cost_usd": 0.019224,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 1594,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:11:55+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "GEA1000",
+        "IS1108",
+        "HSI1000",
+        "CS3244"
+      ],
+      "2": [
+        "CS4248",
+        "UE_GENERIC_2",
+        "CP3880"
+      ],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "The remaining required modules (CS3230, GEA1000, IS1108), a third ID module (HSI1000), AI primaries CS3244 and CS4248 (which also gives a third 4000-level module), the CP3880 internship and one UE bring the total to exactly 160 MC, with no semester above 20 MC."
+  },
+  "parse_error": null
+}

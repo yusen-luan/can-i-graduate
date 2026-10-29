@@ -1,0 +1,81 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"DTK1234\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ST2334\", \"IS1128\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS4263\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3263\", \"GEN2003\", \"GEC1020\", \"GESS1020\"]}, {\"semester\": 5, \"modules\": [\"CS4244\", \"CS4246\", \"IS1108\", \"GEA1000\", \"HSI1000\"]}, {\"semester\": 6, \"modules\": [\"ES2660\", \"CP3880\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A plan exists: AI focus is met by CS2109S, CS3263, CS4244, CS4246 and CS4263 (12 MC at level 4000), the CP3880 internship is the single industrial option, and the 20 MC per-semester cap is respected, with 160 MC total including your completed CS2107 and CS3235.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 51.67,
+  "cost_usd": 0.006617,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 12937,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:06:36+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1128"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS4263"
+      ],
+      "4": [
+        "CS3230",
+        "CS3263",
+        "GEN2003",
+        "GEC1020",
+        "GESS1020"
+      ],
+      "5": [
+        "CS4244",
+        "CS4246",
+        "IS1108",
+        "GEA1000",
+        "HSI1000"
+      ],
+      "6": [
+        "ES2660",
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A plan exists: AI focus is met by CS2109S, CS3263, CS4244, CS4246 and CS4263 (12 MC at level 4000), the CP3880 internship is the single industrial option, and the 20 MC per-semester cap is respected, with 160 MC total including your completed CS2107 and CS3235."
+  },
+  "parse_error": null
+}

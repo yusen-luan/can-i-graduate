@@ -1,0 +1,82 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010X\", \"MA1521\", \"CS1231S\", \"UE\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2105\", \"CS2106\", \"CS2107\", \"CS2102\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3235\", \"CS3219\", \"CS3216\", \"CS3233\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4236\", \"CS4222\", \"CS3210\", \"CS3243\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3203\", \"CS4231\", \"CS4224\", \"CS3244\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4215\", \"CS4248\", \"CS4243\", \"CS3223\", \"UE\", \"UE\"]}], \"reason\": \"Forty 4-MC modules (160 MC) can be spread over seven semesters at 20-24 MC each, with prerequisites respected, computer security core (CS2107, CS3235, CS4236) placed early, and 10 unrestricted electives used. Module codes and specialisation requirements should be verified against the current NUS handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 36.84,
+  "cost_usd": 0.004308,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 8579,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:16+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010X",
+        "MA1521",
+        "CS1231S",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "UE_GENERIC_3"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2105",
+        "CS2106",
+        "CS2107",
+        "CS2102"
+      ],
+      "4": [
+        "CS3230",
+        "CS3235",
+        "CS3219",
+        "CS3216",
+        "CS3233",
+        "UE_GENERIC_4"
+      ],
+      "5": [
+        "CS4236",
+        "CS4222",
+        "CS3210",
+        "CS3243",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "6": [
+        "CS3203",
+        "CS4231",
+        "CS4224",
+        "CS3244",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "7": [
+        "CS4215",
+        "CS4248",
+        "CS4243",
+        "CS3223",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Forty 4-MC modules (160 MC) can be spread over seven semesters at 20-24 MC each, with prerequisites respected, computer security core (CS2107, CS3235, CS4236) placed early, and 10 unrestricted electives used. Module codes and specialisation requirements should be verified against the current NUS handbook."
+  },
+  "parse_error": null
+}

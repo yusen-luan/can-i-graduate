@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"MA1301\",\"CS1101S\",\"GEA1000\",\"IS1108\",\"DTK1234\",\"ES1000\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"ES1103\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2106\",\"MA1522\",\"ST2334\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS3230\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS3231\",\"CS4234\",\"HSI1000\",\"GEC1015\",\"GESS1001\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"CS2102\",\"GEN2004\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan includes the MA1301 and ES1000/ES1103 bridging modules and stays within 20 MC per semester. It meets 160 MC with CP3880 as the internship, and algorithms theory is covered by CS3230, CS3231, CS4231, CS4430 and CS4234. It also has 12 MC at level 4000, 32 MC of B&D, and three ID modules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 25.86,
+  "cost_usd": 0.040848,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 3779,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:12:47+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "MA1301",
+        "CS1101S",
+        "GEA1000",
+        "IS1108",
+        "DTK1234",
+        "ES1000"
+      ],
+      "2": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1521",
+        "ES1103"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2106",
+        "MA1522",
+        "ST2334",
+        "ES2660"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "CS3230",
+        "IS1128"
+      ],
+      "5": [
+        "CP3880",
+        "CS3231",
+        "CS4234",
+        "HSI1000",
+        "GEC1015",
+        "GESS1001"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "CS2102",
+        "GEN2004",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "The plan includes the MA1301 and ES1000/ES1103 bridging modules and stays within 20 MC per semester. It meets 160 MC with CP3880 as the internship, and algorithms theory is covered by CS3230, CS3231, CS4231, CS4430 and CS4234. It also has 12 MC at level 4000, 32 MC of B&D, and three ID modules."
+  },
+  "parse_error": null
+}

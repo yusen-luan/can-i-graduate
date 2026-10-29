@@ -1,0 +1,79 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GESS1001\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2107\",\"CS2105\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3235\",\"GEN2000\",\"SC1101E\",\"GEC1015\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4239\",\"CP3106\",\"ES2660\",\"GEA1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CS4230\",\"IS1128\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A 7-semester plan works with a computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239), the CP3880 internship, and a UROP via CP3106, reaching 160 MC with no semester over 26 MC; this assumes H2 Math and direct English placement, which you did not state otherwise.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 43.72,
+  "cost_usd": 0.005606,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 10913,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:06:28+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GESS1001",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2107",
+        "CS2105",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "CS3235",
+        "GEN2000",
+        "SC1101E",
+        "GEC1015",
+        "CP3880"
+      ],
+      "5": [
+        "CS4236",
+        "CS4239",
+        "CP3106",
+        "ES2660",
+        "GEA1000",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS4238",
+        "CS4230",
+        "IS1128",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ]
+    },
+    "reason": "A 7-semester plan works with a computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239), the CP3880 internship, and a UROP via CP3106, reaching 160 MC with no semester over 26 MC; this assumes H2 Math and direct English placement, which you did not state otherwise."
+  },
+  "parse_error": null
+}

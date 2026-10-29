@@ -1,0 +1,84 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1010S\",\"CS1231\",\"UE\"]},{\"semester\":2,\"modules\":[\"MA1521\",\"CS2040S\",\"CS2100\",\"CS2101\",\"CS2030S\"]},{\"semester\":3,\"modules\":[\"MA1522\",\"CS2102\",\"CS2103T\",\"CS2106\",\"MA2214\"]},{\"semester\":4,\"modules\":[\"ST2334\",\"CS2105\",\"CS3230\",\"CS3233\",\"MA2101\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS4236\",\"CS3244\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3243\",\"CS3248\",\"CS3217\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS3240\",\"CS3219\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4224\",\"CS3235\",\"CS2107\",\"UE\",\"UE\"]}],\"reason\":\"Assuming the standard 160 MC BComp (Computer Science) curriculum, with ES1103 first and MA1301 as the no-H2-Mathematics bridge, eight semesters of five 4-MC modules (20 MC each) fit the 20 MC cap, and the algorithms-theory focus is covered by CS3230, CS3233, CS4231, CS4234 and CS4236. This is based on my knowledge of the requirements and has not been verified against the official AY2026/27 handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 25.1,
+  "cost_usd": 0.002815,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 5586,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:16:22+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1103",
+        "MA1301",
+        "CS1010S",
+        "CS1231",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "MA1521",
+        "CS2040S",
+        "CS2100",
+        "CS2101",
+        "CS2030S"
+      ],
+      "3": [
+        "MA1522",
+        "CS2102",
+        "CS2103T",
+        "CS2106",
+        "MA2214"
+      ],
+      "4": [
+        "ST2334",
+        "CS2105",
+        "CS3230",
+        "CS3233",
+        "MA2101"
+      ],
+      "5": [
+        "CS4231",
+        "CS4234",
+        "CS4236",
+        "CS3244",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "CS3243",
+        "CS3248",
+        "CS3217",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS4246",
+        "CS3240",
+        "CS3219",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CS4224",
+        "CS3235",
+        "CS2107",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Assuming the standard 160 MC BComp (Computer Science) curriculum, with ES1103 first and MA1301 as the no-H2-Mathematics bridge, eight semesters of five 4-MC modules (20 MC each) fit the 20 MC cap, and the algorithms-theory focus is covered by CS3230, CS3233, CS4231, CS4234 and CS4236. This is based on my knowledge of the requirements and has not been verified against the official AY2026/27 handbook."
+  },
+  "parse_error": null
+}

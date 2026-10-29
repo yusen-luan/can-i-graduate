@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Industrial-experience modules carry at most 12 MC and do not count toward the unit load, so the other 148 MC must fit within 6 semesters at 27 MC each. Every other module is 0, 4 or 8 MC except CS3216 and CS3217 (5 MC each), so a semester can reach at most 24 MC, or 26 with both 5-MC modules. The most that can be taken is 5\u00d724 + 26 = 146 MC, plus 12 MC of industrial experience, which gives 158 MC. That is below the required 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 27.36,
+  "cost_usd": 0.03689,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 3392,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:40+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Industrial-experience modules carry at most 12 MC and do not count toward the unit load, so the other 148 MC must fit within 6 semesters at 27 MC each. Every other module is 0, 4 or 8 MC except CS3216 and CS3217 (5 MC each), so a semester can reach at most 24 MC, or 26 with both 5-MC modules. The most that can be taken is 5\u00d724 + 26 = 146 MC, plus 12 MC of industrial experience, which gives 158 MC. That is below the required 160 MC."
+  },
+  "parse_error": null
+}

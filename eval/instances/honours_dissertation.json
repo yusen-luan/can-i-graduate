@@ -1,0 +1,136 @@
+{
+  "name": "honours_dissertation",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. My GPA qualifies me for the final-year project. I want to graduate within 10 semesters; take at most 20 MC per semester; specialise in artificial intelligence; do a final-year project (CP4101); use semester(s) 3 as Special Terms; take no more than 4 CS/IFS/CP modules in any one semester. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": true,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 10,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": true,
+      "want_urop": false,
+      "term_layout": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 4,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_9"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "ST2334",
+        "UE_GENERIC_1",
+        "UE_GENERIC_8"
+      ],
+      "4": [
+        "CS2100",
+        "GEN2003",
+        "MA1522",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "5": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "GEC1030",
+        "GEN2000"
+      ],
+      "6": [
+        "CS2106",
+        "CS4243",
+        "CS4248",
+        "GESS1025"
+      ],
+      "7": [
+        "GEC1015",
+        "IE2141",
+        "IS1108",
+        "SC1101E"
+      ],
+      "8": [
+        "CP4101",
+        "GESS1001",
+        "GESS1020"
+      ],
+      "9": [
+        "ES2660"
+      ],
+      "10": [
+        "CS3230",
+        "ETP3201L",
+        "GEA1000",
+        "IS1128",
+        "UE_GENERIC_4"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Honours track \u2014 dissertation + special term",
+    "description": "GPA-eligible: CP4101 dissertation replaces the internship; includes a Special Term and caps CS at 4 modules/sem.",
+    "tier": "SAT",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1170,
+      "num_constraints": 3920,
+      "min_feasible_semesters": 9,
+      "semester_slack": 1,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 91.5,
+      "flags": [
+        "Semester 9: only 4 MC \u2014 very light",
+        "1 empty semester(s) between enrolled semesters"
+      ]
+    }
+  }
+}

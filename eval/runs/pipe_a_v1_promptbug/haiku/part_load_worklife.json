@@ -1,0 +1,86 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3230\",\"ES2660\",\"CS2102\"]},{\"semester\":5,\"modules\":[\"CS3219\",\"CS4211\",\"CS4225\",\"IS1108\"]},{\"semester\":6,\"modules\":[\"CS4218\",\"DTK1234\"]},{\"semester\":7,\"modules\":[\"GEN2000\",\"GEC1015\",\"GESS1020\",\"HSI1000\"]},{\"semester\":8,\"modules\":[\"SC1101E\",\"CDE2300\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"ETP3201L\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A feasible plan exists using assumed H2 Mathematics and direct English placement, with software engineering as the focus (CS2103T, CS3219, CS4218), ETP3201L as the single industrial option (12 MC, no prerequisites, placed in semester 9 so semester 6 stays at 8 MC), and 10 generic electives, for 164 MC in total.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 62.71,
+  "cost_usd": 0.007999,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 15693,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:55:05+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "ST2334"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3230",
+        "ES2660",
+        "CS2102"
+      ],
+      "5": [
+        "CS3219",
+        "CS4211",
+        "CS4225",
+        "IS1108"
+      ],
+      "6": [
+        "CS4218",
+        "DTK1234"
+      ],
+      "7": [
+        "GEN2000",
+        "GEC1015",
+        "GESS1020",
+        "HSI1000"
+      ],
+      "8": [
+        "SC1101E",
+        "CDE2300",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "9": [
+        "ETP3201L",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "10": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "A feasible plan exists using assumed H2 Mathematics and direct English placement, with software engineering as the focus (CS2103T, CS3219, CS4218), ETP3201L as the single industrial option (12 MC, no prerequisites, placed in semester 9 so semester 6 stays at 8 MC), and 10 generic electives, for 164 MC in total."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC. Five semesters at a 20 MC cap give at most 100 MC of regular modules, plus at most 12 MC from the single allowed industrial-experience option, which is exempt from the cap. That is 112 MC at most, so the 160 MC total cannot be reached.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.26,
+  "cost_usd": 0.0063,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 333,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:13:04+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Graduation needs at least 160 MC. Five semesters at a 20 MC cap give at most 100 MC of regular modules, plus at most 12 MC from the single allowed industrial-experience option, which is exempt from the cap. That is 112 MC at most, so the 160 MC total cannot be reached."
+  },
+  "parse_error": null
+}

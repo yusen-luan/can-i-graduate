@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Seven semesters at a 20 MC cap allow at most 140 MC of load-counted modules, and the single industrial-experience option adds at most 12 MC (CP3880, IS4010, ETP3201L, or a 12 MC pair), for a maximum of 152 MC. The graduation rule requires at least 160 MC, and CP4101 cannot be used to add more because the student has not stated GPA eligibility.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 17.73,
+  "cost_usd": 0.002038,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 3781,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:55:23+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Seven semesters at a 20 MC cap allow at most 140 MC of load-counted modules, and the single industrial-experience option adds at most 12 MC (CP3880, IS4010, ETP3201L, or a 12 MC pair), for a maximum of 152 MC. The graduation rule requires at least 160 MC, and CP4101 cannot be used to add more because the student has not stated GPA eligibility."
+  },
+  "parse_error": null
+}

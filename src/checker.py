@@ -18,6 +18,9 @@ from model import (  # noqa: E402
     load_iter2,
     load_scenario,
     term_of,
+    effective_term,
+    per_semester_cap,
+    is_computing,
     pre_satisfied,
     prereq_clauses,
     prereq_tree_of,
@@ -183,19 +186,34 @@ def check_plan_iter2(plan, modules, program, student, focus_areas, preclusions,
         if len([g for g in group if g in sem_of]) not in (0, len(group)) or len(sems) > 1:
             errors.append(f"{'+'.join(group)}: must be taken in the same semester")
     for m, s in sem_of.items():
-        if term_of(s) not in modules[m].get("offered_terms", [1, 2]):
-            errors.append(f"{m} (sem {s}): not offered in Term {term_of(s)}")
+        et = effective_term(s, scenario)           # I2.14 term layout
+        if et not in modules[m].get("offered_terms", [1, 2]):
+            errors.append(f"{m} (sem {s}): not offered in Term {et}")
     bd = program["breadth_depth"]
+    prefs = scenario.get("preferences", {}) or {}
+    fyp_code = bd.get("fyp", {}).get("code")
     industrial_mods = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
     ceiling = program.get("max_overload_units")
     for s, ms in plan.items():
+        cap_s = per_semester_cap(scenario, s, cap)  # I2.15 per-slot cap
+        if cap_s == 0:
+            if ms:  # fully unavailable slot (leave of absence): nothing may be placed
+                errors.append(f"semester {s}: blocked (per_semester_cap 0) but has {sorted(ms)}")
+            continue
         # industrial experience is done over the vacation / special term and does
         # not consume a regular semester's unit budget.
         u = sum(units[m] for m in ms if m not in industrial_mods)
-        if u > cap:
-            errors.append(f"semester {s}: {u} units > cap {cap}")
+        if u > cap_s:
+            errors.append(f"semester {s}: {u} units > cap {cap_s}")
         if ceiling and u > ceiling:
             errors.append(f"semester {s}: {u} units > overload ceiling {ceiling}")
+    # I2.16 CS-count-per-semester cap (Computing modules, excl. off-cap industrial)
+    max_cs = prefs.get("max_cs_modules_per_sem", 0)
+    if max_cs:
+        for s, ms in plan.items():
+            n = sum(1 for m in ms if is_computing(m) and m not in industrial_mods)
+            if n > max_cs:
+                errors.append(f"semester {s}: {n} Computing modules > cap {max_cs}")
 
     # ID/CD
     idcd = program["requirement_groups"]["interdisciplinary_cross_disciplinary"]
@@ -237,13 +255,23 @@ def check_plan_iter2(plan, modules, program, student, focus_areas, preclusions,
     if bd_units < bd["min_units"]:
         errors.append(f"breadth & depth: {bd_units} units < {bd['min_units']}")
 
-    # industrial experience: exactly one option; nothing extra
+    # industrial experience (I2.8, corrected): at most one internship option, OR
+    # a GPA-eligible CP4101 dissertation replacing it; no internship padding.
     opts = bd["industrial_experience"]["options"]
     full = [i for i, o in enumerate(opts) if all(satisfied(m) for m in o["set"])]
-    all_ind = {m for o in opts for m in o["set"]}
-    if len(full) != 1:
-        errors.append(f"industrial experience: {len(full)} options fully satisfied, need exactly 1")
-    taken_ind = {m for m in all_ind if satisfied(m)}
+    diss =bool(fyp_code and satisfied(fyp_code) and student.get("eligible_fyp", False))
+    industrial_choice = scenario.get("industrial_option", "any")
+    if len(full) > 1:
+        errors.append(f"industrial experience: {len(full)} options fully satisfied, at most 1 allowed")
+    if industrial_choice != "any":
+        want = next((o for o in opts if industrial_choice in o["set"]), None)
+        if want is None:
+            errors.append(f"industrial experience: unknown industrial_option {industrial_choice}")
+        elif not all(satisfied(m) for m in want["set"]):
+            errors.append(f"industrial experience: requested option {industrial_choice} not completed")
+    elif len(full) == 0 and not diss:
+        errors.append("industrial experience: not satisfied (need an internship or eligible dissertation)")
+    taken_ind = {m for m in industrial_mods if satisfied(m)}
     chosen_ind = set().union(*[set(opts[i]["set"]) for i in full]) if full else set()
     if taken_ind - chosen_ind:
         errors.append(f"industrial experience: extra modules {sorted(taken_ind - chosen_ind)}")
@@ -264,8 +292,38 @@ def check_plan_iter2(plan, modules, program, student, focus_areas, preclusions,
     if total < program["total_units_required"]:
         errors.append(f"total units {total} < {program['total_units_required']}")
 
+    # I2.17 FYP / UROP (iter3 C3): requested, gated by eligibility.
+    if fyp_code:
+        if satisfied(fyp_code) and not student.get("eligible_fyp", False):
+            errors.append(f"FYP {fyp_code}: taken but student not eligible_fyp")
+        if scenario.get("want_fyp") and not satisfied(fyp_code):
+            errors.append(f"FYP requested but {fyp_code} not taken")
+    urop_codes = bd.get("urop", {}).get("codes", [])
+    if urop_codes:
+        urop_taken = [m for m in urop_codes if satisfied(m)]
+        if urop_taken and not student.get("eligible_urop", True):
+            errors.append(f"UROP {urop_taken}: taken but student not eligible_urop")
+        if scenario.get("want_urop") and not urop_taken:
+            errors.append("UROP requested but no UROP module taken")
+
     # optional per-instance preferences
-    prefs = scenario.get("preferences", {}) or {}
+    # iter3 C4 (I2.18): module pin / forbid / deadline. A pre-satisfied or
+    # placement-waived module satisfies a pin / deadline trivially.
+    for m in prefs.get("require_modules", []) or []:
+        if m not in modules:
+            errors.append(f"required (pinned) module {m}: unknown module")
+        elif not satisfied(m) and m not in waived:
+            errors.append(f"required (pinned) module {m} not scheduled")
+    for m in prefs.get("forbid_modules", []) or []:
+        if m in sem_of:
+            errors.append(f"forbidden module {m} scheduled in semester {sem_of[m]}")
+    for m, by in (prefs.get("deadline", {}) or {}).items():
+        if pre_satisfied(m, student) or m in waived:
+            continue
+        if m not in sem_of:
+            errors.append(f"deadline module {m} not scheduled (due by semester {by})")
+        elif sem_of[m] > int(by):
+            errors.append(f"{m}: scheduled in semester {sem_of[m]}, past its deadline {by}")
     for a, b in prefs.get("heavy_conflicts", []) or []:
         if a in sem_of and b in sem_of and sem_of[a] == sem_of[b]:
             errors.append(f"preference: {a} and {b} share a semester")

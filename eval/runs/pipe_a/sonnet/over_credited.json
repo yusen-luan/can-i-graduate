@@ -1,0 +1,73 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"ES2660\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS4248\",\"GEC1015\",\"DTK1234\",\"IE2141\"]},{\"semester\":4,\"modules\":[\"CS4244\",\"CS4246\",\"GESS1020\",\"IS1128\",\"UE\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"GEN2000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The plan reaches 160 MC with all required and university-level modules, 3 ID modules, and the CP3880 internship. AI focus: CS2109S, CS3243, CS3244, CS4248, CS4244 and CS4246, with 12 MC at level 4000. B&D totals 32 MC. Prerequisites are met, CS2101 and CS2103T are in the same semester, and no semester exceeds 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 18.87,
+  "cost_usd": 0.030382,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 2733,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:12:57+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ST2334",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "ES2660",
+        "IS1108"
+      ],
+      "3": [
+        "CS3244",
+        "CS4248",
+        "GEC1015",
+        "DTK1234",
+        "IE2141"
+      ],
+      "4": [
+        "CS4244",
+        "CS4246",
+        "GESS1020",
+        "IS1128",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "CP3880",
+        "GEN2000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": []
+    },
+    "reason": "The plan reaches 160 MC with all required and university-level modules, 3 ID modules, and the CP3880 internship. AI focus: CS2109S, CS3243, CS3244, CS4248, CS4244 and CS4246, with 12 MC at level 4000. B&D totals 32 MC. Prerequisites are met, CS2101 and CS2103T are in the same semester, and no semester exceeds 20 MC."
+  },
+  "parse_error": null
+}

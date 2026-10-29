@@ -1,0 +1,80 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS4244\",\"GEN2000\",\"DTK1234\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"HSI1000\",\"IE2141\",\"UE\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"A plan exists. It reaches exactly 160 MC, never exceeds 20 MC in a semester, and meets the AI focus area with CS2109S, CS3243, CS3244, CS4248, CS4243 and CS4244. It also satisfies the 4000-level (12 MC), Breadth & Depth (40 MC, counting completed CS2107 and CS3235) and CP3200+CP3202 internship requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.12,
+  "cost_usd": 0.0341,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 1548,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:14:43+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CS4248",
+        "CS4243",
+        "CS4244",
+        "GEN2000",
+        "DTK1234",
+        "CP3200"
+      ],
+      "6": [
+        "HSI1000",
+        "IE2141",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "CP3202"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [],
+      "9": []
+    },
+    "reason": "A plan exists. It reaches exactly 160 MC, never exceeds 20 MC in a semester, and meets the AI focus area with CS2109S, CS3243, CS3244, CS4248, CS4243 and CS4244. It also satisfies the 4000-level (12 MC), Breadth & Depth (40 MC, counting completed CS2107 and CS3235) and CP3200+CP3202 internship requirements."
+  },
+  "parse_error": null
+}

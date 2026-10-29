@@ -1,0 +1,84 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"ES1103\",\"MA1301\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"ST2334\",\"ES2660\",\"CS2106\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS3230\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS3236\",\"CS4231\",\"GESS1001\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CS3233\",\"CS4232\",\"CS3243\",\"GEN2061\",\"HSS1000\"]},{\"semester\":7,\"modules\":[\"CS4234\",\"CS3210\",\"DTK1234\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: 160 MC fits exactly in 8 semesters of 20 MC, with ES1103 and MA1301 taken first and counted as unrestricted electives. The Algorithms & Theory focus area is met with CS3231, CS3236, CS4231, CS4232 and CS4234, and prerequisite order is respected (course codes and semester offerings are best-effort recollections and should be checked against NUSMods).\\\"}\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 83.33,
+  "cost_usd": 0.175961,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 8764,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:28:37+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "ES1103",
+        "MA1301",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1521",
+        "MA1522"
+      ],
+      "3": [
+        "CS2040S",
+        "ST2334",
+        "ES2660",
+        "CS2106",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "CS3230",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "CS3231",
+        "CS3236",
+        "CS4231",
+        "GESS1001",
+        "HSI1000"
+      ],
+      "6": [
+        "CS3233",
+        "CS4232",
+        "CS3243",
+        "GEN2061",
+        "HSS1000"
+      ],
+      "7": [
+        "CS4234",
+        "CS3210",
+        "DTK1234",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: 160 MC fits exactly in 8 semesters of 20 MC, with ES1103 and MA1301 taken first and counted as unrestricted electives. The Algorithms & Theory focus area is met with CS3231, CS3236, CS4231, CS4232 and CS4234, and prerequisite order is respected (course codes and semester offerings are best-effort recollections and should be checked against NUSMods).\"}"
+  },
+  "parse_error": null
+}

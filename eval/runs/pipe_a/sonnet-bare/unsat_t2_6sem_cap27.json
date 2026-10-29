@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree needs 160 MC, so 6 semesters at 27 MC each (162 MC) leaves almost no slack. The required modules and the 'UE' placeholder are all worth multiples of 4 MC (4, 8 or 12), so a semester can hold at most 24 MC, which gives at most 144 MC in 6 semesters. That is short of 160 MC, so the 27 MC cap cannot be used.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 49.75,
+  "cost_usd": 0.052591,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 5224,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:23:46+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs 160 MC, so 6 semesters at 27 MC each (162 MC) leaves almost no slack. The required modules and the 'UE' placeholder are all worth multiples of 4 MC (4, 8 or 12), so a semester can hold at most 24 MC, which gives at most 144 MC in 6 semesters. That is short of 160 MC, so the 27 MC cap cannot be used."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With 120 MC completed and 128 MC needed, only 8 MC (two modules) remain, but the AI specialisation requires at least three more AI modules beyond CS4243 (about 12 MC), so the specialisation cannot be completed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.82,
+  "cost_usd": 0.002168,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 4269,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:14:59+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With 120 MC completed and 128 MC needed, only 8 MC (two modules) remain, but the AI specialisation requires at least three more AI modules beyond CS4243 (about 12 MC), so the specialisation cannot be completed."
+  },
+  "parse_error": null
+}

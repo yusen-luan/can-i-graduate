@@ -1,0 +1,83 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1128\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2102\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2109S\",\"ST2334\",\"GESS1000\",\"GEC1000\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS3244\",\"CS4246\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"CS3263\",\"CS4248\"]},{\"semester\":8,\"modules\":[\"CS3235\",\"CS3217\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4231\",\"CS4225\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Skipping semester 5 leaves 8 usable semesters at 20 MC each, which is exactly the 160 MC needed. The plan covers the CS foundation, maths, the common curriculum, the industry experience module, an AI focus area and electives, with prerequisites respected. The 20 MC per semester cap leaves no slack. The module list is built from my recollection of the AY2026/27 requirements, so check it against the official programme page.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 53.2,
+  "cost_usd": 0.072157,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 7176,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:21:12+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1128",
+        "ES2660"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2102",
+        "CS3230"
+      ],
+      "4": [
+        "CS2105",
+        "CS2109S",
+        "ST2334",
+        "GESS1000",
+        "GEC1000"
+      ],
+      "5": [],
+      "6": [
+        "CS3244",
+        "CS4246",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CP3880",
+        "CS3263",
+        "CS4248"
+      ],
+      "8": [
+        "CS3235",
+        "CS3217",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "9": [
+        "CS4231",
+        "CS4225",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Skipping semester 5 leaves 8 usable semesters at 20 MC each, which is exactly the 160 MC needed. The plan covers the CS foundation, maths, the common curriculum, the industry experience module, an AI focus area and electives, with prerequisites respected. The 20 MC per semester cap leaves no slack. The module list is built from my recollection of the AY2026/27 requirements, so check it against the official programme page."
+  },
+  "parse_error": null
+}

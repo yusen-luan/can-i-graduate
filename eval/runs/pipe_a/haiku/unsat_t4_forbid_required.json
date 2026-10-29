@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_forbid_required",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 (Computer Organisation) is a mandatory graduation requirement, so avoiding it makes graduating under the stated rules impossible regardless of the 9-semester and 20 MC limits.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.91,
+  "cost_usd": 0.000345,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 392,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:09:58+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 (Computer Organisation) is a mandatory graduation requirement, so avoiding it makes graduating under the stated rules impossible regardless of the 9-semester and 20 MC limits."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,45 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3230\",\"GEA1000\",\"IS1108\",\"DTK1234\",\"CS3244\"]},{\"semester\":2,\"modules\":[\"CS4248\",\"UE\",\"CP3880\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The plan adds the missing required modules (CS3230, GEA1000, IS1108), a third ID module (DTK1234), and CS3244 and CS4248 for the AI focus area and the 12 MC at level 4000. CP3880 covers the internship and one UE brings the total to 160 MC. No semester exceeds 20 MC, and every prerequisite is met.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 12.09,
+  "cost_usd": 0.020164,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 1689,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:57:54+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "GEA1000",
+        "IS1108",
+        "DTK1234",
+        "CS3244"
+      ],
+      "2": [
+        "CS4248",
+        "UE_GENERIC_2",
+        "CP3880"
+      ],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "The plan adds the missing required modules (CS3230, GEA1000, IS1108), a third ID module (DTK1234), and CS3244 and CS4248 for the AI focus area and the 12 MC at level 4000. CP3880 covers the internship and one UE brings the total to 160 MC. No semester exceeds 20 MC, and every prerequisite is met."
+  },
+  "parse_error": null
+}

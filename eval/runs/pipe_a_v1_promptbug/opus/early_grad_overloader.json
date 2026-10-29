@@ -1,0 +1,79 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\", \"IS1108\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"CS2107\", \"ST2334\", \"GEC1015\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2105\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"CS3235\", \"ES2660\", \"GESS1020\", \"GEN2003\", \"DTK1234\", \"IE2141\", \"CP3880\"]}, {\"semester\": 5, \"modules\": [\"CS4236\", \"CS4239\", \"HSI1000\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4238\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"This plan reaches 160 MC within 7 semesters and never exceeds 24 counted MC in a semester (CP3880 does not count toward the load). It covers the computer security focus area with CS2107, CS3235, CS4236, CS4238 and CS4239, giving 12 MC at level 4000 and 36 MC of B&D, with all prerequisites and offered terms respected.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 17.66,
+  "cost_usd": 0.038966,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 1791,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:09+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "ST2334",
+        "GEC1015"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2105",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3235",
+        "ES2660",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "IE2141",
+        "CP3880"
+      ],
+      "5": [
+        "CS4236",
+        "CS4239",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4238",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "This plan reaches 160 MC within 7 semesters and never exceeds 24 counted MC in a semester (CP3880 does not count toward the load). It covers the computer security focus area with CS2107, CS3235, CS4236, CS4238 and CS4239, giving 12 MC at level 4000 and 36 MC of B&D, with all prerequisites and offered terms respected."
+  },
+  "parse_error": null
+}

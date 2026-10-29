@@ -1,0 +1,70 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"CS4263\"]},{\"semester\":2,\"modules\":[\"CS3263\",\"CS3230\",\"GEN2003\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS4244\",\"CS2106\",\"IS1108\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CP4106\",\"DTK1234\",\"HSI1000\",\"SC1101E\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"A plan fits in 8 semesters with at most 20 MC per semester: the AI focus is met by CS2109S, CS3263 and CS4263 (with CS4244 added), the internship is CP3880 (taken after CS2101 and CS2103T), the UROP is CP4106, and the 160 MC total is reached using exactly 10 generic electives.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 43.98,
+  "cost_usd": 0.005244,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 10182,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:07:20+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS4263"
+      ],
+      "2": [
+        "CS3263",
+        "CS3230",
+        "GEN2003",
+        "GESS1020"
+      ],
+      "3": [
+        "CS4244",
+        "CS2106",
+        "IS1108",
+        "GEC1015"
+      ],
+      "4": [
+        "CP4106",
+        "DTK1234",
+        "HSI1000",
+        "SC1101E"
+      ],
+      "5": [
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "A plan fits in 8 semesters with at most 20 MC per semester: the AI focus is met by CS2109S, CS3263 and CS4263 (with CS4244 added), the internship is CP3880 (taken after CS2101 and CS2103T), the UROP is CP4106, and the 160 MC total is reached using exactly 10 generic electives."
+  },
+  "parse_error": null
+}

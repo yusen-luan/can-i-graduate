@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_two_blocked",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The BComp (Computer Science) degree needs 160 MC. Taking semesters 1 and 2 off leaves only 6 semesters at no more than 20 MC each, which is 120 MC, so the MC requirement cannot be met within 8 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.63,
+  "cost_usd": 0.002735,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 99,
+    "output_tokens": 234,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:22:57+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) degree needs 160 MC. Taking semesters 1 and 2 off leaves only 6 semesters at no more than 20 MC each, which is 120 MC, so the MC requirement cannot be met within 8 semesters."
+  },
+  "parse_error": null
+}

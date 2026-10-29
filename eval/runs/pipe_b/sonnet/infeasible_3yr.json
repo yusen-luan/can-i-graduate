@@ -1,0 +1,64 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":6,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.473,
+  "cost_usd": 0.004036,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 250,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6788
+  },
+  "effort": "high",
+  "prompt_sha256": "7fdecaa362bdcefc",
+  "timestamp": "2026-10-28T04:01:11+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 6,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [],
+      "semester_caps": [],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "INFEASIBLE",
+    "wall_time_s": 0.243,
+    "num_variables": 696,
+    "num_constraints": 2352
+  },
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "INFEASIBLE"
+  },
+  "parse_error": null,
+  "llm_latency_s": 2.23
+}

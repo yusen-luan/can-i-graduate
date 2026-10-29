@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_two_blocked",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Semesters 1 and 2 are taken off, leaving only 6 usable semesters (3 to 8) at a maximum of 20 MC each, for at most 120 MC, which is short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.22,
+  "cost_usd": 0.000373,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 99,
+    "output_tokens": 445,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:09:36+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Semesters 1 and 2 are taken off, leaving only 6 usable semesters (3 to 8) at a maximum of 20 MC each, for at most 120 MC, which is short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

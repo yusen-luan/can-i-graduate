@@ -1,0 +1,82 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2030S\",\"MA1522\",\"ST2334\",\"CS2100\"]},{\"semester\":3,\"modules\":[\"CS2109S\",\"CS2101\",\"CS2103T\",\"CS2106\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3263\",\"CS3243\",\"CS4248\",\"CP3200\",\"IS1108\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS4244\",\"CS4246\",\"ES2660\",\"GESS1025\",\"UE\"]},{\"semester\":6,\"modules\":[\"GEN2000\",\"IS1128\",\"HSI1000\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The AI focus uses CS2109S plus CS3243, CS3263, CS4244, CS4246 and CS4248, giving 12 MC at level 4000 and 20 MC of B&D, with the CP3200+CP3202 internship adding 12 B&D MC for the 32 MC requirement. Ten generic electives fill the remaining units to reach 160 MC, with no semester exceeding 20 MC of non-industrial load.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 55.88,
+  "cost_usd": 0.007327,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 14354,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:08:08+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2030S",
+        "MA1522",
+        "ST2334",
+        "CS2100"
+      ],
+      "3": [
+        "CS2109S",
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS3230"
+      ],
+      "4": [
+        "CS3263",
+        "CS3243",
+        "CS4248",
+        "CP3200",
+        "IS1108",
+        "GEC1015"
+      ],
+      "5": [
+        "CS4244",
+        "CS4246",
+        "ES2660",
+        "GESS1025",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "GEN2000",
+        "IS1128",
+        "HSI1000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "CP3202"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The AI focus uses CS2109S plus CS3243, CS3263, CS4244, CS4246 and CS4248, giving 12 MC at level 4000 and 20 MC of B&D, with the CP3200+CP3202 internship adding 12 B&D MC for the 32 MC requirement. Ten generic electives fill the remaining units to reach 160 MC, with no semester exceeding 20 MC of non-industrial load."
+  },
+  "parse_error": null
+}

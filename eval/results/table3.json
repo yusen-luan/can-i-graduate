@@ -1,0 +1,713 @@
+[
+  {
+    "pipeline": "Control: always-SAT",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 17,
+      "d": 35,
+      "pct": 48.6
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 0,
+      "d": 7,
+      "pct": 0.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 0,
+      "d": 11,
+      "pct": 0.0
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 0.0,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": null
+  },
+  {
+    "pipeline": "Control: canonical-4yr",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 17,
+      "d": 35,
+      "pct": 48.6
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 0,
+      "d": 7,
+      "pct": 0.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 0,
+      "d": 11,
+      "pct": 0.0
+    },
+    "plan_validity": {
+      "n": 3,
+      "d": 17,
+      "pct": 17.6
+    },
+    "plan_validity_lenient": {
+      "n": 3,
+      "d": 17,
+      "pct": 17.6
+    },
+    "realism_mean": 94.0,
+    "latency_mean_s": 0.0,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {
+      "retakes completed": 43,
+      "offered term": 7,
+      "unit cap": 6,
+      "focus area": 5,
+      "prerequisite": 3,
+      "outside horizon": 2,
+      "industrial experience": 2,
+      "FYP": 1,
+      "UROP": 1,
+      "blocked semester": 1
+    },
+    "plans_violating_rule": {
+      "retakes completed": 5,
+      "focus area": 5,
+      "outside horizon": 2,
+      "industrial experience": 2,
+      "FYP": 1,
+      "offered term": 1,
+      "UROP": 1,
+      "blocked semester": 1,
+      "prerequisite": 1,
+      "unit cap": 1
+    },
+    "translator": null,
+    "cost_profile": null
+  },
+  {
+    "pipeline": "Pipe A: Direct (Haiku 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 90.3,
+    "latency_mean_s": 37.223,
+    "cost_total_usd": 0.1635,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 13675.8,
+      "mean_cache_write_tokens": 402.2,
+      "mean_output_tokens": 8947.1,
+      "prompt_tokens": 14178.6,
+      "usd_per_1k_steady": 4.6244,
+      "usd_per_1k_cold": 6.2434,
+      "output_share_pct": 96.7
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Haiku 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 29,
+      "d": 35,
+      "pct": 82.9
+    },
+    "sat_recall": {
+      "n": 15,
+      "d": 17,
+      "pct": 88.2
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 7,
+      "d": 11,
+      "pct": 63.6
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 21.255,
+    "cost_total_usd": 0.0828,
+    "violation_histogram": {
+      "unmodelled real NUS module": 31,
+      "not an AY2026/27 NUS module": 15,
+      "ULR group": 6,
+      "required module": 4,
+      "offered term": 4,
+      "prerequisite": 3,
+      "ID/CD": 2,
+      "unit cap": 1,
+      "industrial experience": 1
+    },
+    "plans_violating_rule": {
+      "unmodelled real NUS module": 13,
+      "not an AY2026/27 NUS module": 9,
+      "industrial experience": 1,
+      "offered term": 1,
+      "ID/CD": 1,
+      "unit cap": 1,
+      "required module": 1,
+      "prerequisite": 1,
+      "ULR group": 1
+    },
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 958.8,
+      "mean_cache_write_tokens": 28.2,
+      "mean_output_tokens": 4687.5,
+      "prompt_tokens": 1087.6,
+      "usd_per_1k_steady": 2.3637,
+      "usd_per_1k_cold": 2.4772,
+      "output_share_pct": 99.2
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Sonnet 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 92.2,
+    "latency_mean_s": 15.594,
+    "cost_total_usd": 0.8424,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 13675.8,
+      "mean_cache_write_tokens": 402.2,
+      "mean_output_tokens": 2012.7,
+      "prompt_tokens": 14178.6,
+      "usd_per_1k_steady": 23.1442,
+      "usd_per_1k_cold": 55.5236,
+      "output_share_pct": 87.0
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Sonnet 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 32,
+      "d": 35,
+      "pct": 91.4
+    },
+    "sat_recall": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 9,
+      "d": 11,
+      "pct": 81.8
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 35.18,
+    "cost_total_usd": 1.6147,
+    "violation_histogram": {
+      "unmodelled real NUS module": 32,
+      "not an AY2026/27 NUS module": 21,
+      "required module": 2,
+      "ULR group": 2,
+      "ID/CD": 2,
+      "offered term": 1
+    },
+    "plans_violating_rule": {
+      "unmodelled real NUS module": 15,
+      "not an AY2026/27 NUS module": 14,
+      "ID/CD": 1,
+      "required module": 1,
+      "ULR group": 1,
+      "offered term": 1
+    },
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 958.8,
+      "mean_cache_write_tokens": 28.2,
+      "mean_output_tokens": 4567.1,
+      "prompt_tokens": 1087.6,
+      "usd_per_1k_steady": 46.0692,
+      "usd_per_1k_cold": 48.3393,
+      "output_share_pct": 99.1
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Opus 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 91.5,
+    "latency_mean_s": 10.942,
+    "cost_total_usd": 0.9606,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 13675.8,
+      "mean_cache_write_tokens": 402.2,
+      "mean_output_tokens": 1114.9,
+      "prompt_tokens": 14178.6,
+      "usd_per_1k_steady": 25.5151,
+      "usd_per_1k_cold": 93.0895,
+      "output_share_pct": 87.4
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Opus 5.5, bare)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 32,
+      "d": 35,
+      "pct": 91.4
+    },
+    "sat_recall": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 9,
+      "d": 11,
+      "pct": 81.8
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 37.732,
+    "cost_total_usd": 2.4634,
+    "violation_histogram": {
+      "unmodelled real NUS module": 23,
+      "not an AY2026/27 NUS module": 17,
+      "required module": 2,
+      "ULR group": 2,
+      "ID/CD": 2,
+      "prerequisite": 1,
+      "offered term": 1
+    },
+    "plans_violating_rule": {
+      "not an AY2026/27 NUS module": 12,
+      "unmodelled real NUS module": 11,
+      "offered term": 1,
+      "ID/CD": 1,
+      "required module": 1,
+      "prerequisite": 1,
+      "ULR group": 1
+    },
+    "translator": null,
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 958.8,
+      "mean_cache_write_tokens": 28.2,
+      "mean_output_tokens": 3482.4,
+      "prompt_tokens": 1087.6,
+      "usd_per_1k_steady": 70.2472,
+      "usd_per_1k_cold": 74.9848,
+      "output_share_pct": 99.1
+    }
+  },
+  {
+    "pipeline": "Pipe B: Translator (Haiku 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 89.2,
+    "latency_mean_s": 4.437,
+    "cost_total_usd": 0.0168,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": {
+      "spec_valid": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "fidelity_exact": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "wrong_field_histogram": {},
+      "lucky_decisions": 0,
+      "wrong_decision_despite_exact_spec": 0,
+      "flagged_unsupported": 7
+    },
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 6594.1,
+      "mean_cache_write_tokens": 193.9,
+      "mean_output_tokens": 756.9,
+      "prompt_tokens": 6888.6,
+      "usd_per_1k_steady": 0.4564,
+      "usd_per_1k_cold": 1.237,
+      "output_share_pct": 82.9
+    }
+  },
+  {
+    "pipeline": "Pipe B: Translator (Sonnet 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 89.2,
+    "latency_mean_s": 3.876,
+    "cost_total_usd": 0.1697,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": {
+      "spec_valid": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "fidelity_exact": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "wrong_field_histogram": {},
+      "lucky_decisions": 0,
+      "wrong_decision_despite_exact_spec": 0,
+      "flagged_unsupported": 0
+    },
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 6594.1,
+      "mean_cache_write_tokens": 193.9,
+      "mean_output_tokens": 284.3,
+      "prompt_tokens": 6888.6,
+      "usd_per_1k_steady": 4.4019,
+      "usd_per_1k_cold": 20.0143,
+      "output_share_pct": 64.6
+    }
+  },
+  {
+    "pipeline": "Pipe B: Translator (Opus 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 89.2,
+    "latency_mean_s": 3.335,
+    "cost_total_usd": 0.2782,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": {
+      "spec_valid": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "fidelity_exact": {
+        "n": 35,
+        "d": 35,
+        "pct": 100.0
+      },
+      "wrong_field_histogram": {},
+      "lucky_decisions": 0,
+      "wrong_decision_despite_exact_spec": 0,
+      "flagged_unsupported": 0
+    },
+    "cost_profile": {
+      "requests": 35,
+      "mean_input_tokens": 100.6,
+      "mean_cache_read_tokens": 6594.1,
+      "mean_cache_write_tokens": 193.9,
+      "mean_output_tokens": 262.8,
+      "prompt_tokens": 6888.6,
+      "usd_per_1k_steady": 7.0166,
+      "usd_per_1k_cold": 39.599,
+      "output_share_pct": 74.9
+    }
+  },
+  {
+    "pipeline": "Gold Oracle (solve_iter2)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 89.2,
+    "latency_mean_s": 0.333,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": null
+  }
+]

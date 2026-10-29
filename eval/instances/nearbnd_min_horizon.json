@@ -1,0 +1,122 @@
+{
+  "name": "nearbnd_min_horizon",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 8 semesters; take at most 20 MC per semester; specialise in artificial intelligence. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1231S",
+        "GESS1025",
+        "MA1521",
+        "UE_GENERIC_4",
+        "UE_GENERIC_7"
+      ],
+      "2": [
+        "CS1101S",
+        "GEN2004",
+        "IE2141",
+        "ST2334",
+        "UE_GENERIC_9"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEN2001",
+        "MA1522"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ES2660",
+        "GEC1015"
+      ],
+      "5": [
+        "CS2106",
+        "GEC1030",
+        "GESS1020",
+        "IS1128"
+      ],
+      "6": [
+        "SC1101E",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS3263",
+        "CS3264",
+        "CS4263",
+        "GEA1000",
+        "IS1108"
+      ],
+      "8": [
+        "CS3230",
+        "CS4244",
+        "CS4262",
+        "ETP3201L",
+        "UE_GENERIC_8"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Near-boundary: minimum horizon",
+    "description": "Fresh student at the exact 8-semester floor, 20 MC cap \u2014 zero slack, every placement forced.",
+    "tier": "SAT",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth"
+    ],
+    "difficulty": {
+      "num_variables": 928,
+      "num_constraints": 3079,
+      "min_feasible_semesters": 8,
+      "semester_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 94.0,
+      "flags": []
+    }
+  }
+}

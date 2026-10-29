@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Five semesters capped at 20 MC each give at most 100 MC of unit-load modules, and only one industrial-experience option (at most 12 MC) can be added on top, for a maximum of 112 MC, which falls short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.17,
+  "cost_usd": 0.000541,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 785,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:09:20+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Five semesters capped at 20 MC each give at most 100 MC of unit-load modules, and only one industrial-experience option (at most 12 MC) can be added on top, for a maximum of 112 MC, which falls short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

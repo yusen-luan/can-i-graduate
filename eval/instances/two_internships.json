@@ -1,0 +1,129 @@
+{
+  "name": "two_internships",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in software engineering; do the CP3200 internship option. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "software_engineering",
+      "industrial_option": "CP3200",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "GEA1000",
+        "MA1521",
+        "UE_GENERIC_7"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "GEC1030",
+        "UE_GENERIC_1"
+      ],
+      "4": [
+        "CS2106",
+        "CS3219",
+        "GEN2000",
+        "MA1522",
+        "ST2334"
+      ],
+      "5": [
+        "CS2109S",
+        "GEN2001",
+        "GESS1020",
+        "GESS1025",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "GEC1015",
+        "IS1108",
+        "SC1101E",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CP3200",
+        "CS4211",
+        "CS4243",
+        "ES2660"
+      ],
+      "8": [
+        "CS3227",
+        "CS3230",
+        "CS4218",
+        "HSI1000",
+        "IS1128"
+      ],
+      "9": [
+        "CP3202",
+        "GEN2003",
+        "UE_GENERIC_3"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Two 3-month internships",
+    "description": "Prefers two shorter internships (CP3200 + CP3202) over one 6-month stint; SE focus.",
+    "tier": "SAT",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-compl"
+    ],
+    "difficulty": {
+      "num_variables": 990,
+      "num_constraints": 3282,
+      "min_feasible_semesters": 8,
+      "semester_slack": 1,
+      "min_feasible_cap": 20,
+      "cap_slack": 0,
+      "near_unsat_margin": 0
+    },
+    "quality": {
+      "realism": 92.2,
+      "flags": [
+        "Semester 9: only 8 MC \u2014 very light",
+        "Semester 5: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

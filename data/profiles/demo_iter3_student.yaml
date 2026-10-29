@@ -1,0 +1,14 @@
+# iter3 demo student profile — an honours-track CS junior exercising the full
+# iter3 feature set (special terms, per-semester caps, CS-count cap, FYP).
+# Run with data/profiles/demo_iter3_scenario.yaml:
+#   python src/solver.py --iter2 \
+#     --student data/profiles/demo_iter3_student.yaml  (see scenario file for knobs)
+student_id: demo_iter3_honours
+conditions:
+  needs_math_bridging: false
+  english_path: direct_es2660
+has_h2_math: true
+eligible_fyp: true         # GPA >= 4.0 => may replace Industry Experience with CP4101 (I2.8)
+eligible_urop: true
+completed: {}
+exempted: {}

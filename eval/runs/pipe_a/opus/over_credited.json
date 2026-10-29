@@ -1,0 +1,73 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2106\", \"ST2334\", \"GEA1000\", \"IS1108\", \"ES2660\"]}, {\"semester\": 2, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2109S\", \"CS3230\", \"GEC1015\"]}, {\"semester\": 3, \"modules\": [\"CP3880\", \"CS3244\", \"CS3263\", \"GESS1020\", \"GEN2003\", \"DTK1234\"]}, {\"semester\": 4, \"modules\": [\"CS3243\", \"CS4248\", \"CS3264\", \"IE2141\", \"HSI1000\"]}, {\"semester\": 5, \"modules\": [\"CS4243\", \"CS4246\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": []}], \"reason\": \"Yes, it can be done. This plan reaches exactly 160 MC (28 MC from your exemptions plus 132 MC scheduled), stays at or under 20 MC in every semester, and uses CP3880 as the internship (it does not count toward the semester load) and CS2109S, CS3243, CS4243, CS4246 and CS4248 for the AI focus, also covering all prerequisites, the 12 MC level-4000 and 32 MC breadth-and-depth requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 14.23,
+  "cost_usd": 0.036148,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 1643,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:15:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2106",
+        "ST2334",
+        "GEA1000",
+        "IS1108",
+        "ES2660"
+      ],
+      "2": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "GEC1015"
+      ],
+      "3": [
+        "CP3880",
+        "CS3244",
+        "CS3263",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234"
+      ],
+      "4": [
+        "CS3243",
+        "CS4248",
+        "CS3264",
+        "IE2141",
+        "HSI1000"
+      ],
+      "5": [
+        "CS4243",
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": []
+    },
+    "reason": "Yes, it can be done. This plan reaches exactly 160 MC (28 MC from your exemptions plus 132 MC scheduled), stays at or under 20 MC in every semester, and uses CP3880 as the internship (it does not count toward the semester load) and CS2109S, CS3243, CS4243, CS4246 and CS4248 for the AI focus, also covering all prerequisites, the 12 MC level-4000 and 32 MC breadth-and-depth requirements."
+  },
+  "parse_error": null
+}

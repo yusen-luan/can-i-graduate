@@ -1,0 +1,85 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1231\", \"MA1521\", \"CS2040S\", \"CS2101\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2100\", \"MA1522\", \"ST2334\", \"CS2103T\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2105\", \"CS2106\", \"CS3230\", \"CS3243\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2102\", \"CS3219\", \"CS3244\", \"CS4246\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4244\", \"CS4243\", \"CS3216\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS3203\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS3231\", \"CS4234\", \"CS4218\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS3235\", \"CS3248\", \"CS3240\", \"CS4231\"]}, {\"semester\": 9, \"modules\": [\"CS4224\"]}], \"reason\": \"The plan covers the core BComp CS modules, the AI specialisation (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248), and unrestricted electives within the 20 MC per semester cap, finishing in 9 semesters with CS1010 already completed. Module codes and prerequisite ordering are from my general knowledge of NUS requirements and should be checked against the current AY2026/27 bulletin.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 31.74,
+  "cost_usd": 0.003444,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 6853,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:00+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231",
+        "MA1521",
+        "CS2040S",
+        "CS2101",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2100",
+        "MA1522",
+        "ST2334",
+        "CS2103T",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2105",
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "UE_GENERIC_3"
+      ],
+      "4": [
+        "CS2102",
+        "CS3219",
+        "CS3244",
+        "CS4246",
+        "UE_GENERIC_4"
+      ],
+      "5": [
+        "CS4244",
+        "CS4243",
+        "CS3216",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "6": [
+        "CS4248",
+        "CS3203",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "7": [
+        "CS3231",
+        "CS4234",
+        "CS4218",
+        "UE_GENERIC_10"
+      ],
+      "8": [
+        "CS3235",
+        "CS3248",
+        "CS3240",
+        "CS4231"
+      ],
+      "9": [
+        "CS4224"
+      ]
+    },
+    "reason": "The plan covers the core BComp CS modules, the AI specialisation (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248), and unrestricted electives within the 20 MC per semester cap, finishing in 9 semesters with CS1010 already completed. Module codes and prerequisite ordering are from my general knowledge of NUS requirements and should be checked against the current AY2026/27 bulletin."
+  },
+  "parse_error": null
+}

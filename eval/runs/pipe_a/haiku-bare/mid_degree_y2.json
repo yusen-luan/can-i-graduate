@@ -1,0 +1,73 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2103T\", \"CS2106\", \"CS3243\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2101\", \"CS3230\", \"CS3244\", \"ST2132\"]}, {\"semester\": 3, \"modules\": [\"CS2105\", \"CS3235\", \"CS4246\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2102\", \"CS4244\", \"CS3216\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4248\", \"CS4243\", \"CS3203\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3217\", \"CS4236\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4299\"]}], \"reason\": \"The remaining 120 MC fit within 8 semesters at no more than 20 MC each, and the plan includes an AI-focused set (CS3243, CS3244, CS4246, CS4244, CS4248, CS4243) with the final year project, with prerequisites ordered accordingly. The exact specialisation and core requirements are based on my general knowledge of the NUS BComp (CS) rules and should be verified against the official AY2026/27 handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 23.37,
+  "cost_usd": 0.002685,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 5325,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:56+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2103T",
+        "CS2106",
+        "CS3243",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2101",
+        "CS3230",
+        "CS3244",
+        "ST2132"
+      ],
+      "3": [
+        "CS2105",
+        "CS3235",
+        "CS4246",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS2102",
+        "CS4244",
+        "CS3216",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS4248",
+        "CS4243",
+        "CS3203",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS3217",
+        "CS4236",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": [
+        "CS4299"
+      ]
+    },
+    "reason": "The remaining 120 MC fit within 8 semesters at no more than 20 MC each, and the plan includes an AI-focused set (CS3243, CS3244, CS4246, CS4244, CS4248, CS4243) with the final year project, with prerequisites ordered accordingly. The exact specialisation and core requirements are based on my general knowledge of the NUS BComp (CS) rules and should be verified against the official AY2026/27 handbook."
+  },
+  "parse_error": null
+}

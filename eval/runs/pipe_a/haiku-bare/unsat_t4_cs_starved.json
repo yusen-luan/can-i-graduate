@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_cs_starved",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) core requires well over 8 CS/IFS/CP-coded modules, including the core programming, algorithms, systems and software engineering modules plus the final-year project, so the limit of at most one such module per semester over 8 semesters makes the degree impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.54,
+  "cost_usd": 0.000574,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 101,
+    "output_tokens": 1109,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:17:10+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) core requires well over 8 CS/IFS/CP-coded modules, including the core programming, algorithms, systems and software engineering modules plus the final-year project, so the limit of at most one such module per semester over 8 semesters makes the degree impossible."
+  },
+  "parse_error": null
+}

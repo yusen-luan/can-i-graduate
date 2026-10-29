@@ -1,0 +1,87 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231S\", \"MA1521\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"ST2334\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS2106\", \"CS3230\", \"CS3243\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS4246\", \"CS4248\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4347\", \"CS4243\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CP4101\", \"CS4244\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS3235\", \"CS4234\", \"CS4231\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS4224\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"CS3233\", \"CS4236\", \"CS4239\", \"CS4222\"]}], \"reason\": \"The plan spreads the core CS modules, the AI specialisation electives and CP4101 across 10 semesters, with Special Term 3 used for a light 12 MC load, keeping every semester within 20 MC and at most 4 CS/IFS/CP modules, and using 10 UE entries; module codes and the exact specialisation list are from memory and should be verified against the current NUS handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 33.48,
+  "cost_usd": 0.00383,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 7609,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:15:46+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "ST2334"
+      ],
+      "4": [
+        "CS2105",
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS3244",
+        "CS4246",
+        "CS4248",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS4347",
+        "CS4243",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "CP4101",
+        "CS4244",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "CS3235",
+        "CS4234",
+        "CS4231",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "CS4224",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": [
+        "CS3233",
+        "CS4236",
+        "CS4239",
+        "CS4222"
+      ]
+    },
+    "reason": "The plan spreads the core CS modules, the AI specialisation electives and CP4101 across 10 semesters, with Special Term 3 used for a light 12 MC load, keeping every semester within 20 MC and at most 4 CS/IFS/CP modules, and using 10 UE entries; module codes and the exact specialisation list are from memory and should be verified against the current NUS handbook."
+  },
+  "parse_error": null
+}

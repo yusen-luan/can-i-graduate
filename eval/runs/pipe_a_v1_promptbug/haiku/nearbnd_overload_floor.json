@@ -1,0 +1,78 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\", \"IS1108\", \"DTK1234\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"CS2107\", \"ST2334\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS3230\", \"CS4236\"]}, {\"semester\": 4, \"modules\": [\"CS4230\", \"CS2105\", \"GEC1015\", \"GESS1020\", \"GEN2000\", \"SC1101E\"]}, {\"semester\": 5, \"modules\": [\"CS4211\", \"CS3235\", \"ES2660\", \"IS1128\"]}, {\"semester\": 6, \"modules\": [\"CS4238\", \"CS3203\", \"CP3880\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4239\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"A feasible plan exists within 7 semesters and 26 MC per semester: it covers all required modules, the university and ID/CD requirements, a computer security focus (CS2107, CS4236, CS4230, CS4238, CS4239 with 20 MC at level 4000+), and the single industrial option CP3880, totalling exactly 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 62.37,
+  "cost_usd": 0.008437,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 16577,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:54:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "IS1108",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "CS2107",
+        "ST2334"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "CS4236"
+      ],
+      "4": [
+        "CS4230",
+        "CS2105",
+        "GEC1015",
+        "GESS1020",
+        "GEN2000",
+        "SC1101E"
+      ],
+      "5": [
+        "CS4211",
+        "CS3235",
+        "ES2660",
+        "IS1128"
+      ],
+      "6": [
+        "CS4238",
+        "CS3203",
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CS4239",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ]
+    },
+    "reason": "A feasible plan exists within 7 semesters and 26 MC per semester: it covers all required modules, the university and ID/CD requirements, a computer security focus (CS2107, CS4236, CS4230, CS4238, CS4239 with 20 MC at level 4000+), and the single industrial option CP3880, totalling exactly 160 MC."
+  },
+  "parse_error": null
+}

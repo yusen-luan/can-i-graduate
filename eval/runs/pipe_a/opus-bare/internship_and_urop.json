@@ -1,0 +1,83 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"GEA1000\",\"GES1010\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3230\",\"CS3219\",\"CS3213\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CP3880\"]},{\"semester\":6,\"modules\":[\"CS3203\",\"CS4218\",\"CS3240\",\"DTK1234\"]},{\"semester\":7,\"modules\":[\"CS4211\",\"CS4239\",\"CP3209\",\"CDE2501\",\"GEN2050X\"]},{\"semester\":8,\"modules\":[\"EC1101E\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Yes, this can be done: the plan covers the common curriculum, the CS foundation, maths and the Software Engineering focus (CS3213, CS3219, CS4218 plus 4000-level depth), with the CP3880 internship and a CP3209 research project, totalling 160 MC within 9 semesters at no more than 20 MC each. This is based on my understanding of the requirements, so please confirm module offerings, prerequisites and your cohort's exact rules (especially the GE, interdisciplinary/cross-disciplinary and UROP course codes) against official NUS sources before relying on it.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 69.19,
+  "cost_usd": 0.136537,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 6796,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-10-27T15:27:08+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEA1000",
+        "GES1010"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "ST2334",
+        "ES2660"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3230",
+        "CS3219",
+        "CS3213",
+        "GEC1015"
+      ],
+      "5": [
+        "CP3880"
+      ],
+      "6": [
+        "CS3203",
+        "CS4218",
+        "CS3240",
+        "DTK1234"
+      ],
+      "7": [
+        "CS4211",
+        "CS4239",
+        "CP3209",
+        "CDE2501",
+        "GEN2050X"
+      ],
+      "8": [
+        "EC1101E",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "9": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "Yes, this can be done: the plan covers the common curriculum, the CS foundation, maths and the Software Engineering focus (CS3213, CS3219, CS4218 plus 4000-level depth), with the CP3880 internship and a CP3209 research project, totalling 160 MC within 9 semesters at no more than 20 MC each. This is based on my understanding of the requirements, so please confirm module offerings, prerequisites and your cohort's exact rules (especially the GE, interdisciplinary/cross-disciplinary and UROP course codes) against official NUS sources before relying on it."
+  },
+  "parse_error": null
+}

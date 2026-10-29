@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters capped at 27 MC cannot reach 160 MC: the only non-industrial modules above 4 MC are CS3216/CS3217 (5 MC) and CS3203 (8 MC), which limits regular unit load to 146 MC, and the largest permitted industrial option (12 MC, which does not count toward load) brings the total to at most 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 68.0,
+  "cost_usd": 0.007744,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 15193,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:56:31+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Six semesters capped at 27 MC cannot reach 160 MC: the only non-industrial modules above 4 MC are CS3216/CS3217 (5 MC) and CS3203 (8 MC), which limits regular unit load to 146 MC, and the largest permitted industrial option (12 MC, which does not count toward load) brings the total to at most 158 MC."
+  },
+  "parse_error": null
+}

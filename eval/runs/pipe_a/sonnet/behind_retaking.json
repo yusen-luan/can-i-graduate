@@ -1,0 +1,78 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"ST2334\"]},{\"semester\":2,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":3,\"modules\":[\"CS3231\",\"CS4234\",\"ES2660\",\"GEA1000\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS4430\",\"CS3236\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"GEN2000\",\"DTK1234\",\"IS1128\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"This plan reaches 160 MC with all required modules, the algorithms theory focus (CS3230, CS3231, CS4231, plus CS4234 and CS4430 at level 4000), 12 MC at level 4000, 32 MC of B&D including CP3880, and 3 ID modules. It keeps every semester at or under 20 MC and respects all prerequisites and offered terms.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 23.26,
+  "cost_usd": 0.061849,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 2648,
+    "cache_creation_input_tokens": 14078,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:11:42+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "ST2334"
+      ],
+      "2": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "3": [
+        "CS3231",
+        "CS4234",
+        "ES2660",
+        "GEA1000",
+        "IS1108"
+      ],
+      "4": [
+        "CS4231",
+        "CS4430",
+        "CS3236",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CP3880",
+        "GEN2000",
+        "DTK1234",
+        "IS1128",
+        "HSI1000"
+      ],
+      "6": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": [],
+      "9": []
+    },
+    "reason": "This plan reaches 160 MC with all required modules, the algorithms theory focus (CS3230, CS3231, CS4231, plus CS4234 and CS4430 at level 4000), 12 MC at level 4000, 32 MC of B&D including CP3880, and 3 ID modules. It keeps every semester at or under 20 MC and respects all prerequisites and offered terms."
+  },
+  "parse_error": null
+}

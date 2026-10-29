@@ -1,0 +1,421 @@
+pipeline,instance,tier,gt_feasible,pred_feasible,decision_correct,plan_valid,plan_valid_lenient,realism,latency_s,cost_usd,n_violations,violations,spec_diff
+Control: always-SAT,behind_retaking,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,deep_focus_pinned,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,early_grad_overloader,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,final_year_audit,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,focus_switch,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,fyp_urop_trap,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,honours_dissertation,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,infeasible_3yr,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,internship_and_urop,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,leave_of_absence,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,mid_degree_y2,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,nearbnd_min_horizon,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,nearbnd_overload_floor,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,no_h2_math,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,on_track_fresh,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,over_credited,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,part_load_worklife,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,preclusion_deadend,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,transfer_apc,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,two_internships,SAT,True,True,True,False,False,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_4sem_overload,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_5sem,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_6sem_cap25,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_6sem_cap26,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_7sem_standard,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t1_two_blocked,T1,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t2_6sem_cap27,T2,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_cs_starved,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_deadline_prereq,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_forbid_required,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_forbid_three_core,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_forbid_two_core,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_ineligible_fyp,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_offering_lock,T4,False,True,False,,,,0.0,0.0,0,,
+Control: always-SAT,unsat_t4_tight_focus_overload_block,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,behind_retaking,SAT,True,True,True,False,False,,0.0,0.0,3,CS1231S: already satisfied but scheduled again | MA1521: already satisfied but scheduled again | CS1101S: already satisfied but scheduled again,
+Control: canonical-4yr,deep_focus_pinned,SAT,True,True,True,False,False,,0.0,0.0,1,focus area algorithms_theory: not satisfied (3 primaries incl >=1 L4000),
+Control: canonical-4yr,early_grad_overloader,SAT,True,True,True,False,False,,0.0,0.0,1,semester 8: outside horizon 1..7,
+Control: canonical-4yr,final_year_audit,SAT,True,True,True,False,False,,0.0,0.0,18,CS1231S: already satisfied but scheduled again | MA1521: already satisfied but scheduled again | CS1101S: already satisfied but scheduled again | ST2334: already satisfied but scheduled again | CS2030S: already satisfied but scheduled again | CS2040S: already satisfied but scheduled again | CS2100: already satisfied but scheduled again | MA1522: already satisfied but scheduled again | CS2101: already satisfied but scheduled again | CS2103T: already satisfied but scheduled again | CS2109S: already satisfied but scheduled again | ES2660: already satisfied but scheduled again | GEC1015: already satisfied but scheduled again | CS2106: already satisfied but scheduled again | IS1128: already satisfied but scheduled again | SC1101E: already satisfied but scheduled again | UE_GENERIC_1: already satisfied but scheduled again | UE_GENERIC_8: already satisfied but scheduled again,
+Control: canonical-4yr,focus_switch,SAT,True,True,True,True,True,94.0,0.0,0.0,0,,
+Control: canonical-4yr,fyp_urop_trap,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,honours_dissertation,SAT,True,True,True,False,False,,0.0,0.0,8,CS2030S (sem 3): not offered in Term 3 | CS2040S (sem 3): not offered in Term 3 | CS2100 (sem 3): not offered in Term 3 | GEN2001 (sem 3): not offered in Term 3 | MA1522 (sem 3): not offered in Term 3 | CS4263 (sem 7): not offered in Term 2 | CS4262 (sem 8): not offered in Term 1 | FYP requested but CP4101 not taken,
+Control: canonical-4yr,infeasible_3yr,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,internship_and_urop,SAT,True,True,True,False,False,,0.0,0.0,3,focus area software_engineering: not satisfied (3 primaries incl >=1 L4000) | industrial experience: requested option CP3880 not completed | UROP requested but no UROP module taken,
+Control: canonical-4yr,leave_of_absence,SAT,True,True,True,False,False,,0.0,0.0,1,"semester 5: blocked (per_semester_cap 0) but has ['CS2106', 'GEC1030', 'GESS1020', 'IS1128']",
+Control: canonical-4yr,mid_degree_y2,SAT,True,True,True,False,False,,0.0,0.0,10,CS1231S: already satisfied but scheduled again | MA1521: already satisfied but scheduled again | CS1101S: already satisfied but scheduled again | ST2334: already satisfied but scheduled again | CS2030S: already satisfied but scheduled again | CS2040S: already satisfied but scheduled again | CS2100: already satisfied but scheduled again | MA1522: already satisfied but scheduled again | ES2660: already satisfied but scheduled again | GEA1000: already satisfied but scheduled again,
+Control: canonical-4yr,nearbnd_min_horizon,SAT,True,True,True,True,True,94.0,0.0,0.0,0,,
+Control: canonical-4yr,nearbnd_overload_floor,SAT,True,True,True,False,False,,0.0,0.0,1,semester 8: outside horizon 1..7,
+Control: canonical-4yr,no_h2_math,SAT,True,True,True,False,False,,0.0,0.0,4,CS1231S (sem 1): prerequisite tree not satisfied earlier | MA1521 (sem 1): prerequisite tree not satisfied earlier | MA1522 (sem 3): prerequisite tree not satisfied earlier | focus area algorithms_theory: not satisfied (3 primaries incl >=1 L4000),
+Control: canonical-4yr,on_track_fresh,SAT,True,True,True,True,True,94.0,0.0,0.0,0,,
+Control: canonical-4yr,over_credited,SAT,True,True,True,False,False,,0.0,0.0,7,CS1231S: already satisfied but scheduled again | MA1521: already satisfied but scheduled again | CS1101S: already satisfied but scheduled again | CS2030S: already satisfied but scheduled again | CS2040S: already satisfied but scheduled again | CS2100: already satisfied but scheduled again | MA1522: already satisfied but scheduled again,
+Control: canonical-4yr,part_load_worklife,SAT,True,True,True,False,False,,0.0,0.0,7,semester 1: 20 units > cap 16 | semester 2: 20 units > cap 16 | semester 3: 20 units > cap 16 | semester 4: 20 units > cap 16 | semester 6: 16 units > cap 8 | semester 7: 20 units > cap 16 | focus area software_engineering: not satisfied (3 primaries incl >=1 L4000),
+Control: canonical-4yr,preclusion_deadend,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,transfer_apc,SAT,True,True,True,False,False,,0.0,0.0,5,CS1231S: already satisfied but scheduled again | MA1521: already satisfied but scheduled again | CS1101S: already satisfied but scheduled again | MA1522: already satisfied but scheduled again | GEA1000: already satisfied but scheduled again,
+Control: canonical-4yr,two_internships,SAT,True,True,True,False,False,,0.0,0.0,2,focus area software_engineering: not satisfied (3 primaries incl >=1 L4000) | industrial experience: requested option CP3200 not completed,
+Control: canonical-4yr,unsat_t1_4sem_overload,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t1_5sem,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t1_6sem_cap25,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t1_6sem_cap26,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t1_7sem_standard,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t1_two_blocked,T1,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t2_6sem_cap27,T2,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_cs_starved,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_deadline_prereq,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_forbid_required,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_forbid_three_core,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_forbid_two_core,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_ineligible_fyp,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_offering_lock,T4,False,True,False,,,,0.0,0.0,0,,
+Control: canonical-4yr,unsat_t4_tight_focus_overload_block,T4,False,True,False,,,,0.0,0.0,0,,
+Pipe A: Direct (Haiku 5.5),behind_retaking,SAT,True,True,True,True,True,79.4,56.61,0.008894,0,,
+Pipe A: Direct (Haiku 5.5),deep_focus_pinned,SAT,True,True,True,True,True,95.7,46.91,0.006229,0,,
+Pipe A: Direct (Haiku 5.5),early_grad_overloader,SAT,True,True,True,True,True,92.2,43.72,0.005606,0,,
+Pipe A: Direct (Haiku 5.5),final_year_audit,SAT,True,True,True,True,True,78.2,30.73,0.004039,0,,
+Pipe A: Direct (Haiku 5.5),focus_switch,SAT,True,True,True,True,True,87.5,51.67,0.006617,0,,
+Pipe A: Direct (Haiku 5.5),fyp_urop_trap,T4,False,False,True,,,,3.5,0.000464,0,,
+Pipe A: Direct (Haiku 5.5),honours_dissertation,SAT,True,True,True,True,True,93.9,67.47,0.008935,0,,
+Pipe A: Direct (Haiku 5.5),infeasible_3yr,T1,False,False,True,,,,5.96,0.00066,0,,
+Pipe A: Direct (Haiku 5.5),internship_and_urop,SAT,True,True,True,True,True,94.8,41.21,0.005401,0,,
+Pipe A: Direct (Haiku 5.5),leave_of_absence,SAT,True,True,True,True,True,86.5,54.94,0.007425,0,,
+Pipe A: Direct (Haiku 5.5),mid_degree_y2,SAT,True,True,True,True,True,83.0,43.98,0.005244,0,,
+Pipe A: Direct (Haiku 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,94.8,55.88,0.007327,0,,
+Pipe A: Direct (Haiku 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,95.6,59.49,0.007545,0,,
+Pipe A: Direct (Haiku 5.5),no_h2_math,SAT,True,True,True,True,True,90.1,54.91,0.007174,0,,
+Pipe A: Direct (Haiku 5.5),on_track_fresh,SAT,True,True,True,True,True,92.3,54.79,0.007374,0,,
+Pipe A: Direct (Haiku 5.5),over_credited,SAT,True,True,True,True,True,87.1,84.81,0.008286,0,,
+Pipe A: Direct (Haiku 5.5),part_load_worklife,SAT,True,True,True,True,True,96.2,64.08,0.008071,0,,
+Pipe A: Direct (Haiku 5.5),preclusion_deadend,T4,False,False,True,,,,4.33,0.000484,0,,
+Pipe A: Direct (Haiku 5.5),transfer_apc,SAT,True,True,True,True,True,89.0,44.92,0.005767,0,,
+Pipe A: Direct (Haiku 5.5),two_internships,SAT,True,True,True,True,True,99.1,62.8,0.008308,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,7.44,0.000884,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_5sem,T1,False,False,True,,,,4.17,0.000541,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,53.07,0.006268,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,100.78,0.01181,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,16.47,0.001982,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,3.22,0.000373,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,90.76,0.010436,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,4.62,0.000615,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,6.56,0.000793,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,2.91,0.000345,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,4.48,0.000565,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,3.21,0.00038,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,2.03,0.000237,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,3.83,0.000442,0,,
+Pipe A: Direct (Haiku 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,66.55,0.007947,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",behind_retaking,SAT,True,True,True,False,False,,31.63,0.003666,21,"CS2109S: required but not satisfied | ES2660: required but not satisfied | GEA1000: required but not satisfied | IS1108: required but not satisfied | critique_and_expression: needs 1 of ['ES2660'] | data_literacy: needs 1 of ['GEA1000'] | cultures_and_connections: needs 1 of ['GEC1015', 'GEC1020', 'GEC1030'] | singapore_studies: needs 1 of ['GESS1001', 'GESS1020', 'GESS1025'] | communities_and_engagement: needs 1 of ['GEN2000', 'GEN2001', 'GEN2003', 'GEN2004', 'GEN2050X', 'GEN2070X'] | computing_ethics: needs 1 of ['IS1108'] | CS4236 (sem 5): prerequisite tree not satisfied earlier | CS3223 (sem 7): prerequisite tree not satisfied earlier | CS4224 (sem 7): prerequisite tree not satisfied earlier | CS2104 (sem 2): not offered in Term 2 | CS4234 (sem 4): not offered in Term 2 | CS3281 (sem 5): not offered in Term 1 | CS4211 (sem 8): not offered in Term 2 | semester 7: 21 units > cap 20 | ID/CD: 0 modules, need 3 | ID/CD: 0 ID, need >= 2 | industrial experience: not satisfied (need an internship or eligible dissertation)",
+"Pipe A: Direct (Haiku 5.5, bare)",deep_focus_pinned,SAT,True,True,True,False,False,,45.52,0.005325,5,CS1010E: unknown module | CS1231: unknown module | CS3233: unknown module | CS5234: unknown module | CS5236: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",early_grad_overloader,SAT,True,True,True,False,False,,36.84,0.004308,2,CS1010X: unknown module | CS3233: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",final_year_audit,SAT,True,False,False,False,False,,19.82,0.002168,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",focus_switch,SAT,True,True,True,False,False,,33.27,0.003726,5,CS1010S: unknown module | MA2101: unknown module | MA2104: unknown module | CS4344: unknown module | ST2132: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",fyp_urop_trap,T4,False,True,False,,,,34.22,0.003979,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",honours_dissertation,SAT,True,True,True,False,False,,33.48,0.00383,2,CS1010S: unknown module | CS3233: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",infeasible_3yr,T1,False,False,True,,,,5.61,0.000465,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",internship_and_urop,SAT,True,True,True,False,False,,35.56,0.003909,6,CS1010X: unknown module | CS1231: unknown module | UROP: unknown module | CS4278: unknown module | CS4269: unknown module | CS3237: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",leave_of_absence,SAT,True,True,True,False,False,,31.62,0.003532,2,CS1010X: unknown module | CS1231: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",mid_degree_y2,SAT,True,True,True,False,False,,23.37,0.002685,2,ST2132: unknown module | CS4299: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",nearbnd_min_horizon,SAT,True,True,True,False,False,,37.19,0.004195,3,CS1010S: unknown module | GEQ1000: unknown module | GES1000: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",nearbnd_overload_floor,SAT,True,True,True,False,False,,31.71,0.003787,2,CS1010S: unknown module | CS1231: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",no_h2_math,SAT,True,True,True,False,False,,25.1,0.002815,6,CS1010S: unknown module | CS1231: unknown module | MA2214: unknown module | CS3233: unknown module | MA2101: unknown module | CS3248: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",on_track_fresh,SAT,True,True,True,False,False,,39.32,0.004471,6,CS1010X: unknown module | CS1231: unknown module | GES1000: unknown module | GEQ1000: unknown module | GEC1000: unknown module | CS4344: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",over_credited,SAT,True,True,True,False,False,,37.32,0.004216,3,CS3233: unknown module | CS3248: unknown module | CS4214: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",part_load_worklife,SAT,True,False,False,False,False,,9.66,0.000911,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",preclusion_deadend,T4,False,True,False,,,,31.74,0.003444,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",transfer_apc,SAT,True,True,True,False,False,,20.41,0.002272,1,GES1000: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",two_internships,SAT,True,True,True,False,False,,34.86,0.00403,1,CS1010X: unknown module,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_4sem_overload,T1,False,False,True,,,,3.02,0.000251,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_5sem,T1,False,False,True,,,,2.59,0.000217,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_6sem_cap25,T1,False,False,True,,,,2.39,0.00019,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_6sem_cap26,T1,False,False,True,,,,2.54,0.000197,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_7sem_standard,T1,False,False,True,,,,3.57,0.000257,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t1_two_blocked,T1,False,False,True,,,,3.08,0.000268,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t2_6sem_cap27,T2,False,False,True,,,,20.58,0.002035,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_cs_starved,T4,False,False,True,,,,6.54,0.000574,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_deadline_prereq,T4,False,False,True,,,,9.33,0.000931,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_forbid_required,T4,False,False,True,,,,6.55,0.000633,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_forbid_three_core,T4,False,True,False,,,,34.11,0.003948,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_forbid_two_core,T4,False,False,True,,,,10.43,0.001034,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_ineligible_fyp,T4,False,True,False,,,,34.34,0.003964,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_offering_lock,T4,False,False,True,,,,3.9,0.000362,0,,
+"Pipe A: Direct (Haiku 5.5, bare)",unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,2.72,0.000246,0,,
+Pipe A: Direct (Sonnet 5.5),behind_retaking,SAT,True,True,True,True,True,90.1,23.26,0.061849,0,,
+Pipe A: Direct (Sonnet 5.5),deep_focus_pinned,SAT,True,True,True,True,True,94.0,19.21,0.031378,0,,
+Pipe A: Direct (Sonnet 5.5),early_grad_overloader,SAT,True,True,True,True,True,92.9,19.56,0.031736,0,,
+Pipe A: Direct (Sonnet 5.5),final_year_audit,SAT,True,True,True,True,True,74.6,13.64,0.019224,0,,
+Pipe A: Direct (Sonnet 5.5),focus_switch,SAT,True,True,True,True,True,96.7,18.93,0.030348,0,,
+Pipe A: Direct (Sonnet 5.5),fyp_urop_trap,T4,False,False,True,,,,4.46,0.006966,0,,
+Pipe A: Direct (Sonnet 5.5),honours_dissertation,SAT,True,True,True,True,True,95.0,20.79,0.03391,0,,
+Pipe A: Direct (Sonnet 5.5),infeasible_3yr,T1,False,False,True,,,,4.04,0.005964,0,,
+Pipe A: Direct (Sonnet 5.5),internship_and_urop,SAT,True,True,True,True,True,92.3,17.82,0.028086,0,,
+Pipe A: Direct (Sonnet 5.5),leave_of_absence,SAT,True,True,True,True,True,93.1,19.94,0.032346,0,,
+Pipe A: Direct (Sonnet 5.5),mid_degree_y2,SAT,True,True,True,True,True,83.6,24.98,0.030598,0,,
+Pipe A: Direct (Sonnet 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,96.5,19.63,0.031824,0,,
+Pipe A: Direct (Sonnet 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,91.2,19.66,0.031736,0,,
+Pipe A: Direct (Sonnet 5.5),no_h2_math,SAT,True,True,True,True,True,94.8,25.86,0.040848,0,,
+Pipe A: Direct (Sonnet 5.5),on_track_fresh,SAT,True,True,True,True,True,94.0,17.55,0.028554,0,,
+Pipe A: Direct (Sonnet 5.5),over_credited,SAT,True,True,True,True,True,92.4,18.87,0.030382,0,,
+Pipe A: Direct (Sonnet 5.5),part_load_worklife,SAT,True,True,True,True,True,96.2,22.24,0.03732,0,,
+Pipe A: Direct (Sonnet 5.5),preclusion_deadend,T4,False,False,True,,,,4.44,0.006258,0,,
+Pipe A: Direct (Sonnet 5.5),transfer_apc,SAT,True,True,True,True,True,95.6,16.52,0.026812,0,,
+Pipe A: Direct (Sonnet 5.5),two_internships,SAT,True,True,True,True,True,94.9,26.7,0.04149,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,2.61,0.00544,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_5sem,T1,False,False,True,,,,4.26,0.0063,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,34.11,0.04625,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,65.34,0.07328,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,4.25,0.0067,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,3.88,0.006094,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,27.36,0.03689,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,3.44,0.006618,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,3.56,0.006896,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,2.28,0.004296,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,2.34,0.00499,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,1.91,0.004268,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,2.17,0.004312,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,2.64,0.005086,0,,
+Pipe A: Direct (Sonnet 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,27.55,0.037392,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",behind_retaking,SAT,True,True,True,False,False,,72.19,0.101891,2,CS3233: unknown module | CS4232: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",deep_focus_pinned,SAT,True,True,True,False,False,,65.77,0.089269,7,CS1010: unknown module | CS2030: unknown module | GEC1000: unknown module | CS3233: unknown module | GES1000: unknown module | GEX1000: unknown module | CS4232: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",early_grad_overloader,SAT,True,True,True,False,False,,76.32,0.106087,4,CS1010: unknown module | GEC1000: unknown module | GES1000: unknown module | GEX1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",final_year_audit,SAT,True,True,True,False,False,,52.24,0.072485,7,"GEA1000: required but not satisfied | IS1108: required but not satisfied | data_literacy: needs 1 of ['GEA1000'] | computing_ethics: needs 1 of ['IS1108'] | CS3243 (sem 1): not offered in Term 1 | ID/CD: 2 modules, need 3 | ID/CD: 1 ID, need >= 2",
+"Pipe A: Direct (Sonnet 5.5, bare)",focus_switch,SAT,True,True,True,False,False,,61.45,0.066549,5,CS1010: unknown module | GEA1000N: unknown module | GEC1000: unknown module | GESS1000: unknown module | GEX1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",fyp_urop_trap,T4,False,True,False,,,,53.56,0.072667,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",honours_dissertation,SAT,True,True,True,False,False,,48.99,0.067891,3,GEI1000: unknown module | GEC1000: unknown module | GES1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",infeasible_3yr,T1,False,False,True,,,,2.82,0.002725,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",internship_and_urop,SAT,True,True,True,False,False,,35.2,0.048167,4,CS1010: unknown module | GES1000: unknown module | GEC1000: unknown module | GEX1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",leave_of_absence,SAT,True,True,True,False,False,,53.2,0.072157,2,GESS1000: unknown module | GEC1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",mid_degree_y2,SAT,True,True,True,False,False,,45.59,0.060369,2,GESS1000: unknown module | GEC1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",nearbnd_min_horizon,SAT,True,True,True,False,False,,80.38,0.112765,2,CS1010: unknown module | CS3233: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",nearbnd_overload_floor,SAT,True,True,True,False,False,,79.15,0.110907,5,CS1010: unknown module | GESS1000: unknown module | GEC1000: unknown module | GEX1000: unknown module | CS5231: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",no_h2_math,SAT,True,True,True,False,False,,88.03,0.117689,5,CS1010: unknown module | CS3233: unknown module | GEX1000: unknown module | GEC1000: unknown module | GES1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",on_track_fresh,SAT,True,True,True,False,False,,43.65,0.058765,2,GEA1000N: unknown module | GEC1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",over_credited,SAT,True,True,True,False,False,,31.99,0.043573,3,GESS1000: unknown module | GEC1000: unknown module | GEX1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",part_load_worklife,SAT,True,False,False,False,False,,29.26,0.039201,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",preclusion_deadend,T4,False,True,False,,,,50.12,0.063199,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",transfer_apc,SAT,True,True,True,False,False,,60.29,0.078113,3,GEX1000: unknown module | GEC1000: unknown module | GESS1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",two_internships,SAT,True,True,True,False,False,,59.62,0.080491,4,CS1010: unknown module | GEC1000: unknown module | GES1000: unknown module | GEX1000: unknown module,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_4sem_overload,T1,False,False,True,,,,2.11,0.002021,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_5sem,T1,False,False,True,,,,2.18,0.001791,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_6sem_cap25,T1,False,False,True,,,,2.59,0.002691,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_6sem_cap26,T1,False,False,True,,,,2.6,0.003001,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_7sem_standard,T1,False,False,True,,,,2.91,0.002661,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t1_two_blocked,T1,False,False,True,,,,2.63,0.002735,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t2_6sem_cap27,T2,False,False,True,,,,49.75,0.052591,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_cs_starved,T4,False,False,True,,,,7.75,0.008249,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_deadline_prereq,T4,False,False,True,,,,7.13,0.008147,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_forbid_required,T4,False,False,True,,,,6.25,0.006937,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_forbid_three_core,T4,False,False,True,,,,12.48,0.012541,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_forbid_two_core,T4,False,False,True,,,,17.71,0.022129,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_ineligible_fyp,T4,False,False,True,,,,17.99,0.016693,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_offering_lock,T4,False,False,True,,,,4.52,0.004617,0,,
+"Pipe A: Direct (Sonnet 5.5, bare)",unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,2.89,0.002913,0,,
+Pipe A: Direct (Opus 5.5),behind_retaking,SAT,True,True,True,True,True,95.1,14.6,0.101898,0,,
+Pipe A: Direct (Opus 5.5),deep_focus_pinned,SAT,True,True,True,True,True,92.3,15.44,0.039,0,,
+Pipe A: Direct (Opus 5.5),early_grad_overloader,SAT,True,True,True,True,True,92.3,14.99,0.038916,0,,
+Pipe A: Direct (Opus 5.5),final_year_audit,SAT,True,True,True,True,True,74.6,13.22,0.024532,0,,
+Pipe A: Direct (Opus 5.5),focus_switch,SAT,True,True,True,True,True,96.7,19.12,0.0341,0,,
+Pipe A: Direct (Opus 5.5),fyp_urop_trap,T4,False,False,True,,,,5.11,0.011336,0,,
+Pipe A: Direct (Opus 5.5),honours_dissertation,SAT,True,True,True,True,True,95.0,16.9,0.044144,0,,
+Pipe A: Direct (Opus 5.5),infeasible_3yr,T1,False,False,True,,,,4.92,0.009092,0,,
+Pipe A: Direct (Opus 5.5),internship_and_urop,SAT,True,True,True,True,True,93.1,19.74,0.049156,0,,
+Pipe A: Direct (Opus 5.5),leave_of_absence,SAT,True,True,True,True,True,90.7,14.72,0.036396,0,,
+Pipe A: Direct (Opus 5.5),mid_degree_y2,SAT,True,True,True,True,True,87.0,12.01,0.02952,0,,
+Pipe A: Direct (Opus 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,92.3,12.88,0.033532,0,,
+Pipe A: Direct (Opus 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,91.7,17.79,0.041496,0,,
+Pipe A: Direct (Opus 5.5),no_h2_math,SAT,True,True,True,True,True,92.3,20.23,0.04824,0,,
+Pipe A: Direct (Opus 5.5),on_track_fresh,SAT,True,True,True,True,True,94.8,15.68,0.039892,0,,
+Pipe A: Direct (Opus 5.5),over_credited,SAT,True,True,True,True,True,88.4,14.23,0.036148,0,,
+Pipe A: Direct (Opus 5.5),part_load_worklife,SAT,True,True,True,True,True,94.5,14.64,0.039084,0,,
+Pipe A: Direct (Opus 5.5),preclusion_deadend,T4,False,False,True,,,,2.88,0.00736,0,,
+Pipe A: Direct (Opus 5.5),transfer_apc,SAT,True,True,True,True,True,91.2,12.38,0.031268,0,,
+Pipe A: Direct (Opus 5.5),two_internships,SAT,True,True,True,True,True,93.1,14.27,0.036204,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,3.99,0.008484,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_5sem,T1,False,False,True,,,,3.87,0.008584,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,10.36,0.020784,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,21.54,0.045024,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,5.47,0.011284,0,,
+Pipe A: Direct (Opus 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,3.9,0.009892,0,,
+Pipe A: Direct (Opus 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,19.41,0.038284,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,4.18,0.01078,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,3.32,0.007856,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,2.48,0.005196,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,2.42,0.005784,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,2.51,0.00566,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,2.41,0.006028,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,2.59,0.006556,0,,
+Pipe A: Direct (Opus 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,18.78,0.039108,0,,
+"Pipe A: Direct (Opus 5.5, bare)",behind_retaking,SAT,True,True,True,False,False,,58.93,0.119883,4,GES1010: unknown module | CS3233: unknown module | CS4232: unknown module | HSS1000: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",deep_focus_pinned,SAT,True,True,True,False,False,,54.4,0.100501,4,IS2218: unknown module | CS4232: unknown module | CS3233: unknown module | IS2238: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",early_grad_overloader,SAT,True,True,True,False,False,,83.72,0.161757,4,GEN2061: unknown module | IS2218: unknown module | IS2238: unknown module | CS4257: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",final_year_audit,SAT,True,True,True,False,False,,28.53,0.057793,8,"GEA1000: required but not satisfied | IS1108: required but not satisfied | data_literacy: needs 1 of ['GEA1000'] | computing_ethics: needs 1 of ['IS1108'] | CS4246 (sem 1): prerequisite tree not satisfied earlier | CS3243 (sem 1): not offered in Term 1 | ID/CD: 2 modules, need 3 | ID/CD: 1 ID, need >= 2",
+"Pipe A: Direct (Opus 5.5, bare)",focus_switch,SAT,True,True,True,False,False,,37.5,0.072681,2,PL1101E: unknown module | GEN2061X: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",fyp_urop_trap,T4,False,True,False,,,,86.02,0.133257,0,,
+"Pipe A: Direct (Opus 5.5, bare)",honours_dissertation,SAT,True,True,True,False,False,,44.9,0.087745,1,GEN2061: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",infeasible_3yr,T1,False,False,True,,,,6.55,0.004713,0,,
+"Pipe A: Direct (Opus 5.5, bare)",internship_and_urop,SAT,True,True,True,False,False,,69.19,0.136537,3,GES1010: unknown module | CDE2501: unknown module | EC1101E: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",leave_of_absence,SAT,True,True,True,False,False,,53.4,0.102377,1,GEN2061: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",mid_degree_y2,SAT,True,True,True,False,False,,55.9,0.113381,1,GEN2061: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",nearbnd_min_horizon,SAT,True,True,True,False,False,,56.18,0.103793,1,GESS1000: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",nearbnd_overload_floor,SAT,True,True,True,False,False,,89.26,0.171077,3,IS2218: unknown module | GEN2050: unknown module | IS2238: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",no_h2_math,SAT,True,True,True,False,False,,83.33,0.175961,4,CS3233: unknown module | CS4232: unknown module | GEN2061: unknown module | HSS1000: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",on_track_fresh,SAT,True,True,True,False,False,,72.49,0.146293,2,GES1010: unknown module | GEN2061: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",over_credited,SAT,True,True,True,False,False,,59.38,0.112349,4,GES1010: unknown module | GEN2050: unknown module | IS2218: unknown module | IS2238: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",part_load_worklife,SAT,True,False,False,False,False,,5.46,0.007185,0,,
+"Pipe A: Direct (Opus 5.5, bare)",preclusion_deadend,T4,False,True,False,,,,53.68,0.100561,0,,
+"Pipe A: Direct (Opus 5.5, bare)",transfer_apc,SAT,True,True,True,False,False,,55.09,0.104689,4,GES1010: unknown module | GEN2061X: unknown module | EC1101E: unknown module | LSM1301: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",two_internships,SAT,True,True,True,False,False,,73.93,0.143505,2,IS2218: unknown module | IS2238: unknown module,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_4sem_overload,T1,False,False,True,,,,2.67,0.003765,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_5sem,T1,False,False,True,,,,3.1,0.003905,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_6sem_cap25,T1,False,False,True,,,,3.97,0.006145,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_6sem_cap26,T1,False,False,True,,,,3.17,0.005165,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_7sem_standard,T1,False,False,True,,,,8.19,0.006725,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t1_two_blocked,T1,False,False,True,,,,4.08,0.005373,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t2_6sem_cap27,T2,False,False,True,,,,104.84,0.193245,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_cs_starved,T4,False,False,True,,,,10.62,0.018101,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_deadline_prereq,T4,False,False,True,,,,8.89,0.010217,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_forbid_required,T4,False,False,True,,,,7.95,0.006557,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_forbid_three_core,T4,False,False,True,,,,5.79,0.010845,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_forbid_two_core,T4,False,False,True,,,,9.01,0.011641,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_ineligible_fyp,T4,False,False,True,,,,7.7,0.009469,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_offering_lock,T4,False,False,True,,,,7.03,0.008817,0,,
+"Pipe A: Direct (Opus 5.5, bare)",unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,5.76,0.007369,0,,
+Pipe B: Translator (Haiku 5.5),behind_retaking,SAT,True,True,True,True,True,90.4,5.227,0.001161,0,,exact
+Pipe B: Translator (Haiku 5.5),deep_focus_pinned,SAT,True,True,True,True,True,91.4,5.152,0.000466,0,,exact
+Pipe B: Translator (Haiku 5.5),early_grad_overloader,SAT,True,True,True,True,True,93.3,4.826,0.000366,0,,exact
+Pipe B: Translator (Haiku 5.5),final_year_audit,SAT,True,True,True,True,True,66.9,4.966,0.000631,0,,exact
+Pipe B: Translator (Haiku 5.5),focus_switch,SAT,True,True,True,True,True,91.3,3.792,0.000445,0,,exact
+Pipe B: Translator (Haiku 5.5),fyp_urop_trap,T4,False,False,True,,,,4.948,0.000496,0,,exact
+Pipe B: Translator (Haiku 5.5),honours_dissertation,SAT,True,True,True,True,True,91.5,6.127,0.000662,0,,exact
+Pipe B: Translator (Haiku 5.5),infeasible_3yr,T1,False,False,True,,,,5.34,0.000528,0,,exact
+Pipe B: Translator (Haiku 5.5),internship_and_urop,SAT,True,True,True,True,True,91.4,5.105,0.000572,0,,exact
+Pipe B: Translator (Haiku 5.5),leave_of_absence,SAT,True,True,True,True,True,94.1,4.217,0.000415,0,,exact
+Pipe B: Translator (Haiku 5.5),mid_degree_y2,SAT,True,True,True,True,True,75.4,4.611,0.000528,0,,exact
+Pipe B: Translator (Haiku 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,94.0,4.251,0.000394,0,,exact
+Pipe B: Translator (Haiku 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,93.3,4.143,0.000357,0,,exact
+Pipe B: Translator (Haiku 5.5),no_h2_math,SAT,True,True,True,True,True,89.9,4.595,0.000486,0,,exact
+Pipe B: Translator (Haiku 5.5),on_track_fresh,SAT,True,True,True,True,True,94.0,4.087,0.000422,0,,exact
+Pipe B: Translator (Haiku 5.5),over_credited,SAT,True,True,True,True,True,86.5,5.837,0.000529,0,,exact
+Pipe B: Translator (Haiku 5.5),part_load_worklife,SAT,True,True,True,True,True,89.5,5.027,0.000421,0,,exact
+Pipe B: Translator (Haiku 5.5),preclusion_deadend,T4,False,False,True,,,,4.04,0.000451,0,,exact
+Pipe B: Translator (Haiku 5.5),transfer_apc,SAT,True,True,True,True,True,91.5,4.925,0.000528,0,,exact
+Pipe B: Translator (Haiku 5.5),two_internships,SAT,True,True,True,True,True,92.2,5.734,0.000422,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,3.646,0.00041,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_5sem,T1,False,False,True,,,,3.719,0.00041,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,4.161,0.000386,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,2.856,0.000348,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,3.993,0.000454,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,3.72,0.000456,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,4.17,0.000445,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,3.682,0.000418,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,3.943,0.000465,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,3.082,0.000337,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,3.864,0.000475,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,3.598,0.000434,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,5.581,0.000655,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,4.746,0.000382,0,,exact
+Pipe B: Translator (Haiku 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,3.586,0.0004,0,,exact
+Pipe B: Translator (Sonnet 5.5),behind_retaking,SAT,True,True,True,True,True,90.4,2.91,0.019804,0,,exact
+Pipe B: Translator (Sonnet 5.5),deep_focus_pinned,SAT,True,True,True,True,True,91.4,2.761,0.00428,0,,exact
+Pipe B: Translator (Sonnet 5.5),early_grad_overloader,SAT,True,True,True,True,True,93.3,4.054,0.006058,0,,exact
+Pipe B: Translator (Sonnet 5.5),final_year_audit,SAT,True,True,True,True,True,66.9,3.334,0.005826,0,,exact
+Pipe B: Translator (Sonnet 5.5),focus_switch,SAT,True,True,True,True,True,91.3,2.914,0.00412,0,,exact
+Pipe B: Translator (Sonnet 5.5),fyp_urop_trap,T4,False,False,True,,,,4.381,0.004108,0,,exact
+Pipe B: Translator (Sonnet 5.5),honours_dissertation,SAT,True,True,True,True,True,91.5,3.911,0.006542,0,,exact
+Pipe B: Translator (Sonnet 5.5),infeasible_3yr,T1,False,False,True,,,,2.473,0.004036,0,,exact
+Pipe B: Translator (Sonnet 5.5),internship_and_urop,SAT,True,True,True,True,True,91.4,2.488,0.004068,0,,exact
+Pipe B: Translator (Sonnet 5.5),leave_of_absence,SAT,True,True,True,True,True,94.1,3.047,0.004198,0,,exact
+Pipe B: Translator (Sonnet 5.5),mid_degree_y2,SAT,True,True,True,True,True,75.4,2.535,0.00466,0,,exact
+Pipe B: Translator (Sonnet 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,94.0,10.092,0.004036,0,,exact
+Pipe B: Translator (Sonnet 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,93.3,3.965,0.005848,0,,exact
+Pipe B: Translator (Sonnet 5.5),no_h2_math,SAT,True,True,True,True,True,89.9,9.961,0.00408,0,,exact
+Pipe B: Translator (Sonnet 5.5),on_track_fresh,SAT,True,True,True,True,True,94.0,9.951,0.004036,0,,exact
+Pipe B: Translator (Sonnet 5.5),over_credited,SAT,True,True,True,True,True,86.5,2.528,0.004484,0,,exact
+Pipe B: Translator (Sonnet 5.5),part_load_worklife,SAT,True,True,True,True,True,89.5,3.535,0.004202,0,,exact
+Pipe B: Translator (Sonnet 5.5),preclusion_deadend,T4,False,False,True,,,,3.092,0.00406,0,,exact
+Pipe B: Translator (Sonnet 5.5),transfer_apc,SAT,True,True,True,True,True,91.5,3.267,0.004314,0,,exact
+Pipe B: Translator (Sonnet 5.5),two_internships,SAT,True,True,True,True,True,92.2,10.129,0.004052,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,2.335,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_5sem,T1,False,False,True,,,,2.248,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,2.625,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,2.61,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,2.595,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,2.666,0.004266,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,2.588,0.003942,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,2.436,0.00399,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,2.639,0.004118,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,3.891,0.006328,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,2.98,0.004152,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,2.88,0.00408,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,2.923,0.004004,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,2.307,0.004188,0,,exact
+Pipe B: Translator (Sonnet 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,6.597,0.004104,0,,exact
+Pipe B: Translator (Opus 5.5),behind_retaking,SAT,True,True,True,True,True,90.4,6.253,0.039608,0,,exact
+Pipe B: Translator (Opus 5.5),deep_focus_pinned,SAT,True,True,True,True,True,91.4,3.666,0.007202,0,,exact
+Pipe B: Translator (Opus 5.5),early_grad_overloader,SAT,True,True,True,True,True,93.3,3.263,0.006618,0,,exact
+Pipe B: Translator (Opus 5.5),final_year_audit,SAT,True,True,True,True,True,66.9,3.946,0.010294,0,,exact
+Pipe B: Translator (Opus 5.5),focus_switch,SAT,True,True,True,True,True,91.3,3.5,0.006882,0,,exact
+Pipe B: Translator (Opus 5.5),fyp_urop_trap,T4,False,False,True,,,,3.289,0.006858,0,,exact
+Pipe B: Translator (Opus 5.5),honours_dissertation,SAT,True,True,True,True,True,91.5,4.695,0.009186,0,,exact
+Pipe B: Translator (Opus 5.5),infeasible_3yr,T1,False,False,True,,,,3.164,0.006714,0,,exact
+Pipe B: Translator (Opus 5.5),internship_and_urop,SAT,True,True,True,True,True,91.4,3.545,0.006778,0,,exact
+Pipe B: Translator (Opus 5.5),leave_of_absence,SAT,True,True,True,True,True,94.1,3.235,0.007038,0,,exact
+Pipe B: Translator (Opus 5.5),mid_degree_y2,SAT,True,True,True,True,True,75.4,4.113,0.007962,0,,exact
+Pipe B: Translator (Opus 5.5),nearbnd_min_horizon,SAT,True,True,True,True,True,94.0,3.131,0.006714,0,,exact
+Pipe B: Translator (Opus 5.5),nearbnd_overload_floor,SAT,True,True,True,True,True,93.3,3.548,0.006618,0,,exact
+Pipe B: Translator (Opus 5.5),no_h2_math,SAT,True,True,True,True,True,89.9,3.256,0.006802,0,,exact
+Pipe B: Translator (Opus 5.5),on_track_fresh,SAT,True,True,True,True,True,94.0,3.053,0.006714,0,,exact
+Pipe B: Translator (Opus 5.5),over_credited,SAT,True,True,True,True,True,86.5,3.358,0.00761,0,,exact
+Pipe B: Translator (Opus 5.5),part_load_worklife,SAT,True,True,True,True,True,89.5,3.771,0.007046,0,,exact
+Pipe B: Translator (Opus 5.5),preclusion_deadend,T4,False,False,True,,,,2.87,0.006762,0,,exact
+Pipe B: Translator (Opus 5.5),transfer_apc,SAT,True,True,True,True,True,91.5,3.194,0.00727,0,,exact
+Pipe B: Translator (Opus 5.5),two_internships,SAT,True,True,True,True,True,92.2,3.168,0.006746,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_4sem_overload,T1,False,False,True,,,,2.829,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_5sem,T1,False,False,True,,,,2.869,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_6sem_cap25,T1,False,False,True,,,,3.046,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_6sem_cap26,T1,False,False,True,,,,2.844,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_7sem_standard,T1,False,False,True,,,,2.866,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t1_two_blocked,T1,False,False,True,,,,3.135,0.007174,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t2_6sem_cap27,T2,False,False,True,,,,3.154,0.006526,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_cs_starved,T4,False,False,True,,,,3.498,0.006622,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_deadline_prereq,T4,False,False,True,,,,3.034,0.006878,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_forbid_required,T4,False,False,True,,,,3.065,0.006658,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_forbid_three_core,T4,False,False,True,,,,2.799,0.006946,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_forbid_two_core,T4,False,False,True,,,,2.828,0.006802,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_ineligible_fyp,T4,False,False,True,,,,2.924,0.00665,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_offering_lock,T4,False,False,True,,,,2.814,0.007018,0,,exact
+Pipe B: Translator (Opus 5.5),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,3.0,0.00685,0,,exact
+Gold Oracle (solve_iter2),behind_retaking,SAT,True,True,True,True,True,90.4,0.48708539991639555,0.0,0,,
+Gold Oracle (solve_iter2),deep_focus_pinned,SAT,True,True,True,True,True,91.4,0.4713033998850733,0.0,0,,
+Gold Oracle (solve_iter2),early_grad_overloader,SAT,True,True,True,True,True,93.3,0.35510329995304346,0.0,0,,
+Gold Oracle (solve_iter2),final_year_audit,SAT,True,True,True,True,True,66.9,0.2256642000284046,0.0,0,,
+Gold Oracle (solve_iter2),focus_switch,SAT,True,True,True,True,True,91.3,0.4767889000941068,0.0,0,,
+Gold Oracle (solve_iter2),fyp_urop_trap,T4,False,False,True,,,,0.22845809999853373,0.0,0,,
+Gold Oracle (solve_iter2),honours_dissertation,SAT,True,True,True,True,True,91.5,0.5457176000345498,0.0,0,,
+Gold Oracle (solve_iter2),infeasible_3yr,T1,False,False,True,,,,0.2443676998373121,0.0,0,,
+Gold Oracle (solve_iter2),internship_and_urop,SAT,True,True,True,True,True,91.4,0.46720139984972775,0.0,0,,
+Gold Oracle (solve_iter2),leave_of_absence,SAT,True,True,True,True,True,94.1,0.4521506999153644,0.0,0,,
+Gold Oracle (solve_iter2),mid_degree_y2,SAT,True,True,True,True,True,75.4,0.3455168001819402,0.0,0,,
+Gold Oracle (solve_iter2),nearbnd_min_horizon,SAT,True,True,True,True,True,94.0,0.4594117000233382,0.0,0,,
+Gold Oracle (solve_iter2),nearbnd_overload_floor,SAT,True,True,True,True,True,93.3,0.35472949990071356,0.0,0,,
+Gold Oracle (solve_iter2),no_h2_math,SAT,True,True,True,True,True,89.9,0.39861060003750026,0.0,0,,
+Gold Oracle (solve_iter2),on_track_fresh,SAT,True,True,True,True,True,94.0,0.455515599809587,0.0,0,,
+Gold Oracle (solve_iter2),over_credited,SAT,True,True,True,True,True,86.5,0.3781349998898804,0.0,0,,
+Gold Oracle (solve_iter2),part_load_worklife,SAT,True,True,True,True,True,89.2,0.9056381999980658,0.0,0,,
+Gold Oracle (solve_iter2),preclusion_deadend,T4,False,False,True,,,,0.18312619999051094,0.0,0,,
+Gold Oracle (solve_iter2),transfer_apc,SAT,True,True,True,True,True,91.5,0.39935129997320473,0.0,0,,
+Gold Oracle (solve_iter2),two_internships,SAT,True,True,True,True,True,92.2,0.509125699987635,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_4sem_overload,T1,False,False,True,,,,0.14312959997914732,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_5sem,T1,False,False,True,,,,0.16791630000807345,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_6sem_cap25,T1,False,False,True,,,,0.2635041999164969,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_6sem_cap26,T1,False,False,True,,,,0.2561974001582712,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_7sem_standard,T1,False,False,True,,,,0.3240574998781085,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t1_two_blocked,T1,False,False,True,,,,0.33012169995345175,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t2_6sem_cap27,T2,False,False,True,,,,0.25526880007237196,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_cs_starved,T4,False,False,True,,,,0.16621019993908703,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_deadline_prereq,T4,False,False,True,,,,0.1869647998828441,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_forbid_required,T4,False,False,True,,,,0.18498749984428287,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_forbid_three_core,T4,False,False,True,,,,0.18237269995734096,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_forbid_two_core,T4,False,False,True,,,,0.18784739985130727,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_ineligible_fyp,T4,False,False,True,,,,0.18478630017489195,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_offering_lock,T4,False,False,True,,,,0.17200680007226765,0.0,0,,
+Gold Oracle (solve_iter2),unsat_t4_tight_focus_overload_block,T4,False,False,True,,,,0.2893932000733912,0.0,0,,

@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"MA1301\",\"CS1101S\",\"ES1000\",\"DTK1234\",\"GESS1020\",\"GEN2000\"]},{\"semester\":2,\"modules\":[\"ES1103\",\"CS1231S\",\"CS2030S\",\"GEC1020\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"MA1521\",\"CS2040S\",\"CS2100\",\"HSI1000\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"MA1522\",\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS3230\",\"CS2109S\",\"SC1101E\",\"ES2660\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS3236\",\"CS4430\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4234\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"ETP3201L\"]}],\"reason\":\"A feasible 8-semester plan exists: MA1301 is taken as bridging, ES1000 must precede ES1103 so ES1103 is the earliest possible in Semester 2, algorithms_theory is covered by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430 (12 MC at level 4000+), the internship is ETP3201L, and the 160 MC total is reached with 8 generic electives, each semester within the 20 MC cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 54.91,
+  "cost_usd": 0.007174,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 14043,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:08:21+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "MA1301",
+        "CS1101S",
+        "ES1000",
+        "DTK1234",
+        "GESS1020",
+        "GEN2000"
+      ],
+      "2": [
+        "ES1103",
+        "CS1231S",
+        "CS2030S",
+        "GEC1020",
+        "GEA1000"
+      ],
+      "3": [
+        "MA1521",
+        "CS2040S",
+        "CS2100",
+        "HSI1000",
+        "IS1108"
+      ],
+      "4": [
+        "MA1522",
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "ST2334"
+      ],
+      "5": [
+        "CS3231",
+        "CS3230",
+        "CS2109S",
+        "SC1101E",
+        "ES2660"
+      ],
+      "6": [
+        "CS4231",
+        "CS3236",
+        "CS4430",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CS4234",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "ETP3201L"
+      ]
+    },
+    "reason": "A feasible 8-semester plan exists: MA1301 is taken as bridging, ES1000 must precede ES1103 so ES1103 is the earliest possible in Semester 2, algorithms_theory is covered by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430 (12 MC at level 4000+), the internship is ETP3201L, and the 160 MC total is reached with 8 generic electives, each semester within the 20 MC cap."
+  },
+  "parse_error": null
+}

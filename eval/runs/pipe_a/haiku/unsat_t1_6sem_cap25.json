@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation total is unreachable within 6 semesters capped at 25 MC: the only non-industrial odd-unit modules are the two 5 MC modules CS3216 and CS3217, so at most 146 MC of non-industrial units fit, and the largest 12 MC industrial option (which does not count toward the cap) brings the total to at most 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 53.07,
+  "cost_usd": 0.006268,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 12240,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14078
+  },
+  "effort": "high",
+  "prompt_sha256": "58a0e642a48d0547",
+  "timestamp": "2026-10-27T14:10:13+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC graduation total is unreachable within 6 semesters capped at 25 MC: the only non-industrial odd-unit modules are the two 5 MC modules CS3216 and CS3217, so at most 146 MC of non-industrial units fit, and the largest 12 MC industrial option (which does not count toward the cap) brings the total to at most 158 MC."
+  },
+  "parse_error": null
+}

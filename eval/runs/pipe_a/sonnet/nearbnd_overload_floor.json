@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"ES2660\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2107\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2105\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"GEC1015\",\"GESS1020\",\"GEN2000\",\"DTK1234\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4239\",\"CS4238\",\"DAO2703\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan has 160 MC and every semester stays at or under 26 MC. It covers all required modules, the university requirements, and 3 ID/CD modules (2 ID, 1 CD). The computer security focus has CS2107, CS3235, CS4236, CS4238 and CS4239, with 12 MC at level 4000. CP3880 is the industrial experience option, and B&D comes to 36 MC. Prerequisites and offered terms are respected throughout.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"ES2660\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"CS2107\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS3230\",\"CS2105\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"CS4230\",\"GESS1020\",\"GEC1015\",\"DTK1234\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4238\",\"CS4239\",\"GEN2000\",\"IS1128\",\"HSI1000\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This plan reaches 160 MC and meets every requirement. Its focus-area modules CS2107, CS3235, CS4238 and CS4239 satisfy the computer security focus, including the level 4000 modules. It uses the CP3200+CP3202 internship option and 24 MC of B&D coursework. No semester exceeds 24 MC, within the 26 MC cap.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 21.4,
-  "cost_usd": 0.035271,
+  "latency_s": 21.55,
+  "cost_usd": 0.034671,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 3228,
+    "output_tokens": 3157,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:36:16+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:09+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -26,55 +26,56 @@
         "CS1231S",
         "MA1521",
         "MA1522",
-        "GEA1000",
-        "ES2660"
+        "ES2660",
+        "GEA1000"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "CS2107",
         "ST2334",
+        "CS2107",
         "IS1108"
       ],
       "3": [
         "CS2103T",
         "CS2101",
         "CS2106",
-        "CS2105",
         "CS2109S",
-        "CS3230"
+        "CS3230",
+        "CS2105"
       ],
       "4": [
         "CS3235",
-        "GEC1015",
+        "CS4230",
         "GESS1020",
-        "GEN2000",
+        "GEC1015",
         "DTK1234",
-        "IS1128"
+        "CP3200"
       ],
       "5": [
-        "CS4236",
-        "CS4239",
         "CS4238",
-        "DAO2703",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "CS4239",
+        "GEN2000",
+        "IS1128",
+        "HSI1000",
+        "CP3202"
       ],
       "6": [
-        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
         "UE_GENERIC_3",
         "UE_GENERIC_4",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "UE_GENERIC_5"
       ],
       "7": [
+        "UE_GENERIC_6",
         "UE_GENERIC_7",
         "UE_GENERIC_8",
         "UE_GENERIC_9"
       ]
     },
-    "reason": "The plan has 160 MC and every semester stays at or under 26 MC. It covers all required modules, the university requirements, and 3 ID/CD modules (2 ID, 1 CD). The computer security focus has CS2107, CS3235, CS4236, CS4238 and CS4239, with 12 MC at level 4000. CP3880 is the industrial experience option, and B&D comes to 36 MC. Prerequisites and offered terms are respected throughout."
+    "reason": "This plan reaches 160 MC and meets every requirement. Its focus-area modules CS2107, CS3235, CS4238 and CS4239 satisfy the computer security focus, including the level 4000 modules. It uses the CP3200+CP3202 internship option and 24 MC of B&D coursework. No semester exceeds 24 MC, within the 26 MC cap."
   },
   "parse_error": null
 }

@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 Computer Organisation is a compulsory core module of the BComp (Computer Science) degree with no alternative in the core list, so avoiding it makes the degree requirements impossible to satisfy.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 Computer Organisation is a compulsory core module of the NUS Bachelor of Computing (Computer Science) with no alternative that counts toward the degree, so avoiding it makes the degree requirements impossible to satisfy.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 14.5,
-  "cost_usd": 0.001495,
+  "latency_s": 6.89,
+  "cost_usd": 0.000681,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 2954,
+    "output_tokens": 1326,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:53+00:00",
+  "timestamp": "2026-11-03T15:45:01+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS2100 Computer Organisation is a compulsory core module of the BComp (Computer Science) degree with no alternative in the core list, so avoiding it makes the degree requirements impossible to satisfy."
+    "reason": "CS2100 Computer Organisation is a compulsory core module of the NUS Bachelor of Computing (Computer Science) with no alternative that counts toward the degree, so avoiding it makes the degree requirements impossible to satisfy."
   },
   "parse_error": null
 }

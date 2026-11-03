@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Seven regular semesters capped at 20 MC give at most 140 MC of unit-load modules, and the single allowed industrial-experience option adds at most 12 MC (it is excluded from the load cap), for a maximum of 152 MC, which is below the required 160 MC total.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Graduation needs at least 160 MC, but a 20 MC cap over 7 semesters allows at most 140 MC of regular modules, and industrial experience adds at most 12 MC (one option), so the maximum is 152 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 10.35,
-  "cost_usd": 0.001229,
+  "latency_s": 11.59,
+  "cost_usd": 0.001337,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 2161,
+    "output_tokens": 2365,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:29+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:08+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Seven regular semesters capped at 20 MC give at most 140 MC of unit-load modules, and the single allowed industrial-experience option adds at most 12 MC (it is excluded from the load cap), for a maximum of 152 MC, which is below the required 160 MC total."
+    "reason": "Graduation needs at least 160 MC, but a 20 MC cap over 7 semesters allows at most 140 MC of regular modules, and industrial experience adds at most 12 MC (one option), so the maximum is 152 MC."
   },
   "parse_error": null
 }

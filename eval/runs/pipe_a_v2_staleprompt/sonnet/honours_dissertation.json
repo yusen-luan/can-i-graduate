@@ -1,0 +1,84 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS2103T\",\"CS2101\",\"CS2106\",\"IS1108\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CS3263\",\"CS4248\",\"IS1128\",\"GESS1020\",\"GEN2000\"]},{\"semester\":7,\"modules\":[\"CS4244\",\"HSI1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP4101\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[]}],\"reason\":\"The plan reaches 160 MC and covers all required and university-level modules. It has 3 ID modules, AI focus with CS2109S, CS3243, CS3244, CS3263, CS4244 and CS4248, and 32 MC of B&D. CP4101 gives the 4000-level credit and replaces the internship, and the plan stays within the 20 MC cap and the limit of 4 CS/CP modules per semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 22.71,
+  "cost_usd": 0.037255,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 3412,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:35:56+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [],
+      "4": [
+        "CS2109S",
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "IS1108"
+      ],
+      "5": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "DTK1234"
+      ],
+      "6": [
+        "CS3263",
+        "CS4248",
+        "IS1128",
+        "GESS1020",
+        "GEN2000"
+      ],
+      "7": [
+        "CS4244",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "CP4101",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "9": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": []
+    },
+    "reason": "The plan reaches 160 MC and covers all required and university-level modules. It has 3 ID modules, AI focus with CS2109S, CS3243, CS3244, CS3263, CS4244 and CS4248, and 32 MC of B&D. CP4101 gives the 4000-level credit and replaces the internship, and the plan stays within the 20 MC cap and the limit of 4 CS/CP modules per semester."
+  },
+  "parse_error": null
+}

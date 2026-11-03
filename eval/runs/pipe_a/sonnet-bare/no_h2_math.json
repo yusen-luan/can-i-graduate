@@ -4,27 +4,27 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1101S\",\"CS1231S\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2106\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2109S\",\"ST2334\",\"GESS1000\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4232\",\"CS3236\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4234\",\"CS4257\",\"CS4261\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible, but only just: it uses 160 MC at exactly 20 MC per semester over 8 semesters. ES1103 and MA1301 (needed because there is no H2 Math) go first, then the core, math, algorithms-theory focus modules, the 12 MC industry experience (CP3880) and electives follow in order. Some module codes, MC values and semester offerings are from memory, so please check them against the official AY2026/27 requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1010\",\"CS1231S\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3231\",\"CS2102\",\"CS2105\",\"IS1108\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4231\",\"CS4234\",\"CS3234\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3243\",\"CS3223\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: ES1103 and MA1301 (no H2 Maths) go first in Semester 1 and unlock the maths and CS core. Algorithms & Theory is covered by CS3230, CS3231, CS4231 and CS4234, and the 160 MC fit exactly at 20 MC per semester over 8 semesters. This plan relies on my recollection of the AY2026/27 requirements, so check it against the official degree structure.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 49.89,
-  "cost_usd": 0.066449,
+  "latency_s": 78.22,
+  "cost_usd": 0.108849,
   "request_id": "",
   "usage": {
     "input_tokens": 121,
-    "output_tokens": 6601,
+    "output_tokens": 10841,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:43:28+00:00",
+  "timestamp": "2026-11-03T15:49:44+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "ES1103",
         "MA1301",
-        "CS1101S",
+        "CS1010",
         "CS1231S",
         "GEA1000N"
       ],
@@ -36,35 +36,34 @@
         "MA1522"
       ],
       "3": [
-        "CS2103T",
         "CS2101",
-        "CS2102",
+        "CS2103T",
         "CS2106",
-        "CS3230"
+        "CS2109S",
+        "ST2334"
       ],
       "4": [
+        "CS3230",
+        "CS3231",
+        "CS2102",
         "CS2105",
-        "CS2109S",
-        "ST2334",
-        "GESS1000",
-        "GEC1000"
+        "IS1108"
       ],
       "5": [
+        "CS3203",
         "CS4231",
-        "CS4232",
-        "CS3236",
-        "GEN2000",
-        "UE_GENERIC_1"
+        "CS4234",
+        "CS3234"
       ],
       "6": [
-        "CS4234",
-        "CS4257",
-        "CS4261",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "CP3880",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
       ],
       "7": [
-        "CP3880",
+        "CS3243",
+        "CS3223",
+        "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
@@ -76,7 +75,7 @@
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Feasible, but only just: it uses 160 MC at exactly 20 MC per semester over 8 semesters. ES1103 and MA1301 (needed because there is no H2 Math) go first, then the core, math, algorithms-theory focus modules, the 12 MC industry experience (CP3880) and electives follow in order. Some module codes, MC values and semester offerings are from memory, so please check them against the official AY2026/27 requirements."
+    "reason": "Feasible: ES1103 and MA1301 (no H2 Maths) go first in Semester 1 and unlock the maths and CS core. Algorithms & Theory is covered by CS3230, CS3231, CS4231 and CS4234, and the 160 MC fit exactly at 20 MC per semester over 8 semesters. This plan relies on my recollection of the AY2026/27 requirements, so check it against the official degree structure."
   },
   "parse_error": null
 }

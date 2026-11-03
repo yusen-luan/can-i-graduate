@@ -4,26 +4,26 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2109S\", \"ST2334\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2106\", \"CS3230\", \"CS3243\", \"IS1108\", \"ES2660\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS4243\", \"CS4246\", \"GEC1015\", \"GESS1025\"]}, {\"semester\": 4, \"modules\": [\"CS4248\", \"CS4244\", \"CS3264\", \"GEN2061\", \"DTK1234\"]}, {\"semester\": 5, \"modules\": [\"CS3263\", \"HSI1000\", \"HSS1000\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CP3880\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"Feasible: the 28 MC of exemptions leave 132 MC, which fits in 8 semesters at no more than 20 MC each. The plan covers the remaining common curriculum, CS foundation, ST2334, industry experience via CP3880 and an AI focus area of 8 AI courses (4 at 4000-level), topped up with 7 UEs to reach 160 MC. Please check the GEC/GESS/GEN and interdisciplinary/cross-disciplinary course codes and semester offerings against the current NUS lists, as I am not fully certain of them.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS3230\",\"IS1108\",\"ES2660\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS3243\",\"CS3244\",\"CS2105\",\"GESS1025\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS4243\",\"CS4248\",\"GEN2062\",\"IS2218\",\"UE\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4246\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3263\",\"IS2238\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"Yes, it can be done: the 28 MC of exemptions leave 132 MC, which fits in 7 semesters of at most 20 MC, with semester 8 free as a buffer. The plan covers the remaining common curriculum, CS foundation and ST2334, plus the AI focus area (CS3243, CS3244, CS4243, CS4246, CS4248) and CP3880 for industrial experience; please confirm the GE and interdisciplinary course codes and semester offerings against the current NUS lists, as these were drawn from memory.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 56.62,
-  "cost_usd": 0.114949,
+  "latency_s": 57.45,
+  "cost_usd": 0.105609,
   "request_id": "",
   "usage": {
     "input_tokens": 118,
-    "output_tokens": 5714,
+    "output_tokens": 5247,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:58:02+00:00",
+  "timestamp": "2026-11-03T15:55:19+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS2103T",
         "CS2101",
+        "CS2103T",
         "CS2109S",
         "ST2334",
         "GEA1000"
@@ -31,45 +31,44 @@
       "2": [
         "CS2106",
         "CS3230",
-        "CS3243",
         "IS1108",
-        "ES2660"
+        "ES2660",
+        "GEC1015"
       ],
       "3": [
+        "CS3243",
         "CS3244",
-        "CS4243",
-        "CS4246",
-        "GEC1015",
-        "GESS1025"
-      ],
-      "4": [
-        "CS4248",
-        "CS4244",
-        "CS3264",
-        "GEN2061",
+        "CS2105",
+        "GESS1025",
         "DTK1234"
       ],
+      "4": [
+        "CS4243",
+        "CS4248",
+        "GEN2062",
+        "IS2218",
+        "UE_GENERIC_1"
+      ],
       "5": [
-        "CS3263",
-        "HSI1000",
-        "HSS1000",
-        "UE_GENERIC_1",
+        "CP3880",
+        "CS4246",
         "UE_GENERIC_2"
       ],
       "6": [
-        "CP3880",
-        "UE_GENERIC_3"
-      ],
-      "7": [
+        "CS3263",
+        "IS2238",
+        "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
-      "8": [
+      "7": [
         "UE_GENERIC_6",
-        "UE_GENERIC_7"
-      ]
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": []
     },
-    "reason": "Feasible: the 28 MC of exemptions leave 132 MC, which fits in 8 semesters at no more than 20 MC each. The plan covers the remaining common curriculum, CS foundation, ST2334, industry experience via CP3880 and an AI focus area of 8 AI courses (4 at 4000-level), topped up with 7 UEs to reach 160 MC. Please check the GEC/GESS/GEN and interdisciplinary/cross-disciplinary course codes and semester offerings against the current NUS lists, as I am not fully certain of them."
+    "reason": "Yes, it can be done: the 28 MC of exemptions leave 132 MC, which fits in 7 semesters of at most 20 MC, with semester 8 free as a buffer. The plan covers the remaining common curriculum, CS foundation and ST2334, plus the AI focus area (CS3243, CS3244, CS4243, CS4246, CS4248) and CP3880 for industrial experience; please confirm the GE and interdisciplinary course codes and semester offerings against the current NUS lists, as these were drawn from memory."
   },
   "parse_error": null
 }

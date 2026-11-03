@@ -4,79 +4,80 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"CS2101\"]}, {\"semester\": 2, \"modules\": [\"CS2103T\", \"CS2106\", \"CS2105\", \"ST2334\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2102\", \"CS3230\", \"CS3231\", \"CS2109S\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS3233\", \"CS4231\", \"CS4234\", \"UE\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3281\", \"CS4236\", \"CS3244\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3243\", \"CS4246\", \"CS4243\"]}, {\"semester\": 7, \"modules\": [\"CS3235\", \"CS4215\", \"CS3216\"]}, {\"semester\": 8, \"modules\": [\"CS4248\", \"CS3217\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"The remaining 148 MC of the 160 MC degree fit within 9 semesters at no more than 20 MC per semester, with the algorithms theory specialisation (CS3233, CS4231, CS4234) and its prerequisites (CS2040S, CS3230) scheduled before the advanced modules, using 9 UE slots within the 10-UE limit. Module codes and prerequisite details are from my general knowledge of the NUS curriculum and should be verified against the official requirements.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2030S\", \"MA1522\", \"CS2100\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2040S\", \"ST2334\", \"CS2101\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2105\", \"CS2106\", \"CS3233\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3243\", \"CS3244\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3223\", \"CS3240\", \"CS3210\", \"CS3281\"]}, {\"semester\": 6, \"modules\": [\"CS3282\", \"CS4231\", \"CS4232\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4234\", \"CS4236\", \"CS4248\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4246\", \"MA2101\", \"CS4224\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS2107\", \"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"With 12 MC already completed, the remaining 148 MC fit within 9 semesters at 16 to 20 MC each, using 10 UE entries and an algorithms-theory specialisation (CS3230, CS4231, CS4232, CS4234, CS4236). The module list is drawn from my knowledge of the BComp CS requirements and should be checked against the current NUS curriculum and prerequisites.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 27.8,
-  "cost_usd": 0.003207,
+  "latency_s": 30.95,
+  "cost_usd": 0.003647,
   "request_id": "",
   "usage": {
     "input_tokens": 87,
-    "output_tokens": 6149,
+    "output_tokens": 7029,
     "cache_creation_input_tokens": 987,
     "cache_read_input_tokens": 0
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:37:58+00:00",
+  "timestamp": "2026-11-03T15:42:17+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2030S",
-        "CS2040S",
-        "CS2100",
         "MA1522",
-        "CS2101"
-      ],
-      "2": [
-        "CS2103T",
-        "CS2106",
-        "CS2105",
-        "ST2334",
+        "CS2100",
         "UE_GENERIC_1"
       ],
-      "3": [
-        "CS2102",
-        "CS3230",
-        "CS3231",
-        "CS2109S",
+      "2": [
+        "CS2040S",
+        "ST2334",
+        "CS2101",
         "UE_GENERIC_2"
       ],
+      "3": [
+        "CS2103T",
+        "CS2105",
+        "CS2106",
+        "CS3233"
+      ],
       "4": [
-        "CS3233",
-        "CS4231",
-        "CS4234",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "UE_GENERIC_3"
       ],
       "5": [
-        "CS3281",
-        "CS4236",
-        "CS3244",
-        "UE_GENERIC_5"
+        "CS3223",
+        "CS3240",
+        "CS3210",
+        "CS3281"
       ],
       "6": [
-        "CS3243",
-        "CS4246",
-        "CS4243"
+        "CS3282",
+        "CS4231",
+        "CS4232",
+        "UE_GENERIC_4"
       ],
       "7": [
-        "CS3235",
-        "CS4215",
-        "CS3216"
+        "CS4234",
+        "CS4236",
+        "CS4248",
+        "UE_GENERIC_5"
       ],
       "8": [
-        "CS4248",
-        "CS3217",
+        "CS4246",
+        "MA2101",
+        "CS4224",
         "UE_GENERIC_6"
       ],
       "9": [
+        "CS2107",
         "UE_GENERIC_7",
         "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "The remaining 148 MC of the 160 MC degree fit within 9 semesters at no more than 20 MC per semester, with the algorithms theory specialisation (CS3233, CS4231, CS4234) and its prerequisites (CS2040S, CS3230) scheduled before the advanced modules, using 9 UE slots within the 10-UE limit. Module codes and prerequisite details are from my general knowledge of the NUS curriculum and should be verified against the official requirements."
+    "reason": "With 12 MC already completed, the remaining 148 MC fit within 9 semesters at 16 to 20 MC each, using 10 UE entries and an algorithms-theory specialisation (CS3230, CS4231, CS4232, CS4234, CS4236). The module list is drawn from my knowledge of the BComp CS requirements and should be checked against the current NUS curriculum and prerequisites."
   },
   "parse_error": null
 }

@@ -4,80 +4,80 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2040S\", \"CS2100\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2113\", \"CS2101\", \"CS2102\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS2106\", \"CS3230\", \"CS2103T\"]}, {\"semester\": 5, \"modules\": [\"CS3219\", \"CS3203\", \"CS3244\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CP3880\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CP3200\", \"CS4218\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4246\", \"CS4248\", \"CS4243\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS4231\", \"CS4211\", \"CS4224\", \"CS4236\"]}], \"reason\": \"The 160 MC degree can fit in 9 semesters at 20 MC or less each, with the software engineering modules, the CP3880 internship and a UROP project all scheduled, and the 10 UE limit respected.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231S\", \"MA1521\", \"UE\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"ST2334\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2102\", \"CS2103T\", \"CS2105\"]}, {\"semester\": 4, \"modules\": [\"CS2106\", \"CS3230\", \"CS3219\", \"UE\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CP4101\", \"CS4218\", \"CS3217\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CP3880\"]}, {\"semester\": 7, \"modules\": [\"CS3203\", \"CS4224\", \"CS4231\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4102\", \"CS4344\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS4246\", \"CS4248\", \"CS4243\"]}], \"reason\": \"The plan totals about 162 MC across 9 semesters, within the 20 MC per-semester cap, with the software engineering specialisation, the CP3880 internship alone in semester 6, and the UROP project as CP4101/CP4102. The module codes and MC values are from memory and were not checked against the official AY2026/27 NUS requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 29.66,
-  "cost_usd": 0.003226,
+  "latency_s": 34.75,
+  "cost_usd": 0.003717,
   "request_id": "",
   "usage": {
     "input_tokens": 105,
-    "output_tokens": 6411,
+    "output_tokens": 7393,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:02+00:00",
+  "timestamp": "2026-11-03T15:43:32+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1101S",
+        "CS1010S",
         "CS1231S",
         "MA1521",
-        "UE_GENERIC_1"
-      ],
-      "2": [
-        "CS2040S",
-        "CS2100",
-        "MA1522",
+        "UE_GENERIC_1",
         "UE_GENERIC_2"
       ],
-      "3": [
-        "CS2113",
-        "CS2101",
-        "CS2102",
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
         "ST2334",
         "UE_GENERIC_3"
       ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2102",
+        "CS2103T",
+        "CS2105"
+      ],
       "4": [
-        "CS2105",
         "CS2106",
         "CS3230",
-        "CS2103T"
-      ],
-      "5": [
         "CS3219",
-        "CS3203",
-        "CS3244",
         "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
-      "6": [
-        "CP3880",
+      "5": [
+        "CP4101",
+        "CS4218",
+        "CS3217",
         "UE_GENERIC_6"
       ],
+      "6": [
+        "CP3880"
+      ],
       "7": [
-        "CP3200",
-        "CS4218",
+        "CS3203",
+        "CS4224",
+        "CS4231",
         "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
       "8": [
-        "CS4246",
-        "CS4248",
-        "CS4243",
+        "CP4102",
+        "CS4344",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ],
       "9": [
-        "CS4231",
-        "CS4211",
-        "CS4224",
-        "CS4236"
+        "CS4246",
+        "CS4248",
+        "CS4243"
       ]
     },
-    "reason": "The 160 MC degree can fit in 9 semesters at 20 MC or less each, with the software engineering modules, the CP3880 internship and a UROP project all scheduled, and the 10 UE limit respected."
+    "reason": "The plan totals about 162 MC across 9 semesters, within the 20 MC per-semester cap, with the software engineering specialisation, the CP3880 internship alone in semester 6, and the UROP project as CP4101/CP4102. The module codes and MC values are from memory and were not checked against the official AY2026/27 NUS requirements."
   },
   "parse_error": null
 }

@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"ST2334\"]},{\"semester\":2,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":3,\"modules\":[\"CS3231\",\"CS4234\",\"GEA1000\",\"IS1108\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS4430\",\"CS3236\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"DTK1234\",\"IS1128\",\"DAO2703\",\"GEN2000\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"All prerequisites are met in strictly earlier semesters and no semester exceeds 20 MC. The plan reaches exactly 160 MC and covers every required module and the UL requirements. The ID/CD set is two ID plus one CD. The algorithms_theory focus is met by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430, with three level-4000 modules (12 MC). B&D totals 32 MC including CP3880.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":3,\"modules\":[\"CS3231\",\"ST2334\",\"ES2660\",\"IS1108\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS2102\",\"CS2105\",\"IE2141\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS4234\",\"GEC1015\",\"GESS1001\",\"GEN2001\",\"UE\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"UE\",\"UE\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan reaches exactly 160 MC with all required modules, the UL requirements and 3 ID modules. Algorithms and theory is covered by CS3230, CS3231, CS4231, CS4234 and CS4430, which gives 16 MC at level 4000. B&D totals 36 MC, the industrial option is CP3200 + CP3202, each semester stays within 20 MC, and the 9 generic electives are within the limit of 10.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 18.08,
-  "cost_usd": 0.061442,
+  "latency_s": 23.7,
+  "cost_usd": 0.070504,
   "request_id": "",
   "usage": {
     "input_tokens": 87,
-    "output_tokens": 2601,
-    "cache_creation_input_tokens": 14103,
+    "output_tokens": 3369,
+    "cache_creation_input_tokens": 14656,
     "cache_read_input_tokens": 0
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:35:31+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:49:55+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -26,54 +26,55 @@
         "CS2040S",
         "CS2100",
         "MA1522",
-        "ST2334"
+        "GEA1000"
       ],
       "2": [
-        "CS2101",
         "CS2103T",
+        "CS2101",
         "CS2106",
         "CS2109S",
         "CS3230"
       ],
       "3": [
         "CS3231",
-        "CS4234",
-        "GEA1000",
+        "ST2334",
+        "ES2660",
         "IS1108",
-        "ES2660"
+        "DTK1234"
       ],
       "4": [
         "CS4231",
-        "CS4430",
-        "CS3236",
-        "GEC1015",
-        "GESS1020"
+        "CS2102",
+        "CS2105",
+        "IE2141",
+        "IS1128"
       ],
       "5": [
-        "CP3880",
-        "DTK1234",
-        "IS1128",
-        "DAO2703",
-        "GEN2000"
+        "CS4234",
+        "GEC1015",
+        "GESS1001",
+        "GEN2001",
+        "UE_GENERIC_1",
+        "CP3200"
       ],
       "6": [
-        "UE_GENERIC_1",
+        "CS4430",
         "UE_GENERIC_2",
         "UE_GENERIC_3",
         "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "UE_GENERIC_5",
+        "CP3202"
       ],
       "7": [
         "UE_GENERIC_6",
         "UE_GENERIC_7",
         "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "UE_GENERIC_9"
       ],
       "8": [],
       "9": []
     },
-    "reason": "All prerequisites are met in strictly earlier semesters and no semester exceeds 20 MC. The plan reaches exactly 160 MC and covers every required module and the UL requirements. The ID/CD set is two ID plus one CD. The algorithms_theory focus is met by CS3230, CS3231, CS3236, CS4231, CS4234 and CS4430, with three level-4000 modules (12 MC). B&D totals 32 MC including CP3880."
+    "reason": "The plan reaches exactly 160 MC with all required modules, the UL requirements and 3 ID modules. Algorithms and theory is covered by CS3230, CS3231, CS4231, CS4234 and CS4430, which gives 16 MC at level 4000. B&D totals 36 MC, the industrial option is CP3200 + CP3202, each semester stays within 20 MC, and the 9 generic electives are within the limit of 10."
   },
   "parse_error": null
 }

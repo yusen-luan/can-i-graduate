@@ -4,71 +4,72 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS3230\",\"CS3243\",\"ST2334\",\"ES2660\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS3263\",\"CS3210\",\"CS3217\",\"GEC1000\"]},{\"semester\":4,\"modules\":[\"GEN2000\",\"GESS1000\",\"GEX1000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CP3880\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"After the exemptions about 132 MC remain, which fits within 8 semesters at up to 20 MC each (this plan finishes in 7). It covers the remaining core, math, AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4246, CS4248), industry experience, university-level requirements and electives. The exact module codes for the university-level requirements and the breadth electives are my best recollection of the AY2026/27 rules, so check them against the official requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2109S\",\"CS2103T\",\"CS2102\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2105\",\"CS2106\",\"CS3230\",\"CS2101\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS3243\",\"CS3244\",\"IS1128\",\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3203\",\"CS4246\",\"CS3217\",\"CS3219\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4248\",\"CS3210\",\"CS3240\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4225\",\"CS4243\",\"CS3213\",\"CS3235\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"After the 28 MC of exemptions, about 132 MC remain, which fits within 8 semesters at up to 20 MC each. The plan covers the CS foundation, team project, ethics, maths, 6 AI focus-area modules and the electives. The module codes, module offerings and the exact degree structure come from my recollection of NUS requirements and should be checked against the official NUS CS requirements and module catalogue.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 36.01,
-  "cost_usd": 0.047123,
+  "latency_s": 37.54,
+  "cost_usd": 0.049403,
   "request_id": "",
   "usage": {
     "input_tokens": 118,
-    "output_tokens": 4669,
+    "output_tokens": 4897,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:43:24+00:00",
+  "timestamp": "2026-11-03T15:49:28+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS2103T",
-        "CS2101",
-        "CS2106",
         "CS2109S",
-        "GEA1000"
+        "CS2103T",
+        "CS2102",
+        "GEA1000",
+        "UE_GENERIC_1"
       ],
       "2": [
+        "CS2105",
+        "CS2106",
         "CS3230",
-        "CS3243",
-        "ST2334",
-        "ES2660",
-        "IS1128"
+        "CS2101",
+        "ST2334"
       ],
       "3": [
+        "CS3243",
         "CS3244",
-        "CS3263",
-        "CS3210",
-        "CS3217",
-        "GEC1000"
+        "IS1128",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "4": [
-        "GEN2000",
-        "GESS1000",
-        "GEX1000",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "CS3203",
+        "CS4246",
+        "CS3217",
+        "CS3219"
       ],
       "5": [
+        "CS3263",
         "CS4248",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS3210",
+        "CS3240",
+        "UE_GENERIC_4"
       ],
       "6": [
-        "CS4246",
-        "CP3880",
-        "UE_GENERIC_7"
+        "CS4225",
+        "CS4243",
+        "CS3213",
+        "CS3235",
+        "UE_GENERIC_5"
       ],
       "7": [
-        "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "8": []
     },
-    "reason": "After the exemptions about 132 MC remain, which fits within 8 semesters at up to 20 MC each (this plan finishes in 7). It covers the remaining core, math, AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4246, CS4248), industry experience, university-level requirements and electives. The exact module codes for the university-level requirements and the breadth electives are my best recollection of the AY2026/27 rules, so check them against the official requirements."
+    "reason": "After the 28 MC of exemptions, about 132 MC remain, which fits within 8 semesters at up to 20 MC each. The plan covers the CS foundation, team project, ethics, maths, 6 AI focus-area modules and the electives. The module codes, module offerings and the exact degree structure come from my recollection of NUS requirements and should be checked against the official NUS CS requirements and module catalogue."
   },
   "parse_error": null
 }

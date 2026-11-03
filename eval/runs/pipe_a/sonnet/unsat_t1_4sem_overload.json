@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC. With a 28 MC cap over 4 semesters, regular modules give at most 112 MC. The largest industrial-experience option is only 12 MC and sits outside the unit load, so the most that can be reached is 124 MC, which is below 160.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow at most 112 MC of coursework. The only extra credit comes from industrial-experience modules, which are exempt from the load cap, and the largest option adds 12 MC. That gives at most 124 MC, below 160.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.18,
-  "cost_usd": 0.005755,
+  "latency_s": 3.7,
+  "cost_usd": 0.006725,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 278,
+    "output_tokens": 364,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:36:19+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:28+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Graduation needs at least 160 MC. With a 28 MC cap over 4 semesters, regular modules give at most 112 MC. The largest industrial-experience option is only 12 MC and sits outside the unit load, so the most that can be reached is 124 MC, which is below 160."
+    "reason": "Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow at most 112 MC of coursework. The only extra credit comes from industrial-experience modules, which are exempt from the load cap, and the largest option adds 12 MC. That gives at most 124 MC, below 160."
   },
   "parse_error": null
 }

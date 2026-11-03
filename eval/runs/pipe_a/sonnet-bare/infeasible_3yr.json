@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The Bachelor of Computing (Computer Science) requires 160 MC, but 6 semesters at a maximum of 20 MC each gives only 120 MC, so graduating in 6 semesters under this cap is impossible regardless of the AI specialisation.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The BComp (Computer Science) degree requires at least 160 MC, but 6 semesters at a maximum of 20 MC each gives only 120 MC, even before the AI specialisation requirements. No Special Terms were offered to make up the shortfall.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 2.85,
-  "cost_usd": 0.002315,
+  "latency_s": 2.59,
+  "cost_usd": 0.002855,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 194,
+    "output_tokens": 248,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:41:35+00:00",
+  "timestamp": "2026-11-03T15:47:17+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The Bachelor of Computing (Computer Science) requires 160 MC, but 6 semesters at a maximum of 20 MC each gives only 120 MC, so graduating in 6 semesters under this cap is impossible regardless of the AI specialisation."
+    "reason": "The BComp (Computer Science) degree requires at least 160 MC, but 6 semesters at a maximum of 20 MC each gives only 120 MC, even before the AI specialisation requirements. No Special Terms were offered to make up the shortfall."
   },
   "parse_error": null
 }

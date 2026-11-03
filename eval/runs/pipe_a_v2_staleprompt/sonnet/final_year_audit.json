@@ -1,0 +1,47 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3230\",\"GEA1000\",\"IS1108\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS3244\",\"CS4248\",\"UE\"]},{\"semester\":3,\"modules\":[\"CP3880\"]},{\"semester\":4,\"modules\":[]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The plan adds the missing required modules CS3230, GEA1000 and IS1108, a third ID module (DTK1234), and the AI primaries CS3244 and CS4248. CS4243 and CS4248 give 12 MC at level 4000, the existing B&D modules already exceed 32 MC, and CP3880 is the single industrial-experience option. The total reaches 160 MC with one extra UE, and every semester stays within the 20 MC cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 12.82,
+  "cost_usd": 0.021149,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 1786,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:35:43+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "GEA1000",
+        "IS1108",
+        "DTK1234"
+      ],
+      "2": [
+        "CS3244",
+        "CS4248",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CP3880"
+      ],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "The plan adds the missing required modules CS3230, GEA1000 and IS1108, a third ID module (DTK1234), and the AI primaries CS3244 and CS4248. CS4243 and CS4248 give 12 MC at level 4000, the existing B&D modules already exceed 32 MC, and CP3880 is the single industrial-experience option. The total reaches 160 MC with one extra UE, and every semester stays within the 20 MC cap."
+  },
+  "parse_error": null
+}

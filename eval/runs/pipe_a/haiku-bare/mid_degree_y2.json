@@ -4,60 +4,62 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2105\", \"CS3230\", \"CS2101\"]}, {\"semester\": 2, \"modules\": [\"CS2103T\", \"CS2106\", \"CS3243\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS4246\", \"GES1000\"]}, {\"semester\": 4, \"modules\": [\"CS4248\", \"CS4244\", \"CS3216\"]}, {\"semester\": 5, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": []}], \"reason\": \"The 80 MC still needed fit within 8 semesters at 20 MC per semester, and the AI specialisation's prerequisite chain (CS3243 before CS4246, CS3244 before CS4248) is respected. The core list and AI specialisation modules are from my recollection of the NUS requirements and should be checked against the official BComp (CS) handbook.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2103T\", \"CS2105\", \"CS3230\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2101\", \"CS2106\", \"CS3243\", \"UE\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS3281\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS4246\", \"UE\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4248\", \"CS3282\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4243\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": []}], \"reason\": \"The 88 MC of remaining requirements fit within 8 semesters at 20 MC or less per term, with prerequisites ordered (e.g., CS3243 before CS4246, CS3244 before CS4248, CS3281 before CS3282). This plan assumes my recollection of the BComp (CS) core, AI specialisation and project modules is accurate, so verify against the current NUS requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 18.33,
-  "cost_usd": 0.002116,
+  "latency_s": 29.72,
+  "cost_usd": 0.002966,
   "request_id": "",
   "usage": {
     "input_tokens": 126,
-    "output_tokens": 4188,
+    "output_tokens": 5888,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:38:51+00:00",
+  "timestamp": "2026-11-03T15:43:45+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
+        "CS2103T",
         "CS2105",
         "CS3230",
-        "CS2101"
+        "UE_GENERIC_1"
       ],
       "2": [
-        "CS2103T",
+        "CS2101",
         "CS2106",
-        "CS3243"
-      ],
-      "3": [
-        "CS3244",
-        "CS4246",
-        "GES1000"
-      ],
-      "4": [
-        "CS4248",
-        "CS4244",
-        "CS3216"
-      ],
-      "5": [
-        "UE_GENERIC_1",
+        "CS3243",
         "UE_GENERIC_2",
         "UE_GENERIC_3"
       ],
-      "6": [
-        "UE_GENERIC_4",
+      "3": [
+        "CS3244",
+        "CS3281",
+        "UE_GENERIC_4"
+      ],
+      "4": [
+        "CS4246",
         "UE_GENERIC_5",
         "UE_GENERIC_6"
       ],
-      "7": [
-        "UE_GENERIC_7",
+      "5": [
+        "CS4248",
+        "CS3282",
+        "UE_GENERIC_7"
+      ],
+      "6": [
+        "CS4243",
         "UE_GENERIC_8"
+      ],
+      "7": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ],
       "8": []
     },
-    "reason": "The 80 MC still needed fit within 8 semesters at 20 MC per semester, and the AI specialisation's prerequisite chain (CS3243 before CS4246, CS3244 before CS4248) is respected. The core list and AI specialisation modules are from my recollection of the NUS requirements and should be checked against the official BComp (CS) handbook."
+    "reason": "The 88 MC of remaining requirements fit within 8 semesters at 20 MC or less per term, with prerequisites ordered (e.g., CS3243 before CS4246, CS3244 before CS4248, CS3281 before CS3282). This plan assumes my recollection of the BComp (CS) core, AI specialisation and project modules is accurate, so verify against the current NUS requirements."
   },
   "parse_error": null
 }

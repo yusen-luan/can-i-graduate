@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS3230 needs CS2040S (or another CS2040-family module) and CS1231S/CS1231 completed in a strictly earlier semester, and CS2040S itself needs CS1101S (or another CS1010-family module) and CS1231S in an earlier semester, so the earliest CS3230 can be taken is semester 3, not by semester 2.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.71,
+  "cost_usd": 0.000584,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 868,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:36+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 needs CS2040S (or another CS2040-family module) and CS1231S/CS1231 completed in a strictly earlier semester, and CS2040S itself needs CS1101S (or another CS1010-family module) and CS1231S in an earlier semester, so the earliest CS3230 can be taken is semester 3, not by semester 2."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,82 @@
+{
+  "instance": "on_track_fresh",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"GEA1000\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"ST2334\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3263\",\"CS4248\",\"IS1108\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS4263\",\"CS4244\",\"CS2105\",\"CS2107\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"GESS1020\",\"GEN2000\",\"SC1101E\",\"CS2102\",\"CS2111\"]},{\"semester\":7,\"modules\":[\"CS3240\",\"CS2104\",\"CS3231\",\"CS3103\"]},{\"semester\":8,\"modules\":[\"CS3245\",\"CS3210\",\"CS3244\",\"ETP3201L\"]}],\"reason\":\"A plan fits within 8 semesters and 20 MC per semester: it covers all required and university-level modules, ID/CD (DTK1234, IS1128, SC1101E), and the AI focus (CS2109S, CS3263, CS4263, CS4244, CS4248, CS3244) with 12 MC at level 4000, uses ETP3201L as the single industrial option, and totals exactly 160 MC with 36 B&D-tagged MC beyond the minimum requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 63.44,
+  "cost_usd": 0.008465,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 16631,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:19+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEA1000",
+        "ES2660"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "ST2334",
+        "CS3230"
+      ],
+      "4": [
+        "CS2106",
+        "CS3263",
+        "CS4248",
+        "IS1108",
+        "GEC1015"
+      ],
+      "5": [
+        "CS4263",
+        "CS4244",
+        "CS2105",
+        "CS2107",
+        "IS1128"
+      ],
+      "6": [
+        "GESS1020",
+        "GEN2000",
+        "SC1101E",
+        "CS2102",
+        "CS2111"
+      ],
+      "7": [
+        "CS3240",
+        "CS2104",
+        "CS3231",
+        "CS3103"
+      ],
+      "8": [
+        "CS3245",
+        "CS3210",
+        "CS3244",
+        "ETP3201L"
+      ]
+    },
+    "reason": "A plan fits within 8 semesters and 20 MC per semester: it covers all required and university-level modules, ID/CD (DTK1234, IS1128, SC1101E), and the AI focus (CS2109S, CS3263, CS4263, CS4244, CS4248, CS3244) with 12 MC at level 4000, uses ETP3201L as the single industrial option, and totals exactly 160 MC with 36 B&D-tagged MC beyond the minimum requirement."
+  },
+  "parse_error": null
+}

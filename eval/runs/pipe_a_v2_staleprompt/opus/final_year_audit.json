@@ -1,0 +1,46 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS3230\", \"GEA1000\", \"IS1108\", \"HSI1000\", \"CS4248\"]}, {\"semester\": 2, \"modules\": [\"CS3263\", \"CS3264\", \"CP3880\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": []}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": []}, {\"semester\": 7, \"modules\": []}, {\"semester\": 8, \"modules\": []}], \"reason\": \"Your completed work totals 120 MC, and this plan adds the remaining 40 MC to reach exactly 160 MC with no semester above 20 MC (CP3880 is not counted toward the load). It covers the missing required modules (CS3230, GEA1000, IS1108), a second ID module (HSI1000), the AI focus area (CS2109S, CS4243, CS4248, CS3263, CS3264), the level-4000 minimum and the CP3880 industrial-experience option.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 11.84,
+  "cost_usd": 0.027737,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 1199,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:07+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3230",
+        "GEA1000",
+        "IS1108",
+        "HSI1000",
+        "CS4248"
+      ],
+      "2": [
+        "CS3263",
+        "CS3264",
+        "CP3880"
+      ],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "Your completed work totals 120 MC, and this plan adds the remaining 40 MC to reach exactly 160 MC with no semester above 20 MC (CP3880 is not counted toward the load). It covers the missing required modules (CS3230, GEA1000, IS1108), a second ID module (HSI1000), the AI focus area (CS2109S, CS4243, CS4248, CS3263, CS3264), the level-4000 minimum and the CP3880 industrial-experience option."
+  },
+  "parse_error": null
+}

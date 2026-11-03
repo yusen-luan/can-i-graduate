@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_offering_lock",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2108 is offered only in Sem 2, but semester 1 is a Sem 1. It also requires CS2040S and MA1522 to be completed in an earlier semester, and none exist before semester 1, so it cannot be finished by semester 1.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.17,
+  "cost_usd": 0.004961,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 194,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:39+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2108 is offered only in Sem 2, but semester 1 is a Sem 1. It also requires CS2040S and MA1522 to be completed in an earlier semester, and none exist before semester 1, so it cannot be finished by semester 1."
+  },
+  "parse_error": null
+}

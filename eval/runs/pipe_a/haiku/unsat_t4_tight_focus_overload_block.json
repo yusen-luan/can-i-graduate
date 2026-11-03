@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With semester 4 off and a 26 MC cap, only 6 semesters are available. Only two non-industrial modules have 5 MC (CS3216, CS3217), so non-industrial units cannot exceed 146 MC, and at most 12 MC of industrial experience adds 158 MC in total, below the required 160 MC.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With semester 4 off, only six semesters are usable and each is capped at 26 MC, but apart from CS3216 and CS3217 (5 MC each) every non-industrial module is a multiple of 4 MC, so non-industrial units cannot exceed 146; adding the single allowed internship (at most 12 MC) gives at most 158 MC, below the 160 MC graduation minimum.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 73.94,
-  "cost_usd": 0.009072,
+  "latency_s": 103.6,
+  "cost_usd": 0.012,
   "request_id": "",
   "usage": {
     "input_tokens": 88,
-    "output_tokens": 17844,
+    "output_tokens": 23690,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:34:56+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:49:31+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "With semester 4 off and a 26 MC cap, only 6 semesters are available. Only two non-industrial modules have 5 MC (CS3216, CS3217), so non-industrial units cannot exceed 146 MC, and at most 12 MC of industrial experience adds 158 MC in total, below the required 160 MC."
+    "reason": "With semester 4 off, only six semesters are usable and each is capped at 26 MC, but apart from CS3216 and CS3217 (5 MC each) every non-industrial module is a multiple of 4 MC, so non-industrial units cannot exceed 146; adding the single allowed internship (at most 12 MC) gives at most 158 MC, below the 160 MC graduation minimum."
   },
   "parse_error": null
 }

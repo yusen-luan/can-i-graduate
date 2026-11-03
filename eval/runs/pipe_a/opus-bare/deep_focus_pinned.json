@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"ES2660\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS3230\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3231\",\"CS3243\",\"GEC1030\",\"GESS1025\"]},{\"semester\":5,\"modules\":[\"CS4234\",\"CS3236\",\"CS3210\",\"GEN2061\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4232\",\"CS3245\",\"IS2218\",\"PC1201\"]},{\"semester\":7,\"modules\":[\"EC1101E\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan covers 160 MC (common curriculum, CS foundation including CS3230, the Algorithms & Theory focus area with CS3231, CS3236, CS4231, CS4232 and CS4234, maths/science and 9 UEs) at no more than 20 MC per semester, with CS2040S done in semester 2. Course codes for the GE, interdisciplinary and science slots, and exact semester offerings, are my best recollection and should be checked against the current NUS lists.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2030S\",\"MA1522\",\"GESS1001\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"ST2334\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3231\",\"ES2660\",\"GEN2061\"]},{\"semester\":5,\"modules\":[\"CS3236\",\"CS4231\",\"CS4234\",\"IS2218\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4232\",\"CS3210\",\"CDE2501\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"DTK1234\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"A plan is feasible: it totals 160 MC, never exceeds 20 MC in a semester, finishes CS2040S in semester 2, takes CS3230 in semester 3, and covers the Algorithms & Theory focus area (CS3230, CS3231, CS3236, CS4231, CS4232, CS4234). The general-education, interdisciplinary and cross-disciplinary course codes are examples from my own recollection of NUS offerings, so please check them against the official requirements and swap in any valid courses that fill the same slots.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 74.68,
-  "cost_usd": 0.115061,
+  "latency_s": 50.41,
+  "cost_usd": 0.076841,
   "request_id": "",
   "usage": {
     "input_tokens": 111,
-    "output_tokens": 5721,
+    "output_tokens": 3810,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:51:53+00:00",
+  "timestamp": "2026-11-03T15:52:22+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -26,60 +26,59 @@
         "CS1231S",
         "MA1521",
         "GEA1000",
-        "ES2660"
-      ],
-      "2": [
-        "CS2030S",
-        "CS2040S",
-        "CS2100",
-        "MA1522",
         "IS1108"
       ],
+      "2": [
+        "CS2040S",
+        "CS2030S",
+        "MA1522",
+        "GESS1001",
+        "GEC1015"
+      ],
       "3": [
-        "CS2103T",
+        "CS2100",
         "CS2101",
-        "CS2106",
-        "CS3230",
-        "ST2334"
+        "CS2103T",
+        "ST2334",
+        "CS3230"
       ],
       "4": [
+        "CS2106",
         "CS2109S",
         "CS3231",
-        "CS3243",
-        "GEC1030",
-        "GESS1025"
+        "ES2660",
+        "GEN2061"
       ],
       "5": [
-        "CS4234",
         "CS3236",
-        "CS3210",
-        "GEN2061",
-        "IS1128"
+        "CS4231",
+        "CS4234",
+        "IS2218",
+        "UE_GENERIC_1"
       ],
       "6": [
-        "CS4231",
         "CS4232",
-        "CS3245",
-        "IS2218",
-        "PC1201"
+        "CS3210",
+        "CDE2501",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "7": [
-        "EC1101E",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3",
+        "CP4101",
+        "DTK1234",
         "UE_GENERIC_4"
       ],
       "8": [
         "UE_GENERIC_5",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "UE_GENERIC_8"
       ],
-      "9": []
+      "9": [
+        "UE_GENERIC_9"
+      ]
     },
-    "reason": "The plan covers 160 MC (common curriculum, CS foundation including CS3230, the Algorithms & Theory focus area with CS3231, CS3236, CS4231, CS4232 and CS4234, maths/science and 9 UEs) at no more than 20 MC per semester, with CS2040S done in semester 2. Course codes for the GE, interdisciplinary and science slots, and exact semester offerings, are my best recollection and should be checked against the current NUS lists."
+    "reason": "A plan is feasible: it totals 160 MC, never exceeds 20 MC in a semester, finishes CS2040S in semester 2, takes CS3230 in semester 3, and covers the Algorithms & Theory focus area (CS3230, CS3231, CS3236, CS4231, CS4232, CS4234). The general-education, interdisciplinary and cross-disciplinary course codes are examples from my own recollection of NUS offerings, so please check them against the official requirements and swap in any valid courses that fill the same slots."
   },
   "parse_error": null
 }

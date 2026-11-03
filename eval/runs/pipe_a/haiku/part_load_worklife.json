@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GESS1001\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"MA1522\",\"GEA1000\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"IS1108\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"ST2334\",\"CS3219\",\"CS4211\"]},{\"semester\":6,\"modules\":[\"CS3213\",\"CS4218\"]},{\"semester\":7,\"modules\":[\"CS3203\",\"CP4106\",\"CP3880\"]},{\"semester\":8,\"modules\":[\"HSI1000\",\"IS1128\",\"GEC1015\",\"GEN2003\"]},{\"semester\":9,\"modules\":[\"CS3227\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A feasible plan totals exactly 160 MC (148 MC of unit-load modules plus the 12 MC CP3880 internship), with semester 6 at 8 MC, every other enrolled semester at 12 to 16 MC, and six software engineering primaries including CS4211 and CS4218 at level 4000 or above.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3213\",\"CS3230\",\"ST2334\",\"IS1108\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4263\",\"ES2660\",\"DTK1234\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"CS3219\",\"CS4218\"]},{\"semester\":7,\"modules\":[\"GEC1020\",\"GESS1020\",\"IS1128\",\"UE\",\"CP3202\"]},{\"semester\":8,\"modules\":[\"GEN2000\",\"HSI1000\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A 160 MC plan fits within 10 semesters: the software engineering focus has 5 primaries including level-4000 CS4211 and CS4218, the internship is CP3200+CP3202 (32 MC B&D with CS3213, CS3219, CS4211, CS4263, CS4218), and 10 generic electives fill the remaining units. Full-semester internships were avoided because a semester holding only the internship would have zero unit load and break the 8 MC minimum.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 55.36,
-  "cost_usd": 0.007248,
+  "latency_s": 68.06,
+  "cost_usd": 0.008638,
   "request_id": "",
   "usage": {
     "input_tokens": 117,
-    "output_tokens": 14190,
+    "output_tokens": 16959,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:32+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:39+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,60 +25,63 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "GESS1001"
+        "GEA1000"
       ],
       "2": [
         "CS2030S",
-        "MA1522",
-        "GEA1000",
-        "ES2660"
-      ],
-      "3": [
         "CS2040S",
         "CS2100",
-        "IS1108",
-        "DTK1234"
+        "MA1522"
       ],
-      "4": [
+      "3": [
         "CS2103T",
         "CS2101",
         "CS2106",
         "CS2109S"
       ],
-      "5": [
+      "4": [
+        "CS3213",
         "CS3230",
         "ST2334",
-        "CS3219",
-        "CS4211"
+        "IS1108"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "ES2660",
+        "DTK1234",
+        "CP3200"
       ],
       "6": [
-        "CS3213",
+        "CS3219",
         "CS4218"
       ],
       "7": [
-        "CS3203",
-        "CP4106",
-        "CP3880"
+        "GEC1020",
+        "GESS1020",
+        "IS1128",
+        "UE_GENERIC_1",
+        "CP3202"
       ],
       "8": [
+        "GEN2000",
         "HSI1000",
-        "IS1128",
-        "GEC1015",
-        "GEN2003"
-      ],
-      "9": [
-        "CS3227",
-        "UE_GENERIC_1",
         "UE_GENERIC_2",
         "UE_GENERIC_3"
       ],
-      "10": [
+      "9": [
         "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "A feasible plan totals exactly 160 MC (148 MC of unit-load modules plus the 12 MC CP3880 internship), with semester 6 at 8 MC, every other enrolled semester at 12 to 16 MC, and six software engineering primaries including CS4211 and CS4218 at level 4000 or above."
+    "reason": "A 160 MC plan fits within 10 semesters: the software engineering focus has 5 primaries including level-4000 CS4211 and CS4218, the internship is CP3200+CP3202 (32 MC B&D with CS3213, CS3219, CS4211, CS4263, CS4218), and 10 generic electives fill the remaining units. Full-semester internships were avoided because a semester holding only the internship would have zero unit load and break the 8 MC minimum."
   },
   "parse_error": null
 }

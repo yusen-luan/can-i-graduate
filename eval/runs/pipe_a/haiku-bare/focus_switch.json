@@ -4,80 +4,81 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231\", \"MA1521\", \"CS2101\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"CS2100\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2105\", \"CS2106\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2102\", \"CS3230\", \"CS3243\", \"CS3217\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS3231\", \"CS4243\", \"CS3248\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4246\", \"CS4248\", \"CS4242\", \"CS4234\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4231\", \"CS3210\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4101\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\"]}], \"reason\": \"Assuming the standard NUS BComp (CS) core, five AI-specialisation modules and enough further CS electives plus 10 unrestricted electives to reach 160 MC, the 152 remaining MC fit within 9 semesters with no semester over 20 MC. This plan assumes the core and AI modules have no unmet prerequisites and that the student has not completed any other modules.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010X\",\"MA1521\",\"UE\",\"UE\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"MA1522\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"ST2334\",\"CS2101\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"CS2103T\",\"CS2105\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3243\",\"CS3230\",\"CS3216\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3244\",\"CS3219\",\"CS3236\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS4248\",\"CS4224\",\"CS3281\"]},{\"semester\":8,\"modules\":[\"CS4243\",\"CS3247\",\"CS4231\",\"CS3282\"]},{\"semester\":9,\"modules\":[\"CS4244\",\"CS4242\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"With CS2107 and CS3235 already done, about 152 MC remain, which fits within nine semesters at 20 MC per semester, and the plan includes the five AI specialisation modules (CS3243, CS3244, CS4243, CS4246, CS4248). The module list is an approximation from memory and should be checked against the current NUS requirements and prerequisites.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 34.39,
-  "cost_usd": 0.004035,
+  "latency_s": 35.01,
+  "cost_usd": 0.004012,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 8034,
+    "output_tokens": 7988,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:38:33+00:00",
+  "timestamp": "2026-11-03T15:42:52+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1010S",
-        "CS1231",
+        "CS1010X",
         "MA1521",
-        "CS2101"
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "2": [
+        "CS1231S",
         "CS2030S",
-        "CS2040S",
         "MA1522",
-        "CS2100"
+        "UE_GENERIC_4"
       ],
       "3": [
-        "CS2103T",
-        "CS2105",
-        "CS2106",
+        "CS2040S",
+        "CS2100",
         "ST2334",
-        "UE_GENERIC_1"
+        "CS2101"
       ],
       "4": [
         "CS2102",
-        "CS3230",
-        "CS3243",
-        "CS3217",
-        "UE_GENERIC_2"
+        "CS2103T",
+        "CS2105",
+        "UE_GENERIC_5"
       ],
       "5": [
-        "CS3244",
-        "CS3231",
-        "CS4243",
-        "CS3248",
-        "UE_GENERIC_3"
+        "CS3243",
+        "CS3230",
+        "CS3216",
+        "UE_GENERIC_6"
       ],
       "6": [
-        "CS4246",
-        "CS4248",
-        "CS4242",
-        "CS4234",
-        "UE_GENERIC_4"
-      ],
-      "7": [
-        "CS4231",
-        "CS3210",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6",
+        "CS3244",
+        "CS3219",
+        "CS3236",
         "UE_GENERIC_7"
       ],
+      "7": [
+        "CS4246",
+        "CS4248",
+        "CS4224",
+        "CS3281"
+      ],
       "8": [
-        "CP4101",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "CS4243",
+        "CS3247",
+        "CS4231",
+        "CS3282"
       ],
       "9": [
+        "CS4244",
+        "CS4242",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Assuming the standard NUS BComp (CS) core, five AI-specialisation modules and enough further CS electives plus 10 unrestricted electives to reach 160 MC, the 152 remaining MC fit within 9 semesters with no semester over 20 MC. This plan assumes the core and AI modules have no unmet prerequisites and that the student has not completed any other modules."
+    "reason": "With CS2107 and CS3235 already done, about 152 MC remain, which fits within nine semesters at 20 MC per semester, and the plan includes the five AI specialisation modules (CS3243, CS3244, CS4243, CS4246, CS4248). The module list is an approximation from memory and should be checked against the current NUS requirements and prerequisites."
   },
   "parse_error": null
 }

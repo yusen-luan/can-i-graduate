@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 is offered only in Sem 2, but plan semester 1 is an NUS Semester 1 with no earlier semester, so CS2108 cannot be finished by semester 1; its prerequisites (CS2040-level and a MA1522/MA2001-type math module) also cannot be completed before then.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 is offered only in Sem 2, but semester 1 is NUS Semester 1, so it cannot be placed there. It also requires CS2040-family and MA1522-family prerequisites completed in a strictly earlier semester, which is impossible when starting with no modules done, so the request to finish CS2108 by semester 1 cannot be met.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 2.62,
-  "cost_usd": 0.000356,
+  "latency_s": 3.56,
+  "cost_usd": 0.000431,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 409,
+    "output_tokens": 548,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:45+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:50+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS2108 is offered only in Sem 2, but plan semester 1 is an NUS Semester 1 with no earlier semester, so CS2108 cannot be finished by semester 1; its prerequisites (CS2040-level and a MA1522/MA2001-type math module) also cannot be completed before then."
+    "reason": "CS2108 is offered only in Sem 2, but semester 1 is NUS Semester 1, so it cannot be placed there. It also requires CS2040-family and MA1522-family prerequisites completed in a strictly earlier semester, which is impossible when starting with no modules done, so the request to finish CS2108 by semester 1 cannot be met."
   },
   "parse_error": null
 }

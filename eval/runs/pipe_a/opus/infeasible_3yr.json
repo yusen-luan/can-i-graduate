@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached: six semesters at a 20 MC cap give at most 120 MC, and the single permitted industrial-experience option adds at most 12 MC outside the load cap, for a maximum of 132 MC.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters capped at 20 MC each allow at most 120 MC of coursework, and even the largest industrial-experience option (CP3200 + CP3202, 12 MC, which does not count toward the per-semester load) only brings the total to 132 MC. That is short of the 160 MC needed to graduate, so the 20 MC per-semester cap makes a 6-semester plan impossible.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.66,
-  "cost_usd": 0.009717,
+  "latency_s": 5.34,
+  "cost_usd": 0.009627,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 327,
+    "output_tokens": 317,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:04+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:14+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The 160 MC total cannot be reached: six semesters at a 20 MC cap give at most 120 MC, and the single permitted industrial-experience option adds at most 12 MC outside the load cap, for a maximum of 132 MC."
+    "reason": "Six semesters capped at 20 MC each allow at most 120 MC of coursework, and even the largest industrial-experience option (CP3200 + CP3202, 12 MC, which does not count toward the per-semester load) only brings the total to 132 MC. That is short of the 160 MC needed to graduate, so the 20 MC per-semester cap makes a 6-semester plan impossible."
   },
   "parse_error": null
 }

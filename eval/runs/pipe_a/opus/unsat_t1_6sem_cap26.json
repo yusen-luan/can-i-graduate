@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC total cannot be reached in 6 semesters under a 26 MC cap. Almost every module is 4 MC, so most semesters top out at 24 MC; with the only two 5 MC modules (CS3216, CS3217), non-internship load maxes out at 146 MC, and the largest internship option adds just 12 MC, for at most 158 MC.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160-MC graduation total cannot be reached in 6 semesters under a 26-MC cap. Apart from the only two 5-MC modules (CS3216, CS3217), every module is a multiple of 4 MC, so coursework can total at most 146 MC (24\u00d76 + 2); even the best industrial-experience option (12 MC, outside the load cap) brings this to only 158 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 18.95,
-  "cost_usd": 0.039769,
+  "latency_s": 23.78,
+  "cost_usd": 0.041819,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 1832,
+    "output_tokens": 1929,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:57+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:29+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The 160 MC total cannot be reached in 6 semesters under a 26 MC cap. Almost every module is 4 MC, so most semesters top out at 24 MC; with the only two 5 MC modules (CS3216, CS3217), non-internship load maxes out at 146 MC, and the largest internship option adds just 12 MC, for at most 158 MC."
+    "reason": "The 160-MC graduation total cannot be reached in 6 semesters under a 26-MC cap. Apart from the only two 5-MC modules (CS3216, CS3217), every module is a multiple of 4 MC, so coursework can total at most 146 MC (24\u00d76 + 2); even the best industrial-experience option (12 MC, outside the load cap) brings this to only 158 MC."
   },
   "parse_error": null
 }

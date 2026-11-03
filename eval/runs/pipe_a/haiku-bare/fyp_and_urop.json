@@ -4,81 +4,81 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010X\", \"CS1231S\", \"MA1521\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2113\", \"ST2334\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS2106\", \"CS3230\", \"CS3243\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS4246\", \"CS3216\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4243\", \"CP3880\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4242\", \"CS4215\", \"CS4231\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4101\", \"CS4234\", \"CS4212\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS3217\", \"CS3203\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The 160 MC degree total fits within 9 semesters at up to 20 MC each, with the AI specialisation, the 8 MC final-year project CP4101 and the UROP\u9879\u76ee (CP3880) included, and exactly 10 UE entries used. Module codes and MC values are from memory and should be verified against the current NUS bulletin.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"MA1521\", \"CS1231S\", \"UE\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"ST2334\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS2102\", \"CS2106\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS3230\", \"CS3243\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS4246\", \"CP3880\"]}, {\"semester\": 6, \"modules\": [\"CS4242\", \"CS4248\", \"CS4243\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CP4101\", \"CS3241\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4212\", \"CS3235\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS4234\", \"CS4236\", \"CS4218\", \"UE\", \"UE\"]}], \"reason\": \"The plan totals 160 MC across 9 semesters, each at or below 20 MC, using 10 UE slots and covering the AI specialisation, CP4101 final-year project, and the CP3880 UROP. The specific module codes and MC values are from memory and should be checked against the current NUS catalogue.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 29.69,
-  "cost_usd": 0.003209,
+  "latency_s": 26.18,
+  "cost_usd": 0.002968,
   "request_id": "",
   "usage": {
     "input_tokens": 125,
-    "output_tokens": 6374,
+    "output_tokens": 5891,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:38:28+00:00",
+  "timestamp": "2026-11-03T15:43:15+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1010X",
-        "CS1231S",
+        "CS1010S",
         "MA1521",
-        "UE_GENERIC_1"
+        "CS1231S",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "MA1522",
-        "UE_GENERIC_2"
+        "ST2334",
+        "UE_GENERIC_3"
       ],
       "3": [
         "CS2100",
         "CS2101",
-        "CS2113",
-        "ST2334"
+        "CS2103T",
+        "CS2102",
+        "CS2106"
       ],
       "4": [
         "CS2105",
-        "CS2106",
         "CS3230",
-        "CS3243"
+        "CS3243",
+        "UE_GENERIC_4"
       ],
       "5": [
         "CS3244",
         "CS4246",
-        "CS3216",
-        "UE_GENERIC_3"
+        "CP3880"
       ],
       "6": [
+        "CS4242",
         "CS4248",
         "CS4243",
-        "CP3880",
-        "UE_GENERIC_4"
+        "UE_GENERIC_5"
       ],
       "7": [
-        "CS4242",
-        "CS4215",
-        "CS4231",
-        "UE_GENERIC_5",
+        "CP4101",
+        "CS3241",
         "UE_GENERIC_6"
       ],
       "8": [
-        "CP4101",
-        "CS4234",
         "CS4212",
-        "UE_GENERIC_7"
+        "CS3235",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "9": [
-        "CS3217",
-        "CS3203",
-        "UE_GENERIC_8",
+        "CS4234",
+        "CS4236",
+        "CS4218",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "The 160 MC degree total fits within 9 semesters at up to 20 MC each, with the AI specialisation, the 8 MC final-year project CP4101 and the UROP\u9879\u76ee (CP3880) included, and exactly 10 UE entries used. Module codes and MC values are from memory and should be verified against the current NUS bulletin."
+    "reason": "The plan totals 160 MC across 9 semesters, each at or below 20 MC, using 10 UE slots and covering the AI specialisation, CP4101 final-year project, and the CP3880 UROP. The specific module codes and MC values are from memory and should be checked against the current NUS catalogue."
   },
   "parse_error": null
 }

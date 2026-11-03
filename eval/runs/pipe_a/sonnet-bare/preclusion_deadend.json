@@ -4,71 +4,72 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"MA1522\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2100\",\"MA1521\",\"CS2101\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"IS1128\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS3223\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"CS3235\",\"CS4225\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4246\",\"CS4244\",\"CS3203\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Feasible: the remaining modules for the core, maths, AI focus area, industry experience and electives fit in 9 semesters with at most 20 MC each. This plan is built from my recollection of the requirements, so some module choices, MC values and semester offerings need checking against the official NUS pages.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2103T\",\"CS2101\",\"MA1521\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"IS1128\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS3217\",\"ES2660\",\"GES1002\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS3263\",\"GEX1015\",\"GEN2002\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4246\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The 156 MC still needed (160 MC minus CS1010) fit within 9 semesters at 17.3 MC per semester, and no semester exceeds 20 MC. The plan covers the CS foundation, math, communication, ethics, general education, internship and AI focus area requirements, with prerequisites and Sem 1/Sem 2 offerings respected as far as I know them. The module codes for the general education modules and some AI electives are my best recollection, so please check them against the official requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 66.48,
-  "cost_usd": 0.090249,
+  "latency_s": 52.16,
+  "cost_usd": 0.069509,
   "request_id": "",
   "usage": {
     "input_tokens": 76,
-    "output_tokens": 8990,
+    "output_tokens": 6916,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:44:13+00:00",
+  "timestamp": "2026-11-03T15:49:59+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1231S",
         "CS2030S",
+        "CS2100",
         "MA1522",
-        "GEA1000",
-        "UE_GENERIC_1"
+        "GEA1000"
       ],
       "2": [
         "CS2040S",
-        "CS2100",
-        "MA1521",
-        "CS2101",
-        "ES2660"
-      ],
-      "3": [
         "CS2103T",
-        "CS2106",
-        "CS2109S",
+        "CS2101",
+        "MA1521",
         "ST2334"
       ],
-      "4": [
+      "3": [
+        "CS2106",
+        "CS2109S",
         "CS3230",
+        "IS1128",
+        "GEC1015"
+      ],
+      "4": [
         "CS3243",
         "CS3244",
-        "IS1128",
-        "UE_GENERIC_2"
+        "CS3217",
+        "ES2660",
+        "GES1002"
       ],
       "5": [
         "CS4248",
         "CS4243",
-        "CS3223",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CS3263",
+        "GEX1015",
+        "GEN2002"
       ],
       "6": [
-        "CP3880"
+        "CP3880",
+        "CS4246",
+        "UE_GENERIC_1"
       ],
       "7": [
-        "CS3235",
-        "CS4225",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "8": [
-        "CS4246",
-        "CS4244",
-        "CS3203",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
       "9": [
@@ -76,7 +77,7 @@
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Feasible: the remaining modules for the core, maths, AI focus area, industry experience and electives fit in 9 semesters with at most 20 MC each. This plan is built from my recollection of the requirements, so some module choices, MC values and semester offerings need checking against the official NUS pages."
+    "reason": "The 156 MC still needed (160 MC minus CS1010) fit within 9 semesters at 17.3 MC per semester, and no semester exceeds 20 MC. The plan covers the CS foundation, math, communication, ethics, general education, internship and AI focus area requirements, with prerequisites and Sem 1/Sem 2 offerings respected as far as I know them. The module codes for the general education modules and some AI electives are my best recollection, so please check them against the official requirements."
   },
   "parse_error": null
 }

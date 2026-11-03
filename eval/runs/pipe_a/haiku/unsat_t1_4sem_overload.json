@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Graduation needs at least 160 MC, but four semesters capped at 28 MC each give at most 112 MC of unit load, and the only additional MC come from one industrial-experience option (at most 12 MC, since CP4101 requires a GPA qualification you have not claimed), for a maximum of 124 MC.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation total cannot be reached in 4 semesters: the 28 MC per-semester cap allows at most 112 MC of unit-load modules, and the single permitted industrial-experience option adds at most 12 MC outside the cap, for a maximum of 124 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.54,
-  "cost_usd": 0.000565,
+  "latency_s": 10.18,
+  "cost_usd": 0.001165,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 833,
+    "output_tokens": 2021,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:08+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:40+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Graduation needs at least 160 MC, but four semesters capped at 28 MC each give at most 112 MC of unit load, and the only additional MC come from one industrial-experience option (at most 12 MC, since CP4101 requires a GPA qualification you have not claimed), for a maximum of 124 MC."
+    "reason": "The 160 MC graduation total cannot be reached in 4 semesters: the 28 MC per-semester cap allows at most 112 MC of unit-load modules, and the single permitted industrial-experience option adds at most 12 MC outside the cap, for a maximum of 124 MC."
   },
   "parse_error": null
 }

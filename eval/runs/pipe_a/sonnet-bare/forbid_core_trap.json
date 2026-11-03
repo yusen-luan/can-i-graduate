@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory Computing Foundation module with no substitute in the CS degree, and CS2106 builds on it, so avoiding it is impossible. (CS2103T alone could be avoided by taking CS2103 with CS2101.)\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory Computer Science Foundation module in the BComp (CS) programme, and I know of no approved substitute, so avoiding it makes the degree requirements impossible to meet. Avoiding CS2103T alone would be fine, since CS2103 with CS2101 can replace it.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 15.42,
-  "cost_usd": 0.019669,
+  "latency_s": 15.43,
+  "cost_usd": 0.019529,
   "request_id": "",
   "usage": {
     "input_tokens": 91,
-    "output_tokens": 1929,
+    "output_tokens": 1915,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:41:18+00:00",
+  "timestamp": "2026-11-03T15:47:06+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS2100 Computer Organisation is a compulsory Computing Foundation module with no substitute in the CS degree, and CS2106 builds on it, so avoiding it is impossible. (CS2103T alone could be avoided by taking CS2103 with CS2101.)"
+    "reason": "CS2100 Computer Organisation is a compulsory Computer Science Foundation module in the BComp (CS) programme, and I know of no approved substitute, so avoiding it makes the degree requirements impossible to meet. Avoiding CS2103T alone would be fine, since CS2103 with CS2101 can replace it."
   },
   "parse_error": null
 }

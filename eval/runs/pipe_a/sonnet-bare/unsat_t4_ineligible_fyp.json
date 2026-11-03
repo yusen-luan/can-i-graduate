@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CP4101 (the Computer Science final-year project) requires a minimum GPA/CAP for eligibility. Since your GPA does not currently qualify, you cannot take it, so no plan can include CP4101 as requested, regardless of the 9-semester and 20 MC limits.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CP4101 (Final Year Project) requires the GPA/departmental eligibility for the project, and the student states their GPA does not currently qualify. The request to do CP4101 therefore cannot be satisfied, however many semesters are allowed. The student would need to take the Software Engineering Project route or the other non-FYP options instead.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 40.38,
-  "cost_usd": 0.047763,
+  "latency_s": 7.27,
+  "cost_usd": 0.007973,
   "request_id": "",
   "usage": {
     "input_tokens": 108,
-    "output_tokens": 4735,
+    "output_tokens": 756,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:44:42+00:00",
+  "timestamp": "2026-11-03T15:50:26+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CP4101 (the Computer Science final-year project) requires a minimum GPA/CAP for eligibility. Since your GPA does not currently qualify, you cannot take it, so no plan can include CP4101 as requested, regardless of the 9-semester and 20 MC limits."
+    "reason": "CP4101 (Final Year Project) requires the GPA/departmental eligibility for the project, and the student states their GPA does not currently qualify. The request to do CP4101 therefore cannot be satisfied, however many semesters are allowed. The student would need to take the Software Engineering Project route or the other non-FYP options instead."
   },
   "parse_error": null
 }

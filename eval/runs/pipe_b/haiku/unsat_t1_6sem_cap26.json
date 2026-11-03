@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":6,\"max_units_per_semester\":26,\"focus_area\":\"any\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":6,\"max_units_per_semester\":26,\"focus_area\":\"any\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[1,2,1,2,1,2],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[\"Can it be done, and if so what is my semester-by-semester plan?\"]}",
   "stop_reason": "end_turn",
-  "latency_s": 4.579,
-  "cost_usd": 0.000365,
+  "latency_s": 4.962,
+  "cost_usd": 0.000498,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 579,
+    "output_tokens": 845,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 6778
   },
   "effort": "high",
   "prompt_sha256": "23c6589b14921d44",
-  "timestamp": "2026-11-02T15:02:02+00:00",
+  "timestamp": "2026-11-03T15:42:34+00:00",
   "spec": {
     "student": {
       "completed": [],
@@ -35,7 +35,14 @@
       "industrial_option": "any",
       "want_fyp": false,
       "want_urop": false,
-      "term_layout": [],
+      "term_layout": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
       "semester_caps": [],
       "max_cs_modules_per_sem": 0,
       "min_units_per_semester": 0,
@@ -45,12 +52,14 @@
       "forbid_modules": [],
       "deadlines": []
     },
-    "unsupported_requests": []
+    "unsupported_requests": [
+      "Can it be done, and if so what is my semester-by-semester plan?"
+    ]
   },
   "spec_error": null,
   "solve": {
     "status": "INFEASIBLE",
-    "wall_time_s": 0.109,
+    "wall_time_s": 0.292,
     "num_variables": 696,
     "num_total_variables": 1777,
     "num_constraints": 2398
@@ -61,5 +70,5 @@
     "reason": "INFEASIBLE"
   },
   "parse_error": null,
-  "llm_latency_s": 4.47
+  "llm_latency_s": 4.67
 }

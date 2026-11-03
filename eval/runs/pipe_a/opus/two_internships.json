@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3219\",\"CS3213\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4218\",\"CS4248\",\"GEN2003\",\"DTK1234\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"IE2141\",\"HSI1000\",\"CS2102\",\"CS2105\",\"UE\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Yes, it can be done: this plan meets every graduation rule, finishing with exactly 160 MC by semester 8 and never exceeding 20 MC in any semester. The software engineering focus is covered by CS2103T, CS3219 and CS4218, and the CP3200 + CP3202 internship is included, with both internship modules running over the vacation so they do not count toward the 20 MC load.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"IS1108\", \"ST2334\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"ES2660\", \"CS3213\", \"CS3219\", \"GEC1015\", \"GESS1020\", \"CP3200\"]}, {\"semester\": 5, \"modules\": [\"CS4211\", \"CS4218\", \"GEN2003\", \"DTK1234\", \"HSI1000\", \"CP3202\"]}, {\"semester\": 6, \"modules\": [\"CS4231\", \"IE2141\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": []}], \"reason\": \"Yes, it can be done in 8 of your 9 semesters, never above 20 MC, for exactly 160 MC. The software engineering focus is met by CS2103T, CS3213, CS3219, CS4211 and CS4218, and the internship option is CP3200 followed by CP3202; with CS4231, these also give 12 MC at level 4000 and 32 MC of Breadth & Depth.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 15.37,
-  "cost_usd": 0.037389,
+  "latency_s": 14.84,
+  "cost_usd": 0.037239,
   "request_id": "",
   "usage": {
     "input_tokens": 97,
-    "output_tokens": 1709,
+    "output_tokens": 1696,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:49+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:07+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -32,53 +32,53 @@
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "ST2334",
-        "IS1108"
+        "IS1108",
+        "ST2334"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2106",
         "CS2109S",
-        "ES2660"
+        "CS3230"
       ],
       "4": [
-        "CS3230",
-        "CS3219",
+        "ES2660",
         "CS3213",
+        "CS3219",
         "GEC1015",
-        "GESS1020"
+        "GESS1020",
+        "CP3200"
       ],
       "5": [
         "CS4211",
         "CS4218",
-        "CS4248",
         "GEN2003",
         "DTK1234",
-        "CP3200"
-      ],
-      "6": [
-        "IE2141",
         "HSI1000",
-        "CS2102",
-        "CS2105",
-        "UE_GENERIC_1",
         "CP3202"
       ],
-      "7": [
+      "6": [
+        "CS4231",
+        "IE2141",
+        "UE_GENERIC_1",
         "UE_GENERIC_2",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "UE_GENERIC_3"
       ],
-      "8": [
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
       "9": []
     },
-    "reason": "Yes, it can be done: this plan meets every graduation rule, finishing with exactly 160 MC by semester 8 and never exceeding 20 MC in any semester. The software engineering focus is covered by CS2103T, CS3219 and CS4218, and the CP3200 + CP3202 internship is included, with both internship modules running over the vacation so they do not count toward the 20 MC load."
+    "reason": "Yes, it can be done in 8 of your 9 semesters, never above 20 MC, for exactly 160 MC. The software engineering focus is met by CS2103T, CS3213, CS3219, CS4211 and CS4218, and the internship option is CP3200 followed by CP3202; with CS4231, these also give 12 MC at level 4000 and 32 MC of Breadth & Depth."
   },
   "parse_error": null
 }

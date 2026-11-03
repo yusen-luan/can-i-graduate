@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) programme requires well over 8 CS/IFS/CP-coded modules across its core, mathematics-related computing, and capstone/project components, so allowing at most one such module per semester across 8 semesters cannot satisfy the degree requirements.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp Computer Science core requires roughly ten CS-prefixed modules (e.g. CS1010, CS1231, CS2030, CS2040, CS2100, CS2101, CS2103T, CS2105, CS2106, CS3230), but limiting you to at most one CS/IFS/CP module per semester allows only 8 across 8 semesters, so the one-per-semester rule makes graduation within 8 semesters impossible.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 7.25,
-  "cost_usd": 0.00058,
+  "latency_s": 10.0,
+  "cost_usd": 0.000969,
   "request_id": "",
   "usage": {
     "input_tokens": 101,
-    "output_tokens": 1120,
+    "output_tokens": 1899,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:41+00:00",
+  "timestamp": "2026-11-03T15:44:54+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The BComp (Computer Science) programme requires well over 8 CS/IFS/CP-coded modules across its core, mathematics-related computing, and capstone/project components, so allowing at most one such module per semester across 8 semesters cannot satisfy the degree requirements."
+    "reason": "The BComp Computer Science core requires roughly ten CS-prefixed modules (e.g. CS1010, CS1231, CS2030, CS2040, CS2100, CS2101, CS2103T, CS2105, CS2106, CS3230), but limiting you to at most one CS/IFS/CP module per semester allows only 8 across 8 semesters, so the one-per-semester rule makes graduation within 8 semesters impossible."
   },
   "parse_error": null
 }

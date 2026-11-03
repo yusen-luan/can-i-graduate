@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters capped at 25 MC can hold at most 146 MC of regular modules, since only two 5-MC modules exist (CS3216, CS3217) so at most two semesters can reach 25 MC. Adding the largest single industrial-experience option (12 MC, which sits outside the unit cap) gives at most 158 MC, below the 160 MC graduation requirement.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Under the 25 MC per-semester cap over 6 semesters, the coursework units total at most 146 MC, because only two 5-MC modules exist (CS3216, CS3217) and every other coursework module is a multiple of 4 MC. Adding the maximum 12 MC industrial-experience option (which does not count toward unit load) gives at most 158 MC, short of the required 160 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 39.2,
-  "cost_usd": 0.004476,
+  "latency_s": 67.09,
+  "cost_usd": 0.007679,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 8655,
+    "output_tokens": 15050,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:53+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:47+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Six semesters capped at 25 MC can hold at most 146 MC of regular modules, since only two 5-MC modules exist (CS3216, CS3217) so at most two semesters can reach 25 MC. Adding the largest single industrial-experience option (12 MC, which sits outside the unit cap) gives at most 158 MC, below the 160 MC graduation requirement."
+    "reason": "Under the 25 MC per-semester cap over 6 semesters, the coursework units total at most 146 MC, because only two 5-MC modules exist (CS3216, CS3217) and every other coursework module is a multiple of 4 MC. Adding the maximum 12 MC industrial-experience option (which does not count toward unit load) gives at most 158 MC, short of the required 160 MC."
   },
   "parse_error": null
 }

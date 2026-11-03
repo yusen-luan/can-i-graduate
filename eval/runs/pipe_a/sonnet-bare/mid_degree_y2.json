@@ -4,69 +4,67 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS3230\",\"GEC1000\"]},{\"semester\":2,\"modules\":[\"CS3243\",\"CS2102\",\"CS2105\",\"IS1128\",\"GESS1000\"]},{\"semester\":3,\"modules\":[\"CS3263\",\"CS3241\",\"CS4248\",\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3244\",\"CS4246\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4225\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"UE\"]},{\"semester\":8,\"modules\":[\"CS4243\"]}],\"reason\":\"The 120 MC still needed fit within 8 semesters at no more than 20 MC each. The plan covers the remaining CS foundation modules, computing ethics, the AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248), CS electives including 4000-level modules, the 12 MC industry experience (CP3880) and 3 general education modules, and 9 UEs. Some module codes (the general education ones) and some semester offerings are from memory and should be verified against the official NUS requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS2102\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS2105\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS4248\",\"CS3263\",\"CS3233\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3203\",\"CS4246\",\"IS1128\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4243\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"Your completed modules cover 40 MC, leaving about 120 MC. That fits in 8 semesters at no more than 20 MC each, and the remaining foundation, AI focus area (CS2109S, CS3243, CS3244, CS4248, CS4246, CS4243), team project, industry experience and electives are all schedulable with prerequisites met. This plan is built from my recollection of the requirements and has not been checked against the official AY2026/27 degree requirements or module offering semesters.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 45.99,
-  "cost_usd": 0.060279,
+  "latency_s": 41.21,
+  "cost_usd": 0.055889,
   "request_id": "",
   "usage": {
     "input_tokens": 126,
-    "output_tokens": 5983,
+    "output_tokens": 5544,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:42:39+00:00",
+  "timestamp": "2026-11-03T15:48:26+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2103T",
         "CS2101",
-        "CS2106",
-        "CS3230",
-        "GEC1000"
+        "CS2109S",
+        "CS2102",
+        "UE_GENERIC_1"
       ],
       "2": [
+        "CS2106",
+        "CS3230",
         "CS3243",
-        "CS2102",
         "CS2105",
-        "IS1128",
-        "GESS1000"
-      ],
-      "3": [
-        "CS3263",
-        "CS3241",
-        "CS4248",
-        "UE_GENERIC_1",
         "UE_GENERIC_2"
       ],
-      "4": [
+      "3": [
         "CS3244",
+        "CS4248",
+        "CS3263",
+        "CS3233",
+        "UE_GENERIC_3"
+      ],
+      "4": [
+        "CS3203",
         "CS4246",
-        "GEN2000",
-        "UE_GENERIC_3",
+        "IS1128",
         "UE_GENERIC_4"
       ],
       "5": [
-        "CS4225",
+        "CS4243",
         "UE_GENERIC_5",
-        "UE_GENERIC_6",
+        "UE_GENERIC_6"
+      ],
+      "6": [
         "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
-      "6": [
-        "CP3880"
-      ],
       "7": [
-        "UE_GENERIC_9"
+        "CP3880",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ],
-      "8": [
-        "CS4243"
-      ]
+      "8": []
     },
-    "reason": "The 120 MC still needed fit within 8 semesters at no more than 20 MC each. The plan covers the remaining CS foundation modules, computing ethics, the AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248), CS electives including 4000-level modules, the 12 MC industry experience (CP3880) and 3 general education modules, and 9 UEs. Some module codes (the general education ones) and some semester offerings are from memory and should be verified against the official NUS requirements."
+    "reason": "Your completed modules cover 40 MC, leaving about 120 MC. That fits in 8 semesters at no more than 20 MC each, and the remaining foundation, AI focus area (CS2109S, CS3243, CS3244, CS4248, CS4246, CS4243), team project, industry experience and electives are all schedulable with prerequisites met. This plan is built from my recollection of the requirements and has not been checked against the official AY2026/27 degree requirements or module offering semesters."
   },
   "parse_error": null
 }

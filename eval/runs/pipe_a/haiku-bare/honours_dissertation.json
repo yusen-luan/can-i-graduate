@@ -4,84 +4,84 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"MA1521\", \"CS1231\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2100\", \"MA1522\", \"ST2334\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2040S\", \"CS2103T\", \"CS2105\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS2106\", \"CS3230\", \"CS3243\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3244\", \"CS3216\", \"CS3223\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4243\", \"CS4244\", \"CS3219\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4246\", \"CS4248\", \"CS3235\", \"CS4224\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS4222\", \"CS4211\", \"CS3217\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"CP4101\", \"CS4236\", \"UE\"]}], \"reason\": \"The plan totals 160 MC with 10 UE electives, stays within 20 MC and 4 CS/IFS/CP modules per semester, puts Special Term 3 at 8 MC, uses the AI track, and places the CP4101 final-year project in the last semester.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010X\",\"MA1521\",\"GER1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"MA1522\",\"CS2030S\",\"GES1000\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"UE\",\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS2102\",\"CS2105\",\"ST2334\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3230\",\"CS3243\",\"CS3216\",\"CS3219\"]},{\"semester\":7,\"modules\":[\"CS3244\",\"CS4246\",\"CS3223\",\"CS3235\"]},{\"semester\":8,\"modules\":[\"CS4248\",\"CS4243\",\"CS4215\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4231\",\"CS4236\",\"CS4224\",\"UE\"]},{\"semester\":10,\"modules\":[\"CP4101\",\"UE\",\"UE\"]}],\"reason\":\"The plan fits within 10 semesters with at most 20 MC and at most 4 CS/IFS/CP modules per semester, uses plan semester 3 as Special Term 3, and includes the AI specialisation (CS3243, CS3244, CS4246, CS4248, CS4243) and the final-year project CP4101 in the last semester. The module list is an approximation of the BComp CS requirements and should be checked against the official NUS degree audit.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 39.9,
-  "cost_usd": 0.004797,
+  "latency_s": 37.34,
+  "cost_usd": 0.00436,
   "request_id": "",
   "usage": {
     "input_tokens": 157,
-    "output_tokens": 9543,
+    "output_tokens": 8669,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:00+00:00",
+  "timestamp": "2026-11-03T15:43:29+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1101S",
+        "CS1010X",
         "MA1521",
-        "CS1231",
+        "GER1000",
         "UE_GENERIC_1"
       ],
       "2": [
-        "CS2030S",
-        "CS2100",
+        "CS1231S",
         "MA1522",
-        "ST2334",
-        "UE_GENERIC_2"
+        "CS2030S",
+        "GES1000"
       ],
       "3": [
-        "CS2101",
-        "UE_GENERIC_3"
-      ],
-      "4": [
         "CS2040S",
-        "CS2103T",
-        "CS2105",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
         "UE_GENERIC_4"
       ],
-      "5": [
-        "CS2106",
-        "CS3230",
-        "CS3243",
+      "4": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
         "UE_GENERIC_5"
       ],
-      "6": [
-        "CS3244",
-        "CS3216",
-        "CS3223",
+      "5": [
+        "CS2102",
+        "CS2105",
+        "ST2334",
         "UE_GENERIC_6"
       ],
+      "6": [
+        "CS3230",
+        "CS3243",
+        "CS3216",
+        "CS3219"
+      ],
       "7": [
-        "CS4243",
-        "CS4244",
-        "CS3219",
-        "UE_GENERIC_7"
+        "CS3244",
+        "CS4246",
+        "CS3223",
+        "CS3235"
       ],
       "8": [
-        "CS4246",
         "CS4248",
-        "CS3235",
+        "CS4243",
+        "CS4215",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "CS4231",
+        "CS4236",
         "CS4224",
         "UE_GENERIC_8"
       ],
-      "9": [
-        "CS4222",
-        "CS4211",
-        "CS3217",
-        "UE_GENERIC_9"
-      ],
       "10": [
         "CP4101",
-        "CS4236",
+        "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "The plan totals 160 MC with 10 UE electives, stays within 20 MC and 4 CS/IFS/CP modules per semester, puts Special Term 3 at 8 MC, uses the AI track, and places the CP4101 final-year project in the last semester."
+    "reason": "The plan fits within 10 semesters with at most 20 MC and at most 4 CS/IFS/CP modules per semester, uses plan semester 3 as Special Term 3, and includes the AI specialisation (CS3243, CS3244, CS4246, CS4248, CS4243) and the final-year project CP4101 in the last semester. The module list is an approximation of the BComp CS requirements and should be checked against the official NUS degree audit."
   },
   "parse_error": null
 }

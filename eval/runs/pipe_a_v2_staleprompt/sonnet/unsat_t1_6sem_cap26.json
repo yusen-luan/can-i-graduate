@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap26",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC. With a 26 MC cap, a semester's load can only be 24, 25 or 26 MC, because only CS3216 and CS3217 are 5 MC and every other non-industrial module is a multiple of 4. Over 6 semesters the most that can be scheduled is 146 MC, e.g. 26+5x24 or 25+25+4x24. The one allowed industrial-experience option adds at most 12 MC, since it is exempt from the load cap. That gives a maximum of 158 MC, which is below 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 28.99,
+  "cost_usd": 0.037945,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 3497,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:51+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Graduation needs at least 160 MC. With a 26 MC cap, a semester's load can only be 24, 25 or 26 MC, because only CS3216 and CS3217 are 5 MC and every other non-industrial module is a multiple of 4. Over 6 semesters the most that can be scheduled is 146 MC, e.g. 26+5x24 or 25+25+4x24. The one allowed industrial-experience option adds at most 12 MC, since it is exempt from the load cap. That gives a maximum of 158 MC, which is below 160."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,84 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GESS1001\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"MA1522\",\"GEA1000\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"IS1108\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"ST2334\",\"CS3219\",\"CS4211\"]},{\"semester\":6,\"modules\":[\"CS3213\",\"CS4218\"]},{\"semester\":7,\"modules\":[\"CS3203\",\"CP4106\",\"CP3880\"]},{\"semester\":8,\"modules\":[\"HSI1000\",\"IS1128\",\"GEC1015\",\"GEN2003\"]},{\"semester\":9,\"modules\":[\"CS3227\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A feasible plan totals exactly 160 MC (148 MC of unit-load modules plus the 12 MC CP3880 internship), with semester 6 at 8 MC, every other enrolled semester at 12 to 16 MC, and six software engineering primaries including CS4211 and CS4218 at level 4000 or above.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 55.36,
+  "cost_usd": 0.007248,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 14190,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:32+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GESS1001"
+      ],
+      "2": [
+        "CS2030S",
+        "MA1522",
+        "GEA1000",
+        "ES2660"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "DTK1234"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S"
+      ],
+      "5": [
+        "CS3230",
+        "ST2334",
+        "CS3219",
+        "CS4211"
+      ],
+      "6": [
+        "CS3213",
+        "CS4218"
+      ],
+      "7": [
+        "CS3203",
+        "CP4106",
+        "CP3880"
+      ],
+      "8": [
+        "HSI1000",
+        "IS1128",
+        "GEC1015",
+        "GEN2003"
+      ],
+      "9": [
+        "CS3227",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "10": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "A feasible plan totals exactly 160 MC (148 MC of unit-load modules plus the 12 MC CP3880 internship), with semester 6 at 8 MC, every other enrolled semester at 12 to 16 MC, and six software engineering primaries including CS4211 and CS4218 at level 4000 or above."
+  },
+  "parse_error": null
+}

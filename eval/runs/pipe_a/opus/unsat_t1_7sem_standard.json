@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"A 20 MC cap over 7 semesters allows at most 140 MC of load-counting modules. The largest industrial-experience option adds only 12 MC, so the maximum is 152 MC, which is below the 160 MC graduation requirement.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC, but 7 semesters capped at 20 MC give at most 140 MC of coursework, and the industrial-experience modules (which don't count toward the cap) add at most 12 MC, for 152 MC. A full-semester internship such as CP3880 would occupy a whole semester and give even less, so the 160-MC total cannot be reached within 7 semesters.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.55,
-  "cost_usd": 0.011309,
+  "latency_s": 5.36,
+  "cost_usd": 0.013799,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 409,
+    "output_tokens": 528,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:44+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:13+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "A 20 MC cap over 7 semesters allows at most 140 MC of load-counting modules. The largest industrial-experience option adds only 12 MC, so the maximum is 152 MC, which is below the 160 MC graduation requirement."
+    "reason": "Graduation needs at least 160 MC, but 7 semesters capped at 20 MC give at most 140 MC of coursework, and the industrial-experience modules (which don't count toward the cap) add at most 12 MC, for 152 MC. A full-semester internship such as CP3880 would occupy a whole semester and give even less, so the 160-MC total cannot be reached within 7 semesters."
   },
   "parse_error": null
 }

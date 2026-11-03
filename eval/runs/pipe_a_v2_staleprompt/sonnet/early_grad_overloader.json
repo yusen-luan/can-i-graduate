@@ -1,0 +1,80 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"GEC1015\",\"DTK1234\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS2107\",\"CS2105\",\"CS2109S\",\"CS2101\",\"CS2103T\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"CS3230\",\"ST2334\",\"GESS1020\",\"HSI1000\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4238\",\"GEN2000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4230\",\"CP3880\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan reaches 160 MC with all required modules and every university requirement. Computer security is covered by CS2107, CS3235, CS4238, CS4236 and CS4230, three of them at level 4000. B&D is 32 MC, industrial experience is CP3880, and no semester exceeds 26 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.74,
+  "cost_usd": 0.031101,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 2811,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:35:50+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660",
+        "GEC1015",
+        "DTK1234"
+      ],
+      "3": [
+        "CS2106",
+        "CS2107",
+        "CS2105",
+        "CS2109S",
+        "CS2101",
+        "CS2103T"
+      ],
+      "4": [
+        "CS3235",
+        "CS3230",
+        "ST2334",
+        "GESS1020",
+        "HSI1000",
+        "IS1128"
+      ],
+      "5": [
+        "CS4236",
+        "CS4238",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4230",
+        "CP3880",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "The plan reaches 160 MC with all required modules and every university requirement. Computer security is covered by CS2107, CS3235, CS4238, CS4236 and CS4230, three of them at level 4000. B&D is 32 MC, industrial experience is CP3880, and no semester exceeds 26 MC."
+  },
+  "parse_error": null
+}

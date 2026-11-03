@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ST2334\", \"IS1108\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"ES2660\"]}, {\"semester\": 5, \"modules\": [\"CS3230\", \"CS3243\", \"CS3244\", \"CS3263\", \"GEC1015\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4243\", \"GESS1020\", \"GEN2003\", \"DTK1234\"]}, {\"semester\": 7, \"modules\": [\"CP4101\", \"HSI1000\", \"IS1128\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": []}], \"reason\": \"A plan exists that reaches exactly 160 MC with no semester above 20 MC and at most 4 CS/CP modules in any semester. It leaves the Special Term (semester 3) and semester 10 empty, completes the AI focus (CS2109S, CS3243, CS4248 and others), and uses CP4101 in place of the internship, giving 32 MC of B&D and 20 MC at level 4000.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"ST2334\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"CS3243\",\"CS3264\",\"GEC1015\",\"GESS1020\"]},{\"semester\":6,\"modules\":[\"CS3244\",\"CS3263\",\"CS4248\",\"GEN2000\",\"DTK1234\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"HSI1000\",\"IS1128\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[]}],\"reason\":\"Feasible: CP4101 replaces the internship and provides the 12 MC at level 4000. The AI focus is met by CS2109S, CS3243, CS3244, CS3263, CS3264 and CS4248; the Special Term (semester 3) and the final semester are left empty. Every semester stays within 20 MC and holds at most 4 CS/CP modules, for a total of exactly 160 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 16.01,
-  "cost_usd": 0.041889,
+  "latency_s": 15.84,
+  "cost_usd": 0.041919,
   "request_id": "",
   "usage": {
     "input_tokens": 157,
-    "output_tokens": 1922,
+    "output_tokens": 1918,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:14+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:24+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -32,8 +32,8 @@
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "ST2334",
-        "IS1108"
+        "IS1108",
+        "ST2334"
       ],
       "3": [],
       "4": [
@@ -46,15 +46,15 @@
       "5": [
         "CS3230",
         "CS3243",
-        "CS3244",
-        "CS3263",
-        "GEC1015"
+        "CS3264",
+        "GEC1015",
+        "GESS1020"
       ],
       "6": [
+        "CS3244",
+        "CS3263",
         "CS4248",
-        "CS4243",
-        "GESS1020",
-        "GEN2003",
+        "GEN2000",
         "DTK1234"
       ],
       "7": [
@@ -78,7 +78,7 @@
       ],
       "10": []
     },
-    "reason": "A plan exists that reaches exactly 160 MC with no semester above 20 MC and at most 4 CS/CP modules in any semester. It leaves the Special Term (semester 3) and semester 10 empty, completes the AI focus (CS2109S, CS3243, CS4248 and others), and uses CP4101 in place of the internship, giving 32 MC of B&D and 20 MC at level 4000."
+    "reason": "Feasible: CP4101 replaces the internship and provides the 12 MC at level 4000. The AI focus is met by CS2109S, CS3243, CS3244, CS3263, CS3264 and CS4248; the Special Term (semester 3) and the final semester are left empty. Every semester stays within 20 MC and holds at most 4 CS/CP modules, for a total of exactly 160 MC."
   },
   "parse_error": null
 }

@@ -4,67 +4,71 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2109S\",\"CS2101\",\"CS2103T\",\"CS2106\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS3230\",\"GEC1015\",\"GESS1020\",\"GEN2003\",\"DTK1234\"]},{\"semester\":3,\"modules\":[\"CS3263\",\"CS4263\",\"CS3268\",\"IS1128\",\"SC1101E\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS4248\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4244\",\"CS4246\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"A plan exists that meets all graduation rules and the artificial intelligence focus within the 20 MC cap, using CP3880 as the single industrial experience and 7 generic electives to reach exactly 160 MC. It finishes in 6 semesters, within the 8 allowed.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2109S\", \"CS2103T\", \"CS2101\", \"CS4263\", \"CS3230\"]}, {\"semester\": 2, \"modules\": [\"CS3243\", \"CS2106\", \"CS3263\", \"IS1108\", \"GEC1015\"]}, {\"semester\": 3, \"modules\": [\"CS4248\", \"CS4244\", \"CS3245\", \"CS2107\", \"GESS1020\"]}, {\"semester\": 4, \"modules\": [\"CS4246\", \"GEN2003\", \"DTK1234\", \"IS1128\", \"ETP3205\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"SC1101E\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"The plan finishes in 8 semesters with at most 20 MC per semester and 162 MC total, covering all required, university-level, and ID/CD requirements. It also meets the AI focus (CS2109S, CS3243, CS3263, CS4263, CS4248, CS4244, CS4246), 16 MC at level 4000, 38 MC of Breadth & Depth via the ETP3205 internship, and 9 generic electives.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 55.34,
-  "cost_usd": 0.007071,
+  "latency_s": 67.62,
+  "cost_usd": 0.008631,
   "request_id": "",
   "usage": {
     "input_tokens": 126,
-    "output_tokens": 13835,
+    "output_tokens": 16944,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:32:38+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:45:31+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2109S",
-        "CS2101",
         "CS2103T",
-        "CS2106",
-        "IS1108"
+        "CS2101",
+        "CS4263",
+        "CS3230"
       ],
       "2": [
-        "CS3230",
-        "GEC1015",
-        "GESS1020",
-        "GEN2003",
-        "DTK1234"
+        "CS3243",
+        "CS2106",
+        "CS3263",
+        "IS1108",
+        "GEC1015"
       ],
       "3": [
-        "CS3263",
-        "CS4263",
-        "CS3268",
-        "IS1128",
-        "SC1101E"
+        "CS4248",
+        "CS4244",
+        "CS3245",
+        "CS2107",
+        "GESS1020"
       ],
       "4": [
-        "CS3243",
-        "CS3244",
-        "CS4248",
-        "CP3880"
+        "CS4246",
+        "GEN2003",
+        "DTK1234",
+        "IS1128",
+        "ETP3205",
+        "UE_GENERIC_1"
       ],
       "5": [
-        "CS4244",
-        "CS4246",
-        "UE_GENERIC_1",
+        "SC1101E",
         "UE_GENERIC_2",
         "UE_GENERIC_3"
       ],
       "6": [
         "UE_GENERIC_4",
-        "UE_GENERIC_5",
+        "UE_GENERIC_5"
+      ],
+      "7": [
         "UE_GENERIC_6",
         "UE_GENERIC_7"
       ],
-      "7": [],
-      "8": []
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
     },
-    "reason": "A plan exists that meets all graduation rules and the artificial intelligence focus within the 20 MC cap, using CP3880 as the single industrial experience and 7 generic electives to reach exactly 160 MC. It finishes in 6 semesters, within the 8 allowed."
+    "reason": "The plan finishes in 8 semesters with at most 20 MC per semester and 162 MC total, covering all required, university-level, and ID/CD requirements. It also meets the AI focus (CS2109S, CS3243, CS3263, CS4263, CS4248, CS4244, CS4246), 16 MC at level 4000, 38 MC of Breadth & Depth via the ETP3205 internship, and 9 generic electives."
   },
   "parse_error": null
 }

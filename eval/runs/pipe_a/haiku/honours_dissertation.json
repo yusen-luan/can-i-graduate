@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\", \"HSH1000\"]}, {\"semester\": 2, \"modules\": [\"CS2040S\", \"CS2030S\", \"MA1522\", \"ES2660\", \"EL1101E\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS2109S\", \"GEC1020\"]}, {\"semester\": 5, \"modules\": [\"CS2106\", \"CS3230\", \"ST2334\", \"CS3243\", \"IS1108\"]}, {\"semester\": 6, \"modules\": [\"CS3263\", \"CS3244\", \"DTK1234\", \"GESS1020\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4248\", \"CS4244\", \"IS1128\", \"GEN2003\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4101\", \"HSI1000\", \"CDE2300\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A plan fits in 10 semesters with Semester 3 as a Special Term left empty, since the only Special Term 3 modules offered are industrial, bridging, or unnecessary. It meets 160 MC with 20 MC or fewer per semester, the AI focus (CS2109S, CS3243, CS4248), CP4101 in place of an internship, 32 MC of B&D, 3 ID modules, and no more than 4 CS/CP modules per semester.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"ES2660\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2100\", \"CS2040S\", \"ST2334\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2106\", \"CS2109S\", \"GEN2000\"]}, {\"semester\": 5, \"modules\": [\"CS3230\", \"CS3243\", \"CS3244\", \"CS3263\", \"GESS1020\"]}, {\"semester\": 6, \"modules\": [\"CP4101\", \"CS4244\", \"CS4248\"]}, {\"semester\": 7, \"modules\": [\"IS1108\", \"IS1128\", \"HSI1000\", \"DTK1234\", \"GEC1020\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A feasible plan exists: all 16 required modules, the AI focus (CS3243, CS3244, CS3263, CS4244, CS4248), CP4101 as the GPA-qualified project in place of an internship, and 10 generic electives reach exactly 160 MC, with Special Term 3 left empty since no module needed is offered then and no per-semester cap or CS/IFS/CP limit is breached.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 69.36,
-  "cost_usd": 0.008907,
+  "latency_s": 58.04,
+  "cost_usd": 0.007717,
   "request_id": "",
   "usage": {
     "input_tokens": 157,
-    "output_tokens": 17501,
+    "output_tokens": 15109,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:32:15+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:44:29+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,61 +25,61 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "GEA1000",
-        "HSH1000"
+        "MA1522",
+        "ES2660"
       ],
       "2": [
-        "CS2040S",
         "CS2030S",
-        "MA1522",
-        "ES2660",
-        "EL1101E"
+        "CS2100",
+        "CS2040S",
+        "ST2334",
+        "GEA1000"
       ],
       "3": [],
       "4": [
-        "CS2100",
-        "CS2101",
         "CS2103T",
+        "CS2101",
+        "CS2106",
         "CS2109S",
-        "GEC1020"
+        "GEN2000"
       ],
       "5": [
-        "CS2106",
         "CS3230",
-        "ST2334",
         "CS3243",
-        "IS1108"
+        "CS3244",
+        "CS3263",
+        "GESS1020"
       ],
       "6": [
-        "CS3263",
-        "CS3244",
-        "DTK1234",
-        "GESS1020",
-        "UE_GENERIC_1"
+        "CP4101",
+        "CS4244",
+        "CS4248"
       ],
       "7": [
-        "CS4248",
-        "CS4244",
+        "IS1108",
         "IS1128",
-        "GEN2003",
-        "UE_GENERIC_2"
+        "HSI1000",
+        "DTK1234",
+        "GEC1020"
       ],
       "8": [
-        "CP4101",
-        "HSI1000",
-        "CDE2300"
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
       ],
       "9": [
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "10": [
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "A plan fits in 10 semesters with Semester 3 as a Special Term left empty, since the only Special Term 3 modules offered are industrial, bridging, or unnecessary. It meets 160 MC with 20 MC or fewer per semester, the AI focus (CS2109S, CS3243, CS4248), CP4101 in place of an internship, 32 MC of B&D, 3 ID modules, and no more than 4 CS/CP modules per semester."
+    "reason": "A feasible plan exists: all 16 required modules, the AI focus (CS3243, CS3244, CS3263, CS4244, CS4248), CP4101 as the GPA-qualified project in place of an internship, and 10 generic electives reach exactly 160 MC, with Special Term 3 left empty since no module needed is offered then and no per-semester cap or CS/IFS/CP limit is breached."
   },
   "parse_error": null
 }

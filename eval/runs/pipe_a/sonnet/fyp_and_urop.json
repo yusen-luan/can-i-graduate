@@ -4,24 +4,80 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CP4101 (12 MC) and the UROP module CP3209 (8 MC) together total 20 MC, which exceeds the 12 MC cap on CP-coded modules (CP3106, CP3209, CP4101, CP4106), so the final-year project and UROP requests cannot both be met.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2109S\",\"CS2106\",\"ST2334\",\"CS2101\",\"CS2103T\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"DTK1234\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS3264\",\"CS4248\",\"CP3209\"]},{\"semester\":6,\"modules\":[\"GESS1020\",\"GEN2000\",\"IS1128\",\"HSI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The plan totals 160 MC with no semester over 20 MC. The AI focus area is met with CS2109S, CS3243, CS3244, CS3263, CS3264 and CS4248 (CS4248 and CP4101 are at level 4000). CP3209 (UROP) starts in semester 5 and CP4101 in semester 7, so UROP finishes first. Breadth & Depth is 32 MC (20 MC from five AI modules plus 12 MC of CP projects counted toward the cap), and the 8 generic electives are within the limit.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.54,
-  "cost_usd": 0.006821,
+  "latency_s": 19.44,
+  "cost_usd": 0.032161,
   "request_id": "",
   "usage": {
     "input_tokens": 125,
-    "output_tokens": 375,
+    "output_tokens": 2898,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:35:34+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:32+00:00",
   "prediction": {
-    "feasible": false,
-    "plan": {},
-    "reason": "CP4101 (12 MC) and the UROP module CP3209 (8 MC) together total 20 MC, which exceeds the 12 MC cap on CP-coded modules (CP3106, CP3209, CP4101, CP4106), so the final-year project and UROP requests cannot both be met."
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660",
+        "IS1108"
+      ],
+      "3": [
+        "CS2109S",
+        "CS2106",
+        "ST2334",
+        "CS2101",
+        "CS2103T"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "DTK1234"
+      ],
+      "5": [
+        "CS3263",
+        "CS3264",
+        "CS4248",
+        "CP3209"
+      ],
+      "6": [
+        "GESS1020",
+        "GEN2000",
+        "IS1128",
+        "HSI1000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CP4101",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "The plan totals 160 MC with no semester over 20 MC. The AI focus area is met with CS2109S, CS3243, CS3244, CS3263, CS3264 and CS4248 (CS4248 and CP4101 are at level 4000). CP3209 (UROP) starts in semester 5 and CP4101 in semester 7, so UROP finishes first. Breadth & Depth is 32 MC (20 MC from five AI modules plus 12 MC of CP projects counted toward the cap), and the 8 generic electives are within the limit."
   },
   "parse_error": null
 }

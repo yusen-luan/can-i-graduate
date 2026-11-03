@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters capped at 20 MC each give at most 120 MC of unit-load modules, and the single allowed industrial-experience option adds at most 12 MC (it does not count toward the cap), so the maximum is 132 MC, below the 160 MC graduation requirement.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation minimum cannot be reached: six semesters at a 20 MC cap give at most 120 MC of unit-load modules, and the largest industrial-experience option that sits outside the cap is 12 MC (CP3200+CP3202 or CP3107+CP3110), for a maximum of 132 MC. The full-semester internships would take a whole semester, which lowers the total further.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 6.55,
-  "cost_usd": 0.000743,
+  "latency_s": 14.91,
+  "cost_usd": 0.001333,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 1186,
+    "output_tokens": 2356,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:31:15+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:43:48+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Six semesters capped at 20 MC each give at most 120 MC of unit-load modules, and the single allowed industrial-experience option adds at most 12 MC (it does not count toward the cap), so the maximum is 132 MC, below the 160 MC graduation requirement."
+    "reason": "The 160 MC graduation minimum cannot be reached: six semesters at a 20 MC cap give at most 120 MC of unit-load modules, and the largest industrial-experience option that sits outside the cap is 12 MC (CP3200+CP3202 or CP3107+CP3110), for a maximum of 132 MC. The full-semester internships would take a whole semester, which lowers the total further."
   },
   "parse_error": null
 }

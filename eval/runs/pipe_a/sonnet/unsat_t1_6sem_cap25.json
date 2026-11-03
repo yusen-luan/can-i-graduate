@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Reaching 160 MC needs at least 148 MC of counted load, because the largest industrial option (12 MC) does not count toward load. With a 25 MC cap, a semester can only exceed 24 MC by including a 5 MC module, and only CS3216 and CS3217 are 5 MC. Counted load is therefore at most 6x24+2 = 146 MC, so the total is at most 158 MC, below 160.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached in 6 semesters at 25 MC each. The most credit-bearing industrial-experience option that can share a semester with coursework is 12 MC (CP3200+CP3202 or CP3107+CP3110), and the full-semester internships remove a whole semester of coursework. Only CS3216 and CS3217 are 5 MC, so at most two semesters can reach 25 MC and the other four are capped at 24 MC. That gives at most 2*25 + 4*24 = 146 MC of loaded modules plus 12 MC of industrial experience, which is 158 MC and below 160.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 12.76,
-  "cost_usd": 0.018035,
+  "latency_s": 13.97,
+  "cost_usd": 0.018775,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 1506,
+    "output_tokens": 1569,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:36:33+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:46+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Reaching 160 MC needs at least 148 MC of counted load, because the largest industrial option (12 MC) does not count toward load. With a 25 MC cap, a semester can only exceed 24 MC by including a 5 MC module, and only CS3216 and CS3217 are 5 MC. Counted load is therefore at most 6x24+2 = 146 MC, so the total is at most 158 MC, below 160."
+    "reason": "The 160 MC total cannot be reached in 6 semesters at 25 MC each. The most credit-bearing industrial-experience option that can share a semester with coursework is 12 MC (CP3200+CP3202 or CP3107+CP3110), and the full-semester internships remove a whole semester of coursework. Only CS3216 and CS3217 are 5 MC, so at most two semesters can reach 25 MC and the other four are capped at 24 MC. That gives at most 2*25 + 4*24 = 146 MC of loaded modules plus 12 MC of industrial experience, which is 158 MC and below 160."
   },
   "parse_error": null
 }

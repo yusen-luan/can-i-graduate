@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation minimum cannot be reached in 6 semesters with a 27 MC cap: 4 MC granularity and only two 5 MC modules (CS3216, CS3217) limit non-industrial load to at most 146 MC, and one industrial option adds at most 12 MC, giving at most 158 MC.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Under the 27 MC per-semester cap over 6 semesters, the only non-multiple-of-4 modules are CS3216 and CS3217 (5 MC each), so coursework cannot exceed 146 MC; even adding the maximum 12 MC single industrial option gives at most 158 MC, short of the 160 MC graduation requirement.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 107.94,
-  "cost_usd": 0.012372,
+  "latency_s": 96.48,
+  "cost_usd": 0.011264,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 24447,
+    "output_tokens": 22219,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:35:11+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:48:45+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The 160 MC graduation minimum cannot be reached in 6 semesters with a 27 MC cap: 4 MC granularity and only two 5 MC modules (CS3216, CS3217) limit non-industrial load to at most 146 MC, and one industrial option adds at most 12 MC, giving at most 158 MC."
+    "reason": "Under the 27 MC per-semester cap over 6 semesters, the only non-multiple-of-4 modules are CS3216 and CS3217 (5 MC each), so coursework cannot exceed 146 MC; even adding the maximum 12 MC single industrial option gives at most 158 MC, short of the 160 MC graduation requirement."
   },
   "parse_error": null
 }

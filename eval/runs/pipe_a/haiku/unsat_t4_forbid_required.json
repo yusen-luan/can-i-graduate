@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 (Computer Organisation) is a required module for graduation, and the student's request to avoid it cannot be satisfied since no exemption or substitute is allowed in the rules.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 is a required graduation module, so avoiding it conflicts with the graduation requirements. CS2106, also required, needs CS2100 as its only prerequisite option available in the catalog (the alternatives CS2100DE, CS2100HS, EE2007, EE2024 and EE2028 cannot be scheduled), so the plan cannot satisfy both the avoid-CS2100 request and the requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.5,
-  "cost_usd": 0.000424,
+  "latency_s": 6.21,
+  "cost_usd": 0.000757,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 549,
+    "output_tokens": 1204,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:39+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:37+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS2100 (Computer Organisation) is a required module for graduation, and the student's request to avoid it cannot be satisfied since no exemption or substitute is allowed in the rules."
+    "reason": "CS2100 is a required graduation module, so avoiding it conflicts with the graduation requirements. CS2106, also required, needs CS2100 as its only prerequisite option available in the catalog (the alternatives CS2100DE, CS2100HS, EE2007, EE2024 and EE2028 cannot be scheduled), so the plan cannot satisfy both the avoid-CS2100 request and the requirements."
   },
   "parse_error": null
 }

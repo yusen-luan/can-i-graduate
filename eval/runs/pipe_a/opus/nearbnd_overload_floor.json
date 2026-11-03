@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\",\"CS2105\"]},{\"semester\":4,\"modules\":[\"CS2107\",\"GESS1020\",\"GEN2003\",\"DTK1234\",\"HSI1000\",\"IE2141\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"CS4236\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4239\",\"UE\"]}], \"reason\":\"A plan exists: no semester exceeds 24 MC (CP3880 does not count toward load), and it reaches exactly 160 MC. The computer security focus is met with CS2107, CS3235, CS4236, CS4238 and CS4239, which also cover the 12 MC at level 4000, and B&D totals 36 MC including the CP3880 internship.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"GEC1015\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\",\"CS2105\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2107\",\"GEN2003\",\"DTK1234\",\"HSI1000\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"IS1128\",\"UE\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CS4230\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4236\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan fits in 7 semesters with no semester above 26 MC and totals exactly 160 MC, meeting all required modules and university-level requirements. The computer security focus is covered by CS2107, CS3235, CS4236 and CS4238, and CS4236, CS4238 and CS4230 give 12 MC at level 4000, while Breadth & Depth reaches 36 MC including the CP3200 + CP3202 internship.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 21.44,
-  "cost_usd": 0.033681,
+  "latency_s": 19.03,
+  "cost_usd": 0.034971,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 1526,
+    "output_tokens": 1585,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:35+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:48+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -33,48 +33,49 @@
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "ST2334",
         "ES2660",
-        "GEC1015"
+        "GEC1015",
+        "GESS1020"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2106",
         "CS2109S",
-        "CS3230",
+        "ST2334",
         "CS2105"
       ],
       "4": [
+        "CS3230",
         "CS2107",
-        "GESS1020",
         "GEN2003",
         "DTK1234",
         "HSI1000",
-        "IE2141",
-        "CP3880"
+        "CP3200"
       ],
       "5": [
         "CS3235",
-        "CS4236",
+        "IS1128",
         "UE_GENERIC_1",
         "UE_GENERIC_2",
         "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CP3202"
       ],
       "6": [
         "CS4238",
+        "CS4230",
+        "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "UE_GENERIC_6"
       ],
       "7": [
-        "CS4239",
+        "CS4236",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
         "UE_GENERIC_9"
       ]
     },
-    "reason": "A plan exists: no semester exceeds 24 MC (CP3880 does not count toward load), and it reaches exactly 160 MC. The computer security focus is met with CS2107, CS3235, CS4236, CS4238 and CS4239, which also cover the 12 MC at level 4000, and B&D totals 36 MC including the CP3880 internship."
+    "reason": "The plan fits in 7 semesters with no semester above 26 MC and totals exactly 160 MC, meeting all required modules and university-level requirements. The computer security focus is covered by CS2107, CS3235, CS4236 and CS4238, and CS4236, CS4238 and CS4230 give 12 MC at level 4000, while Breadth & Depth reaches 36 MC including the CP3200 + CP3202 internship."
   },
   "parse_error": null
 }

@@ -4,78 +4,76 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2100\",\"CS2103T\",\"CS2101\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS3230\",\"CS2102\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS3231\",\"CS3233\",\"CS3243\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS3244\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4236\",\"CS3241\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS3217\",\"CS4248\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS3210\",\"CS3219\",\"UE\"]}],\"reason\":\"Feasible within 9 semesters at no more than 20 MC per semester. It covers the foundation, maths, industry experience and an Algorithms & Theory focus area (CS3230, CS3231, CS3233, CS4231, CS4234, CS4236), with electives filling the rest. I could not verify every module code, offering semester or common-curriculum requirement, so check the plan against the official NUS requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2102\",\"CS2105\",\"CS3230\",\"CS3236\",\"GEC1000\"]},{\"semester\":4,\"modules\":[\"CS3231\",\"CS3243\",\"GESS1000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS3244\",\"CS4234\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4232\",\"CP3880\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"IS1128\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The remaining modules come to roughly 150 MC, so they fit within 9 semesters at 20 MC or less each. The plan covers the CS foundation, the maths requirements, the Algorithms & Theory focus area (CS3230, CS3231, CS3236, CS4231, CS4232, CS4234), industry experience, a final-year project and ethics. The common-curriculum module codes (GEC1000, GESS1000), CS2105 and IS1128 are from memory, so please check them against the official AY2026/27 requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 45.3,
-  "cost_usd": 0.062752,
+  "latency_s": 40.19,
+  "cost_usd": 0.054932,
   "request_id": "",
   "usage": {
     "input_tokens": 87,
-    "output_tokens": 6011,
+    "output_tokens": 5229,
     "cache_creation_input_tokens": 987,
     "cache_read_input_tokens": 0
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:41:03+00:00",
+  "timestamp": "2026-11-03T15:46:15+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2030S",
         "CS2040S",
+        "CS2100",
         "MA1522",
         "GEA1000"
       ],
       "2": [
-        "CS2100",
         "CS2103T",
         "CS2101",
+        "CS2106",
         "ST2334"
       ],
       "3": [
-        "CS2106",
-        "CS3230",
         "CS2102",
-        "IS1128"
+        "CS2105",
+        "CS3230",
+        "CS3236",
+        "GEC1000"
       ],
       "4": [
         "CS3231",
-        "CS3233",
         "CS3243",
-        "UE_GENERIC_1"
+        "GESS1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
       ],
       "5": [
         "CS4231",
-        "CS4234",
         "CS3244",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "CS4234",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
       ],
       "6": [
+        "CS4232",
         "CP3880",
-        "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
       "7": [
-        "CS4236",
-        "CS3241",
+        "CP4101",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
         "UE_GENERIC_8"
       ],
       "8": [
-        "CS3217",
-        "CS4248",
-        "UE_GENERIC_9"
-      ],
-      "9": [
-        "CS3210",
-        "CS3219",
+        "IS1128",
+        "UE_GENERIC_9",
         "UE_GENERIC_10"
-      ]
+      ],
+      "9": []
     },
-    "reason": "Feasible within 9 semesters at no more than 20 MC per semester. It covers the foundation, maths, industry experience and an Algorithms & Theory focus area (CS3230, CS3231, CS3233, CS4231, CS4234, CS4236), with electives filling the rest. I could not verify every module code, offering semester or common-curriculum requirement, so check the plan against the official NUS requirements."
+    "reason": "The remaining modules come to roughly 150 MC, so they fit within 9 semesters at 20 MC or less each. The plan covers the CS foundation, the maths requirements, the Algorithms & Theory focus area (CS3230, CS3231, CS3236, CS4231, CS4232, CS4234), industry experience, a final-year project and ethics. The common-curriculum module codes (GEC1000, GESS1000), CS2105 and IS1128 are from memory, so please check them against the official AY2026/27 requirements."
   },
   "parse_error": null
 }

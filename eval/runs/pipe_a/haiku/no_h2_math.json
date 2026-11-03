@@ -4,81 +4,79 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1000\",\"MA1301\",\"CS1101S\",\"GEC1015\",\"DTK1234\",\"IS1128\"]},{\"semester\":2,\"modules\":[\"ES1103\",\"CS1231S\",\"CS2030S\",\"MA1522\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"MA1521\",\"IS1108\",\"GEN2000\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"CS3230\"]},{\"semester\":5,\"modules\":[\"CS2109S\",\"CS3231\",\"CS4234\",\"CS2102\",\"CS2107\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"ES2660\",\"GESS1020\",\"SC1101E\"]},{\"semester\":7,\"modules\":[\"CP3200\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP3202\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A plan fits in 8 semesters: MA1301 and ES1000/ES1103 are scheduled as bridging, algorithms focus uses CS3230 with CS3231, CS4234, CS4231 and CS4430 (12 MC at level 4000), and the CP3200+CP3202 internship supplies the B&D credits with 160 MC total and at most 20 MC per semester.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1101S\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2106\",\"ST2334\",\"CS2107\",\"CS2102\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2103T\",\"CS2101\",\"CS2109S\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"CS2105\",\"GEC1015\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"CS4231\",\"GEN2000\",\"DTK1234\",\"IS1128\"]},{\"semester\":7,\"modules\":[\"CS3203\",\"GESS1020\",\"SC1101E\",\"UE\",\"CP3200\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"CP3202\"]}],\"reason\":\"A 160 MC plan exists: MA1301 bridges the missing H2 Mathematics, ES1103 is taken in Semester 1 for Band 2 English, and the CP3200+CP3202 internship (which does not count toward semester load) satisfies the single industrial-experience option. Each semester stays within 20 MC, and the algorithms_theory focus (CS3230, CS3231, CS4430 with 12 MC at level 4000) and the ID/CD and university requirements are all met.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 60.01,
-  "cost_usd": 0.00758,
+  "latency_s": 80.6,
+  "cost_usd": 0.010548,
   "request_id": "",
   "usage": {
     "input_tokens": 121,
-    "output_tokens": 14854,
+    "output_tokens": 20778,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:03+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:02+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "ES1000",
+        "ES1103",
         "MA1301",
         "CS1101S",
-        "GEC1015",
-        "DTK1234",
-        "IS1128"
+        "GEA1000",
+        "IS1108"
       ],
       "2": [
-        "ES1103",
         "CS1231S",
         "CS2030S",
-        "MA1522",
-        "GEA1000"
+        "CS2100",
+        "MA1521",
+        "MA1522"
       ],
       "3": [
         "CS2040S",
-        "CS2100",
-        "MA1521",
-        "IS1108",
-        "GEN2000"
-      ],
-      "4": [
-        "CS2101",
-        "CS2103T",
         "CS2106",
         "ST2334",
-        "CS3230"
+        "CS2107",
+        "CS2102"
+      ],
+      "4": [
+        "CS3230",
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "ES2660"
       ],
       "5": [
-        "CS2109S",
         "CS3231",
         "CS4234",
-        "CS2102",
-        "CS2107"
+        "CS2105",
+        "GEC1015",
+        "UE_GENERIC_1"
       ],
       "6": [
-        "CS4231",
         "CS4430",
-        "ES2660",
-        "GESS1020",
-        "SC1101E"
+        "CS4231",
+        "GEN2000",
+        "DTK1234",
+        "IS1128"
       ],
       "7": [
-        "CP3200",
-        "UE_GENERIC_1",
+        "CS3203",
+        "GESS1020",
+        "SC1101E",
         "UE_GENERIC_2",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CP3200"
       ],
       "8": [
-        "CP3202",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "CP3202"
       ]
     },
-    "reason": "A plan fits in 8 semesters: MA1301 and ES1000/ES1103 are scheduled as bridging, algorithms focus uses CS3230 with CS3231, CS4234, CS4231 and CS4430 (12 MC at level 4000), and the CP3200+CP3202 internship supplies the B&D credits with 160 MC total and at most 20 MC per semester."
+    "reason": "A 160 MC plan exists: MA1301 bridges the missing H2 Mathematics, ES1103 is taken in Semester 1 for Band 2 English, and the CP3200+CP3202 internship (which does not count toward semester load) satisfies the single industrial-experience option. Each semester stays within 20 MC, and the algorithms_theory focus (CS3230, CS3231, CS4430 with 12 MC at level 4000) and the ID/CD and university requirements are all met."
   },
   "parse_error": null
 }

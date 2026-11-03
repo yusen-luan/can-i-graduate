@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS2102\",\"DTK1234\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS4263\",\"CS3263\",\"GEC1015\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4248\",\"CS4246\",\"GESS1020\",\"GEN2000\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Feasible in 8 of the 9 semesters with at most 20 MC per semester. It meets the AI focus (CS2109S, CS3243, CS3244, CS4244, CS4248 and more, with 16 MC at level 4000), uses CP3880 as the industrial experience, and totals at least 160 MC even without counting CP3880.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3244\",\"IS1108\",\"GEC1015\",\"GESS1020\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CS4263\",\"CS4238\",\"DTK1234\",\"IS1128\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CS4248\",\"CP3200\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3202\",\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Feasible: the plan reaches 160 MC in 7 semesters at no more than 20 MC per semester. It covers all required modules, the UROP-free CP3200+CP3202 internship, AI focus (CS2109S, CS3244, CS4248, CS4263), 12+ MC at level 4000, 32+ MC B&D and the ID/CD and university-level requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 23.53,
-  "cost_usd": 0.035533,
+  "latency_s": 19.76,
+  "cost_usd": 0.031333,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 3255,
+    "output_tokens": 2824,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:35:54+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:15+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -33,52 +33,49 @@
         "CS2040S",
         "CS2100",
         "ST2334",
-        "IS1108"
-      ],
-      "3": [
-        "CS2103T",
-        "CS2101",
-        "CS2106",
-        "CS2109S",
         "ES2660"
       ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
       "4": [
-        "CS3230",
-        "CS3243",
-        "CS2102",
-        "DTK1234",
-        "IS1128"
-      ],
-      "5": [
         "CS3244",
-        "CS4263",
-        "CS3263",
+        "IS1108",
         "GEC1015",
-        "HSI1000"
-      ],
-      "6": [
-        "CS4244",
-        "CS4248",
-        "CS4246",
         "GESS1020",
         "GEN2000"
       ],
-      "7": [
-        "CP3880",
+      "5": [
+        "CS4263",
+        "CS4238",
+        "DTK1234",
+        "IS1128",
+        "HSI1000"
+      ],
+      "6": [
+        "CS4248",
+        "CP3200",
         "UE_GENERIC_1",
         "UE_GENERIC_2",
         "UE_GENERIC_3",
         "UE_GENERIC_4"
       ],
-      "8": [
+      "7": [
+        "CP3202",
         "UE_GENERIC_5",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
       ],
+      "8": [],
       "9": []
     },
-    "reason": "Feasible in 8 of the 9 semesters with at most 20 MC per semester. It meets the AI focus (CS2109S, CS3243, CS3244, CS4244, CS4248 and more, with 16 MC at level 4000), uses CP3880 as the industrial experience, and totals at least 160 MC even without counting CP3880."
+    "reason": "Feasible: the plan reaches 160 MC in 7 semesters at no more than 20 MC per semester. It covers all required modules, the UROP-free CP3200+CP3202 internship, AI focus (CS2109S, CS3244, CS4248, CS4263), 12+ MC at level 4000, 32+ MC B&D and the ID/CD and university-level requirements."
   },
   "parse_error": null
 }

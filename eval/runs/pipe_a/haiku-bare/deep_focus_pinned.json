@@ -4,82 +4,83 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231\", \"MA1521\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2040S\", \"CS2030S\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS2106\", \"CS2102\", \"ST2334\", \"CS3241\"]}, {\"semester\": 5, \"modules\": [\"CS4234\", \"CS4231\", \"CS3233\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4236\", \"CS3243\", \"CS3235\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CP4101\", \"CS3223\", \"CS3244\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS3216\", \"CS3219\", \"CS2107\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS3240\", \"CS4248\", \"CS3247\", \"CS3281\", \"UE\"]}], \"reason\": \"CS2040S is completed in semester 2, before CS3230 is taken in semester 3, and every semester stays within 20 MC across 9 semesters totalling 160 MC with 8 UE entries; the module choices are a reasonable approximation of the NUS requirements and algorithms-theory specialisation, not an exact verified checklist.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"MA1521\", \"CS1231S\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"MA1522\", \"CS2100\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2040S\", \"CS2103T\", \"CS2101\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2106\", \"CS2105\", \"CS3230\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS2102\", \"CS3243\", \"CS3244\", \"CS4231\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4234\", \"CS4236\", \"CS3233\", \"CS3210\"]}, {\"semester\": 7, \"modules\": [\"CS3216\", \"CS3217\", \"CS4246\", \"CS4248\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4215\", \"CS4224\", \"CS4243\", \"CS3235\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"MA2101\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"Assuming the 160 MC BComp (Computer Science) total with the core, algorithms-theory specialisation and electives, a 9-semester plan of 4-5 four-MC modules per semester (at most 20 MC each) fits; CS2040S is in semester 3, CS3230 is in semester 4, and the 10-UE cap is respected.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 34.57,
-  "cost_usd": 0.003879,
+  "latency_s": 31.59,
+  "cost_usd": 0.003597,
   "request_id": "",
   "usage": {
     "input_tokens": 111,
-    "output_tokens": 7717,
+    "output_tokens": 7153,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:38:33+00:00",
+  "timestamp": "2026-11-03T15:42:49+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1010S",
-        "CS1231",
         "MA1521",
+        "CS1231S",
         "UE_GENERIC_1"
       ],
       "2": [
-        "CS2040S",
         "CS2030S",
         "MA1522",
+        "CS2100",
         "UE_GENERIC_2"
       ],
       "3": [
-        "CS2100",
-        "CS2101",
+        "CS2040S",
         "CS2103T",
-        "CS3230"
-      ],
-      "4": [
-        "CS2105",
-        "CS2106",
-        "CS2102",
+        "CS2101",
         "ST2334",
-        "CS3241"
-      ],
-      "5": [
-        "CS4234",
-        "CS4231",
-        "CS3233",
         "UE_GENERIC_3"
       ],
-      "6": [
-        "CS4236",
-        "CS3243",
-        "CS3235",
+      "4": [
+        "CS2106",
+        "CS2105",
+        "CS3230",
         "UE_GENERIC_4"
       ],
-      "7": [
-        "CP4101",
-        "CS3223",
+      "5": [
+        "CS2102",
+        "CS3243",
         "CS3244",
+        "CS4231",
         "UE_GENERIC_5"
       ],
-      "8": [
+      "6": [
+        "CS4234",
+        "CS4236",
+        "CS3233",
+        "CS3210"
+      ],
+      "7": [
         "CS3216",
-        "CS3219",
-        "CS2107",
-        "UE_GENERIC_6",
+        "CS3217",
+        "CS4246",
+        "CS4248",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CS4215",
+        "CS4224",
+        "CS4243",
+        "CS3235",
         "UE_GENERIC_7"
       ],
       "9": [
-        "CS3240",
-        "CS4248",
-        "CS3247",
-        "CS3281",
-        "UE_GENERIC_8"
+        "MA2101",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "CS2040S is completed in semester 2, before CS3230 is taken in semester 3, and every semester stays within 20 MC across 9 semesters totalling 160 MC with 8 UE entries; the module choices are a reasonable approximation of the NUS requirements and algorithms-theory specialisation, not an exact verified checklist."
+    "reason": "Assuming the 160 MC BComp (Computer Science) total with the core, algorithms-theory specialisation and electives, a 9-semester plan of 4-5 four-MC modules per semester (at most 20 MC each) fits; CS2040S is in semester 3, CS3230 is in semester 4, and the 10-UE cap is respected."
   },
   "parse_error": null
 }

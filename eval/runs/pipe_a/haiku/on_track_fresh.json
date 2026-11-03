@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"GEA1000\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"ST2334\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3263\",\"CS4248\",\"IS1108\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS4263\",\"CS4244\",\"CS2105\",\"CS2107\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"GESS1020\",\"GEN2000\",\"SC1101E\",\"CS2102\",\"CS2111\"]},{\"semester\":7,\"modules\":[\"CS3240\",\"CS2104\",\"CS3231\",\"CS3103\"]},{\"semester\":8,\"modules\":[\"CS3245\",\"CS3210\",\"CS3244\",\"ETP3201L\"]}],\"reason\":\"A plan fits within 8 semesters and 20 MC per semester: it covers all required and university-level modules, ID/CD (DTK1234, IS1128, SC1101E), and the AI focus (CS2109S, CS3263, CS4263, CS4244, CS4248, CS3244) with 12 MC at level 4000, uses ETP3201L as the single industrial option, and totals exactly 160 MC with 36 B&D-tagged MC beyond the minimum requirement.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEN2050X\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2100\", \"ST2334\", \"ES2660\", \"GEA1000\", \"GEN2050Y\", \"CP3200\"]}, {\"semester\": 3, \"modules\": [\"CS2040S\", \"CS2106\", \"GESS1001\", \"GEC1015\", \"DTK1234\"]}, {\"semester\": 4, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2109S\", \"CS3230\", \"HSI1000\", \"CP3202\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS3263\", \"CS4248\", \"CS4263\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4244\", \"SC1101E\", \"IS1108\", \"CP3209\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A feasible plan exists: all 16 required modules, the GEC, GESS and GEN requirements, three ID/CD modules (two ID, one CD), and the artificial intelligence focus (CS2109S, CS3244, CS3263, CS4248, CS4244, CS4263, including 12 MC at level 4000) fit within 8 semesters at no more than 20 MC per semester. The CP3200+CP3202 internship and the CP3209 UROP project, which starts in Sem 6 so it does not fall in the final semester, bring the total to 160 MC with 8 generic electives.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 63.44,
-  "cost_usd": 0.008465,
+  "latency_s": 55.03,
+  "cost_usd": 0.006999,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 16631,
+    "output_tokens": 13688,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:19+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:11+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -26,57 +26,58 @@
         "CS1231S",
         "MA1521",
         "MA1522",
-        "DTK1234"
+        "GEN2050X"
       ],
       "2": [
         "CS2030S",
-        "CS2040S",
         "CS2100",
+        "ST2334",
+        "ES2660",
         "GEA1000",
-        "ES2660"
+        "GEN2050Y",
+        "CP3200"
       ],
       "3": [
-        "CS2103T",
-        "CS2101",
-        "CS2109S",
-        "ST2334",
-        "CS3230"
+        "CS2040S",
+        "CS2106",
+        "GESS1001",
+        "GEC1015",
+        "DTK1234"
       ],
       "4": [
-        "CS2106",
-        "CS3263",
-        "CS4248",
-        "IS1108",
-        "GEC1015"
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "HSI1000",
+        "CP3202"
       ],
       "5": [
+        "CS3244",
+        "CS3263",
+        "CS4248",
         "CS4263",
-        "CS4244",
-        "CS2105",
-        "CS2107",
-        "IS1128"
+        "UE_GENERIC_1"
       ],
       "6": [
-        "GESS1020",
-        "GEN2000",
+        "CS4244",
         "SC1101E",
-        "CS2102",
-        "CS2111"
+        "IS1108",
+        "CP3209"
       ],
       "7": [
-        "CS3240",
-        "CS2104",
-        "CS3231",
-        "CS3103"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
       "8": [
-        "CS3245",
-        "CS3210",
-        "CS3244",
-        "ETP3201L"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ]
     },
-    "reason": "A plan fits within 8 semesters and 20 MC per semester: it covers all required and university-level modules, ID/CD (DTK1234, IS1128, SC1101E), and the AI focus (CS2109S, CS3263, CS4263, CS4244, CS4248, CS3244) with 12 MC at level 4000, uses ETP3201L as the single industrial option, and totals exactly 160 MC with 36 B&D-tagged MC beyond the minimum requirement."
+    "reason": "A feasible plan exists: all 16 required modules, the GEC, GESS and GEN requirements, three ID/CD modules (two ID, one CD), and the artificial intelligence focus (CS2109S, CS3244, CS3263, CS4248, CS4244, CS4263, including 12 MC at level 4000) fit within 8 semesters at no more than 20 MC per semester. The CP3200+CP3202 internship and the CP3209 UROP project, which starts in Sem 6 so it does not fall in the final semester, bring the total to 160 MC with 8 generic electives."
   },
   "parse_error": null
 }

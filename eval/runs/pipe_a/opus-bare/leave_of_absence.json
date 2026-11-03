@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2109S\",\"GESS1003\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1004\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS3264\",\"CS4248\",\"GEN2000\",\"IS1128\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3263\",\"CS4243\",\"CS4246\",\"IS2218\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4244\",\"DTK1234\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"With semester 5 off, 8 active semesters at 20 MC each give exactly the 160 MC required. The plan covers the common curriculum, CS foundation and maths courses, the AI focus area (CS3243, CS3244, CS3263, CS3264 and four level-4000 AI courses) and 10 unrestricted electives, with prerequisites ordered correctly; the specific GE and interdisciplinary course codes are illustrative and should be checked against the current approved lists.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"IS1108\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"ES2660\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"ST2334\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1025\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4248\",\"CS3263\",\"CS3264\",\"HS1501\",\"GEN2061X\"]},{\"semester\":7,\"modules\":[\"CS4243\",\"CS4246\",\"HSI1000\",\"EC1101E\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4244\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CP3880\",\"UE\",\"UE\"]}],\"reason\":\"Feasible, but with no slack: 8 active semesters at 20 MC each give exactly the 160 MC needed. The plan covers the CS foundation, the mathematics courses, eight breadth-and-depth courses including the AI focus area (CS3243, CS3244, CS4248 and others), CP3880 for industry experience, the common curriculum and 7 UEs; the specific GE, interdisciplinary (HS1501, HSI1000) and cross-disciplinary (EC1101E) codes are illustrative picks from memory, so check them against the current NUS lists.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 68.2,
-  "cost_usd": 0.140597,
+  "latency_s": 63.16,
+  "cost_usd": 0.125657,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 7000,
+    "output_tokens": 6253,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:55:09+00:00",
+  "timestamp": "2026-11-03T15:53:36+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,61 +25,59 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "GEA1000",
-        "IS1108"
+        "IS1108",
+        "GEA1000"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "MA1522",
-        "ST2334",
-        "ES2660"
+        "ES2660",
+        "GEC1015"
       ],
       "3": [
         "CS2100",
         "CS2101",
         "CS2103T",
-        "CS2109S",
-        "GESS1003"
+        "ST2334",
+        "CS2109S"
       ],
       "4": [
         "CS2106",
         "CS3230",
         "CS3243",
         "CS3244",
-        "GEC1004"
+        "GESS1025"
       ],
       "5": [],
       "6": [
-        "CS3264",
         "CS4248",
-        "GEN2000",
-        "IS1128",
-        "UE_GENERIC_1"
+        "CS3263",
+        "CS3264",
+        "HS1501",
+        "GEN2061X"
       ],
       "7": [
-        "CS3263",
         "CS4243",
         "CS4246",
-        "IS2218",
-        "UE_GENERIC_2"
+        "HSI1000",
+        "EC1101E",
+        "UE_GENERIC_1"
       ],
       "8": [
         "CS4244",
-        "DTK1234",
+        "UE_GENERIC_2",
         "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
       "9": [
+        "CP3880",
         "UE_GENERIC_6",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "UE_GENERIC_7"
       ]
     },
-    "reason": "With semester 5 off, 8 active semesters at 20 MC each give exactly the 160 MC required. The plan covers the common curriculum, CS foundation and maths courses, the AI focus area (CS3243, CS3244, CS3263, CS3264 and four level-4000 AI courses) and 10 unrestricted electives, with prerequisites ordered correctly; the specific GE and interdisciplinary course codes are illustrative and should be checked against the current approved lists."
+    "reason": "Feasible, but with no slack: 8 active semesters at 20 MC each give exactly the 160 MC needed. The plan covers the CS foundation, the mathematics courses, eight breadth-and-depth courses including the AI focus area (CS3243, CS3244, CS4248 and others), CP3880 for industry experience, the common curriculum and 7 UEs; the specific GE, interdisciplinary (HS1501, HSI1000) and cross-disciplinary (EC1101E) codes are illustrative picks from memory, so check them against the current NUS lists."
   },
   "parse_error": null
 }

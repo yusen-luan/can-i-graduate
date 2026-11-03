@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"No such plan exists: the degree requires 160 MC, but 6 regular semesters at no more than 26 MC each allow at most 156 MC. You would need a seventh semester, a Special Term, or a higher per-semester load.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The BComp (Computer Science) degree requires 160 MC, but 6 semesters at no more than 26 MC each allow at most 156 MC. With no modules completed or exempted, the 160 MC graduation requirement cannot be met within your limits.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 8.08,
-  "cost_usd": 0.006725,
+  "latency_s": 3.58,
+  "cost_usd": 0.005685,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 311,
+    "output_tokens": 259,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:59:11+00:00",
+  "timestamp": "2026-11-03T15:55:35+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "No such plan exists: the degree requires 160 MC, but 6 regular semesters at no more than 26 MC each allow at most 156 MC. You would need a seventh semester, a Special Term, or a higher per-semester load."
+    "reason": "The BComp (Computer Science) degree requires 160 MC, but 6 semesters at no more than 26 MC each allow at most 156 MC. With no modules completed or exempted, the 160 MC graduation requirement cannot be met within your limits."
   },
   "parse_error": null
 }

@@ -6,18 +6,18 @@
   "model": "claude-sonnet-5-5",
   "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[{\"semester\":5,\"max_units\":0}],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
   "stop_reason": "end_turn",
-  "latency_s": 2.827,
-  "cost_usd": 0.004196,
+  "latency_s": 8.462,
+  "cost_usd": 0.005726,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 264,
+    "output_tokens": 417,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 6778
   },
   "effort": "high",
   "prompt_sha256": "23c6589b14921d44",
-  "timestamp": "2026-11-02T15:02:39+00:00",
+  "timestamp": "2026-11-03T15:43:05+00:00",
   "spec": {
     "student": {
       "completed": [],
@@ -55,7 +55,7 @@
   "spec_error": null,
   "solve": {
     "status": "OPTIMAL",
-    "wall_time_s": 0.427,
+    "wall_time_s": 1.692,
     "num_variables": 1044,
     "num_total_variables": 2642,
     "num_constraints": 3593
@@ -66,62 +66,62 @@
       "1": [
         "CS1101S",
         "CS1231S",
-        "MA1521"
-      ],
-      "2": [
-        "CS2040S",
-        "CS2100",
-        "GEC1015",
-        "IS1108",
-        "MA1522"
-      ],
-      "3": [
-        "CS2030S",
-        "CS2106",
-        "CS2109S",
-        "ST2334",
+        "MA1521",
+        "UE_GENERIC_5",
         "UE_GENERIC_7"
       ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "ST2334"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3244"
+      ],
       "4": [
-        "CS3243",
-        "CS3264",
-        "GEN2003",
-        "GEN2004",
-        "GESS1020"
+        "CS4262",
+        "GEA1000",
+        "GEN2000",
+        "GESS1020",
+        "UE_GENERIC_1"
       ],
       "5": [],
       "6": [
-        "CS4262",
-        "GEN2000",
-        "UE_GENERIC_2",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "CS3230",
+        "GEC1015"
       ],
       "7": [
-        "CS3230",
-        "IS1128",
-        "SC1101E",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CS3263",
+        "GEN2001",
+        "GEN2003",
+        "IS1108",
+        "UE_GENERIC_8"
       ],
       "8": [
         "CP3200",
-        "CS4248",
-        "DTK1234",
-        "ES2660",
-        "GEA1000",
-        "GEC1020"
+        "CS4246",
+        "GEN2004",
+        "HSI1000",
+        "IE2141",
+        "UE_GENERIC_9"
       ],
       "9": [
         "CP3202",
-        "CS2101",
-        "CS2103T",
-        "CS4243",
-        "GEC1030"
+        "CS4263",
+        "DAO2703",
+        "ES2660",
+        "GEC1030",
+        "GESS1001"
       ]
     },
     "reason": "OPTIMAL"
   },
   "parse_error": null,
-  "llm_latency_s": 2.4
+  "llm_latency_s": 6.77
 }

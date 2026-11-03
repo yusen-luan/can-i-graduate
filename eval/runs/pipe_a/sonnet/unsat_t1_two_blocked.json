@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Semesters 1 and 2 are taken off, so only semesters 3-8 are usable. At 20 MC per semester that is at most 120 MC of countable load. Industrial-experience modules do not count toward the load, but the largest option adds only 12 MC, so the maximum is 132 MC, below the 160 MC total required.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"With semesters 1 and 2 off, only semesters 3-8 can hold modules. At 20 MC per semester that is at most 120 MC of coursework, and the best industrial-experience option adds only 12 MC since it is exempt from the unit load. That totals at most 132 MC, below the 160 MC graduation requirement.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.85,
-  "cost_usd": 0.006919,
+  "latency_s": 4.01,
+  "cost_usd": 0.006899,
   "request_id": "",
   "usage": {
     "input_tokens": 99,
-    "output_tokens": 390,
+    "output_tokens": 377,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:36:32+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:47+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Semesters 1 and 2 are taken off, so only semesters 3-8 are usable. At 20 MC per semester that is at most 120 MC of countable load. Industrial-experience modules do not count toward the load, but the largest option adds only 12 MC, so the maximum is 132 MC, below the 160 MC total required."
+    "reason": "With semesters 1 and 2 off, only semesters 3-8 can hold modules. At 20 MC per semester that is at most 120 MC of coursework, and the best industrial-experience option adds only 12 MC since it is exempt from the unit load. That totals at most 132 MC, below the 160 MC graduation requirement."
   },
   "parse_error": null
 }

@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030\",\"CS2040S\",\"CS2100\",\"MA1521\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3213\",\"CS3219\",\"IS1128\",\"GESS1000\"]},{\"semester\":5,\"modules\":[\"CS4218\",\"CS4211\",\"GEC1000\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3217\",\"CS4239\",\"CS3223\",\"CS4215\",\"GEX1000\"]},{\"semester\":7,\"modules\":[\"CP3200\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The 160 MC requirement is met within 9 semesters at no more than 20 MC each, with CP3200 in semester 7. The plan covers the 20 MC university-level modules, the 40 MC computing foundation, 12 MC mathematics, IS1128 and ES2660, the software engineering focus area, extra computing electives, and 9 UEs (36 MC). I could not confirm several details from memory, so please check them against the official requirements. These include the CP3200 MC value (assumed 12), the exact GE module codes, the semester each module is offered, and which modules count towards the software engineering focus area.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1521\",\"IS1128\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2102\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2106\",\"CS3230\",\"ES2660\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3213\",\"CS3243\",\"CS3216\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3219\",\"CS3217\",\"CS4218\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3200\"]},{\"semester\":8,\"modules\":[\"CS4211\",\"CS4239\",\"CS4215\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4231\",\"UE\",\"UE\"]}],\"reason\":\"Yes. The plan covers the computing foundation, maths, common curriculum, a software engineering focus (CS3213, CS3219, CS4218 plus 4000-level electives) and the CP3200 internship in about 160 MC, with at most 20 MC per semester and 9 semesters used. It is built from my recollection of the AY2026/27 rules, so check semester offerings, the CP3200 MC value and common-curriculum requirements against the official sources.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 44.31,
-  "cost_usd": 0.058811,
+  "latency_s": 46.74,
+  "cost_usd": 0.063631,
   "request_id": "",
   "usage": {
     "input_tokens": 97,
-    "output_tokens": 5842,
+    "output_tokens": 6324,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:44:02+00:00",
+  "timestamp": "2026-11-03T15:50:19+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,60 +25,60 @@
         "CS1010",
         "CS1231S",
         "MA1522",
-        "GEA1000"
+        "GEA1000",
+        "UE_GENERIC_1"
       ],
       "2": [
-        "CS2030",
+        "CS2030S",
         "CS2040S",
-        "CS2100",
         "MA1521",
-        "ES2660"
+        "IS1128",
+        "UE_GENERIC_2"
       ],
       "3": [
-        "CS2103T",
+        "CS2100",
         "CS2101",
-        "CS2106",
-        "CS2109S",
+        "CS2103T",
+        "CS2102",
         "ST2334"
       ],
       "4": [
+        "CS2105",
+        "CS2106",
         "CS3230",
-        "CS3213",
-        "CS3219",
-        "IS1128",
-        "GESS1000"
-      ],
-      "5": [
-        "CS4218",
-        "CS4211",
-        "GEC1000",
-        "GEN2000",
-        "UE_GENERIC_1"
-      ],
-      "6": [
-        "CS3217",
-        "CS4239",
-        "CS3223",
-        "CS4215",
-        "GEX1000"
-      ],
-      "7": [
-        "CP3200",
-        "UE_GENERIC_2",
+        "ES2660",
         "UE_GENERIC_3"
       ],
-      "8": [
+      "5": [
+        "CS3213",
+        "CS3243",
+        "CS3216",
         "UE_GENERIC_4",
-        "UE_GENERIC_5",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "CS3219",
+        "CS3217",
+        "CS4218",
         "UE_GENERIC_6",
         "UE_GENERIC_7"
       ],
+      "7": [
+        "CP3200"
+      ],
+      "8": [
+        "CS4211",
+        "CS4239",
+        "CS4215",
+        "UE_GENERIC_8"
+      ],
       "9": [
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "CS4231",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "The 160 MC requirement is met within 9 semesters at no more than 20 MC each, with CP3200 in semester 7. The plan covers the 20 MC university-level modules, the 40 MC computing foundation, 12 MC mathematics, IS1128 and ES2660, the software engineering focus area, extra computing electives, and 9 UEs (36 MC). I could not confirm several details from memory, so please check them against the official requirements. These include the CP3200 MC value (assumed 12), the exact GE module codes, the semester each module is offered, and which modules count towards the software engineering focus area."
+    "reason": "Yes. The plan covers the computing foundation, maths, common curriculum, a software engineering focus (CS3213, CS3219, CS4218 plus 4000-level electives) and the CP3200 internship in about 160 MC, with at most 20 MC per semester and 9 semesters used. It is built from my recollection of the AY2026/27 rules, so check semester offerings, the CP3200 MC value and common-curriculum requirements against the official sources."
   },
   "parse_error": null
 }

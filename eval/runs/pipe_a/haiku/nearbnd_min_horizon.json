@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2100\", \"ST2334\", \"ES2660\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CS2040S\", \"CS2106\", \"DTK1234\", \"HSI1000\", \"GEN2003\"]}, {\"semester\": 4, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2109S\", \"CS3230\", \"CS3243\"]}, {\"semester\": 5, \"modules\": [\"CS4263\", \"CS3263\", \"CS4244\", \"CS4248\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"GEC1020\", \"GESS1020\", \"IS1128\", \"UE\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The plan reaches 160 MC in 8 semesters with at most 20 MC per semester, using CP3880 as the single industrial-experience option, AI focus via CS2109S, CS3243 and CS4263, exactly 32 B&D MC, 12 MC at level 4000+, and three ID modules.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS2104\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"CS2108\",\"ETP3205\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4263\",\"CS2107\",\"CS3231\",\"CS3245\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4248\",\"CS2111\",\"CS2102\",\"CS3210\"]},{\"semester\":7,\"modules\":[\"CS3240\",\"CS2105\",\"ES2660\",\"IS1108\",\"IS1128\"]},{\"semester\":8,\"modules\":[\"CS4242\",\"HSI1000\",\"GEC1015\",\"GESS1020\",\"GEN2003\"]}],\"reason\":\"A plan exists: 39 four-MC coursework modules (156 MC) plus the 6 MC ETP3205 internship total 162 MC, with no semester above 20 MC, all prerequisites and offering terms respected, the AI focus met (CS2109S, CS3243, CS3244, CS3263, CS4244, CS4248, CS4263 with 16 MC at level 4000+), and all graduation and university requirements covered within 8 semesters.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 54.07,
-  "cost_usd": 0.007069,
+  "latency_s": 60.56,
+  "cost_usd": 0.007966,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 13838,
+    "output_tokens": 15621,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:32:38+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:45:27+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -26,57 +26,59 @@
         "CS1231S",
         "MA1521",
         "MA1522",
-        "GEA1000"
+        "DTK1234"
       ],
       "2": [
         "CS2030S",
+        "CS2040S",
         "CS2100",
         "ST2334",
-        "ES2660",
-        "IS1108"
+        "GEA1000"
       ],
       "3": [
-        "CS2040S",
-        "CS2106",
-        "DTK1234",
-        "HSI1000",
-        "GEN2003"
-      ],
-      "4": [
         "CS2103T",
         "CS2101",
+        "CS2106",
         "CS2109S",
+        "CS2104"
+      ],
+      "4": [
         "CS3230",
-        "CS3243"
+        "CS3243",
+        "CS3244",
+        "CS2108",
+        "ETP3205"
       ],
       "5": [
-        "CS4263",
         "CS3263",
-        "CS4244",
-        "CS4248",
-        "UE_GENERIC_1"
+        "CS4263",
+        "CS2107",
+        "CS3231",
+        "CS3245"
       ],
       "6": [
-        "GEC1020",
-        "GESS1020",
-        "IS1128",
-        "UE_GENERIC_2",
-        "CP3880"
+        "CS4244",
+        "CS4248",
+        "CS2111",
+        "CS2102",
+        "CS3210"
       ],
       "7": [
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS3240",
+        "CS2105",
+        "ES2660",
+        "IS1108",
+        "IS1128"
       ],
       "8": [
-        "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "CS4242",
+        "HSI1000",
+        "GEC1015",
+        "GESS1020",
+        "GEN2003"
       ]
     },
-    "reason": "The plan reaches 160 MC in 8 semesters with at most 20 MC per semester, using CP3880 as the single industrial-experience option, AI focus via CS2109S, CS3243 and CS4263, exactly 32 B&D MC, 12 MC at level 4000+, and three ID modules."
+    "reason": "A plan exists: 39 four-MC coursework modules (156 MC) plus the 6 MC ETP3205 internship total 162 MC, with no semester above 20 MC, all prerequisites and offering terms respected, the AI focus met (CS2109S, CS3243, CS3244, CS3263, CS4244, CS4248, CS4263 with 16 MC at level 4000+), and all graduation and university requirements covered within 8 semesters."
   },
   "parse_error": null
 }

@@ -4,82 +4,82 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231\",\"CS2030S\",\"MA1521\",\"CS2100\",\"CS2101\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"MA1522\",\"CS2103T\",\"CS2106\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2102\",\"CS2105\",\"CS2109S\",\"CS2107\",\"MA2001\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"ST2132\",\"CS4215\"]},{\"semester\":5,\"modules\":[\"CS4243\",\"CS4246\",\"CS4248\",\"CS4242\",\"CS3203\"]},{\"semester\":6,\"modules\":[\"CS4234\",\"CS3236\",\"CS3235\",\"CS4211\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"About 156 MC remain after CS1010, which fits within 9 semesters at 20 MC per semester, and the AI specialisation modules are placed after their prerequisites using 10 UE entries. This is a plan from my general knowledge of the requirements and should be checked against the official AY2026/27 NUS audit.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1231\", \"MA1521\", \"CS2030S\", \"CS2040S\", \"GEK1511\"]}, {\"semester\": 2, \"modules\": [\"CS2100\", \"CS2101\", \"ST2334\", \"CS2102\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2105\", \"CS2106\", \"CS3230\", \"GES1000\"]}, {\"semester\": 4, \"modules\": [\"CS3243\", \"CS3244\", \"CS3203\", \"CS3248\"]}, {\"semester\": 5, \"modules\": [\"CS4243\", \"CS4246\", \"CS3219\", \"CS3217\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4231\", \"CS4224\", \"CS3233\"]}, {\"semester\": 7, \"modules\": [\"CS3235\", \"CS3282\", \"CS4215\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS3237\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"The remaining 156 MC fit within 9 semesters at no more than 20 MC each (max 20 MC per semester, so 180 MC capacity), with the AI specialisation modules and prerequisites (e.g. CS2040S, CS2100, CS3243 before CS4246/CS4248) sequenced correctly. Module codes and the exact specialisation/GE mapping are approximate and should be verified against the current NUS handbook.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 42.27,
-  "cost_usd": 0.004071,
+  "latency_s": 46.8,
+  "cost_usd": 0.005165,
   "request_id": "",
   "usage": {
     "input_tokens": 76,
-    "output_tokens": 8108,
+    "output_tokens": 10295,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:51+00:00",
+  "timestamp": "2026-11-03T15:44:53+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1231",
-        "CS2030S",
         "MA1521",
-        "CS2100",
-        "CS2101"
+        "CS2030S",
+        "CS2040S",
+        "GEK1511"
       ],
       "2": [
-        "CS2040S",
-        "MA1522",
-        "CS2103T",
-        "CS2106",
-        "ST2334"
+        "CS2100",
+        "CS2101",
+        "ST2334",
+        "CS2102"
       ],
       "3": [
-        "CS2102",
+        "CS2103T",
         "CS2105",
-        "CS2109S",
-        "CS2107",
-        "MA2001"
+        "CS2106",
+        "CS3230",
+        "GES1000"
       ],
       "4": [
-        "CS3230",
         "CS3243",
         "CS3244",
-        "ST2132",
-        "CS4215"
+        "CS3203",
+        "CS3248"
       ],
       "5": [
         "CS4243",
         "CS4246",
-        "CS4248",
-        "CS4242",
-        "CS3203"
-      ],
-      "6": [
-        "CS4234",
-        "CS3236",
-        "CS3235",
-        "CS4211",
+        "CS3219",
+        "CS3217",
         "UE_GENERIC_1"
       ],
+      "6": [
+        "CS4248",
+        "CS4231",
+        "CS4224",
+        "CS3233"
+      ],
       "7": [
+        "CS3235",
+        "CS3282",
+        "CS4215",
         "UE_GENERIC_2",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "UE_GENERIC_3"
       ],
       "8": [
+        "CS3237",
+        "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_6"
       ],
       "9": [
+        "UE_GENERIC_7",
         "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "UE_GENERIC_9"
       ]
     },
-    "reason": "About 156 MC remain after CS1010, which fits within 9 semesters at 20 MC per semester, and the AI specialisation modules are placed after their prerequisites using 10 UE entries. This is a plan from my general knowledge of the requirements and should be checked against the official AY2026/27 NUS audit."
+    "reason": "The remaining 156 MC fit within 9 semesters at no more than 20 MC each (max 20 MC per semester, so 180 MC capacity), with the AI specialisation modules and prerequisites (e.g. CS2040S, CS2100, CS3243 before CS4246/CS4248) sequenced correctly. Module codes and the exact specialisation/GE mapping are approximate and should be verified against the current NUS handbook."
   },
   "parse_error": null
 }

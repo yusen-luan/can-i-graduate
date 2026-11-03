@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"ES2660\",\"GEC1030\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2103T\",\"CS2101\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1025\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4248\",\"GEN2000\",\"IS2218\"]},{\"semester\":6,\"modules\":[\"CS4243\",\"DTK1234\",\"PL1101E\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4244\",\"UE\",\"UE\",\"UE\",\"UE\"]}], \"reason\":\"A 160 MC plan at exactly 20 MC per semester covers the common curriculum, CS foundation, the maths requirements and the CS3203 project. It also completes the AI focus area (CS3243, CS3244, CS4248, CS4243, CS4246, CS4244, with at least 12 MC at level 4000) and 10 unrestricted electives. Module codes and semester offerings are from general knowledge and should be checked against NUSMods and the official AY2026/27 requirements before you plan around them.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"GESS1003\"]},{\"semester\":5,\"modules\":[\"CS3264\",\"CS4243\",\"CS4248\",\"GEN2050X\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"IS2218\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS4244\",\"CS3219\",\"EC1101E\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: 160 MC fits exactly at 20 MC in each of 8 semesters, with prerequisites respected. The AI focus area is met by CS3243, CS3244, CS3264, CS4243, CS4244, CS4246 and CS4248 (16 MC at level 4000), and CP3880 meets the industry-experience requirement; the GE, interdisciplinary and cross-disciplinary course codes are examples that should be checked against the current NUS lists.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 56.9,
-  "cost_usd": 0.111593,
+  "latency_s": 57.61,
+  "cost_usd": 0.108653,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 5552,
+    "output_tokens": 5405,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:56:06+00:00",
+  "timestamp": "2026-11-03T15:54:21+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -31,53 +31,52 @@
       "2": [
         "CS2030S",
         "CS2040S",
+        "CS2100",
         "MA1522",
-        "ES2660",
-        "GEC1030"
+        "ES2660"
       ],
       "3": [
-        "CS2100",
-        "CS2103T",
         "CS2101",
+        "CS2103T",
+        "CS2106",
         "CS2109S",
         "ST2334"
       ],
       "4": [
-        "CS2106",
         "CS3230",
         "CS3243",
         "CS3244",
-        "GESS1025"
+        "GEC1015",
+        "GESS1003"
       ],
       "5": [
-        "CS3203",
+        "CS3264",
+        "CS4243",
         "CS4248",
-        "GEN2000",
-        "IS2218"
+        "GEN2050X",
+        "DTK1234"
       ],
       "6": [
-        "CS4243",
-        "DTK1234",
-        "PL1101E",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "CP3880",
+        "IS2218",
+        "UE_GENERIC_1"
       ],
       "7": [
         "CS4246",
+        "CS4244",
+        "CS3219",
+        "EC1101E",
+        "UE_GENERIC_2"
+      ],
+      "8": [
         "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6"
-      ],
-      "8": [
-        "CS4244",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9",
-        "UE_GENERIC_10"
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
       ]
     },
-    "reason": "A 160 MC plan at exactly 20 MC per semester covers the common curriculum, CS foundation, the maths requirements and the CS3203 project. It also completes the AI focus area (CS3243, CS3244, CS4248, CS4243, CS4246, CS4244, with at least 12 MC at level 4000) and 10 unrestricted electives. Module codes and semester offerings are from general knowledge and should be checked against NUSMods and the official AY2026/27 requirements before you plan around them."
+    "reason": "Feasible: 160 MC fits exactly at 20 MC in each of 8 semesters, with prerequisites respected. The AI focus area is met by CS3243, CS3244, CS3264, CS4243, CS4244, CS4246 and CS4248 (16 MC at level 4000), and CP3880 meets the industry-experience requirement; the GE, interdisciplinary and cross-disciplinary course codes are examples that should be checked against the current NUS lists."
   },
   "parse_error": null
 }

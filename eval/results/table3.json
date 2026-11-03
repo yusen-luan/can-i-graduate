@@ -96,14 +96,14 @@
       "retakes completed": 5,
       "focus area": 5,
       "outside horizon": 2,
-      "FYP": 2,
       "UROP": 2,
-      "CS-count cap": 1,
+      "FYP": 2,
       "offered term": 1,
+      "CS-count cap": 1,
       "industrial experience": 1,
       "blocked semester": 1,
-      "prerequisite": 1,
       "English bridge": 1,
+      "prerequisite": 1,
       "unit cap": 1
     },
     "translator": null,
@@ -114,14 +114,14 @@
     "records": 36,
     "instances": 36,
     "feasibility_accuracy": {
-      "n": 35,
+      "n": 36,
       "d": 36,
-      "pct": 97.2
+      "pct": 100.0
     },
     "sat_recall": {
-      "n": 17,
+      "n": 18,
       "d": 18,
-      "pct": 94.4
+      "pct": 100.0
     },
     "unsat_t1_recall": {
       "n": 7,
@@ -134,35 +134,31 @@
       "pct": 100.0
     },
     "plan_validity": {
-      "n": 3,
+      "n": 18,
       "d": 18,
-      "pct": 16.7
+      "pct": 100.0
     },
     "plan_validity_lenient": {
-      "n": 3,
+      "n": 18,
       "d": 18,
-      "pct": 16.7
+      "pct": 100.0
     },
-    "realism_mean": 94.4,
-    "latency_mean_s": 35.067,
-    "cost_total_usd": 0.1609,
-    "violation_histogram": {
-      "internship occupancy": 14
-    },
-    "plans_violating_rule": {
-      "internship occupancy": 14
-    },
+    "realism_mean": 92.2,
+    "latency_mean_s": 41.082,
+    "cost_total_usd": 0.1889,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
     "translator": null,
     "cost_profile": {
       "requests": 36,
       "mean_input_tokens": 100.3,
-      "mean_cache_read_tokens": 13711.2,
-      "mean_cache_write_tokens": 391.8,
-      "mean_output_tokens": 8547.2,
-      "prompt_tokens": 14203.3,
-      "usd_per_1k_steady": 4.4247,
-      "usd_per_1k_cold": 6.0465,
-      "output_share_pct": 96.6
+      "mean_cache_read_tokens": 14248.9,
+      "mean_cache_write_tokens": 407.1,
+      "mean_output_tokens": 10089.4,
+      "prompt_tokens": 14756.3,
+      "usd_per_1k_steady": 5.2013,
+      "usd_per_1k_cold": 6.8867,
+      "output_share_pct": 97.0
     }
   },
   {
@@ -170,140 +166,14 @@
     "records": 36,
     "instances": 36,
     "feasibility_accuracy": {
-      "n": 31,
+      "n": 32,
       "d": 36,
-      "pct": 86.1
+      "pct": 88.9
     },
     "sat_recall": {
-      "n": 17,
+      "n": 16,
       "d": 18,
-      "pct": 94.4
-    },
-    "unsat_t1_recall": {
-      "n": 7,
-      "d": 7,
-      "pct": 100.0
-    },
-    "unsat_t2_4_recall": {
-      "n": 7,
-      "d": 11,
-      "pct": 63.6
-    },
-    "plan_validity": {
-      "n": 0,
-      "d": 18,
-      "pct": 0.0
-    },
-    "plan_validity_lenient": {
-      "n": 0,
-      "d": 18,
-      "pct": 0.0
-    },
-    "realism_mean": null,
-    "latency_mean_s": 21.611,
-    "cost_total_usd": 0.0846,
-    "violation_histogram": {
-      "unmodelled real NUS module": 30,
-      "required module": 3,
-      "not an AY2026/27 NUS module": 3,
-      "ULR group": 2,
-      "offered term": 1,
-      "ID/CD": 1,
-      "industrial experience": 1,
-      "total units": 1
-    },
-    "plans_violating_rule": {
-      "unmodelled real NUS module": 15,
-      "not an AY2026/27 NUS module": 3,
-      "required module": 1,
-      "ID/CD": 1,
-      "ULR group": 1,
-      "industrial experience": 1,
-      "total units": 1,
-      "offered term": 1
-    },
-    "translator": null,
-    "cost_profile": {
-      "requests": 36,
-      "mean_input_tokens": 100.3,
-      "mean_cache_read_tokens": 959.6,
-      "mean_cache_write_tokens": 27.4,
-      "mean_output_tokens": 4653.7,
-      "prompt_tokens": 1087.3,
-      "usd_per_1k_steady": 2.3467,
-      "usd_per_1k_cold": 2.4602,
-      "output_share_pct": 99.2
-    }
-  },
-  {
-    "pipeline": "Pipe A: Direct (Sonnet 5.5)",
-    "records": 36,
-    "instances": 36,
-    "feasibility_accuracy": {
-      "n": 35,
-      "d": 36,
-      "pct": 97.2
-    },
-    "sat_recall": {
-      "n": 17,
-      "d": 18,
-      "pct": 94.4
-    },
-    "unsat_t1_recall": {
-      "n": 7,
-      "d": 7,
-      "pct": 100.0
-    },
-    "unsat_t2_4_recall": {
-      "n": 11,
-      "d": 11,
-      "pct": 100.0
-    },
-    "plan_validity": {
-      "n": 3,
-      "d": 18,
-      "pct": 16.7
-    },
-    "plan_validity_lenient": {
-      "n": 3,
-      "d": 18,
-      "pct": 16.7
-    },
-    "realism_mean": 89.6,
-    "latency_mean_s": 13.716,
-    "cost_total_usd": 0.8075,
-    "violation_histogram": {
-      "internship occupancy": 14
-    },
-    "plans_violating_rule": {
-      "internship occupancy": 14
-    },
-    "translator": null,
-    "cost_profile": {
-      "requests": 36,
-      "mean_input_tokens": 100.3,
-      "mean_cache_read_tokens": 13711.2,
-      "mean_cache_write_tokens": 391.8,
-      "mean_output_tokens": 1850.8,
-      "prompt_tokens": 14203.3,
-      "usd_per_1k_steady": 21.5296,
-      "usd_per_1k_cold": 53.9665,
-      "output_share_pct": 86.0
-    }
-  },
-  {
-    "pipeline": "Pipe A: Direct (Sonnet 5.5, bare)",
-    "records": 36,
-    "instances": 36,
-    "feasibility_accuracy": {
-      "n": 33,
-      "d": 36,
-      "pct": 91.7
-    },
-    "sat_recall": {
-      "n": 17,
-      "d": 18,
-      "pct": 94.4
+      "pct": 88.9
     },
     "unsat_t1_recall": {
       "n": 7,
@@ -326,25 +196,33 @@
       "pct": 0.0
     },
     "realism_mean": null,
-    "latency_mean_s": 34.498,
-    "cost_total_usd": 1.653,
+    "latency_mean_s": 21.022,
+    "cost_total_usd": 0.0819,
     "violation_histogram": {
-      "unmodelled real NUS module": 40,
-      "not an AY2026/27 NUS module": 20,
-      "required module": 2,
-      "ULR group": 2,
-      "offered term": 1,
-      "ID/CD": 1,
-      "industrial experience": 1
+      "unmodelled real NUS module": 23,
+      "ULR group": 11,
+      "not an AY2026/27 NUS module": 10,
+      "offered term": 9,
+      "required module": 8,
+      "prerequisite": 6,
+      "ID/CD": 3,
+      "industrial experience": 3,
+      "total units": 2,
+      "same-semester bundle": 2,
+      "unit cap": 1
     },
     "plans_violating_rule": {
-      "unmodelled real NUS module": 16,
-      "not an AY2026/27 NUS module": 13,
-      "required module": 1,
-      "ID/CD": 1,
-      "ULR group": 1,
-      "industrial experience": 1,
-      "offered term": 1
+      "unmodelled real NUS module": 13,
+      "not an AY2026/27 NUS module": 5,
+      "offered term": 3,
+      "industrial experience": 3,
+      "ID/CD": 3,
+      "required module": 3,
+      "ULR group": 3,
+      "total units": 2,
+      "same-semester bundle": 2,
+      "unit cap": 1,
+      "prerequisite": 1
     },
     "translator": null,
     "cost_profile": {
@@ -352,26 +230,26 @@
       "mean_input_tokens": 100.3,
       "mean_cache_read_tokens": 959.6,
       "mean_cache_write_tokens": 27.4,
-      "mean_output_tokens": 4545.6,
+      "mean_output_tokens": 4501.8,
       "prompt_tokens": 1087.3,
-      "usd_per_1k_steady": 45.8542,
-      "usd_per_1k_cold": 48.1243,
+      "usd_per_1k_steady": 2.2708,
+      "usd_per_1k_cold": 2.3843,
       "output_share_pct": 99.1
     }
   },
   {
-    "pipeline": "Pipe A: Direct (Opus 5.5)",
+    "pipeline": "Pipe A: Direct (Sonnet 5.5)",
     "records": 36,
     "instances": 36,
     "feasibility_accuracy": {
-      "n": 35,
+      "n": 36,
       "d": 36,
-      "pct": 97.2
+      "pct": 100.0
     },
     "sat_recall": {
-      "n": 17,
+      "n": 18,
       "d": 18,
-      "pct": 94.4
+      "pct": 100.0
     },
     "unsat_t1_recall": {
       "n": 7,
@@ -384,34 +262,156 @@
       "pct": 100.0
     },
     "plan_validity": {
-      "n": 2,
+      "n": 18,
       "d": 18,
-      "pct": 11.1
+      "pct": 100.0
     },
     "plan_validity_lenient": {
-      "n": 2,
+      "n": 18,
       "d": 18,
-      "pct": 11.1
+      "pct": 100.0
     },
-    "realism_mean": 94.5,
-    "latency_mean_s": 10.991,
-    "cost_total_usd": 0.9673,
+    "realism_mean": 92.1,
+    "latency_mean_s": 16.508,
+    "cost_total_usd": 0.9529,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": {
+      "requests": 36,
+      "mean_input_tokens": 100.3,
+      "mean_cache_read_tokens": 14248.9,
+      "mean_cache_write_tokens": 407.1,
+      "mean_output_tokens": 2240.1,
+      "prompt_tokens": 14756.3,
+      "usd_per_1k_steady": 25.533,
+      "usd_per_1k_cold": 59.2418,
+      "output_share_pct": 87.7
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Sonnet 5.5, bare)",
+    "records": 36,
+    "instances": 36,
+    "feasibility_accuracy": {
+      "n": 34,
+      "d": 36,
+      "pct": 94.4
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 18,
+      "pct": 94.4
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 10,
+      "d": 11,
+      "pct": 90.9
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 18,
+      "pct": 0.0
+    },
+    "plan_validity_lenient": {
+      "n": 0,
+      "d": 18,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 29.836,
+    "cost_total_usd": 1.4381,
     "violation_histogram": {
-      "internship occupancy": 15
+      "unmodelled real NUS module": 35,
+      "not an AY2026/27 NUS module": 19,
+      "ULR group": 7,
+      "required module": 5,
+      "ID/CD": 2,
+      "industrial experience": 2,
+      "prerequisite": 2,
+      "same-semester bundle": 1,
+      "offered term": 1,
+      "unit cap": 1
     },
     "plans_violating_rule": {
-      "internship occupancy": 15
+      "unmodelled real NUS module": 15,
+      "not an AY2026/27 NUS module": 11,
+      "ULR group": 2,
+      "ID/CD": 2,
+      "required module": 2,
+      "industrial experience": 2,
+      "offered term": 1,
+      "same-semester bundle": 1,
+      "unit cap": 1,
+      "prerequisite": 1
     },
     "translator": null,
     "cost_profile": {
       "requests": 36,
       "mean_input_tokens": 100.3,
-      "mean_cache_read_tokens": 13711.2,
-      "mean_cache_write_tokens": 391.8,
-      "mean_output_tokens": 1088.4,
-      "prompt_tokens": 14203.3,
-      "usd_per_1k_steady": 24.9892,
-      "usd_per_1k_cold": 92.6836,
+      "mean_cache_read_tokens": 959.6,
+      "mean_cache_write_tokens": 27.4,
+      "mean_output_tokens": 3948.8,
+      "prompt_tokens": 1087.3,
+      "usd_per_1k_steady": 39.8858,
+      "usd_per_1k_cold": 42.1559,
+      "output_share_pct": 99.0
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Opus 5.5)",
+    "records": 36,
+    "instances": 36,
+    "feasibility_accuracy": {
+      "n": 36,
+      "d": 36,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 18,
+      "d": 18,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 18,
+      "d": 18,
+      "pct": 100.0
+    },
+    "plan_validity_lenient": {
+      "n": 18,
+      "d": 18,
+      "pct": 100.0
+    },
+    "realism_mean": 90.2,
+    "latency_mean_s": 11.514,
+    "cost_total_usd": 1.0003,
+    "violation_histogram": {},
+    "plans_violating_rule": {},
+    "translator": null,
+    "cost_profile": {
+      "requests": 36,
+      "mean_input_tokens": 100.3,
+      "mean_cache_read_tokens": 14248.9,
+      "mean_cache_write_tokens": 407.1,
+      "mean_output_tokens": 1125.0,
+      "prompt_tokens": 14756.3,
+      "usd_per_1k_steady": 25.8331,
+      "usd_per_1k_cold": 96.1819,
       "output_share_pct": 87.1
     }
   },
@@ -450,23 +450,29 @@
       "pct": 0.0
     },
     "realism_mean": null,
-    "latency_mean_s": 35.594,
-    "cost_total_usd": 2.3466,
+    "latency_mean_s": 34.314,
+    "cost_total_usd": 2.339,
     "violation_histogram": {
-      "unmodelled real NUS module": 31,
-      "not an AY2026/27 NUS module": 19,
+      "unmodelled real NUS module": 24,
+      "not an AY2026/27 NUS module": 15,
+      "offered term": 4,
       "required module": 2,
       "ULR group": 2,
-      "offered term": 1,
-      "ID/CD": 1
+      "ID/CD": 2,
+      "prerequisite": 2,
+      "industrial experience": 1,
+      "service learning": 1
     },
     "plans_violating_rule": {
-      "unmodelled real NUS module": 16,
-      "not an AY2026/27 NUS module": 12,
-      "ULR group": 1,
+      "unmodelled real NUS module": 12,
+      "not an AY2026/27 NUS module": 10,
+      "offered term": 2,
+      "ID/CD": 2,
+      "industrial experience": 1,
       "required module": 1,
-      "ID/CD": 1,
-      "offered term": 1
+      "ULR group": 1,
+      "service learning": 1,
+      "prerequisite": 1
     },
     "translator": null,
     "cost_profile": {
@@ -474,10 +480,10 @@
       "mean_input_tokens": 100.3,
       "mean_cache_read_tokens": 959.6,
       "mean_cache_write_tokens": 27.4,
-      "mean_output_tokens": 3222.6,
+      "mean_output_tokens": 3212.1,
       "prompt_tokens": 1087.3,
-      "usd_per_1k_steady": 65.0515,
-      "usd_per_1k_cold": 69.7891,
+      "usd_per_1k_steady": 64.841,
+      "usd_per_1k_cold": 69.5786,
       "output_share_pct": 99.1
     }
   },
@@ -515,9 +521,9 @@
       "d": 18,
       "pct": 100.0
     },
-    "realism_mean": 87.8,
-    "latency_mean_s": 4.589,
-    "cost_total_usd": 0.0176,
+    "realism_mean": 87.7,
+    "latency_mean_s": 5.67,
+    "cost_total_usd": 0.0172,
     "violation_histogram": {},
     "plans_violating_rule": {},
     "translator": {
@@ -527,27 +533,25 @@
         "pct": 100.0
       },
       "fidelity_exact": {
-        "n": 35,
+        "n": 36,
         "d": 36,
-        "pct": 97.2
+        "pct": 100.0
       },
-      "wrong_field_histogram": {
-        "require_modules": 1
-      },
-      "lucky_decisions": 1,
+      "wrong_field_histogram": {},
+      "lucky_decisions": 0,
       "wrong_decision_despite_exact_spec": 0,
-      "flagged_unsupported": 2
+      "flagged_unsupported": 4
     },
     "cost_profile": {
       "requests": 36,
       "mean_input_tokens": 100.3,
       "mean_cache_read_tokens": 6589.7,
       "mean_cache_write_tokens": 188.3,
-      "mean_output_tokens": 779.2,
+      "mean_output_tokens": 759.4,
       "prompt_tokens": 6878.3,
-      "usd_per_1k_steady": 0.4674,
-      "usd_per_1k_cold": 1.2469,
-      "output_share_pct": 83.4
+      "usd_per_1k_steady": 0.4575,
+      "usd_per_1k_cold": 1.237,
+      "output_share_pct": 83.0
     }
   },
   {
@@ -584,9 +588,9 @@
       "d": 18,
       "pct": 100.0
     },
-    "realism_mean": 87.9,
-    "latency_mean_s": 3.34,
-    "cost_total_usd": 0.1823,
+    "realism_mean": 87.7,
+    "latency_mean_s": 4.721,
+    "cost_total_usd": 0.1847,
     "violation_histogram": {},
     "plans_violating_rule": {},
     "translator": {
@@ -610,11 +614,11 @@
       "mean_input_tokens": 100.3,
       "mean_cache_read_tokens": 6589.7,
       "mean_cache_write_tokens": 188.3,
-      "mean_output_tokens": 307.6,
+      "mean_output_tokens": 314.0,
       "prompt_tokens": 6878.3,
-      "usd_per_1k_steady": 4.6318,
-      "usd_per_1k_cold": 20.2212,
-      "output_share_pct": 66.4
+      "usd_per_1k_steady": 4.696,
+      "usd_per_1k_cold": 20.2854,
+      "output_share_pct": 66.9
     }
   },
   {
@@ -651,9 +655,9 @@
       "d": 18,
       "pct": 100.0
     },
-    "realism_mean": 87.9,
-    "latency_mean_s": 3.518,
-    "cost_total_usd": 0.2847,
+    "realism_mean": 87.7,
+    "latency_mean_s": 5.4,
+    "cost_total_usd": 0.2848,
     "violation_histogram": {},
     "plans_violating_rule": {},
     "translator": {
@@ -677,10 +681,10 @@
       "mean_input_tokens": 100.3,
       "mean_cache_read_tokens": 6589.7,
       "mean_cache_write_tokens": 188.3,
-      "mean_output_tokens": 262.4,
+      "mean_output_tokens": 262.5,
       "prompt_tokens": 6878.3,
-      "usd_per_1k_steady": 7.0053,
-      "usd_per_1k_cold": 39.5397,
+      "usd_per_1k_steady": 7.0069,
+      "usd_per_1k_cold": 39.5413,
       "output_share_pct": 74.9
     }
   },
@@ -718,8 +722,8 @@
       "d": 18,
       "pct": 100.0
     },
-    "realism_mean": 87.9,
-    "latency_mean_s": 0.329,
+    "realism_mean": 87.3,
+    "latency_mean_s": 1.501,
     "cost_total_usd": 0.0,
     "violation_histogram": {},
     "plans_violating_rule": {},

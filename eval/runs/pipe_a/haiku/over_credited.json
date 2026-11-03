@@ -4,71 +4,74 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2109S\", \"ST2334\", \"CS4263\"]}, {\"semester\": 2, \"modules\": [\"CS2106\", \"CS3230\", \"CS3263\", \"CS3243\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CP3880\", \"CS4244\", \"CS4248\", \"GEA1000\", \"ES2660\"]}, {\"semester\": 4, \"modules\": [\"CS3244\", \"GEC1015\", \"GESS1020\", \"GEN2000\", \"DTK1234\"]}, {\"semester\": 5, \"modules\": [\"IS1128\", \"SC1101E\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": []}], \"reason\": \"The plan meets the 20 MC cap, the AI focus (CS2109S, CS3263, CS4263 with a 4000-level module), the 12 MC level-4000 minimum, 36 B&D MC, and the 160 MC total using the CP3880 internship and 9 generic electives, finishing in semester 7 within the 8-semester limit.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"ST2334\", \"CS2109S\", \"CS2101\", \"CS2103T\"]}, {\"semester\": 2, \"modules\": [\"CS3244\", \"CS2106\", \"CS2107\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS4263\", \"CS2104\", \"CS3231\", \"CS2105\"]}, {\"semester\": 4, \"modules\": [\"CS4248\", \"CS3235\", \"CS3263\", \"CS3230\"]}, {\"semester\": 5, \"modules\": [\"CS4243\", \"ES2660\", \"GESS1020\", \"GEC1020\"]}, {\"semester\": 6, \"modules\": [\"CS4262\", \"CS3264\", \"CS2102\", \"DTK1234\"]}, {\"semester\": 7, \"modules\": [\"IS1108\", \"GEN2003\", \"HSI1000\", \"CS3245\"]}, {\"semester\": 8, \"modules\": [\"IS1128\", \"UE\", \"UE\", \"UE\", \"ETP3205\"]}], \"reason\": \"A feasible 8-semester plan exists: it covers all remaining required modules, the University-level and ID/CD requirements, and the AI focus (CS2109S, CS3244, CS4248 plus extra AI primaries), with 16 MC per semester, one industrial internship (ETP3205 in Semester 8), and a total of 162 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 48.3,
-  "cost_usd": 0.006187,
+  "latency_s": 63.16,
+  "cost_usd": 0.008246,
   "request_id": "",
   "usage": {
     "input_tokens": 118,
-    "output_tokens": 12069,
+    "output_tokens": 16176,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:33:15+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:30+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS2101",
-        "CS2103T",
-        "CS2109S",
         "ST2334",
-        "CS4263"
+        "CS2109S",
+        "CS2101",
+        "CS2103T"
       ],
       "2": [
+        "CS3244",
         "CS2106",
-        "CS3230",
-        "CS3263",
-        "CS3243",
-        "IS1108"
+        "CS2107",
+        "GEA1000"
       ],
       "3": [
-        "CP3880",
-        "CS4244",
-        "CS4248",
-        "GEA1000",
-        "ES2660"
+        "CS4263",
+        "CS2104",
+        "CS3231",
+        "CS2105"
       ],
       "4": [
-        "CS3244",
-        "GEC1015",
-        "GESS1020",
-        "GEN2000",
-        "DTK1234"
+        "CS4248",
+        "CS3235",
+        "CS3263",
+        "CS3230"
       ],
       "5": [
-        "IS1128",
-        "SC1101E",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "CS4243",
+        "ES2660",
+        "GESS1020",
+        "GEC1020"
       ],
       "6": [
-        "UE_GENERIC_4",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS4262",
+        "CS3264",
+        "CS2102",
+        "DTK1234"
       ],
       "7": [
-        "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "IS1108",
+        "GEN2003",
+        "HSI1000",
+        "CS3245"
       ],
-      "8": []
+      "8": [
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "ETP3205"
+      ]
     },
-    "reason": "The plan meets the 20 MC cap, the AI focus (CS2109S, CS3263, CS4263 with a 4000-level module), the 12 MC level-4000 minimum, 36 B&D MC, and the 160 MC total using the CP3880 internship and 9 generic electives, finishing in semester 7 within the 8-semester limit."
+    "reason": "A feasible 8-semester plan exists: it covers all remaining required modules, the University-level and ID/CD requirements, and the AI focus (CS2109S, CS3244, CS4248 plus extra AI primaries), with 16 MC per semester, one industrial internship (ETP3205 in Semester 8), and a total of 162 MC."
   },
   "parse_error": null
 }

@@ -4,24 +4,24 @@
   "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total requirement cannot be met: 6 semesters at 20 MC each allows at most 120 MC of regular load. Industrial-experience modules do not count toward the load, but the largest options add only 12 MC, so the maximum is 132 MC, below 160.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 20 MC per-semester cap allows at most 120 MC of coursework over 6 semesters. Industrial-experience modules do not count toward the load, but the best case (CP3200+CP3202 or CP3107+CP3110, 12 MC, sharing semesters with coursework) brings the total to only about 132 MC, well short of the 160 MC graduation requirement.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 2.75,
-  "cost_usd": 0.006099,
+  "latency_s": 4.53,
+  "cost_usd": 0.007709,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 310,
+    "output_tokens": 460,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:35:37+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:23+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The 160 MC total requirement cannot be met: 6 semesters at 20 MC each allows at most 120 MC of regular load. Industrial-experience modules do not count toward the load, but the largest options add only 12 MC, so the maximum is 132 MC, below 160."
+    "reason": "The 20 MC per-semester cap allows at most 120 MC of coursework over 6 semesters. Industrial-experience modules do not count toward the load, but the best case (CP3200+CP3202 or CP3107+CP3110, 12 MC, sharing semesters with coursework) brings the total to only about 132 MC, well short of the 160 MC graduation requirement."
   },
   "parse_error": null
 }

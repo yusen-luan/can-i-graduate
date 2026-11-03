@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS2102\",\"CS2105\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS4246\",\"GESS1025\",\"IS2218\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4243\",\"CS4244\",\"IS2238\",\"DTK1234\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4248\",\"GEN2050X\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"Yes, it can be done within 9 semesters with no semester above 20 MC, reaching 160 MC including your completed CS2107 and CS3235. The AI specialisation is met with six AI courses (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248); please check the exact course codes and which semesters each course is offered against the official NUS listings, since this plan is based on my own knowledge of the requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEC1015\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1000\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4248\",\"CS4246\",\"GEN2050X\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4244\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4243\",\"CS3263\",\"CS3264\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Feasible: the plan adds 152 MC to your 8 completed MC for 160 MC in 8 semesters, never exceeding 20 MC per semester. It meets the AI focus area with CS3243, CS3244 and the 4000-level CS4248/CS4243/CS4246/CS4244, and uses CS3203 as the project course and CP3880 for industrial experience; this assumes the general-education and common-curriculum requirements match those modelled here, so confirm exact course codes and offering semesters on NUSMods.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 71.77,
-  "cost_usd": 0.111641,
+  "latency_s": 59.85,
+  "cost_usd": 0.117401,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 5556,
+    "output_tokens": 5844,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:53:05+00:00",
+  "timestamp": "2026-11-03T15:52:31+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,60 +25,56 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "MA1522",
-        "GEA1000"
+        "GEA1000",
+        "IS1108"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
-        "CS2100",
-        "IS1108",
+        "MA1522",
+        "GEC1015",
         "ES2660"
       ],
       "3": [
-        "CS2103T",
+        "CS2100",
         "CS2101",
-        "CS2106",
+        "CS2103T",
         "CS2109S",
         "ST2334"
       ],
       "4": [
+        "CS2106",
         "CS3230",
         "CS3243",
-        "CS2102",
-        "CS2105",
-        "GEC1015"
+        "CS3244",
+        "GESS1000"
       ],
       "5": [
-        "CS3244",
+        "CS3203",
+        "CS4248",
         "CS4246",
-        "GESS1025",
-        "IS2218",
-        "UE_GENERIC_1"
+        "GEN2050X"
       ],
       "6": [
-        "CS4243",
+        "CP3880",
         "CS4244",
-        "IS2238",
-        "DTK1234",
-        "UE_GENERIC_2"
+        "UE_GENERIC_1"
       ],
       "7": [
-        "CS4248",
-        "GEN2050X",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "CS4243",
+        "CS3263",
+        "CS3264",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "8": [
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
-      "9": [
-        "UE_GENERIC_8"
-      ]
+      "9": []
     },
-    "reason": "Yes, it can be done within 9 semesters with no semester above 20 MC, reaching 160 MC including your completed CS2107 and CS3235. The AI specialisation is met with six AI courses (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248); please check the exact course codes and which semesters each course is offered against the official NUS listings, since this plan is based on my own knowledge of the requirements."
+    "reason": "Feasible: the plan adds 152 MC to your 8 completed MC for 160 MC in 8 semesters, never exceeding 20 MC per semester. It meets the AI focus area with CS3243, CS3244 and the 4000-level CS4248/CS4243/CS4246/CS4244, and uses CS3203 as the project course and CP3880 for industrial experience; this assumes the general-education and common-curriculum requirements match those modelled here, so confirm exact course codes and offering semesters on NUSMods."
   },
   "parse_error": null
 }

@@ -4,24 +4,80 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The CP-coded cap allows at most 12 MC across CP3106, CP3209, CP4101 and CP4106, but the UROP request requires CP3209 (8 MC) and the final-year project requires CP4101 (12 MC), totalling 20 MC, so both cannot be taken.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"MA1521\",\"CS1231S\",\"GEA1000\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"MA1522\",\"CS2100\",\"ES2660\",\"GEC1020\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"ST2334\",\"CS2106\",\"IS1108\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"CS3230\",\"SC1101E\"]},{\"semester\":5,\"modules\":[\"CP3209\",\"CS4263\",\"CS3244\",\"GESS1020\"]},{\"semester\":6,\"modules\":[\"CS3263\",\"CS4248\",\"GEN2003\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"CS4244\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"A feasible 9-semester plan exists: CP4101 (GPA-qualified) replaces the internship, UROP CP3209 starts in semester 5 and CP4101 in semester 7 (at least 2 semesters later), AI focus is met with CS2109S, CS3244 and CS4263, and the plan totals 160 MC with each semester at or under 20 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.21,
-  "cost_usd": 0.000411,
+  "latency_s": 73.5,
+  "cost_usd": 0.009548,
   "request_id": "",
   "usage": {
     "input_tokens": 125,
-    "output_tokens": 514,
+    "output_tokens": 18777,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:31:06+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:44:26+00:00",
   "prediction": {
-    "feasible": false,
-    "plan": {},
-    "reason": "The CP-coded cap allows at most 12 MC across CP3106, CP3209, CP4101 and CP4106, but the UROP request requires CP3209 (8 MC) and the final-year project requires CP4101 (12 MC), totalling 20 MC, so both cannot be taken."
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "MA1521",
+        "CS1231S",
+        "GEA1000",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "MA1522",
+        "CS2100",
+        "ES2660",
+        "GEC1020"
+      ],
+      "3": [
+        "CS2040S",
+        "ST2334",
+        "CS2106",
+        "IS1108",
+        "IS1128"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "SC1101E"
+      ],
+      "5": [
+        "CP3209",
+        "CS4263",
+        "CS3244",
+        "GESS1020"
+      ],
+      "6": [
+        "CS3263",
+        "CS4248",
+        "GEN2003"
+      ],
+      "7": [
+        "CP4101",
+        "CS4244",
+        "UE_GENERIC_1"
+      ],
+      "8": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "A feasible 9-semester plan exists: CP4101 (GPA-qualified) replaces the internship, UROP CP3209 starts in semester 5 and CP4101 in semester 7 (at least 2 semesters later), AI focus is met with CS2109S, CS3244 and CS4263, and the plan totals 160 MC with each semester at or under 20 MC."
   },
   "parse_error": null
 }

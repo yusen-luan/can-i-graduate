@@ -4,79 +4,79 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS3243\",\"CS3244\",\"GEC1000\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4248\",\"CS3210\",\"GEX1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4246\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4234\",\"CS4225\",\"CS4244\",\"GES1000\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4231\",\"GEN2000\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Yes, 160 MC fits in 8 semesters at 20 MC each: the CS foundation, maths, communication and ethics modules, a 12 MC industry attachment, an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248, CS4244), CS electives, 5 GE modules and 8 unrestricted electives. This is based on my recollection of the requirements, so exact module offerings and GE codes should be checked against the official AY2026/27 rules.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"IS1128\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"GESS1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2106\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS2105\",\"GEN2000\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS3263\",\"CS3241\",\"GEX1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4248\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS3217\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: the 160 MC degree fits exactly into 8 semesters at 20 MC each, covering the CS foundation, math, ULR, a 12 MC internship (CP3880) and an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248). There is no slack, so any failed module or lighter semester would push graduation beyond 8 semesters.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 27.36,
-  "cost_usd": 0.037245,
+  "latency_s": 29.88,
+  "cost_usd": 0.038715,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 3687,
+    "output_tokens": 3834,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:43:07+00:00",
+  "timestamp": "2026-11-03T15:48:59+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1101S",
+        "CS1010",
         "CS1231S",
-        "MA1521",
         "MA1522",
-        "GEA1000"
+        "GEA1000",
+        "IS1128"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "ST2334",
-        "UE_GENERIC_1"
+        "MA1521",
+        "GESS1000"
       ],
       "3": [
         "CS2103T",
+        "CS2101",
+        "CS2102",
         "CS2106",
-        "CS2109S",
-        "CS3230",
-        "IS1128"
+        "ST2334"
       ],
       "4": [
-        "CS2101",
+        "CS3230",
         "CS3243",
-        "CS3244",
-        "GEC1000",
-        "UE_GENERIC_2"
+        "CS2105",
+        "GEN2000",
+        "GEC1000"
       ],
       "5": [
+        "CS3244",
         "CS3263",
-        "CS4248",
-        "CS3210",
+        "CS3241",
         "GEX1000",
-        "UE_GENERIC_3"
+        "UE_GENERIC_1"
       ],
       "6": [
         "CP3880",
-        "CS4246",
-        "UE_GENERIC_4"
+        "CS4248",
+        "UE_GENERIC_2"
       ],
       "7": [
-        "CS4234",
-        "CS4225",
-        "CS4244",
-        "GES1000",
+        "CS4246",
+        "CS3217",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
       "8": [
-        "CS4231",
-        "GEN2000",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "Yes, 160 MC fits in 8 semesters at 20 MC each: the CS foundation, maths, communication and ethics modules, a 12 MC industry attachment, an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248, CS4244), CS electives, 5 GE modules and 8 unrestricted electives. This is based on my recollection of the requirements, so exact module offerings and GE codes should be checked against the official AY2026/27 rules."
+    "reason": "Feasible: the 160 MC degree fits exactly into 8 semesters at 20 MC each, covering the CS foundation, math, ULR, a 12 MC internship (CP3880) and an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248). There is no slack, so any failed module or lighter semester would push graduation beyond 8 semesters."
   },
   "parse_error": null
 }

@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"student\":{\"completed\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"],\"completed_unrestricted_electives\":0,\"exempted\":[\"GEA1000\"],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":8,\"max_units_per_semester\":20,\"focus_area\":\"database_systems\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[1,2,1,2,1,2,1,2],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "text": "{\"student\":{\"completed\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"],\"completed_unrestricted_electives\":0,\"exempted\":[\"GEA1000\"],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":8,\"max_units_per_semester\":20,\"focus_area\":\"database_systems\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[\"what is my semester-by-semester plan?\"]}",
   "stop_reason": "end_turn",
-  "latency_s": 4.509,
-  "cost_usd": 0.00046,
+  "latency_s": 5.398,
+  "cost_usd": 0.000513,
   "request_id": "",
   "usage": {
     "input_tokens": 108,
-    "output_tokens": 762,
+    "output_tokens": 869,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 6778
   },
   "effort": "high",
   "prompt_sha256": "23c6589b14921d44",
-  "timestamp": "2026-11-02T15:01:55+00:00",
+  "timestamp": "2026-11-03T15:42:25+00:00",
   "spec": {
     "student": {
       "completed": [
@@ -42,16 +42,7 @@
       "industrial_option": "any",
       "want_fyp": false,
       "want_urop": false,
-      "term_layout": [
-        1,
-        2,
-        1,
-        2,
-        1,
-        2,
-        1,
-        2
-      ],
+      "term_layout": [],
       "semester_caps": [],
       "max_cs_modules_per_sem": 0,
       "min_units_per_semester": 0,
@@ -61,12 +52,14 @@
       "forbid_modules": [],
       "deadlines": []
     },
-    "unsupported_requests": []
+    "unsupported_requests": [
+      "what is my semester-by-semester plan?"
+    ]
   },
   "spec_error": null,
   "solve": {
     "status": "OPTIMAL",
-    "wall_time_s": 0.549,
+    "wall_time_s": 1.268,
     "num_variables": 888,
     "num_total_variables": 1982,
     "num_constraints": 2636
@@ -77,55 +70,55 @@
       "1": [
         "CS2040S",
         "CS2100",
-        "GEC1015",
-        "IE2141"
+        "ES2660",
+        "IS1108",
+        "ST2334"
       ],
       "2": [
         "CS2030S",
-        "CS2109S",
-        "GEN2000",
-        "IS1108",
-        "UE_GENERIC_9"
+        "GEC1030",
+        "IE2141",
+        "UE_GENERIC_2",
+        "UE_GENERIC_6"
       ],
       "3": [
         "CS2102",
-        "CS2106",
-        "CS3230",
-        "HSI1000",
-        "ST2334"
+        "GEC1020",
+        "GEN2003",
+        "GESS1001",
+        "UE_GENERIC_9"
       ],
       "4": [
-        "GESS1020",
-        "UE_GENERIC_4",
-        "UE_GENERIC_7"
+        "CS2109S",
+        "CS3223",
+        "GESS1025",
+        "UE_GENERIC_5",
+        "UE_GENERIC_8"
       ],
       "5": [
-        "ETP3201L"
-      ],
-      "6": [
         "CS2101",
         "CS2103T",
-        "CS3223",
         "CS4225",
-        "ES2660"
+        "HSI1000",
+        "IS1128"
+      ],
+      "6": [
+        "ETP3201L"
       ],
       "7": [
         "CS4224",
-        "GE2103",
-        "GEN2003",
-        "GESS1001",
-        "UE_GENERIC_5"
+        "GEC1015",
+        "UE_GENERIC_10",
+        "UE_GENERIC_3"
       ],
       "8": [
-        "CS4221",
-        "GEN2004",
-        "GESS1025",
-        "UE_GENERIC_10",
-        "UE_GENERIC_6"
+        "CS2106",
+        "CS3230",
+        "CS4221"
       ]
     },
     "reason": "OPTIMAL"
   },
   "parse_error": null,
-  "llm_latency_s": 3.96
+  "llm_latency_s": 4.13
 }

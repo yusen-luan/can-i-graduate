@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 27 MC cap per semester makes 160 MC unreachable in 6 semesters. Almost every module is 4 MC and only CS3216 and CS3217 are 5 MC, so regular modules can total at most 6x24+2 = 146 MC. The compulsory industrial option (no CP4101, since GPA qualification is not stated) adds at most 12 MC outside the unit load, giving 158 MC maximum, below the 160 MC required.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 26.04,
+  "cost_usd": 0.036165,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 3319,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:56+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 27 MC cap per semester makes 160 MC unreachable in 6 semesters. Almost every module is 4 MC and only CS3216 and CS3217 are 5 MC, so regular modules can total at most 6x24+2 = 146 MC. The compulsory industrial option (no CP4101, since GPA qualification is not stated) adds at most 12 MC outside the unit load, giving 158 MC maximum, below the 160 MC required."
+  },
+  "parse_error": null
+}

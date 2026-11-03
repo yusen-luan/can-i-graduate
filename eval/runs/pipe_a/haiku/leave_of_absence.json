@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\", \"IS1108\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"DTK1234\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"ST2334\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"ES2660\", \"CS3263\", \"CS3264\", \"GESS1020\"]}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": [\"CS3243\", \"CS4262\", \"GEN2000\", \"GEC1015\", \"IS1128\"]}, {\"semester\": 7, \"modules\": [\"CS4263\", \"CS3268\", \"SC1101E\", \"CS4248\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4244\", \"CS4246\", \"CS3244\", \"CS4243\", \"ETP3201L\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"A 9-semester plan with semester 5 off fits: 8 enrolled semesters at up to 20 MC each cover the 160 MC, and the ETP3201L internship (12 MC, outside the load cap) gives 32 B&D MC and the AI focus has 4 primaries including CS4263 at level 4000.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2100\",\"ST2334\",\"ES2660\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2106\",\"DTK1234\",\"IS1128\",\"GEN2000\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3230\",\"CS2101\",\"CS2103T\",\"GESS1020\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS3243\",\"CS3263\",\"GEC1020\",\"SC1101E\",\"UE\",\"CP3200\"]},{\"semester\":7,\"modules\":[\"CS4263\",\"CS4244\",\"CS4246\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The eight enrolled semesters at a 20 MC cap give 148 MC of unit load, and the CP3200+CP3202 internship (12 MC, outside the cap) brings the total to exactly 160 MC, using all ten generic electives. The AI focus (CS2109S, CS3243, CS3263, CS4244, CS4263, CS4246) also meets the 12 MC level-4000, 32 MC B&D, and ID/CD requirements, and semester 5 is left empty as requested.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 54.03,
-  "cost_usd": 0.007102,
+  "latency_s": 54.1,
+  "cost_usd": 0.007129,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 13901,
+    "output_tokens": 13945,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:32:27+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:44:42+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,59 +25,60 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "GEA1000",
-        "IS1108"
+        "MA1522",
+        "GEA1000"
       ],
       "2": [
         "CS2030S",
-        "CS2040S",
         "CS2100",
-        "MA1522",
-        "DTK1234"
+        "ST2334",
+        "ES2660",
+        "IS1108"
       ],
       "3": [
-        "CS2101",
-        "CS2103T",
+        "CS2040S",
         "CS2106",
-        "CS2109S",
-        "ST2334"
+        "DTK1234",
+        "IS1128",
+        "GEN2000"
       ],
       "4": [
+        "CS2109S",
         "CS3230",
-        "ES2660",
-        "CS3263",
-        "CS3264",
+        "CS2101",
+        "CS2103T",
         "GESS1020"
       ],
       "5": [],
       "6": [
         "CS3243",
-        "CS4262",
-        "GEN2000",
-        "GEC1015",
-        "IS1128"
+        "CS3263",
+        "GEC1020",
+        "SC1101E",
+        "UE_GENERIC_1",
+        "CP3200"
       ],
       "7": [
         "CS4263",
-        "CS3268",
-        "SC1101E",
-        "CS4248",
-        "UE_GENERIC_1"
-      ],
-      "8": [
         "CS4244",
         "CS4246",
-        "CS3244",
-        "CS4243",
-        "ETP3201L"
-      ],
-      "9": [
         "UE_GENERIC_2",
         "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CP3202"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "A 9-semester plan with semester 5 off fits: 8 enrolled semesters at up to 20 MC each cover the 160 MC, and the ETP3201L internship (12 MC, outside the load cap) gives 32 B&D MC and the AI focus has 4 primaries including CS4263 at level 4000."
+    "reason": "The eight enrolled semesters at a 20 MC cap give 148 MC of unit load, and the CP3200+CP3202 internship (12 MC, outside the cap) brings the total to exactly 160 MC, using all ten generic electives. The AI focus (CS2109S, CS3243, CS3263, CS4244, CS4263, CS4246) also meets the 12 MC level-4000, 32 MC B&D, and ID/CD requirements, and semester 5 is left empty as requested."
   },
   "parse_error": null
 }

@@ -6,7 +6,7 @@
   "model": "claude-opus-5-5",
   "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":10,\"max_units_per_semester\":16,\"focus_area\":\"software_engineering\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[{\"semester\":6,\"max_units\":8}],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":8,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
   "stop_reason": "end_turn",
-  "latency_s": 6.24,
+  "latency_s": 11.551,
   "cost_usd": 0.007044,
   "request_id": "",
   "usage": {
@@ -17,7 +17,7 @@
   },
   "effort": "high",
   "prompt_sha256": "23c6589b14921d44",
-  "timestamp": "2026-11-02T15:03:35+00:00",
+  "timestamp": "2026-11-03T15:44:10+00:00",
   "spec": {
     "student": {
       "completed": [],
@@ -55,7 +55,7 @@
   "spec_error": null,
   "solve": {
     "status": "OPTIMAL",
-    "wall_time_s": 2.33,
+    "wall_time_s": 6.531,
     "num_variables": 1160,
     "num_total_variables": 2944,
     "num_constraints": 5023
@@ -64,67 +64,67 @@
     "feasible": true,
     "plan": {
       "1": [
-        "CP3200",
         "CS1101S",
-        "CS1231S",
-        "GESS1020",
-        "UE_GENERIC_5"
+        "GEN2001",
+        "UE_GENERIC_10",
+        "UE_GENERIC_9"
       ],
       "2": [
+        "CS1231S",
         "CS2030S",
-        "CS2040S",
-        "MA1521",
-        "UE_GENERIC_4"
+        "ES2660",
+        "MA1522"
       ],
       "3": [
-        "CS2109S",
-        "DTK1234",
-        "GE2103",
-        "IE2141"
+        "CS2040S",
+        "CS2100",
+        "HSI1000",
+        "MA1521"
       ],
       "4": [
-        "CS2101",
-        "CS2103T",
+        "GEN2004",
         "IS1108",
-        "ST2334"
+        "UE_GENERIC_2",
+        "UE_GENERIC_7"
       ],
       "5": [
-        "CS3219",
-        "GEA1000",
-        "MA1522",
-        "UE_GENERIC_6"
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS3230"
       ],
       "6": [
-        "CS4218",
-        "GEC1030"
+        "CS3227",
+        "UE_GENERIC_1"
       ],
       "7": [
-        "CS3230",
-        "CS4248",
-        "GEC1020"
+        "CS3219",
+        "GEA1000",
+        "ST2334",
+        "UE_GENERIC_6"
       ],
       "8": [
-        "CP3202",
-        "CS3213",
+        "CS4218",
+        "GEC1020",
         "GESS1025",
-        "UE_GENERIC_1",
         "UE_GENERIC_3"
       ],
       "9": [
-        "CS2100",
+        "CP3200",
         "CS4211",
-        "GEN2000",
-        "UE_GENERIC_7"
+        "CS4243",
+        "IS1128",
+        "SC1101E"
       ],
       "10": [
-        "CS2106",
-        "ES2660",
-        "GEN2004",
-        "UE_GENERIC_10"
+        "CP3202",
+        "CS2109S",
+        "GEN2003",
+        "UE_GENERIC_5"
       ]
     },
     "reason": "OPTIMAL"
   },
   "parse_error": null,
-  "llm_latency_s": 3.91
+  "llm_latency_s": 5.02
 }

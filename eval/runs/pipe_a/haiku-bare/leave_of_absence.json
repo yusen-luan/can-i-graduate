@@ -4,82 +4,82 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010\", \"CS1231\", \"MA1521\", \"CS2101\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030\", \"CS2040\", \"MA1522\", \"CS2100\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2102\", \"CS2103T\", \"CS2105\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2106\", \"CS3230\", \"CS3243\", \"CS3235\", \"UE\"]}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": [\"CS3244\", \"CS4243\", \"CS3281\", \"CS4215\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4244\", \"CS4246\", \"CS3233\", \"CS4224\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4248\", \"CS3282\", \"CS4236\", \"CS4218\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"CS3219\", \"CS4211\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The 160 MC degree requirement fits exactly into the 8 active semesters at the 20 MC cap (semester 5 off), so every semester must carry exactly 20 MC with 40 four-MC modules, including 10 UE electives, and the AI specialisation modules are sequenced after their prerequisites; the module list is my best approximation of the current NUS requirements and should be checked against the official curriculum.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010S\",\"CS1231S\",\"MA1521\",\"UE\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2102\",\"CS2103T\",\"CS2105\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3243\",\"CS3244\",\"CS3219\",\"CS3235\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4243\",\"CS4248\",\"CS4246\",\"CS3281\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3282\",\"CS4231\",\"CS4215\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4212\",\"CS4224\",\"CS4236\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS3233\",\"CS4220\",\"CS3237\",\"UE\",\"UE\"]}],\"reason\":\"With semester 5 off, 8 regular semesters at 20 MC each give exactly the 160 MC needed for the BComp, so every semester is full; the AI specialisation (CS3243, CS3244, CS4243, CS4248, CS4246) and the core are fitted into this, using 10 UE entries, the maximum allowed.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 29.92,
-  "cost_usd": 0.003439,
+  "latency_s": 28.25,
+  "cost_usd": 0.003096,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 6839,
+    "output_tokens": 6152,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:03+00:00",
+  "timestamp": "2026-11-03T15:43:32+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1010",
-        "CS1231",
+        "CS1010S",
+        "CS1231S",
         "MA1521",
-        "CS2101",
-        "UE_GENERIC_1"
-      ],
-      "2": [
-        "CS2030",
-        "CS2040",
-        "MA1522",
-        "CS2100",
+        "UE_GENERIC_1",
         "UE_GENERIC_2"
       ],
-      "3": [
-        "CS2102",
-        "CS2103T",
-        "CS2105",
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
         "ST2334",
         "UE_GENERIC_3"
       ],
+      "3": [
+        "CS2101",
+        "CS2102",
+        "CS2103T",
+        "CS2105",
+        "CS3230"
+      ],
       "4": [
         "CS2106",
-        "CS3230",
         "CS3243",
-        "CS3235",
-        "UE_GENERIC_4"
+        "CS3244",
+        "CS3219",
+        "CS3235"
       ],
       "5": [],
       "6": [
-        "CS3244",
         "CS4243",
+        "CS4248",
+        "CS4246",
         "CS3281",
-        "CS4215",
-        "UE_GENERIC_5"
+        "UE_GENERIC_4"
       ],
       "7": [
-        "CS4244",
-        "CS4246",
-        "CS3233",
-        "CS4224",
+        "CS3282",
+        "CS4231",
+        "CS4215",
+        "UE_GENERIC_5",
         "UE_GENERIC_6"
       ],
       "8": [
-        "CS4248",
-        "CS3282",
+        "CS4212",
+        "CS4224",
         "CS4236",
-        "CS4218",
-        "UE_GENERIC_7"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "9": [
-        "CS3219",
-        "CS4211",
-        "UE_GENERIC_8",
+        "CS3233",
+        "CS4220",
+        "CS3237",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "The 160 MC degree requirement fits exactly into the 8 active semesters at the 20 MC cap (semester 5 off), so every semester must carry exactly 20 MC with 40 four-MC modules, including 10 UE electives, and the AI specialisation modules are sequenced after their prerequisites; the module list is my best approximation of the current NUS requirements and should be checked against the official curriculum."
+    "reason": "With semester 5 off, 8 regular semesters at 20 MC each give exactly the 160 MC needed for the BComp, so every semester is full; the AI specialisation (CS3243, CS3244, CS4243, CS4248, CS4246) and the core are fitted into this, using 10 UE entries, the maximum allowed."
   },
   "parse_error": null
 }

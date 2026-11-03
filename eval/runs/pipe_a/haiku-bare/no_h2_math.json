@@ -4,79 +4,24 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"CS1010X\",\"CS1231\",\"MA1100\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"MA1521\",\"CS2100\",\"CS2030S\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"MA1522\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"CS2105\",\"CS3230\",\"CS3233\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4231\",\"CS3216\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4234\",\"CS3203\",\"CS3210\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3282\",\"CS3243\",\"CS3244\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS3223\",\"CS4224\",\"CS4246\",\"UE\",\"UE\"]}],\"reason\":\"Forty 4-MC modules totalling 160 MC can be spread over 8 semesters at 20 MC each, with ES1103 first, MA1100 taken in place of H2 Mathematics before MA1521, and the algorithms theory specialisation (CS3230, CS3233, CS3231, CS4231, CS4234) placed after its prerequisites. This relies on my recollection of the AY2026/27 BComp CS requirements and prerequisites, which I have not verified against the official NUS sources.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) requires 160 MC, and 8 semesters at a maximum of 20 MC each gives exactly 160 MC with no slack, so the extra mandatory modules for students without H2 Mathematics (the MA1301 bridging route, which does not count toward the degree) and ES1103 cannot all fit alongside the core, math, GER and algorithms-specialisation requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 28.05,
-  "cost_usd": 0.0031,
+  "latency_s": 21.72,
+  "cost_usd": 0.00226,
   "request_id": "",
   "usage": {
     "input_tokens": 121,
-    "output_tokens": 6156,
+    "output_tokens": 4477,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:19+00:00",
+  "timestamp": "2026-11-03T15:43:54+00:00",
   "prediction": {
-    "feasible": true,
-    "plan": {
-      "1": [
-        "ES1103",
-        "CS1010X",
-        "CS1231",
-        "MA1100",
-        "UE_GENERIC_1"
-      ],
-      "2": [
-        "CS2040S",
-        "MA1521",
-        "CS2100",
-        "CS2030S"
-      ],
-      "3": [
-        "CS2101",
-        "CS2103T",
-        "CS2106",
-        "ST2334",
-        "MA1522"
-      ],
-      "4": [
-        "CS2102",
-        "CS2105",
-        "CS3230",
-        "CS3233",
-        "UE_GENERIC_2"
-      ],
-      "5": [
-        "CS3231",
-        "CS4231",
-        "CS3216",
-        "UE_GENERIC_3"
-      ],
-      "6": [
-        "CS4234",
-        "CS3203",
-        "CS3210",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
-      ],
-      "7": [
-        "CS3282",
-        "CS3243",
-        "CS3244",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
-      ],
-      "8": [
-        "CS3223",
-        "CS4224",
-        "CS4246",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
-      ]
-    },
-    "reason": "Forty 4-MC modules totalling 160 MC can be spread over 8 semesters at 20 MC each, with ES1103 first, MA1100 taken in place of H2 Mathematics before MA1521, and the algorithms theory specialisation (CS3230, CS3233, CS3231, CS4231, CS4234) placed after its prerequisites. This relies on my recollection of the AY2026/27 BComp CS requirements and prerequisites, which I have not verified against the official NUS sources."
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) requires 160 MC, and 8 semesters at a maximum of 20 MC each gives exactly 160 MC with no slack, so the extra mandatory modules for students without H2 Mathematics (the MA1301 bridging route, which does not count toward the degree) and ES1103 cannot all fit alongside the core, math, GER and algorithms-specialisation requirements."
   },
   "parse_error": null
 }

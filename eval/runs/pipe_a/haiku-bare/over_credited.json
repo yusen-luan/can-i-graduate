@@ -4,81 +4,81 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2102\", \"CS2103T\", \"CS2105\", \"CS2107\"]}, {\"semester\": 2, \"modules\": [\"ST2334\", \"CS2106\", \"CS2109S\", \"UE\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS3230\", \"CS3231\", \"CS3243\", \"CS3244\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS3203\", \"CS4246\", \"CS4248\", \"CS4243\", \"CS4244\"]}, {\"semester\": 5, \"modules\": [\"CS3217\", \"CS3241\", \"CS3240\", \"CS4231\", \"CS4212\"]}, {\"semester\": 6, \"modules\": [\"CS4224\", \"CS4225\", \"CS4234\", \"CS3281\", \"ST2131\"]}, {\"semester\": 7, \"modules\": [\"ST3236\", \"CS4215\", \"CS4236\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The 160 MC degree total must be reached with the exemptions replaced by other modules, so 8 semesters at exactly 20 MC each (no special terms) is the only fit, and this plan uses 30 specific modules plus 10 UE within that limit. The AI specialisation, core and prerequisite details are my best recollection of the AY2026/27 NUS requirements and should be checked against the official curriculum.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2105\", \"ST2334\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2106\", \"CS3230\", \"CS3243\", \"CS2102\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS3244\", \"CS4242\", \"CS3235\", \"CS4224\", \"CS4234\"]}, {\"semester\": 4, \"modules\": [\"CS4246\", \"CS4248\", \"CS3210\", \"CS4215\", \"CS4218\"]}, {\"semester\": 5, \"modules\": [\"CS3281\", \"CS4261\", \"CS4236\", \"CS4225\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3282\", \"CS4231\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS3233\", \"CS4223\", \"CS3236\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4222\", \"CS4238\", \"CS4212\", \"UE\", \"UE\"]}], \"reason\": \"Exempted modules do not count toward the 160 MC degree total, so 160 MC of other modules must be taken; with 8 semesters at a maximum of 20 MC each, every semester must be exactly 20 MC, which this plan does using 10 UE entries and the AI specialisation modules CS3243, CS3244, CS4242, CS4246 and CS4248.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 36.02,
-  "cost_usd": 0.003995,
+  "latency_s": 33.0,
+  "cost_usd": 0.003569,
   "request_id": "",
   "usage": {
     "input_tokens": 118,
-    "output_tokens": 7946,
+    "output_tokens": 7095,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-11-02T14:39:38+00:00",
+  "timestamp": "2026-11-03T15:44:27+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2101",
-        "CS2102",
         "CS2103T",
         "CS2105",
-        "CS2107"
+        "ST2334",
+        "UE_GENERIC_1"
       ],
       "2": [
-        "ST2334",
         "CS2106",
-        "CS2109S",
-        "UE_GENERIC_1",
+        "CS3230",
+        "CS3243",
+        "CS2102",
         "UE_GENERIC_2"
       ],
       "3": [
-        "CS3230",
-        "CS3231",
-        "CS3243",
         "CS3244",
-        "UE_GENERIC_3"
+        "CS4242",
+        "CS3235",
+        "CS4224",
+        "CS4234"
       ],
       "4": [
-        "CS3203",
         "CS4246",
         "CS4248",
-        "CS4243",
-        "CS4244"
+        "CS3210",
+        "CS4215",
+        "CS4218"
       ],
       "5": [
-        "CS3217",
-        "CS3241",
-        "CS3240",
-        "CS4231",
-        "CS4212"
+        "CS3281",
+        "CS4261",
+        "CS4236",
+        "CS4225",
+        "UE_GENERIC_3"
       ],
       "6": [
-        "CS4224",
-        "CS4225",
-        "CS4234",
-        "CS3281",
-        "ST2131"
+        "CS3282",
+        "CS4231",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
       "7": [
-        "ST3236",
-        "CS4215",
-        "CS4236",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "CS3233",
+        "CS4223",
+        "CS3236",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "8": [
-        "UE_GENERIC_6",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8",
+        "CS4222",
+        "CS4238",
+        "CS4212",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "The 160 MC degree total must be reached with the exemptions replaced by other modules, so 8 semesters at exactly 20 MC each (no special terms) is the only fit, and this plan uses 30 specific modules plus 10 UE within that limit. The AI specialisation, core and prerequisite details are my best recollection of the AY2026/27 NUS requirements and should be checked against the official curriculum."
+    "reason": "Exempted modules do not count toward the 160 MC degree total, so 160 MC of other modules must be taken; with 8 semesters at a maximum of 20 MC each, every semester must be exactly 20 MC, which this plan does using 10 UE entries and the AI specialisation modules CS3243, CS3244, CS4242, CS4246 and CS4248."
   },
   "parse_error": null
 }

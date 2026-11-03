@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"ST2334\", \"ES2660\", \"IS1108\"]}, {\"semester\": 5, \"modules\": [\"CS3219\", \"CS4211\", \"CS4263\", \"GEC1015\"]}, {\"semester\": 6, \"modules\": [\"CS4218\", \"CS3227\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"GESS1020\", \"GEN2003\", \"DTK1234\", \"IS1128\"]}, {\"semester\": 8, \"modules\": [\"HSI1000\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"Yes, it can be done: this plan reaches exactly 160 MC and keeps every semester between 8 and 16 MC, with semester 6 at 8 MC. CP3880 (12 MC) does not count toward semester 6's load, and the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3213\",\"CS3219\",\"CS4248\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4218\",\"ES2660\",\"GEA1000\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"IS1108\",\"GEC1015\"]},{\"semester\":7,\"modules\":[\"GESS1020\",\"GEN2000\",\"DTK1234\",\"IE2141\"]},{\"semester\":8,\"modules\":[\"HSI1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This plan reaches exactly 160 MC: 148 MC of coursework plus 12 MC from the CP3200 + CP3202 internships, which do not count toward semester load. Every semester stays between 8 and 16 MC (semester 6 has 8 MC), and the software engineering focus is met with CS2103T, CS3219, CS3213, CS4211 and CS4218, alongside all other requirements: 12 MC at level 4000, at least 32 MC of Breadth & Depth, and the ID/CD requirement via DTK1234, IE2141 and HSI1000.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 17.5,
-  "cost_usd": 0.042449,
+  "latency_s": 16.79,
+  "cost_usd": 0.041539,
   "request_id": "",
   "usage": {
     "input_tokens": 117,
-    "output_tokens": 1958,
+    "output_tokens": 1907,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:40+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:05+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -31,7 +31,7 @@
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "GEA1000"
+        "ST2334"
       ],
       "3": [
         "CS2101",
@@ -41,26 +41,27 @@
       ],
       "4": [
         "CS3230",
-        "ST2334",
-        "ES2660",
-        "IS1108"
+        "CS3213",
+        "CS3219",
+        "CS4248",
+        "CP3200"
       ],
       "5": [
-        "CS3219",
         "CS4211",
-        "CS4263",
-        "GEC1015"
+        "CS4218",
+        "ES2660",
+        "GEA1000",
+        "CP3202"
       ],
       "6": [
-        "CS4218",
-        "CS3227",
-        "CP3880"
+        "IS1108",
+        "GEC1015"
       ],
       "7": [
         "GESS1020",
-        "GEN2003",
+        "GEN2000",
         "DTK1234",
-        "IS1128"
+        "IE2141"
       ],
       "8": [
         "HSI1000",
@@ -80,7 +81,7 @@
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Yes, it can be done: this plan reaches exactly 160 MC and keeps every semester between 8 and 16 MC, with semester 6 at 8 MC. CP3880 (12 MC) does not count toward semester 6's load, and the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218."
+    "reason": "This plan reaches exactly 160 MC: 148 MC of coursework plus 12 MC from the CP3200 + CP3202 internships, which do not count toward semester load. Every semester stays between 8 and 16 MC (semester 6 has 8 MC), and the software engineering focus is met with CS2103T, CS3219, CS3213, CS4211 and CS4218, alongside all other requirements: 12 MC at level 4000, at least 32 MC of Breadth & Depth, and the ID/CD requirement via DTK1234, IE2141 and HSI1000."
   },
   "parse_error": null
 }

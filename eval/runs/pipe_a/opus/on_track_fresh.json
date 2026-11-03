@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"GEC1015\",\"GESS1020\",\"GEN2003\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS3244\",\"CS4248\",\"DTK1234\",\"IE2141\"]},{\"semester\":6,\"modules\":[\"CS4243\",\"CS4246\",\"HSI1000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A plan exists: it totals 160 MC and no semester carries more than 20 MC of counted load, since CP3880 does not count toward load. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4246, CS4248), 12 MC at level 4000, 32 MC of B&D including CP3880, the ID/CD and university-level requirements, and exactly 10 generic electives, with every prerequisite taken in an earlier semester.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"ES2660\",\"GEC1015\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"GEN2003\",\"DTK1234\",\"HSI1000\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Yes, it can be done: this plan totals 160 MC with no semester over 20 MC (the CP3200 and CP3202 internships do not count toward the unit load). It covers every required module, the university-level requirements, the interdisciplinary requirement (DTK1234, HSI1000, IS1128), 32 MC of Breadth & Depth, 12 MC at level 4000, and the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4246, CS4248), with all prerequisites and term offerings respected.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 14.13,
-  "cost_usd": 0.035777,
+  "latency_s": 13.57,
+  "cost_usd": 0.033047,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 1630,
+    "output_tokens": 1488,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14103
+    "cache_read_input_tokens": 14656
   },
   "effort": "high",
-  "prompt_sha256": "de3e7158d5cc5aff",
-  "timestamp": "2026-11-02T14:28:33+00:00",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:49+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -32,51 +32,52 @@
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "ST2334",
-        "IS1108"
+        "IS1108",
+        "GESS1020"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2106",
         "CS2109S",
-        "ES2660"
+        "ST2334"
       ],
       "4": [
         "CS3230",
         "CS3243",
+        "CS3244",
+        "ES2660",
         "GEC1015",
-        "GESS1020",
-        "GEN2003"
+        "CP3200"
       ],
       "5": [
-        "CP3880",
-        "CS3244",
         "CS4248",
+        "CS4243",
+        "GEN2003",
         "DTK1234",
-        "IE2141"
+        "HSI1000",
+        "CP3202"
       ],
       "6": [
-        "CS4243",
         "CS4246",
-        "HSI1000",
+        "IS1128",
         "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "7": [
-        "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
       ],
       "8": [
-        "UE_GENERIC_7",
         "UE_GENERIC_8",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "A plan exists: it totals 160 MC and no semester carries more than 20 MC of counted load, since CP3880 does not count toward load. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4246, CS4248), 12 MC at level 4000, 32 MC of B&D including CP3880, the ID/CD and university-level requirements, and exactly 10 generic electives, with every prerequisite taken in an earlier semester."
+    "reason": "Yes, it can be done: this plan totals 160 MC with no semester over 20 MC (the CP3200 and CP3202 internships do not count toward the unit load). It covers every required module, the university-level requirements, the interdisciplinary requirement (DTK1234, HSI1000, IS1128), 32 MC of Breadth & Depth, 12 MC at level 4000, and the AI focus area (CS2109S, CS3243, CS3244, CS4243, CS4246, CS4248), with all prerequisites and term offerings respected."
   },
   "parse_error": null
 }

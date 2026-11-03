@@ -112,6 +112,12 @@ def render_system_prompt(modules, program, focus_areas, preclusions, rename=None
     fr = focus_areas["rule"]
     cap_ceiling = program["max_overload_units"]
     bundle = next(iter(program["scheduling_bundles"].values()))["modules"]
+    full_sem_mods = sorted({m for o in ind_opts if o.get("full_semester") for m in o["set"]})
+    cp = bd["cp_coded"]
+    urop = bd["urop"]
+    urop_span = urop.get("consecutive_semesters", 2)
+    fyp_code = bd["fyp"]["code"]
+    indep_code = bd["independent_project"]["code"]
 
     ulr_lines = "\n".join(f"  - {name.replace('_', ' ')}: at least {g['modules_required']} of "
                           f"{L(g['satisfied_by'])}" for name, g in ulr.items())
@@ -132,8 +138,8 @@ Use only the rules and the module catalog below; they are the complete and autho
 - If the student designates some plan semesters as Special Terms, the remaining (regular) semesters alternate Sem 1, Sem 2, Sem 1, ... in order starting with Sem 1, skipping the special slots. A special slot that follows a Sem 2 is Special Term 3; one that follows a Special Term 3 is Special Term 4.
 - A module may only be placed in a semester whose term is listed in its "offered" terms.
 - Each module is taken at most once. Never schedule a module the student has already completed or been exempted from.
-- Prerequisites: every prerequisite of a module must be satisfied by a module completed/exempted before planning or scheduled in a STRICTLY EARLIER semester (not the same one). Unless the student says otherwise, assume A-level H2 Mathematics (so {L(['MA1301', 'MA1301X'])} count as satisfied as prerequisites and are not taken) and direct English placement (so {L(['ES1000', 'ES1103'])} count as satisfied and are not taken). A student without H2 Mathematics, or with an English bridging requirement, must schedule those bridging modules like any other.
-- Unit load: the units in a semester may not exceed the student's per-semester cap (or a semester-specific cap they give; "taking a semester off" means nothing at all may be placed in it), and never exceed {cap_ceiling} MC. Industrial-experience modules ({L(ind_mods)}) do NOT count toward a semester's unit load (they run over the vacation), but they still occupy a semester, must respect its offered terms, and cannot be placed in a semester taken off.
+- Prerequisites: every prerequisite of a module must be satisfied by a module completed/exempted before planning or scheduled in a STRICTLY EARLIER semester (not the same one). Unless the student says otherwise, assume A-level H2 Mathematics (so {L(['MA1301', 'MA1301X'])} count as satisfied as prerequisites and are not taken) and direct English placement (so {L(['ES1000', 'ES1103'])} count as satisfied and are not taken). A student without H2 Mathematics, or with an English bridging requirement, must schedule those bridging modules like any other. English placement bands: Band 3 needs no bridging module; Band 2 must take {R('ES1103')} (its {R('ES1000')} prerequisite is waived and awards no credit, so {R('ES1000')} is NOT taken); Band 1 must take {R('ES1000')} and then {R('ES1103')}.
+- Unit load: the units in a semester may not exceed the student's per-semester cap (or a semester-specific cap they give; "taking a semester off" means nothing at all may be placed in it), and never exceed {cap_ceiling} MC. Industrial-experience modules ({L(ind_mods)}) do NOT count toward a semester's unit load (they run over the vacation), but they still occupy a semester, must respect its offered terms, and cannot be placed in a semester taken off. The full-semester (6-month) internship options ({L(full_sem_mods)}) occupy their ENTIRE semester: in the semester one of them is placed, NO other credit-bearing module may be scheduled (that semester holds only the internship). The part-time / vacation options may share their semester with coursework as usual.
 - {L(bundle)} must be taken together in the same semester.
 - Year-long service learning: if you take one of these, its continuation must be in the immediately following plan semester:
 {sl_lines}
@@ -145,15 +151,15 @@ Use only the rules and the module catalog below; they are the complete and autho
 - Required modules: {L(program['required_modules'])}.
 - University-level requirements (each list: take at least the stated number):
 {ulr_lines}
-- Interdisciplinary / cross-disciplinary (ID/CD): exactly {idcd['total_modules_required']} modules from {L(idcd['candidates'])}, with at least {idcd['min_id_modules']} ID and at most {idcd['max_cd_modules']} CD (category shown in the catalog).
+- Interdisciplinary / cross-disciplinary (ID/CD): at least {idcd['total_modules_required']} qualifying modules from {L(idcd['candidates'])}, where the qualifying set has at least {idcd['min_id_modules']} ID and at most {idcd['max_cd_modules']} CD (category shown in the catalog). Taking more than {idcd['total_modules_required']} of these candidates is allowed; any beyond a qualifying set of {idcd['total_modules_required']} simply count as unrestricted electives and need not satisfy the ID/CD split.
 - Focus area: the requested area (any one area if none is requested) needs at least {fr['courses_per_area']} of its primaries, with at least {fr['min_level4000_in_area']} at level 4000 or above:
 {focus_lines}
 - Level 4000: at least {bd['level4000']['min_units']} MC of modules at level 4000 or above.
 - Breadth & Depth: at least {bd['min_units']} MC of modules tagged "B&D" in the catalog (this includes industrial experience).
 - Industrial experience: complete exactly ONE of the options below in full, and take no industrial-experience module outside that option. If the student names an option, it must be that one. Exception: a student whose GPA qualifies for the final-year project may instead take {R(bd['fyp']['code'])} in place of the internship.
 {ind_lines}
-- CP-coded cap: {L(bd['cp_coded']['codes'])} together may total at most {bd['cp_coded']['max_units']} MC.
-- {R(bd['fyp']['code'])} (final-year project) may only be taken by a student whose GPA qualifies for it; assume a student does NOT qualify unless they say so. UROP research means at least one of {L(bd['urop']['codes'])}; assume a student is eligible for UROP unless they say otherwise.
+- CP-coded project cap (Breadth & Depth allocation): at most {cp['max_units']} MC of {L(cp['codes'])} may be COUNTED TOWARD the Breadth & Depth requirement. This is an allocation cap, not a limit on how many you may take: any CP-coded project credit beyond {cp['max_units']} MC still counts toward the {program['total_units_required']}-MC graduation total as unrestricted electives. For example, taking both {R(fyp_code)} (12 MC) and {L(urop['codes'])} (8 MC) is allowed — 12 MC is allocated to Breadth & Depth and the remaining 8 MC counts as UE.
+- {R(fyp_code)} (final-year project) may only be taken by a student whose GPA qualifies for it; assume a student does NOT qualify unless they say so. UROP research means taking {L(urop['codes'])}; assume a student is eligible for UROP unless they say otherwise. UROP runs over {urop_span} consecutive regular semesters: list it ONLY in its starting semester (do not repeat it), that start cannot be the final semester (its continuation needs the following one), and if the student also does {R(fyp_code)} the project must start at least {urop_span} semesters after the UROP start so the UROP finishes first. {R(indep_code)} is a separate independent-project module, distinct from UROP; take it only if an independent project is requested.
 - Unrestricted electives: any remaining units may be filled with generic 4 MC unrestricted electives. Write each one as the code "{UE_TOKEN}" (offered in Sem 1 and Sem 2, level 1000, no prerequisites). At most {n_ue} generic electives exist in total, including any the student has already completed.
 
 # 3. Student requests

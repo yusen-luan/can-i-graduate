@@ -65,10 +65,11 @@ def test_app_carries_profile_module_requests():
 
 
 def test_app_explains_infeasible_with_the_real_request():
-    # FYP + UROP is UNSAT at any horizon: the explanation must not suggest more semesters
+    # forbidding required core modules is UNSAT at any horizon: the explanation must
+    # not suggest more semesters, and must name the forbid as the blocker.
     at = _run()
-    at.selectbox(key="profile_name").set_value("fyp_urop_trap").run()
+    at.selectbox(key="profile_name").set_value("forbid_core_trap").run()
     assert not at.exception
     md = " ".join(m.value for m in at.markdown)
     assert "No valid plan" in md and "target_semesters" not in md
-    assert "UROP" in md or "final-year" in md
+    assert "forbid" in md or "pins" in md

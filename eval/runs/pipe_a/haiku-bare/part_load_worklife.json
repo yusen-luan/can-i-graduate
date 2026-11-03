@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) degree requires 160 MC, but with at most 16 MC in each of 10 semesters and at most 8 MC in semester 6, the maximum is 9\u00d716 + 8 = 152 MC, so the degree cannot be completed within 10 semesters under these limits.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The Bachelor of Computing (Computer Science) requires 160 MC, but with at most 16 MC in each of the 9 other semesters and at most 8 MC in semester 6, the 10-semester maximum is 152 MC, so graduating within 10 semesters is impossible.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 9.66,
-  "cost_usd": 0.000911,
+  "latency_s": 6.82,
+  "cost_usd": 0.000596,
   "request_id": "",
   "usage": {
     "input_tokens": 117,
-    "output_tokens": 1779,
+    "output_tokens": 1149,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:16:33+00:00",
+  "timestamp": "2026-11-02T14:39:09+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "The BComp (Computer Science) degree requires 160 MC, but with at most 16 MC in each of 10 semesters and at most 8 MC in semester 6, the maximum is 9\u00d716 + 8 = 152 MC, so the degree cannot be completed within 10 semesters under these limits."
+    "reason": "The Bachelor of Computing (Computer Science) requires 160 MC, but with at most 16 MC in each of the 9 other semesters and at most 8 MC in semester 6, the 10-semester maximum is 152 MC, so graduating within 10 semesters is impossible."
   },
   "parse_error": null
 }

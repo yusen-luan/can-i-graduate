@@ -4,81 +4,80 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1521\",\"ES2660\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"ST2334\",\"GESS1025\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"CS2102\",\"GEN2050X\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS3219\",\"IS2218\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3200\",\"CS3213\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3202\",\"CS4211\",\"IS2238\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4218\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4212\",\"UE\"]}],\"reason\":\"Yes, it can be done: this plan totals 160 MC over 9 semesters, never exceeds 20 MC in a semester, and covers the common curriculum, CS core, maths, a software engineering focus area (CS3203, CS3213, CS3219, CS4211, CS4218) and the CP3200 + CP3202 internship route. It is based on my own knowledge of NUS rules, so please check the exact course codes, prerequisites and semester offerings against the official NUS requirements and NUSMods before you register.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3230\",\"CS3219\",\"CS3213\",\"GESS1025\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS3211\",\"CS4211\",\"GEN2060\"]},{\"semester\":6,\"modules\":[\"CS4218\",\"DTK1234\",\"PF1101\",\"EC1101E\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3200\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS4231\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: the plan totals 160 MC over 9 semesters with at most 20 MC each, covering the common curriculum, CS foundation and maths, a Software Engineering focus (CS3203, CS3213, CS3219, CS4211, CS4218, with 12 MC at level 4000) and the CP3200 internship, which has a semester to itself. Module codes and offering terms are based on general knowledge and should be checked against NUSMods and the current SoC requirements, as some, especially the GE and interdisciplinary picks, may differ.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 73.93,
-  "cost_usd": 0.143505,
+  "latency_s": 94.63,
+  "cost_usd": 0.189905,
   "request_id": "",
   "usage": {
     "input_tokens": 97,
-    "output_tokens": 7146,
+    "output_tokens": 9466,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:29:51+00:00",
+  "timestamp": "2026-11-02T15:00:16+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1101S",
         "CS1231S",
+        "MA1521",
         "MA1522",
-        "GEA1000",
-        "IS1108"
+        "GEA1000"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
-        "MA1521",
+        "CS2100",
         "ES2660",
-        "GEC1015"
+        "IS1108"
       ],
       "3": [
-        "CS2100",
         "CS2101",
         "CS2103T",
+        "CS2106",
         "ST2334",
-        "GESS1025"
+        "GEC1015"
       ],
       "4": [
-        "CS2106",
         "CS2109S",
         "CS3230",
-        "CS2102",
-        "GEN2050X"
+        "CS3219",
+        "CS3213",
+        "GESS1025"
       ],
       "5": [
         "CS3203",
-        "CS3219",
-        "IS2218",
-        "UE_GENERIC_1"
+        "CS3211",
+        "CS4211",
+        "GEN2060"
       ],
       "6": [
-        "CP3200",
-        "CS3213",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "CS4218",
+        "DTK1234",
+        "PF1101",
+        "EC1101E",
+        "UE_GENERIC_1"
       ],
       "7": [
-        "CP3202",
-        "CS4211",
-        "IS2238",
-        "UE_GENERIC_4"
+        "CP3200"
       ],
       "8": [
-        "CS4218",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "9": [
-        "CS4212",
-        "UE_GENERIC_8"
+        "CS4231",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
       ]
     },
-    "reason": "Yes, it can be done: this plan totals 160 MC over 9 semesters, never exceeds 20 MC in a semester, and covers the common curriculum, CS core, maths, a software engineering focus area (CS3203, CS3213, CS3219, CS4211, CS4218) and the CP3200 + CP3202 internship route. It is based on my own knowledge of NUS rules, so please check the exact course codes, prerequisites and semester offerings against the official NUS requirements and NUSMods before you register."
+    "reason": "Feasible: the plan totals 160 MC over 9 semesters with at most 20 MC each, covering the common curriculum, CS foundation and maths, a Software Engineering focus (CS3203, CS3213, CS3219, CS4211, CS4218, with 12 MC at level 4000) and the CP3200 internship, which has a semester to itself. Module codes and offering terms are based on general knowledge and should be checked against NUSMods and the current SoC requirements, as some, especially the GE and interdisciplinary picks, may differ."
   },
   "parse_error": null
 }

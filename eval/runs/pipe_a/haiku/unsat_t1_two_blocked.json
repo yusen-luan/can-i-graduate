@@ -1,26 +1,27 @@
 {
   "instance": "unsat_t1_two_blocked",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Semesters 1 and 2 are taken off, leaving only 6 usable semesters (3 to 8) at a maximum of 20 MC each, for at most 120 MC, which is short of the 160 MC graduation requirement.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With Semesters 1 and 2 off and graduation within 8 semesters, only Semesters 3-8 (6 semesters) are usable. At 20 MC per semester that gives at most 120 MC of counted units, and the largest industrial-experience option adds only 12 MC outside the cap, for a maximum of 132 MC, which is short of the 160 MC graduation requirement.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.22,
-  "cost_usd": 0.000373,
+  "latency_s": 4.1,
+  "cost_usd": 0.000518,
   "request_id": "",
   "usage": {
     "input_tokens": 99,
-    "output_tokens": 445,
+    "output_tokens": 735,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:09:36+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:23+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Semesters 1 and 2 are taken off, leaving only 6 usable semesters (3 to 8) at a maximum of 20 MC each, for at most 120 MC, which is short of the 160 MC graduation requirement."
+    "reason": "With Semesters 1 and 2 off and graduation within 8 semesters, only Semesters 3-8 (6 semesters) are usable. At 20 MC per semester that gives at most 120 MC of counted units, and the largest industrial-experience option adds only 12 MC outside the cap, for a maximum of 132 MC, which is short of the 160 MC graduation requirement."
   },
   "parse_error": null
 }

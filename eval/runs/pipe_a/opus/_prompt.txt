@@ -52,7 +52,7 @@ Use only the rules and the module catalog below; they are the complete and autho
   - option: CP3107 + CP3110
   - option: ETP3205
 - CP-coded cap: CP3106, CP3209, CP4101, CP4106 together may total at most 12 MC.
-- CP4101 (final-year project) may only be taken by a student whose GPA qualifies for it; assume a student does NOT qualify unless they say so. UROP research means at least one of CP3106, CP3209, CP4106; assume a student is eligible for UROP unless they say otherwise.
+- CP4101 (final-year project) may only be taken by a student whose GPA qualifies for it; assume a student does NOT qualify unless they say so. UROP research means at least one of CP3209; assume a student is eligible for UROP unless they say otherwise.
 - Unrestricted electives: any remaining units may be filled with generic 4 MC unrestricted electives. Write each one as the code "UE" (offered in Sem 1 and Sem 2, level 1000, no prerequisites). At most 10 generic electives exist in total, including any the student has already completed.
 
 # 3. Student requests
@@ -89,7 +89,7 @@ CS2105 | Introduction to Computer Networks | 4 MC | level 2000 | offered: Sem 1,
 CS2106 | Introduction to Operating Systems | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: (CS2100 OR CS2100DE OR CS2100HS OR EE2007 OR EE2024 OR EE2028)
 CS2107 | Introduction to Information Security | 4 MC | level 2000 | offered: Sem 1, Sem 2 | B&D | prereq: (YSC1212 OR CS1010J OR CS1101S OR CS1010 OR CS1010E OR CS1010S OR CS1010X OR CS1010A OR CS1010HS OR UTC2851)
 CS2108 | Introduction to Media Computing | 4 MC | level 2000 | offered: Sem 2 | B&D | prereq: ((CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND (MA1522 OR MA2001 OR MA1513 OR MA1311 OR MA1508E))
-CS2109S | Introduction to AI and Machine Learning | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((YSC2229 OR CS2040S OR CS2040C OR CS2040HS OR CS2040 OR CS2040DE) AND ((MA1511 OR MA1512) OR MA1521 OR MA2002 OR MA1102R OR MA1312 OR MA1507 OR MA1505))
+CS2109S | Introduction to AI and Machine Learning | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((YSC2229 OR CS2040S OR CS2040C OR CS2040HS OR CS2040 OR CS2040DE) AND ((at least 2 of: MA1511, MA1512) OR MA1521 OR MA2002 OR MA1102R OR MA1312 OR MA1507 OR MA1505))
 CS2111 | Human-Centred Computing | 4 MC | level 2000 | offered: Sem 2 | B&D | prereq: (CS1010A OR CS1010E OR CS1010X OR CS1101S OR CS1010S OR UTC2851 OR CS1010HS OR CS1010J OR CS1010 OR NM2207)
 CS3103 | Computer Networks Practice | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: (CS2105 OR EE3204 OR EE3204E OR EE4204)
 CS3203 | Software Engineering Project | 8 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR CS2113T)
@@ -107,9 +107,9 @@ CS3235 | Computer Security | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | p
 CS3236 | Introduction to Information Theory | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((MA1100 OR MA1100T OR CS1231 OR CS1231S) AND (EE2012 OR EE2012A OR MA2216 OR MA2116 OR MA2116T OR ST2131 OR ST2334))
 CS3240 | Interaction Design | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2111 OR NM2207)
 CS3241 | Computer Graphics | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: ((CS2030S OR CS2030 OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T) AND (CS2040 OR YSC2229 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS))
-CS3242 | 3D Modeling and Animation | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((PC1201 OR PC1221 OR PC1221X) AND CS3241 AND (MA1522 OR MA1508E OR MA1513 OR MA1311 OR MA2001 OR MA1101R) AND (MA1521 OR MA2002 OR MA1505 OR MA1507 OR MA1102R OR (MA1511 OR MA1512)))
+CS3242 | 3D Modeling and Animation | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((PC1201 OR PC1221 OR PC1221X) AND CS3241 AND (MA1522 OR MA1508E OR MA1513 OR MA1311 OR MA2001 OR MA1101R) AND (MA1521 OR MA2002 OR MA1505 OR MA1507 OR MA1102R OR (at least 2 of: MA1511, MA1512)))
 CS3243 | Introduction to Artificial Intelligence | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS OR YSC2229) AND (CS1231S OR CS1231 OR MA1100T OR MA1100))
-CS3244 | Machine Learning | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS OR YSC2229) AND (EE2012A OR EE2012 OR YSC2243 OR ST2131 OR ST2334 OR MA2116 OR MA2116T OR MA2216) AND ((MA1511 OR MA1512) OR ((MA2001 OR MA1522 OR MA1508E OR MA1311 OR MA1513 OR MA1101R) AND (MA2002 OR MA1521 OR MA1505 OR MA1507 OR MA1102R))))
+CS3244 | Machine Learning | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS OR YSC2229) AND (EE2012A OR EE2012 OR YSC2243 OR ST2131 OR ST2334 OR MA2116 OR MA2116T OR MA2216) AND ((at least 2 of: MA1511, MA1512) OR ((MA2001 OR MA1522 OR MA1508E OR MA1311 OR MA1513 OR MA1101R) AND (MA2002 OR MA1521 OR MA1505 OR MA1507 OR MA1102R))))
 CS3245 | Information Retrieval | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS)
 CS3247 | Game Development | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: CS3241
 CS3249 | Conversational User Interface | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: CS2111
@@ -135,19 +135,19 @@ CS4236 | Cryptography in Practice: Systems and Applications | 4 MC | level 4000 
 CS4238 | Computer Security Practice | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: CS3235
 CS4239 | Software Security | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (CS3235 AND (CS2103T OR CS2103 OR CS2103DE OR CS2113 OR CS2113T))
 CS4242 | Social Media Computing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2108 AND CS3245)
-CS4243 | Computer Vision and Pattern Recognition | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((YSC2232 OR MA2001 OR MA1101R OR MA1311 OR MA1508E OR MA1513 OR MA1522) AND (ST1131 OR ST1131A OR ST1232 OR ST2131 OR MA2116 OR MA2116T OR MA2216 OR EE2012A OR EE2012 OR ST2334 OR YSC2243) AND (CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T) AND (YSC2229 OR CS2040 OR CS2040S OR CS2040DE OR CS2040C OR CS2040HS) AND (MA1102R OR MA2002 OR YSC1216 OR MA1505 OR MA1521 OR MA1507 OR (MA1512 OR MA1511)))
+CS4243 | Computer Vision and Pattern Recognition | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((YSC2232 OR MA2001 OR MA1101R OR MA1311 OR MA1508E OR MA1513 OR MA1522) AND (ST1131 OR ST1131A OR ST1232 OR ST2131 OR MA2116 OR MA2116T OR MA2216 OR EE2012A OR EE2012 OR ST2334 OR YSC2243) AND (CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T) AND (YSC2229 OR CS2040 OR CS2040S OR CS2040DE OR CS2040C OR CS2040HS) AND (MA1102R OR MA2002 OR YSC1216 OR MA1505 OR MA1521 OR MA1507 OR (at least 2 of: MA1512, MA1511)))
 CS4244 | Knowledge Representation and Reasoning | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS3263 OR CS3243)
 CS4246 | Reinforcement Learning and Sequential Decision Making | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((EE2012A OR EE2012 OR ST2132 OR ST2334 OR ((ST2131 OR MA2116 OR MA2116T OR MA2216) AND (ST1131 OR ST1232 OR DCS2008 OR ST1131A))) AND (CS3243 OR CS3263))
 CS4247 | Graphics Rendering Techniques | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: CS3241
-CS4248 | Introduction to Large Language Models | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2109S OR CS2109HS OR CS3244 OR MA3270 OR ST4248) AND (EE2012A OR EE2012 OR ST2131 OR MA2216 OR MA2116 OR MA2116T OR ST2334 OR YSC2243) AND (MA1505 OR MA1507 OR MA1521 OR MA1102R OR YSC1216 OR MA2002 OR (MA1511 OR MA1512)))
+CS4248 | Introduction to Large Language Models | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2109S OR CS2109HS OR CS3244 OR MA3270 OR ST4248) AND (EE2012A OR EE2012 OR ST2131 OR MA2216 OR MA2116 OR MA2116T OR ST2334 OR YSC2243) AND (MA1505 OR MA1507 OR MA1521 OR MA1102R OR YSC1216 OR MA2002 OR (at least 2 of: MA1511, MA1512)))
 CS4249 | Quantitative Methods of Human-Computer Interaction | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: (CS3240 OR NM2216 OR NM2213 OR NM3243)
 CS4262 | Machine Learning Systems | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS2106 OR CG2271) AND (CS3244 OR CS3264 OR CG3201))
 CS4263 | Artificial Intelligence Principles | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS) AND (CS1231 OR CS1231S OR MA1100 OR MA1100T))
 CS4310 | High-Performance Computing for Science and AI | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS3210 AND (CS2106 OR CG2271 OR EE4214))
 CS4330 | Combinatorial Methods in Bioinformatics | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS2040C OR CS2040 OR CS2040S OR CS2040DE OR CS2040HS) AND (CS2220 OR LSM2104 OR LSM2241 OR ZB2101))
-CS4347 | Sound and Music Computing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2108 AND (MA1101R OR MA2001 OR MA1522 OR MA1311 OR MA1508E OR MA1513) AND (MA1102R OR MA1505 OR MA1507 OR MA1521 OR MA2002 OR (MA1512 OR MA1511)))
+CS4347 | Sound and Music Computing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2108 AND (MA1101R OR MA2001 OR MA1522 OR MA1311 OR MA1508E OR MA1513) AND (MA1102R OR MA1505 OR MA1507 OR MA1521 OR MA2002 OR (at least 2 of: MA1512, MA1511)))
 CS4350 | Game Development Project | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (CS3247 OR NM3216 OR NM4260 OR NM4260HM)
-CS4353 | Interactive Systems Development Project | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (((CS2103DE OR CS2103 OR CS2103T OR CS2113) AND CS3240) OR (NM2207 AND (NM3243 OR NM4259 OR (ID2116 OR ID3131))))
+CS4353 | Interactive Systems Development Project | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (((CS2103DE OR CS2103 OR CS2103T OR CS2113) AND CS3240) OR (NM2207 AND (NM3243 OR NM4259 OR (at least 2 of: ID2116, ID3131))))
 CS4430 | Computational Complexity | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: CS3231
 DAO2703 | Operations and Technology Management | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ID/CD (CD)
 DTK1234 | Design Thinking | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ID/CD (ID)

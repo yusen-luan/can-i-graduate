@@ -1,0 +1,80 @@
+{
+  "instance": "fyp_and_urop",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"ST2334\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1000\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS3263\",\"GEC1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"GEN2000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3209\",\"CS4248\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP4101\",\"CS4246\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"Feasible: the plan totals about 160 MC with at most 20 MC per semester and finishes in 9 semesters. It covers the CS foundation, maths, the team project, industry experience, an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248), the UROP (CP3209) and the FYP (CP4101), and uses 8 UE. It was built from my recollection of the requirements, so check it against the official NUS requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 40.92,
+  "cost_usd": 0.054947,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 5450,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-02T14:41:44+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "UE_GENERIC_1"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "ST2334",
+        "IS1108"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GESS1000",
+        "UE_GENERIC_2"
+      ],
+      "5": [
+        "CS3203",
+        "CS3263",
+        "GEC1000",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CP3880",
+        "GEN2000",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CP3209",
+        "CS4248",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CP4101",
+        "CS4246",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: the plan totals about 160 MC with at most 20 MC per semester and finishes in 9 semesters. It covers the CS foundation, maths, the team project, industry experience, an AI focus area (CS3243, CS3244, CS3263, CS4246, CS4248), the UROP (CP3209) and the FYP (CP4101), and uses 8 UE. It was built from my recollection of the requirements, so check it against the official NUS requirements."
+  },
+  "parse_error": null
+}

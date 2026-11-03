@@ -68,26 +68,29 @@
   "ground_truth": {
     "feasible": true,
     "status": "OPTIMAL",
+    "proven_infeasible": false,
     "plan": {
-      "1": [
+      "2": [
+        "DTK1234",
         "UE_GENERIC_9"
       ],
-      "2": [
-        "CS4248",
-        "IS1108"
+      "3": [
+        "CS4263"
+      ],
+      "4": [
+        "ETP3201L"
       ],
       "5": [
-        "GEA1000",
-        "IE2141"
+        "IS1108"
       ],
       "6": [
-        "GESS1025"
+        "GEC1020"
       ],
       "7": [
         "CS3230"
       ],
       "8": [
-        "ETP3201L"
+        "GEA1000"
       ]
     },
     "total_units": 40
@@ -105,23 +108,23 @@
     ],
     "difficulty": {
       "num_variables": 688,
-      "num_constraints": 1332,
+      "num_total_variables": 982,
+      "num_constraints": 1363,
       "min_feasible_semesters": 2,
       "semester_slack": 6,
-      "min_feasible_cap": 4,
       "cap_slack": 16,
-      "near_unsat_margin": 6
+      "min_feasible_cap": 4,
+      "cap_min_bounded": true
     },
     "quality": {
-      "realism": 66.9,
+      "realism": 71.0,
       "flags": [
-        "Semester 1: only 4 MC \u2014 very light",
         "Semester 2: only 8 MC \u2014 very light",
-        "Semester 5: only 8 MC \u2014 very light",
+        "Semester 3: only 4 MC \u2014 very light",
+        "Semester 5: only 4 MC \u2014 very light",
         "Semester 6: only 4 MC \u2014 very light",
         "Semester 7: only 4 MC \u2014 very light",
-        "2 empty semester(s) between enrolled semesters",
-        "Level-4000 module(s) scheduled very early: CS4248"
+        "Semester 8: only 4 MC \u2014 very light"
       ]
     }
   }

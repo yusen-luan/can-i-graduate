@@ -404,11 +404,12 @@ two_internships:
       require_modules: []
       forbid_modules: []
       deadline: {}
-fyp_urop_trap:
-  label: FYP + UROP (CP-cap trap)
-  description: "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP \u2014 infeasible because\
-    \ CP4101 alone fills the 12 MC CP-coded cap."
-  expect: infeasible
+fyp_and_urop:
+  label: FYP + UROP (both, CP spills to UE)
+  description: "GPA-eligible student wants BOTH a CP4101 dissertation and a UROP. Feasible: CP4101\
+    \ (12 MC) fills the Breadth & Depth CP allocation and the UROP's CP credit counts as an\
+    \ Unrestricted Elective (Issue #1 / D47 corrected the old global-cap false-infeasible)."
+  expect: feasible
   student:
     conditions:
       needs_math_bridging: false
@@ -433,6 +434,37 @@ fyp_urop_trap:
       heavy_conflicts: []
       require_modules: []
       forbid_modules: []
+      deadline: {}
+
+forbid_core_trap:
+  label: Forbidding core modules (T4 trap)
+  description: "Student refuses to take CS2100 and CS2103T, both required core modules \u2014 no plan\
+    \ exists at any horizon (a policy/fine-print infeasibility, not a capacity shortfall)."
+  expect: infeasible
+  student:
+    conditions:
+      needs_math_bridging: false
+      english_path: direct_es2660
+    has_h2_math: true
+    eligible_fyp: false
+    eligible_urop: true
+    completed: {}
+    exempted: {}
+  scenario:
+    target_semesters: 9
+    max_units_per_semester: 20
+    focus_area: any
+    industrial_option: any
+    want_fyp: false
+    want_urop: false
+    preferences:
+      per_semester_cap: {}
+      max_cs_modules_per_sem: 0
+      min_units_per_semester: 0
+      no_empty_semesters: false
+      heavy_conflicts: []
+      require_modules: []
+      forbid_modules: [CS2100, CS2103T]
       deadline: {}
 deep_focus_pinned:
   label: Deep focus with a pinned module

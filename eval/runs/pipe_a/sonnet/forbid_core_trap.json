@@ -1,0 +1,27 @@
+{
+  "instance": "forbid_core_trap",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 and CS2103T are both on the required-modules list for graduation, so the request to avoid them cannot be met in any number of semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.59,
+  "cost_usd": 0.004413,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 141,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:35:33+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 and CS2103T are both on the required-modules list for graduation, so the request to avoid them cannot be met in any number of semesters."
+  },
+  "parse_error": null
+}

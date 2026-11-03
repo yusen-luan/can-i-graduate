@@ -4,79 +4,79 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010X\", \"MA1521\", \"CS1231S\", \"UE\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2105\", \"CS2106\", \"CS2107\", \"CS2102\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3235\", \"CS3219\", \"CS3216\", \"CS3233\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4236\", \"CS4222\", \"CS3210\", \"CS3243\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS3203\", \"CS4231\", \"CS4224\", \"CS3244\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4215\", \"CS4248\", \"CS4243\", \"CS3223\", \"UE\", \"UE\"]}], \"reason\": \"Forty 4-MC modules (160 MC) can be spread over seven semesters at 20-24 MC each, with prerequisites respected, computer security core (CS2107, CS3235, CS4236) placed early, and 10 unrestricted electives used. Module codes and specialisation requirements should be verified against the current NUS handbook.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010S\",\"CS1231S\",\"MA1521\",\"UE\",\"UE\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2100\",\"MA1508E\",\"UE\",\"UE\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2105\",\"CS2107\",\"ST2334\",\"CS2106\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"CS3230\",\"CS3235\",\"CS3243\",\"CS3231\",\"CS3233\"]},{\"semester\":5,\"modules\":[\"CS3223\",\"CS3216\",\"CS4236\",\"CS3210\",\"CS3281\",\"CS4215\"]},{\"semester\":6,\"modules\":[\"CS3282\",\"CS4231\",\"CS4234\",\"CS4248\",\"CS3203\",\"CS4246\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan totals 40 four-MC modules (160 MC), with at most 24 MC in any semester and 10 UE slots, and it places security prerequisites (CS2107 before CS3235 and CS4236) in valid order. Module codes and prerequisite sequencing are from my general knowledge of NUS and should be checked against the current AY2026/27 handbook and the security specialisation list.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 36.84,
-  "cost_usd": 0.004308,
+  "latency_s": 35.57,
+  "cost_usd": 0.003941,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 8579,
+    "output_tokens": 7845,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:15:16+00:00",
+  "timestamp": "2026-11-02T14:38:34+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1010X",
-        "MA1521",
+        "CS1010S",
         "CS1231S",
+        "MA1521",
         "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "2": [
-        "CS2030S",
         "CS2040S",
         "CS2100",
-        "MA1522",
-        "UE_GENERIC_3"
+        "MA1508E",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2105",
-        "CS2106",
         "CS2107",
-        "CS2102"
+        "ST2334",
+        "CS2106"
       ],
       "4": [
+        "CS2102",
         "CS3230",
         "CS3235",
-        "CS3219",
-        "CS3216",
-        "CS3233",
-        "UE_GENERIC_4"
+        "CS3243",
+        "CS3231",
+        "CS3233"
       ],
       "5": [
+        "CS3223",
+        "CS3216",
         "CS4236",
-        "CS4222",
         "CS3210",
-        "CS3243",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS3281",
+        "CS4215"
       ],
       "6": [
-        "CS3203",
+        "CS3282",
         "CS4231",
-        "CS4224",
-        "CS3244",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "CS4234",
+        "CS4248",
+        "CS3203",
+        "CS4246"
       ],
       "7": [
-        "CS4215",
-        "CS4248",
-        "CS4243",
-        "CS3223",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Forty 4-MC modules (160 MC) can be spread over seven semesters at 20-24 MC each, with prerequisites respected, computer security core (CS2107, CS3235, CS4236) placed early, and 10 unrestricted electives used. Module codes and specialisation requirements should be verified against the current NUS handbook."
+    "reason": "The plan totals 40 four-MC modules (160 MC), with at most 24 MC in any semester and 10 UE slots, and it places security prerequisites (CS2107 before CS3235 and CS4236) in valid order. Module codes and prerequisite sequencing are from my general knowledge of NUS and should be checked against the current AY2026/27 handbook and the security specialisation list."
   },
   "parse_error": null
 }

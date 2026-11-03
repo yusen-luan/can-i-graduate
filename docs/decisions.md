@@ -118,3 +118,32 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   INFEASIBLE (program assumption); any other invalid spec, or a solver `UNKNOWN`, is no verdict (scored wrong).
 - **D44 (Iter 3, scoring):** cost is reported per LLM row as $/1k requests at list prices, warm (prompt read from
   cache) and cold (cache re-written each request), from mean usage. Why: per-sweep totals hide how cost scales.
+- **D45 (Iter 3, Issue #14):** ID/CD is a *qualifying allocation* (`alpha_m <= sat(m)`, `sum alpha = 3`,
+  `>= 2` ID, `<= 1` CD), not `sum(sat) == 3`. Why: a student may take a 4th eligible ID/CD course; the
+  surplus counts as a UE, so the old exact-count rule wrongly made it infeasible. A weight-1 objective
+  tie-break keeps the default plan at exactly 3 (free units go to UE generics). Checker: a qualifying
+  subset must exist (`n_id >= 2 and n_id + min(n_cd, 1) >= 3`). See I2.4.
+- **D46 (Iter 3, Issue #13):** NUSMods `nOf:[n,[...]]` is kept as `n_of` (at-least-n), not weakened to
+  `one_of`, through ingestion, snapshot, `tree_satisfied`, solver reification (`b <=> sum>=n`, folding
+  constants; all_of/one_of are the n=len/n=1 ends) and prompt rendering. Why: e.g. CS2109S needs BOTH
+  MA1511+MA1512 on one branch; "either" is a false prerequisite. 7 snapshot trees re-derived from raw.json.
+- **D47 (Iter 3, Issue #1):** the 12u CP-coded cap limits CP credit ALLOCATED to Breadth & Depth
+  (binary `beta_m <= sat(m)`, `sum units*beta <= 12`), not every CP module taken; surplus CP spills to
+  Unrestricted Electives. The B&D 32u floor and >=12u L4000 depth count CP credit only via `beta`.
+  Consequence: `want_fyp + want_urop` is now FEASIBLE (CP4101 fills the B&D allocation, UROP CP -> UE);
+  the old global cap wrongly made it infeasible. Supersedes the I2.17 FYP+UROP-infeasible claim; the
+  `fyp_urop_trap` corpus profile became `fyp_and_urop` (SAT) + a new `forbid_core_trap` (T4 UNSAT).
+- **D48 (Iter 3, Issues #2/#3):** English QET bridges are a MANDATORY completion per placement band
+  (`required_bridges`), not optional prereq leaves (ES2660's iter2 tree is null, so nothing forced them
+  before). Band 2 (`es1103_required`) must take ES1103 and WAIVES ES1000 (placement admits directly into
+  ES1103; the frozen `ES1103 -> ES1000` prereq must not force ES1000); Band 1 (`es1000_then_es1103`) must
+  take both, ES1000 before ES1103. Solver (`taken=1`, domain) + checker parity. See I2.2.
+- **D49 (Iter 3, Issue #4):** the three CP research/project modules are DISTINCT. `want_urop` targets the
+  real UROP (CP3209) only (was "any of CP3106/CP3209/CP4106"); CP3106 is a separate independent project
+  (`want_independent_project`); CP4106 is another project kept only in the CP-cap list. Why: conflating
+  them hid their different requirements.
+- **D50 (Iter 3, Issues #5/#6):** CP3209 (UROP) spans two consecutive semesters and must finish before the
+  FYP (CP4101) — single-slot start, no start in the final semester, `x[CP3209,t]+x[CP4101,v]<=1` when
+  `t+span-1>=v`, credit once (load-split deferred). A `full_semester` internship (CP3880/IS4010/ETP3201L,
+  12u) now OCCUPIES its slot: concurrent non-internship load <= `full_semester_concurrent_cap` (0), so a
+  6-month placement costs a real semester (the part-time 6u stints stay off-cap/vacation). See I2.17/I2.19.

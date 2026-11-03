@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"IS1108\",\"GEA1000\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"CS2100\",\"GESS1025\",\"IS2218\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2107\",\"CS2109S\",\"ST2334\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS2105\",\"CS2102\",\"GEN2050\",\"IS2238\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"CS4236\",\"CS3219\",\"DTK1234\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4238\",\"CS4239\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This 160 MC plan fits in 7 semesters at no more than 24 MC each. It covers the common curriculum, the CS foundation, the math courses and 12 MC of industry experience (CP3880), and completes the Computer Security focus area with CS2107, CS3235, CS4236, CS4238 and CS4239, giving 12 MC at level 4000; the specific GE, interdisciplinary and cross-disciplinary course codes are best-effort picks to confirm against current NUS lists.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"ES2660\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"IS1108\",\"GESS1025\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\",\"CS2107\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2105\",\"GEN2061\",\"DTK1234\",\"EC1101E\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"CS4236\",\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CS4239\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"UE\"]}],\"reason\":\"Feasible: this plan totals 160 MC over 7 semesters, never exceeds 24 MC in a semester and orders courses to respect the usual prerequisites. It covers the common curriculum, the CS core and maths, and the Computer Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239), with CP4101 as industry experience; the GE and interdisciplinary picks (GEC1015, GESS1025, GEN2061, DTK1234, IS1128, EC1101E) are illustrative, so confirm them against the current NUS requirements and course lists.\u201d}\"}",
   "stop_reason": "end_turn",
-  "latency_s": 89.26,
-  "cost_usd": 0.171077,
+  "latency_s": 74.18,
+  "cost_usd": 0.141257,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 8527,
+    "output_tokens": 7036,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:28:37+00:00",
+  "timestamp": "2026-11-02T14:57:03+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,56 +25,56 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "IS1108",
         "GEA1000",
+        "ES2660",
         "GEC1015"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
-        "MA1522",
         "CS2100",
-        "GESS1025",
-        "IS2218"
+        "MA1522",
+        "IS1108",
+        "GESS1025"
       ],
       "3": [
-        "CS2101",
         "CS2103T",
-        "CS2107",
+        "CS2101",
+        "CS2106",
         "CS2109S",
         "ST2334",
-        "ES2660"
+        "CS2107"
       ],
       "4": [
-        "CS2106",
         "CS3230",
         "CS2105",
-        "CS2102",
-        "GEN2050",
-        "IS2238"
+        "GEN2061",
+        "DTK1234",
+        "EC1101E",
+        "UE_GENERIC_1"
       ],
       "5": [
         "CS3235",
         "CS4236",
-        "CS3219",
-        "DTK1234",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "IS1128",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
       ],
       "6": [
-        "CP3880",
         "CS4238",
         "CS4239",
-        "UE_GENERIC_3"
-      ],
-      "7": [
-        "UE_GENERIC_4",
         "UE_GENERIC_5",
         "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "7": [
+        "CP4101",
+        "UE_GENERIC_9"
       ]
     },
-    "reason": "This 160 MC plan fits in 7 semesters at no more than 24 MC each. It covers the common curriculum, the CS foundation, the math courses and 12 MC of industry experience (CP3880), and completes the Computer Security focus area with CS2107, CS3235, CS4236, CS4238 and CS4239, giving 12 MC at level 4000; the specific GE, interdisciplinary and cross-disciplinary course codes are best-effort picks to confirm against current NUS lists."
+    "reason": "Feasible: this plan totals 160 MC over 7 semesters, never exceeds 24 MC in a semester and orders courses to respect the usual prerequisites. It covers the common curriculum, the CS core and maths, and the Computer Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239), with CP4101 as industry experience; the GE and interdisciplinary picks (GEC1015, GESS1025, GEN2061, DTK1234, IS1128, EC1101E) are illustrative, so confirm them against the current NUS requirements and course lists.\u201d}"
   },
   "parse_error": null
 }

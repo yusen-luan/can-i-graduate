@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"student\":{\"completed\":[\"CS1010\"],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[1,2,1,2,1,2,1,2,1],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "text": "{\"student\":{\"completed\":[\"CS1010\"],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[\"Asks whether the plan is feasible and for a semester-by-semester plan as output, which is not a constraint field\"]}",
   "stop_reason": "end_turn",
-  "latency_s": 4.04,
-  "cost_usd": 0.000451,
+  "latency_s": 4.836,
+  "cost_usd": 0.000497,
   "request_id": "",
   "usage": {
     "input_tokens": 76,
-    "output_tokens": 752,
+    "output_tokens": 844,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 6788
+    "cache_read_input_tokens": 6778
   },
   "effort": "high",
-  "prompt_sha256": "7fdecaa362bdcefc",
-  "timestamp": "2026-10-28T04:00:46+00:00",
+  "prompt_sha256": "23c6589b14921d44",
+  "timestamp": "2026-11-02T15:01:53+00:00",
   "spec": {
     "student": {
       "completed": [
@@ -37,17 +37,7 @@
       "industrial_option": "any",
       "want_fyp": false,
       "want_urop": false,
-      "term_layout": [
-        1,
-        2,
-        1,
-        2,
-        1,
-        2,
-        1,
-        2,
-        1
-      ],
+      "term_layout": [],
       "semester_caps": [],
       "max_cs_modules_per_sem": 0,
       "min_units_per_semester": 0,
@@ -57,14 +47,17 @@
       "forbid_modules": [],
       "deadlines": []
     },
-    "unsupported_requests": []
+    "unsupported_requests": [
+      "Asks whether the plan is feasible and for a semester-by-semester plan as output, which is not a constraint field"
+    ]
   },
   "spec_error": null,
   "solve": {
     "status": "INFEASIBLE",
-    "wall_time_s": 0.18,
+    "wall_time_s": 0.076,
     "num_variables": 1044,
-    "num_constraints": 3426
+    "num_total_variables": 2633,
+    "num_constraints": 3460
   },
   "prediction": {
     "feasible": false,
@@ -72,5 +65,5 @@
     "reason": "INFEASIBLE"
   },
   "parse_error": null,
-  "llm_latency_s": 3.86
+  "llm_latency_s": 4.76
 }

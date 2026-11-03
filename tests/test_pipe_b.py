@@ -99,9 +99,9 @@ def test_perfect_translator_scores_100(monkeypatch):
     s, rows = score.grade_all("fake-B", INSTANCES, preds)
     assert [r["violations"] for r in rows if r["violations"]] == []
     assert s["feasibility_accuracy"]["pct"] == 100.0
-    assert s["plan_validity"] == {"n": 17, "d": 17, "pct": 100.0}
+    assert s["plan_validity"] == {"n": 18, "d": 18, "pct": 100.0}
     t = s["translator"]
-    assert t["fidelity_exact"]["n"] == t["spec_valid"]["n"] == 35
+    assert t["fidelity_exact"]["n"] == t["spec_valid"]["n"] == 36
     assert t["wrong_field_histogram"] == {} and t["lucky_decisions"] == 0
     c = s["cost_profile"]
     # steady state, Haiku list prices: (100*0.10 + 3000*0.01 + 400*0.50) / 1e6 per request

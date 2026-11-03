@@ -4,81 +4,79 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1010S\",\"CS1231\",\"UE\"]},{\"semester\":2,\"modules\":[\"MA1521\",\"CS2040S\",\"CS2100\",\"CS2101\",\"CS2030S\"]},{\"semester\":3,\"modules\":[\"MA1522\",\"CS2102\",\"CS2103T\",\"CS2106\",\"MA2214\"]},{\"semester\":4,\"modules\":[\"ST2334\",\"CS2105\",\"CS3230\",\"CS3233\",\"MA2101\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS4236\",\"CS3244\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3243\",\"CS3248\",\"CS3217\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS3240\",\"CS3219\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4224\",\"CS3235\",\"CS2107\",\"UE\",\"UE\"]}],\"reason\":\"Assuming the standard 160 MC BComp (Computer Science) curriculum, with ES1103 first and MA1301 as the no-H2-Mathematics bridge, eight semesters of five 4-MC modules (20 MC each) fit the 20 MC cap, and the algorithms-theory focus is covered by CS3230, CS3233, CS4231, CS4234 and CS4236. This is based on my knowledge of the requirements and has not been verified against the official AY2026/27 handbook.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"CS1010X\",\"CS1231\",\"MA1100\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"MA1521\",\"CS2100\",\"CS2030S\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"MA1522\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"CS2105\",\"CS3230\",\"CS3233\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4231\",\"CS3216\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4234\",\"CS3203\",\"CS3210\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3282\",\"CS3243\",\"CS3244\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS3223\",\"CS4224\",\"CS4246\",\"UE\",\"UE\"]}],\"reason\":\"Forty 4-MC modules totalling 160 MC can be spread over 8 semesters at 20 MC each, with ES1103 first, MA1100 taken in place of H2 Mathematics before MA1521, and the algorithms theory specialisation (CS3230, CS3233, CS3231, CS4231, CS4234) placed after its prerequisites. This relies on my recollection of the AY2026/27 BComp CS requirements and prerequisites, which I have not verified against the official NUS sources.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 25.1,
-  "cost_usd": 0.002815,
+  "latency_s": 28.05,
+  "cost_usd": 0.0031,
   "request_id": "",
   "usage": {
     "input_tokens": 121,
-    "output_tokens": 5586,
+    "output_tokens": 6156,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:16:22+00:00",
+  "timestamp": "2026-11-02T14:39:19+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "ES1103",
-        "MA1301",
-        "CS1010S",
+        "CS1010X",
         "CS1231",
+        "MA1100",
         "UE_GENERIC_1"
       ],
       "2": [
-        "MA1521",
         "CS2040S",
+        "MA1521",
         "CS2100",
-        "CS2101",
         "CS2030S"
       ],
       "3": [
-        "MA1522",
-        "CS2102",
+        "CS2101",
         "CS2103T",
         "CS2106",
-        "MA2214"
+        "ST2334",
+        "MA1522"
       ],
       "4": [
-        "ST2334",
+        "CS2102",
         "CS2105",
         "CS3230",
         "CS3233",
-        "MA2101"
-      ],
-      "5": [
-        "CS4231",
-        "CS4234",
-        "CS4236",
-        "CS3244",
         "UE_GENERIC_2"
       ],
+      "5": [
+        "CS3231",
+        "CS4231",
+        "CS3216",
+        "UE_GENERIC_3"
+      ],
       "6": [
-        "CS3243",
-        "CS3248",
-        "CS3217",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "CS4234",
+        "CS3203",
+        "CS3210",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "7": [
-        "CS4246",
-        "CS3240",
-        "CS3219",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS3282",
+        "CS3243",
+        "CS3244",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
       ],
       "8": [
+        "CS3223",
         "CS4224",
-        "CS3235",
-        "CS2107",
-        "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "CS4246",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
       ]
     },
-    "reason": "Assuming the standard 160 MC BComp (Computer Science) curriculum, with ES1103 first and MA1301 as the no-H2-Mathematics bridge, eight semesters of five 4-MC modules (20 MC each) fit the 20 MC cap, and the algorithms-theory focus is covered by CS3230, CS3233, CS4231, CS4234 and CS4236. This is based on my knowledge of the requirements and has not been verified against the official AY2026/27 handbook."
+    "reason": "Forty 4-MC modules totalling 160 MC can be spread over 8 semesters at 20 MC each, with ES1103 first, MA1100 taken in place of H2 Mathematics before MA1521, and the algorithms theory specialisation (CS3230, CS3233, CS3231, CS4231, CS4234) placed after its prerequisites. This relies on my recollection of the AY2026/27 BComp CS requirements and prerequisites, which I have not verified against the official NUS sources."
   },
   "parse_error": null
 }

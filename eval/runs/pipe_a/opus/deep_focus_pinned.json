@@ -1,22 +1,23 @@
 {
   "instance": "deep_focus_pinned",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3236\",\"CS4231\",\"ES2660\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"CS4263\",\"GEN2003\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"IE2141\",\"HSI1000\",\"UE\",\"UE\",\"CP3880\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan reaches exactly 160 MC with no semester over 20 MC (CP3880 does not count toward the load) and finishes CS2040S in semester 2. It covers the algorithms-theory focus with CS3230, CS3231, CS4231, CS4234 and CS4430, and also meets the level-4000 (16 MC), B&D (36 MC including CP3880), ID/CD and university-level requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS3236\",\"ES2660\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GEN2003\",\"DTK1234\",\"IE2141\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"IS1128\",\"UE\",\"UE\",\"UE\",\"CP3880\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"A plan is feasible: CS2040S is done in semester 2 and CS3230 in semester 3. The algorithms_theory focus is met by CS3230, CS3231, CS4231, CS4234 and CS4430, which together with CS3236 and CP3880 give 32 MC of breadth and depth and 12 MC at level 4000, for 160 MC in total with no semester above 20 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 15.44,
-  "cost_usd": 0.039,
+  "latency_s": 12.37,
+  "cost_usd": 0.032085,
   "request_id": "",
   "usage": {
     "input_tokens": 111,
-    "output_tokens": 1787,
+    "output_tokens": 1441,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:14:39+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:08+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -42,8 +43,8 @@
         "CS3230"
       ],
       "4": [
-        "CS3236",
         "CS4231",
+        "CS3236",
         "ES2660",
         "GEC1015",
         "GESS1020"
@@ -51,32 +52,32 @@
       "5": [
         "CS3231",
         "CS4234",
-        "CS4263",
         "GEN2003",
-        "DTK1234"
+        "DTK1234",
+        "IE2141"
       ],
       "6": [
         "CS4430",
-        "IE2141",
-        "HSI1000",
+        "IS1128",
         "UE_GENERIC_1",
         "UE_GENERIC_2",
+        "UE_GENERIC_3",
         "CP3880"
       ],
       "7": [
-        "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5",
         "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "8": [
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ],
       "9": []
     },
-    "reason": "The plan reaches exactly 160 MC with no semester over 20 MC (CP3880 does not count toward the load) and finishes CS2040S in semester 2. It covers the algorithms-theory focus with CS3230, CS3231, CS4231, CS4234 and CS4430, and also meets the level-4000 (16 MC), B&D (36 MC including CP3880), ID/CD and university-level requirements."
+    "reason": "A plan is feasible: CS2040S is done in semester 2 and CS3230 in semester 3. The algorithms_theory focus is met by CS3230, CS3231, CS4231, CS4234 and CS4430, which together with CS3236 and CP3880 give 32 MC of breadth and depth and 12 MC at level 4000, for 160 MC in total with no semester above 20 MC."
   },
   "parse_error": null
 }

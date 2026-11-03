@@ -1,26 +1,27 @@
 {
   "instance": "unsat_t1_6sem_cap26",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Six semesters at a 26 MC cap cannot reach 160 MC. Only two modules (CS3216, CS3217) are 5 MC and the 8 MC options are CS3203, CP3209 and CP4106 (the CP-coded cap allows only one of the latter two). The CS2103T prerequisite chain keeps Semesters 1 to 3 at 24 MC or less, Semesters 4 to 6 reach at most 74 MC, so counted unit load tops out near 146 MC, and the required 12 MC industrial-experience option brings the total to about 158 MC.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC minimum cannot be reached within 6 semesters at 26 MC each: almost every module is 4 MC, and only two 5 MC modules (CS3216, CS3217) and two 8 MC modules (CS3203 plus one CP-coded project within the 12 MC CP cap) exist, which caps non-industrial units at 146. The single industrial option adds at most 12 MC, giving at most 158 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 100.78,
-  "cost_usd": 0.01181,
+  "latency_s": 111.7,
+  "cost_usd": 0.012757,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 23324,
+    "output_tokens": 25216,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:11:04+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:35:07+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Six semesters at a 26 MC cap cannot reach 160 MC. Only two modules (CS3216, CS3217) are 5 MC and the 8 MC options are CS3203, CP3209 and CP4106 (the CP-coded cap allows only one of the latter two). The CS2103T prerequisite chain keeps Semesters 1 to 3 at 24 MC or less, Semesters 4 to 6 reach at most 74 MC, so counted unit load tops out near 146 MC, and the required 12 MC industrial-experience option brings the total to about 158 MC."
+    "reason": "The 160 MC minimum cannot be reached within 6 semesters at 26 MC each: almost every module is 4 MC, and only two 5 MC modules (CS3216, CS3217) and two 8 MC modules (CS3203 plus one CP-coded project within the 12 MC CP cap) exist, which caps non-industrial units at 146. The single industrial option adds at most 12 MC, giving at most 158 MC."
   },
   "parse_error": null
 }

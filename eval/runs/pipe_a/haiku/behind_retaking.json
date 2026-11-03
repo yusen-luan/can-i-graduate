@@ -1,22 +1,23 @@
 {
   "instance": "behind_retaking",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"CS2107\"]},{\"semester\":2,\"modules\":[\"CS2101\",\"CS2103T\",\"CS3230\",\"CS2106\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS4234\",\"CS4263\",\"CS2109S\",\"ES2660\",\"GEA1000\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"IS1108\",\"DTK1234\",\"HSI1000\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS2105\",\"GEC1015\",\"GESS1020\",\"GEN2003\",\"CP3880\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A feasible plan exists: algorithms theory is covered by CS3230, CS4234 and CS4231 (12 MC at level 4000), the CP3880 internship supplies the 32 MC of B&D, and the remaining 10 generic electives bring the total to exactly 160 MC with no semester above 20 MC.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS3231\",\"GEA1000\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS2102\",\"GESS1020\",\"GEC1015\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4234\",\"GEN2003\",\"DTK1234\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"HSI1000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The plan completes all required modules, takes CP3880 as the single internship option, and uses CS3230, CS3231, CS4231, CS4234 and CS4430 for the algorithms_theory focus (three of them at level 4000 or above). It reaches exactly 160 MC with 10 generic electives, 32 MC of B&D, 12 MC at level 4000, and no semester above 20 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 56.61,
-  "cost_usd": 0.008894,
+  "latency_s": 44.49,
+  "cost_usd": 0.006739,
   "request_id": "",
   "usage": {
     "input_tokens": 87,
-    "output_tokens": 14252,
-    "cache_creation_input_tokens": 14078,
+    "output_tokens": 9934,
+    "cache_creation_input_tokens": 14103,
     "cache_read_input_tokens": 0
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:05:44+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:31:03+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,56 +26,56 @@
         "CS2040S",
         "CS2100",
         "MA1522",
-        "CS2107"
+        "IS1108"
       ],
       "2": [
-        "CS2101",
-        "CS2103T",
-        "CS3230",
         "CS2106",
-        "ST2334"
+        "CS2109S",
+        "CS3230",
+        "ST2334",
+        "ES2660"
       ],
       "3": [
-        "CS4234",
-        "CS4263",
-        "CS2109S",
-        "ES2660",
+        "CS2101",
+        "CS2103T",
+        "CS3231",
         "GEA1000"
       ],
       "4": [
         "CS4231",
-        "IS1108",
-        "DTK1234",
-        "HSI1000",
-        "IS1128"
+        "CS2102",
+        "GESS1020",
+        "GEC1015",
+        "CP3880"
       ],
       "5": [
-        "CS2105",
-        "GEC1015",
-        "GESS1020",
+        "CS4234",
         "GEN2003",
-        "CP3880",
-        "UE_GENERIC_1"
+        "DTK1234",
+        "IS1128"
       ],
       "6": [
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "CS4430",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
       ],
       "7": [
+        "UE_GENERIC_3",
         "UE_GENERIC_4",
         "UE_GENERIC_5"
       ],
       "8": [
         "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
       ],
       "9": [
-        "UE_GENERIC_8",
         "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "A feasible plan exists: algorithms theory is covered by CS3230, CS4234 and CS4231 (12 MC at level 4000), the CP3880 internship supplies the 32 MC of B&D, and the remaining 10 generic electives bring the total to exactly 160 MC with no semester above 20 MC."
+    "reason": "The plan completes all required modules, takes CP3880 as the single internship option, and uses CS3230, CS3231, CS4231, CS4234 and CS4430 for the algorithms_theory focus (three of them at level 4000 or above). It reaches exactly 160 MC with 10 generic electives, 32 MC of B&D, 12 MC at level 4000, and no semester above 20 MC."
   },
   "parse_error": null
 }

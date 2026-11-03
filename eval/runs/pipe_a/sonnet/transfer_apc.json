@@ -1,22 +1,23 @@
 {
   "instance": "transfer_apc",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2102\",\"CS3230\",\"GEC1015\",\"GESS1001\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS3223\",\"CS4225\",\"GEN2004\",\"IS1128\",\"HSI1000\"]},{\"semester\":5,\"modules\":[\"CS4224\",\"CDE2300\",\"EL1101E\",\"HSH1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4221\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"CP3880\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"All required modules, university requirements, 3 ID modules and the database focus (CS2102, CS3223, CS4225, CS4224, CS4221) fit within the 20 MC cap. The CP3880 internship is placed in semester 7 after CS2101 and CS2103T. This gives 32 MC of B&D, 12 MC at level 4000 and at least 160 MC in total.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2109S\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS3223\",\"CS3230\",\"CS2106\",\"IS1108\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CS4221\",\"CS4225\",\"GESS1020\",\"HSI1000\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS4224\",\"GEN2000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"The plan fits within 8 semesters at no more than 20 MC each. It meets all prerequisites and offering terms, and covers the required and university-level modules, 3 ID modules, the database systems focus (CS2102, CS3223, CS4221, CS4224, CS4225), 12 MC at level 4000, 32 MC of B&D with CP3880 as the internship, and 160 MC in total.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 16.52,
-  "cost_usd": 0.026812,
+  "latency_s": 15.01,
+  "cost_usd": 0.024407,
   "request_id": "",
   "usage": {
     "input_tokens": 108,
-    "output_tokens": 2378,
+    "output_tokens": 2137,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:13:04+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:26+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,52 +26,51 @@
         "CS2040S",
         "CS2100",
         "ES2660",
-        "IS1108"
+        "GEC1015"
       ],
       "2": [
         "CS2103T",
         "CS2101",
-        "CS2106",
+        "CS2102",
         "CS2109S",
         "ST2334"
       ],
       "3": [
-        "CS2102",
+        "CS3223",
         "CS3230",
-        "GEC1015",
-        "GESS1001",
+        "CS2106",
+        "IS1108",
         "DTK1234"
       ],
       "4": [
-        "CS3223",
+        "CS4221",
         "CS4225",
-        "GEN2004",
-        "IS1128",
-        "HSI1000"
+        "GESS1020",
+        "HSI1000",
+        "IS1128"
       ],
       "5": [
         "CS4224",
-        "CDE2300",
-        "EL1101E",
-        "HSH1000",
-        "UE_GENERIC_1"
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ],
       "6": [
-        "CS4221",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3",
+        "CP3880",
         "UE_GENERIC_4",
-        "UE_GENERIC_5"
-      ],
-      "7": [
+        "UE_GENERIC_5",
         "UE_GENERIC_6",
         "UE_GENERIC_7",
-        "UE_GENERIC_8",
-        "CP3880"
+        "UE_GENERIC_8"
+      ],
+      "7": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ],
       "8": []
     },
-    "reason": "All required modules, university requirements, 3 ID modules and the database focus (CS2102, CS3223, CS4225, CS4224, CS4221) fit within the 20 MC cap. The CP3880 internship is placed in semester 7 after CS2101 and CS2103T. This gives 32 MC of B&D, 12 MC at level 4000 and at least 160 MC in total."
+    "reason": "The plan fits within 8 semesters at no more than 20 MC each. It meets all prerequisites and offering terms, and covers the required and university-level modules, 3 ID modules, the database systems focus (CS2102, CS3223, CS4221, CS4224, CS4225), 12 MC at level 4000, 32 MC of B&D with CP3880 as the internship, and 160 MC in total."
   },
   "parse_error": null
 }

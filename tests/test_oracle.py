@@ -126,11 +126,18 @@ def test_A1_breadth_depth_shortfall():
     assert any("breadth & depth" in e for e in check(plan))
 
 
-def test_A1_cp_coded_cap_exceeded():
-    # CP4101(12u) + another CP-coded module exceeds the 12u CP-coded cap.
-    codes = BD["cp_coded"]["codes"]
-    plan = {i + 1: [c] for i, c in enumerate(codes)}  # all CP-coded, each own sem
-    assert any("cp-coded" in e for e in check(plan, student=with_student(eligible_fyp=True)))
+def test_A1_cp_excess_spills_to_ue_not_a_violation():
+    # Issue #1 / D47: CP credit beyond the 12u B&D allocation is NOT a violation --
+    # it counts as a UE. A want_fyp + want_urop plan carries CP4101 (12u) PLUS a
+    # UROP CP module (>12u CP total) yet must be checker-clean (excess -> UE).
+    st = with_student(eligible_fyp=True)
+    r = solve(student=st, want_fyp=True, want_urop=True, target_semesters=9)
+    assert r.feasible
+    taken = {m for ms in r.plan.values() for m in ms}
+    cp_units = sum(MODULES[m]["units"] for m in taken if m in BD["cp_coded"]["codes"])
+    assert cp_units > BD["cp_coded"]["max_units"]          # genuinely over the cap
+    assert check(r.plan, student=st, want_fyp=True, want_urop=True,
+                 target_semesters=9) == []
 
 
 def test_A1_total_units_shortfall():
@@ -149,8 +156,9 @@ def test_A1_idcd_count_violation():
 
 
 def test_A1_urop_requires_eligibility():
+    # UROP is CP3209 specifically now (Issue #4); taking it without eligibility is flagged.
     st = with_student(eligible_urop=False)
-    assert any("eligible_urop" in e for e in check({1: ["CP3106"]}, student=st))
+    assert any("eligible_urop" in e for e in check({1: ["CP3209"]}, student=st))
 
 
 # ======================================================================== #
@@ -244,16 +252,17 @@ def test_A4_T2_bin_packing_residue():
     assert solve(target_semesters=6, max_units_per_semester=28).feasible
 
 
-def test_A4_T4_cp_cap_fyp_urop_conflict():
-    # FYP (CP4101, 12u) + UROP is UNSAT because CP4101 alone fills the 12u CP cap.
-    st = with_student(eligible_fyp=True)
-    assert not build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL,
-                                     scenario(want_fyp=True, want_urop=True,
-                                              target_semesters=9)).feasible
-    # relax ONLY the UROP request -> flips SAT, confirming the CP cap is the binding reason.
-    assert build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL,
-                                 scenario(want_fyp=True, want_urop=False,
-                                          target_semesters=9)).feasible
+def test_A4_T4_forbid_required_core_conflict():
+    # T4 policy trap: forbidding required core modules (CS2100 + CS2103T) is UNSAT
+    # at any horizon. (Replaces the old CP-cap FYP+UROP trap, which Issue #1 / D47
+    # corrected to be feasible.)
+    forbid = {"forbid_modules": ["CS2100", "CS2103T"]}
+    assert not build_and_solve_iter2(MODULES, PROGRAM, STUDENT, FOCUS, PRECL,
+                                     scenario(target_semesters=9,
+                                              preferences={**SCEN["preferences"], **forbid})).feasible
+    # relax ONLY the forbid -> flips SAT, confirming the forbid is the binding reason.
+    assert build_and_solve_iter2(MODULES, PROGRAM, STUDENT, FOCUS, PRECL,
+                                 scenario(target_semesters=9)).feasible
 
 
 # ======================================================================== #
@@ -301,10 +310,10 @@ def test_no_empty_semesters_is_actually_enforced():
 
 
 def test_explainer_probes_the_given_instance():
-    # FYP + UROP is UNSAT at any horizon (CP cap): the explainer must not claim
-    # a longer horizon fixes it, and must name the request as the blocker.
-    st =with_student(eligible_fyp=True)
-    sc = scenario(want_fyp=True, want_urop=True, target_semesters=9)
-    why = explain_infeasible_iter2(MODULES, PROGRAM, st, FOCUS, PRECL, sc)
+    # Forbidding a required core is UNSAT at any horizon: the explainer must not
+    # claim a longer horizon fixes it, and must name the pins/forbids as the blocker.
+    sc = scenario(target_semesters=9,
+                  preferences={**SCEN["preferences"], "forbid_modules": ["CS2100", "CS2103T"]})
+    why = explain_infeasible_iter2(MODULES, PROGRAM, STUDENT, FOCUS, PRECL, sc)
     assert "target_semesters" not in why
-    assert "UROP" in why or "final-year" in why
+    assert "forbid" in why or "pins" in why

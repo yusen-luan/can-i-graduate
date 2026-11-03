@@ -4,80 +4,80 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1128\",\"GES1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2105\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3219\",\"GEC1000\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CS3213\",\"CP3209\",\"CS4218\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"CS4239\",\"CS4211\",\"GEX1000\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The 160 MC degree (core, maths, common curriculum, software engineering focus area, 12 MC CP3880, 8 MC UROP via CP3209, and 10 UEs) fits in 9 semesters at 20 MC or fewer each, with prerequisites ordered and CP3880 in its own semester. The module list is from memory of NUS requirements and was not checked against the official catalogue.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2103T\",\"MA1521\",\"CS2101\",\"GESS1000\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS3230\",\"ST2334\",\"CS2102\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3213\",\"CS3217\",\"GEC1000\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3219\",\"CS4218\",\"CS4231\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4239\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3209\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"GEX1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"The degree needs about 160 MC, which fits within 9 semesters at up to 20 MC each (180 MC of capacity). The plan covers the foundation, maths, software engineering focus, the CP3880 internship and the CP3209 UROP, with prerequisites met in order. The exact module codes for university-level and breadth requirements are from my own recollection and are not fully verified.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 35.2,
-  "cost_usd": 0.048167,
+  "latency_s": 63.56,
+  "cost_usd": 0.081727,
   "request_id": "",
   "usage": {
     "input_tokens": 105,
-    "output_tokens": 4776,
+    "output_tokens": 8132,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:20:47+00:00",
+  "timestamp": "2026-11-02T14:42:39+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "CS1010",
         "CS1231S",
-        "MA1521",
+        "CS2030S",
+        "CS2100",
         "MA1522",
         "GEA1000"
       ],
       "2": [
-        "CS2030S",
         "CS2040S",
-        "CS2100",
-        "IS1128",
-        "GES1000"
+        "CS2103T",
+        "MA1521",
+        "CS2101",
+        "GESS1000"
       ],
       "3": [
-        "CS2103T",
-        "CS2101",
-        "CS2102",
-        "CS2105",
-        "ST2334"
-      ],
-      "4": [
         "CS2106",
         "CS3230",
-        "CS3219",
-        "GEC1000",
-        "GEN2000"
+        "ST2334",
+        "CS2102",
+        "IS1128"
       ],
-      "5": [
+      "4": [
+        "CS2109S",
         "CS3213",
-        "CP3209",
-        "CS4218",
+        "CS3217",
+        "GEC1000",
         "UE_GENERIC_1"
       ],
-      "6": [
-        "CP3880"
+      "5": [
+        "CS3219",
+        "CS4218",
+        "CS4231",
+        "GEN2000",
+        "UE_GENERIC_2"
       ],
-      "7": [
+      "6": [
+        "CP3880",
         "CS4239",
-        "CS4211",
-        "GEX1000",
-        "UE_GENERIC_2",
         "UE_GENERIC_3"
       ],
-      "8": [
+      "7": [
+        "CP3209",
         "UE_GENERIC_4",
         "UE_GENERIC_5",
-        "UE_GENERIC_6",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "GEX1000",
         "UE_GENERIC_7",
-        "UE_GENERIC_8"
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
       ],
       "9": [
-        "UE_GENERIC_9",
         "UE_GENERIC_10"
       ]
     },
-    "reason": "The 160 MC degree (core, maths, common curriculum, software engineering focus area, 12 MC CP3880, 8 MC UROP via CP3209, and 10 UEs) fits in 9 semesters at 20 MC or fewer each, with prerequisites ordered and CP3880 in its own semester. The module list is from memory of NUS requirements and was not checked against the official catalogue."
+    "reason": "The degree needs about 160 MC, which fits within 9 semesters at up to 20 MC each (180 MC of capacity). The plan covers the foundation, maths, software engineering focus, the CP3880 internship and the CP3209 UROP, with prerequisites met in order. The exact module codes for university-level and breadth requirements are from my own recollection and are not fully verified."
   },
   "parse_error": null
 }

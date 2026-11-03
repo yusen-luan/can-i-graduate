@@ -41,62 +41,63 @@
   "ground_truth": {
     "feasible": true,
     "status": "OPTIMAL",
+    "proven_infeasible": false,
     "plan": {
       "1": [
         "CS1101S",
         "CS1231S",
-        "GEA1000",
-        "MA1521"
+        "MA1521",
+        "SC1101E",
+        "UE_GENERIC_6"
       ],
       "2": [
         "CS2040S",
-        "CS2100",
-        "IS1128",
-        "ST2334"
+        "ES2660",
+        "GEN2004",
+        "ST2334",
+        "UE_GENERIC_3"
       ],
       "3": [
-        "CS2030S",
-        "CS2109S",
-        "CS3231",
-        "MA1522",
-        "SC1101E"
+        "CS2100",
+        "CS3230",
+        "GEA1000",
+        "GESS1001",
+        "UE_GENERIC_2"
       ],
       "4": [
-        "CS2101",
-        "CS2103T",
-        "CS3230",
-        "CS4430",
-        "GEN2000"
+        "CS4231",
+        "GESS1020",
+        "GESS1025",
+        "HSI1000",
+        "UE_GENERIC_5"
       ],
       "5": [
-        "CS2106",
-        "DTK1234",
-        "UE_GENERIC_10"
-      ],
-      "6": [
-        "CS4231",
-        "GEC1015",
-        "GESS1020",
-        "UE_GENERIC_2",
+        "CS3231",
+        "IS1128",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
         "UE_GENERIC_9"
       ],
+      "6": [
+        "CS2030S",
+        "CS2106",
+        "CS3236",
+        "CS4430",
+        "MA1522"
+      ],
       "7": [
+        "CS2109S",
         "CS4234",
-        "ES2660",
-        "GEC1030",
-        "GEN2003",
         "IS1108"
       ],
       "8": [
-        "CS3236",
-        "UE_GENERIC_7"
+        "ETP3201L"
       ],
       "9": [
-        "ETP3201L",
-        "GEN2001",
-        "GESS1025",
-        "UE_GENERIC_1",
-        "UE_GENERIC_6"
+        "CS2101",
+        "CS2103T",
+        "GEC1030",
+        "GEN2001"
       ]
     },
     "total_units": 160
@@ -114,19 +115,17 @@
     ],
     "difficulty": {
       "num_variables": 1044,
-      "num_constraints": 3446,
+      "num_total_variables": 2642,
+      "num_constraints": 3480,
       "min_feasible_semesters": 8,
       "semester_slack": 1,
-      "min_feasible_cap": 20,
       "cap_slack": 0,
-      "near_unsat_margin": 0
+      "min_feasible_cap": 20,
+      "cap_min_bounded": false
     },
     "quality": {
-      "realism": 91.4,
-      "flags": [
-        "Semester 8: only 8 MC \u2014 very light",
-        "Semester 7: 3 GE/ULR modules clustered together"
-      ]
+      "realism": 88.1,
+      "flags": []
     }
   }
 }

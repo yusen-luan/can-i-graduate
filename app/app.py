@@ -544,10 +544,20 @@ except ValueError as e:
     st.stop()
 
 if not result.feasible:
-    reason = explain_infeasible_iter2(modules, program, student, focus, precl, scenario)
-    st.markdown("<div class='tiles'><div class='tile no'><div class='n'>No valid plan</div>"
-                "<div class='l'>under these settings</div></div></div>"
-                f"<div class='subline no'>{reason}</div>", unsafe_allow_html=True)
+    # Issue #7: distinguish a PROVEN infeasibility from an unresolved search
+    # (UNKNOWN timeout / MODEL_INVALID). Only INFEASIBLE may be reported as
+    # "no plan exists"; an unresolved status is explicitly inconclusive.
+    if result.proven_infeasible:
+        reason = explain_infeasible_iter2(modules, program, student, focus, precl, scenario)
+        st.markdown("<div class='tiles'><div class='tile no'><div class='n'>No valid plan</div>"
+                    "<div class='l'>proven infeasible</div></div></div>"
+                    f"<div class='subline no'>{reason}</div>", unsafe_allow_html=True)
+    else:
+        st.markdown("<div class='tiles'><div class='tile no'><div class='n'>Inconclusive</div>"
+                    "<div class='l'>search unresolved</div></div></div>"
+                    f"<div class='subline no'>Solver returned {result.status} (no verdict) "
+                    "within the time limit — this is not a proof that no plan exists.</div>",
+                    unsafe_allow_html=True)
     st.stop()
 
 violations = check_plan_iter2(result.plan, modules, program, student, focus, precl, scenario)
@@ -566,7 +576,23 @@ st.markdown(
     f"<div class='l'>checker</div></div></div>",
     unsafe_allow_html=True)
 if not valid:
-    st.markdown(f"<div class='subline no'>Checker: {'; '.join(violations)}</div>", unsafe_allow_html=True)
+    # Issue #8: a plan the independent checker rejects must NOT be presented as an
+    # accepted study plan. The solver and checker should agree, so this signals a
+    # solver/checker mismatch (a bug). Isolate it as a rejected candidate: show the
+    # violations, render the grid only as a diagnostic, and suppress the
+    # "requirements met" panel (its green badges would mislead).
+    st.markdown(
+        "<div class='subline no'>This candidate was REJECTED by the independent checker and "
+        "is not offered as a valid plan. Violations: " + "; ".join(violations) + "</div>",
+        unsafe_allow_html=True)
+    st.markdown("<div class='sect'>Rejected candidate (diagnostic only)</div>",
+                unsafe_allow_html=True)
+    st.markdown("<div class='legend'>" + "".join(
+        f"<span><i style='background:{c}'></i>{n}</span>" for n, c in LEGEND) + "</div>",
+        unsafe_allow_html=True)
+    st.markdown(plan_grid_html(result.plan, modules, scenario, cap, INDUSTRIAL, ceiling),
+                unsafe_allow_html=True)
+    st.stop()
 
 left, right = st.columns([3, 2], gap="large")
 with left:

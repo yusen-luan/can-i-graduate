@@ -86,9 +86,9 @@ def test_perfect_fake_llm_scores_100(monkeypatch):
     s, rows = score.grade_all("fake", INSTANCES, preds)
     assert [r["violations"] for r in rows if r["violations"]] == []
     assert s["feasibility_accuracy"]["pct"] == 100.0
-    assert s["plan_validity"] == {"n": 17, "d": 17, "pct": 100.0}
+    assert s["plan_validity"] == {"n": 18, "d": 18, "pct": 100.0}
     assert s["unsat_t1_recall"]["d"] == 7 and s["unsat_t2_4_recall"]["d"] == 11
-    assert s["cost_total_usd"] == pytest.approx(0.35)
+    assert s["cost_total_usd"] == pytest.approx(0.36)
 
 
 def test_broken_answers_count_as_wrong(monkeypatch):
@@ -115,15 +115,15 @@ def test_controls_match_report_table3():
     always, fixed = score.baseline_predictions(INSTANCES)
     a, _ = score.grade_all("always-SAT", INSTANCES, always)
     c, _ = score.grade_all("canonical-4yr", INSTANCES, fixed)
-    assert a["feasibility_accuracy"]["n"] == 17 and a["plan_validity"]["n"] == 0
+    assert a["feasibility_accuracy"]["n"] == 18 and a["plan_validity"]["n"] == 0
     assert a["unsat_t1_recall"]["n"] == a["unsat_t2_4_recall"]["n"] == 0
-    assert c["plan_validity"] == {"n": 3, "d": 17, "pct": 17.6}
-    assert c["realism_mean"] == 94.0
+    assert c["plan_validity"] == {"n": 3, "d": 18, "pct": 16.7}
+    assert c["realism_mean"] == 90.5
 
 
 def test_tiers_and_violation_buckets():
     from collections import Counter
-    assert Counter(i["meta"]["tier"] for i in INSTANCES) == {"SAT": 17, "T1": 7, "T4": 10, "T2": 1}
+    assert Counter(i["meta"]["tier"] for i in INSTANCES) == {"SAT": 18, "T1": 7, "T4": 10, "T2": 1}
     _, fixed = score.baseline_predictions(INSTANCES)
     _, rows = score.grade_all("canonical-4yr", INSTANCES, fixed)
     msgs = [v for r in rows for v in r["violations"]]

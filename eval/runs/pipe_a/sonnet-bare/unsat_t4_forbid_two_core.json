@@ -4,24 +4,80 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory Computer Science Foundation module with no accepted substitute in the BComp (CS) requirements, so the request to avoid it cannot be met. Avoiding CS2103T alone would be possible by taking CS2103 with CS2101.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"GEX1000\"]},{\"semester\":2,\"modules\":[\"CS2030\",\"CS2040S\",\"MA1521\",\"ST2334\",\"GEC1000\"]},{\"semester\":3,\"modules\":[\"CS2100DE\",\"CS2103\",\"CS2101\",\"CS2109S\",\"GES1000\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"IS1108\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS3203\",\"CS3263\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CS4248\",\"CS3210\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"CS3211\"]},{\"semester\":8,\"modules\":[\"CS4231\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"Feasible: CS2100DE and CS2103 (with CS2101) replace CS2100 and CS2103T, and the plan reaches 160 MC with at most 20 MC per semester and 8 UEs. I recalled the exact degree structure from memory and may have it slightly wrong.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 17.71,
-  "cost_usd": 0.022129,
+  "latency_s": 61.84,
+  "cost_usd": 0.084199,
   "request_id": "",
   "usage": {
     "input_tokens": 91,
-    "output_tokens": 2175,
+    "output_tokens": 8382,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:23:57+00:00",
+  "timestamp": "2026-11-02T14:44:59+00:00",
   "prediction": {
-    "feasible": false,
-    "plan": {},
-    "reason": "CS2100 Computer Organisation is a compulsory Computer Science Foundation module with no accepted substitute in the BComp (CS) requirements, so the request to avoid it cannot be met. Avoiding CS2103T alone would be possible by taking CS2103 with CS2101."
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000",
+        "GEX1000"
+      ],
+      "2": [
+        "CS2030",
+        "CS2040S",
+        "MA1521",
+        "ST2334",
+        "GEC1000"
+      ],
+      "3": [
+        "CS2100DE",
+        "CS2103",
+        "CS2101",
+        "CS2109S",
+        "GES1000"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "IS1108",
+        "GEN2000"
+      ],
+      "5": [
+        "CS3244",
+        "CS3203",
+        "CS3263",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS4246",
+        "CS4248",
+        "CS3210",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CP3880",
+        "CS3211"
+      ],
+      "8": [
+        "CS4231",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: CS2100DE and CS2103 (with CS2101) replace CS2100 and CS2103T, and the plan reaches 160 MC with at most 20 MC per semester and 8 UEs. I recalled the exact degree structure from memory and may have it slightly wrong."
   },
   "parse_error": null
 }

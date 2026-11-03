@@ -32,7 +32,7 @@ Do NOT plan the degree and do NOT judge whether the request is achievable. If a 
   - "CP3200": CP3200 Internship + CP3202 Internship II
   - "CP3107": CP3107 Computing for Social Service Agencies I + CP3110 Computing for Social Service Agencies II
   - "ETP3205": ETP3205 Innovation & Enterprise Internship
-- "want_fyp": they want to do the final-year project (CP4101). "want_urop": they want to do a UROP research project (CP3106, CP3209, CP4106).
+- "want_fyp": they want to do the final-year project (CP4101). "want_urop": they want to do a UROP research project (CP3209).
 - "term_layout": empty unless they designate some plan semesters as Special Terms. Otherwise list the NUS term of every plan semester 1..T (exactly T entries): regular semesters alternate 1, 2, 1, 2, ... in order starting with 1, skipping the special slots; a special slot after a Sem 2 is 3 (Special Term 3) and one after a Special Term 3 is 4 (Special Term 4).
 - "semester_caps": semester-specific unit caps, e.g. "at most 8 MC in semester 6" -> {"semester": 6, "max_units": 8}. Taking a semester off entirely means "max_units": 0.
 - "max_cs_modules_per_sem": the most CS/IFS/CP-coded modules they will take in any one semester; 0 = no such limit.

@@ -1,22 +1,23 @@
 {
   "instance": "nearbnd_min_horizon",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS3263\",\"ES2660\",\"GEC1015\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4243\",\"CS4244\",\"CS4248\",\"GESS1020\",\"GEN2003\"]},{\"semester\":6,\"modules\":[\"DTK1234\",\"IE2141\",\"HSI1000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"A plan exists: every semester stays within 20 MC, and the total reaches 160 MC. The AI focus is met with CS2109S, CS3243, CS3244, CS3263, CS4243, CS4244 and CS4248 (12 MC at level 4000), B&D is covered by CP3880 plus the AI electives, and three ID modules (DTK1234, IE2141, HSI1000) fill the ID/CD requirement, with 9 generic electives (UE) making up the remaining units.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"ES2660\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4243\",\"CP3880\",\"GEN2003\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CS4248\",\"HSI1000\",\"IS1128\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Yes, this can be done within 8 semesters at no more than 20 MC per semester, totalling exactly 160 MC with every prerequisite taken in an earlier semester. The artificial intelligence focus is met by CS2109S, CS3243, CS3244, CS3263, CS4243, CS4246 and CS4248; the internship is CP3880, which does not count toward the semester's unit load, and nine generic unrestricted electives (UE) fill the remaining units.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 12.88,
-  "cost_usd": 0.033532,
+  "latency_s": 13.98,
+  "cost_usd": 0.036357,
   "request_id": "",
   "usage": {
     "input_tokens": 89,
-    "output_tokens": 1518,
+    "output_tokens": 1659,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:15:09+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:22+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -44,38 +45,38 @@
       "4": [
         "CS3243",
         "CS3244",
-        "CS3263",
         "ES2660",
         "GEC1015",
-        "CP3880"
+        "GESS1020"
       ],
       "5": [
+        "CS3263",
         "CS4243",
-        "CS4244",
-        "CS4248",
-        "GESS1020",
-        "GEN2003"
+        "CP3880",
+        "GEN2003",
+        "DTK1234"
       ],
       "6": [
-        "DTK1234",
-        "IE2141",
+        "CS4246",
+        "CS4248",
         "HSI1000",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "IS1128",
+        "UE_GENERIC_1"
       ],
       "7": [
+        "UE_GENERIC_2",
         "UE_GENERIC_3",
         "UE_GENERIC_4",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_5"
       ],
       "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
         "UE_GENERIC_8",
         "UE_GENERIC_9"
       ]
     },
-    "reason": "A plan exists: every semester stays within 20 MC, and the total reaches 160 MC. The AI focus is met with CS2109S, CS3243, CS3244, CS3263, CS4243, CS4244 and CS4248 (12 MC at level 4000), B&D is covered by CP3880 plus the AI electives, and three ID modules (DTK1234, IE2141, HSI1000) fill the ID/CD requirement, with 9 generic electives (UE) making up the remaining units."
+    "reason": "Yes, this can be done within 8 semesters at no more than 20 MC per semester, totalling exactly 160 MC with every prerequisite taken in an earlier semester. The artificial intelligence focus is met by CS2109S, CS3243, CS3244, CS3263, CS4243, CS4246 and CS4248; the internship is CP3880, which does not count toward the semester's unit load, and nine generic unrestricted electives (UE) fill the remaining units."
   },
   "parse_error": null
 }

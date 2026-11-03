@@ -40,60 +40,61 @@
   "ground_truth": {
     "feasible": true,
     "status": "OPTIMAL",
+    "proven_infeasible": false,
     "plan": {
       "1": [
-        "CS1101S",
-        "CS1231S",
+        "ES2660",
         "IS1108",
-        "MA1521",
-        "UE_GENERIC_9"
+        "UE_GENERIC_7"
       ],
       "2": [
-        "CS2030S",
-        "CS2040S",
-        "ST2334"
+        "ETP3201L"
       ],
       "3": [
-        "CS2100",
-        "CS2101",
-        "CS2103T",
-        "CS2109S",
-        "MA1522"
+        "GEN2001",
+        "IE2141",
+        "MA1521",
+        "SC1101E",
+        "UE_GENERIC_1"
       ],
       "4": [
-        "UE_GENERIC_2",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "CS1101S",
+        "CS1231S",
+        "GEA1000",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
       ],
       "5": [
-        "DTK1234",
-        "ES2660",
-        "IE2141",
-        "IS1128",
-        "UE_GENERIC_3"
+        "CS2040S",
+        "GESS1020",
+        "HSI1000",
+        "MA1522",
+        "UE_GENERIC_5"
       ],
       "6": [
-        "GEA1000",
-        "GEC1015",
-        "GEN2003"
+        "CS2030S",
+        "CS2109S",
+        "ST2334"
       ],
       "7": [
-        "CS2106",
+        "CS2100",
+        "CS4248",
         "CS4263",
-        "GESS1001"
+        "GEC1030",
+        "GEN2000"
       ],
       "8": [
-        "CS3230",
-        "CS4243",
-        "CS4248",
+        "CS2106",
         "GEN2004",
-        "GESS1025"
+        "UE_GENERIC_10",
+        "UE_GENERIC_6"
       ],
       "9": [
-        "ETP3201L",
-        "GEN2000",
-        "GEN2001",
-        "GESS1020"
+        "CS2101",
+        "CS2103T",
+        "CS3230",
+        "CS4243",
+        "GEN2003"
       ]
     },
     "total_units": 152
@@ -111,18 +112,18 @@
     ],
     "difficulty": {
       "num_variables": 1026,
-      "num_constraints": 3325,
+      "num_total_variables": 2543,
+      "num_constraints": 3359,
       "min_feasible_semesters": 7,
       "semester_slack": 2,
-      "min_feasible_cap": 16,
       "cap_slack": 4,
-      "near_unsat_margin": 2
+      "min_feasible_cap": 16,
+      "cap_min_bounded": false
     },
     "quality": {
-      "realism": 91.3,
+      "realism": 81.4,
       "flags": [
-        "Semester 6: 3 GE/ULR modules clustered together",
-        "Semester 9: 3 GE/ULR modules clustered together"
+        "Internship/FYP scheduled early: ETP3201L"
       ]
     }
   }

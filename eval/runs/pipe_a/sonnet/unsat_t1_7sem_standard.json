@@ -1,26 +1,27 @@
 {
   "instance": "unsat_t1_7sem_standard",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Seven semesters at a 20 MC cap allow at most 140 MC of regular load. Industrial-experience modules do not count toward the load, but only one option may be taken and the largest is 12 MC. That gives at most 152 MC, below the 160 MC graduation requirement.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 20 MC per-semester cap allows at most 7 x 20 = 140 MC of regular modules in 7 semesters. The single industrial-experience option adds at most 12 MC, which does not count toward the load, so the maximum is 152 MC. That is below the 160 MC graduation requirement, and the final-year project (CP4101) is not available because the student does not qualify.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.25,
-  "cost_usd": 0.0067,
+  "latency_s": 4.22,
+  "cost_usd": 0.007645,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 373,
+    "output_tokens": 467,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:13:08+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:30+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Seven semesters at a 20 MC cap allow at most 140 MC of regular load. Industrial-experience modules do not count toward the load, but only one option may be taken and the largest is 12 MC. That gives at most 152 MC, below the 160 MC graduation requirement."
+    "reason": "The 20 MC per-semester cap allows at most 7 x 20 = 140 MC of regular modules in 7 semesters. The single industrial-experience option adds at most 12 MC, which does not count toward the load, so the maximum is 152 MC. That is below the 160 MC graduation requirement, and the final-year project (CP4101) is not available because the student does not qualify."
   },
   "parse_error": null
 }

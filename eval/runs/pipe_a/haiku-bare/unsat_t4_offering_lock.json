@@ -4,24 +4,24 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 is a level-2000 module with prerequisites, so a student starting with no completed modules cannot finish it in plan semester 1 (the first semester), which makes the request impossible.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 has prerequisites (a programming foundation such as the CS1010 series) that cannot be completed before plan semester 1, and the student has no earlier semester in which to take them. So CS2108 cannot be finished by semester 1.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 3.9,
-  "cost_usd": 0.000362,
+  "latency_s": 7.35,
+  "cost_usd": 0.000488,
   "request_id": "",
   "usage": {
     "input_tokens": 100,
-    "output_tokens": 685,
+    "output_tokens": 936,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:17:26+00:00",
+  "timestamp": "2026-11-02T14:39:59+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS2108 is a level-2000 module with prerequisites, so a student starting with no completed modules cannot finish it in plan semester 1 (the first semester), which makes the request impossible."
+    "reason": "CS2108 has prerequisites (a programming foundation such as the CS1010 series) that cannot be completed before plan semester 1, and the student has no earlier semester in which to take them. So CS2108 cannot be finished by semester 1."
   },
   "parse_error": null
 }

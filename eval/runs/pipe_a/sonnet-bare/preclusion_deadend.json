@@ -4,79 +4,79 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2100\",\"CS2109S\",\"MA1521\",\"ST2334\",\"GEC1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2106\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS3230\",\"CS3243\",\"CS3244\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS4244\",\"CS4246\",\"GES1000\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"CS4231\",\"CS4234\",\"GEN2000\"]},{\"semester\":8,\"modules\":[\"CS4224\",\"CS4236\",\"GEX1000\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: at most 20 MC per semester, the AI focus area (CS3243, CS3244, CS4248 as primaries plus CS4243, CS4246, CS4244), the foundation, maths, industry experience, ULR and 40 MC of level-4000 modules fit in 9 semesters, with 4 UE in total. The module list is reconstructed from memory of the AY2026/27 requirements, so it needs checking against the official programme requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"MA1522\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2100\",\"MA1521\",\"CS2101\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"IS1128\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS3223\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"CS3235\",\"CS4225\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4246\",\"CS4244\",\"CS3203\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Feasible: the remaining modules for the core, maths, AI focus area, industry experience and electives fit in 9 semesters with at most 20 MC each. This plan is built from my recollection of the requirements, so some module choices, MC values and semester offerings need checking against the official NUS pages.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 50.12,
-  "cost_usd": 0.063199,
+  "latency_s": 66.48,
+  "cost_usd": 0.090249,
   "request_id": "",
   "usage": {
     "input_tokens": 76,
-    "output_tokens": 6285,
+    "output_tokens": 8990,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:23:06+00:00",
+  "timestamp": "2026-11-02T14:44:13+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1231S",
         "CS2030S",
-        "CS2040S",
         "MA1522",
-        "GEA1000N"
+        "GEA1000",
+        "UE_GENERIC_1"
       ],
       "2": [
+        "CS2040S",
         "CS2100",
-        "CS2109S",
         "MA1521",
-        "ST2334",
-        "GEC1000"
+        "CS2101",
+        "ES2660"
       ],
       "3": [
         "CS2103T",
-        "CS2101",
-        "CS2102",
-        "CS2106"
+        "CS2106",
+        "CS2109S",
+        "ST2334"
       ],
       "4": [
-        "CS2105",
         "CS3230",
         "CS3243",
         "CS3244",
-        "IS1128"
+        "IS1128",
+        "UE_GENERIC_2"
       ],
       "5": [
         "CS4248",
         "CS4243",
-        "CS4244",
-        "CS4246",
-        "GES1000"
+        "CS3223",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
       ],
       "6": [
         "CP3880"
       ],
       "7": [
-        "CP4101",
-        "CS4231",
-        "CS4234",
-        "GEN2000"
+        "CS3235",
+        "CS4225",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
       ],
       "8": [
-        "CS4224",
-        "CS4236",
-        "GEX1000",
-        "UE_GENERIC_1"
+        "CS4246",
+        "CS4244",
+        "CS3203",
+        "UE_GENERIC_8"
       ],
       "9": [
-        "UE_GENERIC_2",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "Feasible: at most 20 MC per semester, the AI focus area (CS3243, CS3244, CS4248 as primaries plus CS4243, CS4246, CS4244), the foundation, maths, industry experience, ULR and 40 MC of level-4000 modules fit in 9 semesters, with 4 UE in total. The module list is reconstructed from memory of the AY2026/27 requirements, so it needs checking against the official programme requirements."
+    "reason": "Feasible: the remaining modules for the core, maths, AI focus area, industry experience and electives fit in 9 semesters with at most 20 MC each. This plan is built from my recollection of the requirements, so some module choices, MC values and semester offerings need checking against the official NUS pages."
   },
   "parse_error": null
 }

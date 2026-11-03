@@ -4,20 +4,20 @@
   "condition": "bare",
   "model_key": "opus",
   "model": "claude-opus-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"IS1108\",\"GEA1000\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"GESS1025\",\"GEN2061\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2107\",\"ST2334\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2109S\",\"CS3230\",\"CS3235\",\"IS2218\",\"IS2238\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4236\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CS4257\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4239\",\"CS4231\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: this plan covers 160 MC over 7 semesters with no semester above 24 MC, and includes the common curriculum, CS foundation, maths, industry experience (CP3880) and breadth and depth. The Computer Security focus area is met through CS2107, CS3235, CS4236, CS4238 and CS4239; course codes, prerequisites and semester offerings are from memory and should be checked against NUSMods and the official AY2026/27 requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\",\"GESS1025\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2107\",\"HSI1000\",\"HSS1000\",\"EC1101E\",\"GEN2050X\"]},{\"semester\":5,\"modules\":[\"CS3235\",\"CS4236\",\"CS4257\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CS4239\",\"CS4276\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\",\"UE\"]}],\"reason\":\"This 160 MC plan covers the common curriculum, CS foundation and maths courses, the Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239 and more, with over 12 MC at level 4000) and the CP3880 industry experience, in 7 semesters at no more than 24 MC each. GE, interdisciplinary and cross-disciplinary course codes are examples and can be swapped for other valid options; check current prerequisites and semester offerings on NUSMods before registering.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 83.72,
-  "cost_usd": 0.161757,
+  "latency_s": 53.36,
+  "cost_usd": 0.104277,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 8061,
+    "output_tokens": 5187,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:26:21+00:00",
+  "timestamp": "2026-11-02T14:51:32+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -25,56 +25,56 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "IS1108",
+        "MA1522",
         "GEA1000",
-        "GEC1015"
+        "IS1108"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "MA1522",
-        "GESS1025",
-        "GEN2061"
+        "ST2334",
+        "ES2660",
+        "GEC1015"
       ],
       "3": [
         "CS2101",
         "CS2103T",
         "CS2106",
-        "CS2107",
-        "ST2334",
-        "ES2660"
+        "CS2109S",
+        "CS3230",
+        "GESS1025"
       ],
       "4": [
         "CS2105",
-        "CS2109S",
-        "CS3230",
-        "CS3235",
-        "IS2218",
-        "IS2238"
+        "CS2107",
+        "HSI1000",
+        "HSS1000",
+        "EC1101E",
+        "GEN2050X"
       ],
       "5": [
-        "CP3880",
+        "CS3235",
         "CS4236",
-        "DTK1234"
-      ],
-      "6": [
-        "CS4238",
         "CS4257",
         "UE_GENERIC_1",
         "UE_GENERIC_2",
-        "UE_GENERIC_3",
-        "UE_GENERIC_4"
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4238",
+        "CS4239",
+        "CS4276",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "7": [
-        "CS4239",
-        "CS4231",
-        "UE_GENERIC_5",
+        "CP3880",
         "UE_GENERIC_6",
         "UE_GENERIC_7"
       ]
     },
-    "reason": "Feasible: this plan covers 160 MC over 7 semesters with no semester above 24 MC, and includes the common curriculum, CS foundation, maths, industry experience (CP3880) and breadth and depth. The Computer Security focus area is met through CS2107, CS3235, CS4236, CS4238 and CS4239; course codes, prerequisites and semester offerings are from memory and should be checked against NUSMods and the official AY2026/27 requirements."
+    "reason": "This 160 MC plan covers the common curriculum, CS foundation and maths courses, the Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239 and more, with over 12 MC at level 4000) and the CP3880 industry experience, in 7 semesters at no more than 24 MC each. GE, interdisciplinary and cross-disciplinary course codes are examples and can be swapped for other valid options; check current prerequisites and semester offerings on NUSMods before registering."
   },
   "parse_error": null
 }

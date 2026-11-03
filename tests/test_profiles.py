@@ -41,7 +41,8 @@ def _relax_preclusion(st, sc):
 
 RELAX = {
     "preclusion_deadend": _relax_preclusion,                       # credit recognised
-    "fyp_urop_trap": lambda st, sc: (st, {**sc, "want_urop": False}),  # drop UROP
+    "forbid_core_trap": lambda st, sc: (st, {**sc, "preferences":   # unforbid the core
+        {**sc["preferences"], "forbid_modules": []}}),
     "infeasible_3yr": lambda st, sc: (st, with_horizon(sc, 8)),        # 4-year horizon
 }
 

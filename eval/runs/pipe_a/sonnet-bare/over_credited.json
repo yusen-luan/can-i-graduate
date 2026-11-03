@@ -4,61 +4,61 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2109S\",\"ST2334\"]},{\"semester\":2,\"modules\":[\"CS2105\",\"CS2106\",\"CS3230\",\"CS3243\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS3263\",\"GEA1000\",\"GESS1000\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS4246\",\"CS4248\",\"GEC1000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4243\",\"GEN2000\",\"GEX1000\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"After the exemptions, about 132 MC remain, which fits within 8 semesters at 20 MC per semester. The plan covers the CS foundation, math, the AI focus area (CS3243, CS3244, CS3263, CS4243, CS4246, CS4248), the industry project and 10 UEs, and keeps prerequisites in order. The ULR module codes (GEA1000, GESS1000, GEC1000, GEN2000, GEX1000) are my best recollection of the common curriculum and should be checked against your official requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS3230\",\"CS3243\",\"ST2334\",\"ES2660\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS3263\",\"CS3210\",\"CS3217\",\"GEC1000\"]},{\"semester\":4,\"modules\":[\"GEN2000\",\"GESS1000\",\"GEX1000\",\"UE\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CP3880\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"After the exemptions about 132 MC remain, which fits within 8 semesters at up to 20 MC each (this plan finishes in 7). It covers the remaining core, math, AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4246, CS4248), industry experience, university-level requirements and electives. The exact module codes for the university-level requirements and the breadth electives are my best recollection of the AY2026/27 rules, so check them against the official requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 31.99,
-  "cost_usd": 0.043573,
+  "latency_s": 36.01,
+  "cost_usd": 0.047123,
   "request_id": "",
   "usage": {
     "input_tokens": 118,
-    "output_tokens": 4314,
+    "output_tokens": 4669,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:22:41+00:00",
+  "timestamp": "2026-11-02T14:43:24+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS2103T",
         "CS2101",
-        "CS2102",
+        "CS2106",
         "CS2109S",
-        "ST2334"
+        "GEA1000"
       ],
       "2": [
-        "CS2105",
-        "CS2106",
         "CS3230",
         "CS3243",
+        "ST2334",
+        "ES2660",
         "IS1128"
       ],
       "3": [
         "CS3244",
         "CS3263",
-        "GEA1000",
-        "GESS1000",
-        "UE_GENERIC_1"
+        "CS3210",
+        "CS3217",
+        "GEC1000"
       ],
       "4": [
-        "CS4246",
-        "CS4248",
-        "GEC1000",
-        "UE_GENERIC_2",
-        "UE_GENERIC_3"
+        "GEN2000",
+        "GESS1000",
+        "GEX1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
       ],
       "5": [
-        "CS4243",
-        "GEN2000",
-        "GEX1000",
+        "CS4248",
+        "UE_GENERIC_3",
         "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
       ],
       "6": [
+        "CS4246",
         "CP3880",
-        "UE_GENERIC_6",
         "UE_GENERIC_7"
       ],
       "7": [
@@ -68,7 +68,7 @@
       ],
       "8": []
     },
-    "reason": "After the exemptions, about 132 MC remain, which fits within 8 semesters at 20 MC per semester. The plan covers the CS foundation, math, the AI focus area (CS3243, CS3244, CS3263, CS4243, CS4246, CS4248), the industry project and 10 UEs, and keeps prerequisites in order. The ULR module codes (GEA1000, GESS1000, GEC1000, GEN2000, GEX1000) are my best recollection of the common curriculum and should be checked against your official requirements."
+    "reason": "After the exemptions about 132 MC remain, which fits within 8 semesters at up to 20 MC each (this plan finishes in 7). It covers the remaining core, math, AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4246, CS4248), industry experience, university-level requirements and electives. The exact module codes for the university-level requirements and the breadth electives are my best recollection of the AY2026/27 rules, so check them against the official requirements."
   },
   "parse_error": null
 }

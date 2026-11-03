@@ -57,6 +57,10 @@ def _tree(t, R):
         return ""
     if isinstance(t, str):
         return R(t)
+    if "n_of" in t:   # Issue #13: at-least-n, not weakened to OR
+        n, parts = t["n_of"]
+        s = ", ".join(_tree(c, R) for c in parts)
+        return f"(at least {n} of: {s})"
     if "all_of" in t:
         parts, op = t["all_of"], " AND "
     else:

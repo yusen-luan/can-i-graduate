@@ -122,8 +122,9 @@ def to_tree(prereq_tree):
             return {"all_of": [to_tree(c) for c in prereq_tree["and"]]}
         if "or" in prereq_tree:
             return {"one_of": [to_tree(c) for c in prereq_tree["or"]]}
-        if "nOf" in prereq_tree:  # [n, [children]] -> approximate as one_of
-            return {"one_of": [to_tree(c) for c in prereq_tree["nOf"][1]]}
+        if "nOf" in prereq_tree:  # [n, [children]] -> at-least-n (Issue #13)
+            n, children = prereq_tree["nOf"]
+            return {"n_of": [n, [to_tree(c) for c in children]]}
     return None
 
 

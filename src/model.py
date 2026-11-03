@@ -50,8 +50,10 @@ def load_iter2(
 
 def tree_satisfied(tree, pred) -> bool:
     """Evaluate a prerequisite tree. `pred(code) -> bool` says whether a leaf is
-    satisfied. `all_of` = every child; `one_of` = some child; None/[] = no
-    prereq. Leaves are module-code strings (grades already stripped)."""
+    satisfied. `all_of` = every child; `one_of` = some child; `n_of: [n, [...]]` =
+    at least `n` children (Issue #13 -- NUSMods `nOf`, no longer weakened to
+    `one_of`); None/[] = no prereq. Leaves are module-code strings (grades
+    already stripped)."""
     if tree is None:
         return True
     if isinstance(tree, str):
@@ -61,6 +63,9 @@ def tree_satisfied(tree, pred) -> bool:
             return all(tree_satisfied(c, pred) for c in tree["all_of"])
         if "one_of" in tree:
             return any(tree_satisfied(c, pred) for c in tree["one_of"])
+        if "n_of" in tree:
+            n, children = tree["n_of"]
+            return sum(tree_satisfied(c, pred) for c in children) >= n
     return True
 
 def tree_leaves(tree) -> List[str]:
@@ -72,6 +77,9 @@ def tree_leaves(tree) -> List[str]:
     out: List[str] = []
     for c in tree.get("all_of", []) + tree.get("one_of", []):
         out += tree_leaves(c)
+    if "n_of" in tree:
+        for c in tree["n_of"][1]:
+            out += tree_leaves(c)
     return out
 
 def prereq_tree_of(info: dict):
@@ -82,15 +90,35 @@ def prereq_tree_of(info: dict):
 def bridging_waived(student) -> set:
     """Bridging modules a student need not take because a placement / A-level
     result stands in, so their appearance as a prereq leaf is already satisfied.
-    Math: A-level H2 Maths waives MA1301/X. English: the direct ES2660 path
-    waives ES1000/ES1103. Shared by the solver and the checker (parity)."""
+    Math: A-level H2 Maths waives MA1301/X. English (QET bands, Issue #3):
+    Band 3 (`direct_es2660`) waives BOTH ES1000 and ES1103; Band 2
+    (`es1103_required`) waives ONLY ES1000 — placement admits the student straight
+    into ES1103, so the frozen `ES1103 -> ES1000` prereq must not force ES1000;
+    Band 1 (`es1000_then_es1103`) waives nothing (ES1000 then ES1103 are taken).
+    Shared by the solver and the checker (parity)."""
     waived = set()
     cond = student.get("conditions", {})
     if not cond.get("needs_math_bridging", False):
         waived |= {"MA1301", "MA1301X"}
-    if cond.get("english_path", "direct_es2660") == "direct_es2660":
+    path = cond.get("english_path", "direct_es2660")
+    if path == "direct_es2660":
         waived |= {"ES1000", "ES1103"}
+    elif path == "es1103_required":
+        waived |= {"ES1000"}
     return waived
+
+def required_bridges(student) -> set:
+    """English bridges the student MUST complete, by QET placement band (Issue #2:
+    a placement requirement is a mandatory completion, not optional). Band 3
+    (`direct_es2660`): none. Band 2 (`es1103_required`): ES1103. Band 1
+    (`es1000_then_es1103`): ES1000 and ES1103. Math bridging stays prereq-driven
+    (a student who needs it must schedule a bridge before the dependent module)."""
+    path = student.get("conditions", {}).get("english_path", "direct_es2660")
+    if path == "es1103_required":
+        return {"ES1103"}
+    if path == "es1000_then_es1103":
+        return {"ES1000", "ES1103"}
+    return set()
 
 def industrial_sets(program: dict, option: str = "any") -> List[List[str]]:
     opts = [o["set"] for o in program["breadth_depth"]["industrial_experience"]["options"]]

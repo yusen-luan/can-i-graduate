@@ -211,22 +211,35 @@ Definitions used below:
 - `units_of(P) = Σ units[m]·sat(m)` over modules matching predicate `P`.
 
 ## I2.1 Prerequisite tree (generalises §3)
-NUSMods publishes prerequisites as a recursive `and`/`or` tree with `CODE:grade`
-leaves; we store it as `prerequisites.tree` with `all_of`/`one_of`/leaf (grades
-stripped). For module `m` in semester `s`, `x[m,s] ⇒ tree_satisfied_before(s)`,
-where a leaf `p` is satisfied-before-`s` iff `completed[p] ∨ exempted[p] ∨ p∈waived
-∨ Σ_{t<s} x[p,t]`. The solver reifies the tree with BoolAnd/BoolOr (handles DNF
-trees, e.g. CS3244, without CNF blow-up); the checker evaluates the tree directly.
+NUSMods publishes prerequisites as a recursive `and`/`or`/`nOf` tree with
+`CODE:grade` leaves; we store it as `prerequisites.tree` with
+`all_of`/`one_of`/`n_of`/leaf (grades stripped). **`n_of: [n, [children]]` is an
+at-least-`n` threshold (Issue #13 / D46): NUSMods `nOf` is NO LONGER weakened to
+`one_of`** — e.g. CS2109S requires `nOf:[2,[MA1511,MA1512]]` (BOTH), not "either".
+For module `m` in semester `s`, `x[m,s] ⇒ tree_satisfied_before(s)`, where a leaf
+`p` is satisfied-before-`s` iff `completed[p] ∨ exempted[p] ∨ p∈waived ∨ Σ_{t<s}
+x[p,t]`. The solver reifies the tree with BoolAnd/BoolOr, and `n_of` with the
+threshold reification `b ⇔ Σ children ≥ n` (all_of = `n`=|children|, one_of =
+`n`=1; constants folded first) — handles DNF trees, e.g. CS3244, without CNF
+blow-up; the checker evaluates the tree directly.
 Leaves that are external non-canonical codes we do not model are unsatisfiable
 via scheduling (only `completed`/`exempted`/`waived` can satisfy them).
 
-## I2.2 Placement waiver for bridging prerequisites
+## I2.2 Placement waiver + mandatory English bridges (Issues #2/#3, D48)
 MA1521/MA1522/CS1231S list only `one_of:[MA1301, MA1301X]` on NUSMods, because the
 real prerequisite is A-level H2 Maths (not a module). `bridging_waived(student)`
-returns the bridges that a placement stands in for: A-level H2 Maths waives
-MA1301/X (when `needs_math_bridging=false`); the direct ES2660 path waives
-ES1000/ES1103. Waived bridges are treated as satisfied prereq leaves and are not
-scheduled. A student who *needs* bridging must schedule a bridge before the target.
+returns the bridges a placement stands in for: A-level H2 Maths waives MA1301/X
+(when `needs_math_bridging=false`). **English by QET band:** Band 3
+(`direct_es2660`) waives BOTH ES1000 and ES1103; **Band 2 (`es1103_required`)
+waives ONLY ES1000** so the frozen `ES1103 → ES1000` prereq does not force ES1000
+(placement admits the student directly into ES1103, Issue #3); Band 1
+(`es1000_then_es1103`) waives neither (ES1000 before ES1103 before ES2660). Waived
+bridges are satisfied prereq leaves and are not scheduled. **`required_bridges(student)`
+(Issue #2) makes the band's bridges a MANDATORY completion** — Band 2 must take
+ES1103, Band 1 must take ES1000 and ES1103 — not merely a prereq leaf that ES2660's
+(now null) NUSMods tree would otherwise leave optional. Both the solver (`taken=1`,
+in the domain) and the checker enforce it. A student who *needs* math bridging must
+still schedule a bridge before the dependent module.
 
 ## I2.3 Preclusions (non-canonical conflicts)
 For each group in `preclusions.yaml` (e.g. `intro_programming`,
@@ -235,8 +248,16 @@ planning places only the canonical member, but the group still reads a student's
 prior non-canonical `completed` history.
 
 ## I2.4 ULR / ID-CD / ethics
-`must_satisfy_groups` (≥1 of each pillar's `satisfied_by`), ID/CD exactly-3 with
-≥2 ID ≤1 CD (by `category` tag). Pick-list pillars (Cultures = GEC%, Singapore =
+`must_satisfy_groups` (≥1 of each pillar's `satisfied_by`). **ID/CD (corrected,
+Issue #14, D45): a qualifying allocation of exactly `total_modules_required` (3)
+courses must EXIST among the taken candidates — ≥`min_id_modules` (2) ID and
+≤`max_cd_modules` (1) CD — but a student may take MORE than three eligible ID/CD
+courses; the surplus simply counts as Unrestricted Electives, not toward the ID/CD
+quota.** Formally, binary `α_m ≤ sat(m)` selects the credited subset with
+`Σα = 3`, `Σ_{ID} α ≥ 2`, `Σ_{CD} α ≤ 1` (the old `Σ sat(m) = 3` wrongly made a 4th
+eligible course infeasible). The checker accepts a plan iff such an allocation
+exists: `n_id ≥ 2 ∧ n_id + min(n_cd, 1) ≥ 3` (i.e. ≥3 ID, or 2 ID + ≥1 CD). Valid
+patterns by `category` tag. Pick-list pillars (Cultures = GEC%, Singapore =
 **GESS%**, Communities = GEN%) and ID/CD now use a **verified real-course subset**
 (NUSMods facts; full authoritative lists in `data/ge_pillars.yaml`,
 `data/id_cd.yaml`), not generic placeholders. Digital Literacy = CS1101S,
@@ -291,12 +312,21 @@ internship from inflating the graduation horizon. Limitation: the 6-month ATAP i
 reality fills a whole semester; the cap-exclusion approximates this loosely (full
 special-term slots deferred to iter3).
 
-## I2.9 CP-coded cap and unit total
-`units_of(m ∈ cp_coded.codes) ≤ 12`. `units_of(true) ≥ 160`. Unrestricted
-Electives are modelled as optional `UE_GENERIC_*` fillers (4u, both terms, no
-prereqs) that absorb whatever remains up to 160 — UE is **not** fixed at 40u,
-because B&D modules beyond the 32u bucket count as UE (avoids double-counting;
-see docs/iter2_plan.md B3).
+## I2.9 CP-coded cap and unit total (Issue #1 / D47: cap is B&D-ALLOCATION-scoped)
+The 12u CP-coded limit caps CP credit **allocated to the Breadth & Depth bucket**,
+NOT every CP-coded module a student takes. A binary `β_m ≤ sat(m)` (for
+`m ∈ cp_coded.codes`) marks CP credit counted toward B&D; then
+`Σ_{m∈cp} units[m]·β_m ≤ 12`, and the B&D 32u floor and the ≥12u L4000 depth count
+CP credit only through `β` (non-CP B&D modules count in full by pillar). CP credit
+NOT allocated to B&D (`sat(m)=1, β_m=0`) still counts toward `units_of(true) ≥ 160`
+as an **Unrestricted Elective**. Previously `units_of(m ∈ cp_coded) ≤ 12` was
+applied globally, which wrongly made a student taking >12u of CP projects
+infeasible instead of spilling the excess to UE. The checker accepts a plan iff
+SOME allocation of ≤12u CP to B&D satisfies both the 32u and the 12u-L4000 floors
+(small enumeration over the ≤4 CP modules). Unrestricted Electives are otherwise
+modelled as optional `UE_GENERIC_*` fillers (4u, both terms, no prereqs) absorbing
+whatever remains up to 160 — UE is **not** fixed at 40u (B&D modules beyond 32u
+also count as UE; avoids double-counting; see docs/iter2_plan.md B3).
 
 ## I2.10 Objective (still a CSP)
 `minimise 100·(total scheduled units) + (module count)`. With the ≥160 floor this
@@ -357,15 +387,26 @@ UROP is always additional:
   `eligible_fyp` (`sat(CP4101) ≤ [eligible_fyp]`), so an ineligible request is cleanly
   infeasible. An eligible student with `industrial_option: any` may satisfy the
   industry-experience requirement via CP4101 alone (no internship) — see I2.8.
-- `scenario.want_urop` (bool): schedule ≥1 of `breadth_depth.urop.codes`
-  (CP3106/CP3209/CP4106). Gated by `eligible_urop` (student, default true).
-- FYP and UROP are `cp_coded`, so the **12u CP cap (I2.9) binds them**: CP4101 is 12u
-  and fills the whole cap, hence `want_fyp ∧ want_urop` is INFEASIBLE, while
-  `want_fyp` plus an off-cap internship is fine. They are `pillar=industrial_experience`
-  so they count toward the 32u B&D bucket and 160u total; CP4101/CP4106 are level-4000
-  and count toward the ≥12u L4000 depth. They are **not** industrial-experience
-  *options*, so they do not affect the "exactly one internship option" rule, and (not
-  being in an option set) they consume their semester's unit cap like ordinary modules.
+- `scenario.want_urop` (bool): schedule the UROP, which is **CP3209 specifically**
+  (Issue #4 / D49 — no longer "any of CP3106/CP3209/CP4106"). Gated by `eligible_urop`
+  (student, default true). **CP3209 spans two consecutive semesters and must FINISH
+  before the FYP (CP4101) starts (Issue #5):** on the single-slot start `x[CP3209,s]`
+  it cannot start in the final semester, and `x[CP3209,t] + x[CP4101,v] ≤ 1` whenever
+  `t + (span-1) ≥ v` (credit counted once at the start slot — load-splitting across the
+  two semesters is a documented simplification). The **independent project CP3106** is a
+  DISTINCT request (`scenario.want_independent_project`), not the UROP; CP4106 is another
+  distinct project kept only in the CP-cap list.
+- FYP and UROP are `cp_coded`, so the 12u CP cap (I2.9) binds **the CP credit counted
+  toward B&D**. **(Corrected by Issue #1 / D47.)** CP4101 (12u) fills the B&D CP
+  allocation, so `want_fyp ∧ want_urop` is **feasible**: CP4101 is allocated to B&D and
+  the UROP's CP credit (e.g. CP3209, 8u) spills to Unrestricted Electives (it is NOT
+  infeasible, as the old global cap wrongly implied). They are
+  `pillar=industrial_experience` so their B&D-allocated credit counts toward the 32u
+  bucket; all CP credit counts toward the 160u total; CP4101/CP4106 are level-4000 and
+  count toward the ≥12u L4000 depth **when allocated to B&D**. They are **not**
+  industrial-experience *options*, so they do not affect the "exactly one internship
+  option" rule, and (not being in an option set) they consume their semester's unit cap
+  like ordinary modules.
 
 ## I2.18 Module pin / forbid / deadline — iter3 C4
 Per-instance, per-module hard requests in the scenario `preferences:` block (D9: never a
@@ -384,6 +425,19 @@ are rejected by `validate_scenario_iter2` (a typo must never silently drop a con
 placement-waived bridge (I2.2) satisfies a pin/deadline trivially, like a pre-satisfied module (D35).
 Checker mirrors: flag a scheduled forbidden module, an unsatisfied required/pinned module, and a
 module scheduled after (or missing before) its deadline.
+
+## I2.19 Full-semester internship occupancy — Issue #6 (D50)
+Excluding ALL internship units from the per-semester cap (I2.8) wrongly let a student
+carry a full coursework load *alongside* a 6-month full-time placement. Industrial
+options tagged `full_semester: true` (CP3880 ATAP, IS4010, ETP3201L — the 12u single
+stints) now **occupy their slot**: when such a module sits in slot `s`,
+`Σ_{m∉industrial} units[m]·x[m,s] ≤ full_semester_concurrent_cap` (0), i.e. no concurrent
+coursework. The 6u part-time / sequential stints (CP3200→CP3202, CP3107→CP3110, ETP3205)
+keep the vacation treatment (off-cap, no occupancy). This makes a full-time internship
+cost a real semester (or a Special Term), rather than being free. The checker mirrors it:
+coursework units in a full-semester internship's slot must be `≤ 0`. Remaining
+simplification: the internship's own 12u still land in a single slot (not split), and the
+concurrent cap is 0 rather than a small positive allowance.
 
 ## I2.12 Deliberate iteration-2 simplifications
 Canonical-only; special terms (3,4) not modelled (special-term-only offerings

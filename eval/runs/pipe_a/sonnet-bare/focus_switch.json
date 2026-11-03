@@ -4,78 +4,80 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000N\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"ST2334\",\"CS3243\",\"IS1128\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS3263\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\"]},{\"semester\":7,\"modules\":[\"CS4246\",\"CS4248\",\"CP4101\",\"GESS1000\"]},{\"semester\":8,\"modules\":[\"CS4244\",\"GEX1000\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The remaining ~152 MC fit within 9 semesters at no more than 20 MC each, with the foundation, maths, AI focus area (CS3243, CS3244, CS3263, CS4244, CS4246, CS4248), industry experience, final-year project, ethics and general education requirements all covered. The plan uses 8 UEs, and the completed CS2107 and CS3235 are assumed to count as the other two. Some module codes and MC values, especially the general education modules, are from memory and should be checked against the official requirements.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"GEA1000\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS2101\",\"GEC1000\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3244\",\"CS4248\",\"CS2102\",\"GES1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CS4244\",\"CS3210\",\"GEN2000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4243\",\"GEX1000\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"About 156 MC remain after CS2107 and CS3235, which count as CS electives. That fits within 9 semesters at 20 MC or less per semester. The plan covers the ULR modules, the CS Foundation, Math and Science, the AI focus area (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248), CS electives, the 12 MC industry experience (CP3880) and 10 unrestricted electives. Module offerings and some requirement details come from memory and were not checked against the official AY2026/27 requirements. The five ULR codes (GEA1000, GEC1000, GEN2000, GES1000, GEX1000) are my best guesses at the actual module codes.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 61.45,
-  "cost_usd": 0.066549,
+  "latency_s": 105.1,
+  "cost_usd": 0.146269,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 6619,
+    "output_tokens": 14591,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:20:04+00:00",
+  "timestamp": "2026-11-02T14:42:48+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "CS1010",
         "CS1231S",
-        "MA1522",
-        "GEA1000N",
-        "UE_GENERIC_1"
+        "GEA1000",
+        "MA1522"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
         "MA1521",
-        "UE_GENERIC_2"
+        "UE_GENERIC_1"
       ],
       "3": [
         "CS2103T",
-        "CS2101",
+        "CS2106",
         "CS2109S",
-        "CS3230"
+        "ST2334",
+        "UE_GENERIC_2"
       ],
       "4": [
-        "CS2106",
-        "ST2334",
+        "CS3230",
         "CS3243",
-        "IS1128",
-        "GEC1000"
+        "CS2101",
+        "GEC1000",
+        "UE_GENERIC_3"
       ],
       "5": [
         "CS3244",
-        "CS3263",
-        "GEN2000",
-        "UE_GENERIC_3",
+        "CS4248",
+        "CS2102",
+        "GES1000",
         "UE_GENERIC_4"
       ],
       "6": [
-        "CP3880"
+        "CS4246",
+        "CS4244",
+        "CS3210",
+        "GEN2000",
+        "UE_GENERIC_5"
       ],
       "7": [
-        "CS4246",
-        "CS4248",
-        "CP4101",
-        "GESS1000"
-      ],
-      "8": [
-        "CS4244",
+        "CS4243",
         "GEX1000",
-        "UE_GENERIC_5",
         "UE_GENERIC_6"
       ],
-      "9": [
+      "8": [
+        "CP3880",
         "UE_GENERIC_7",
         "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "The remaining ~152 MC fit within 9 semesters at no more than 20 MC each, with the foundation, maths, AI focus area (CS3243, CS3244, CS3263, CS4244, CS4246, CS4248), industry experience, final-year project, ethics and general education requirements all covered. The plan uses 8 UEs, and the completed CS2107 and CS3235 are assumed to count as the other two. Some module codes and MC values, especially the general education modules, are from memory and should be checked against the official requirements."
+    "reason": "About 156 MC remain after CS2107 and CS3235, which count as CS electives. That fits within 9 semesters at 20 MC or less per semester. The plan covers the ULR modules, the CS Foundation, Math and Science, the AI focus area (CS3243, CS3244, CS4243, CS4244, CS4246, CS4248), CS electives, the 12 MC industry experience (CP3880) and 10 unrestricted electives. Module offerings and some requirement details come from memory and were not checked against the official AY2026/27 requirements. The five ULR codes (GEA1000, GEC1000, GEN2000, GES1000, GEX1000) are my best guesses at the actual module codes."
   },
   "parse_error": null
 }

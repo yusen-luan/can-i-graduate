@@ -16,6 +16,8 @@ from checker import check_plan_iter2  # noqa: E402
 
 MODULES, PROGRAM, STUDENT, FOCUS, PRECL = load_iter2()
 SCEN = load_scenario(Path(__file__).resolve().parents[1] / "data" / "scenario_iter2.yaml")
+INDUSTRIAL = {m for o in PROGRAM["breadth_depth"]["industrial_experience"]["options"]
+              for m in o["set"]}
 
 FOCUS_AREAS = list(FOCUS["areas"])
 
@@ -99,10 +101,25 @@ def test_checker_flags_semester_over_overload_ceiling():
     assert any("overload ceiling" in e for e in errs)
 
 
-def test_internship_does_not_consume_a_semester():
-    # Industrial experience is done over the vacation/special term, so even the
-    # 12-unit 6-month ATAP fits the 8-semester plan without needing a 9th.
-    assert solve(industrial_option="CP3880", target_semesters=8).feasible
+def test_part_time_internship_does_not_consume_a_semester():
+    # The 6-unit part-time / sequential stints (CP3200 -> CP3202) run over the
+    # vacation (off-cap, no occupancy), so they fit the 8-semester plan.
+    assert solve(industrial_option="CP3200", target_semesters=8).feasible
+
+
+def test_full_semester_internship_occupies_its_slot():
+    # Issue #6 / I2.19 / D50: a 6-month full-time ATAP (CP3880) now OCCUPIES its
+    # semester (no concurrent coursework), so it no longer fits the tight 8-sem /
+    # 20-cap plan (one internship-only semester leaves < 160u), but a 9th semester
+    # (or a Special Term) absorbs it.
+    assert not solve(industrial_option="CP3880", target_semesters=8).feasible
+    r = solve(industrial_option="CP3880", target_semesters=9)
+    assert r.feasible
+    sem = {m: s for s, ms in r.plan.items() for m in ms}
+    islot = sem["CP3880"]
+    assert all(m in INDUSTRIAL for m in r.plan[islot])   # internship-only slot
+    assert check_plan_iter2(r.plan, MODULES, PROGRAM, STUDENT, FOCUS, PRECL,
+                            scenario(industrial_option="CP3880", target_semesters=9)) == []
 
 
 # --- requirement semantics --------------------------------------------------
@@ -347,12 +364,18 @@ def test_fyp_feasible_when_eligible():
     assert check_plan_iter2(r.plan, MODULES, PROGRAM, st, FOCUS, PRECL, s) == []
 
 
-def test_fyp_and_urop_conflict_on_cp_cap():
-    # CP4101 (FYP) is 12u and fills the whole 12u CP cap, so FYP + UROP together
-    # is infeasible -- the headline binding interaction (I2.17).
+def test_fyp_and_urop_feasible_cp_spills_to_ue():
+    # Issue #1 / D47: the 12u CP cap binds only B&D-ALLOCATED CP credit, so FYP +
+    # UROP together is FEASIBLE -- CP4101 fills the B&D allocation and the UROP's
+    # CP credit spills to Unrestricted Electives (was wrongly infeasible before).
     st = _eligible_student(eligible_fyp=True)
     s = scenario(want_fyp=True, want_urop=True, target_semesters=9)
-    assert not build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL, s).feasible
+    r = build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL, s)
+    assert r.feasible
+    taken = {m for ms in r.plan.values() for m in ms}
+    assert "CP4101" in taken
+    assert set(PROGRAM["breadth_depth"]["urop"]["codes"]) & taken
+    assert check_plan_iter2(r.plan, MODULES, PROGRAM, st, FOCUS, PRECL, s) == []
 
 
 def test_urop_alone_is_feasible():

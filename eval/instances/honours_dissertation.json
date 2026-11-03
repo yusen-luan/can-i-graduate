@@ -46,60 +46,61 @@
   "ground_truth": {
     "feasible": true,
     "status": "OPTIMAL",
+    "proven_infeasible": false,
     "plan": {
       "1": [
-        "CS1101S",
-        "CS1231S",
-        "MA1521",
-        "UE_GENERIC_9"
+        "ETP3201L"
       ],
       "2": [
-        "CS2030S",
-        "CS2040S",
-        "ST2334",
-        "UE_GENERIC_1",
-        "UE_GENERIC_8"
+        "CS1101S",
+        "CS1231S",
+        "GESS1025",
+        "MA1521",
+        "UE_GENERIC_7"
       ],
       "4": [
-        "CS2100",
-        "GEN2003",
+        "CS2040S",
+        "GEC1030",
         "MA1522",
-        "UE_GENERIC_5",
-        "UE_GENERIC_6"
+        "ST2334",
+        "UE_GENERIC_10"
       ],
       "5": [
-        "CS2101",
-        "CS2103T",
+        "CP4101",
         "CS2109S",
-        "GEC1030",
-        "GEN2000"
+        "UE_GENERIC_8"
       ],
       "6": [
-        "CS2106",
-        "CS4243",
-        "CS4248",
-        "GESS1025"
+        "CS2030S",
+        "CS2100",
+        "CS3230",
+        "CS3263",
+        "IS1108"
       ],
       "7": [
-        "GEC1015",
-        "IE2141",
-        "IS1108",
-        "SC1101E"
+        "ES2660",
+        "IS1128",
+        "SC1101E",
+        "UE_GENERIC_1"
       ],
       "8": [
-        "CP4101",
-        "GESS1001",
-        "GESS1020"
+        "CS2106",
+        "GEC1020",
+        "GEN2000",
+        "GEN2001",
+        "GESS1001"
       ],
       "9": [
-        "ES2660"
+        "CS2101",
+        "CS2103T",
+        "CS4244",
+        "GEC1015",
+        "HSI1000"
       ],
       "10": [
-        "CS3230",
-        "ETP3201L",
         "GEA1000",
-        "IS1128",
-        "UE_GENERIC_4"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
       ]
     },
     "total_units": 160
@@ -118,18 +119,20 @@
     ],
     "difficulty": {
       "num_variables": 1170,
-      "num_constraints": 3920,
+      "num_total_variables": 2944,
+      "num_constraints": 3958,
       "min_feasible_semesters": 9,
       "semester_slack": 1,
-      "min_feasible_cap": 20,
       "cap_slack": 0,
-      "near_unsat_margin": 0
+      "min_feasible_cap": 20,
+      "cap_min_bounded": false
     },
     "quality": {
-      "realism": 91.5,
+      "realism": 84.1,
       "flags": [
-        "Semester 9: only 4 MC \u2014 very light",
-        "1 empty semester(s) between enrolled semesters"
+        "1 empty semester(s) between enrolled semesters",
+        "Semester 8: 4 GE/ULR modules clustered together",
+        "Internship/FYP scheduled early: ETP3201L"
       ]
     }
   }

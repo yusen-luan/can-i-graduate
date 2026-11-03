@@ -4,80 +4,80 @@
   "condition": "bare",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"MA1521\", \"CS1010S\", \"CS1231S\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"MA1522\", \"CS2030S\", \"CS2040S\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2100\", \"CS2101\", \"CS2103T\", \"CS2106\"]}, {\"semester\": 4, \"modules\": [\"CS2105\", \"CS3230\", \"ST2334\", \"MA2101\"]}, {\"semester\": 5, \"modules\": [\"CS3243\", \"CS3244\", \"CS4224\", \"MA2104\"]}, {\"semester\": 6, \"modules\": [\"CS4243\", \"CS4246\", \"CS4248\", \"CS3281\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4231\", \"CS4234\", \"CS4236\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CS4344\", \"ST2132\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"Nine semesters at 20 MC each give ample capacity for the remaining roughly 150 MC, and the AI specialisation (CS3243, CS3244, CS4243, CS4246, CS4248) is scheduled with prerequisites respected, using the 10 allowed UE slots. The module list is from my own recollection of the BComp (CS) requirements and was not verified against the official AY2026/27 handbook, so the total MC and exact requirement mapping should be confirmed.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1010S\", \"CS1231\", \"MA1521\", \"CS2101\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"MA1522\", \"CS2100\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2105\", \"CS2106\", \"ST2334\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2102\", \"CS3230\", \"CS3243\", \"CS3217\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS3244\", \"CS3231\", \"CS4243\", \"CS3248\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4246\", \"CS4248\", \"CS4242\", \"CS4234\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4231\", \"CS3210\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"CP4101\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\"]}], \"reason\": \"Assuming the standard NUS BComp (CS) core, five AI-specialisation modules and enough further CS electives plus 10 unrestricted electives to reach 160 MC, the 152 remaining MC fit within 9 semesters with no semester over 20 MC. This plan assumes the core and AI modules have no unmet prerequisites and that the student has not completed any other modules.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 33.27,
-  "cost_usd": 0.003726,
+  "latency_s": 34.39,
+  "cost_usd": 0.004035,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 7417,
+    "output_tokens": 8034,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:15:12+00:00",
+  "timestamp": "2026-11-02T14:38:33+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
-        "MA1521",
         "CS1010S",
-        "CS1231S",
-        "UE_GENERIC_1"
+        "CS1231",
+        "MA1521",
+        "CS2101"
       ],
       "2": [
-        "MA1522",
         "CS2030S",
         "CS2040S",
-        "UE_GENERIC_2"
+        "MA1522",
+        "CS2100"
       ],
       "3": [
-        "CS2100",
-        "CS2101",
         "CS2103T",
-        "CS2106"
+        "CS2105",
+        "CS2106",
+        "ST2334",
+        "UE_GENERIC_1"
       ],
       "4": [
-        "CS2105",
+        "CS2102",
         "CS3230",
-        "ST2334",
-        "MA2101"
+        "CS3243",
+        "CS3217",
+        "UE_GENERIC_2"
       ],
       "5": [
-        "CS3243",
         "CS3244",
-        "CS4224",
-        "MA2104"
+        "CS3231",
+        "CS4243",
+        "CS3248",
+        "UE_GENERIC_3"
       ],
       "6": [
-        "CS4243",
         "CS4246",
         "CS4248",
-        "CS3281",
-        "UE_GENERIC_3"
+        "CS4242",
+        "CS4234",
+        "UE_GENERIC_4"
       ],
       "7": [
         "CS4231",
-        "CS4234",
-        "CS4236",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
-      ],
-      "8": [
-        "CS4344",
-        "ST2132",
+        "CS3210",
+        "UE_GENERIC_5",
         "UE_GENERIC_6",
         "UE_GENERIC_7"
       ],
-      "9": [
+      "8": [
+        "CP4101",
         "UE_GENERIC_8",
-        "UE_GENERIC_9",
+        "UE_GENERIC_9"
+      ],
+      "9": [
         "UE_GENERIC_10"
       ]
     },
-    "reason": "Nine semesters at 20 MC each give ample capacity for the remaining roughly 150 MC, and the AI specialisation (CS3243, CS3244, CS4243, CS4246, CS4248) is scheduled with prerequisites respected, using the 10 allowed UE slots. The module list is from my own recollection of the BComp (CS) requirements and was not verified against the official AY2026/27 handbook, so the total MC and exact requirement mapping should be confirmed."
+    "reason": "Assuming the standard NUS BComp (CS) core, five AI-specialisation modules and enough further CS electives plus 10 unrestricted electives to reach 160 MC, the 152 remaining MC fit within 9 semesters with no semester over 20 MC. This plan assumes the core and AI modules have no unmet prerequisites and that the student has not completed any other modules."
   },
   "parse_error": null
 }

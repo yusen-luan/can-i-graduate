@@ -1,26 +1,27 @@
 {
   "instance": "unsat_t1_5sem",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC. Five semesters at a 20 MC cap give at most 100 MC of regular modules, plus at most 12 MC from the single allowed industrial-experience option, which is exempt from the cap. That is 112 MC at most, so the 160 MC total cannot be reached.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree needs at least 160 MC. With a 20 MC cap over 5 semesters, regular modules give at most 100 MC. Industrial-experience modules do not count toward the load, and the largest option adds only 12 MC, so the maximum is 112 MC, which is below 160.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.26,
-  "cost_usd": 0.0063,
+  "latency_s": 2.94,
+  "cost_usd": 0.005695,
   "request_id": "",
   "usage": {
     "input_tokens": 77,
-    "output_tokens": 333,
+    "output_tokens": 272,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:13:04+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:22+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Graduation needs at least 160 MC. Five semesters at a 20 MC cap give at most 100 MC of regular modules, plus at most 12 MC from the single allowed industrial-experience option, which is exempt from the cap. That is 112 MC at most, so the 160 MC total cannot be reached."
+    "reason": "The degree needs at least 160 MC. With a 20 MC cap over 5 semesters, regular modules give at most 100 MC. Industrial-experience modules do not count toward the load, and the largest option adds only 12 MC, so the maximum is 112 MC, which is below 160."
   },
   "parse_error": null
 }

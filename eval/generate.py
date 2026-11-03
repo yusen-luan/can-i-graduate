@@ -124,53 +124,96 @@ STRESS = {
 
 
 def _feasible(student, scenario, **over):
+    """Tri-state probe: True (plan found) / False (PROVEN infeasible) / None
+    (unresolved: UNKNOWN or MODEL_INVALID, or an invalid relaxation). Issue #7/#10:
+    an unresolved probe is never silently read as infeasible."""
     sc = copy.deepcopy(scenario)
     if "target_semesters" in over:     # keep any term_layout the right length
         sc = with_horizon(sc, over.pop("target_semesters"))
     sc.update(over)
     try:
-        return solve(student, sc).feasible
-    except ValueError:
+        r = solve(student, sc)
+    except ValueError:                 # relaxation produced an invalid instance
+        return None
+    if r.feasible:
+        return True
+    if r.proven_infeasible:
         return False
+    return None                        # unresolved -> no verdict
 
 
 # ---------------------------------------------------------------- difficulty
+# A single real module is 4 MC, so a cap below 4 can hold nothing; that is the
+# natural floor of the unit-cap probe. Reporting min_feasible_cap == this floor
+# means "feasible down to the floor we searched", NOT a proven unrestricted
+# minimum (Issue #10).
+CAP_PROBE_FLOOR = 4
+
+
+def _probe_min(fn, start, floor):
+    """Walk a one-dimensional relaxation axis down from ``start-1`` to ``floor``,
+    calling ``fn(v) -> True|False|None``. Returns (min_feasible, bounded,
+    non_monotone): min_feasible is the smallest value still feasible; bounded is
+    True if the search floor itself was feasible (so the true minimum may be
+    lower and was NOT established); non_monotone is True if a feasible value was
+    seen BELOW an infeasible one (the monotonicity assumption failed, so an early
+    break would have lied). We scan the whole range rather than breaking early,
+    so the report is honest (Issue #10)."""
+    min_feas = start
+    seen_infeasible = False
+    non_monotone = False
+    bounded = False
+    for v in range(start - 1, floor - 1, -1):
+        res = fn(v)
+        if res is True:
+            min_feas = v
+            if seen_infeasible:
+                non_monotone = True   # feasible below an infeasible probe
+            if v == floor:
+                bounded = True        # hit the search floor still feasible
+        elif res is False:
+            seen_infeasible = True
+        # res is None (unresolved): record nothing, keep scanning
+    return min_feas, bounded, non_monotone
+
+
 def measure_difficulty(student, scenario, base):
-    """Solver-emitted, per-instance (B6). Near-UNSAT margin = how far the request
-    can be tightened before it flips; small margin => binding/hard."""
+    """Solver-emitted, per-instance (B6). Reports semester-slack and unit-cap
+    slack SEPARATELY (Issue #11: they are different quantities and must not be
+    combined with min()). Probes are scanned in full and flagged if bounded or
+    non-monotone (Issue #10). Both scheduling and total variable counts are
+    reported (Issue #9)."""
     T = scenario["target_semesters"]
     cap = scenario["max_units_per_semester"]
     # wall time is deliberately omitted: it is nondeterministic (noisy diffs on
     # every regeneration) and not an LLM-difficulty axis (B6).
-    d = {"num_variables": base.num_variables, "num_constraints": base.num_constraints}
+    d = {"num_variables": base.num_variables,
+         "num_total_variables": base.num_total_variables,
+         "num_constraints": base.num_constraints}
     if base.feasible:
-        # slack: largest tightening still feasible (a term_layout is truncated)
-        min_T = T
-        for t in range(T - 1, 0, -1):
-            if _feasible(student, scenario, target_semesters=t):
-                min_T = t
-            else:
-                break
-        min_cap = cap
-        for c in range(cap - 1, 3, -1):
-            if _feasible(student, scenario, max_units_per_semester=c):
-                min_cap = c
-            else:
-                break
+        min_T, T_bounded, T_nonmono = _probe_min(
+            lambda t: _feasible(student, scenario, target_semesters=t), T, 1)
+        min_cap, cap_bounded, cap_nonmono = _probe_min(
+            lambda c: _feasible(student, scenario, max_units_per_semester=c), cap,
+            CAP_PROBE_FLOOR)
         d["min_feasible_semesters"] = min_T
         d["semester_slack"] = T - min_T          # 0 => horizon is binding (hard)
-        d["min_feasible_cap"] = min_cap
         d["cap_slack"] = cap - min_cap            # 0 => unit cap is binding (hard)
-        d["near_unsat_margin"] = min(T - min_T, cap - min_cap)
+        d["min_feasible_cap"] = min_cap
+        # honesty flags: a bounded min is "<= value searched"; non-monotone means
+        # the slack is a lower bound only (a tighter feasible point exists below).
+        d["cap_min_bounded"] = cap_bounded
+        if T_nonmono or cap_nonmono:
+            d["probe_non_monotone"] = True
     else:
-        # distance to feasibility: smallest relaxation that flips SAT
+        # distance to feasibility: smallest relaxation that flips to a plan.
+        # Only a True (plan found) counts; an unresolved probe does not.
         dT = next((t - T for t in range(T + 1, T + 7)
-                   if _feasible(student, scenario, target_semesters=t)), None)
+                   if _feasible(student, scenario, target_semesters=t) is True), None)
         dCap = next((c - cap for c in range(cap + 1, CEIL + 1)
-                     if _feasible(student, scenario, max_units_per_semester=c)), None)
+                     if _feasible(student, scenario, max_units_per_semester=c) is True), None)
         d["extra_semesters_to_feasible"] = dT
         d["extra_cap_to_feasible"] = dCap
-        d["near_unsat_margin"] = 0                # it IS unsat
     return d
 
 
@@ -276,7 +319,7 @@ def nl_draft(student, scenario):
 # not derived: no single arithmetic rule reproduces it (off-cap internship units
 # blur the capacity floor). Stress instances carry it in their label; the
 # profile-diagonal UNSAT traps are listed here (a new unlabelled one must be added).
-PROFILE_TIERS = {"infeasible_3yr": "T1", "fyp_urop_trap": "T4", "preclusion_deadend": "T4"}
+PROFILE_TIERS = {"infeasible_3yr": "T1", "forbid_core_trap": "T4", "preclusion_deadend": "T4"}
 
 
 def unsat_tier(name, label, feasible):
@@ -290,7 +333,15 @@ def unsat_tier(name, label, feasible):
 def build_instance(name, p):
     student, scenario = p["student"], p["scenario"]
     r = solve(student, scenario)
-    gt = {"feasible": r.feasible, "status": r.status}
+    # Issue #7: ground truth must be a DEFINITIVE verdict. An unresolved status
+    # (UNKNOWN timeout / MODEL_INVALID) is not a label -- refuse it loudly rather
+    # than silently recording the instance as infeasible.
+    if not r.resolved:
+        raise RuntimeError(
+            f"{name}: oracle returned unresolved status {r.status}; cannot use as "
+            "ground truth. Raise the solve time limit or simplify the instance.")
+    gt = {"feasible": r.feasible, "status": r.status,
+          "proven_infeasible": r.proven_infeasible}
     quality = None
     if r.feasible:
         gt["plan"] = {str(s): ms for s, ms in r.plan.items() if ms}
@@ -343,17 +394,22 @@ def main(argv=None):
             (OUT / f"{name}.json").write_text(json.dumps(inst, indent=2), encoding="utf-8")
         d = inst["meta"]["difficulty"]
         ok = inst["ground_truth"]["feasible"] == (p["expect"] == "feasible")
+        # Issue #11: report semester-slack and unit-cap slack SEPARATELY, never a
+        # min() across the two incommensurable axes.
+        slack = (f"T{d['semester_slack']}/U{d['cap_slack']}"
+                 if inst["ground_truth"]["feasible"] else "unsat")
         index.append({"name": name, "expect": p["expect"],
                       "feasible": inst["ground_truth"]["feasible"], "ok": ok,
-                      "margin": d.get("near_unsat_margin"),
+                      "semester_slack": d.get("semester_slack"),
+                      "cap_slack": d.get("cap_slack"), "slack": slack,
                       "tags": inst["meta"]["tags"]})
     if not args.summary:
         (OUT / "_index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
-    print(f"{'instances':26s} expect     SAT  margin  tags")
+    print(f"{'instances':26s} expect     SAT  slack    tags")
     for r in index:
         flag = "" if r["ok"] else "  <-- MISMATCH"
         print(f"{r['name']:26s} {r['expect']:10s} {str(r['feasible'])[:1]}    "
-              f"{str(r['margin']):>5s}   {','.join(t for t in r['tags'] if t!='C-base')}{flag}")
+              f"{r['slack']:>7s}  {','.join(t for t in r['tags'] if t!='C-base')}{flag}")
     n_feas = sum(r["feasible"] for r in index)
     n_bad = sum(not r["ok"] for r in index)
     print(f"\n{len(index)} instances  |  {n_feas} feasible ({n_feas/len(index):.0%}), "

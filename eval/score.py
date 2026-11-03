@@ -71,6 +71,9 @@ VIOLATION_RULES = [
     ("offered term", r"not offered in Term"),
     ("same-semester bundle", r"same semester"),
     ("required module", r"required but not satisfied"),
+    ("English bridge", r"required English bridge"),
+    ("internship occupancy", r"full-semester internship"),
+    ("independent project", r"independent project requested"),
     ("ID/CD", r"^ID/CD"),
     ("preclusion", r"^preclusion"),
     ("focus area", r"^focus area"),
@@ -155,7 +158,10 @@ def oracle_predictions(instances):
         st, sc = i["formal"]["student"], i["formal"]["scenario"]
         t0 = time.perf_counter()
         r = build_and_solve_iter2(MODULES, PROGRAM, st, FOCUS, PRECL, sc)
-        preds[i["name"]] = {"feasible": r.feasible, "plan": r.plan if r.feasible else None,
+        # Issue #7: an unresolved oracle status carries no verdict (feasible=None),
+        # never a silent False.
+        verdict = r.feasible if r.resolved else None
+        preds[i["name"]] = {"feasible": verdict, "plan": r.plan if r.feasible else None,
                             "latency_s": time.perf_counter() - t0, "cost_usd": 0.0}
     return preds
 

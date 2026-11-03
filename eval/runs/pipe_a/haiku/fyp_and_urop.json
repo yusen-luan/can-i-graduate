@@ -1,0 +1,27 @@
+{
+  "instance": "fyp_and_urop",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The CP-coded cap allows at most 12 MC across CP3106, CP3209, CP4101 and CP4106, but the UROP request requires CP3209 (8 MC) and the final-year project requires CP4101 (12 MC), totalling 20 MC, so both cannot be taken.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.21,
+  "cost_usd": 0.000411,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 514,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:31:06+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The CP-coded cap allows at most 12 MC across CP3106, CP3209, CP4101 and CP4106, but the UROP request requires CP3209 (8 MC) and the final-year project requires CP4101 (12 MC), totalling 20 MC, so both cannot be taken."
+  },
+  "parse_error": null
+}

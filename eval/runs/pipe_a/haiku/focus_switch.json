@@ -1,22 +1,23 @@
 {
   "instance": "focus_switch",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"DTK1234\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ST2334\", \"IS1128\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS4263\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"CS3263\", \"GEN2003\", \"GEC1020\", \"GESS1020\"]}, {\"semester\": 5, \"modules\": [\"CS4244\", \"CS4246\", \"IS1108\", \"GEA1000\", \"HSI1000\"]}, {\"semester\": 6, \"modules\": [\"ES2660\", \"CP3880\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A plan exists: AI focus is met by CS2109S, CS3263, CS4244, CS4246 and CS4263 (12 MC at level 4000), the CP3880 internship is the single industrial option, and the 20 MC per-semester cap is respected, with 160 MC total including your completed CS2107 and CS3235.\"}",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEC1020\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"MA1522\", \"ES2660\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS2040S\", \"CS2100\", \"ST2334\", \"DTK1234\"]}, {\"semester\": 4, \"modules\": [\"CS2109S\", \"CS3230\", \"CS2106\", \"IS1108\"]}, {\"semester\": 5, \"modules\": [\"CS2101\", \"CS2103T\", \"CS4263\", \"GESS1020\"]}, {\"semester\": 6, \"modules\": [\"CS3243\", \"HSI1000\", \"GEN2000\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS4244\", \"CS4246\", \"SC1101E\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"ETP3201L\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"A 9-semester plan works: the AI focus uses CS2109S, CS3243 and CS4263 (with CS4244 and CS4246 giving 12 MC at level 4000+), the internship is ETP3201L (12 MC), and the total reaches exactly 160 MC with 9 generic electives, with every semester at 20 MC or below and all prerequisites and offering terms satisfied.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 51.67,
-  "cost_usd": 0.006617,
+  "latency_s": 40.48,
+  "cost_usd": 0.005334,
   "request_id": "",
   "usage": {
     "input_tokens": 81,
-    "output_tokens": 12937,
+    "output_tokens": 10369,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:06:36+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:31:43+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
@@ -24,58 +25,58 @@
         "CS1101S",
         "CS1231S",
         "MA1521",
-        "MA1522",
-        "DTK1234"
+        "GEC1020"
       ],
       "2": [
         "CS2030S",
+        "MA1522",
+        "ES2660",
+        "GEA1000"
+      ],
+      "3": [
         "CS2040S",
         "CS2100",
         "ST2334",
-        "IS1128"
-      ],
-      "3": [
-        "CS2101",
-        "CS2103T",
-        "CS2106",
-        "CS2109S",
-        "CS4263"
+        "DTK1234"
       ],
       "4": [
+        "CS2109S",
         "CS3230",
-        "CS3263",
-        "GEN2003",
-        "GEC1020",
-        "GESS1020"
+        "CS2106",
+        "IS1108"
       ],
       "5": [
-        "CS4244",
-        "CS4246",
-        "IS1108",
-        "GEA1000",
-        "HSI1000"
+        "CS2101",
+        "CS2103T",
+        "CS4263",
+        "GESS1020"
       ],
       "6": [
-        "ES2660",
-        "CP3880",
-        "UE_GENERIC_1",
-        "UE_GENERIC_2"
+        "CS3243",
+        "HSI1000",
+        "GEN2000",
+        "UE_GENERIC_1"
       ],
       "7": [
-        "UE_GENERIC_3",
-        "UE_GENERIC_4",
-        "UE_GENERIC_5"
+        "CS4244",
+        "CS4246",
+        "SC1101E"
       ],
       "8": [
-        "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "ETP3201L"
       ],
       "9": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
         "UE_GENERIC_8",
         "UE_GENERIC_9"
       ]
     },
-    "reason": "A plan exists: AI focus is met by CS2109S, CS3263, CS4244, CS4246 and CS4263 (12 MC at level 4000), the CP3880 internship is the single industrial option, and the 20 MC per-semester cap is respected, with 160 MC total including your completed CS2107 and CS3235."
+    "reason": "A 9-semester plan works: the AI focus uses CS2109S, CS3243 and CS4263 (with CS4244 and CS4246 giving 12 MC at level 4000+), the internship is ETP3201L (12 MC), and the total reaches exactly 160 MC with 9 generic electives, with every semester at 20 MC or below and all prerequisites and offering terms satisfied."
   },
   "parse_error": null
 }

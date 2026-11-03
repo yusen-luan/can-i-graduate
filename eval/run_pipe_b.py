@@ -66,8 +66,9 @@ def solve_spec(spec):
     except ValueError as e:   # validate_scenario_iter2: term_layout length, clashes, ...
         return None, None, f"ValueError: {e}"
     info = {"status": r.status, "wall_time_s": round(time.perf_counter() - t0, 3),
-            "num_variables": r.num_variables, "num_constraints": r.num_constraints}
-    if r.status == "UNKNOWN":   # timeout: no verdict (never silently read as UNSAT)
+            "num_variables": r.num_variables, "num_total_variables": r.num_total_variables,
+            "num_constraints": r.num_constraints}
+    if not r.resolved:   # UNKNOWN/MODEL_INVALID: no verdict (never silently read as UNSAT)
         return None, info, None
     plan = {str(s): ms for s, ms in sorted(r.plan.items())} if r.feasible else {}
     return {"feasible": r.feasible, "plan": plan, "reason": r.status}, info, None

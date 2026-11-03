@@ -1,26 +1,27 @@
 {
   "instance": "unsat_t4_tight_focus_overload_block",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Semester 4 off leaves 6 teaching semesters capped at 26 MC. The industrial-experience option is at most 12 MC and does not count toward the load, so 148 MC must come from loaded modules. Almost all modules are 4 MC, 8 MC or other non-5 MC sizes, so a semester holds at most 24 MC. Only CS3216 and CS3217 are 5 MC, which adds at most 2 MC overall. So loaded MC cannot exceed 6*24+2 = 146, and the total is at most 158, below the 160 MC requirement.\"}",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"With semester 4 off, only 6 semesters (1,2,3,5,6,7) can hold modules, each capped at 26 MC. The non-industrial modules have sizes of 0, 4, 5 or 8 MC, and only CS3216 and CS3217 are 5 MC, so at most 146 MC can be loaded across the 6 semesters. The one allowed industrial-experience option adds at most 12 MC outside the unit load, giving at most 158 MC, which is below the required 160 MC.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 27.55,
-  "cost_usd": 0.037392,
+  "latency_s": 39.93,
+  "cost_usd": 0.053027,
   "request_id": "",
   "usage": {
     "input_tokens": 88,
-    "output_tokens": 3440,
+    "output_tokens": 5003,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:14:04+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:37:17+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "Semester 4 off leaves 6 teaching semesters capped at 26 MC. The industrial-experience option is at most 12 MC and does not count toward the load, so 148 MC must come from loaded modules. Almost all modules are 4 MC, 8 MC or other non-5 MC sizes, so a semester holds at most 24 MC. Only CS3216 and CS3217 are 5 MC, which adds at most 2 MC overall. So loaded MC cannot exceed 6*24+2 = 146, and the total is at most 158, below the 160 MC requirement."
+    "reason": "With semester 4 off, only 6 semesters (1,2,3,5,6,7) can hold modules, each capped at 26 MC. The non-industrial modules have sizes of 0, 4, 5 or 8 MC, and only CS3216 and CS3217 are 5 MC, so at most 146 MC can be loaded across the 6 semesters. The one allowed industrial-experience option adds at most 12 MC outside the unit load, giving at most 158 MC, which is below the required 160 MC."
   },
   "parse_error": null
 }

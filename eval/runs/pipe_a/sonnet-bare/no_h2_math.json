@@ -4,79 +4,79 @@
   "condition": "bare",
   "model_key": "sonnet",
   "model": "claude-sonnet-5-5",
-  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1010\",\"CS1231S\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1521\",\"MA1522\",\"CS2100\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS3230\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3231\",\"CS3233\",\"IS1108\",\"GEX1000\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"GES1000\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3236\",\"CS4236\",\"CS3243\",\"CS3244\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS2102\",\"CS2105\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The degree needs 160 MC, which fits exactly into 8 semesters at 20 MC each. ES1103 and MA1301 go first and count as unrestricted electives, and the algorithms-theory focus area plus the 12 MC industry experience (CP3880) fit alongside the foundation, mathematics and general education modules. I built this plan from memory of the requirements and did not check each module's semester offering or prerequisites against the current NUS catalogue, so confirm the module codes, offerings and focus-area list before relying on it.\"}",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1101S\",\"CS1231S\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2106\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2105\",\"CS2109S\",\"ST2334\",\"GESS1000\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4232\",\"CS3236\",\"GEN2000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4234\",\"CS4257\",\"CS4261\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible, but only just: it uses 160 MC at exactly 20 MC per semester over 8 semesters. ES1103 and MA1301 (needed because there is no H2 Math) go first, then the core, math, algorithms-theory focus modules, the 12 MC industry experience (CP3880) and electives follow in order. Some module codes, MC values and semester offerings are from memory, so please check them against the official AY2026/27 requirements.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 88.03,
-  "cost_usd": 0.117689,
+  "latency_s": 49.89,
+  "cost_usd": 0.066449,
   "request_id": "",
   "usage": {
     "input_tokens": 121,
-    "output_tokens": 11725,
+    "output_tokens": 6601,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 987
   },
   "effort": "high",
   "prompt_sha256": "d88543107b59dfed",
-  "timestamp": "2026-10-27T15:22:40+00:00",
+  "timestamp": "2026-11-02T14:43:28+00:00",
   "prediction": {
     "feasible": true,
     "plan": {
       "1": [
         "ES1103",
         "MA1301",
-        "CS1010",
+        "CS1101S",
         "CS1231S",
-        "GEA1000"
+        "GEA1000N"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
+        "CS2100",
         "MA1521",
-        "MA1522",
-        "CS2100"
+        "MA1522"
       ],
       "3": [
-        "CS2101",
         "CS2103T",
+        "CS2101",
+        "CS2102",
         "CS2106",
-        "CS3230",
-        "ST2334"
+        "CS3230"
       ],
       "4": [
-        "CS3231",
-        "CS3233",
-        "IS1108",
-        "GEX1000",
+        "CS2105",
+        "CS2109S",
+        "ST2334",
+        "GESS1000",
         "GEC1000"
       ],
       "5": [
         "CS4231",
-        "CS4234",
-        "GES1000",
+        "CS4232",
+        "CS3236",
         "GEN2000",
         "UE_GENERIC_1"
       ],
       "6": [
-        "CP3880",
+        "CS4234",
+        "CS4257",
+        "CS4261",
         "UE_GENERIC_2",
         "UE_GENERIC_3"
       ],
       "7": [
-        "CS3236",
-        "CS4236",
-        "CS3243",
-        "CS3244",
-        "UE_GENERIC_4"
+        "CP3880",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "8": [
-        "CS2102",
-        "CS2105",
-        "UE_GENERIC_5",
         "UE_GENERIC_6",
-        "UE_GENERIC_7"
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
       ]
     },
-    "reason": "The degree needs 160 MC, which fits exactly into 8 semesters at 20 MC each. ES1103 and MA1301 go first and count as unrestricted electives, and the algorithms-theory focus area plus the 12 MC industry experience (CP3880) fit alongside the foundation, mathematics and general education modules. I built this plan from memory of the requirements and did not check each module's semester offering or prerequisites against the current NUS catalogue, so confirm the module codes, offerings and focus-area list before relying on it."
+    "reason": "Feasible, but only just: it uses 160 MC at exactly 20 MC per semester over 8 semesters. ES1103 and MA1301 (needed because there is no H2 Math) go first, then the core, math, algorithms-theory focus modules, the 12 MC industry experience (CP3880) and electives follow in order. Some module codes, MC values and semester offerings are from memory, so please check them against the official AY2026/27 requirements."
   },
   "parse_error": null
 }

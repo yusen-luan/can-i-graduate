@@ -6,18 +6,18 @@
   "model": "claude-sonnet-5-5",
   "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":7,\"max_units_per_semester\":26,\"focus_area\":\"computer_security\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
   "stop_reason": "end_turn",
-  "latency_s": 4.054,
-  "cost_usd": 0.006058,
+  "latency_s": 5.017,
+  "cost_usd": 0.006336,
   "request_id": "",
   "usage": {
     "input_tokens": 85,
-    "output_tokens": 453,
+    "output_tokens": 481,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 6788
+    "cache_read_input_tokens": 6778
   },
   "effort": "high",
-  "prompt_sha256": "7fdecaa362bdcefc",
-  "timestamp": "2026-10-28T04:01:09+00:00",
+  "prompt_sha256": "23c6589b14921d44",
+  "timestamp": "2026-11-02T15:02:29+00:00",
   "spec": {
     "student": {
       "completed": [],
@@ -50,9 +50,10 @@
   "spec_error": null,
   "solve": {
     "status": "OPTIMAL",
-    "wall_time_s": 0.364,
+    "wall_time_s": 0.907,
     "num_variables": 812,
-    "num_constraints": 2717
+    "num_total_variables": 2058,
+    "num_constraints": 2745
   },
   "prediction": {
     "feasible": true,
@@ -60,58 +61,59 @@
       "1": [
         "CS1101S",
         "CS1231S",
-        "ES2660",
-        "GEN2001",
-        "IS1108",
-        "MA1521"
+        "GEC1020",
+        "MA1521",
+        "MA1522",
+        "UE_GENERIC_2"
       ],
       "2": [
         "CS2030S",
         "CS2040S",
         "CS2100",
-        "UE_GENERIC_1",
-        "UE_GENERIC_10",
-        "UE_GENERIC_5"
-      ],
-      "3": [
-        "CS2101",
-        "CS2103T",
-        "CS2109S",
-        "CS3230",
-        "MA1522",
+        "HSI1000",
+        "IS1108",
         "ST2334"
       ],
-      "4": [
+      "3": [
         "CS2106",
+        "CS3230",
+        "GEN2001",
+        "UE_GENERIC_3",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2105",
         "CS4230",
-        "GEC1030",
-        "GESS1025",
-        "UE_GENERIC_8",
-        "UE_GENERIC_9"
+        "ES2660",
+        "GEA1000"
       ],
       "5": [
-        "CS2107",
-        "GEA1000",
-        "UE_GENERIC_4"
+        "DAO2703",
+        "DTK1234",
+        "GEC1030",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
       ],
       "6": [
-        "DTK1234",
-        "GEN2000",
-        "SC1101E",
-        "UE_GENERIC_3"
+        "CP3200",
+        "CS2107",
+        "GEN2004",
+        "UE_GENERIC_8"
       ],
       "7": [
-        "CS2102",
+        "CP3202",
+        "CS2109S",
         "CS4234",
         "CS4236",
-        "ETP3201L",
-        "GEC1015",
-        "GESS1001",
-        "IE2141"
+        "GESS1020"
       ]
     },
     "reason": "OPTIMAL"
   },
   "parse_error": null,
-  "llm_latency_s": 3.69
+  "llm_latency_s": 4.11
 }

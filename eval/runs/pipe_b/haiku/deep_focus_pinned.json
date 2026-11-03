@@ -4,20 +4,20 @@
   "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"algorithms_theory\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[\"CS3230\"],\"forbid_modules\":[],\"deadlines\":[{\"module\":\"CS2040S\",\"semester\":3}]},\"unsupported_requests\":[\"Asked whether the plan can be done and for a semester-by-semester plan as the output; this specification records constraints only and cannot express a feasibility answer or a returned plan.\"]}",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"algorithms_theory\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[\"CS3230\"],\"forbid_modules\":[],\"deadlines\":[{\"module\":\"CS2040S\",\"semester\":3}]},\"unsupported_requests\":[]}",
   "stop_reason": "end_turn",
-  "latency_s": 5.152,
-  "cost_usd": 0.000466,
+  "latency_s": 4.678,
+  "cost_usd": 0.000453,
   "request_id": "",
   "usage": {
     "input_tokens": 111,
-    "output_tokens": 774,
+    "output_tokens": 748,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 6788
+    "cache_read_input_tokens": 6778
   },
   "effort": "high",
-  "prompt_sha256": "7fdecaa362bdcefc",
-  "timestamp": "2026-10-28T04:00:29+00:00",
+  "prompt_sha256": "23c6589b14921d44",
+  "timestamp": "2026-11-02T15:01:27+00:00",
   "spec": {
     "student": {
       "completed": [],
@@ -52,16 +52,15 @@
         }
       ]
     },
-    "unsupported_requests": [
-      "Asked whether the plan can be done and for a semester-by-semester plan as the output; this specification records constraints only and cannot express a feasibility answer or a returned plan."
-    ]
+    "unsupported_requests": []
   },
   "spec_error": null,
   "solve": {
     "status": "OPTIMAL",
-    "wall_time_s": 0.582,
+    "wall_time_s": 0.538,
     "num_variables": 1044,
-    "num_constraints": 3446
+    "num_total_variables": 2642,
+    "num_constraints": 3480
   },
   "prediction": {
     "feasible": true,
@@ -69,62 +68,62 @@
       "1": [
         "CS1101S",
         "CS1231S",
-        "GEA1000",
-        "MA1521"
+        "MA1521",
+        "SC1101E",
+        "UE_GENERIC_6"
       ],
       "2": [
         "CS2040S",
-        "CS2100",
-        "IS1128",
-        "ST2334"
+        "ES2660",
+        "GEN2004",
+        "ST2334",
+        "UE_GENERIC_3"
       ],
       "3": [
-        "CS2030S",
-        "CS2109S",
-        "CS3231",
-        "MA1522",
-        "SC1101E"
+        "CS2100",
+        "CS3230",
+        "GEA1000",
+        "GESS1001",
+        "UE_GENERIC_2"
       ],
       "4": [
-        "CS2101",
-        "CS2103T",
-        "CS3230",
-        "CS4430",
-        "GEN2000"
+        "CS4231",
+        "GESS1020",
+        "GESS1025",
+        "HSI1000",
+        "UE_GENERIC_5"
       ],
       "5": [
-        "CS2106",
-        "DTK1234",
-        "UE_GENERIC_10"
-      ],
-      "6": [
-        "CS4231",
-        "GEC1015",
-        "GESS1020",
-        "UE_GENERIC_2",
+        "CS3231",
+        "IS1128",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
         "UE_GENERIC_9"
       ],
+      "6": [
+        "CS2030S",
+        "CS2106",
+        "CS3236",
+        "CS4430",
+        "MA1522"
+      ],
       "7": [
+        "CS2109S",
         "CS4234",
-        "ES2660",
-        "GEC1030",
-        "GEN2003",
         "IS1108"
       ],
       "8": [
-        "CS3236",
-        "UE_GENERIC_7"
+        "ETP3201L"
       ],
       "9": [
-        "ETP3201L",
-        "GEN2001",
-        "GESS1025",
-        "UE_GENERIC_1",
-        "UE_GENERIC_6"
+        "CS2101",
+        "CS2103T",
+        "GEC1030",
+        "GEN2001"
       ]
     },
     "reason": "OPTIMAL"
   },
   "parse_error": null,
-  "llm_latency_s": 4.57
+  "llm_latency_s": 4.14
 }

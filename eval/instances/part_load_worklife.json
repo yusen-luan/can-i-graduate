@@ -36,64 +36,66 @@
   "ground_truth": {
     "feasible": true,
     "status": "OPTIMAL",
+    "proven_infeasible": false,
     "plan": {
       "1": [
-        "CS1101S",
-        "CS1231S",
-        "MA1521",
-        "UE_GENERIC_6"
+        "GE2103",
+        "HSI1000",
+        "IE2141",
+        "MA1522"
       ],
       "2": [
-        "CS2030S",
-        "CS2040S",
-        "CS2100",
-        "GEC1030"
-      ],
-      "3": [
-        "CS2106",
-        "CS2109S",
-        "ETP3201L",
-        "MA1522",
-        "ST2334"
-      ],
-      "4": [
-        "CS2101",
-        "CS2103T",
-        "CS4248",
-        "UE_GENERIC_1"
-      ],
-      "5": [
-        "CS3219",
-        "CS3227",
-        "GEN2001",
-        "UE_GENERIC_3"
-      ],
-      "6": [
-        "IE2141",
-        "UE_GENERIC_4"
-      ],
-      "7": [
-        "DTK1234",
-        "HSI1000",
-        "UE_GENERIC_10"
-      ],
-      "8": [
-        "CS4218",
-        "ES2660",
-        "GESS1020",
-        "IS1108"
-      ],
-      "9": [
-        "CS4211",
-        "GEA1000",
-        "GEC1020",
+        "CS1101S",
+        "CS1231S",
+        "GEN2000",
         "UE_GENERIC_8"
       ],
-      "10": [
-        "CS3230",
+      "3": [
+        "CS2100",
+        "GEA1000",
+        "IS1108",
+        "UE_GENERIC_6"
+      ],
+      "4": [
+        "CS2030S",
+        "CS2040S",
+        "GEC1020",
+        "MA1521"
+      ],
+      "5": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS4263"
+      ],
+      "6": [
+        "CS3213",
+        "ES2660"
+      ],
+      "7": [
+        "GEC1015",
+        "GEC1030",
         "GEN2003",
-        "UE_GENERIC_2",
-        "UE_GENERIC_5"
+        "UE_GENERIC_1"
+      ],
+      "8": [
+        "CP3200",
+        "GESS1020",
+        "GESS1025",
+        "UE_GENERIC_2"
+      ],
+      "9": [
+        "CS3230",
+        "CS4211",
+        "CS4218",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "CP3202",
+        "CS2109S",
+        "CS3219",
+        "ST2334",
+        "UE_GENERIC_10"
       ]
     },
     "total_units": 160
@@ -111,18 +113,19 @@
     ],
     "difficulty": {
       "num_variables": 1160,
-      "num_constraints": 4986,
+      "num_total_variables": 2944,
+      "num_constraints": 5023,
       "min_feasible_semesters": 10,
       "semester_slack": 0,
-      "min_feasible_cap": 16,
       "cap_slack": 0,
-      "near_unsat_margin": 0
+      "min_feasible_cap": 16,
+      "cap_min_bounded": false
     },
     "quality": {
-      "realism": 89.2,
+      "realism": 91.6,
       "flags": [
         "Semester 6: only 8 MC \u2014 very light",
-        "Internship/FYP scheduled early: ETP3201L"
+        "Semester 7: 3 GE/ULR modules clustered together"
       ]
     }
   }

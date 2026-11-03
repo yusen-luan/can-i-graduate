@@ -1,26 +1,27 @@
 {
   "instance": "preclusion_deadend",
   "pipeline": "A-direct",
+  "condition": "full",
   "model_key": "haiku",
   "model": "claude-haiku-5-5",
-  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS1010 is in the intro_programming preclusion group with CS1101S, which is both a required module and the only option for the digital literacy requirement, so you cannot hold both and the graduation requirements cannot be met.\"}",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS1101S is required both as a graduation module and as the only option for the digital literacy requirement, but it is in the same intro_programming preclusion group as the already-completed CS1010, so at most one of them can be held and the requirement cannot be met.\"}",
   "stop_reason": "end_turn",
-  "latency_s": 4.33,
-  "cost_usd": 0.000484,
+  "latency_s": 4.02,
+  "cost_usd": 0.000449,
   "request_id": "",
   "usage": {
     "input_tokens": 76,
-    "output_tokens": 671,
+    "output_tokens": 601,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 14078
+    "cache_read_input_tokens": 14103
   },
   "effort": "high",
-  "prompt_sha256": "58a0e642a48d0547",
-  "timestamp": "2026-10-27T14:08:25+00:00",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:32:42+00:00",
   "prediction": {
     "feasible": false,
     "plan": {},
-    "reason": "CS1010 is in the intro_programming preclusion group with CS1101S, which is both a required module and the only option for the digital literacy requirement, so you cannot hold both and the graduation requirements cannot be met."
+    "reason": "CS1101S is required both as a graduation module and as the only option for the digital literacy requirement, but it is in the same intro_programming preclusion group as the already-completed CS1010, so at most one of them can be held and the requirement cannot be met."
   },
   "parse_error": null
 }

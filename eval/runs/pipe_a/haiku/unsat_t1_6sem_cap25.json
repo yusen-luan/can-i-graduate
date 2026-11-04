@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Under the 25 MC per-semester cap over 6 semesters, the coursework units total at most 146 MC, because only two 5-MC modules exist (CS3216, CS3217) and every other coursework module is a multiple of 4 MC. Adding the maximum 12 MC industrial-experience option (which does not count toward unit load) gives at most 158 MC, short of the required 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 67.09,
+  "cost_usd": 0.007679,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 15050,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:47+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Under the 25 MC per-semester cap over 6 semesters, the coursework units total at most 146 MC, because only two 5-MC modules exist (CS3216, CS3217) and every other coursework module is a multiple of 4 MC. Adding the maximum 12 MC industrial-experience option (which does not count toward unit load) gives at most 158 MC, short of the required 160 MC."
+  },
+  "parse_error": null
+}

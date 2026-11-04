@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_cs_starved",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree needs 160 MC, so 8 semesters at a 20 MC cap leaves no slack. Allowing at most 1 CS/IFS/CP module per semester caps you at 8 such modules, but the CS foundation (e.g. CS1010, CS1231S, CS2030, CS2040, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230), the focus area and the industry experience requirement need well over 8.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.86,
+  "cost_usd": 0.007759,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 101,
+    "output_tokens": 736,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:50:08+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs 160 MC, so 8 semesters at a 20 MC cap leaves no slack. Allowing at most 1 CS/IFS/CP module per semester caps you at 8 such modules, but the CS foundation (e.g. CS1010, CS1231S, CS2030, CS2040, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230), the focus area and the industry experience requirement need well over 8."
+  },
+  "parse_error": null
+}

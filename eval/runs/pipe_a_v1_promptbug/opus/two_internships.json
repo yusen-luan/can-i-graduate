@@ -1,0 +1,83 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"IS1108\", \"ST2334\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"CS3219\", \"CS3213\", \"ES2660\", \"GEC1015\", \"GESS1020\", \"CP3200\"]}, {\"semester\": 5, \"modules\": [\"CS4211\", \"CS4263\", \"CS4218\", \"GEN2000\", \"DTK1234\", \"CP3202\"]}, {\"semester\": 6, \"modules\": [\"IS1128\", \"HSI1000\", \"CS3227\", \"CS2105\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": []}], \"reason\": \"Feasible: the plan totals exactly 160 MC and covers all required and university-level modules plus three ID/CD modules. It fulfils the software engineering focus area (CS2103T, CS3213, CS3219, CS3227, CS4211, CS4218), 12 MC at level 4000, 40 MC of B&D and the CP3200+CP3202 internship, with no semester exceeding 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.74,
+  "cost_usd": 0.042294,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 1955,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:02:09+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "ST2334"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3219",
+        "CS3213",
+        "ES2660",
+        "GEC1015",
+        "GESS1020",
+        "CP3200"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "CS4218",
+        "GEN2000",
+        "DTK1234",
+        "CP3202"
+      ],
+      "6": [
+        "IS1128",
+        "HSI1000",
+        "CS3227",
+        "CS2105",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": []
+    },
+    "reason": "Feasible: the plan totals exactly 160 MC and covers all required and university-level modules plus three ID/CD modules. It fulfils the software engineering focus area (CS2103T, CS3213, CS3219, CS3227, CS4211, CS4218), 12 MC at level 4000, 40 MC of B&D and the CP3200+CP3202 internship, with no semester exceeding 20 MC."
+  },
+  "parse_error": null
+}

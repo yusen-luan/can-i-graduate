@@ -1,0 +1,82 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"IS1108\"]}, {\"semester\": 2, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2106\", \"MA1522\"]}, {\"semester\": 3, \"modules\": [\"CS3230\", \"CS3231\", \"CS2109S\", \"GEA1000\"]}, {\"semester\": 4, \"modules\": [\"CS4231\", \"CS4430\", \"ST2334\", \"ES2660\"]}, {\"semester\": 5, \"modules\": [\"CS4234\", \"CS2105\", \"CS2107\", \"GEN2003\", \"CP3200\"]}, {\"semester\": 6, \"modules\": [\"CP3202\", \"GEC1015\", \"GESS1020\", \"DTK1234\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"IS1128\", \"HSI1000\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\"]}], \"reason\": \"A 9-semester plan works: algorithms theory uses CS3230, CS3231 and CS4234 as primaries with CS4231 and CS4430 for 12 MC at level 4000, the CP3200+CP3202 internship gives 12 MC of B&D (36 MC total), and the ID/CD set is three ID modules. Each semester stays at or under 20 MC, and the total reaches exactly 160 MC using 9 generic electives (within the 10 allowed).\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 49.83,
+  "cost_usd": 0.008289,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 12896,
+    "cache_creation_input_tokens": 14656,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:42:36+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108"
+      ],
+      "2": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "MA1522"
+      ],
+      "3": [
+        "CS3230",
+        "CS3231",
+        "CS2109S",
+        "GEA1000"
+      ],
+      "4": [
+        "CS4231",
+        "CS4430",
+        "ST2334",
+        "ES2660"
+      ],
+      "5": [
+        "CS4234",
+        "CS2105",
+        "CS2107",
+        "GEN2003",
+        "CP3200"
+      ],
+      "6": [
+        "CP3202",
+        "GEC1015",
+        "GESS1020",
+        "DTK1234",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "IS1128",
+        "HSI1000",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A 9-semester plan works: algorithms theory uses CS3230, CS3231 and CS4234 as primaries with CS4231 and CS4430 for 12 MC at level 4000, the CP3200+CP3202 internship gives 12 MC of B&D (36 MC total), and the ID/CD set is three ID modules. Each semester stays at or under 20 MC, and the total reaches exactly 160 MC using 9 generic electives (within the 10 allowed)."
+  },
+  "parse_error": null
+}

@@ -493,9 +493,10 @@ CS2109S:
         - CS2040
         - CS2040DE
       - one_of:
-        - one_of:
-          - MA1511
-          - MA1512
+        - n_of:
+          - 2
+          - - MA1511
+            - MA1512
         - MA1521
         - MA2002
         - MA1102R
@@ -887,9 +888,10 @@ CS3242:
         - MA1505
         - MA1507
         - MA1102R
-        - one_of:
-          - MA1511
-          - MA1512
+        - n_of:
+          - 2
+          - - MA1511
+            - MA1512
   title: 3D Modeling and Animation
   units: 4
 CS3243:
@@ -949,9 +951,10 @@ CS3244:
         - MA2116T
         - MA2216
       - one_of:
-        - one_of:
-          - MA1511
-          - MA1512
+        - n_of:
+          - 2
+          - - MA1511
+            - MA1512
         - all_of:
           - one_of:
             - MA2001
@@ -1527,9 +1530,10 @@ CS4243:
         - MA1505
         - MA1521
         - MA1507
-        - one_of:
-          - MA1512
-          - MA1511
+        - n_of:
+          - 2
+          - - MA1512
+            - MA1511
   title: Computer Vision and Pattern Recognition
   units: 4
 CS4244:
@@ -1629,9 +1633,10 @@ CS4248:
         - MA1102R
         - YSC1216
         - MA2002
-        - one_of:
-          - MA1511
-          - MA1512
+        - n_of:
+          - 2
+          - - MA1511
+            - MA1512
   title: Introduction to Large Language Models
   units: 4
 CS4249:
@@ -1768,9 +1773,10 @@ CS4347:
         - MA1507
         - MA1521
         - MA2002
-        - one_of:
-          - MA1512
-          - MA1511
+        - n_of:
+          - 2
+          - - MA1512
+            - MA1511
   title: Sound and Music Computing
   units: 4
 CS4350:
@@ -1813,9 +1819,10 @@ CS4353:
         - one_of:
           - NM3243
           - NM4259
-          - one_of:
-            - ID2116
-            - ID3131
+          - n_of:
+            - 2
+            - - ID2116
+              - ID3131
   title: Interactive Systems Development Project
   units: 4
 CS4430:

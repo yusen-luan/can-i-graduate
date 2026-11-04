@@ -1,0 +1,82 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"GESS1000\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"ES2660\",\"GEC1000\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS3203\",\"CS4246\",\"GEN2000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3263\",\"CS4248\",\"CS3223\",\"CS4231\",\"GEX1000\"]},{\"semester\":8,\"modules\":[\"CS3264\",\"CS3210\",\"CS4236\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CP3880\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: the 160 MC fit exactly into eight 20 MC semesters, with semester 5 left empty. The plan covers the foundation, maths, IT professionalism, general education, team project, industry experience, AI focus area (CS3243, CS3244, CS3263, CS3264, CS4246, CS4248), CS electives and 5 unrestricted electives. The exact module lists for some categories (general education codes, CS3203, CP3880) are recalled from memory and may need checking against the official AY2026/27 requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 46.11,
+  "cost_usd": 0.062537,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 6214,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:48:14+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1128"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "GESS1000"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "ES2660",
+        "GEC1000"
+      ],
+      "5": [],
+      "6": [
+        "CS3203",
+        "CS4246",
+        "GEN2000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CS3263",
+        "CS4248",
+        "CS3223",
+        "CS4231",
+        "GEX1000"
+      ],
+      "8": [
+        "CS3264",
+        "CS3210",
+        "CS4236",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "CP3880",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ]
+    },
+    "reason": "Feasible: the 160 MC fit exactly into eight 20 MC semesters, with semester 5 left empty. The plan covers the foundation, maths, IT professionalism, general education, team project, industry experience, AI focus area (CS3243, CS3244, CS3263, CS3264, CS4246, CS4248), CS electives and 5 unrestricted electives. The exact module lists for some categories (general education codes, CS3203, CP3880) are recalled from memory and may need checking against the official AY2026/27 requirements."
+  },
+  "parse_error": null
+}

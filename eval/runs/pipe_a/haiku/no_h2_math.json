@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1103\",\"MA1301\",\"CS1101S\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2106\",\"ST2334\",\"CS2107\",\"CS2102\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2103T\",\"CS2101\",\"CS2109S\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"CS2105\",\"GEC1015\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4430\",\"CS4231\",\"GEN2000\",\"DTK1234\",\"IS1128\"]},{\"semester\":7,\"modules\":[\"CS3203\",\"GESS1020\",\"SC1101E\",\"UE\",\"CP3200\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"CP3202\"]}],\"reason\":\"A 160 MC plan exists: MA1301 bridges the missing H2 Mathematics, ES1103 is taken in Semester 1 for Band 2 English, and the CP3200+CP3202 internship (which does not count toward semester load) satisfies the single industrial-experience option. Each semester stays within 20 MC, and the algorithms_theory focus (CS3230, CS3231, CS4430 with 12 MC at level 4000) and the ID/CD and university requirements are all met.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 80.6,
+  "cost_usd": 0.010548,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 20778,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1103",
+        "MA1301",
+        "CS1101S",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1521",
+        "MA1522"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2106",
+        "ST2334",
+        "CS2107",
+        "CS2102"
+      ],
+      "4": [
+        "CS3230",
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "ES2660"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "CS2105",
+        "GEC1015",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS4430",
+        "CS4231",
+        "GEN2000",
+        "DTK1234",
+        "IS1128"
+      ],
+      "7": [
+        "CS3203",
+        "GESS1020",
+        "SC1101E",
+        "UE_GENERIC_2",
+        "CP3200"
+      ],
+      "8": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "CP3202"
+      ]
+    },
+    "reason": "A 160 MC plan exists: MA1301 bridges the missing H2 Mathematics, ES1103 is taken in Semester 1 for Band 2 English, and the CP3200+CP3202 internship (which does not count toward semester load) satisfies the single industrial-experience option. Each semester stays within 20 MC, and the algorithms_theory focus (CS3230, CS3231, CS4430 with 12 MC at level 4000) and the ID/CD and university requirements are all met."
+  },
+  "parse_error": null
+}

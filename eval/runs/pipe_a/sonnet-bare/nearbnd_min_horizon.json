@@ -1,0 +1,81 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1522\",\"GEA1000N\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1000\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4248\",\"GEC1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"CS3263\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"CS4243\",\"GEX1000\"]},{\"semester\":8,\"modules\":[\"CS2102\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The degree is 160 MC, which fits exactly into 8 semesters at 20 MC each. The plan covers the CS foundation, mathematics, ethics, team project, industry experience and an AI focus area (CS2109S, CS3243, CS3244, CS4246, CS4248, CS3263, CS4243, CS2102), with prerequisites respected. The module codes and MC breakdown follow my best recollection of the requirements, not an official check, and the ULR (GE) codes especially should be verified against the AY2026/27 list.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 37.97,
+  "cost_usd": 0.050805,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 5043,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:48:51+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1522",
+        "GEA1000N",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "IS1128"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GESS1000",
+        "UE_GENERIC_2"
+      ],
+      "5": [
+        "CS3203",
+        "CS4248",
+        "GEC1000",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4246",
+        "CS3263",
+        "GEN2000",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "CP3880",
+        "CS4243",
+        "GEX1000"
+      ],
+      "8": [
+        "CS2102",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "The degree is 160 MC, which fits exactly into 8 semesters at 20 MC each. The plan covers the CS foundation, mathematics, ethics, team project, industry experience and an AI focus area (CS2109S, CS3243, CS3244, CS4246, CS4248, CS3263, CS4243, CS2102), with prerequisites respected. The module codes and MC breakdown follow my best recollection of the requirements, not an official check, and the ULR (GE) codes especially should be verified against the AY2026/27 list."
+  },
+  "parse_error": null
+}

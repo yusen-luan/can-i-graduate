@@ -1,0 +1,70 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2109S\",\"CS2101\",\"CS2103T\",\"CS2106\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS3230\",\"GEC1015\",\"GESS1020\",\"GEN2003\",\"DTK1234\"]},{\"semester\":3,\"modules\":[\"CS3263\",\"CS4263\",\"CS3268\",\"IS1128\",\"SC1101E\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS4248\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4244\",\"CS4246\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"A plan exists that meets all graduation rules and the artificial intelligence focus within the 20 MC cap, using CP3880 as the single industrial experience and 7 generic electives to reach exactly 160 MC. It finishes in 6 semesters, within the 8 allowed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 55.34,
+  "cost_usd": 0.007071,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 13835,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:32:38+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2109S",
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "IS1108"
+      ],
+      "2": [
+        "CS3230",
+        "GEC1015",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234"
+      ],
+      "3": [
+        "CS3263",
+        "CS4263",
+        "CS3268",
+        "IS1128",
+        "SC1101E"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "CS4248",
+        "CP3880"
+      ],
+      "5": [
+        "CS4244",
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [],
+      "8": []
+    },
+    "reason": "A plan exists that meets all graduation rules and the artificial intelligence focus within the 20 MC cap, using CP3880 as the single industrial experience and 7 generic electives to reach exactly 160 MC. It finishes in 6 semesters, within the 8 allowed."
+  },
+  "parse_error": null
+}

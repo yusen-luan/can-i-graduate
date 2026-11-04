@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_ineligible_fyp",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The student requests the final-year project (CP4101), but CP4101 may only be taken by a student whose GPA qualifies for it, and this student's GPA does not currently qualify, so the request cannot be satisfied.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.44,
+  "cost_usd": 0.004697,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 155,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:55+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The student requests the final-year project (CP4101), but CP4101 may only be taken by a student whose GPA qualifies for it, and this student's GPA does not currently qualify, so the request cannot be satisfied."
+  },
+  "parse_error": null
+}

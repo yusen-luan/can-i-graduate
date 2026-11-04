@@ -1,0 +1,81 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CP3880\",\"CS3219\",\"IS1108\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS4218\",\"CP4106\",\"DTK1234\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"CS3213\",\"HSI1000\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan reaches exactly 160 MC with all required modules and university requirements. Software engineering is covered by CS2103T, CS3219, CS3213 and CS4218 (CS4218 is level 4000). CP4106 is the UROP and CP3880 the internship, B&D comes to 32 MC, level 4000 comes to 12 MC, and no semester exceeds 20 MC of load.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 17.47,
+  "cost_usd": 0.027986,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 2497,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:21+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CP3880",
+        "CS3219",
+        "IS1108",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CS4218",
+        "CP4106",
+        "DTK1234",
+        "IS1128"
+      ],
+      "6": [
+        "CS3213",
+        "HSI1000",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "The plan reaches exactly 160 MC with all required modules and university requirements. Software engineering is covered by CS2103T, CS3219, CS3213 and CS4218 (CS4218 is level 4000). CP4106 is the UROP and CP3880 the internship, B&D comes to 32 MC, level 4000 comes to 12 MC, and no semester exceeds 20 MC of load."
+  },
+  "parse_error": null
+}

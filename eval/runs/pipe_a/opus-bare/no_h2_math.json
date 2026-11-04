@@ -1,0 +1,84 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"MA1301\",\"ES1103\",\"IS1108\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"MA1521\",\"MA1522\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"ST2334\",\"CS3231\",\"GEC1030\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS3230\",\"CS2106\",\"GESS1025\"]},{\"semester\":5,\"modules\":[\"CS2109S\",\"CS4232\",\"CS4234\",\"CS3233\",\"GEN2061\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS3243\",\"CDE2501\",\"DTK1234\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3236\",\"CS4261\",\"PL1101E\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Yes, it can be done in 8 semesters at 20 MC each, totalling 160 MC, with MA1301 and ES1103 taken first and counted as unrestricted electives, and CS2101 paired with CS2103T. The Algorithms & Theory focus area is met by CS3231, CS4232, CS4234 and CS4231, and the general-education, interdisciplinary and cross-disciplinary codes are examples you can swap for any approved course in the same category.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 63.21,
+  "cost_usd": 0.125141,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 6223,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:55:03+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "MA1301",
+        "ES1103",
+        "IS1108",
+        "GEA1000"
+      ],
+      "2": [
+        "CS1231S",
+        "CS2030S",
+        "MA1521",
+        "MA1522",
+        "ES2660"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "CS3231",
+        "GEC1030"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS3230",
+        "CS2106",
+        "GESS1025"
+      ],
+      "5": [
+        "CS2109S",
+        "CS4232",
+        "CS4234",
+        "CS3233",
+        "GEN2061"
+      ],
+      "6": [
+        "CS4231",
+        "CS3243",
+        "CDE2501",
+        "DTK1234",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CS3236",
+        "CS4261",
+        "PL1101E",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Yes, it can be done in 8 semesters at 20 MC each, totalling 160 MC, with MA1301 and ES1103 taken first and counted as unrestricted electives, and CS2101 paired with CS2103T. The Algorithms & Theory focus area is met by CS3231, CS4232, CS4234 and CS4231, and the general-education, interdisciplinary and cross-disciplinary codes are examples you can swap for any approved course in the same category."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Under the 27 MC per-semester cap over 6 semesters, the only non-multiple-of-4 modules are CS3216 and CS3217 (5 MC each), so coursework cannot exceed 146 MC; even adding the maximum 12 MC single industrial option gives at most 158 MC, short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 96.48,
+  "cost_usd": 0.011264,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 22219,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:48:45+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Under the 27 MC per-semester cap over 6 semesters, the only non-multiple-of-4 modules are CS3216 and CS3217 (5 MC each), so coursework cannot exceed 146 MC; even adding the maximum 12 MC single industrial option gives at most 158 MC, short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

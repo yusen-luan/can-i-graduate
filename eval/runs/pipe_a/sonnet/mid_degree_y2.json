@@ -1,0 +1,71 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS3243\",\"CS3244\",\"CS3230\",\"IS1108\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS4244\",\"CS4246\",\"CS4248\",\"GEN2000\",\"DTK1234\"]},{\"semester\":4,\"modules\":[\"CP3880\"]},{\"semester\":5,\"modules\":[\"IS1128\",\"HSI1000\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"All prerequisites and offered terms are respected, and no semester exceeds 20 MC. The plan reaches 160 MC, has 32 MC of B&D (including CP3880), and 12 MC at level 4000. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4244), three ID modules, all required modules and all university-level requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.14,
+  "cost_usd": 0.031203,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 2802,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:52+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "GEC1015"
+      ],
+      "2": [
+        "CS3243",
+        "CS3244",
+        "CS3230",
+        "IS1108",
+        "GESS1020"
+      ],
+      "3": [
+        "CS4244",
+        "CS4246",
+        "CS4248",
+        "GEN2000",
+        "DTK1234"
+      ],
+      "4": [
+        "CP3880"
+      ],
+      "5": [
+        "IS1128",
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": []
+    },
+    "reason": "All prerequisites and offered terms are respected, and no semester exceeds 20 MC. The plan reaches 160 MC, has 32 MC of B&D (including CP3880), and 12 MC at level 4000. It covers the AI focus area (CS2109S, CS3243, CS3244, CS4244), three ID modules, all required modules and all university-level requirements."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,84 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000N\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2101\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2105\",\"ST2334\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2102\",\"CS2109S\",\"GES1002\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CS4231\",\"CS4234\",\"CS3243\",\"GED1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS3231\",\"CS3236\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4232\",\"CS4236\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\"]}],\"reason\":\"The roughly 160 MC degree fits in 9 semesters at 20 MC or less per semester. CS2040S is taken in semester 2, CS3230 in semester 4, and the Algorithms & Theory focus area (CS3230, CS3231, CS4231, CS4232, CS4234, CS3236, CS4236) is covered. The module codes, MC values and semester offerings are recalled from memory rather than checked against the official NUS listings, so verify them before relying on this plan.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 47.62,
+  "cost_usd": 0.067909,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 6749,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:47:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000N"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2101",
+        "GEC1015"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2106",
+        "CS2105",
+        "ST2334",
+        "IS1128"
+      ],
+      "4": [
+        "CS3230",
+        "CS2102",
+        "CS2109S",
+        "GES1002",
+        "GEN2000"
+      ],
+      "5": [
+        "CS4231",
+        "CS4234",
+        "CS3243",
+        "GED1000",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS3231",
+        "CS3236",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CP3880",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "CS4232",
+        "CS4236",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "The roughly 160 MC degree fits in 9 semesters at 20 MC or less per semester. CS2040S is taken in semester 2, CS3230 in semester 4, and the Algorithms & Theory focus area (CS3230, CS3231, CS4231, CS4232, CS4234, CS3236, CS4236) is covered. The module codes, MC values and semester offerings are recalled from memory rather than checked against the official NUS listings, so verify them before relying on this plan."
+  },
+  "parse_error": null
+}

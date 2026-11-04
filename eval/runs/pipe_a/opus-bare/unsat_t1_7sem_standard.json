@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The NUS Computer Science degree requires 160 MC, but 7 semesters at no more than 20 MC each gives at most 140 MC. The 20 MC per-semester cap therefore makes graduating within 7 semesters impossible, since no special terms were designated.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.87,
+  "cost_usd": 0.005465,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 248,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:55:42+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The NUS Computer Science degree requires 160 MC, but 7 semesters at no more than 20 MC each gives at most 140 MC. The 20 MC per-semester cap therefore makes graduating within 7 semesters impossible, since no special terms were designated."
+  },
+  "parse_error": null
+}

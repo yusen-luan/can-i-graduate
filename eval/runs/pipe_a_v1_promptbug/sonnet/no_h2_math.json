@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1000\",\"MA1301\",\"CS1101S\",\"GEA1000\",\"IS1108\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1521\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2106\",\"ST2334\",\"ES1103\",\"IS1128\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS2109S\",\"CS2103T\",\"CS2101\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"CP3880\",\"GEC1015\",\"GESS1001\",\"GEN2000\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"CS2105\",\"HSI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"This plan fits in 8 semesters with at most 20 MC per semester (CP3880 is outside the unit load) and reaches 160 MC. It includes the MA1301 and ES1000/ES1103 bridging modules and meets the algorithms theory focus (CS3230, CS3231, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D and the CP3880 internship.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.44,
+  "cost_usd": 0.041968,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 3892,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:02+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1000",
+        "MA1301",
+        "CS1101S",
+        "GEA1000",
+        "IS1108",
+        "DTK1234"
+      ],
+      "2": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1521",
+        "MA1522"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2106",
+        "ST2334",
+        "ES1103",
+        "IS1128"
+      ],
+      "4": [
+        "CS3230",
+        "CS2109S",
+        "CS2103T",
+        "CS2101",
+        "ES2660"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "CP3880",
+        "GEC1015",
+        "GESS1001",
+        "GEN2000"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "CS2105",
+        "HSI1000",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "This plan fits in 8 semesters with at most 20 MC per semester (CP3880 is outside the unit load) and reaches 160 MC. It includes the MA1301 and ES1000/ES1103 bridging modules and meets the algorithms theory focus (CS3230, CS3231, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D and the CP3880 internship."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,77 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"ST2334\", \"CS2109S\", \"CS2101\", \"CS2103T\"]}, {\"semester\": 2, \"modules\": [\"CS3244\", \"CS2106\", \"CS2107\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS4263\", \"CS2104\", \"CS3231\", \"CS2105\"]}, {\"semester\": 4, \"modules\": [\"CS4248\", \"CS3235\", \"CS3263\", \"CS3230\"]}, {\"semester\": 5, \"modules\": [\"CS4243\", \"ES2660\", \"GESS1020\", \"GEC1020\"]}, {\"semester\": 6, \"modules\": [\"CS4262\", \"CS3264\", \"CS2102\", \"DTK1234\"]}, {\"semester\": 7, \"modules\": [\"IS1108\", \"GEN2003\", \"HSI1000\", \"CS3245\"]}, {\"semester\": 8, \"modules\": [\"IS1128\", \"UE\", \"UE\", \"UE\", \"ETP3205\"]}], \"reason\": \"A feasible 8-semester plan exists: it covers all remaining required modules, the University-level and ID/CD requirements, and the AI focus (CS2109S, CS3244, CS4248 plus extra AI primaries), with 16 MC per semester, one industrial internship (ETP3205 in Semester 8), and a total of 162 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 63.16,
+  "cost_usd": 0.008246,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 16176,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:30+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ST2334",
+        "CS2109S",
+        "CS2101",
+        "CS2103T"
+      ],
+      "2": [
+        "CS3244",
+        "CS2106",
+        "CS2107",
+        "GEA1000"
+      ],
+      "3": [
+        "CS4263",
+        "CS2104",
+        "CS3231",
+        "CS2105"
+      ],
+      "4": [
+        "CS4248",
+        "CS3235",
+        "CS3263",
+        "CS3230"
+      ],
+      "5": [
+        "CS4243",
+        "ES2660",
+        "GESS1020",
+        "GEC1020"
+      ],
+      "6": [
+        "CS4262",
+        "CS3264",
+        "CS2102",
+        "DTK1234"
+      ],
+      "7": [
+        "IS1108",
+        "GEN2003",
+        "HSI1000",
+        "CS3245"
+      ],
+      "8": [
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "ETP3205"
+      ]
+    },
+    "reason": "A feasible 8-semester plan exists: it covers all remaining required modules, the University-level and ID/CD requirements, and the AI focus (CS2109S, CS3244, CS4248 plus extra AI primaries), with 16 MC per semester, one industrial internship (ETP3205 in Semester 8), and a total of 162 MC."
+  },
+  "parse_error": null
+}

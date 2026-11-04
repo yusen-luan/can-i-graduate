@@ -80,6 +80,11 @@ experience as a separate requirement** on top of B&D. Both are wrong for 26/27:
 - **FYP:** CP4101 (12u dissertation) may *replace* the industrial experience for
   GPA ≥ 4.0 / Honours-Highest-Distinction students. CP-coded cap 12u (excl.
   industrial). Modelled as an optional substitute gated on `eligible_fyp`.
+  **(Iter3 2026-10-20:** actually implemented as the substitute now — re-verified
+  against the cohort page; see D29 and §I2.8. Earlier iter2 code forced "exactly one
+  internship always", which wrongly over-constrained dissertation-track students.
+  Honours-Highest-Distinction *mandatory* CP4101 is still not modelled — we don't
+  model honours classification.)
 
 Corrected unit map (sums to 160): CC 40 + Foundation 36 + Math 12 + **B&D 32
 (incl. industrial)** + UE 40.
@@ -146,3 +151,32 @@ Electives remain generic. 81 tests pass.
 - APC credit limits (Registrar policy). **Overload ceiling: assumed 28 units/sem
   for iter2** (`program_cs.yaml: max_overload_units`); an instance requesting a
   higher per-semester cap is rejected by the solver and flagged by the checker.
+
+## A5 re-verification vs the cohort page — 2026-10-20 (WebFetch of cs-26-27)
+Full re-check of `program_cs.yaml` against the live CS cohort 2026/27 page. **Every
+unit total and structural rule matches**; three deliberate simplifications remain.
+
+| Requirement | Cohort page | Model | Match |
+|---|---|---|---|
+| Total | 160u | 160u | ✓ |
+| Common Curriculum | 40u (ULR 24 + Ethics 4 + ID/CD 12) | same | ✓ |
+| ULR pillars | DigitalLit=CS1101S, Critique=ES2660(/UTW/RVX), Cultures=GEC%, DataLit=GEA1000(/BT1101/ST1131/DSA1101), SgStudies=GES%, C&E=GEN% | same pillars | ✓ (see simpl. 1,2) |
+| Ethics | IS1108 | IS1108 | ✓ |
+| ID/CD | 12u, ≥2 ID, ≤1 CD | total 3, min_id 2, max_cd 1 | ✓ |
+| CS Foundation | 36u, 9 named modules | identical 9 | ✓ |
+| Maths & Science | 12u: MA1521, MA1522, ST2334 | identical | ✓ |
+| B&D | 32u; focus = 3 primaries incl ≥1 L4000; ≥12u L4000; industry 6–12u; non-industry must be CS/IFS/CP; ≤12u CP-coded | identical | ✓ |
+| Dissertation substitute | GPA≥4.0 may replace industry with CP4101 (12u); Honours-HD must pass CP4101 | modelled (D29/I2.8); HD classification not modelled | ✓ |
+| Industry options | 6-mo CP3880/IS4010/ETP3201L (12u); 3-mo CP3200/CP3202/CP3107/CP3110/ETP3205 (6u) | same codes | ✓ (see simpl. 3) |
+| Unrestricted Electives | 40u; MA1301/X bridging for non-H2-math sits in UE | same | ✓ |
+
+**Remaining simplifications (benign, now documented):**
+1. **Critique & Expression** wired to **ES2660 only**; the page also allows UTW%/RVX% courses.
+2. **Data Literacy** wired to **GEA1000 only**; the page also allows BT1101/ST1131/DSA1101.
+3. **Industry Experience** modelled as **fixed bundles** (e.g. CP3200+CP3202=12u, ETP3205=6u) rather
+   than a free "6–12u of industry courses" pick — it covers the 6u and 12u endpoints but not every
+   3-month combination.
+
+**Verdict:** the oracle's degree rules faithfully reflect the AY2026/27 cohort page (A5 passed); the
+three items above are stated simplifications, not errors. SEP/exchange and NOC are **not modelled**
+and have been removed as corpus cases (per request).

@@ -1,0 +1,76 @@
+{
+  "instance": "transfer_apc",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1128\",\"GEC1000\"]},{\"semester\":2,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"CS2109S\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"GEX1000\",\"ES2660\"]},{\"semester\":4,\"modules\":[\"CS3223\",\"CS3203\",\"CS3217\",\"GESS1000\"]},{\"semester\":5,\"modules\":[\"CS4221\",\"CS4224\",\"CS4225\",\"CS3245\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS3235\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4231\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\"]}],\"reason\":\"The remaining 140 MC (CS foundation, ST2334, Database Systems focus area, CS electives, industry experience, common curriculum and 6 UEs) fit into 8 semesters at no more than 20 MC each while respecting prerequisites.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 38.26,
+  "cost_usd": 0.051983,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 5157,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:50:06+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1128",
+        "GEC1000"
+      ],
+      "2": [
+        "CS2103T",
+        "CS2101",
+        "CS2102",
+        "CS2109S",
+        "ST2334"
+      ],
+      "3": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "GEX1000",
+        "ES2660"
+      ],
+      "4": [
+        "CS3223",
+        "CS3203",
+        "CS3217",
+        "GESS1000"
+      ],
+      "5": [
+        "CS4221",
+        "CS4224",
+        "CS4225",
+        "CS3245",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CP3880",
+        "CS3235",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CS4231",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "The remaining 140 MC (CS foundation, ST2334, Database Systems focus area, CS electives, industry experience, common curriculum and 6 UEs) fit into 8 semesters at no more than 20 MC each while respecting prerequisites."
+  },
+  "parse_error": null
+}

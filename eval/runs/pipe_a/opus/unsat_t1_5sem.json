@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Five semesters at a 20 MC cap give at most 100 MC of coursework, plus at most 12 MC from load-exempt industrial-experience modules, so at most 112 MC can be earned. That falls short of the 160 MC needed to graduate.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.55,
+  "cost_usd": 0.008019,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 239,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:02+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Five semesters at a 20 MC cap give at most 100 MC of coursework, plus at most 12 MC from load-exempt industrial-experience modules, so at most 112 MC can be earned. That falls short of the 160 MC needed to graduate."
+  },
+  "parse_error": null
+}

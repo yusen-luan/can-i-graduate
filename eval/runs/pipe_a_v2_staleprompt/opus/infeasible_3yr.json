@@ -1,0 +1,27 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached: six semesters at a 20 MC cap give at most 120 MC, and the single permitted industrial-experience option adds at most 12 MC outside the load cap, for a maximum of 132 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.66,
+  "cost_usd": 0.009717,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 327,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:04+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached: six semesters at a 20 MC cap give at most 120 MC, and the single permitted industrial-experience option adds at most 12 MC outside the load cap, for a maximum of 132 MC."
+  },
+  "parse_error": null
+}

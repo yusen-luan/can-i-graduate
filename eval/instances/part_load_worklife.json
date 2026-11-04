@@ -1,0 +1,132 @@
+{
+  "name": "part_load_worklife",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 10 semesters; take at most 16 MC per semester; specialise in software engineering; take at most 8 MC in semester 6; take at least 8 MC in every semester I enrol. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 10,
+      "max_units_per_semester": 16,
+      "focus_area": "software_engineering",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {
+          "6": 8
+        },
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 8,
+        "no_empty_semesters": false,
+        "heavy_conflicts": []
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "proven_infeasible": false,
+    "plan": {
+      "1": [
+        "GE2103",
+        "HSI1000",
+        "IE2141",
+        "MA1522"
+      ],
+      "2": [
+        "CS1101S",
+        "CS1231S",
+        "GEN2000",
+        "UE_GENERIC_8"
+      ],
+      "3": [
+        "CS2100",
+        "GEA1000",
+        "IS1108",
+        "UE_GENERIC_6"
+      ],
+      "4": [
+        "CS2030S",
+        "CS2040S",
+        "GEC1020",
+        "MA1521"
+      ],
+      "5": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS4263"
+      ],
+      "6": [
+        "CS3213",
+        "ES2660"
+      ],
+      "7": [
+        "GEC1015",
+        "GEC1030",
+        "GEN2003",
+        "UE_GENERIC_1"
+      ],
+      "8": [
+        "CP3200",
+        "GESS1020",
+        "GESS1025",
+        "UE_GENERIC_2"
+      ],
+      "9": [
+        "CS3230",
+        "CS4211",
+        "CS4218",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "CP3202",
+        "CS2109S",
+        "CS3219",
+        "ST2334",
+        "UE_GENERIC_10"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Part-load (work/health)",
+    "description": "Lighter 16-unit cap with one especially light (8-unit) semester; longer 10-semester horizon.",
+    "tier": "SAT",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1160,
+      "num_total_variables": 2944,
+      "num_constraints": 5023,
+      "min_feasible_semesters": 10,
+      "semester_slack": 0,
+      "cap_slack": 0,
+      "min_feasible_cap": 16,
+      "cap_min_bounded": false
+    },
+    "quality": {
+      "realism": 91.6,
+      "flags": [
+        "Semester 6: only 8 MC \u2014 very light",
+        "Semester 7: 3 GE/ULR modules clustered together"
+      ]
+    }
+  }
+}

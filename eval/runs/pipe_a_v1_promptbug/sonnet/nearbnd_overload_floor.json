@@ -1,0 +1,79 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2105\",\"CS2107\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3235\",\"GESS1020\",\"GEC1015\",\"GEN2003\",\"UE\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4239\",\"DTK1234\",\"IS1128\",\"HSI1000\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"This plan reaches 160 MC within 7 semesters at no more than 24 MC in any semester. It covers all required modules and the university-level requirements. It has 3 ID modules, the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239) with 12 MC at level 4000, 36 MC of B&D, and the CP3880 internship.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 24.12,
+  "cost_usd": 0.030876,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 2790,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:45+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660",
+        "UE_GENERIC_1"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2105",
+        "CS2107",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "CS3235",
+        "GESS1020",
+        "GEC1015",
+        "GEN2003",
+        "UE_GENERIC_2",
+        "CP3880"
+      ],
+      "5": [
+        "CS4236",
+        "CS4239",
+        "DTK1234",
+        "IS1128",
+        "HSI1000",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4238",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "This plan reaches 160 MC within 7 semesters at no more than 24 MC in any semester. It covers all required modules and the university-level requirements. It has 3 ID modules, the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239) with 12 MC at level 4000, 36 MC of B&D, and the CP3880 internship."
+  },
+  "parse_error": null
+}

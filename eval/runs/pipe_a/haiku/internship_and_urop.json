@@ -1,0 +1,83 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\", \"IS1108\"]}, {\"semester\": 2, \"modules\": [\"MA1522\", \"CS2030S\", \"CS2040S\", \"CS2100\", \"ES2660\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS3230\", \"ST2334\"]}, {\"semester\": 4, \"modules\": [\"CS2109S\", \"CS3219\", \"GEN2003\", \"DTK1234\", \"IS1128\"]}, {\"semester\": 5, \"modules\": [\"CP3880\"]}, {\"semester\": 6, \"modules\": [\"CS4218\", \"CS4248\", \"GEC1020\", \"GESS1020\", \"HSI1000\"]}, {\"semester\": 7, \"modules\": [\"CS4211\", \"CP3209\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"A feasible plan exists: CS2101 and CS2103T are placed together in Semester 3 so CP3880 can run alone in Semester 5, the software engineering focus is met by CS2103T, CS4211 and CS4218 (with a 4000-level credit), the UROP CP3209 starts in Semester 7 so it finishes in Semester 8, and the 160 MC total is reached with 9 generic electives within every 20 MC cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 47.3,
+  "cost_usd": 0.006268,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 12221,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:44:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "MA1522",
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS3230",
+        "ST2334"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3219",
+        "GEN2003",
+        "DTK1234",
+        "IS1128"
+      ],
+      "5": [
+        "CP3880"
+      ],
+      "6": [
+        "CS4218",
+        "CS4248",
+        "GEC1020",
+        "GESS1020",
+        "HSI1000"
+      ],
+      "7": [
+        "CS4211",
+        "CP3209",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "8": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A feasible plan exists: CS2101 and CS2103T are placed together in Semester 3 so CP3880 can run alone in Semester 5, the software engineering focus is met by CS2103T, CS4211 and CS4218 (with a 4000-level credit), the UROP CP3209 starts in Semester 7 so it finishes in Semester 8, and the 160 MC total is reached with 9 generic electives within every 20 MC cap."
+  },
+  "parse_error": null
+}

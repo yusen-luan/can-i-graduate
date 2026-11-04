@@ -1,0 +1,27 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS1101S is a required module and the only option for the digital literacy requirement, but it is in the intro_programming preclusion group with CS1010, which the student has already completed, so both cannot be held.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.44,
+  "cost_usd": 0.000535,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 762,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:07+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS1101S is a required module and the only option for the digital literacy requirement, but it is in the intro_programming preclusion group with CS1010, which the student has already completed, so both cannot be held."
+  },
+  "parse_error": null
+}

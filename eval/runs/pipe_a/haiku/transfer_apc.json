@@ -1,0 +1,77 @@
+{
+  "instance": "transfer_apc",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"GEC1015\"]},{\"semester\":2,\"modules\":[\"CS2102\",\"CS2106\",\"CS2101\",\"CS2103T\",\"CS2109S\"]},{\"semester\":3,\"modules\":[\"CS3223\",\"CS3230\",\"ES2660\",\"ST2334\",\"CS2107\"]},{\"semester\":4,\"modules\":[\"CS4221\",\"CS4225\",\"CS2105\",\"GESS1020\",\"HSI1000\"]},{\"semester\":5,\"modules\":[\"CS4224\",\"CS3245\",\"CS3219\",\"CS3203\"]},{\"semester\":6,\"modules\":[\"DTK1234\",\"IS1128\",\"GEN2000\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"CP3200\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP3202\",\"UE\"]}],\"reason\":\"The database systems focus is met with CS2102, CS3223, CS4221, CS4224 and CS4225 (12 MC at level 4000), the CP3200 plus CP3202 internship option gives 32+ B&D MC, and three ID electives satisfy the ID/CD rule, reaching exactly 160 MC with no semester above 20 MC and all prerequisites and offered terms respected.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 49.78,
+  "cost_usd": 0.006453,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 12592,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:56+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "GEC1015"
+      ],
+      "2": [
+        "CS2102",
+        "CS2106",
+        "CS2101",
+        "CS2103T",
+        "CS2109S"
+      ],
+      "3": [
+        "CS3223",
+        "CS3230",
+        "ES2660",
+        "ST2334",
+        "CS2107"
+      ],
+      "4": [
+        "CS4221",
+        "CS4225",
+        "CS2105",
+        "GESS1020",
+        "HSI1000"
+      ],
+      "5": [
+        "CS4224",
+        "CS3245",
+        "CS3219",
+        "CS3203"
+      ],
+      "6": [
+        "DTK1234",
+        "IS1128",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "CP3200",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "CP3202",
+        "UE_GENERIC_4"
+      ]
+    },
+    "reason": "The database systems focus is met with CS2102, CS3223, CS4221, CS4224 and CS4225 (12 MC at level 4000), the CP3200 plus CP3202 internship option gives 32+ B&D MC, and three ID electives satisfy the ID/CD rule, reaching exactly 160 MC with no semester above 20 MC and all prerequisites and offered terms respected."
+  },
+  "parse_error": null
+}

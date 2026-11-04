@@ -1,0 +1,75 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":2,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEA1000\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS4248\",\"CS4243\",\"CS3263\",\"ES2660\",\"GEC1015\",\"CP3200\"]},{\"semester\":4,\"modules\":[\"CS4246\",\"CS4244\",\"CS3264\",\"GESS1020\",\"GEN2000\",\"CP3202\"]},{\"semester\":5,\"modules\":[\"DTK1234\",\"HSI1000\",\"IS1128\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4262\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"Feasible within 8 semesters and a 20 MC cap: the plan reaches 160 MC (28 exempted plus 132 scheduled), all prerequisites are met in earlier semesters, and CS2101 and CS2103T are taken together. It covers all ULRs, uses three ID modules for ID/CD, takes CP3200 + CP3202 as the internship, and satisfies the AI focus area (CS2109S, CS3243, CS4248 and more), 16 MC at level 4000, and 44 MC of Breadth & Depth.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 13.66,
+  "cost_usd": 0.034563,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 1558,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:53+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "2": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEA1000",
+        "IS1108"
+      ],
+      "3": [
+        "CS4248",
+        "CS4243",
+        "CS3263",
+        "ES2660",
+        "GEC1015",
+        "CP3200"
+      ],
+      "4": [
+        "CS4246",
+        "CS4244",
+        "CS3264",
+        "GESS1020",
+        "GEN2000",
+        "CP3202"
+      ],
+      "5": [
+        "DTK1234",
+        "HSI1000",
+        "IS1128",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "CS4262",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": []
+    },
+    "reason": "Feasible within 8 semesters and a 20 MC cap: the plan reaches 160 MC (28 exempted plus 132 scheduled), all prerequisites are met in earlier semesters, and CS2101 and CS2103T are taken together. It covers all ULRs, uses three ID modules for ID/CD, takes CP3200 + CP3202 as the internship, and satisfies the AI focus area (CS2109S, CS3243, CS4248 and more), 16 MC at level 4000, and 44 MC of Breadth & Depth."
+  },
+  "parse_error": null
+}

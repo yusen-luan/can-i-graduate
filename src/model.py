@@ -50,8 +50,10 @@ def load_iter2(
 
 def tree_satisfied(tree, pred) -> bool:
     """Evaluate a prerequisite tree. `pred(code) -> bool` says whether a leaf is
-    satisfied. `all_of` = every child; `one_of` = some child; None/[] = no
-    prereq. Leaves are module-code strings (grades already stripped)."""
+    satisfied. `all_of` = every child; `one_of` = some child; `n_of: [n, [...]]` =
+    at least `n` children (Issue #13 -- NUSMods `nOf`, no longer weakened to
+    `one_of`); None/[] = no prereq. Leaves are module-code strings (grades
+    already stripped)."""
     if tree is None:
         return True
     if isinstance(tree, str):
@@ -61,6 +63,9 @@ def tree_satisfied(tree, pred) -> bool:
             return all(tree_satisfied(c, pred) for c in tree["all_of"])
         if "one_of" in tree:
             return any(tree_satisfied(c, pred) for c in tree["one_of"])
+        if "n_of" in tree:
+            n, children = tree["n_of"]
+            return sum(tree_satisfied(c, pred) for c in children) >= n
     return True
 
 def tree_leaves(tree) -> List[str]:
@@ -72,6 +77,9 @@ def tree_leaves(tree) -> List[str]:
     out: List[str] = []
     for c in tree.get("all_of", []) + tree.get("one_of", []):
         out += tree_leaves(c)
+    if "n_of" in tree:
+        for c in tree["n_of"][1]:
+            out += tree_leaves(c)
     return out
 
 def prereq_tree_of(info: dict):
@@ -82,15 +90,35 @@ def prereq_tree_of(info: dict):
 def bridging_waived(student) -> set:
     """Bridging modules a student need not take because a placement / A-level
     result stands in, so their appearance as a prereq leaf is already satisfied.
-    Math: A-level H2 Maths waives MA1301/X. English: the direct ES2660 path
-    waives ES1000/ES1103. Shared by the solver and the checker (parity)."""
+    Math: A-level H2 Maths waives MA1301/X. English (QET bands, Issue #3):
+    Band 3 (`direct_es2660`) waives BOTH ES1000 and ES1103; Band 2
+    (`es1103_required`) waives ONLY ES1000 — placement admits the student straight
+    into ES1103, so the frozen `ES1103 -> ES1000` prereq must not force ES1000;
+    Band 1 (`es1000_then_es1103`) waives nothing (ES1000 then ES1103 are taken).
+    Shared by the solver and the checker (parity)."""
     waived = set()
     cond = student.get("conditions", {})
     if not cond.get("needs_math_bridging", False):
         waived |= {"MA1301", "MA1301X"}
-    if cond.get("english_path", "direct_es2660") == "direct_es2660":
+    path = cond.get("english_path", "direct_es2660")
+    if path == "direct_es2660":
         waived |= {"ES1000", "ES1103"}
+    elif path == "es1103_required":
+        waived |= {"ES1000"}
     return waived
+
+def required_bridges(student) -> set:
+    """English bridges the student MUST complete, by QET placement band (Issue #2:
+    a placement requirement is a mandatory completion, not optional). Band 3
+    (`direct_es2660`): none. Band 2 (`es1103_required`): ES1103. Band 1
+    (`es1000_then_es1103`): ES1000 and ES1103. Math bridging stays prereq-driven
+    (a student who needs it must schedule a bridge before the dependent module)."""
+    path = student.get("conditions", {}).get("english_path", "direct_es2660")
+    if path == "es1103_required":
+        return {"ES1103"}
+    if path == "es1000_then_es1103":
+        return {"ES1000", "ES1103"}
+    return set()
 
 def industrial_sets(program: dict, option: str = "any") -> List[List[str]]:
     opts = [o["set"] for o in program["breadth_depth"]["industrial_experience"]["options"]]
@@ -105,6 +133,72 @@ def industrial_sets(program: dict, option: str = "any") -> List[List[str]]:
 def term_of(semester: int) -> int:
     """Plan semesters 1,3,5,... are NUS Semester 1; 2,4,6,... are Semester 2."""
     return 1 if semester % 2 == 1 else 2
+
+def effective_term(semester: int, scenario: dict) -> int:
+    """NUS term of a plan slot. iter3 C5: an explicit `term_layout` in the scenario
+    (entries in {1,2,3,4}, 3/4 = Special Terms) overrides the default parity mapping
+    (I2.14). Absent layout => iter2 behaviour, so existing instances are unchanged."""
+    layout = (scenario or {}).get("term_layout")
+    if layout:
+        return layout[semester - 1]
+    return term_of(semester)
+
+def per_semester_cap(scenario: dict, semester: int, global_cap: int) -> int:
+    """Effective unit cap of a plan slot. iter3 C1: `preferences.per_semester_cap`
+    overrides the global cap for specific slots; 0 = slot fully unavailable, e.g. a
+    leave of absence (I2.15)."""
+    prefs = (scenario or {}).get("preferences", {}) or {}
+    pcap = {int(k): v for k, v in (prefs.get("per_semester_cap", {}) or {}).items()}
+    return pcap.get(semester, global_cap)
+
+def is_computing(code: str) -> bool:
+    """A Computing-coded module (CS/IFS/CP), used by the CS-count cap (I2.16)."""
+    return code.startswith(("CS", "IFS", "CP"))
+
+def with_horizon(scenario: dict, T: int) -> dict:
+    """Copy of `scenario` with horizon T, keeping an explicit `term_layout` the
+    right length: truncated when shrinking, extended with the default parity
+    mapping when growing. Shared by the infeasibility explainer and the
+    benchmark difficulty probes so both relax the SAME instance."""
+    sc = {**scenario, "target_semesters": T}
+    layout = scenario.get("term_layout")
+    if layout:
+        sc["term_layout"] = (list(layout[:T])
+                             + [term_of(s) for s in range(len(layout) + 1, T + 1)])
+    return sc
+
+def validate_scenario_iter2(program: dict, scenario: dict, modules: dict = None) -> None:
+    """Hard-validate iter3 scenario knobs (raise ValueError on bad input). With
+    `modules`, also reject pinned / forbidden / deadline codes outside the module
+    universe, so a typo can never silently drop a constraint (I2.18)."""
+    T = scenario["target_semesters"]
+    ceiling = program.get("max_overload_units")
+    layout = scenario.get("term_layout")
+    if layout is not None:
+        if len(layout) != T:
+            raise ValueError(f"term_layout length {len(layout)} != target_semesters {T}")
+        if any(t not in (1, 2, 3, 4) for t in layout):
+            raise ValueError(f"term_layout entries must be in 1..4: {layout}")
+    prefs = scenario.get("preferences", {}) or {}
+    for s, u in (prefs.get("per_semester_cap", {}) or {}).items():
+        if u < 0 or (ceiling and u > ceiling):
+            raise ValueError(f"per_semester_cap[{s}]={u} out of range [0, {ceiling}]")
+    # iter3 C4: module pin / forbid / deadline (I2.18)
+    require = set(prefs.get("require_modules", []) or [])
+    forbid = set(prefs.get("forbid_modules", []) or [])
+    clash = require & forbid
+    if clash:
+        raise ValueError(f"modules both required and forbidden: {sorted(clash)}")
+    deadline = prefs.get("deadline", {}) or {}
+    if modules is not None:
+        unknown = sorted((require | forbid | set(deadline)) - set(modules))
+        if unknown:
+            raise ValueError(f"unknown module code(s) in require/forbid/deadline: {unknown}")
+    for code, s in deadline.items():
+        if not isinstance(s, int) or s < 1:
+            raise ValueError(f"deadline[{code}]={s} must be a semester >= 1")
+        if code in forbid:
+            raise ValueError(f"deadline[{code}] set but the module is forbidden")
 
 def condition_holds(condition: dict, student: dict) -> bool:
     value = student.get("conditions", {}).get(condition["field"])

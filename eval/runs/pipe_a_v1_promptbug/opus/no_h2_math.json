@@ -1,0 +1,82 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1000\",\"MA1301\",\"CS1101S\",\"CS1231S\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"ES1103\",\"MA1521\",\"MA1522\",\"CS2030S\",\"CS2040S\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"ST2334\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"ES2660\",\"CS3236\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GESS1020\",\"GEN2000\",\"DTK1234\",\"CP3880\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"HSI1000\",\"IE2141\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"The plan schedules the bridging modules first (ES1000, then ES1103, plus MA1301 because you have no H2 Mathematics) and keeps every semester at or under 20 MC, with CP3880 not counting toward load. It reaches 160 MC and covers the algorithms_theory focus (CS3230, CS3231, CS3236, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D, and all other requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.38,
+  "cost_usd": 0.04551,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 2111,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:46+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1000",
+        "MA1301",
+        "CS1101S",
+        "CS1231S",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "ES1103",
+        "MA1521",
+        "MA1522",
+        "CS2030S",
+        "CS2040S"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "ST2334",
+        "CS2109S"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "ES2660",
+        "CS3236",
+        "GEC1015"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GESS1020",
+        "GEN2000",
+        "DTK1234",
+        "CP3880"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "HSI1000",
+        "IE2141",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "The plan schedules the bridging modules first (ES1000, then ES1103, plus MA1301 because you have no H2 Mathematics) and keeps every semester at or under 20 MC, with CP3880 not counting toward load. It reaches 160 MC and covers the algorithms_theory focus (CS3230, CS3231, CS3236, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D, and all other requirements."
+  },
+  "parse_error": null
+}

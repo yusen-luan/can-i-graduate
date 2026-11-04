@@ -1,0 +1,82 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 2, \"modules\": [\"CS2040S\", \"CS2030S\", \"MA1522\", \"ST2334\", \"CS2100\", \"UE\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2105\", \"CS2106\", \"CS2107\", \"UE\"]}, {\"semester\": 4, \"modules\": [\"CS2102\", \"CS3230\", \"CS3235\", \"CS4236\", \"CS3216\", \"UE\"]}, {\"semester\": 5, \"modules\": [\"CS4239\", \"CS3210\", \"CS3244\", \"CS4222\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4243\", \"CS3240\", \"UE\", \"UE\"]}, {\"semester\": 7, \"modules\": [\"CS3203\", \"CS4218\", \"CS3233\", \"CS4224\", \"CS4231\"]}], \"reason\": \"The plan totals 160 MC (the BComp CS requirement) across 7 semesters, with no semester exceeding 24 MC, and it covers the computer security specialisation core (CS2107, CS3235, CS4236, CS4239, CS4222) with 10 unrestricted electives. Module-level details such as prerequisites and exact specialisation options should be verified against the current NUS handbook.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 36.8,
+  "cost_usd": 0.004039,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 8042,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:42:54+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2030S",
+        "MA1522",
+        "ST2334",
+        "CS2100",
+        "UE_GENERIC_4"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2105",
+        "CS2106",
+        "CS2107",
+        "UE_GENERIC_5"
+      ],
+      "4": [
+        "CS2102",
+        "CS3230",
+        "CS3235",
+        "CS4236",
+        "CS3216",
+        "UE_GENERIC_6"
+      ],
+      "5": [
+        "CS4239",
+        "CS3210",
+        "CS3244",
+        "CS4222",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "6": [
+        "CS4248",
+        "CS4243",
+        "CS3240",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "7": [
+        "CS3203",
+        "CS4218",
+        "CS3233",
+        "CS4224",
+        "CS4231"
+      ]
+    },
+    "reason": "The plan totals 160 MC (the BComp CS requirement) across 7 semesters, with no semester exceeding 24 MC, and it covers the computer security specialisation core (CS2107, CS3235, CS4236, CS4239, CS4222) with 10 unrestricted electives. Module-level details such as prerequisites and exact specialisation options should be verified against the current NUS handbook."
+  },
+  "parse_error": null
+}

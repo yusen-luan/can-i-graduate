@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"With semester 4 off you have only 6 enrolled semesters at a 26 MC cap, which allows at most 146 MC of coursework. Only two 5-MC modules exist (CS3216 and CS3217), so at most one semester can reach 26 MC and the rest top out at 24 MC; adding the most an industrial-experience option can contribute without counting toward load (12 MC, e.g. CP3200+CP3202) gives at most 158 MC, short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 24.45,
+  "cost_usd": 0.049003,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 2286,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:48+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With semester 4 off you have only 6 enrolled semesters at a 26 MC cap, which allows at most 146 MC of coursework. Only two 5-MC modules exist (CS3216 and CS3217), so at most one semester can reach 26 MC and the rest top out at 24 MC; adding the most an industrial-experience option can contribute without counting toward load (12 MC, e.g. CP3200+CP3202) gives at most 158 MC, short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

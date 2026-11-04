@@ -1,0 +1,75 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"ST2334\",\"CS2109S\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"IS1108\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS4263\",\"DTK1234\",\"GEC1015\",\"GESS1001\"]},{\"semester\":4,\"modules\":[\"CS4244\",\"CS4248\",\"IE2141\",\"IS1128\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CP3200\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CP3202\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"All exempted modules are used as prerequisites, and the plan reaches exactly 160 MC with a load of at most 20 MC per semester. The AI focus has CS2109S, CS3244, CS4248, CS4244 and CS4263, with three 4000-level modules (12 MC). Breadth & Depth is 32 MC (five 4-MC modules plus CP3200 and CP3202), and the ID/CD set is three ID modules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.51,
+  "cost_usd": 0.030437,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 2727,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:24+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "ST2334",
+        "CS2109S",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "IS1108",
+        "ES2660"
+      ],
+      "3": [
+        "CS3244",
+        "CS4263",
+        "DTK1234",
+        "GEC1015",
+        "GESS1001"
+      ],
+      "4": [
+        "CS4244",
+        "CS4248",
+        "IE2141",
+        "IS1128",
+        "GEN2000"
+      ],
+      "5": [
+        "CP3200",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CP3202",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": []
+    },
+    "reason": "All exempted modules are used as prerequisites, and the plan reaches exactly 160 MC with a load of at most 20 MC per semester. The AI focus has CS2109S, CS3244, CS4248, CS4244 and CS4263, with three 4000-level modules (12 MC). Breadth & Depth is 32 MC (five 4-MC modules plus CP3200 and CP3202), and the ID/CD set is three ID modules."
+  },
+  "parse_error": null
+}

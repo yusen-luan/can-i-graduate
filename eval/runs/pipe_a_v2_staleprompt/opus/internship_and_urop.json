@@ -1,0 +1,82 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3219\",\"CS4215\",\"ES2660\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4211\",\"CS4218\",\"GEN2003\",\"DTK1234\",\"IE2141\"]},{\"semester\":6,\"modules\":[\"CP3209\",\"IS1128\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Feasible: this plan totals exactly 160 MC with no semester over 20 MC (CP3880 does not count toward load). It covers the software engineering focus with CS2103T, CS3219, CS4211 and CS4218, and meets the 12 MC level-4000 requirement (CS4211, CS4218, CS4215), 36 MC of B&D, CP3880 as the internship and CP3209 as the UROP.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 15.09,
+  "cost_usd": 0.035501,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 1613,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:19+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3219",
+        "CS4215",
+        "ES2660",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CP3880",
+        "CS4211",
+        "CS4218",
+        "GEN2003",
+        "DTK1234",
+        "IE2141"
+      ],
+      "6": [
+        "CP3209",
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "7": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "9": []
+    },
+    "reason": "Feasible: this plan totals exactly 160 MC with no semester over 20 MC (CP3880 does not count toward load). It covers the software engineering focus with CS2103T, CS3219, CS4211 and CS4218, and meets the 12 MC level-4000 requirement (CS4211, CS4218, CS4215), 36 MC of B&D, CP3880 as the internship and CP3209 as the UROP."
+  },
+  "parse_error": null
+}

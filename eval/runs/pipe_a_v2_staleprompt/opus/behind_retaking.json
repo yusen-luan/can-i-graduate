@@ -1,0 +1,80 @@
+{
+  "instance": "behind_retaking",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS3230\",\"CS3231\",\"CS4263\",\"ES2660\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS4231\",\"CS3236\",\"GEC1015\",\"GESS1020\",\"GEN2003\"]},{\"semester\":5,\"modules\":[\"CS4234\",\"DTK1234\",\"IE2141\",\"IS1128\",\"CS2102\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS2105\",\"CS2107\",\"CS3243\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Yes, this can be done within 9 semesters at no more than 20 MC per semester, reaching exactly 160 MC. The algorithms theory focus is covered by CS3230, CS3231, CS4231 and CS4234 (two at level 4000), and the CP3880 internship (which does not count toward a semester's load) satisfies industrial experience and helps meet the 32 MC Breadth & Depth requirement; semester 9 is left free.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 15.26,
+  "cost_usd": 0.104543,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 87,
+    "output_tokens": 1684,
+    "cache_creation_input_tokens": 14103,
+    "cache_read_input_tokens": 0
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:27:55+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "3": [
+        "CS3230",
+        "CS3231",
+        "CS4263",
+        "ES2660",
+        "IS1108"
+      ],
+      "4": [
+        "CS4231",
+        "CS3236",
+        "GEC1015",
+        "GESS1020",
+        "GEN2003"
+      ],
+      "5": [
+        "CS4234",
+        "DTK1234",
+        "IE2141",
+        "IS1128",
+        "CS2102"
+      ],
+      "6": [
+        "CP3880",
+        "CS2105",
+        "CS2107",
+        "CS3243",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": []
+    },
+    "reason": "Yes, this can be done within 9 semesters at no more than 20 MC per semester, reaching exactly 160 MC. The algorithms theory focus is covered by CS3230, CS3231, CS4231 and CS4234 (two at level 4000), and the CP3880 internship (which does not count toward a semester's load) satisfies industrial experience and helps meet the 32 MC Breadth & Depth requirement; semester 9 is left free."
+  },
+  "parse_error": null
+}

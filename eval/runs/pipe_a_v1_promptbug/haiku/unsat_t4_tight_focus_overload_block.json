@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"With semester 4 off, only six active semesters remain, and the 26 MC cap limits them to at most 146 MC of unit load: semesters 1-3 can hold only 4-MC modules (5/8-MC options need CS2103T first, so at most 24 MC each), and semesters 5-7 can reach at most 74 MC because only CS3216/CS3217 (5 MC) and CS3203 (8 MC) are available beyond 4-MC modules. Adding the maximum 12 MC industrial-experience option gives at most 158 MC, below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 92.39,
+  "cost_usd": 0.010771,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 21244,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:57:17+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With semester 4 off, only six active semesters remain, and the 26 MC cap limits them to at most 146 MC of unit load: semesters 1-3 can hold only 4-MC modules (5/8-MC options need CS2103T first, so at most 24 MC each), and semesters 5-7 can reach at most 74 MC because only CS3216/CS3217 (5 MC) and CS3203 (8 MC) are available beyond 4-MC modules. Adding the maximum 12 MC industrial-experience option gives at most 158 MC, below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

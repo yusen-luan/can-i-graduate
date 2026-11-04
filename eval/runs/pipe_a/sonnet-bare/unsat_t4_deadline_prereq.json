@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS3230 requires CS2040S and CS1231S to be completed first, and CS2040S itself requires a prior CS1010-type programming module. With no modules done, that chain needs CS1010 in semester 1, CS2040S in semester 2, then CS3230 in semester 3 at the earliest, so finishing CS3230 by semester 2 is impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.18,
+  "cost_usd": 0.006897,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 652,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:50:13+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 requires CS2040S and CS1231S to be completed first, and CS2040S itself requires a prior CS1010-type programming module. With no modules done, that chain needs CS1010 in semester 1, CS2040S in semester 2, then CS3230 in semester 3 at the earliest, so finishing CS3230 by semester 2 is impossible."
+  },
+  "parse_error": null
+}

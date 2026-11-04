@@ -1,0 +1,71 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2106\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 2, \"modules\": [\"CS2105\", \"CS3243\", \"CS3244\", \"GEC1015\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CS3203\", \"CS4248\", \"CS3245\", \"GESS1025\"]}, {\"semester\": 4, \"modules\": [\"CS3263\", \"CS4243\", \"CS4244\", \"GEN2050\", \"PC1201\"]}, {\"semester\": 5, \"modules\": [\"CS4246\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"CP3880\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\"]}], \"reason\": \"Feasible, based on my best understanding of the requirements: the remaining 120 MC fit in 8 semesters at 20 MC or less each, covering the CS foundation courses, the remaining general education pillars, the CS3203 team project and the CP3880 industry attachment. The AI focus area is met through CS3243, CS3244, CS3263, CS4243, CS4244, CS4246 and CS4248, but the GE course codes, the PC1201 science course and course offering semesters are uncertain, so please confirm them on NUSMods and with your faculty's official requirements before registering.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 54.03,
+  "cost_usd": 0.110001,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 5465,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:54:08+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "2": [
+        "CS2105",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "IS1108"
+      ],
+      "3": [
+        "CS3203",
+        "CS4248",
+        "CS3245",
+        "GESS1025"
+      ],
+      "4": [
+        "CS3263",
+        "CS4243",
+        "CS4244",
+        "GEN2050",
+        "PC1201"
+      ],
+      "5": [
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CP3880"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "Feasible, based on my best understanding of the requirements: the remaining 120 MC fit in 8 semesters at 20 MC or less each, covering the CS foundation courses, the remaining general education pillars, the CS3203 team project and the CP3880 industry attachment. The AI focus area is met through CS3243, CS3244, CS3263, CS4243, CS4244, CS4246 and CS4248, but the GE course codes, the PC1201 science course and course offering semesters are uncertain, so please confirm them on NUSMods and with your faculty's official requirements before registering."
+  },
+  "parse_error": null
+}

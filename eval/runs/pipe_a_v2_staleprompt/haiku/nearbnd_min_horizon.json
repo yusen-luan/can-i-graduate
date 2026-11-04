@@ -1,0 +1,82 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2100\", \"ST2334\", \"ES2660\", \"IS1108\"]}, {\"semester\": 3, \"modules\": [\"CS2040S\", \"CS2106\", \"DTK1234\", \"HSI1000\", \"GEN2003\"]}, {\"semester\": 4, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2109S\", \"CS3230\", \"CS3243\"]}, {\"semester\": 5, \"modules\": [\"CS4263\", \"CS3263\", \"CS4244\", \"CS4248\", \"UE\"]}, {\"semester\": 6, \"modules\": [\"GEC1020\", \"GESS1020\", \"IS1128\", \"UE\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}], \"reason\": \"The plan reaches 160 MC in 8 semesters with at most 20 MC per semester, using CP3880 as the single industrial-experience option, AI focus via CS2109S, CS3243 and CS4263, exactly 32 B&D MC, 12 MC at level 4000+, and three ID modules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 54.07,
+  "cost_usd": 0.007069,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 13838,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:32:38+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2100",
+        "ST2334",
+        "ES2660",
+        "IS1108"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2106",
+        "DTK1234",
+        "HSI1000",
+        "GEN2003"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "CS3230",
+        "CS3243"
+      ],
+      "5": [
+        "CS4263",
+        "CS3263",
+        "CS4244",
+        "CS4248",
+        "UE_GENERIC_1"
+      ],
+      "6": [
+        "GEC1020",
+        "GESS1020",
+        "IS1128",
+        "UE_GENERIC_2",
+        "CP3880"
+      ],
+      "7": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The plan reaches 160 MC in 8 semesters with at most 20 MC per semester, using CP3880 as the single industrial-experience option, AI focus via CS2109S, CS3243 and CS4263, exactly 32 B&D MC, 12 MC at level 4000+, and three ID modules."
+  },
+  "parse_error": null
+}

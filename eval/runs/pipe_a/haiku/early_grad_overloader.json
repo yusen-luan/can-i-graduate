@@ -1,0 +1,81 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"GESS1001\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS2107\",\"CS2105\",\"CS2101\",\"CS2103T\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"CS3230\",\"DTK1234\",\"HSI1000\",\"IS1128\",\"GEC1015\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4239\",\"CS4238\",\"GEN2000\",\"CS2104\",\"CS3231\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"CS2102\",\"CS2111\",\"CS3210\",\"CS3245\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"CS3240\",\"CS3103\",\"CS3219\"]}],\"reason\":\"A 7-semester plan works: the computer security focus is met by CS2107, CS3235, CS4236, CS4238 and CS4239 (12 MC at level 4000), with the CP3200+CP3202 internship as the single industrial option, giving 148 MC of coursework (no semester over 24 MC) plus 12 MC of internship for exactly 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 59.85,
+  "cost_usd": 0.007927,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 15544,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:43:36+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "GESS1001"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108",
+        "ES2660"
+      ],
+      "3": [
+        "CS2106",
+        "CS2107",
+        "CS2105",
+        "CS2101",
+        "CS2103T",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3235",
+        "CS3230",
+        "DTK1234",
+        "HSI1000",
+        "IS1128",
+        "GEC1015"
+      ],
+      "5": [
+        "CS4236",
+        "CS4239",
+        "CS4238",
+        "GEN2000",
+        "CS2104",
+        "CS3231",
+        "CP3200"
+      ],
+      "6": [
+        "CS2102",
+        "CS2111",
+        "CS3210",
+        "CS3245",
+        "CP3202"
+      ],
+      "7": [
+        "CS3240",
+        "CS3103",
+        "CS3219"
+      ]
+    },
+    "reason": "A 7-semester plan works: the computer security focus is met by CS2107, CS3235, CS4236, CS4238 and CS4239 (12 MC at level 4000), with the CP3200+CP3202 internship as the single industrial option, giving 148 MC of coursework (no semester over 24 MC) plus 12 MC of internship for exactly 160 MC."
+  },
+  "parse_error": null
+}

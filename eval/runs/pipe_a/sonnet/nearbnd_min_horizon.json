@@ -1,0 +1,83 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"IS1108\",\"GEC1015\",\"DTK1234\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"GESS1020\",\"GEN2000\",\"IS1128\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4246\",\"UE\",\"UE\",\"UE\",\"CP3200\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Every semester stays within 20 MC. The plan meets the AI focus (CS2109S, CS3243, CS3244, CS4244, CS4246, CS4248, with 12 MC at level 4000 or above). It has 32 B&D MC (20 MC of AI modules plus the CP3200+CP3202 internship) and totals 160 MC. All required, university-level and ID/CD modules are included.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 21.19,
+  "cost_usd": 0.033109,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 3000,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:05+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "IS1108",
+        "GEC1015",
+        "DTK1234"
+      ],
+      "5": [
+        "CS4248",
+        "GESS1020",
+        "GEN2000",
+        "IS1128",
+        "HSI1000"
+      ],
+      "6": [
+        "CS4244",
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "CP3200"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "CP3202"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Every semester stays within 20 MC. The plan meets the AI focus (CS2109S, CS3243, CS3244, CS4244, CS4246, CS4248, with 12 MC at level 4000 or above). It has 32 B&D MC (20 MC of AI modules plus the CP3200+CP3202 internship) and totals 160 MC. All required, university-level and ID/CD modules are included."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_offering_lock",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 has a prerequisite programming module (such as CS1010-level) that a student starting with no completed modules cannot have finished, so CS2108 cannot be completed by plan semester 1.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.8,
+  "cost_usd": 0.000645,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 1250,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:45:11+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2108 has a prerequisite programming module (such as CS1010-level) that a student starting with no completed modules cannot have finished, so CS2108 cannot be completed by plan semester 1."
+  },
+  "parse_error": null
+}

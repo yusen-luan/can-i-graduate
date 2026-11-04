@@ -1,0 +1,80 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEC1015\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"CS3244\",\"GESS1000\"]},{\"semester\":5,\"modules\":[\"CS3203\",\"CS4248\",\"CS4246\",\"GEN2050X\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4244\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4243\",\"CS3263\",\"CS3264\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"Feasible: the plan adds 152 MC to your 8 completed MC for 160 MC in 8 semesters, never exceeding 20 MC per semester. It meets the AI focus area with CS3243, CS3244 and the 4000-level CS4248/CS4243/CS4246/CS4244, and uses CS3203 as the project course and CP3880 for industrial experience; this assumes the general-education and common-curriculum requirements match those modelled here, so confirm exact course codes and offering semesters on NUSMods.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 59.85,
+  "cost_usd": 0.117401,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 5844,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:52:31+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "GEC1015",
+        "ES2660"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GESS1000"
+      ],
+      "5": [
+        "CS3203",
+        "CS4248",
+        "CS4246",
+        "GEN2050X"
+      ],
+      "6": [
+        "CP3880",
+        "CS4244",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "CS4243",
+        "CS3263",
+        "CS3264",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": []
+    },
+    "reason": "Feasible: the plan adds 152 MC to your 8 completed MC for 160 MC in 8 semesters, never exceeding 20 MC per semester. It meets the AI focus area with CS3243, CS3244 and the 4000-level CS4248/CS4243/CS4246/CS4244, and uses CS3203 as the project course and CP3880 for industrial experience; this assumes the general-education and common-curriculum requirements match those modelled here, so confirm exact course codes and offering semesters on NUSMods."
+  },
+  "parse_error": null
+}

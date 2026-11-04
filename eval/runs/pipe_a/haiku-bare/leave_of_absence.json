@@ -1,0 +1,85 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010S\",\"CS1231S\",\"MA1521\",\"UE\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2102\",\"CS2103T\",\"CS2105\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS3243\",\"CS3244\",\"CS3219\",\"CS3235\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4243\",\"CS4248\",\"CS4246\",\"CS3281\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3282\",\"CS4231\",\"CS4215\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CS4212\",\"CS4224\",\"CS4236\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"CS3233\",\"CS4220\",\"CS3237\",\"UE\",\"UE\"]}],\"reason\":\"With semester 5 off, 8 regular semesters at 20 MC each give exactly the 160 MC needed for the BComp, so every semester is full; the AI specialisation (CS3243, CS3244, CS4243, CS4248, CS4246) and the core are fitted into this, using 10 UE entries, the maximum allowed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 28.25,
+  "cost_usd": 0.003096,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 6152,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:43:32+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010S",
+        "CS1231S",
+        "MA1521",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "UE_GENERIC_3"
+      ],
+      "3": [
+        "CS2101",
+        "CS2102",
+        "CS2103T",
+        "CS2105",
+        "CS3230"
+      ],
+      "4": [
+        "CS2106",
+        "CS3243",
+        "CS3244",
+        "CS3219",
+        "CS3235"
+      ],
+      "5": [],
+      "6": [
+        "CS4243",
+        "CS4248",
+        "CS4246",
+        "CS3281",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "CS3282",
+        "CS4231",
+        "CS4215",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "CS4212",
+        "CS4224",
+        "CS4236",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "CS3233",
+        "CS4220",
+        "CS3237",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "With semester 5 off, 8 regular semesters at 20 MC each give exactly the 160 MC needed for the BComp, so every semester is full; the AI specialisation (CS3243, CS3244, CS4243, CS4248, CS4246) and the core are fitted into this, using 10 UE entries, the maximum allowed."
+  },
+  "parse_error": null
+}

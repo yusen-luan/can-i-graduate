@@ -1,0 +1,79 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"ES2660\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2107\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2105\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"DTK1234\",\"IS1128\",\"HSI1000\",\"GEC1015\",\"UE\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4239\",\"GESS1020\",\"GEN2003\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4238\",\"CP3880\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A 7-semester plan exists using the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239, with 12 MC at level 4000) and CP3880 as the single internship option, totalling 160 MC with at most 24 MC per semester and 9 generic electives. CS2105 is included because it is a prerequisite of CS3235.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 47.87,
+  "cost_usd": 0.006277,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 12256,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:51:46+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "ES2660"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2105",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3235",
+        "DTK1234",
+        "IS1128",
+        "HSI1000",
+        "GEC1015",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "CS4236",
+        "CS4239",
+        "GESS1020",
+        "GEN2003",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "CS4238",
+        "CP3880",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A 7-semester plan exists using the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4239, with 12 MC at level 4000) and CP3880 as the single internship option, totalling 160 MC with at most 24 MC per semester and 9 generic electives. CS2105 is included because it is a prerequisite of CS3235."
+  },
+  "parse_error": null
+}

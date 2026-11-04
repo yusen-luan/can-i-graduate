@@ -1,0 +1,79 @@
+{
+  "instance": "focus_switch",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"IS1108\",\"GEC1015\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"ES2660\",\"GESS1020\",\"GEN2000\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"DTK1234\",\"IE2141\",\"HSI1000\",\"CP3880\"]},{\"semester\":6,\"modules\":[\"CS4246\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]},{\"semester\":9,\"modules\":[]}],\"reason\":\"A plan exists that stays within 20 MC per semester and reaches exactly 160 MC by semester 7. The AI focus area is met with CS2109S, CS3243 and CS4248, and CS4248, CS4243 and CS4246 provide 12 MC at level 4000; CP3880 is the internship and, with your completed CS2107 and CS3235, brings Breadth & Depth to 36 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 15.15,
+  "cost_usd": 0.03565,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 1626,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:06+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "GEC1015"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ST2334"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "ES2660",
+        "GESS1020",
+        "GEN2000"
+      ],
+      "5": [
+        "CS4248",
+        "CS4243",
+        "DTK1234",
+        "IE2141",
+        "HSI1000",
+        "CP3880"
+      ],
+      "6": [
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "7": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ],
+      "8": [],
+      "9": []
+    },
+    "reason": "A plan exists that stays within 20 MC per semester and reaches exactly 160 MC by semester 7. The AI focus area is met with CS2109S, CS3243 and CS4248, and CS4248, CS4243 and CS4246 provide 12 MC at level 4000; CP3880 is the internship and, with your completed CS2107 and CS3235, brings Breadth & Depth to 36 MC."
+  },
+  "parse_error": null
+}

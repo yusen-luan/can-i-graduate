@@ -1,0 +1,84 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1522\",\"GEA1000\",\"ES2660\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"IS1128\"]},{\"semester\":3,\"modules\":[\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2102\",\"ST2334\"]},{\"semester\":5,\"modules\":[\"CS2105\",\"CS2106\",\"CS3243\",\"CS2109S\",\"GEC1000\"]},{\"semester\":6,\"modules\":[\"CS3230\",\"CS3244\",\"CS4248\",\"GEN2000\",\"GES1000\"]},{\"semester\":7,\"modules\":[\"CP3880\",\"CS4246\"]},{\"semester\":8,\"modules\":[\"CP4101\",\"GEX1000\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Feasible: the plan covers the CS foundation, breadth, math, university-level and industry-experience requirements, the AI focus area (CS3243, CS3244, CS4246, CS4248 plus CS2109S) and the CP4101 project. It stays within 20 MC per semester and at most 4 CS/CP modules per semester, uses Special Term in semester 3, and finishes in 10 semesters with about 162 MC. Module codes, MC values and semester offerings are from my own recall of the NUS requirements, so they should be checked against the official ones, especially the GE module codes and the CS2103T MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 83.42,
+  "cost_usd": 0.116741,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 11623,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:48:29+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1522",
+        "GEA1000",
+        "ES2660"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "IS1128"
+      ],
+      "3": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2102",
+        "ST2334"
+      ],
+      "5": [
+        "CS2105",
+        "CS2106",
+        "CS3243",
+        "CS2109S",
+        "GEC1000"
+      ],
+      "6": [
+        "CS3230",
+        "CS3244",
+        "CS4248",
+        "GEN2000",
+        "GES1000"
+      ],
+      "7": [
+        "CP3880",
+        "CS4246"
+      ],
+      "8": [
+        "CP4101",
+        "GEX1000",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "10": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: the plan covers the CS foundation, breadth, math, university-level and industry-experience requirements, the AI focus area (CS3243, CS3244, CS4246, CS4248 plus CS2109S) and the CP4101 project. It stays within 20 MC per semester and at most 4 CS/CP modules per semester, uses Special Term in semester 3, and finishes in 10 semesters with about 162 MC. Module codes, MC values and semester offerings are from my own recall of the NUS requirements, so they should be checked against the official ones, especially the GE module codes and the CS2103T MC."
+  },
+  "parse_error": null
+}

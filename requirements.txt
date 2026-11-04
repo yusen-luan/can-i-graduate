@@ -2,3 +2,5 @@ PyYAML>=6.0
 ortools>=9.12
 pytest>=8.0
 streamlit>=1.30
+anthropic>=2.3
+python-dotenv>=1.0

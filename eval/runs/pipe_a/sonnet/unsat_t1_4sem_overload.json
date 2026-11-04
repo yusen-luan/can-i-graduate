@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow at most 112 MC of coursework. The only extra credit comes from industrial-experience modules, which are exempt from the load cap, and the largest option adds 12 MC. That gives at most 124 MC, below 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.7,
+  "cost_usd": 0.006725,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 364,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:28+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Graduation needs at least 160 MC, but 4 semesters at a 28 MC cap allow at most 112 MC of coursework. The only extra credit comes from industrial-experience modules, which are exempt from the load cap, and the largest option adds 12 MC. That gives at most 124 MC, below 160."
+  },
+  "parse_error": null
+}

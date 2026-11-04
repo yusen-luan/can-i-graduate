@@ -1,0 +1,84 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"ES1000\",\"MA1301\",\"CS1101S\",\"GEC1015\",\"DTK1234\",\"IS1128\"]},{\"semester\":2,\"modules\":[\"ES1103\",\"CS1231S\",\"CS2030S\",\"MA1522\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"CS2100\",\"MA1521\",\"IS1108\",\"GEN2000\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\",\"CS3230\"]},{\"semester\":5,\"modules\":[\"CS2109S\",\"CS3231\",\"CS4234\",\"CS2102\",\"CS2107\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"ES2660\",\"GESS1020\",\"SC1101E\"]},{\"semester\":7,\"modules\":[\"CP3200\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"CP3202\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"A plan fits in 8 semesters: MA1301 and ES1000/ES1103 are scheduled as bridging, algorithms focus uses CS3230 with CS3231, CS4234, CS4231 and CS4430 (12 MC at level 4000), and the CP3200+CP3202 internship supplies the B&D credits with 160 MC total and at most 20 MC per semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 60.01,
+  "cost_usd": 0.00758,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 14854,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:03+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES1000",
+        "MA1301",
+        "CS1101S",
+        "GEC1015",
+        "DTK1234",
+        "IS1128"
+      ],
+      "2": [
+        "ES1103",
+        "CS1231S",
+        "CS2030S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "IS1108",
+        "GEN2000"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "ST2334",
+        "CS3230"
+      ],
+      "5": [
+        "CS2109S",
+        "CS3231",
+        "CS4234",
+        "CS2102",
+        "CS2107"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "ES2660",
+        "GESS1020",
+        "SC1101E"
+      ],
+      "7": [
+        "CP3200",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "CP3202",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ]
+    },
+    "reason": "A plan fits in 8 semesters: MA1301 and ES1000/ES1103 are scheduled as bridging, algorithms focus uses CS3230 with CS3231, CS4234, CS4231 and CS4430 (12 MC at level 4000), and the CP3200+CP3202 internship supplies the B&D credits with 160 MC total and at most 20 MC per semester."
+  },
+  "parse_error": null
+}

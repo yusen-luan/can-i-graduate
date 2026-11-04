@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_offering_lock",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2108 cannot be finished by semester 1. Its prerequisite is a 2000-level programming or data-structures module such as CS2030 or CS2040, which in turn requires CS1010-level programming, and with no modules completed none of these can be done before or during semester 1.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.9,
+  "cost_usd": 0.007177,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 329,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:56:18+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2108 cannot be finished by semester 1. Its prerequisite is a 2000-level programming or data-structures module such as CS2030 or CS2040, which in turn requires CS1010-level programming, and with no modules completed none of these can be done before or during semester 1."
+  },
+  "parse_error": null
+}

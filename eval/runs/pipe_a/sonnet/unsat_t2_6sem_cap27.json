@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Every non-industrial module is 4, 5 or 8 MC and only CS3216 and CS3217 are 5 MC, so a 27 MC cap allows at most 146 MC of coursework over 6 semesters. The exactly-one industrial-experience rule allows at most 12 more MC, and that does not count toward the load. That gives at most 158 MC, below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 41.42,
+  "cost_usd": 0.054345,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 5126,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:52:24+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Every non-industrial module is 4, 5 or 8 MC and only CS3216 and CS3217 are 5 MC, so a 27 MC cap allows at most 146 MC of coursework over 6 semesters. The exactly-one industrial-experience rule allows at most 12 more MC, and that does not count toward the load. That gives at most 158 MC, below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

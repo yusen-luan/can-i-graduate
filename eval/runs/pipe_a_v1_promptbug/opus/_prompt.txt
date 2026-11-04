@@ -1,0 +1,187 @@
+You are an academic planning assistant for the NUS Bachelor of Computing (Computer Science), AY2026/27 cohort. A student describes their situation and request in natural language. Decide whether a plan that satisfies EVERY rule below and every request of the student exists within the semesters they allow. If it exists, give one concrete semester-by-semester plan.
+
+Use only the rules and the module catalog below; they are the complete and authoritative model for this task (they may differ from the real NUS rules you remember).
+
+# 1. Planning model
+- The plan has semesters numbered 1..T, where T is the number of semesters the student wants to graduate within. Never use a semester number outside 1..T.
+- By default plan semester s is NUS Semester 1 when s is odd and NUS Semester 2 when s is even.
+- If the student designates some plan semesters as Special Terms, the remaining (regular) semesters alternate Sem 1, Sem 2, Sem 1, ... in order starting with Sem 1, skipping the special slots. A special slot that follows a Sem 2 is Special Term 3; one that follows a Special Term 3 is Special Term 4.
+- A module may only be placed in a semester whose term is listed in its "offered" terms.
+- Each module is taken at most once. Never schedule a module the student has already completed or been exempted from.
+- Prerequisites: every prerequisite of a module must be satisfied by a module completed/exempted before planning or scheduled in a STRICTLY EARLIER semester (not the same one). Unless the student says otherwise, assume A-level H2 Mathematics (so MA1301, MA1301X count as satisfied as prerequisites and are not taken) and direct English placement (so ES1000, ES1103 count as satisfied and are not taken). A student without H2 Mathematics, or with an English bridging requirement, must schedule those bridging modules like any other.
+- Unit load: the units in a semester may not exceed the student's per-semester cap (or a semester-specific cap they give; "taking a semester off" means nothing at all may be placed in it), and never exceed 28 MC. Industrial-experience modules (CP3107, CP3110, CP3200, CP3202, CP3880, ETP3201L, ETP3205, IS4010) do NOT count toward a semester's unit load (they run over the vacation), but they still occupy a semester, must respect its offered terms, and cannot be placed in a semester taken off.
+- CS2101, CS2103T must be taken together in the same semester.
+- Year-long service learning: if you take one of these, its continuation must be in the immediately following plan semester:
+  - GEN2050X (Sem 1 half, carries the credit) then GEN2050Y (0 MC continuation)
+  - GEN2070X (Sem 1 half, carries the credit) then GEN2070Y (0 MC continuation)
+- Preclusions: at most one module of each group below may be held (completed or scheduled; exempted modules do not count):
+  - data_structures: CS2040S, CS1020, CS1020E, CS2010, CS2020, CS2040, CS2040C, CS2040DE, CS2040HS
+  - discrete_math: CS1231S, CS1231, MA1100, MA1100T
+  - intro_programming: CS1101S, CS1010, CS1010S, CS1010X, CS1010E, CS1010J, CS1010A, CS1010HS
+
+# 2. Graduation requirements (counting completed + exempted + scheduled modules)
+- At least 160 MC in total.
+- Required modules: CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230, MA1521, MA1522, ST2334, ES2660, GEA1000, IS1108.
+- University-level requirements (each list: take at least the stated number):
+  - digital literacy: at least 1 of CS1101S
+  - critique and expression: at least 1 of ES2660
+  - data literacy: at least 1 of GEA1000
+  - cultures and connections: at least 1 of GEC1015, GEC1020, GEC1030
+  - singapore studies: at least 1 of GESS1001, GESS1020, GESS1025
+  - communities and engagement: at least 1 of GEN2000, GEN2001, GEN2003, GEN2004, GEN2050X, GEN2070X
+- Interdisciplinary / cross-disciplinary (ID/CD): exactly 3 modules from DTK1234, IE2141, IS1128, HSI1000, DAO2703, SC1101E, GE2103, with at least 2 ID and at most 1 CD (category shown in the catalog).
+- Focus area: the requested area (any one area if none is requested) needs at least 3 of its primaries, with at least 1 at level 4000 or above:
+  - algorithms_theory: CS3230, CS3231, CS3236, CS4231, CS4234, CS4330, CS4430
+  - artificial_intelligence: CS2109S, CS3243, CS3244, CS3263, CS3264, CS3268, CS4243, CS4244, CS4246, CS4248, CS4262, CS4263
+  - computer_graphics_games: CS3241, CS3242, CS3247, CS4247, CS4350
+  - computer_security: CS2107, CS3235, CS4236, CS4230, CS4238, CS4239
+  - database_systems: CS2102, CS3223, CS4221, CS4224, CS4225
+  - hci: CS2111, CS3240, CS3249, CS4249, CS4353
+  - multimedia_ir: CS2108, CS3245, CS4242, CS4248, CS4347
+  - networking_distributed: CS2105, CS3103, CS4222, CS4226, CS4231
+  - parallel_computing: CS3210, CS3211, CS4231, CS4223, CS4310
+  - programming_languages: CS2104, CS3211, CS4212, CS4215
+  - software_engineering: CS2103T, CS3213, CS3217, CS3219, CS3227, CS3282, CS4211, CS4218, CS4239
+- Level 4000: at least 12 MC of modules at level 4000 or above.
+- Breadth & Depth: at least 32 MC of modules tagged "B&D" in the catalog (this includes industrial experience).
+- Industrial experience: complete exactly ONE of the options below in full, and take no industrial-experience module outside that option. If the student names an option, it must be that one. Exception: a student whose GPA qualifies for the final-year project may instead take CP4101 in place of the internship.
+  - option: CP3880
+  - option: IS4010
+  - option: ETP3201L
+  - option: CP3200 + CP3202
+  - option: CP3107 + CP3110
+  - option: ETP3205
+- CP-coded cap: CP3106, CP3209, CP4101, CP4106 together may total at most 12 MC.
+- CP4101 (final-year project) may only be taken by a student whose GPA qualifies for it; assume a student does NOT qualify unless they say so. UROP research means at least one of CP3106, CP3209, CP4106; assume a student is eligible for UROP unless they say otherwise.
+- Unrestricted electives: any remaining units may be filled with generic 4 MC unrestricted electives. Write each one as the code "UE" (offered in Sem 1 and Sem 2, level 1000, no prerequisites). At most 10 generic electives exist in total, including any the student has already completed.
+
+# 3. Student requests
+Every request the student states is a hard constraint, in addition to the rules above. For example: a focus area to specialise in; a particular internship option; doing the final-year project or a UROP; per-semester or semester-specific unit caps; semesters taken off or used as Special Terms; a maximum number of CS/IFS/CP-coded modules in any one semester (industrial-experience modules excluded); a minimum unit load in every semester they are enrolled in (a semester with nothing scheduled is not enrolled); no empty semesters between enrolled ones; two modules not in the same semester; modules that must be taken, avoided, or finished by a given semester.
+
+# 4. Answer format
+Return JSON with:
+- "feasible": true if a plan satisfying everything exists within the allowed semesters, else false.
+- "plan": if feasible, one entry per plan semester 1..T, {"semester": s, "modules": [codes]} (an empty list for a semester with nothing scheduled); list only modules still to be taken. If infeasible, an empty list.
+- "reason": one or two sentences; if infeasible, name the rule or request that makes it impossible.
+
+# 5. Module catalog
+Format: code | title | units | level | offered terms | requirement tag | prerequisites (AND / OR).
+CDE2300 | Product Design and Innovation | 4 MC | level 2000 | offered: Sem 1, Sem 2 | not an ID/CD candidate; counts toward total units only
+CP3106 | Independent Project | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+CP3107 | Computing for Social Service Agencies I | 6 MC | level 3000 | offered: Sem 1 | B&D, industrial experience | prereq: ((CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113T OR CS2113) AND (CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS))
+CP3110 | Computing for Social Service Agencies II | 6 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience | prereq: CP3107
+CP3200 | Internship | 6 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+CP3202 | Internship II | 6 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience | prereq: CP3200
+CP3209 | Undergraduate Research Project in Computing | 8 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+CP3880 | Advanced Technology Attachment Programme | 12 MC | level 3000 | offered: Sem 1, Sem 2, Special Term 3, Special Term 4 | B&D, industrial experience | prereq: ((IS2101 OR CS2101 OR ES1601 OR ES2002 OR ES2007D OR ES2531 OR ES2631 OR UTW1001% OR UWC2101% OR NTW%) AND (CS2103 OR CS2103T OR CS2103DE OR CS2113 OR CS2113T OR IS3106 OR BT3103 OR IS2108))
+CP4101 | B.Comp. Dissertation | 12 MC | level 4000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+CP4106 | Computing Project | 8 MC | level 4000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+CS1101S | Programming Methodology | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+CS1231S | Discrete Structures | 4 MC | level 1000 | offered: Sem 1, Sem 2 | CS foundation | prereq: (MA1301X OR MA1301)
+CS2030S | Programming Methodology II | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: (CS1010 OR CS1010E OR CS1010X OR CS1101S OR CS1010S OR CS1010J OR CS1010A OR CS1010HS OR UTC2851)
+CS2040S | Data Structures and Algorithms | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((CS1010 OR CS1010E OR CS1010X OR CS1101S OR CS1010S OR CS1010J OR CS1010A OR CS1010HS OR UTC2851) AND (CS1231S OR CS1231 OR MA1100 OR MA1100T))
+CS2100 | Computer Organisation | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: (YSC1212 OR CS1010 OR CS1010J OR CS1010E OR CS1010S OR CS1010X OR CS1101S OR CS1010A OR CS1010HS OR UTC2851)
+CS2101 | Effective Communication for Computing Professionals | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation
+CS2102 | Database Systems | 4 MC | level 2000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS1231 OR MA1100 OR MA1100T OR CS1231S) AND (CS2030S OR CS2030 OR CS2030DE OR CS2030HS OR YSC2229 OR CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS))
+CS2103T | Software Engineering | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((CS2030 OR CS2030S OR CS2030DE OR CS2030HS) AND (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS))
+CS2104 | Programming Language Concepts | 4 MC | level 2000 | offered: Sem 1 | B&D | prereq: (CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T)
+CS2105 | Introduction to Computer Networks | 4 MC | level 2000 | offered: Sem 1, Sem 2 | B&D | prereq: (YSC2229 OR CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS)
+CS2106 | Introduction to Operating Systems | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: (CS2100 OR CS2100DE OR CS2100HS OR EE2007 OR EE2024 OR EE2028)
+CS2107 | Introduction to Information Security | 4 MC | level 2000 | offered: Sem 1, Sem 2 | B&D | prereq: (YSC1212 OR CS1010J OR CS1101S OR CS1010 OR CS1010E OR CS1010S OR CS1010X OR CS1010A OR CS1010HS OR UTC2851)
+CS2108 | Introduction to Media Computing | 4 MC | level 2000 | offered: Sem 2 | B&D | prereq: ((CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND (MA1522 OR MA2001 OR MA1513 OR MA1311 OR MA1508E))
+CS2109S | Introduction to AI and Machine Learning | 4 MC | level 2000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((YSC2229 OR CS2040S OR CS2040C OR CS2040HS OR CS2040 OR CS2040DE) AND ((MA1511 OR MA1512) OR MA1521 OR MA2002 OR MA1102R OR MA1312 OR MA1507 OR MA1505))
+CS2111 | Human-Centred Computing | 4 MC | level 2000 | offered: Sem 2 | B&D | prereq: (CS1010A OR CS1010E OR CS1010X OR CS1101S OR CS1010S OR UTC2851 OR CS1010HS OR CS1010J OR CS1010 OR NM2207)
+CS3103 | Computer Networks Practice | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: (CS2105 OR EE3204 OR EE3204E OR EE4204)
+CS3203 | Software Engineering Project | 8 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR CS2113T)
+CS3210 | Parallel Computing | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2100 OR CS2100DE OR CS2100HS OR CG2007 OR EE2028 OR CG2028 OR EE2024)
+CS3211 | Concurrent Programming | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: (CS2106 OR CG2271)
+CS3213 | Software Requirements Specification and Validation | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: (CS2103T OR CS2103 OR CS2103DE OR CS2113T OR CS2113)
+CS3216 | Software Product Engineering for Digital Markets | 5 MC | level 3000 | offered: Sem 1 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR CS2113 OR CS2113T)
+CS3217 | Software Engineering on Modern Application Platforms | 5 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR CS2113 OR CS2113T)
+CS3219 | Software Design and Architecture | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (YSC3232 OR CS2103 OR CS2103T OR CS2103DE OR CS2113T OR CS2113)
+CS3223 | Database Systems Implementation | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2040S OR CS2040 OR CS2040C OR CS2040DE OR CS2040HS) AND (CS2102 OR IT2002))
+CS3227 | Agentic Software Engineering | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2103 OR CS2103T OR CS2113 OR CS2103DE)
+CS3230 | Design and Analysis of Algorithms | 4 MC | level 3000 | offered: Sem 1, Sem 2 | CS foundation | prereq: ((YSC2229 OR CS2040S OR CS2040 OR CS2040C OR CS2040DE OR CS2040HS) AND (CS1231 OR CS1231S OR MA1100T OR MA1100))
+CS3231 | Theory of Computation | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: ((CS1231 OR CS1231S OR MA1100T OR MA1100) AND (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS))
+CS3235 | Computer Security | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2105 OR EE3204 OR EE4204) AND (CS2106 OR YSC3217 OR CG2271) AND CS2107)
+CS3236 | Introduction to Information Theory | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((MA1100 OR MA1100T OR CS1231 OR CS1231S) AND (EE2012 OR EE2012A OR MA2216 OR MA2116 OR MA2116T OR ST2131 OR ST2334))
+CS3240 | Interaction Design | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2111 OR NM2207)
+CS3241 | Computer Graphics | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: ((CS2030S OR CS2030 OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T) AND (CS2040 OR YSC2229 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS))
+CS3242 | 3D Modeling and Animation | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((PC1201 OR PC1221 OR PC1221X) AND CS3241 AND (MA1522 OR MA1508E OR MA1513 OR MA1311 OR MA2001 OR MA1101R) AND (MA1521 OR MA2002 OR MA1505 OR MA1507 OR MA1102R OR (MA1511 OR MA1512)))
+CS3243 | Introduction to Artificial Intelligence | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS OR YSC2229) AND (CS1231S OR CS1231 OR MA1100T OR MA1100))
+CS3244 | Machine Learning | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS OR YSC2229) AND (EE2012A OR EE2012 OR YSC2243 OR ST2131 OR ST2334 OR MA2116 OR MA2116T OR MA2216) AND ((MA1511 OR MA1512) OR ((MA2001 OR MA1522 OR MA1508E OR MA1311 OR MA1513 OR MA1101R) AND (MA2002 OR MA1521 OR MA1505 OR MA1507 OR MA1102R))))
+CS3245 | Information Retrieval | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS)
+CS3247 | Game Development | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: CS3241
+CS3249 | Conversational User Interface | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: CS2111
+CS3263 | Foundations of Artificial Intelligence | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2109S OR CS2109HS) AND (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND (MA2001 OR MA1522 OR MA1513 OR MA1508E OR MA1101R) AND (EE2012A OR EE2012 OR ST2131 OR MA2116 OR MA2116T OR ST2334 OR MA2216))
+CS3264 | Foundations of Machine Learning | 4 MC | level 3000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2109S AND (CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND (MA1101R OR MA1311 OR MA1513 OR MA1508E OR MA2001 OR MA1522) AND (EE2012A OR EE2012 OR ST2131 OR MA2116 OR MA2116T OR ST2334 OR MA2216))
+CS3268 | Responsible AI: from Algorithms to Impact | 4 MC | level 3000 | offered: Sem 1 | B&D | prereq: ((CS2109S OR CS2109HS OR CS3243) AND (ST2334 OR ((ST2131 OR MA2116 OR MA2116T) AND ST2132)))
+CS3281 | Software Engineering for Evolving Production Systems I | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR CS2113)
+CS3282 | Software Engineering for Evolving Production Systems II | 4 MC | level 3000 | offered: Sem 2 | B&D | prereq: CS3281
+CS4211 | Formal Methods for Software Engineering | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (CS2103 OR CS2103T OR CS2103DE OR YSC3232 OR CS2113 OR CS2113T)
+CS4212 | Compiler Design | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: (CS2104 OR CS3212)
+CS4215 | Programming Language Implementation | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND (CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T))
+CS4218 | Software Testing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS3213 OR CS3219)
+CS4221 | Database Applications Design and Tuning | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: CS3223
+CS4222 | Wireless Networking | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((EE3204 OR EE3204E OR EE4204 OR CS2105) AND (EE2012A OR EE2012 OR ST2131 OR ST2334 OR MA2116 OR MA2116T OR MA2216))
+CS4223 | Multi-core Architectures | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((CS2106 OR CG2271) AND (CS3210 OR CS3220 OR CG3207))
+CS4224 | Distributed Databases | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: CS3223
+CS4225 | Big Data Systems for Data Science | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2102 OR IT2002)
+CS4226 | Internet Architecture | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((CS2105 OR EE3204 OR EE3204E OR EE4204) AND (EE2012A OR EE2012 OR MA2216 OR ST2131 OR ST2334 OR MA2116 OR MA2116T))
+CS4230 | Foundations of Modern Cryptography | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS1231 OR CS1231S OR MA1100 OR MA1100T) AND CS3230 AND (ST2334 OR ST2131 OR MA2216 OR MA2116 OR MA2116T))
+CS4231 | Parallel and Distributed Algorithms | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: (CS3210 OR CS3230)
+CS4234 | Optimisation Algorithms | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((MA2001 OR MA1101R OR YSC2232 OR MA1311 OR MA1508E OR MA1522 OR MA1513) AND (YSC3203 OR CS3230))
+CS4236 | Cryptography in Practice: Systems and Applications | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((YSC2229 OR CS2040 OR CS2040S OR CS2040C OR CS2040DE OR CS2040HS) AND CS2107 AND (CS1231 OR CS1231S OR MA1100T OR MA1100))
+CS4238 | Computer Security Practice | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: CS3235
+CS4239 | Software Security | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (CS3235 AND (CS2103T OR CS2103 OR CS2103DE OR CS2113 OR CS2113T))
+CS4242 | Social Media Computing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2108 AND CS3245)
+CS4243 | Computer Vision and Pattern Recognition | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((YSC2232 OR MA2001 OR MA1101R OR MA1311 OR MA1508E OR MA1513 OR MA1522) AND (ST1131 OR ST1131A OR ST1232 OR ST2131 OR MA2116 OR MA2116T OR MA2216 OR EE2012A OR EE2012 OR ST2334 OR YSC2243) AND (CS2030 OR CS2030S OR CS2030DE OR CS2030HS OR CS2113 OR CS2113T) AND (YSC2229 OR CS2040 OR CS2040S OR CS2040DE OR CS2040C OR CS2040HS) AND (MA1102R OR MA2002 OR YSC1216 OR MA1505 OR MA1521 OR MA1507 OR (MA1512 OR MA1511)))
+CS4244 | Knowledge Representation and Reasoning | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS3263 OR CS3243)
+CS4246 | Reinforcement Learning and Sequential Decision Making | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((EE2012A OR EE2012 OR ST2132 OR ST2334 OR ((ST2131 OR MA2116 OR MA2116T OR MA2216) AND (ST1131 OR ST1232 OR DCS2008 OR ST1131A))) AND (CS3243 OR CS3263))
+CS4247 | Graphics Rendering Techniques | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: CS3241
+CS4248 | Introduction to Large Language Models | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: ((CS2109S OR CS2109HS OR CS3244 OR MA3270 OR ST4248) AND (EE2012A OR EE2012 OR ST2131 OR MA2216 OR MA2116 OR MA2116T OR ST2334 OR YSC2243) AND (MA1505 OR MA1507 OR MA1521 OR MA1102R OR YSC1216 OR MA2002 OR (MA1511 OR MA1512)))
+CS4249 | Quantitative Methods of Human-Computer Interaction | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: (CS3240 OR NM2216 OR NM2213 OR NM3243)
+CS4262 | Machine Learning Systems | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS2106 OR CG2271) AND (CS3244 OR CS3264 OR CG3201))
+CS4263 | Artificial Intelligence Principles | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: ((CS2040 OR CS2040C OR CS2040S OR CS2040DE OR CS2040HS) AND (CS1231 OR CS1231S OR MA1100 OR MA1100T))
+CS4310 | High-Performance Computing for Science and AI | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS3210 AND (CS2106 OR CG2271 OR EE4214))
+CS4330 | Combinatorial Methods in Bioinformatics | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: ((CS2040C OR CS2040 OR CS2040S OR CS2040DE OR CS2040HS) AND (CS2220 OR LSM2104 OR LSM2241 OR ZB2101))
+CS4347 | Sound and Music Computing | 4 MC | level 4000 | offered: Sem 1, Sem 2 | B&D | prereq: (CS2108 AND (MA1101R OR MA2001 OR MA1522 OR MA1311 OR MA1508E OR MA1513) AND (MA1102R OR MA1505 OR MA1507 OR MA1521 OR MA2002 OR (MA1512 OR MA1511)))
+CS4350 | Game Development Project | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (CS3247 OR NM3216 OR NM4260 OR NM4260HM)
+CS4353 | Interactive Systems Development Project | 4 MC | level 4000 | offered: Sem 1 | B&D | prereq: (((CS2103DE OR CS2103 OR CS2103T OR CS2113) AND CS3240) OR (NM2207 AND (NM3243 OR NM4259 OR (ID2116 OR ID3131))))
+CS4430 | Computational Complexity | 4 MC | level 4000 | offered: Sem 2 | B&D | prereq: CS3231
+DAO2703 | Operations and Technology Management | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ID/CD (CD)
+DTK1234 | Design Thinking | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ID/CD (ID)
+EL1101E | The Nature of Language | 4 MC | level 1000 | offered: Sem 1, Sem 2 | not an ID/CD candidate; counts toward total units only
+ES1000 | Foundation Academic English | 0 MC | level 1000 | offered: Sem 1, Sem 2 | English bridging
+ES1103 | English for Academic Purposes | 4 MC | level 1000 | offered: Sem 1, Sem 2, Special Term 3 | English bridging | prereq: ES1000
+ES2660 | Communicating in the Information Age | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ULR / general education
+ETP3201L | Innovation & Enterprise Internship | 12 MC | level 3000 | offered: Sem 1, Sem 2 | B&D, industrial experience
+ETP3205 | Innovation & Enterprise Internship | 6 MC | level 3000 | offered: Sem 2, Special Term 3, Special Term 4 | B&D, industrial experience
+GE2103 | Our Planet: An Earth System Science Perspective | 4 MC | level 2000 | offered: Sem 1 | ID/CD (CD)
+GEA1000 | Quantitative Reasoning with Data | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+GEC1015 | Public Health in Action | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+GEC1020 | Cultural Diversity in the Contemporary World | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+GEC1030 | Metropolis: The City in World History | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+GEN2000 | Living Culture: Engaging Indian Communities in Singapore | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ULR / general education
+GEN2001 | Theatre and Community Engagement | 4 MC | level 2000 | offered: Sem 1 | ULR / general education
+GEN2003 | Inclusivity and Equality: Domestic Worker Community | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ULR / general education
+GEN2004 | Green Communities in Action: Climate, Species, Crisis | 4 MC | level 2000 | offered: Sem 2 | ULR / general education
+GEN2050X | Teach SG (year-long, Sem 1 half) | 4 MC | level 2000 | offered: Sem 1 | ULR / general education
+GEN2050Y | Teach SG (year-long, Sem 2 continuation) | 0 MC | level 2000 | offered: Sem 2 | ULR / general education
+GEN2070X | ComLink Befrienders (year-long, Sem 1 half) | 4 MC | level 2000 | offered: Sem 1 | ULR / general education
+GEN2070Y | ComLink Befrienders (year-long, Sem 2 continuation) | 0 MC | level 2000 | offered: Sem 2 | ULR / general education
+GESS1001 | Changing Landscapes of Singapore | 4 MC | level 1000 | offered: Sem 1 | ULR / general education
+GESS1020 | Singapore Society | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+GESS1025 | Singapore: Imagining the Next 50 Years | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ULR / general education
+HSH1000 | The Human Condition | 4 MC | level 1000 | offered: Sem 1, Sem 2 | not an ID/CD candidate; counts toward total units only
+HSI1000 | How Science Works, Why Science Works | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ID/CD (ID)
+IE2141 | Systems Thinking and Dynamics | 4 MC | level 2000 | offered: Sem 1, Sem 2 | ID/CD (ID)
+IS1108 | Digital and AI Ethics | 4 MC | level 1000 | offered: Sem 1, Sem 2 | computing ethics
+IS1128 | IT, Management and Organisation | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ID/CD (ID)
+IS4010 | Digital Transformation Leadership Programme | 12 MC | level 4000 | offered: Sem 1, Sem 2, Special Term 3, Special Term 4 | B&D, industrial experience | prereq: (IS3103 AND (IS2108 OR IS3106 OR BT3103))
+MA1301 | Introductory Mathematics | 4 MC | level 1000 | offered: Sem 1, Sem 2 | math bridging
+MA1301X | Introductory Mathematics | 4 MC | level 1000 | offered: Sem 2, Special Term 3 | math bridging
+MA1521 | Calculus for Computing | 4 MC | level 1000 | offered: Sem 1, Sem 2 | math/statistics | prereq: (MA1301 OR MA1301X)
+MA1522 | Linear Algebra for Computing | 4 MC | level 1000 | offered: Sem 1, Sem 2 | math/statistics | prereq: (MA1301 OR MA1301X)
+SC1101E | Making Sense of Society | 4 MC | level 1000 | offered: Sem 1, Sem 2 | ID/CD (CD)
+ST2334 | Probability and Statistics | 4 MC | level 2000 | offered: Sem 1, Sem 2 | math/statistics | prereq: (MA1312 OR MA1505 OR MA1511 OR MA1521 OR MA2002)

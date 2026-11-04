@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_forbid_required",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 is a required module for graduation, so the request to avoid CS2100 cannot be satisfied by any plan. No schedule within 9 semesters can meet both the graduation requirements and this request.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 16.89,
+  "cost_usd": 0.005546,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 120,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:02:36+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 is a required module for graduation, so the request to avoid CS2100 cannot be satisfied by any plan. No schedule within 9 semesters can meet both the graduation requirements and this request."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_three_core",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2040S (Data Structures and Algorithms), CS2100 (Computer Organisation) and CS2103T (Software Engineering) are compulsory Computer Science Foundation modules in the BComp (CS) programme. As far as I know, CS majors have no accepted substitutes for them, so the degree cannot be completed while avoiding them, whatever the number of semesters or the MC cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.07,
+  "cost_usd": 0.009185,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 430,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:56:06+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2040S (Data Structures and Algorithms), CS2100 (Computer Organisation) and CS2103T (Software Engineering) are compulsory Computer Science Foundation modules in the BComp (CS) programme. As far as I know, CS majors have no accepted substitutes for them, so the degree cannot be completed while avoiding them, whatever the number of semesters or the MC cap."
+  },
+  "parse_error": null
+}

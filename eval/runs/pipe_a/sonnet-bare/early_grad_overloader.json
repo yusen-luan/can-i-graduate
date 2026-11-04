@@ -1,0 +1,81 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1010\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"CS2107\",\"UE\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\",\"ST2334\",\"CS2105\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"CS2101\",\"ES2660\",\"IS1128\",\"CS3243\",\"GEC1000\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS4238\",\"CS4239\",\"CS3223\",\"GEN2000\",\"GES1000\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4257\",\"GEX1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS3210\",\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Feasible: the plan totals 164 MC, with at most 24 MC per semester. It covers the ULR, CS foundation, maths, IT professionalism, a Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239, CS4257), the industry experience module and unrestricted electives. This is built from my recollection of the requirements and module prerequisites, which I have not checked against the current NUS catalogue.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 73.59,
+  "cost_usd": 0.101697,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 10133,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:47:28+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1010",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2107",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "ST2334",
+        "CS2105"
+      ],
+      "4": [
+        "CS3235",
+        "CS2101",
+        "ES2660",
+        "IS1128",
+        "CS3243",
+        "GEC1000"
+      ],
+      "5": [
+        "CS4236",
+        "CS4238",
+        "CS4239",
+        "CS3223",
+        "GEN2000",
+        "GES1000"
+      ],
+      "6": [
+        "CP3880",
+        "CS4257",
+        "GEX1000",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS3210",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: the plan totals 164 MC, with at most 24 MC per semester. It covers the ULR, CS foundation, maths, IT professionalism, a Security focus area (CS2107, CS3235, CS4236, CS4238, CS4239, CS4257), the industry experience module and unrestricted electives. This is built from my recollection of the requirements and module prerequisites, which I have not checked against the current NUS catalogue."
+  },
+  "parse_error": null
+}

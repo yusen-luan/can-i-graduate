@@ -1,0 +1,42 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS3243\"]}, {\"semester\": 2, \"modules\": [\"CS3244\"]}, {\"semester\": 3, \"modules\": [\"CS4246\"]}, {\"semester\": 4, \"modules\": []}, {\"semester\": 5, \"modules\": []}, {\"semester\": 6, \"modules\": []}, {\"semester\": 7, \"modules\": []}, {\"semester\": 8, \"modules\": []}], \"reason\": \"All core and common university requirements appear satisfied by the completed modules, so the remaining requirement is the AI specialisation, which needs three more AI modules beyond CS4243; CS3243, CS3244 and CS4246 supply them within 8 semesters and under the 20 MC cap. The specialisation module list is from my recollection of the NUS curriculum and should be checked against the official AY2026/27 requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 26.86,
+  "cost_usd": 0.003034,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 6002,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:42:44+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3243"
+      ],
+      "2": [
+        "CS3244"
+      ],
+      "3": [
+        "CS4246"
+      ],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "All core and common university requirements appear satisfied by the completed modules, so the remaining requirement is the AI specialisation, which needs three more AI modules beyond CS4243; CS3243, CS3244 and CS4246 supply them within 8 semesters and under the 20 MC cap. The specialisation module list is from my recollection of the NUS curriculum and should be checked against the official AY2026/27 requirements."
+  },
+  "parse_error": null
+}

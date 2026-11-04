@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached: 5 semesters at 20 MC each allows at most 100 MC of coursework. Industrial-experience modules do not count toward the load, but the largest option adds only 12 MC, so the maximum is about 112 MC, well short of 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.92,
+  "cost_usd": 0.006625,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 354,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:32+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached: 5 semesters at 20 MC each allows at most 100 MC of coursework. Industrial-experience modules do not count toward the load, but the largest option adds only 12 MC, so the maximum is about 112 MC, well short of 160."
+  },
+  "parse_error": null
+}

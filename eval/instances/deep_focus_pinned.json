@@ -1,0 +1,131 @@
+{
+  "name": "deep_focus_pinned",
+  "declared_expect": "feasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 9 semesters; take at most 20 MC per semester; specialise in algorithms theory; be sure to take CS3230; finish CS2040S by semester 3. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "algorithms_theory",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [
+          "CS3230"
+        ],
+        "forbid_modules": [],
+        "deadline": {
+          "CS2040S": 3
+        }
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": true,
+    "status": "OPTIMAL",
+    "proven_infeasible": false,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "SC1101E",
+        "UE_GENERIC_6"
+      ],
+      "2": [
+        "CS2040S",
+        "ES2660",
+        "GEN2004",
+        "ST2334",
+        "UE_GENERIC_3"
+      ],
+      "3": [
+        "CS2100",
+        "CS3230",
+        "GEA1000",
+        "GESS1001",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS4231",
+        "GESS1020",
+        "GESS1025",
+        "HSI1000",
+        "UE_GENERIC_5"
+      ],
+      "5": [
+        "CS3231",
+        "IS1128",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4",
+        "UE_GENERIC_9"
+      ],
+      "6": [
+        "CS2030S",
+        "CS2106",
+        "CS3236",
+        "CS4430",
+        "MA1522"
+      ],
+      "7": [
+        "CS2109S",
+        "CS4234",
+        "IS1108"
+      ],
+      "8": [
+        "ETP3201L"
+      ],
+      "9": [
+        "CS2101",
+        "CS2103T",
+        "GEC1030",
+        "GEN2001"
+      ]
+    },
+    "total_units": 160
+  },
+  "meta": {
+    "label": "Deep focus with a pinned module",
+    "description": "Algorithms & Theory focus, insists on taking CS3230 and finishing CS2040S by semester 3.",
+    "tier": "SAT",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-depth",
+      "C-pref"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_total_variables": 2642,
+      "num_constraints": 3480,
+      "min_feasible_semesters": 8,
+      "semester_slack": 1,
+      "cap_slack": 0,
+      "min_feasible_cap": 20,
+      "cap_min_bounded": false
+    },
+    "quality": {
+      "realism": 88.1,
+      "flags": []
+    }
+  }
+}

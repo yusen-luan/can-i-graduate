@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_cs_starved",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2101 and CS2103T are both required and must be taken in the same semester, but both are CS-coded, so that semester would have 2 CS modules and break the limit of 1 CS/IFS/CP module per semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.15,
+  "cost_usd": 0.008323,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 101,
+    "output_tokens": 519,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:50+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2101 and CS2103T are both required and must be taken in the same semester, but both are CS-coded, so that semester would have 2 CS modules and break the limit of 1 CS/IFS/CP module per semester."
+  },
+  "parse_error": null
+}

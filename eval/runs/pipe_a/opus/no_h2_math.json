@@ -1,0 +1,83 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"MA1301\",\"ES1103\",\"CS1101S\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS1231S\",\"MA1521\",\"MA1522\",\"CS2030S\",\"CS2100\"]},{\"semester\":3,\"modules\":[\"CS2040S\",\"ST2334\",\"CS2106\",\"ES2660\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"CS3230\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GEN2000\",\"DTK1234\",\"HSI1000\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"CS3236\",\"IE2141\",\"UE\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"Feasible: MA1301 and ES1103 are taken first, and the algorithms_theory focus (CS3230, CS3231, CS4231, CS4234, CS4430) gives 12 MC at level 4000; CP3200+CP3202 plus five B&D modules give 32 MC of Breadth & Depth. The plan totals 160 MC, with every semester within the 20 MC cap since internships do not count toward the load.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.12,
+  "cost_usd": 0.044775,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 2068,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:50+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "MA1301",
+        "ES1103",
+        "CS1101S",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "CS2030S",
+        "CS2100"
+      ],
+      "3": [
+        "CS2040S",
+        "ST2334",
+        "CS2106",
+        "ES2660",
+        "GEC1015"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "GESS1020"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GEN2000",
+        "DTK1234",
+        "HSI1000",
+        "CP3200"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "CS3236",
+        "IE2141",
+        "UE_GENERIC_1",
+        "CP3202"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ]
+    },
+    "reason": "Feasible: MA1301 and ES1103 are taken first, and the algorithms_theory focus (CS3230, CS3231, CS4231, CS4234, CS4430) gives 12 MC at level 4000; CP3200+CP3202 plus five B&D modules give 32 MC of Breadth & Depth. The plan totals 160 MC, with every semester within the 20 MC cap since internships do not count toward the load."
+  },
+  "parse_error": null
+}

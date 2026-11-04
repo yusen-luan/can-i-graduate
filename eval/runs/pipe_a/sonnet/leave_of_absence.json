@@ -1,0 +1,84 @@
+{
+  "instance": "leave_of_absence",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"ES2660\",\"GEC1015\",\"GESS1020\",\"CP3200\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4248\",\"CS4246\",\"GEN2000\",\"DTK1234\",\"CP3202\"]},{\"semester\":7,\"modules\":[\"IS1128\",\"DAO2703\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"All required and university-level modules are scheduled with prerequisites met and no semester over 20 MC. AI focus is covered by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000. Breadth and depth reaches 32 MC with the CP3200+CP3202 internship, and 10 UE bring the total to 160 MC. Semester 5 is left empty.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.93,
+  "cost_usd": 0.033311,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 3018,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:44+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "ES2660",
+        "GEC1015",
+        "GESS1020",
+        "CP3200"
+      ],
+      "5": [],
+      "6": [
+        "CS4244",
+        "CS4248",
+        "CS4246",
+        "GEN2000",
+        "DTK1234",
+        "CP3202"
+      ],
+      "7": [
+        "IS1128",
+        "DAO2703",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "8": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "All required and university-level modules are scheduled with prerequisites met and no semester over 20 MC. AI focus is covered by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000. Breadth and depth reaches 32 MC with the CP3200+CP3202 internship, and 10 UE bring the total to 160 MC. Semester 5 is left empty."
+  },
+  "parse_error": null
+}

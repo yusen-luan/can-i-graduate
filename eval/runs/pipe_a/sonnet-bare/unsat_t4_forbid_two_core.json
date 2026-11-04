@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory Computing Foundation module in the CS degree, and I know of no approved substitute for it. Avoiding it makes the degree requirements impossible to meet, even though CS2103T alone could be replaced by CS2103 with CS2101.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 16.01,
+  "cost_usd": 0.019969,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 1959,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:50:32+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 Computer Organisation is a compulsory Computing Foundation module in the CS degree, and I know of no approved substitute for it. Avoiding it makes the degree requirements impossible to meet, even though CS2103T alone could be replaced by CS2103 with CS2101."
+  },
+  "parse_error": null
+}

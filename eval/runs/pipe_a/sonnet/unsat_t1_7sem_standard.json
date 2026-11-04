@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Seven semesters at 20 MC is at most 140 MC of regular load. The only credit outside that load is industrial experience, which gives at most 12 MC, so the maximum is 152 MC. That is below the 160 MC graduation requirement, and CP4101 is not available because GPA eligibility was not stated.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.02,
+  "cost_usd": 0.008085,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 500,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:43+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Seven semesters at 20 MC is at most 140 MC of regular load. The only credit outside that load is industrial experience, which gives at most 12 MC, so the maximum is 152 MC. That is below the 160 MC graduation requirement, and CP4101 is not available because GPA eligibility was not stated."
+  },
+  "parse_error": null
+}

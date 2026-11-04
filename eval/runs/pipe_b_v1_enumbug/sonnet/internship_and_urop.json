@@ -1,0 +1,120 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":9,\"max_units_per_semester\":20,\"focus_area\":\"software_engineering\",\"industrial_option\":\"CP3880\",\"want_fyp\":false,\"want_urop\":true,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.888,
+  "cost_usd": 0.003993,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 250,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6415
+  },
+  "effort": "high",
+  "prompt_sha256": "90c6ea32c1ce4dfb",
+  "timestamp": "2026-10-28T03:55:24+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "software_engineering",
+      "industrial_option": "CP3880",
+      "want_fyp": false,
+      "want_urop": true,
+      "term_layout": [],
+      "semester_caps": [],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "OPTIMAL",
+    "wall_time_s": 0.468,
+    "num_variables": 1008,
+    "num_constraints": 3328
+  },
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "ES2660",
+        "GEC1015",
+        "GEN2001",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS1101S",
+        "CS1231S",
+        "UE_GENERIC_4"
+      ],
+      "3": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEA1000",
+        "IE2141"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "GEC1020",
+        "UE_GENERIC_3"
+      ],
+      "5": [
+        "CS2106",
+        "CS3219",
+        "ST2334",
+        "UE_GENERIC_5"
+      ],
+      "6": [
+        "CS3230",
+        "GESS1020"
+      ],
+      "7": [
+        "CS2109S",
+        "IS1128",
+        "SC1101E",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "CS3227",
+        "CS4218",
+        "GESS1025",
+        "IS1108",
+        "UE_GENERIC_7"
+      ],
+      "9": [
+        "CP3880",
+        "CP4106",
+        "GEN2000",
+        "GESS1001",
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "OPTIMAL"
+  },
+  "parse_error": null,
+  "llm_latency_s": 2.42
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "infeasible_3yr",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 20 MC per-semester cap allows at most 120 MC of coursework over 6 semesters. Industrial-experience modules do not count toward the load, but the best case (CP3200+CP3202 or CP3107+CP3110, 12 MC, sharing semesters with coursework) brings the total to only about 132 MC, well short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.53,
+  "cost_usd": 0.007709,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 460,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:23+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 20 MC per-semester cap allows at most 120 MC of coursework over 6 semesters. Industrial-experience modules do not count toward the load, but the best case (CP3200+CP3202 or CP3107+CP3110, 12 MC, sharing semesters with coursework) brings the total to only about 132 MC, well short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

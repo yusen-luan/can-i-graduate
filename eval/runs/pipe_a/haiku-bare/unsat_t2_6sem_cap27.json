@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) degree requires 160 MC, and six semesters at up to 27 MC each allow 162 MC only in principle. Since nearly all NUS modules are 4 MC, a 27 MC semester cannot be filled exactly, so at most 6 modules (24 MC) fit per semester, giving about 144 MC over six semesters, which is short of 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.38,
+  "cost_usd": 0.002018,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 4000,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:45:04+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) degree requires 160 MC, and six semesters at up to 27 MC each allow 162 MC only in principle. Since nearly all NUS modules are 4 MC, a 27 MC semester cannot be filled exactly, so at most 6 modules (24 MC) fit per semester, giving about 144 MC over six semesters, which is short of 160."
+  },
+  "parse_error": null
+}

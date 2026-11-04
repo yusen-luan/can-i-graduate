@@ -1,0 +1,86 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"GESS1025\"]},{\"semester\":6,\"modules\":[\"CS4248\",\"CS3263\",\"GEN2061\",\"HSI1000\",\"UE\"]},{\"semester\":7,\"modules\":[\"CS4243\",\"HSA1000\",\"DTK1234\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"CP4101\"]}],\"reason\":\"Yes, it can be done: this plan totals 160 MC over 10 semesters, with no semester above 20 MC and at most 4 CS/IFS/CP modules per semester, and plan semester 3 is used as Special Term 3. It covers the CS foundation and maths, an AI focus area (CS3243, CS3244, CS3263, CS4243, CS4248) and CP4101 after 148 MC are done; the specific general-education and interdisciplinary codes are examples and should be checked against the current NUS lists and term offerings.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 58.0,
+  "cost_usd": 0.114145,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 5666,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:53:24+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "ES2660"
+      ],
+      "5": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "GESS1025"
+      ],
+      "6": [
+        "CS4248",
+        "CS3263",
+        "GEN2061",
+        "HSI1000",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "CS4243",
+        "HSA1000",
+        "DTK1234",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": [
+        "CP4101"
+      ]
+    },
+    "reason": "Yes, it can be done: this plan totals 160 MC over 10 semesters, with no semester above 20 MC and at most 4 CS/IFS/CP modules per semester, and plan semester 3 is used as Special Term 3. It covers the CS foundation and maths, an AI focus area (CS3243, CS3244, CS3263, CS4243, CS4248) and CP4101 after 148 MC are done; the specific general-education and interdisciplinary codes are examples and should be checked against the current NUS lists and term offerings."
+  },
+  "parse_error": null
+}

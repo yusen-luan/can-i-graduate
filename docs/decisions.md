@@ -54,3 +54,96 @@ If a decision is reversed, mark the old entry `(superseded by Dn)` instead of de
   the 4u, Y is a 0u continuation. Why: real two-contiguous-semester requirement; keeps the pillar at 4u despite NUSMods showing 4u per half.
 - **D24 (Iter 2):** Overload ceiling is 28 units/semester (`program_cs.yaml: max_overload_units`); the solver rejects a higher cap and
   the checker flags any semester over it. Why: a plan needing >28u/sem is not actually achievable, so the oracle must not produce it.
+- **D25 (Iter 3 C5):** Calendar is an optional `scenario.term_layout` ([1-4] per plan slot, 3/4 = Special Terms); absent = the iter2
+  parity mapping, so existing instances/tests are unchanged. Offering (§6) uses the layout. Why: faithful special terms without
+  reindexing semesters; special-term load is just a per-slot cap (D26), keeping the change small and test-preserving. See I2.14.
+- **D26 (Iter 3 C1):** `preferences.per_semester_cap: {s:u}` overrides the global cap per slot; u=0 blocks ALL modules there (incl.
+  off-cap industrial) = a fully-unavailable exchange/SEP semester, a low u = a "chill" semester. Per-instance only. See I2.15.
+- **D27 (Iter 3 C2):** `preferences.max_cs_modules_per_sem: N` caps Computing (CS/IFS/CP) modules scheduled per slot, excluding
+  off-cap industrial (vacation work). A count, not a unit limit. Per-instance only. See I2.16.
+- **D28 (Iter 3 C3):** `scenario.want_fyp`/`want_urop` schedule CP4101 / a UROP code IN ADDITION to the mandatory internship,
+  gated by `student.eligible_fyp`/`eligible_urop`. Both are cp_coded, so the 12u CP cap binds them: FYP(12u) + UROP is infeasible.
+  Why: realistic co-existence and a sharp binding interaction (off-cap internship vs in-cap FYP) for the LLM-vs-solver eval. See I2.17.
+- **D29 (Iter 3, corrects D18):** Industry experience = **at most one** internship option OR, for a
+  GPA-eligible student, the CP4101 dissertation replacing it (`Σopt_i ≤ 1`; `=1` if a specific option
+  is requested; else `Σopt_i + diss ≥ 1`, `diss=sat(CP4101)` only when `eligible_fyp`). Both may co-exist.
+  Why: the cohort page says GPA≥4.0 students may *replace* Industry Experience with CP4101; D18's
+  "exactly one, always" wrongly forced an internship on dissertation-track students. See I2.8/I2.17.
+- **D30 (Iter 3, C4):** Per-module `require_modules`/`forbid_modules`/`deadline:{code:S}` live in the
+  scenario `preferences:` block (per-instance hard, never a degree rule). Pinned/deadline modules join
+  the solver domain; any can force a legal UNSAT; `require∩forbid` and bad deadlines are validated out.
+  Why: cheap, high user value, and makes offering-lock UNSAT authorable. See I2.18.
+- **D31 (Iter 3, realism):** Objective gains a middle term — among 160u plans, minimise the COUNT of
+  Computing (CS/IFS/CP) modules — so slack toward 160u is filled with non-CS unrestricted electives
+  instead of gratuitous CS courses (default plan: 23→15 CS modules). Still only a tie-break (required
+  CS, focus, 32u B&D are hard); feasibility unchanged. Why: the old tie-break piled on unneeded CS.
+- **D32 (Iter 3, app only):** the Streamlit planner bakes sensible advising DEFAULTS (not degree
+  rules, not in the oracle): CS1101S by semester 1 and GEA1000 in Year 1 (skipped if completed/
+  exempted), and a default cap of 3 Computing modules/sem (user-overridable). The plan-reasonableness
+  score is shown in `eval/` meta but NOT in the app UI. Why: realistic default plans for juniors.
+- **D33 (Iter 3, realism):** objective also penalises OFF-FOCUS Computing modules when a focus area is
+  chosen, so the mandatory 32u B&D / 12u L4000 depth is filled with that area's courses (default AI
+  plan: all 5 discretionary CS electives now AI-area, 0 off-focus), not arbitrary unrelated high-level
+  CS. Still a tie-break (no feasibility change). Also: SEP/exchange + NOC removed as corpus cases
+  (`exchange_abroad` deleted, honours de-exchanged); blocked-semester mechanism kept for leave-of-
+  absence only. A5 external validation vs cohort page passed (see iter2_verification.md).
+- **D34 (Iter 3, review):** exempted modules' units COUNT toward the 160u total and every unit bucket
+  (`units_of` uses `sat`); they are excluded only from preclusion `held` credit. Clarifies D2's "no
+  units" (= consumes no semester slot/cap). Why: team decision; matches the solver/checker.
+- **D35 (Iter 3, review):** C4 codes must exist (else ValueError); a pin/deadline on a placement-
+  waived bridge is trivially satisfied in solver AND checker. Why: they disagreed (solver dropped
+  the constraint, checker flagged it), which would silently corrupt LLM->solver grading.
+- **D36 (Iter 3, benchmark):** `nl_prompt` is generated ONLY from the formal student + request; the
+  curated `description` lives in `meta` and never reaches the prompt. Why: 16/35 prompts leaked the
+  verdict ("infeasible because…"). Guarded by `tests/test_eval_prompts.py`.
+- **D37 (Iter 3, Pipe A):** LLM sweep uses ONE generation, `claude-{haiku,sonnet,opus}-5-5`, all at adaptive
+  thinking + explicit effort `high` (per-model defaults differ), no refusal fallback (a fallback model would
+  answer for another). Why: a clean size ablation; supersedes the 4.5/4.6/4.8 mix in evaluation_plan.md §4.
+- **D38 (Iter 3, Pipe A):** the LLM writes each generic elective as `UE`; the harness binds it to a
+  UE_GENERIC id the student hasn't used. Why: placeholders are interchangeable and the NL prompt only says
+  "N electives completed" (final_year_audit holds _1 and _8), so ids are unknowable, not a reasoning error.
+- **D39 (Iter 3, scoring):** `eval/score.py` grades every Table-3 row: missing/unparseable answer = wrong,
+  Plan Valid over all 17 GT-SAT, Realism = mean over VALID plans only. `meta.tier` is curated (label/
+  PROFILE_TIERS), since no arithmetic floor rule reproduces the report's T1 vs T2–4 split.
+- **D40 (Iter 3, Pipe A):** two Pipe A conditions: `full` (rules + catalog) and `bare` (answer conventions
+  only). Why: `full` scored 100% because the prompt pre-formalises the spec; `bare` is how a student asks.
+  Out-of-model codes are classified against the full NUSMods list, never silently accepted.
+- **D41 (Iter 3, Pipe B):** the LLM only writes the spec; `eval/run_pipe_b.py` runs the solver in-process and
+  the LLM never sees SAT/UNSAT. Why: errors stay pure translation errors and a solver-in-the-loop LLM could relax
+  requests until SAT. A refinement ablation may feed back spec-validation errors only, never the verdict.
+- **D42 (Iter 3, Pipe B):** spec = `formal` field for field, dicts as lists of pairs (structured outputs), completed
+  UEs as a count; module codes are `$defs` enums (schedulable + preclusion-only held codes, e.g. CS1010).
+  Fidelity = equality of `llm/spec.py:canonical` forms (defaults filled, no-op caps / default layout ignored).
+- **D43 (Iter 3, Pipe B):** a requested cap above `max_overload_units` is a faithful translation answered
+  INFEASIBLE (program assumption); any other invalid spec, or a solver `UNKNOWN`, is no verdict (scored wrong).
+- **D44 (Iter 3, scoring):** cost is reported per LLM row as $/1k requests at list prices, warm (prompt read from
+  cache) and cold (cache re-written each request), from mean usage. Why: per-sweep totals hide how cost scales.
+- **D45 (Iter 3, Issue #14):** ID/CD is a *qualifying allocation* (`alpha_m <= sat(m)`, `sum alpha = 3`,
+  `>= 2` ID, `<= 1` CD), not `sum(sat) == 3`. Why: a student may take a 4th eligible ID/CD course; the
+  surplus counts as a UE, so the old exact-count rule wrongly made it infeasible. A weight-1 objective
+  tie-break keeps the default plan at exactly 3 (free units go to UE generics). Checker: a qualifying
+  subset must exist (`n_id >= 2 and n_id + min(n_cd, 1) >= 3`). See I2.4.
+- **D46 (Iter 3, Issue #13):** NUSMods `nOf:[n,[...]]` is kept as `n_of` (at-least-n), not weakened to
+  `one_of`, through ingestion, snapshot, `tree_satisfied`, solver reification (`b <=> sum>=n`, folding
+  constants; all_of/one_of are the n=len/n=1 ends) and prompt rendering. Why: e.g. CS2109S needs BOTH
+  MA1511+MA1512 on one branch; "either" is a false prerequisite. 7 snapshot trees re-derived from raw.json.
+- **D47 (Iter 3, Issue #1):** the 12u CP-coded cap limits CP credit ALLOCATED to Breadth & Depth
+  (binary `beta_m <= sat(m)`, `sum units*beta <= 12`), not every CP module taken; surplus CP spills to
+  Unrestricted Electives. The B&D 32u floor and >=12u L4000 depth count CP credit only via `beta`.
+  Consequence: `want_fyp + want_urop` is now FEASIBLE (CP4101 fills the B&D allocation, UROP CP -> UE);
+  the old global cap wrongly made it infeasible. Supersedes the I2.17 FYP+UROP-infeasible claim; the
+  `fyp_urop_trap` corpus profile became `fyp_and_urop` (SAT) + a new `forbid_core_trap` (T4 UNSAT).
+- **D48 (Iter 3, Issues #2/#3):** English QET bridges are a MANDATORY completion per placement band
+  (`required_bridges`), not optional prereq leaves (ES2660's iter2 tree is null, so nothing forced them
+  before). Band 2 (`es1103_required`) must take ES1103 and WAIVES ES1000 (placement admits directly into
+  ES1103; the frozen `ES1103 -> ES1000` prereq must not force ES1000); Band 1 (`es1000_then_es1103`) must
+  take both, ES1000 before ES1103. Solver (`taken=1`, domain) + checker parity. See I2.2.
+- **D49 (Iter 3, Issue #4):** the three CP research/project modules are DISTINCT. `want_urop` targets the
+  real UROP (CP3209) only (was "any of CP3106/CP3209/CP4106"); CP3106 is a separate independent project
+  (`want_independent_project`); CP4106 is another project kept only in the CP-cap list. Why: conflating
+  them hid their different requirements.
+- **D50 (Iter 3, Issues #5/#6):** CP3209 (UROP) spans two consecutive semesters and must finish before the
+  FYP (CP4101) — single-slot start, no start in the final semester, `x[CP3209,t]+x[CP4101,v]<=1` when
+  `t+span-1>=v`, credit once (load-split deferred). A `full_semester` internship (CP3880/IS4010/ETP3201L,
+  12u) now OCCUPIES its slot: concurrent non-internship load <= `full_semester_concurrent_cap` (0), so a
+  6-month placement costs a real semester (the part-time 6u stints stay off-cap/vacation). See I2.17/I2.19.

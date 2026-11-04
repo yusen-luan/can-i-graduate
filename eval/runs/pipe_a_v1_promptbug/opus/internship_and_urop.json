@@ -1,0 +1,81 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"IS1108\", \"ST2334\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"CS3219\", \"ES2660\", \"GEC1015\", \"GESS1020\", \"GEN2000\"]}, {\"semester\": 5, \"modules\": [\"CP3880\", \"CS4211\", \"CS4218\", \"DTK1234\", \"IE2141\", \"HSI1000\"]}, {\"semester\": 6, \"modules\": [\"CP4106\", \"CS2105\", \"CS2107\", \"CS3213\"]}, {\"semester\": 7, \"modules\": [\"CS3227\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": []}], \"reason\": \"This plan reaches exactly 160 MC with no semester over 20 MC (CP3880 does not count toward load). It covers the software engineering focus area (CS2103T, CS3219, CS3213, CS3227, CS4211, CS4218), the CP3880 internship, CP4106 as the UROP project, 16 MC at level 4000 and 48 MC of Breadth & Depth, with all prerequisites and term offerings respected.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 18.94,
+  "cost_usd": 0.046146,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 2146,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:27+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "IS1108",
+        "ST2334"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3219",
+        "ES2660",
+        "GEC1015",
+        "GESS1020",
+        "GEN2000"
+      ],
+      "5": [
+        "CP3880",
+        "CS4211",
+        "CS4218",
+        "DTK1234",
+        "IE2141",
+        "HSI1000"
+      ],
+      "6": [
+        "CP4106",
+        "CS2105",
+        "CS2107",
+        "CS3213"
+      ],
+      "7": [
+        "CS3227",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "8": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "9": []
+    },
+    "reason": "This plan reaches exactly 160 MC with no semester over 20 MC (CP3880 does not count toward load). It covers the software engineering focus area (CS2103T, CS3219, CS3213, CS3227, CS4211, CS4218), the CP3880 internship, CP4106 as the UROP project, 16 MC at level 4000 and 48 MC of Breadth & Depth, with all prerequisites and term offerings respected."
+  },
+  "parse_error": null
+}

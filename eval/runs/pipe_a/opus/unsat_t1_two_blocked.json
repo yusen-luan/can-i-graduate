@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_two_blocked",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"With semesters 1 and 2 taken off, only semesters 3\u20138 remain, and at 20 MC each they hold at most 120 MC. Even adding a 12 MC industrial-experience option that does not count toward the unit load, the most you can reach is 132 MC, short of the 160 MC needed to graduate.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.97,
+  "cost_usd": 0.010747,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 99,
+    "output_tokens": 371,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:14+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "With semesters 1 and 2 taken off, only semesters 3\u20138 remain, and at 20 MC each they hold at most 120 MC. Even adding a 12 MC industrial-experience option that does not count toward the unit load, the most you can reach is 132 MC, short of the 160 MC needed to graduate."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t4_ineligible_fyp",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The request to take CP4101 (final-year project) conflicts with the rule that CP4101 may only be taken by a student whose GPA qualifies for it, and the student has stated their GPA does not qualify.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 1.99,
+  "cost_usd": 0.00024,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 108,
+    "output_tokens": 178,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:55:45+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The request to take CP4101 (final-year project) conflicts with the rule that CP4101 may only be taken by a student whose GPA qualifies for it, and the student has stated their GPA does not qualify."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS3230 requires CS2040S, which in turn requires CS1010 (and CS1231S), so this chain takes at least three semesters. With no modules done, CS3230 cannot be completed by semester 2.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.61,
+  "cost_usd": 0.011657,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 555,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:55:57+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 requires CS2040S, which in turn requires CS1010 (and CS1231S), so this chain takes at least three semesters. With no modules done, CS3230 cannot be completed by semester 2."
+  },
+  "parse_error": null
+}

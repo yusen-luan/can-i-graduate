@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 (Computer Organisation) is a compulsory Computer Science Foundation module with no accepted substitute, so a plan that avoids it cannot meet the degree requirements. CS2103T (Software Engineering) is also a core requirement, which makes avoiding it a further conflict, so no valid plan exists regardless of the 9-semester and 20 MC limits.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 8.17,
+  "cost_usd": 0.009081,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 426,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:56:12+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 (Computer Organisation) is a compulsory Computer Science Foundation module with no accepted substitute, so a plan that avoids it cannot meet the degree requirements. CS2103T (Software Engineering) is also a core requirement, which makes avoiding it a further conflict, so no valid plan exists regardless of the 9-semester and 20 MC limits."
+  },
+  "parse_error": null
+}

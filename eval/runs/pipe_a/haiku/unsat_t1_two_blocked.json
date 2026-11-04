@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_two_blocked",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Taking semesters 1 and 2 off leaves only semesters 3 to 8 (six semesters). At the 20 MC cap that gives at most 120 MC of counted coursework, and the largest allowed industrial-experience add-on (12 MC, e.g. CP3200+CP3202 or CP3107+CP3110) brings the total to at most 132 MC, short of the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.62,
+  "cost_usd": 0.001181,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 99,
+    "output_tokens": 2049,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:18+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Taking semesters 1 and 2 off leaves only semesters 3 to 8 (six semesters). At the 20 MC cap that gives at most 120 MC of counted coursework, and the largest allowed industrial-experience add-on (12 MC, e.g. CP3200+CP3202 or CP3107+CP3110) brings the total to at most 132 MC, short of the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

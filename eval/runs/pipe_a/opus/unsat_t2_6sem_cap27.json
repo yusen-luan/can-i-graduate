@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached in 6 semesters under the 27 MC cap. Almost every module is 4 MC or 8 MC and only CS3216 and CS3217 are 5 MC, so at most 24 MC fits per semester, plus 1 extra MC for each of those two modules: 146 MC of coursework. Adding the largest vacation internship (12 MC, outside the load cap) gives only 158 MC; a full-semester internship would empty a whole semester and leave even less room.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 23.6,
+  "cost_usd": 0.047699,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 2223,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:36+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached in 6 semesters under the 27 MC cap. Almost every module is 4 MC or 8 MC and only CS3216 and CS3217 are 5 MC, so at most 24 MC fits per semester, plus 1 extra MC for each of those two modules: 146 MC of coursework. Adding the largest vacation internship (12 MC, outside the load cap) gives only 158 MC; a full-semester internship would empty a whole semester and leave even less room."
+  },
+  "parse_error": null
+}

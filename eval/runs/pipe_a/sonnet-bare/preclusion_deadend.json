@@ -1,0 +1,83 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1231S\",\"CS2030S\",\"CS2100\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2103T\",\"CS2101\",\"MA1521\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"IS1128\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"CS3217\",\"ES2660\",\"GES1002\"]},{\"semester\":5,\"modules\":[\"CS4248\",\"CS4243\",\"CS3263\",\"GEX1015\",\"GEN2002\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4246\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"The 156 MC still needed (160 MC minus CS1010) fit within 9 semesters at 17.3 MC per semester, and no semester exceeds 20 MC. The plan covers the CS foundation, math, communication, ethics, general education, internship and AI focus area requirements, with prerequisites and Sem 1/Sem 2 offerings respected as far as I know them. The module codes for the general education modules and some AI electives are my best recollection, so please check them against the official requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 52.16,
+  "cost_usd": 0.069509,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 6916,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:49:59+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1231S",
+        "CS2030S",
+        "CS2100",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2103T",
+        "CS2101",
+        "MA1521",
+        "ST2334"
+      ],
+      "3": [
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "IS1128",
+        "GEC1015"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "CS3217",
+        "ES2660",
+        "GES1002"
+      ],
+      "5": [
+        "CS4248",
+        "CS4243",
+        "CS3263",
+        "GEX1015",
+        "GEN2002"
+      ],
+      "6": [
+        "CP3880",
+        "CS4246",
+        "UE_GENERIC_1"
+      ],
+      "7": [
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "8": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "The 156 MC still needed (160 MC minus CS1010) fit within 9 semesters at 17.3 MC per semester, and no semester exceeds 20 MC. The plan covers the CS foundation, math, communication, ethics, general education, internship and AI focus area requirements, with prerequisites and Sem 1/Sem 2 offerings respected as far as I know them. The module codes for the general education modules and some AI electives are my best recollection, so please check them against the official requirements."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,81 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"ST2334\",\"CS2100\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2109S\",\"CS2106\",\"IS1108\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3230\",\"CS3244\",\"GEC1015\",\"GESS1020\"]},{\"semester\":5,\"modules\":[\"CP3880\",\"CS4248\",\"GEN2000\",\"DTK1234\",\"IS1128\",\"HSI1000\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4246\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This plan reaches 160 MC within 8 semesters at no more than 20 MC per semester. CP3880 is the internship and does not count toward the semester load. The AI focus area is covered by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, which also supply 12 MC at level 4000. The plan also meets the B&D, university-level, ID/CD and prerequisite rules.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.38,
+  "cost_usd": 0.030584,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 2760,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:40+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "ST2334",
+        "CS2100",
+        "ES2660"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2109S",
+        "CS2106",
+        "IS1108"
+      ],
+      "4": [
+        "CS3243",
+        "CS3230",
+        "CS3244",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "5": [
+        "CP3880",
+        "CS4248",
+        "GEN2000",
+        "DTK1234",
+        "IS1128",
+        "HSI1000"
+      ],
+      "6": [
+        "CS4244",
+        "CS4246",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "This plan reaches 160 MC within 8 semesters at no more than 20 MC per semester. CP3880 is the internship and does not count toward the semester load. The AI focus area is covered by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, which also supply 12 MC at level 4000. The plan also meets the B&D, university-level, ID/CD and prerequisite rules."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "no_h2_math",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) requires 160 MC, and 8 semesters at a maximum of 20 MC each gives exactly 160 MC with no slack, so the extra mandatory modules for students without H2 Mathematics (the MA1301 bridging route, which does not count toward the degree) and ES1103 cannot all fit alongside the core, math, GER and algorithms-specialisation requirements.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 21.72,
+  "cost_usd": 0.00226,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 121,
+    "output_tokens": 4477,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:43:54+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) requires 160 MC, and 8 semesters at a maximum of 20 MC each gives exactly 160 MC with no slack, so the extra mandatory modules for students without H2 Mathematics (the MA1301 bridging route, which does not count toward the degree) and ES1103 cannot all fit alongside the core, math, GER and algorithms-specialisation requirements."
+  },
+  "parse_error": null
+}

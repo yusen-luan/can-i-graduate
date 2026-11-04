@@ -1,0 +1,27 @@
+{
+  "instance": "forbid_core_trap",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 Computer Organisation is a compulsory Computer Science Foundation module in the BComp (CS) programme and has no approved substitute, so avoiding it makes the degree impossible. CS2103T Software Engineering is likewise a compulsory core module for CS students; the semester and MC limits are not the problem.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.65,
+  "cost_usd": 0.009641,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 454,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:52:26+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 Computer Organisation is a compulsory Computer Science Foundation module in the BComp (CS) programme and has no approved substitute, so avoiding it makes the degree impossible. CS2103T Software Engineering is likewise a compulsory core module for CS students; the semester and MC limits are not the problem."
+  },
+  "parse_error": null
+}

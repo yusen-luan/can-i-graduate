@@ -1,0 +1,85 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[]},{\"semester\":4,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"ES2660\"]},{\"semester\":5,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"GEC1015\",\"DTK1234\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS3263\",\"CS3245\",\"GESS1001\",\"IS1128\"]},{\"semester\":7,\"modules\":[\"CP4101\",\"GEN2000\",\"HSI1000\"]},{\"semester\":8,\"modules\":[\"CS2102\",\"CS2105\",\"CS3210\",\"CDE2300\",\"EL1101E\"]},{\"semester\":9,\"modules\":[\"HSH1000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\"]}],\"reason\":\"All required modules, university-level requirements, an ID/CD set of 3 ID modules, and an AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4244) are covered. CP4101 replaces the internship, and the plan reaches 160 MC with 32 MC of B&D and at most 20 MC and 4 CS/CP modules per semester, with semester 3 left empty as a Special Term.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 33.44,
+  "cost_usd": 0.051295,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 4805,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:48+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [],
+      "4": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "ES2660"
+      ],
+      "5": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "DTK1234"
+      ],
+      "6": [
+        "CS4244",
+        "CS3263",
+        "CS3245",
+        "GESS1001",
+        "IS1128"
+      ],
+      "7": [
+        "CP4101",
+        "GEN2000",
+        "HSI1000"
+      ],
+      "8": [
+        "CS2102",
+        "CS2105",
+        "CS3210",
+        "CDE2300",
+        "EL1101E"
+      ],
+      "9": [
+        "HSH1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "10": [
+        "UE_GENERIC_4"
+      ]
+    },
+    "reason": "All required modules, university-level requirements, an ID/CD set of 3 ID modules, and an AI focus area (CS2109S, CS3243, CS3244, CS3263, CS4244) are covered. CP4101 replaces the internship, and the plan reaches 160 MC with 32 MC of B&D and at most 20 MC and 4 CS/CP modules per semester, with semester 3 left empty as a Special Term."
+  },
+  "parse_error": null
+}

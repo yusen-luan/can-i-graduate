@@ -1,0 +1,120 @@
+{
+  "instance": "over_credited",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[\"CS1101S\",\"CS1231S\",\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1521\",\"MA1522\"],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":8,\"max_units_per_semester\":20,\"focus_area\":\"artificial_intelligence\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.386,
+  "cost_usd": 0.004409,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 289,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6415
+  },
+  "effort": "high",
+  "prompt_sha256": "90c6ea32c1ce4dfb",
+  "timestamp": "2026-10-28T03:55:31+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [
+        "CS1101S",
+        "CS1231S",
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1521",
+        "MA1522"
+      ],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 8,
+      "max_units_per_semester": 20,
+      "focus_area": "artificial_intelligence",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [],
+      "semester_caps": [],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "OPTIMAL",
+    "wall_time_s": 0.386,
+    "num_variables": 872,
+    "num_constraints": 2209
+  },
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS4263",
+        "DTK1234",
+        "GEA1000",
+        "GESS1025",
+        "UE_GENERIC_8"
+      ],
+      "2": [
+        "CS2106",
+        "CS2109S",
+        "GEC1030",
+        "ST2334",
+        "UE_GENERIC_2"
+      ],
+      "3": [
+        "CS3263",
+        "GEN2001",
+        "GEN2003",
+        "HSI1000"
+      ],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS3264",
+        "GEN2004",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "ES2660",
+        "UE_GENERIC_10",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "IE2141",
+        "IS1108"
+      ],
+      "7": [
+        "CS4243",
+        "GESS1001",
+        "UE_GENERIC_6",
+        "UE_GENERIC_9"
+      ],
+      "8": [
+        "CS3230",
+        "CS4244",
+        "ETP3201L"
+      ]
+    },
+    "reason": "OPTIMAL"
+  },
+  "parse_error": null,
+  "llm_latency_s": 4.0
+}

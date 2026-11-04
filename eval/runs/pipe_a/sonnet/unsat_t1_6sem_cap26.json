@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap26",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached in 6 semesters with a 26 MC cap. Industrial-experience modules do not count toward the unit load, and the most they can add is 12 MC. That leaves at least 148 MC of ordinary load. Almost every eligible module is 4 MC, 8 MC, or the two 5 MC modules CS3216 and CS3217, so a semester can only reach 24 MC, plus at most +1 for each of those two 5 MC modules. The maximum load is therefore 6x24+2=146 MC, giving 158 MC in total, which is below 160. The full-semester internships make this worse because they occupy a whole semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 34.05,
+  "cost_usd": 0.048015,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 4493,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:52:09+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached in 6 semesters with a 26 MC cap. Industrial-experience modules do not count toward the unit load, and the most they can add is 12 MC. That leaves at least 148 MC of ordinary load. Almost every eligible module is 4 MC, 8 MC, or the two 5 MC modules CS3216 and CS3217, so a semester can only reach 24 MC, plus at most +1 for each of those two 5 MC modules. The maximum load is therefore 6x24+2=146 MC, giving 158 MC in total, which is below 160. The full-semester internships make this worse because they occupy a whole semester."
+  },
+  "parse_error": null
+}

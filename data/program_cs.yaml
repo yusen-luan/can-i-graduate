@@ -16,7 +16,7 @@ assumptions:
   - 'ULR pick-list pillars (Cultures GEC%, Singapore GESS%, Communities GEN%) and ID/CD use a verified real NUSMods subset (full authoritative lists in ge_pillars.yaml / id_cd.yaml); only Unrestricted Electives remain generic placeholders.'
   - 'Year-long Communities & Engagement service learning (GEN..X in Sem 1, GEN..Y in the contiguous Sem 2) is modelled with X carrying the 4u pillar credit and Y a 0u continuation.'
   - 'Modules with no NUSMods semesterData (by-arrangement project/internship courses) default to being offered in both semesters; flagged in the ingestion report.'
-  - 'Planning uses only Semesters 1 and 2; NUS Special Terms (3,4) are not modelled, so special-term-only offerings are treated as unavailable.'
+  - 'By default planning uses only Semesters 1 and 2 (special-term-only offerings unavailable); Special Terms 3/4 are used only when a request sets term_layout (iter3 C5, I2.14).'
   - 'Breadth & Depth is a 32-unit Computing (CS/IFS/CP) bucket containing the focus area, >=12u at level-4000 and the 6-12u industrial experience; verified against the cohort page + NUS Bulletin. There is NO separate team-project requirement in AY2026/27.'
   - 'Industrial-experience units are excluded from the per-semester unit cap because internships run over the vacation / special term (NUSMods shows CP3880 in terms 1-4).'
   - 'Computing units beyond the 32u B&D count as Unrestricted Electives; UE is modelled as a residual filler to 160u, not a fixed 40u (no per-bucket unit partition).'
@@ -94,16 +94,36 @@ breadth_depth:
     # courses_per_area / min_level4000_in_area come from focus_areas.yaml
   industrial_experience:
     min_units: 6
+    # Issue #6 (I2.19 / D50): a 6-month full-time placement occupies a whole
+    # semester, so it blocks concurrent coursework in its slot (full_semester:
+    # true -> concurrent non-internship load capped at full_semester_concurrent_cap).
+    # The 6u part-time / sequential stints run over the vacation (off-cap, no block).
+    full_semester_concurrent_cap: 0
     options:
-      - {set: [CP3880]}                 # 6-month ATAP (12u)
-      - {set: [IS4010]}                 # Industry Internship Programme (12u)
-      - {set: [ETP3201L]}               # I&E Practicum (12u)
+      - {set: [CP3880], full_semester: true}    # 6-month ATAP (12u)
+      - {set: [IS4010], full_semester: true}    # Industry Internship Programme (12u)
+      - {set: [ETP3201L], full_semester: true}  # I&E Practicum (12u)
       - {set: [CP3200, CP3202]}         # two 3-month (6u + 6u)
       - {set: [CP3107, CP3110]}         # CVWO I + II (6u + 6u)
       - {set: [ETP3205]}                # I&E Internship (6u)
   cp_coded:
-    max_units: 12                       # excludes industrial experience
+    max_units: 12                       # B&D-ALLOCATED CP credit cap (Issue #1 / D47)
     codes: [CP3106, CP3209, CP4101, CP4106]
+  # iter3 C3: Final-Year Project and UROP research, requestable via the scenario
+  # (want_fyp / want_urop) IN ADDITION TO the mandatory industrial experience.
+  # The 12u CP cap binds only B&D-ALLOCATED CP credit (D47), so FYP + UROP together
+  # is feasible (excess CP -> UE). See docs/solver_constraints.md I2.17.
+  fyp:
+    code: CP4101                        # 12u; gated by student.eligible_fyp
+  # Issue #4 (D49): the three CP research/project modules are DISTINCT. want_urop
+  # targets the real UROP (CP3209) specifically; the independent project (CP3106)
+  # is a separate request. CP4106 is a distinct project kept only in the CP cap list.
+  urop:
+    codes: [CP3209]                     # UROP = CP3209; gated by student.eligible_urop
+    consecutive_semesters: 2            # Issue #5: 8u over two contiguous semesters
+    before: CP4101                      # Issue #5: UROP must finish before the FYP
+  independent_project:
+    code: CP3106                        # distinct 4u independent project (want_independent_project)
 
 unrestricted_electives:
   candidates: [UE_GENERIC_1, UE_GENERIC_2, UE_GENERIC_3, UE_GENERIC_4, UE_GENERIC_5,

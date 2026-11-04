@@ -1,0 +1,84 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"ES2660\",\"GEA1000\",\"CS2102\"]},{\"semester\":5,\"modules\":[\"CS3219\",\"CS3217\",\"CS4211\",\"CS2107\",\"CP3200\"]},{\"semester\":6,\"modules\":[\"CP3202\",\"CS3213\",\"CS4215\",\"CS3281\",\"IS1128\"]},{\"semester\":7,\"modules\":[\"CS4218\",\"CS3227\",\"CS2105\",\"DTK1234\"]},{\"semester\":8,\"modules\":[\"CS3282\",\"CS3203\",\"HSI1000\",\"GEN2000\"]},{\"semester\":9,\"modules\":[\"GESS1020\",\"UE\",\"IS1108\",\"GEC1015\"]}],\"reason\":\"A feasible plan exists: the software engineering focus is met by CS2103T, CS3219, CS3217, CS3213, CS4211 and CS4218, with 12 MC at level 4000 from CS4211, CS4215 and CS4218, and the CP3200 plus CP3202 internship option (CP3200 alone is not a complete option) gives 161 MC total with no semester above 20 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 60.01,
+  "cost_usd": 0.00828,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 16258,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:33:42+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "ES2660",
+        "GEA1000",
+        "CS2102"
+      ],
+      "5": [
+        "CS3219",
+        "CS3217",
+        "CS4211",
+        "CS2107",
+        "CP3200"
+      ],
+      "6": [
+        "CP3202",
+        "CS3213",
+        "CS4215",
+        "CS3281",
+        "IS1128"
+      ],
+      "7": [
+        "CS4218",
+        "CS3227",
+        "CS2105",
+        "DTK1234"
+      ],
+      "8": [
+        "CS3282",
+        "CS3203",
+        "HSI1000",
+        "GEN2000"
+      ],
+      "9": [
+        "GESS1020",
+        "UE_GENERIC_1",
+        "IS1108",
+        "GEC1015"
+      ]
+    },
+    "reason": "A feasible plan exists: the software engineering focus is met by CS2103T, CS3219, CS3217, CS3213, CS4211 and CS4218, with 12 MC at level 4000 from CS4211, CS4215 and CS4218, and the CP3200 plus CP3202 internship option (CP3200 alone is not a complete option) gives 161 MC total with no semester above 20 MC."
+  },
+  "parse_error": null
+}

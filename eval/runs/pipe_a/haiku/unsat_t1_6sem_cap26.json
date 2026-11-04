@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap26",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Within 6 semesters at 26 MC per semester, the unit load can reach at most 146 MC, but the 160-MC total needs 148 unit-load MC once the 12-MC internship (the only option that keeps the load down) is counted; only two 5-MC modules exist (CS3216, CS3217), so the 4- and 8-MC granularity cannot reach 148.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 81.84,
+  "cost_usd": 0.009907,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 19505,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:48:08+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Within 6 semesters at 26 MC per semester, the unit load can reach at most 146 MC, but the 160-MC total needs 148 unit-load MC once the 12-MC internship (the only option that keeps the load down) is counted; only two 5-MC modules exist (CS3216, CS3217), so the 4- and 8-MC granularity cannot reach 148."
+  },
+  "parse_error": null
+}

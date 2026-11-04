@@ -1,0 +1,26 @@
+{
+  "instance": "fyp_urop_trap",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The CP-coded cap allows CP3106, CP3209, CP4101 and CP4106 to total at most 12 MC, but CP4101 alone is 12 MC and the UROP requirement needs at least one of CP3106 (4 MC), CP3209 (8 MC) or CP4106 (8 MC), so the minimum combined total is 16 MC, which breaks the cap.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.66,
+  "cost_usd": 0.000452,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 125,
+    "output_tokens": 599,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:51:50+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The CP-coded cap allows CP3106, CP3209, CP4101 and CP4106 to total at most 12 MC, but CP4101 alone is 12 MC and the UROP requirement needs at least one of CP3106 (4 MC), CP3209 (8 MC) or CP4106 (8 MC), so the minimum combined total is 16 MC, which breaks the cap."
+  },
+  "parse_error": null
+}

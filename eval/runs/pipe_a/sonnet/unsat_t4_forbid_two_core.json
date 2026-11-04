@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100 and CS2103T are both on the required-modules list for graduation, so the request to avoid them conflicts with a graduation rule and no valid plan exists.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.04,
+  "cost_usd": 0.004563,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 145,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:54+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 and CS2103T are both on the required-modules list for graduation, so the request to avoid them conflicts with a graduation rule and no valid plan exists."
+  },
+  "parse_error": null
+}

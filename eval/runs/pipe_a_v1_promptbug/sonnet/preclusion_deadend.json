@@ -1,0 +1,26 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS1101S is a required module and the only way to meet the digital literacy requirement, but the student's completed CS1010 is in the same intro_programming preclusion group, so only one of them can be held. No plan can satisfy both.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.71,
+  "cost_usd": 0.006018,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 306,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:53+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS1101S is a required module and the only way to meet the digital literacy requirement, but the student's completed CS1010 is in the same intro_programming preclusion group, so only one of them can be held. No plan can satisfy both."
+  },
+  "parse_error": null
+}

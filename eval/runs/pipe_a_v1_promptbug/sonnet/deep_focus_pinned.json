@@ -1,0 +1,82 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2030S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2109S\",\"CS2106\",\"CS3230\",\"CS2101\",\"CS2103T\"]},{\"semester\":4,\"modules\":[\"CP3880\",\"CS3210\",\"ES2660\",\"GEC1015\",\"DTK1234\",\"IS1128\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"GESS1020\",\"GEN2000\",\"DAO2703\"]},{\"semester\":6,\"modules\":[\"CS4231\",\"CS4430\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"All required modules, university-level requirements, 3 ID/CD modules, the algorithms theory focus (CS3230, CS3231, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D and the CP3880 internship fit within 160 MC, 20 MC per semester and 9 semesters. CS2040S is taken in semester 2, and every prerequisite is met in a strictly earlier semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 18.71,
+  "cost_usd": 0.030288,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 2726,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:58:01+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2030S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2109S",
+        "CS2106",
+        "CS3230",
+        "CS2101",
+        "CS2103T"
+      ],
+      "4": [
+        "CP3880",
+        "CS3210",
+        "ES2660",
+        "GEC1015",
+        "DTK1234",
+        "IS1128"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "GESS1020",
+        "GEN2000",
+        "DAO2703"
+      ],
+      "6": [
+        "CS4231",
+        "CS4430",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "8": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "All required modules, university-level requirements, 3 ID/CD modules, the algorithms theory focus (CS3230, CS3231, CS4231, CS4234, CS4430), 12 MC at level 4000, 32 MC of B&D and the CP3880 internship fit within 160 MC, 20 MC per semester and 9 semesters. CS2040S is taken in semester 2, and every prerequisite is met in a strictly earlier semester."
+  },
+  "parse_error": null
+}

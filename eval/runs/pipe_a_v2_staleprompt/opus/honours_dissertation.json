@@ -1,0 +1,84 @@
+{
+  "instance": "honours_dissertation",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"ST2334\", \"IS1108\"]}, {\"semester\": 3, \"modules\": []}, {\"semester\": 4, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\", \"ES2660\"]}, {\"semester\": 5, \"modules\": [\"CS3230\", \"CS3243\", \"CS3244\", \"CS3263\", \"GEC1015\"]}, {\"semester\": 6, \"modules\": [\"CS4248\", \"CS4243\", \"GESS1020\", \"GEN2003\", \"DTK1234\"]}, {\"semester\": 7, \"modules\": [\"CP4101\", \"HSI1000\", \"IS1128\"]}, {\"semester\": 8, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": []}], \"reason\": \"A plan exists that reaches exactly 160 MC with no semester above 20 MC and at most 4 CS/CP modules in any semester. It leaves the Special Term (semester 3) and semester 10 empty, completes the AI focus (CS2109S, CS3243, CS4248 and others), and uses CP4101 in place of the internship, giving 32 MC of B&D and 20 MC at level 4000.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 16.01,
+  "cost_usd": 0.041889,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 157,
+    "output_tokens": 1922,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:14+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [],
+      "4": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "ES2660"
+      ],
+      "5": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "CS3263",
+        "GEC1015"
+      ],
+      "6": [
+        "CS4248",
+        "CS4243",
+        "GESS1020",
+        "GEN2003",
+        "DTK1234"
+      ],
+      "7": [
+        "CP4101",
+        "HSI1000",
+        "IS1128"
+      ],
+      "8": [
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "9": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "10": []
+    },
+    "reason": "A plan exists that reaches exactly 160 MC with no semester above 20 MC and at most 4 CS/CP modules in any semester. It leaves the Special Term (semester 3) and semester 10 empty, completes the AI focus (CS2109S, CS3243, CS4248 and others), and uses CP4101 in place of the internship, giving 32 MC of B&D and 20 MC at level 4000."
+  },
+  "parse_error": null
+}

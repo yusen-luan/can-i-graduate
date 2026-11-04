@@ -1,0 +1,80 @@
+{
+  "instance": "nearbnd_overload_floor",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2040S\",\"CS2030S\",\"CS2100\",\"CS2107\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2105\",\"CS2109S\",\"CS4236\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3235\",\"DTK1234\",\"HSI1000\",\"ES2660\",\"IS1128\",\"CP3880\"]},{\"semester\":5,\"modules\":[\"CS4238\",\"GESS1001\",\"GEC1015\",\"GEN2003\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4230\",\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"A 7-semester plan works: all 16 required modules, the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4230 with 12 MC at level 4000), CP3880 as the internship (36 MC of B&D), three ID modules, and university requirements are met, using 9 generic electives to reach 160 MC with no semester over 24 MC of load-counted units.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 52.43,
+  "cost_usd": 0.007095,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 13891,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:32:36+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2040S",
+        "CS2030S",
+        "CS2100",
+        "CS2107",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2105",
+        "CS2109S",
+        "CS4236"
+      ],
+      "4": [
+        "CS3230",
+        "CS3235",
+        "DTK1234",
+        "HSI1000",
+        "ES2660",
+        "IS1128",
+        "CP3880"
+      ],
+      "5": [
+        "CS4238",
+        "GESS1001",
+        "GEC1015",
+        "GEN2003",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "6": [
+        "CS4230",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9"
+      ]
+    },
+    "reason": "A 7-semester plan works: all 16 required modules, the computer security focus (CS2107, CS3235, CS4236, CS4238, CS4230 with 12 MC at level 4000), CP3880 as the internship (36 MC of B&D), three ID modules, and university requirements are met, using 9 generic electives to reach 160 MC with no semester over 24 MC of load-counted units."
+  },
+  "parse_error": null
+}

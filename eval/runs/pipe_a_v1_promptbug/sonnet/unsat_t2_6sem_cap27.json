@@ -1,0 +1,26 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The degree needs at least 160 MC, and the single industrial-experience option gives at most 12 MC, which does not count toward the semester load. The other 148 MC must therefore fit under the 27 MC cap across 6 semesters. Excluding industrial-experience modules, the only modules not worth 4 MC are CS3216 and CS3217 (5 MC each), CS3203 (8 MC) and one 8 MC CP project module. Since no combination of these reaches 27, the best load is 26 in one semester or 25 in two, and 24 in all the others. That is at most 146 MC, so the total tops out at 158 MC, below 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 50.38,
+  "cost_usd": 0.06567,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 6271,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:00:12+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs at least 160 MC, and the single industrial-experience option gives at most 12 MC, which does not count toward the semester load. The other 148 MC must therefore fit under the 27 MC cap across 6 semesters. Excluding industrial-experience modules, the only modules not worth 4 MC are CS3216 and CS3217 (5 MC each), CS3203 (8 MC) and one 8 MC CP project module. Since no combination of these reaches 27, the best load is 26 in one semester or 25 in two, and 24 in all the others. That is at most 146 MC, so the total tops out at 158 MC, below 160."
+  },
+  "parse_error": null
+}

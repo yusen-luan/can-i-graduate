@@ -1,0 +1,26 @@
+{
+  "instance": "internship_and_urop",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The UROP request requires one of CP3106, CP3209 or CP4106, but all three are tagged industrial experience, so taking one would add an industrial-experience module outside the chosen CP3880 option, which is forbidden. The only exception (CP4101 in place of the internship) requires a GPA qualification the student has not claimed.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.12,
+  "cost_usd": 0.000656,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 1010,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:52:05+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The UROP request requires one of CP3106, CP3209 or CP4106, but all three are tagged industrial experience, so taking one would add an industrial-experience module outside the chosen CP3880 option, which is forbidden. The only exception (CP4101 in place of the internship) requires a GPA qualification the student has not claimed."
+  },
+  "parse_error": null
+}

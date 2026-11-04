@@ -1,0 +1,85 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"MA1522\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2106\",\"CS2109S\",\"CS3230\",\"CS3213\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS3219\",\"ES2660\",\"GESS1001\"]},{\"semester\":6,\"modules\":[\"CS4215\",\"CS4218\",\"IS1108\",\"IS1128\"]},{\"semester\":7,\"modules\":[\"GEC1015\",\"SC1101E\",\"GEN2003\",\"CS2107\",\"CP3200\"]},{\"semester\":8,\"modules\":[\"CP3202\",\"CS2102\",\"CS2111\",\"CS2105\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Assuming H2 Mathematics and direct English placement, this 9-semester plan stays within 20 MC per semester and totals exactly 160 MC, covering all required modules, the software engineering focus (CS2103T, CS3213, CS3219, CS4211, CS4218), 12 MC at level 4000, 32+ MC Breadth & Depth, the CP3200+CP3202 internship, and the ID/CD split (DTK1234, IS1128 as ID; SC1101E as CD).\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 56.55,
+  "cost_usd": 0.007565,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 14818,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:47:07+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "MA1522",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "ST2334"
+      ],
+      "4": [
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "CS3213"
+      ],
+      "5": [
+        "CS4211",
+        "CS3219",
+        "ES2660",
+        "GESS1001"
+      ],
+      "6": [
+        "CS4215",
+        "CS4218",
+        "IS1108",
+        "IS1128"
+      ],
+      "7": [
+        "GEC1015",
+        "SC1101E",
+        "GEN2003",
+        "CS2107",
+        "CP3200"
+      ],
+      "8": [
+        "CP3202",
+        "CS2102",
+        "CS2111",
+        "CS2105",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ],
+      "9": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ]
+    },
+    "reason": "Assuming H2 Mathematics and direct English placement, this 9-semester plan stays within 20 MC per semester and totals exactly 160 MC, covering all required modules, the software engineering focus (CS2103T, CS3213, CS3219, CS4211, CS4218), 12 MC at level 4000, 32+ MC Breadth & Depth, the CP3200+CP3202 internship, and the ID/CD split (DTK1234, IS1128 as ID; SC1101E as CD)."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_deadline_prereq",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS3230 requires CS2040-series (CS2040/CS2040C/CS2040S), which in turn requires CS1010 to be completed first, so with no modules done the earliest CS3230 can be completed is semester 3, not semester 2.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.11,
+  "cost_usd": 0.000466,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 894,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:44:58+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS3230 requires CS2040-series (CS2040/CS2040C/CS2040S), which in turn requires CS1010 to be completed first, so with no modules done the earliest CS3230 can be completed is semester 3, not semester 2."
+  },
+  "parse_error": null
+}

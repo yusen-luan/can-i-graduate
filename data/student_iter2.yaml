@@ -5,6 +5,7 @@ conditions:
   needs_math_bridging: false
   english_path: direct_es2660
 has_h2_math: true          # false => MA1301/X needed, consumes a UE slot
-eligible_fyp: false        # GPA >= 4.0 after 70% => may substitute CP4101 for industrial exp
+eligible_fyp: false        # GPA >= 4.0 after 70% => may do CP4101 FYP (scenario want_fyp)
+eligible_urop: true        # standing to do UROP research CP3106/CP3209/CP4106 (scenario want_urop)
 completed: {}
 exempted: {}

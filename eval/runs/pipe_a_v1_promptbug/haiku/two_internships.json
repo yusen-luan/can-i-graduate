@@ -1,0 +1,82 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"GEA1000\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"MA1522\"]}, {\"semester\": 3, \"modules\": [\"CS2103T\", \"CS2101\", \"CS2106\", \"ST2334\", \"CS3230\"]}, {\"semester\": 4, \"modules\": [\"CS2109S\", \"CS3213\", \"CS2111\", \"IS1128\", \"CS2102\"]}, {\"semester\": 5, \"modules\": [\"CS4211\", \"CS4263\", \"CS2104\", \"CS3219\", \"CS2107\", \"CP3200\"]}, {\"semester\": 6, \"modules\": [\"CS3227\", \"CS4218\", \"CS3240\", \"CS2105\", \"IS1108\", \"CP3202\"]}, {\"semester\": 7, \"modules\": [\"CS3203\", \"DTK1234\", \"HSI1000\", \"GEC1015\"]}, {\"semester\": 8, \"modules\": [\"ES2660\", \"GESS1020\", \"GEN2000\", \"CS3245\"]}, {\"semester\": 9, \"modules\": []}], \"reason\": \"A plan fits within 9 semesters with at most 20 MC per semester, totalling exactly 160 MC including the CP3200+CP3202 internship, with software engineering as the focus area (CS2103T, CS3219, CS3227, CS4218, CS4211, CS3213), 12 MC at level 4000 and 32+ MC of B&D modules. The plan finishes in semester 8, leaving semester 9 unused.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 55.27,
+  "cost_usd": 0.007318,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 14335,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:55:01+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "ST2334",
+        "CS3230"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3213",
+        "CS2111",
+        "IS1128",
+        "CS2102"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "CS2104",
+        "CS3219",
+        "CS2107",
+        "CP3200"
+      ],
+      "6": [
+        "CS3227",
+        "CS4218",
+        "CS3240",
+        "CS2105",
+        "IS1108",
+        "CP3202"
+      ],
+      "7": [
+        "CS3203",
+        "DTK1234",
+        "HSI1000",
+        "GEC1015"
+      ],
+      "8": [
+        "ES2660",
+        "GESS1020",
+        "GEN2000",
+        "CS3245"
+      ],
+      "9": []
+    },
+    "reason": "A plan fits within 9 semesters with at most 20 MC per semester, totalling exactly 160 MC including the CP3200+CP3202 internship, with software engineering as the focus area (CS2103T, CS3219, CS3227, CS4218, CS4211, CS3213), 12 MC at level 4000 and 32+ MC of B&D modules. The plan finishes in semester 8, leaving semester 9 unused."
+  },
+  "parse_error": null
+}

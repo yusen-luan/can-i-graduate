@@ -1,0 +1,73 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2109S\",\"ST2334\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2106\",\"CS3230\",\"CS3243\",\"ES2660\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS3244\",\"CS4244\",\"CS4246\",\"CS4248\",\"GEC1015\"]},{\"semester\":4,\"modules\":[\"CP3880\",\"GESS1020\",\"GEN2000\",\"DTK1234\",\"IE2141\",\"UE\"]},{\"semester\":5,\"modules\":[\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"All required and university-level modules fit. The AI focus area is met by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000. The CP3880 internship, 32 MC of B&D and exactly 160 MC (including 10 UEs) are also covered. No semester exceeds 20 MC and every prerequisite comes in an earlier semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.32,
+  "cost_usd": 0.031462,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 2842,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T13:59:00+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "ST2334",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2106",
+        "CS3230",
+        "CS3243",
+        "ES2660",
+        "IS1108"
+      ],
+      "3": [
+        "CS3244",
+        "CS4244",
+        "CS4246",
+        "CS4248",
+        "GEC1015"
+      ],
+      "4": [
+        "CP3880",
+        "GESS1020",
+        "GEN2000",
+        "DTK1234",
+        "IE2141",
+        "UE_GENERIC_1"
+      ],
+      "5": [
+        "IS1128",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "7": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "8": []
+    },
+    "reason": "All required and university-level modules fit. The AI focus area is met by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000. The CP3880 internship, 32 MC of B&D and exactly 160 MC (including 10 UEs) are also covered. No semester exceeds 20 MC and every prerequisite comes in an earlier semester."
+  },
+  "parse_error": null
+}

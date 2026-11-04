@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_two_core",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"CS2100 Computer Organisation is a compulsory core module of the NUS BComp (Computer Science) degree with no approved substitute, so excluding it makes graduation impossible regardless of the 9-semester and 20 MC limits. (Avoiding CS2103T alone could be handled by taking CS2113 instead.)\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 11.34,
+  "cost_usd": 0.001166,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 91,
+    "output_tokens": 2294,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:45:12+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100 Computer Organisation is a compulsory core module of the NUS BComp (Computer Science) degree with no approved substitute, so excluding it makes graduation impossible regardless of the 9-semester and 20 MC limits. (Avoiding CS2103T alone could be handled by taking CS2113 instead.)"
+  },
+  "parse_error": null
+}

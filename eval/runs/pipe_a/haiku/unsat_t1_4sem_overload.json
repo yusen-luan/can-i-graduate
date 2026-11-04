@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_4sem_overload",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The 160 MC graduation total cannot be reached in 4 semesters: the 28 MC per-semester cap allows at most 112 MC of unit-load modules, and the single permitted industrial-experience option adds at most 12 MC outside the cap, for a maximum of 124 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 10.18,
+  "cost_usd": 0.001165,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 2021,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:40+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC graduation total cannot be reached in 4 semesters: the 28 MC per-semester cap allows at most 112 MC of unit-load modules, and the single permitted industrial-experience option adds at most 12 MC outside the cap, for a maximum of 124 MC."
+  },
+  "parse_error": null
+}

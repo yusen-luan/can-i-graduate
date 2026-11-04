@@ -1,0 +1,71 @@
+{
+  "instance": "mid_degree_y2",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":2,\"modules\":[\"IS1108\",\"CS3243\",\"CS3244\",\"GEC1015\",\"GESS1020\"]},{\"semester\":3,\"modules\":[\"CS4248\",\"CS4243\",\"CS4244\",\"GEN2000\",\"DTK1234\",\"CP3200\"]},{\"semester\":4,\"modules\":[\"HSI1000\",\"IE2141\",\"CS3263\",\"CS3264\",\"UE\",\"CP3202\"]},{\"semester\":5,\"modules\":[\"CS4246\",\"CS3268\",\"UE\",\"UE\"]},{\"semester\":6,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"Feasible: this plan reaches exactly 160 MC with no semester above 20 MC. The AI focus area is met with CS2109S, CS3243 and CS4248/CS4243/CS4244 (12 MC at level 4000), and Breadth & Depth reaches 32 MC through the AI electives plus the CP3200+CP3202 internship; ULR and ID requirements are covered by GEC1015, GESS1020, GEN2000, DTK1234, HSI1000 and IE2141.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 13.69,
+  "cost_usd": 0.031395,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 126,
+    "output_tokens": 1398,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:35+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "2": [
+        "IS1108",
+        "CS3243",
+        "CS3244",
+        "GEC1015",
+        "GESS1020"
+      ],
+      "3": [
+        "CS4248",
+        "CS4243",
+        "CS4244",
+        "GEN2000",
+        "DTK1234",
+        "CP3200"
+      ],
+      "4": [
+        "HSI1000",
+        "IE2141",
+        "CS3263",
+        "CS3264",
+        "UE_GENERIC_1",
+        "CP3202"
+      ],
+      "5": [
+        "CS4246",
+        "CS3268",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "6": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6"
+      ],
+      "7": [],
+      "8": []
+    },
+    "reason": "Feasible: this plan reaches exactly 160 MC with no semester above 20 MC. The AI focus area is met with CS2109S, CS3243 and CS4248/CS4243/CS4244 (12 MC at level 4000), and Breadth & Depth reaches 32 MC through the AI electives plus the CP3200+CP3202 internship; ULR and ID requirements are covered by GEC1015, GESS1020, GEN2000, DTK1234, HSI1000 and IE2141."
+  },
+  "parse_error": null
+}

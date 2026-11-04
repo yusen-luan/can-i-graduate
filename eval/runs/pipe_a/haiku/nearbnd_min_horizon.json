@@ -1,0 +1,84 @@
+{
+  "instance": "nearbnd_min_horizon",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"DTK1234\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"GEA1000\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS2104\"]},{\"semester\":4,\"modules\":[\"CS3230\",\"CS3243\",\"CS3244\",\"CS2108\",\"ETP3205\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4263\",\"CS2107\",\"CS3231\",\"CS3245\"]},{\"semester\":6,\"modules\":[\"CS4244\",\"CS4248\",\"CS2111\",\"CS2102\",\"CS3210\"]},{\"semester\":7,\"modules\":[\"CS3240\",\"CS2105\",\"ES2660\",\"IS1108\",\"IS1128\"]},{\"semester\":8,\"modules\":[\"CS4242\",\"HSI1000\",\"GEC1015\",\"GESS1020\",\"GEN2003\"]}],\"reason\":\"A plan exists: 39 four-MC coursework modules (156 MC) plus the 6 MC ETP3205 internship total 162 MC, with no semester above 20 MC, all prerequisites and offering terms respected, the AI focus met (CS2109S, CS3243, CS3244, CS3263, CS4244, CS4248, CS4263 with 16 MC at level 4000+), and all graduation and university requirements covered within 8 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 60.56,
+  "cost_usd": 0.007966,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 15621,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:45:27+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "DTK1234"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "CS2104"
+      ],
+      "4": [
+        "CS3230",
+        "CS3243",
+        "CS3244",
+        "CS2108",
+        "ETP3205"
+      ],
+      "5": [
+        "CS3263",
+        "CS4263",
+        "CS2107",
+        "CS3231",
+        "CS3245"
+      ],
+      "6": [
+        "CS4244",
+        "CS4248",
+        "CS2111",
+        "CS2102",
+        "CS3210"
+      ],
+      "7": [
+        "CS3240",
+        "CS2105",
+        "ES2660",
+        "IS1108",
+        "IS1128"
+      ],
+      "8": [
+        "CS4242",
+        "HSI1000",
+        "GEC1015",
+        "GESS1020",
+        "GEN2003"
+      ]
+    },
+    "reason": "A plan exists: 39 four-MC coursework modules (156 MC) plus the 6 MC ETP3205 internship total 162 MC, with no semester above 20 MC, all prerequisites and offering terms respected, the AI focus met (CS2109S, CS3243, CS3244, CS3263, CS4244, CS4248, CS4263 with 16 MC at level 4000+), and all graduation and university requirements covered within 8 semesters."
+  },
+  "parse_error": null
+}

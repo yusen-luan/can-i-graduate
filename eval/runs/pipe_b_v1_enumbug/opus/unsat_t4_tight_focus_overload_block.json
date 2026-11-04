@@ -1,0 +1,69 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "B-translator",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"student\":{\"completed\":[],\"completed_unrestricted_electives\":0,\"exempted\":[],\"has_h2_math\":true,\"english_path\":\"direct_es2660\",\"eligible_fyp\":false,\"eligible_urop\":true},\"request\":{\"target_semesters\":7,\"max_units_per_semester\":26,\"focus_area\":\"any\",\"industrial_option\":\"any\",\"want_fyp\":false,\"want_urop\":false,\"term_layout\":[],\"semester_caps\":[{\"semester\":4,\"max_units\":0}],\"max_cs_modules_per_sem\":0,\"min_units_per_semester\":0,\"no_empty_semesters\":false,\"not_same_semester\":[],\"require_modules\":[],\"forbid_modules\":[],\"deadlines\":[]},\"unsupported_requests\":[]}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.407,
+  "cost_usd": 0.006775,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 257,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 6415
+  },
+  "effort": "high",
+  "prompt_sha256": "90c6ea32c1ce4dfb",
+  "timestamp": "2026-10-28T03:56:20+00:00",
+  "spec": {
+    "student": {
+      "completed": [],
+      "completed_unrestricted_electives": 0,
+      "exempted": [],
+      "has_h2_math": true,
+      "english_path": "direct_es2660",
+      "eligible_fyp": false,
+      "eligible_urop": true
+    },
+    "request": {
+      "target_semesters": 7,
+      "max_units_per_semester": 26,
+      "focus_area": "any",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "term_layout": [],
+      "semester_caps": [
+        {
+          "semester": 4,
+          "max_units": 0
+        }
+      ],
+      "max_cs_modules_per_sem": 0,
+      "min_units_per_semester": 0,
+      "no_empty_semesters": false,
+      "not_same_semester": [],
+      "require_modules": [],
+      "forbid_modules": [],
+      "deadlines": []
+    },
+    "unsupported_requests": []
+  },
+  "spec_error": null,
+  "solve": {
+    "status": "INFEASIBLE",
+    "wall_time_s": 0.287,
+    "num_variables": 812,
+    "num_constraints": 2853
+  },
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "INFEASIBLE"
+  },
+  "parse_error": null,
+  "llm_latency_s": 3.12
+}

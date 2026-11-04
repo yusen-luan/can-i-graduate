@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The degree needs 160 MC, but almost every module is a multiple of 4 MC, so a 27 MC cap really means at most 24 MC per semester, or 144 MC over 6 semesters. Even adding the few 5-MC modules I know of (CS3216 in Sem 1, CS3217 in Sem 2) only reaches about 146 MC, so the 160 MC graduation requirement cannot be met within 6 semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 58.35,
+  "cost_usd": 0.105885,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 5269,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:56:40+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The degree needs 160 MC, but almost every module is a multiple of 4 MC, so a 27 MC cap really means at most 24 MC per semester, or 144 MC over 6 semesters. Even adding the few 5-MC modules I know of (CS3216 in Sem 1, CS3217 in Sem 2) only reaches about 146 MC, so the 160 MC graduation requirement cannot be met within 6 semesters."
+  },
+  "parse_error": null
+}

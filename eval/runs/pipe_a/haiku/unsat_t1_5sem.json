@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_5sem",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"Five semesters capped at 20 MC each give at most 100 MC of unit-loaded coursework, and the single permitted industrial-experience option adds at most 12 MC outside that cap (e.g., CP3200+CP3202), for a maximum of 112 MC, which is short of the 160 MC graduation requirement. The per-semester cap (20 MC) makes graduation within 5 semesters impossible.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 6.94,
+  "cost_usd": 0.000885,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 1462,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:46:46+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Five semesters capped at 20 MC each give at most 100 MC of unit-loaded coursework, and the single permitted industrial-experience option adds at most 12 MC outside that cap (e.g., CP3200+CP3202), for a maximum of 112 MC, which is short of the 160 MC graduation requirement. The per-semester cap (20 MC) makes graduation within 5 semesters impossible."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,85 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"MA1522\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"ST2334\"]},{\"semester\":4,\"modules\":[\"CS2109S\",\"CS3230\",\"CS3219\",\"IS1108\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4263\",\"ES2660\",\"GEC1015\"]},{\"semester\":6,\"modules\":[\"CP3880\",\"CS4218\",\"CS3227\"]},{\"semester\":7,\"modules\":[\"GESS1020\",\"GEN2003\",\"DTK1234\",\"HSI1000\"]},{\"semester\":8,\"modules\":[\"IS1128\",\"UE\",\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":10,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"This plan reaches exactly 160 MC. CP3880 does not count toward semester 6's load, so that semester stays at 8 MC while every enrolled semester carries 8\u201316 MC; the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218, and all prerequisite, offering, B&D and level-4000 rules hold.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 19.31,
+  "cost_usd": 0.045214,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 2097,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14030
+  },
+  "effort": "high",
+  "prompt_sha256": "f1b025323fd1c397",
+  "timestamp": "2026-10-27T14:01:58+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "MA1522"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "ST2334"
+      ],
+      "4": [
+        "CS2109S",
+        "CS3230",
+        "CS3219",
+        "IS1108"
+      ],
+      "5": [
+        "CS4211",
+        "CS4263",
+        "ES2660",
+        "GEC1015"
+      ],
+      "6": [
+        "CP3880",
+        "CS4218",
+        "CS3227"
+      ],
+      "7": [
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "HSI1000"
+      ],
+      "8": [
+        "IS1128",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "This plan reaches exactly 160 MC. CP3880 does not count toward semester 6's load, so that semester stays at 8 MC while every enrolled semester carries 8\u201316 MC; the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218, and all prerequisite, offering, B&D and level-4000 rules hold."
+  },
+  "parse_error": null
+}

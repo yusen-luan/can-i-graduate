@@ -1,0 +1,85 @@
+{
+  "instance": "deep_focus_pinned",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"IS1108\"]},{\"semester\":3,\"modules\":[\"CS2101\",\"CS2103T\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"ES2660\",\"GEC1015\",\"GESS1020\",\"GEN2000\",\"CS4231\"]},{\"semester\":5,\"modules\":[\"CS3231\",\"CS4234\",\"DTK1234\",\"HSI1000\",\"IS1128\"]},{\"semester\":6,\"modules\":[\"CS4230\",\"CS2107\",\"UE\",\"UE\",\"UE\",\"CP3200\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"CP3202\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\"]}],\"reason\":\"This plan stays within 20 MC per semester, finishes CS2040S in semester 2, and covers the algorithms theory focus with CS3230, CS3231 and CS4234/CS4231. It also meets the 12 MC level-4000 requirement with CS4231, CS4234 and CS4230, gets 32 MC of Breadth & Depth including the CP3200+CP3202 internship, and totals 160 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 14.37,
+  "cost_usd": 0.036255,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 111,
+    "output_tokens": 1644,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:53:08+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "IS1108"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "ES2660",
+        "GEC1015",
+        "GESS1020",
+        "GEN2000",
+        "CS4231"
+      ],
+      "5": [
+        "CS3231",
+        "CS4234",
+        "DTK1234",
+        "HSI1000",
+        "IS1128"
+      ],
+      "6": [
+        "CS4230",
+        "CS2107",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "CP3200"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "CP3202"
+      ],
+      "8": [
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "9": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "This plan stays within 20 MC per semester, finishes CS2040S in semester 2, and covers the algorithms theory focus with CS3230, CS3231 and CS4234/CS4231. It also meets the 12 MC level-4000 requirement with CS4231, CS4234 and CS4230, gets 32 MC of Breadth & Depth including the CP3200+CP3202 internship, and totals 160 MC."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "preclusion_deadend",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS1101S is a required module and also the only digital literacy option, but the student has already completed CS1010. Both are in the intro_programming preclusion group, so CS1101S cannot be scheduled and those requirements cannot be met.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 3.11,
+  "cost_usd": 0.006633,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 76,
+    "output_tokens": 355,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:15+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS1101S is a required module and also the only digital literacy option, but the student has already completed CS1010. Both are in the intro_programming preclusion group, so CS1101S cannot be scheduled and those requirements cannot be met."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_forbid_three_core",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"CS2100, CS2103T and CS2040S are all compulsory modules for graduation, and you have neither completed nor been exempted from them. Avoiding them means the required-modules rule can never be satisfied, so no plan exists within any number of semesters.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 2.84,
+  "cost_usd": 0.006419,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 155,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:54:20+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "CS2100, CS2103T and CS2040S are all compulsory modules for graduation, and you have neither completed nor been exempted from them. Avoiding them means the required-modules rule can never be satisfied, so no plan exists within any number of semesters."
+  },
+  "parse_error": null
+}

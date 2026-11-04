@@ -1,0 +1,66 @@
+{
+  "name": "forbid_core_trap",
+  "declared_expect": "infeasible",
+  "nl_prompt": "I am starting the NUS Computer Science degree with no modules done yet. I want to graduate within 9 semesters; take at most 20 MC per semester; avoid CS2100, CS2103T. Can it be done, and if so what is my semester-by-semester plan?",
+  "prompt_source": "auto-draft",
+  "formal": {
+    "student": {
+      "conditions": {
+        "needs_math_bridging": false,
+        "english_path": "direct_es2660"
+      },
+      "has_h2_math": true,
+      "eligible_fyp": false,
+      "eligible_urop": true,
+      "completed": {},
+      "exempted": {}
+    },
+    "scenario": {
+      "target_semesters": 9,
+      "max_units_per_semester": 20,
+      "focus_area": "any",
+      "industrial_option": "any",
+      "want_fyp": false,
+      "want_urop": false,
+      "preferences": {
+        "per_semester_cap": {},
+        "max_cs_modules_per_sem": 0,
+        "min_units_per_semester": 0,
+        "no_empty_semesters": false,
+        "heavy_conflicts": [],
+        "require_modules": [],
+        "forbid_modules": [
+          "CS2100",
+          "CS2103T"
+        ],
+        "deadline": {}
+      }
+    }
+  },
+  "ground_truth": {
+    "feasible": false,
+    "status": "INFEASIBLE",
+    "proven_infeasible": true,
+    "reason": "infeasible under any simple relaxation"
+  },
+  "meta": {
+    "label": "Forbidding core modules (T4 trap)",
+    "description": "Student refuses to take CS2100 and CS2103T, both required core modules \u2014 no plan exists at any horizon (a policy/fine-print infeasibility, not a capacity shortfall).",
+    "tier": "T4",
+    "tags": [
+      "C-base",
+      "C-order",
+      "C-acct",
+      "C-pref",
+      "C-unsat"
+    ],
+    "difficulty": {
+      "num_variables": 1044,
+      "num_total_variables": 2653,
+      "num_constraints": 3501,
+      "extra_semesters_to_feasible": null,
+      "extra_cap_to_feasible": null
+    },
+    "quality": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231\",\"MA1521\",\"GEQ1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"MA1522\",\"CS2040S\",\"GER1000\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2100\",\"CS2101\",\"CS2103T\",\"CS2105\",\"CS2106\"]},{\"semester\":4,\"modules\":[\"CS2102\",\"GES1000\",\"CS2113\",\"CS3230\",\"CS3219\"]},{\"semester\":5,\"modules\":[\"CS3217\",\"CS3203\",\"CS3213\",\"CS3281\",\"CS3216\"]},{\"semester\":6,\"modules\":[\"CP3200\"]},{\"semester\":7,\"modules\":[\"CS3282\",\"CS3240\",\"CS3244\",\"CS4248\",\"CS4218\"]},{\"semester\":8,\"modules\":[\"CS4224\",\"CS3211\",\"CS4215\",\"CS4234\",\"UE\"]},{\"semester\":9,\"modules\":[\"UE\",\"UE\",\"UE\"]}],\"reason\":\"Nine semesters capped at 20 MC give 180 MC of room, enough for the 160 MC degree plus the 10 MC CP3200 internship placed alone in semester 6. The plan is dense (about 162 MC, near the cap in most terms) and assumes CP3200 is 10 MC and the module codes and prerequisites are as I recall them.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 48.25,
+  "cost_usd": 0.005393,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 10746,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:45:04+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231",
+        "MA1521",
+        "GEQ1000",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2030S",
+        "MA1522",
+        "CS2040S",
+        "GER1000",
+        "ST2334"
+      ],
+      "3": [
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2105",
+        "CS2106"
+      ],
+      "4": [
+        "CS2102",
+        "GES1000",
+        "CS2113",
+        "CS3230",
+        "CS3219"
+      ],
+      "5": [
+        "CS3217",
+        "CS3203",
+        "CS3213",
+        "CS3281",
+        "CS3216"
+      ],
+      "6": [
+        "CP3200"
+      ],
+      "7": [
+        "CS3282",
+        "CS3240",
+        "CS3244",
+        "CS4248",
+        "CS4218"
+      ],
+      "8": [
+        "CS4224",
+        "CS3211",
+        "CS4215",
+        "CS4234",
+        "UE_GENERIC_2"
+      ],
+      "9": [
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ]
+    },
+    "reason": "Nine semesters capped at 20 MC give 180 MC of room, enough for the 160 MC degree plus the 10 MC CP3200 internship placed alone in semester 6. The plan is dense (about 162 MC, near the cap in most terms) and assumes CP3200 is 10 MC and the module codes and prerequisites are as I recall them."
+  },
+  "parse_error": null
+}

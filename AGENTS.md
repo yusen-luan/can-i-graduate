@@ -17,7 +17,7 @@ below before changing anything.
    hand-typed; degree **rules** are hand-curated YAML. Keep them separate.
 2. Every constraint lives in BOTH `src/solver.py` (CP-SAT) and `src/checker.py`
    (independent), plus a test. The checker must never import the solver.
-3. Keep `python -m pytest tests -q` green (91 tests), including the seed-sweep
+3. Keep `python -m pytest tests -q` green (all tests), including the seed-sweep
    parity test. Trust NUSMods over faculty web pages.
 
 ## Quick commands
@@ -27,4 +27,5 @@ python src/model.py --iter2
 python src/solver.py --iter2 --focus-area artificial_intelligence
 python -m pytest tests -q
 streamlit run app/app.py
+python eval/score.py        # benchmark: grade controls + oracle + LLM runs (Table 3)
 ```

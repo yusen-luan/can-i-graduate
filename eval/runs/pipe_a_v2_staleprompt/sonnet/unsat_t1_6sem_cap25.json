@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_6sem_cap25",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"Reaching 160 MC needs at least 148 MC of counted load, because the largest industrial option (12 MC) does not count toward load. With a 25 MC cap, a semester can only exceed 24 MC by including a 5 MC module, and only CS3216 and CS3217 are 5 MC. Counted load is therefore at most 6x24+2 = 146 MC, so the total is at most 158 MC, below 160.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 12.76,
+  "cost_usd": 0.018035,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 1506,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:36:33+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "Reaching 160 MC needs at least 148 MC of counted load, because the largest industrial option (12 MC) does not count toward load. With a 25 MC cap, a semester can only exceed 24 MC by including a 5 MC module, and only CS3216 and CS3217 are 5 MC. Counted load is therefore at most 6x24+2 = 146 MC, so the total is at most 158 MC, below 160."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t1_7sem_standard",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"A 20 MC cap over 7 semesters allows at most 140 MC of load-counting modules. The largest industrial-experience option adds only 12 MC, so the maximum is 152 MC, which is below the 160 MC graduation requirement.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 4.55,
+  "cost_usd": 0.011309,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 409,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:44+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "A 20 MC cap over 7 semesters allows at most 140 MC of load-counting modules. The largest industrial-experience option adds only 12 MC, so the maximum is 152 MC, which is below the 160 MC graduation requirement."
+  },
+  "parse_error": null
+}

@@ -25,12 +25,18 @@ from model import (  # noqa: E402
     load_scenario,
     validate,
     validate_iter2,
+    validate_scenario_iter2,
     term_of,
+    with_horizon,
+    effective_term,
+    per_semester_cap,
+    is_computing,
     pre_satisfied,
     prereq_clauses,
     prereq_tree_of,
     tree_leaves,
     bridging_waived,
+    required_bridges,
     same_semester_groups,
     must_satisfy_groups,
 )
@@ -43,12 +49,27 @@ class SolveResult:
     target_semesters: int = 0
     max_units_per_semester: int = 0
     wall_time_s: float = 0.0
-    num_variables: int = 0
+    num_variables: int = 0            # scheduling variables x[m,s] only
+    num_total_variables: int = 0      # incl. reified prereq / focus / occupancy auxiliaries
     num_constraints: int = 0
 
     @property
     def feasible(self) -> bool:
+        """A usable plan was found. NOTE: ``not feasible`` is NOT the same as
+        proven infeasible -- an UNKNOWN (timeout) or MODEL_INVALID also has no
+        plan. Use ``proven_infeasible`` / ``resolved`` for a negative verdict."""
         return self.status in ("OPTIMAL", "FEASIBLE")
+
+    @property
+    def proven_infeasible(self) -> bool:
+        """The solver PROVED no plan exists. Only this establishes infeasibility."""
+        return self.status == "INFEASIBLE"
+
+    @property
+    def resolved(self) -> bool:
+        """The solver returned a definitive verdict (plan or proof of none).
+        UNKNOWN / MODEL_INVALID are unresolved and carry no verdict."""
+        return self.status in ("OPTIMAL", "FEASIBLE", "INFEASIBLE")
 
 
 def schedulable_modules(modules: dict, program: dict, student: dict) -> List[str]:
@@ -169,6 +190,7 @@ def build_and_solve(
         max_units_per_semester=max_units_per_semester,
         wall_time_s=solver.WallTime(),
         num_variables=len(x),
+        num_total_variables=len(model.Proto().variables),
         num_constraints=len(model.Proto().constraints),
     )
     if result.feasible:
@@ -193,12 +215,27 @@ def _iter2_domain(modules, program, student, focus_areas, scenario):
         frontier += satisfied_by
     for pair in program.get("service_learning_pairs", []):
         frontier += pair
+    frontier += list(required_bridges(student))   # Issue #2: mandatory English bridges
     ind_choice = scenario.get("industrial_option", "any")
     for o in bd["industrial_experience"]["options"]:
         if ind_choice == "any" or ind_choice in o["set"]:
             frontier += o["set"]
-    # CP-coded independent-project modules (FYP etc.) are not scheduled as
-    # filler in the iter2 baseline; they only bound the CP cap. Excluded here.
+    # CP-coded independent-project modules (FYP etc.) are not scheduled as filler
+    # in the baseline; they only bound the CP cap. iter3 C3: pull them in when the
+    # request asks for a FYP / UROP (docs/solver_constraints.md I2.17).
+    # FYP (CP4101) enters the domain when requested OR when the student is
+    # eligible (so the dissertation MAY replace the industrial experience, I2.8).
+    if (scenario.get("want_fyp") or student.get("eligible_fyp")) and bd.get("fyp", {}).get("code"):
+        frontier.append(bd["fyp"]["code"])
+    if scenario.get("want_urop"):
+        frontier += bd.get("urop", {}).get("codes", [])          # UROP = CP3209 (Issue #4)
+    if scenario.get("want_independent_project") and bd.get("independent_project", {}).get("code"):
+        frontier.append(bd["independent_project"]["code"])       # CP3106 (Issue #4)
+    # iter3 C4 (I2.18): pinned / deadline modules must be schedulable, so pull
+    # them (and their prereq closure) into the domain even if no bucket needed them.
+    prefs = scenario.get("preferences", {}) or {}
+    frontier += list(prefs.get("require_modules", []) or [])
+    frontier += list((prefs.get("deadline", {}) or {}).keys())
     # All focus-area primaries are B&D-eligible CS courses, so include them all
     # as B&D fillers regardless of which area the focus constraint targets.
     for spec in focus_areas["areas"].values():
@@ -224,11 +261,15 @@ def build_and_solve_iter2(
     if ceiling and cap > ceiling:
         raise ValueError(
             f"max_units_per_semester {cap} exceeds the overload ceiling {ceiling}")
+    validate_scenario_iter2(program, scenario, modules)   # iter3 knob validation
     semesters = range(1, T + 1)
     domain = _iter2_domain(modules, program, student, focus_areas, scenario)
     units = {m: modules[m]["units"] for m in modules}
     waived = bridging_waived(student)
     bd = program["breadth_depth"]
+    prefs = scenario.get("preferences", {}) or {}
+    fyp_code = bd.get("fyp", {}).get("code")
+    industrial_mods = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
 
     model = cp_model.CpModel()
     x = {(m, s): model.NewBoolVar(f"x[{m},{s}]") for m in domain for s in semesters}
@@ -270,30 +311,45 @@ def build_and_solve_iter2(
                 model.Add(b == sum(x[node, t] for t in range(1, s)))
                 return b
             return 0  # external non-canonical code we don't model
-        children = [reify_before(c, s) for c in node.get("all_of", node.get("one_of", []))]
         is_const = lambda c, v: isinstance(c, int) and c == v
-        is_and = "all_of" in node
-        if is_and:
-            if any(is_const(c, 0) for c in children):
-                return 0
-            cb = [c for c in children if not is_const(c, 1)]
-            if not cb:
-                return 1
+        # Issue #13: NUSMods `nOf` is an at-least-n threshold, not `one_of`.
+        # all_of = n_of with n = len(children); one_of = n_of with n = 1.
+        if "n_of" in node:
+            need_raw, raw_children = node["n_of"]
+            children = [reify_before(c, s) for c in raw_children]
+        elif "all_of" in node:
+            children = [reify_before(c, s) for c in node["all_of"]]
+            need_raw = len(children)
         else:  # one_of
-            if any(is_const(c, 1) for c in children):
-                return 1
-            cb = [c for c in children if not is_const(c, 0)]
-            if not cb:
-                return 0
-        if len(cb) == 1:
-            return cb[0]
-        b = model.NewBoolVar("node")
-        if is_and:
+            children = [reify_before(c, s) for c in node.get("one_of", [])]
+            need_raw = 1
+        # fold constants: satisfied leaves reduce the remaining threshold; the
+        # variable children (cb) must then supply `need` more.
+        const_sat = sum(1 for c in children if is_const(c, 1))
+        cb = [c for c in children if not is_const(c, 0) and not is_const(c, 1)]
+        need = need_raw - const_sat
+        if need <= 0:
+            return 1
+        if need > len(cb):
+            return 0
+        if need == len(cb):                       # AND of the remaining variables
+            if len(cb) == 1:
+                return cb[0]
+            b = model.NewBoolVar("node")
             model.AddBoolAnd(cb).OnlyEnforceIf(b)
             model.AddBoolOr([c.Not() for c in cb]).OnlyEnforceIf(b.Not())
-        else:
+            return b
+        if need == 1:                             # OR of the remaining variables
+            if len(cb) == 1:
+                return cb[0]
+            b = model.NewBoolVar("node")
             model.AddBoolOr(cb).OnlyEnforceIf(b)
             model.AddBoolAnd([c.Not() for c in cb]).OnlyEnforceIf(b.Not())
+            return b
+        # genuine threshold 1 < need < len(cb): reify b <=> sum(cb) >= need
+        b = model.NewBoolVar("node")
+        model.Add(sum(cb) >= need).OnlyEnforceIf(b)
+        model.Add(sum(cb) <= need - 1).OnlyEnforceIf(b.Not())
         return b
 
     # §1 at most once
@@ -302,6 +358,11 @@ def build_and_solve_iter2(
     # §2 required modules
     for m in program["required_modules"]:
         if not pre_satisfied(m, student):
+            model.Add(taken(m) == 1)
+    # §10 mandatory English bridges by QET band (Issue #2): the placement
+    # requirement is a required completion, not an optional prereq leaf.
+    for m in required_bridges(student):
+        if not pre_satisfied(m, student) and m in domain:
             model.Add(taken(m) == 1)
     # ULR / ethics "at least k of"
     for _, satisfied_by, k in must_satisfy_groups(program):
@@ -321,25 +382,43 @@ def build_and_solve_iter2(
         for other in rest:
             for s in semesters:
                 model.Add(x[first, s] == x[other, s])
-    # §6 real offering terms
+    # §6 real offering terms (I2.14: term layout, special terms 3/4)
     for m in domain:
         offered = modules[m].get("offered_terms", [1, 2])
         for s in semesters:
-            if term_of(s) not in offered:
+            if effective_term(s, scenario) not in offered:
                 model.Add(x[m, s] == 0)
     # §7 unit cap -- industrial-experience modules are done over the vacation /
     # special term, so they do NOT consume a regular semester's unit budget.
-    industrial_mods = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
+    # I2.15: per-slot cap override; a cap of 0 blocks EVERYTHING in that slot
+    # (incl. off-cap industrial) -- a fully unavailable leave-of-absence semester.
     for s in semesters:
+        cap_s = per_semester_cap(scenario, s, cap)
+        if cap_s == 0:
+            for m in domain:
+                model.Add(x[m, s] == 0)
+            continue
         model.Add(sum(units[m] * x[m, s] for m in domain
-                      if m not in industrial_mods) <= cap)
-    # §8 ID/CD
+                      if m not in industrial_mods) <= cap_s)
+    # I2.16: CS-count-per-semester cap (Computing modules, excl. off-cap industrial)
+    max_cs = prefs.get("max_cs_modules_per_sem", 0)
+    if max_cs:
+        computing = [m for m in domain if is_computing(m) and m not in industrial_mods]
+        for s in semesters:
+            model.Add(sum(x[m, s] for m in computing) <= max_cs)
+    # §8 ID/CD (Issue #14 / I2.4 / D45): a qualifying 3-course allocation must
+    # EXIST (>=2 ID, <=1 CD); extra eligible ID/CD courses are allowed and count as
+    # UE, not toward the quota. Allocation vars alpha_m <= sat(m) pick the credited
+    # subset, so taking a 4th eligible course no longer makes the instance infeasible.
     idcd = program["requirement_groups"]["interdisciplinary_cross_disciplinary"]
     ids = [m for m in idcd["candidates"] if modules[m].get("category") == "ID"]
     cds = [m for m in idcd["candidates"] if modules[m].get("category") == "CD"]
-    model.Add(sum(sat(m) for m in ids + cds) == idcd["total_modules_required"])
-    model.Add(sum(sat(m) for m in ids) >= idcd["min_id_modules"])
-    model.Add(sum(sat(m) for m in cds) <= idcd["max_cd_modules"])
+    alloc = {m: model.NewBoolVar(f"idcd_alloc[{m}]") for m in ids + cds}
+    for m in ids + cds:
+        model.Add(alloc[m] <= sat(m))               # can only credit a taken course
+    model.Add(sum(alloc.values()) == idcd["total_modules_required"])
+    model.Add(sum(alloc[m] for m in ids) >= idcd["min_id_modules"])
+    model.Add(sum(alloc[m] for m in cds) <= idcd["max_cd_modules"])
     # §13 preclusions: at most one credit-bearing module per group
     for grp in preclusions["groups"].values():
         model.Add(sum(held(m) for m in grp) <= 1)
@@ -365,12 +444,34 @@ def build_and_solve_iter2(
             area_indicators.append(b)
     if chosen == "any":
         model.Add(sum(area_indicators) >= bd["focus_area"]["required_areas"])
-    # §16 level-4000 depth
-    model.Add(units_where(lambda m: modules[m]["level"] >= 4000) >= bd["level4000"]["min_units"])
-    # §17 industrial experience: choose EXACTLY one option; take exactly that
-    # option's modules and no other industrial module (no internship padding).
+    # Issue #1 / I2.9 / D47: CP-coded credit counts toward Breadth & Depth only
+    # when ALLOCATED (beta_m); the 12u cap limits the allocation, not every CP
+    # module taken (excess CP spills to Unrestricted Electives). The same beta
+    # feeds the B&D 32u floor (§18), the L4000 depth (§16) and the CP cap (§19).
+    cp = bd["cp_coded"]
+    cp_codes = set(cp["codes"])
+    cp_alloc = {}
+    for m in cp_codes:
+        if m in domain or pre_satisfied(m, student):
+            b = model.NewBoolVar(f"bd_cp[{m}]")
+            model.Add(b <= sat(m))               # can only allocate a taken CP module
+            cp_alloc[m] = b
+    cp_bd_units = sum(units[m] * b for m, b in cp_alloc.items())
+    cp_bd_l4000 = sum(units[m] * b for m, b in cp_alloc.items()
+                      if modules[m]["level"] >= 4000)
+
+    # §16 level-4000 depth (within B&D): non-CP L4000 Computing units count in full;
+    # CP L4000 units count only through the B&D allocation.
+    model.Add(units_where(lambda m: modules[m]["level"] >= 4000 and m not in cp_codes)
+              + cp_bd_l4000 >= bd["level4000"]["min_units"])
+    # §17 industrial experience (I2.8, corrected): satisfied by AT MOST ONE
+    # internship option (no padding) OR -- for a GPA-eligible student -- by the
+    # CP4101 dissertation replacing it. A fixed `industrial_option` still forces
+    # that internship; `any` lets the eligible dissertation substitute.
+    # dissertation counts only for an eligible student (parity with the checker);
+    # sat() covers both a scheduled and an already-completed CP4101.
+    diss = sat(fyp_code) if (fyp_code and student.get("eligible_fyp")) else 0
     industrial_choice = scenario.get("industrial_option", "any")
-    all_ind = {m for o in bd["industrial_experience"]["options"] for m in o["set"]}
     opt_bools = []
     for i, o in enumerate(bd["industrial_experience"]["options"]):
         s_set = o["set"]
@@ -380,16 +481,36 @@ def build_and_solve_iter2(
         for m in s_set:
             model.Add(sat(m) >= 1).OnlyEnforceIf(b)
         opt_bools.append((b, set(s_set)))
-    model.Add(sum(b for b, _ in opt_bools) == 1)
+    n_opts = sum(b for b, _ in opt_bools)
+    model.Add(n_opts <= 1)                       # at most one internship (no padding)
+    if industrial_choice != "any":
+        model.Add(n_opts == 1)                   # an explicit internship request is honoured
+    else:
+        model.Add(n_opts + diss >= 1)            # internship OR eligible dissertation
     # an industrial module may be taken only if an option containing it is chosen
-    for m in all_ind:
+    for m in industrial_mods:
         if m in domain:
             model.Add(sat(m) <= sum(b for b, s_set in opt_bools if m in s_set))
+    # §17b Issue #6 (I2.19): a 6-month full-time internship occupies its whole
+    # semester, so concurrent non-internship coursework in that slot is capped at
+    # full_semester_concurrent_cap (0). The part-time / sequential stints run over
+    # the vacation (off the unit cap, no occupancy) and are unaffected.
+    ie = bd["industrial_experience"]
+    full_sem_mods = {m for o in ie["options"] if o.get("full_semester") for m in o["set"]}
+    fs_cap = ie.get("full_semester_concurrent_cap", 0)
+    for m in full_sem_mods:
+        if m in domain:
+            for s in semesters:
+                model.Add(sum(units[q] * x[q, s] for q in domain if q not in industrial_mods)
+                          <= fs_cap).OnlyEnforceIf(x[m, s])
     # §18 Breadth & Depth 32u bucket: Computing (CS/IFS/CP) courses tagged
     # breadth_depth or industrial_experience. Focus courses, the L4000 units and
     # the industrial experience all live inside this bucket (no team project).
+    # Non-CP B&D modules count in full; CP-coded credit counts only through the
+    # B&D allocation (Issue #1), so excess CP projects do not inflate B&D.
     bd_pillars = {"breadth_depth", "industrial_experience"}
-    model.Add(units_where(lambda m: modules[m].get("pillar") in bd_pillars) >= bd["min_units"])
+    model.Add(units_where(lambda m: modules[m].get("pillar") in bd_pillars
+                          and m not in cp_codes) + cp_bd_units >= bd["min_units"])
     # §20 year-long C&E service learning: Y (continuation) in semester s iff X
     # (first half) in semester s-1 -- two contiguous semesters. X cannot sit in
     # the final semester (no room for its Y), else C&E would be "satisfied" by a
@@ -401,37 +522,122 @@ def build_and_solve_iter2(
             for s in range(2, T + 1):
                 model.Add(x[Y, s] == x[X, s - 1])
 
-    # §19 CP-coded cap (excludes industrial experience)
-    cp = bd["cp_coded"]
-    model.Add(units_where(lambda m: m in cp["codes"]) <= cp["max_units"])
+    # §19 CP-coded cap (excludes industrial experience): caps CP credit ALLOCATED
+    # to B&D, not every CP module taken (Issue #1). Excess CP spills to UE below.
+    model.Add(cp_bd_units <= cp["max_units"])
     # total units floor
     model.Add(units_where(lambda m: True) >= program["total_units_required"])
 
+    # I2.17 FYP / UROP (iter3 C3). FYP (CP4101) and UROP research are cp_coded, but
+    # the 12u CP cap now binds only B&D-ALLOCATED CP credit (Issue #1 / D47), so
+    # want_fyp + want_urop is FEASIBLE: CP4101 fills the B&D allocation and the
+    # UROP's CP credit spills to Unrestricted Electives.
+    if fyp_code and fyp_code in domain:
+        if not student.get("eligible_fyp", False):
+            model.Add(sat(fyp_code) == 0)          # gate: only if GPA-eligible
+        if scenario.get("want_fyp"):
+            model.Add(sat(fyp_code) >= 1)
+    urop = bd.get("urop", {})
+    urop_codes = [m for m in urop.get("codes", []) if m in domain]   # UROP = CP3209 (Issue #4)
+    if urop_codes:
+        if not student.get("eligible_urop", True):
+            for m in urop_codes:
+                model.Add(sat(m) == 0)             # gate: standing to do UROP
+        if scenario.get("want_urop"):
+            model.Add(sum(sat(m) for m in urop_codes) >= 1)
+    # Issue #5 (I2.17): the UROP (CP3209) spans two consecutive semesters and must
+    # FINISH before the FYP (CP4101) starts. On the single-slot start x[uc,s]: it
+    # cannot start in the final semester (no room for its 2nd half), and if both the
+    # UROP and FYP are scheduled, the UROP's last semester (start+span-1) must
+    # precede the FYP's semester. Credit is counted once (8u at the start slot).
+    span = urop.get("consecutive_semesters", 1)
+    before = urop.get("before")
+    for uc in urop_codes:
+        if span >= 2:
+            model.Add(x[uc, T] == 0)
+        if before and before in domain:
+            for t in semesters:
+                for v in semesters:
+                    if t + (span - 1) >= v:        # UROP not finished before the FYP
+                        model.Add(x[uc, t] + x[before, v] <= 1)
+    # Issue #4: a requested independent project (CP3106) must be taken (distinct from UROP).
+    ip = bd.get("independent_project", {}).get("code")
+    if ip and ip in domain and scenario.get("want_independent_project"):
+        model.Add(sat(ip) >= 1)
+
     # -- optional per-instance preferences (scenario) ------------------------
-    prefs = scenario.get("preferences", {}) or {}
     for a, bmod in prefs.get("heavy_conflicts", []) or []:
         if a in domain and bmod in domain:
             for s in semesters:
                 model.Add(x[a, s] + x[bmod, s] <= 1)
+    # iter3 C4 (I2.18): module pin / forbid / deadline. Codes are validated to
+    # exist; a pre-satisfied or placement-waived module satisfies a pin/deadline
+    # trivially (parity with the checker), so every other code is in the domain.
+    for m in prefs.get("require_modules", []) or []:
+        if not pre_satisfied(m, student) and m not in waived:
+            model.Add(taken(m) == 1)
+    for m in prefs.get("forbid_modules", []) or []:
+        if m in domain:
+            model.Add(taken(m) == 0)
+    for m, by in (prefs.get("deadline", {}) or {}).items():
+        if pre_satisfied(m, student) or m in waived:
+            continue
+        last = min(int(by), T)
+        model.Add(sum(x[m, s] for s in range(1, last + 1)) == 1)
+
     min_load = prefs.get("min_units_per_semester", 0)
     no_gaps = prefs.get("no_empty_semesters", False)
     if min_load or no_gaps:
+        # used[s] <=> semester s holds at least one module (incl. industrial), the
+        # checker's notion of an enrolled semester. Encoded exactly, so the unit
+        # cap stays with §7 / I2.15 (per-slot caps, industrial off-cap).
         used = {s: model.NewBoolVar(f"used[{s}]") for s in semesters}
         for s in semesters:
-            load = sum(units[m] * x[m, s] for m in domain)
-            model.Add(load <= cap * used[s])
+            in_s = [x[m, s] for m in domain]
+            for v in in_s:
+                model.Add(v <= used[s])
+            model.Add(used[s] <= sum(in_s))
             if min_load:
-                model.Add(load >= min_load * used[s])
+                model.Add(sum(units[m] * x[m, s] for m in domain) >= min_load * used[s])
         if no_gaps:
-            for s in list(semesters)[:-1]:
-                model.Add(used[s] >= used[s + 1])
+            # enrolled semesters form one contiguous block: no empty s between used r < t
+            for r in semesters:
+                for s in range(r + 1, T + 1):
+                    for t in range(s + 1, T + 1):
+                        model.Add(used[r] + used[t] - 1 <= used[s])
 
-    # Objective: minimise total scheduled units. With the >=160u floor this
-    # lands at exactly 160 and removes any incentive to pad with large optional
-    # modules; a secondary term minimises module count as a tie-break. The
-    # problem stays a CSP -- the objective only disambiguates equally-valid plans.
+    # Objective (still a CSP -- only disambiguates equally-valid plans; never
+    # changes feasibility). Priority, by weight:
+    #   1. total units  -> lands at exactly 160 (no padding with big modules).
+    #   2. Computing (CS/IFS/CP) module COUNT -> among 160u plans, prefer FEWER
+    #      Computing modules, so the slack toward 160u is filled with non-CS
+    #      unrestricted electives rather than piling on unneeded CS courses.
+    #      Required CS, the focus area and the 32u B&D bucket are hard
+    #      constraints, so this only trims *discretionary* CS filler.
+    #   3. OFF-FOCUS Computing modules -> when a focus area is chosen, fill the
+    #      mandatory B&D / L4000 depth with that area's courses, not arbitrary
+    #      unrelated high-level CS. Only discretionary (non-required, non-industrial)
+    #      Computing courses outside the focus primaries are penalised.
+    #   4. total module count -> final tie-break.
+    # Net effect: take the MINIMAL must-take modules; fill free units with non-CS
+    # unrestricted electives; keep any required CS depth coherent with the focus.
     total_scheduled = sum(units[m] * x[m, s] for m in domain for s in semesters)
-    model.Minimize(100 * total_scheduled + sum(x.values()))
+    n_computing = sum(x[m, s] for m in domain for s in semesters if is_computing(m))
+    # Issue #14 / D45 tie-break: a surplus ID/CD course beyond the required 3 is
+    # ALLOWED (it counts as UE), but when free units can equally be filled by a UE
+    # generic, prefer the generic -- so the default plan takes exactly the 3 needed
+    # ID/CD courses and does not arbitrarily pad with extras. Weight 1 (count tier);
+    # never overrides feasibility, the units floor, or the computing-count preference.
+    n_idcd_taken = sum(taken(m) for m in ids + cds if m in domain)
+    obj = 100 * total_scheduled + 10 * n_computing + sum(x.values()) + n_idcd_taken
+    if chosen != "any":
+        fset = set(focus_areas["areas"][chosen]["primaries"])
+        required = set(program["required_modules"])
+        off_focus = [(m, s) for m in domain for s in semesters
+                     if is_computing(m) and m not in fset
+                     and m not in required and m not in industrial_mods]
+        obj = obj + 5 * sum(x[m, s] for m, s in off_focus)
+    model.Minimize(obj)
 
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = time_limit_s
@@ -444,6 +650,7 @@ def build_and_solve_iter2(
         max_units_per_semester=cap,
         wall_time_s=solver.WallTime(),
         num_variables=len(x),
+        num_total_variables=len(model.Proto().variables),
         num_constraints=len(model.Proto().constraints),
     )
     if result.feasible:
@@ -494,7 +701,8 @@ def format_plan(result: SolveResult, modules: dict) -> str:
     lines = [
         f"Status: {result.status}  (T={result.target_semesters}, "
         f"cap={result.max_units_per_semester} units, "
-        f"{result.num_variables} vars, {result.wall_time_s:.3f}s)"
+        f"{result.num_variables} sched / {result.num_total_variables} total vars, "
+        f"{result.wall_time_s:.3f}s)"
     ]
     if not result.feasible:
         lines.append("No plan satisfies all constraints within the target semesters.")
@@ -505,36 +713,59 @@ def format_plan(result: SolveResult, modules: dict) -> str:
     return "\n".join(lines)
 
 
-def explain_infeasible_iter2(base_overrides: dict) -> str:
-    """Best-effort explanation of an infeasible iter2 instance: probe whether a
-    larger horizon or a higher unit cap would make it feasible, and whether the
-    chosen focus area / industrial option is the blocker."""
+def explain_infeasible_iter2(modules, program, student, focus_areas, preclusions,
+                             scenario) -> str:
+    """Best-effort explanation of an infeasible iter2 instance: relax ONE knob of
+    the given (student, scenario) at a time and report which relaxations make it
+    feasible. Probes the exact instance that failed, not the default files."""
+    ceiling = program.get("max_overload_units") or 99
+
+    def feasible(sc):
+        try:
+            return build_and_solve_iter2(modules, program, student, focus_areas,
+                                         preclusions, sc).feasible
+        except ValueError:          # relaxation produced an invalid instance
+            return False
+
+    def without_pref(*keys):
+        prefs = {k: v for k, v in (scenario.get("preferences", {}) or {}).items()
+                 if k not in keys}
+        return {**scenario, "preferences": prefs}
+
     reasons = []
-    cur_T = (base_overrides or {}).get("target_semesters", SCEN_T())
-    cur_cap = (base_overrides or {}).get("max_units_per_semester", SCEN_CAP())
+    cur_T = scenario["target_semesters"]
+    cur_cap = scenario["max_units_per_semester"]
     for T in range(cur_T + 1, cur_T + 5):
-        if solve_iter2(overrides={**(base_overrides or {}), "target_semesters": T}).feasible:
+        if feasible(with_horizon(scenario, T)):
             reasons.append(f"feasible at target_semesters={T} (you asked for {cur_T})")
             break
-    for cap in (cur_cap + 2, cur_cap + 4, cur_cap + 6):
-        if solve_iter2(overrides={**(base_overrides or {}), "max_units_per_semester": cap}).feasible:
+    for cap in sorted({min(cur_cap + d, ceiling) for d in (2, 4, 6)} - {cur_cap}):
+        if feasible({**scenario, "max_units_per_semester": cap}):
             reasons.append(f"feasible at max_units_per_semester={cap} (you set {cur_cap})")
             break
-    if (base_overrides or {}).get("focus_area", "any") != "any":
-        if solve_iter2(overrides={**(base_overrides or {}), "focus_area": "any"}).feasible:
-            reasons.append("feasible if the focus area is not fixed")
-    if (base_overrides or {}).get("industrial_option", "any") != "any":
-        if solve_iter2(overrides={**(base_overrides or {}), "industrial_option": "any"}).feasible:
-            reasons.append("feasible with a different industrial-experience option")
-    return "; ".join(reasons) or "no simple relaxation (horizon/cap/focus/internship) helped"
-
-
-def SCEN_T():
-    return load_scenario(DATA / "scenario_iter2.yaml")["target_semesters"]
-
-
-def SCEN_CAP():
-    return load_scenario(DATA / "scenario_iter2.yaml")["max_units_per_semester"]
+    probes = [
+        (scenario.get("focus_area", "any") != "any",
+         {**scenario, "focus_area": "any"}, "feasible if the focus area is not fixed"),
+        (scenario.get("industrial_option", "any") != "any",
+         {**scenario, "industrial_option": "any"},
+         "feasible with a different industrial-experience option"),
+        (scenario.get("want_fyp"), {**scenario, "want_fyp": False},
+         "feasible without the final-year-project request"),
+        (scenario.get("want_urop"), {**scenario, "want_urop": False},
+         "feasible without the UROP request"),
+    ]
+    prefs = scenario.get("preferences", {}) or {}
+    for keys, label in [(("require_modules", "forbid_modules", "deadline"),
+                         "feasible without the module pins / forbids / deadlines"),
+                        (("per_semester_cap",), "feasible without the per-semester caps"),
+                        (("max_cs_modules_per_sem",), "feasible without the CS-modules-per-semester cap"),
+                        (("min_units_per_semester", "no_empty_semesters", "heavy_conflicts"),
+                         "feasible without the workload preferences")]:
+        probes.append((any(prefs.get(k) for k in keys), without_pref(*keys), label))
+    for applies, sc, label in probes:
+        if applies and feasible(sc):
+            reasons.append(label)
+    return "; ".join(reasons) or "no single relaxation of your request helped"
 
 
 def main(argv=None) -> int:
@@ -563,10 +794,11 @@ def main(argv=None) -> int:
         if args.json:
             print(json.dumps(result.__dict__, indent=2))
         else:
-            modules, *_ = load_iter2()
-            print(format_plan(result, modules))
+            loaded = load_iter2()
+            print(format_plan(result, loaded[0]))
             if not result.feasible:
-                print("Why: " + explain_infeasible_iter2(over))
+                scenario = {**load_scenario(DATA / "scenario_iter2.yaml"), **over}
+                print("Why: " + explain_infeasible_iter2(*loaded, scenario))
         return 0 if result.feasible else 1
 
     result = solve(

@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t2_6sem_cap27",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\":false,\"plan\":[],\"reason\":\"The 160 MC total cannot be reached within 6 semesters. Apart from CS3216 and CS3217 (the only 5 MC modules), every module that counts toward the load is 4 or 8 MC, so no semester can reach 27 MC; the most the loaded modules can add up to is 146 MC (one 26 MC semester and five 24 MC ones). Even with the maximum 12 MC of industrial experience on top, the total is at most 158 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 31.52,
+  "cost_usd": 0.062569,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 77,
+    "output_tokens": 2972,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:29:12+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The 160 MC total cannot be reached within 6 semesters. Apart from CS3216 and CS3217 (the only 5 MC modules), every module that counts toward the load is 4 or 8 MC, so no semester can reach 27 MC; the most the loaded modules can add up to is 146 MC (one 26 MC semester and five 24 MC ones). Even with the maximum 12 MC of industrial experience on top, the total is at most 158 MC."
+  },
+  "parse_error": null
+}

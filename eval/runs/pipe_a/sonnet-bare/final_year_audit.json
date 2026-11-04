@@ -1,0 +1,50 @@
+{
+  "instance": "final_year_audit",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS3244\",\"CS3263\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS3282\",\"UE\",\"UE\"]},{\"semester\":3,\"modules\":[\"CS4248\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS4246\",\"UE\"]},{\"semester\":5,\"modules\":[]},{\"semester\":6,\"modules\":[]},{\"semester\":7,\"modules\":[]},{\"semester\":8,\"modules\":[]}],\"reason\":\"This is my best reconstruction of the NUS requirements from memory, so the exact module lists may differ slightly. Your completed modules cover the foundation, maths, ULR and ethics requirements, and about 38 MC remain. That MC covers the AI focus area (CS3244, CS3263, CS4246, CS4248), the team project completion (CS3282), enough level-4000 modules, and 5 more unrestricted electives. This fits well within 8 semesters at no more than 20 MC per semester.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 35.43,
+  "cost_usd": 0.045765,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 234,
+    "output_tokens": 4510,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:46:50+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS3244",
+        "CS3263",
+        "UE_GENERIC_2"
+      ],
+      "2": [
+        "CS3282",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4"
+      ],
+      "3": [
+        "CS4248",
+        "UE_GENERIC_5"
+      ],
+      "4": [
+        "CS4246",
+        "UE_GENERIC_6"
+      ],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    },
+    "reason": "This is my best reconstruction of the NUS requirements from memory, so the exact module lists may differ slightly. Your completed modules cover the foundation, maths, ULR and ethics requirements, and about 38 MC remain. That MC covers the AI focus area (CS3244, CS3263, CS4246, CS4248), the team project completion (CS3282), enough level-4000 modules, and 5 more unrestricted electives. This fits well within 8 semesters at no more than 20 MC per semester."
+  },
+  "parse_error": null
+}

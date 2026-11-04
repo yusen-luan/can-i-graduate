@@ -1,0 +1,238 @@
+[
+  {
+    "pipeline": "Control: always-SAT",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 17,
+      "d": 35,
+      "pct": 48.6
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 0,
+      "d": 7,
+      "pct": 0.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 0,
+      "d": 11,
+      "pct": 0.0
+    },
+    "plan_validity": {
+      "n": 0,
+      "d": 17,
+      "pct": 0.0
+    },
+    "realism_mean": null,
+    "latency_mean_s": 0.0,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {},
+    "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Control: canonical-4yr",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 17,
+      "d": 35,
+      "pct": 48.6
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 0,
+      "d": 7,
+      "pct": 0.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 0,
+      "d": 11,
+      "pct": 0.0
+    },
+    "plan_validity": {
+      "n": 3,
+      "d": 17,
+      "pct": 17.6
+    },
+    "realism_mean": 94.0,
+    "latency_mean_s": 0.0,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {
+      "retakes completed": 43,
+      "offered term": 7,
+      "unit cap": 6,
+      "focus area": 5,
+      "prerequisite": 3,
+      "outside horizon": 2,
+      "industrial experience": 2,
+      "FYP": 1,
+      "UROP": 1,
+      "blocked semester": 1
+    },
+    "plans_violating_rule": {
+      "retakes completed": 5,
+      "focus area": 5,
+      "outside horizon": 2,
+      "industrial experience": 2,
+      "offered term": 1,
+      "FYP": 1,
+      "UROP": 1,
+      "blocked semester": 1,
+      "prerequisite": 1,
+      "unit cap": 1
+    }
+  },
+  {
+    "pipeline": "Pipe A: Direct (Haiku 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 34,
+      "d": 35,
+      "pct": 97.1
+    },
+    "sat_recall": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "realism_mean": 91.6,
+    "latency_mean_s": 36.759,
+    "cost_total_usd": 0.1607,
+    "violation_histogram": {},
+    "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Pipe A: Direct (Sonnet 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 90.3,
+    "latency_mean_s": 16.671,
+    "cost_total_usd": 0.8419,
+    "violation_histogram": {},
+    "plans_violating_rule": {}
+  },
+  {
+    "pipeline": "Pipe A: Direct (Opus 5.5)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 16,
+      "d": 17,
+      "pct": 94.1
+    },
+    "realism_mean": 90.1,
+    "latency_mean_s": 13.799,
+    "cost_total_usd": 1.0134,
+    "violation_histogram": {
+      "prerequisite": 1
+    },
+    "plans_violating_rule": {
+      "prerequisite": 1
+    }
+  },
+  {
+    "pipeline": "Gold Oracle (solve_iter2)",
+    "records": 35,
+    "instances": 35,
+    "feasibility_accuracy": {
+      "n": 35,
+      "d": 35,
+      "pct": 100.0
+    },
+    "sat_recall": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "unsat_t1_recall": {
+      "n": 7,
+      "d": 7,
+      "pct": 100.0
+    },
+    "unsat_t2_4_recall": {
+      "n": 11,
+      "d": 11,
+      "pct": 100.0
+    },
+    "plan_validity": {
+      "n": 17,
+      "d": 17,
+      "pct": 100.0
+    },
+    "realism_mean": 89.2,
+    "latency_mean_s": 0.346,
+    "cost_total_usd": 0.0,
+    "violation_histogram": {},
+    "plans_violating_rule": {}
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "instance": "two_internships",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ES2660\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3219\",\"CS2102\",\"IS1108\",\"DTK1234\",\"GEC1015\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4211\",\"CS4218\",\"CS4225\",\"IE2141\",\"GESS1020\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"IS1128\",\"GEN2000\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[\"UE\",\"UE\"]},{\"semester\":9,\"modules\":[]}],\"reason\":\"The plan gives 160 MC with every required module, the university-level and ID/CD requirements met, and the software engineering focus covered by CS2103T, CS3219 and CS4218. It also has 32 MC of Breadth & Depth, 12 MC at level 4000, the CP3200+CP3202 internship, at most 20 MC per semester, and all prerequisites and offered terms respected.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 20.06,
+  "cost_usd": 0.032895,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 2977,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:43+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ES2660",
+        "ST2334"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "CS3230"
+      ],
+      "4": [
+        "CS3219",
+        "CS2102",
+        "IS1108",
+        "DTK1234",
+        "GEC1015",
+        "CP3200"
+      ],
+      "5": [
+        "CS4211",
+        "CS4218",
+        "CS4225",
+        "IE2141",
+        "GESS1020",
+        "CP3202"
+      ],
+      "6": [
+        "IS1128",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "7": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": [
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ],
+      "9": []
+    },
+    "reason": "The plan gives 160 MC with every required module, the university-level and ID/CD requirements met, and the software engineering focus covered by CS2103T, CS3219 and CS4218. It also has 32 MC of Breadth & Depth, 12 MC at level 4000, the CP3200+CP3202 internship, at most 20 MC per semester, and all prerequisites and offered terms respected."
+  },
+  "parse_error": null
+}

@@ -1,0 +1,83 @@
+{
+  "instance": "on_track_fresh",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\"]},{\"semester\":3,\"modules\":[\"CS2109S\",\"CS2106\",\"CS2101\",\"CS2103T\",\"CS3230\"]},{\"semester\":4,\"modules\":[\"CS3243\",\"CS3244\",\"IS1108\",\"DTK1234\",\"GEC1020\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4244\",\"CS4246\",\"CS4248\",\"IS1128\",\"GESS1001\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"GEN2000\",\"HSI1000\",\"CDE2300\",\"EL1101E\"]},{\"semester\":7,\"modules\":[\"HSH1000\",\"DAO2703\",\"SC1101E\",\"GEC1015\"]},{\"semester\":8,\"modules\":[\"GEC1030\",\"GESS1020\",\"UE\",\"UE\"]}],\"reason\":\"The plan reaches 160 MC with no semester above 20 MC. It uses the CP3200+CP3202 internship, whose MC do not count toward the semester load, so the 20 MC cap still allows 160 MC in 8 semesters. AI focus is met by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000, and Breadth & Depth totals 32 MC.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 30.19,
+  "cost_usd": 0.045289,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 89,
+    "output_tokens": 4218,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:51:22+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660"
+      ],
+      "3": [
+        "CS2109S",
+        "CS2106",
+        "CS2101",
+        "CS2103T",
+        "CS3230"
+      ],
+      "4": [
+        "CS3243",
+        "CS3244",
+        "IS1108",
+        "DTK1234",
+        "GEC1020",
+        "CP3200"
+      ],
+      "5": [
+        "CS4244",
+        "CS4246",
+        "CS4248",
+        "IS1128",
+        "GESS1001",
+        "CP3202"
+      ],
+      "6": [
+        "GEN2000",
+        "HSI1000",
+        "CDE2300",
+        "EL1101E"
+      ],
+      "7": [
+        "HSH1000",
+        "DAO2703",
+        "SC1101E",
+        "GEC1015"
+      ],
+      "8": [
+        "GEC1030",
+        "GESS1020",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2"
+      ]
+    },
+    "reason": "The plan reaches 160 MC with no semester above 20 MC. It uses the CP3200+CP3202 internship, whose MC do not count toward the semester load, so the 20 MC cap still allows 160 MC in 8 semesters. AI focus is met by CS2109S, CS3243, CS3244, CS4244, CS4246 and CS4248, with 12 MC at level 4000, and Breadth & Depth totals 32 MC."
+  },
+  "parse_error": null
+}

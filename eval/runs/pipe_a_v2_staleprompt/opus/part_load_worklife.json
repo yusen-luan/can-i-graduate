@@ -1,0 +1,86 @@
+{
+  "instance": "part_load_worklife",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "opus",
+  "model": "claude-opus-5-5",
+  "text": "{\"feasible\": true, \"plan\": [{\"semester\": 1, \"modules\": [\"CS1101S\", \"CS1231S\", \"MA1521\", \"MA1522\"]}, {\"semester\": 2, \"modules\": [\"CS2030S\", \"CS2040S\", \"CS2100\", \"GEA1000\"]}, {\"semester\": 3, \"modules\": [\"CS2101\", \"CS2103T\", \"CS2106\", \"CS2109S\"]}, {\"semester\": 4, \"modules\": [\"CS3230\", \"ST2334\", \"ES2660\", \"IS1108\"]}, {\"semester\": 5, \"modules\": [\"CS3219\", \"CS4211\", \"CS4263\", \"GEC1015\"]}, {\"semester\": 6, \"modules\": [\"CS4218\", \"CS3227\", \"CP3880\"]}, {\"semester\": 7, \"modules\": [\"GESS1020\", \"GEN2003\", \"DTK1234\", \"IS1128\"]}, {\"semester\": 8, \"modules\": [\"HSI1000\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 9, \"modules\": [\"UE\", \"UE\", \"UE\", \"UE\"]}, {\"semester\": 10, \"modules\": [\"UE\", \"UE\", \"UE\"]}], \"reason\": \"Yes, it can be done: this plan reaches exactly 160 MC and keeps every semester between 8 and 16 MC, with semester 6 at 8 MC. CP3880 (12 MC) does not count toward semester 6's load, and the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 17.5,
+  "cost_usd": 0.042449,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 117,
+    "output_tokens": 1958,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14103
+  },
+  "effort": "high",
+  "prompt_sha256": "de3e7158d5cc5aff",
+  "timestamp": "2026-11-02T14:28:40+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "GEA1000"
+      ],
+      "3": [
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S"
+      ],
+      "4": [
+        "CS3230",
+        "ST2334",
+        "ES2660",
+        "IS1108"
+      ],
+      "5": [
+        "CS3219",
+        "CS4211",
+        "CS4263",
+        "GEC1015"
+      ],
+      "6": [
+        "CS4218",
+        "CS3227",
+        "CP3880"
+      ],
+      "7": [
+        "GESS1020",
+        "GEN2003",
+        "DTK1234",
+        "IS1128"
+      ],
+      "8": [
+        "HSI1000",
+        "UE_GENERIC_1",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "9": [
+        "UE_GENERIC_4",
+        "UE_GENERIC_5",
+        "UE_GENERIC_6",
+        "UE_GENERIC_7"
+      ],
+      "10": [
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "Yes, it can be done: this plan reaches exactly 160 MC and keeps every semester between 8 and 16 MC, with semester 6 at 8 MC. CP3880 (12 MC) does not count toward semester 6's load, and the software engineering focus is met with CS2103T, CS3219, CS3227, CS4211 and CS4218."
+  },
+  "parse_error": null
+}

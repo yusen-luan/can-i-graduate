@@ -1,0 +1,75 @@
+{
+  "instance": "over_credited",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS2109S\",\"CS2103T\",\"CS2102\",\"GEA1000\",\"UE\"]},{\"semester\":2,\"modules\":[\"CS2105\",\"CS2106\",\"CS3230\",\"CS2101\",\"ST2334\"]},{\"semester\":3,\"modules\":[\"CS3243\",\"CS3244\",\"IS1128\",\"UE\",\"UE\"]},{\"semester\":4,\"modules\":[\"CS3203\",\"CS4246\",\"CS3217\",\"CS3219\"]},{\"semester\":5,\"modules\":[\"CS3263\",\"CS4248\",\"CS3210\",\"CS3240\",\"UE\"]},{\"semester\":6,\"modules\":[\"CS4225\",\"CS4243\",\"CS3213\",\"CS3235\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\"]},{\"semester\":8,\"modules\":[]}],\"reason\":\"After the 28 MC of exemptions, about 132 MC remain, which fits within 8 semesters at up to 20 MC each. The plan covers the CS foundation, team project, ethics, maths, 6 AI focus-area modules and the electives. The module codes, module offerings and the exact degree structure come from my recollection of NUS requirements and should be checked against the official NUS CS requirements and module catalogue.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 37.54,
+  "cost_usd": 0.049403,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 4897,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:49:28+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS2109S",
+        "CS2103T",
+        "CS2102",
+        "GEA1000",
+        "UE_GENERIC_1"
+      ],
+      "2": [
+        "CS2105",
+        "CS2106",
+        "CS3230",
+        "CS2101",
+        "ST2334"
+      ],
+      "3": [
+        "CS3243",
+        "CS3244",
+        "IS1128",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3"
+      ],
+      "4": [
+        "CS3203",
+        "CS4246",
+        "CS3217",
+        "CS3219"
+      ],
+      "5": [
+        "CS3263",
+        "CS4248",
+        "CS3210",
+        "CS3240",
+        "UE_GENERIC_4"
+      ],
+      "6": [
+        "CS4225",
+        "CS4243",
+        "CS3213",
+        "CS3235",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8"
+      ],
+      "8": []
+    },
+    "reason": "After the 28 MC of exemptions, about 132 MC remain, which fits within 8 semesters at up to 20 MC each. The plan covers the CS foundation, team project, ethics, maths, 6 AI focus-area modules and the electives. The module codes, module offerings and the exact degree structure come from my recollection of NUS requirements and should be checked against the official NUS CS requirements and module catalogue."
+  },
+  "parse_error": null
+}

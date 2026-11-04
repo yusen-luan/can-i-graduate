@@ -1,0 +1,27 @@
+{
+  "instance": "unsat_t4_tight_focus_overload_block",
+  "pipeline": "A-direct",
+  "condition": "bare",
+  "model_key": "haiku",
+  "model": "claude-haiku-5-5",
+  "text": "{\"feasible\": false, \"plan\": [], \"reason\": \"The BComp (Computer Science) degree requires 160 MC, but with semester 4 off, the 7-semester limit leaves 6 teaching semesters, and the 26 MC per-semester cap allows at most 156 MC (6 \u00d7 26), so the degree cannot be completed in time.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 5.86,
+  "cost_usd": 0.000495,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 88,
+    "output_tokens": 952,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 987
+  },
+  "effort": "high",
+  "prompt_sha256": "d88543107b59dfed",
+  "timestamp": "2026-11-03T15:45:16+00:00",
+  "prediction": {
+    "feasible": false,
+    "plan": {},
+    "reason": "The BComp (Computer Science) degree requires 160 MC, but with semester 4 off, the 7-semester limit leaves 6 teaching semesters, and the 26 MC per-semester cap allows at most 156 MC (6 \u00d7 26), so the degree cannot be completed in time."
+  },
+  "parse_error": null
+}

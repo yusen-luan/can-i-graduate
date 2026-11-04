@@ -1,0 +1,84 @@
+{
+  "instance": "early_grad_overloader",
+  "pipeline": "A-direct",
+  "condition": "full",
+  "model_key": "sonnet",
+  "model": "claude-sonnet-5-5",
+  "text": "{\"feasible\":true,\"plan\":[{\"semester\":1,\"modules\":[\"CS1101S\",\"CS1231S\",\"MA1521\",\"MA1522\",\"GEA1000\",\"IS1108\"]},{\"semester\":2,\"modules\":[\"CS2030S\",\"CS2040S\",\"CS2100\",\"ST2334\",\"ES2660\",\"DTK1234\"]},{\"semester\":3,\"modules\":[\"CS2103T\",\"CS2101\",\"CS2106\",\"CS2109S\",\"CS2105\",\"CS2107\"]},{\"semester\":4,\"modules\":[\"CS3235\",\"CS3230\",\"CS2102\",\"IS1128\",\"GEC1015\",\"GESS1020\",\"CP3200\"]},{\"semester\":5,\"modules\":[\"CS4236\",\"CS3210\",\"CS4238\",\"SC1101E\",\"GEN2000\",\"UE\",\"CP3202\"]},{\"semester\":6,\"modules\":[\"CS4230\",\"UE\",\"UE\",\"UE\",\"UE\"]},{\"semester\":7,\"modules\":[\"UE\",\"UE\",\"UE\",\"UE\",\"UE\"]}],\"reason\":\"All required, university-level, ID/CD (DTK1234, IS1128, SC1101E) and computer security modules (CS2107, CS3235, CS4238, CS4236, CS4230) fit. Prerequisites and offered terms are respected. The plan has 160 MC excluding the CP3200+CP3202 internship, at most 24 MC per semester, 12 MC at level 4000 and at least 32 MC of B&D.\"}",
+  "stop_reason": "end_turn",
+  "latency_s": 28.06,
+  "cost_usd": 0.041711,
+  "request_id": "",
+  "usage": {
+    "input_tokens": 85,
+    "output_tokens": 3861,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 14656
+  },
+  "effort": "high",
+  "prompt_sha256": "0136f1ac730bb7bb",
+  "timestamp": "2026-11-03T15:50:23+00:00",
+  "prediction": {
+    "feasible": true,
+    "plan": {
+      "1": [
+        "CS1101S",
+        "CS1231S",
+        "MA1521",
+        "MA1522",
+        "GEA1000",
+        "IS1108"
+      ],
+      "2": [
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "ST2334",
+        "ES2660",
+        "DTK1234"
+      ],
+      "3": [
+        "CS2103T",
+        "CS2101",
+        "CS2106",
+        "CS2109S",
+        "CS2105",
+        "CS2107"
+      ],
+      "4": [
+        "CS3235",
+        "CS3230",
+        "CS2102",
+        "IS1128",
+        "GEC1015",
+        "GESS1020",
+        "CP3200"
+      ],
+      "5": [
+        "CS4236",
+        "CS3210",
+        "CS4238",
+        "SC1101E",
+        "GEN2000",
+        "UE_GENERIC_1",
+        "CP3202"
+      ],
+      "6": [
+        "CS4230",
+        "UE_GENERIC_2",
+        "UE_GENERIC_3",
+        "UE_GENERIC_4",
+        "UE_GENERIC_5"
+      ],
+      "7": [
+        "UE_GENERIC_6",
+        "UE_GENERIC_7",
+        "UE_GENERIC_8",
+        "UE_GENERIC_9",
+        "UE_GENERIC_10"
+      ]
+    },
+    "reason": "All required, university-level, ID/CD (DTK1234, IS1128, SC1101E) and computer security modules (CS2107, CS3235, CS4238, CS4236, CS4230) fit. Prerequisites and offered terms are respected. The plan has 160 MC excluding the CP3200+CP3202 internship, at most 24 MC per semester, 12 MC at level 4000 and at least 32 MC of B&D."
+  },
+  "parse_error": null
+}
